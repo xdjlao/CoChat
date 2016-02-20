@@ -136,7 +136,7 @@ extension BrowseViewController: UITableViewDataSource, UITableViewDelegate {
     }
     func setUpTopRoomCell(forIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let room = topRooms[indexPath.row]
-        let cell = tableView.dequeueReusableCellWithCellIdentifier(.TopRoomCell)
+        let cell = tableView.dequeueReusableCellWithCellIdentifier(.RecentRoomCell)
         cell.textLabel?.text = room.title
         return cell
     }

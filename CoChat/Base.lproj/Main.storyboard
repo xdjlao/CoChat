@@ -20,16 +20,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="s0d-QT-e9S">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="EdM-nJ-O20">
-                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EdM-nJ-O20" id="jm9-8Z-zcL">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="efc-L1-N1A" id="9RF-g0-Lwk"/>
                                     <outlet property="delegate" destination="efc-L1-N1A" id="4L1-eE-W4G"/>
@@ -188,6 +178,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="7Ih-uX-rXT" id="UOB-bX-7vz"/>
+                                    <outlet property="delegate" destination="7Ih-uX-rXT" id="qSO-wF-ehs"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -216,7 +210,7 @@
                         <segue destination="KMU-u7-4ap" kind="relationship" relationship="viewControllers" id="Jx9-GY-NCE"/>
                         <segue destination="Oue-gC-ipT" kind="relationship" relationship="viewControllers" id="Pj0-i0-gog"/>
                         <segue destination="CgH-2s-9cR" kind="presentation" identifier="TabToScan" id="Cfl-6n-2dV"/>
-                        <segue destination="8Ma-pL-Idg" kind="presentation" id="DaU-I7-cRX"/>
+                        <segue destination="8Ma-pL-Idg" kind="presentation" identifier="ScanToMessage" id="DaU-I7-cRX"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="02D-f6-lDW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -279,16 +273,21 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ActiveCell" id="eoa-47-NS2">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TopRoomCell" id="eoa-47-NS2">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eoa-47-NS2" id="rrs-qQ-DjV">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="8Ma-pL-Idg" kind="presentation" id="qU5-XH-2ma"/>
-                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecentRoomCell" id="7Ia-98-AL9">
+                                <rect key="frame" x="0.0" y="136" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7Ia-98-AL9" id="aBh-AD-Jul">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -300,6 +299,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="bsU-TE-vT7" id="0G2-OH-VHs"/>
+                        <segue destination="8Ma-pL-Idg" kind="show" identifier="SegueToMessaging" id="xrH-Ds-2aZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h4N-6i-DOa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -386,6 +386,6 @@
         <image name="cancel" width="80" height="80"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qU5-XH-2ma"/>
+        <segue reference="DaU-I7-cRX"/>
     </inferredMetricsTieBreakers>
 </document>

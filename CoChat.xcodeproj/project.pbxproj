@@ -32,6 +32,7 @@
 		A288F7D81C7862C700DF2847 /* UserMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A288F7D71C7862C700DF2847 /* UserMessageCell.xib */; };
 		A288F7DA1C7867EA00DF2847 /* MenuChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A288F7D91C7867EA00DF2847 /* MenuChannelViewController.swift */; };
 		A288F7DC1C78696100DF2847 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A288F7DB1C78696100DF2847 /* ShareViewController.swift */; };
+		A288F7DE1C7873D100DF2847 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A288F7DD1C7873D100DF2847 /* Login.storyboard */; };
 		FE075CF3C95FB29BE89AA0A4 /* Pods_CoChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70EBED03AAABBA95CBA945A5 /* Pods_CoChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		A288F7D71C7862C700DF2847 /* UserMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserMessageCell.xib; sourceTree = "<group>"; };
 		A288F7D91C7867EA00DF2847 /* MenuChannelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuChannelViewController.swift; sourceTree = "<group>"; };
 		A288F7DB1C78696100DF2847 /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		A288F7DD1C7873D100DF2847 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +216,7 @@
 				A288F7D21C7860D800DF2847 /* Messaging */,
 				A288F7761C7840E600DF2847 /* Main.storyboard */,
 				A288F77B1C7840E600DF2847 /* LaunchScreen.storyboard */,
+				A288F7DD1C7873D100DF2847 /* Login.storyboard */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 			files = (
 				A288F7D81C7862C700DF2847 /* UserMessageCell.xib in Resources */,
 				A288F77D1C7840E600DF2847 /* LaunchScreen.storyboard in Resources */,
+				A288F7DE1C7873D100DF2847 /* Login.storyboard in Resources */,
 				A288F77A1C7840E600DF2847 /* Assets.xcassets in Resources */,
 				A288F7D61C78612A00DF2847 /* GeneralMessageCell.xib in Resources */,
 				A288F7781C7840E600DF2847 /* Main.storyboard in Resources */,
