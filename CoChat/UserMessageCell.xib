@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserMessageCell" id="VR6-ft-t5f" customClass="UserMessageCell" customModule="CoChat" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VR6-ft-t5f" id="EPa-su-OF7">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xev-QV-mr9">
+                        <rect key="frame" x="282" y="8" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="CCA-a9-o4U"/>
+                            <constraint firstAttribute="height" constant="30" id="Oky-5x-4cS"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KxS-Z7-of3">
+                        <rect key="frame" x="249" y="16" width="25" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="252" id="6dc-7r-Ohs"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="25" id="frN-cH-XHC"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="xev-QV-mr9" firstAttribute="top" secondItem="EPa-su-OF7" secondAttribute="topMargin" id="87N-Cw-69i"/>
+                    <constraint firstItem="xev-QV-mr9" firstAttribute="leading" secondItem="KxS-Z7-of3" secondAttribute="trailing" constant="8" id="Kxd-in-I0k"/>
+                    <constraint firstItem="KxS-Z7-of3" firstAttribute="top" secondItem="EPa-su-OF7" secondAttribute="topMargin" constant="8" id="anh-J6-CXg"/>
+                    <constraint firstItem="xev-QV-mr9" firstAttribute="leading" secondItem="EPa-su-OF7" secondAttribute="leadingMargin" constant="154" id="bIM-Ee-v5z"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="KxS-Z7-of3" secondAttribute="bottom" constant="5" id="cjO-Hm-Ux8"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="xev-QV-mr9" secondAttribute="trailing" id="vUr-fb-A9R"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="bIM-Ee-v5z"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="messageLabel" destination="KxS-Z7-of3" id="8b9-Hp-8R9"/>
+                <outlet property="profileImageView" destination="xev-QV-mr9" id="6K5-PU-YS5"/>
+            </connections>
+            <point key="canvasLocation" x="552" y="373"/>
+        </tableViewCell>
+    </objects>
+</document>
