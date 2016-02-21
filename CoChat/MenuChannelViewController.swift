@@ -13,6 +13,8 @@ class MenuChannelViewController: UIViewController {
     
     override func viewDidLoad() {
         navigationItem.title = "Channels"
+        let addChannelButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "addChannel")
+        navigationItem.rightBarButtonItem = addChannelButton
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -53,5 +55,9 @@ extension MenuChannelViewController : UITableViewDataSource, UITableViewDelegate
         channelDescriptionAlertController.addAction(cancel)
         channelDescriptionAlertController.addAction(goToChannel)
         presentViewController(channelDescriptionAlertController, animated: true, completion: nil)
+    }
+    
+    func addChannel() {
+        print("Channel added")
     }
 }

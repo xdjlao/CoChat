@@ -9,7 +9,7 @@ class ShareViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         generateQRCode()
-        navigationItem.title = "\((channel?.title)!) Channel"
+        navigationItem.title = "\((channel?.title)!)"
     }
     
     func launchUniversalLink(){
@@ -45,6 +45,17 @@ class ShareViewController: UIViewController {
     
     @IBAction func onSaveImage(sender: UIButton) {
         UIImageWriteToSavedPhotosAlbum(QRImageView.image!, self, Selector("image:didFinishSavingWithError:contextInfo:"), nil)
+    }
+    
+    func screenShotMethod() {
+        //Create the UIImage
+        UIGraphicsBeginImageContext(QRImageView.frame.size)
+        view.layer.renderInContext(UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        //Save it to the camera roll
+        UIImageWriteToSavedPhotosAlbum(image, self, Selector("image:didFinishSavingWithError:contextInfo:"), nil)
     }
     
     func image(image: UIImage, didFinishSavingWithError error: NSErrorPointer, contextInfo: UnsafePointer<()>) {
