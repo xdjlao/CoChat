@@ -39,6 +39,7 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        textView.autocorrectionType = UITextAutocorrectionType.Yes
         uiSetup()
     }
     
@@ -77,21 +78,21 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-//    func menuChannelViewController(menuChannelViewController: MenuChannelViewController, didSelectChannel channel: AnyObject) {
-//        guard let selectedChannel = channel as? Channel else { return }
-//        currentChannel = selectedChannel
-//    }
-//    
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if segue.identifier == SegueIdentifier.MessageToChannelSegue.rawValue {
-//            //let nav = segue.destinationViewController as! UINavigationController
-//            guard let mcvc = segue.destinationViewController as? MenuChannelViewController else { return }
-//            mcvc.delegate = self
-//            mcvc.channels = room.channels
-//            
-//        }
-//        if let svc = segue.destinationViewController as? ShareVC  {
-//            svc.room = room
-//        }
-//    }
+    func menuChannelViewController(menuChannelViewController: MenuChannelViewController, didSelectChannel channel: AnyObject) {
+        guard let selectedChannel = channel as? Channel else { return }
+        currentChannel = selectedChannel
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == SegueIdentifier.MessageToChannelSegue.rawValue {
+            //let nav = segue.destinationViewController as! UINavigationController
+            guard let mcvc = segue.destinationViewController as? MenuChannelViewController else { return }
+            mcvc.delegate = self
+            mcvc.channels = room.channels
+            
+        } else if segue.identifier == "ShowShare" {
+            guard let svc = segue.destinationViewController as? ShareViewController else { return }
+            svc.channel = currentChannel
+        }
+    }
 }

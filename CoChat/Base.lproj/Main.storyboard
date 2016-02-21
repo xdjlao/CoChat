@@ -38,7 +38,7 @@
                                 </constraints>
                                 <state key="normal" title="CH"/>
                                 <connections>
-                                    <segue destination="7Ih-uX-rXT" kind="show" identifier="MessageToChannelSegue" id="vD7-tX-ge6"/>
+                                    <segue destination="7Ih-uX-rXT" kind="show" identifier="MessageToChannelSegue" id="GYp-nk-iiG"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4LP-hV-lVC">
@@ -52,7 +52,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.95204326923076921" green="0.95204326923076921" blue="0.95204326923076921" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="4LP-hV-lVC" firstAttribute="leading" secondItem="d5T-IE-BNw" secondAttribute="trailing" constant="8" id="ErE-Ko-Fh8"/>
@@ -90,7 +90,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="mzy-9q-t1v">
                             <connections>
-                                <segue destination="lXL-kM-yZF" kind="show" identifier="ShowShare" id="rRY-bb-hHY"/>
+                                <segue destination="mYA-5B-jht" kind="show" identifier="ShowShare" id="rRY-bb-hHY"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -109,49 +109,6 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2091" y="1186"/>
-        </scene>
-        <!--Share View Controller-->
-        <scene sceneID="gZm-gM-uIr">
-            <objects>
-                <viewController id="lXL-kM-yZF" customClass="ShareViewController" customModule="CoChat" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="2Of-fS-ecK"/>
-                        <viewControllerLayoutGuide type="bottom" id="XIm-kf-MH9"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="9HM-a1-pW4">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RMq-CN-sU2">
-                                <rect key="frame" x="175" y="175" width="250" height="250"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="aWh-nh-ShB"/>
-                                    <constraint firstAttribute="width" constant="250" id="wz2-CS-DHW"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WI4-MP-pyp">
-                                <rect key="frame" x="279" y="456" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="WI4-MP-pyp" firstAttribute="top" secondItem="RMq-CN-sU2" secondAttribute="bottom" constant="31" id="LeF-8G-C0G"/>
-                            <constraint firstItem="RMq-CN-sU2" firstAttribute="centerX" secondItem="9HM-a1-pW4" secondAttribute="centerX" id="YdS-P4-Tfh"/>
-                            <constraint firstItem="WI4-MP-pyp" firstAttribute="centerX" secondItem="9HM-a1-pW4" secondAttribute="centerX" id="ily-Er-294"/>
-                            <constraint firstItem="RMq-CN-sU2" firstAttribute="centerY" secondItem="9HM-a1-pW4" secondAttribute="centerY" id="nbY-Wq-CUt"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="QRImageView" destination="RMq-CN-sU2" id="aG7-5P-nEQ"/>
-                        <outlet property="roomLabel" destination="WI4-MP-pyp" id="LJH-XZ-Cux"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oth-py-zW8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2763" y="1186"/>
         </scene>
         <!--Menu Channel View Controller-->
         <scene sceneID="yaI-AF-6XA">
@@ -380,6 +337,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="05g-W3-30Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1279" y="1186"/>
+        </scene>
+        <!--Share-->
+        <scene sceneID="rJH-zr-s9O">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Share" id="mYA-5B-jht" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8hP-er-ru4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2763" y="1186"/>
         </scene>
     </scenes>
     <resources>

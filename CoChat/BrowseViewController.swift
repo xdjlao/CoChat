@@ -132,12 +132,14 @@ extension BrowseViewController: UITableViewDataSource, UITableViewDelegate {
         let room = recentRooms[indexPath.row]
         let cell = tableView.dequeueReusableCellWithCellIdentifier(.RecentRoomCell)
         cell.textLabel?.text = room.title
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
         return cell
     }
     func setUpTopRoomCell(forIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let room = topRooms[indexPath.row]
         let cell = tableView.dequeueReusableCellWithCellIdentifier(.RecentRoomCell)
         cell.textLabel?.text = room.title
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
         return cell
     }
 }

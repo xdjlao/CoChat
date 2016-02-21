@@ -22,11 +22,10 @@ extension UIViewController {
         }
     }
     
-    func createFBLoginButton(withPosition position: (x: CGFloat, y: CGFloat)) -> FBSDKLoginButton {
-        let size = view.frame.size
+    func createFBLoginButtonWithPosition(x: CGFloat, y: CGFloat) -> FBSDKLoginButton {
         let fbLoginButton = FBSDKLoginButton()
         let fbButtonSize = fbLoginButton.frame.size
-        let frame = CGRect(x: size.width * 0.8 , y: size.height * 0.1, width: fbButtonSize.width, height: fbButtonSize.height)
+        let frame = CGRect(x: x - fbButtonSize.width/2, y: y - fbButtonSize.height/2, width: fbButtonSize.width, height: fbButtonSize.height)
         fbLoginButton.frame = frame
         fbLoginButton.readPermissions = ["public_profile", "email"]
         view.addSubview(fbLoginButton)

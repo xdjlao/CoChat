@@ -12,7 +12,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let button = createFBLoginButton(withPosition: (view.center.x, view.center.y))
+        let button = createFBLoginButtonWithPosition(view.center.x, y: view.center.y)
         button.delegate = self
     }
     

@@ -1,15 +1,15 @@
 import UIKit
 
 class ShareViewController: UIViewController {
-    @IBOutlet var roomLabel: UILabel!
+    // @IBOutlet var roomLabel: UILabel!
     @IBOutlet var QRImageView: UIImageView!
-    var room:Room?
+    var channel:Channel?
+    @IBOutlet weak var passcodeLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         generateQRCode()
-        navigationItem.title = room?.title
-        roomLabel.text = room?.password
+        navigationItem.title = "\((channel?.title)!) Channel"
     }
     
     func launchUniversalLink(){
@@ -18,9 +18,9 @@ class ShareViewController: UIViewController {
     
     
     func generateQRCode() {
-        guard let roomPassCode = room?.password else {return}
+        guard let channelPassCode = channel?.password else {return}
         
-        let data = roomPassCode.dataUsingEncoding(NSISOLatin1StringEncoding, allowLossyConversion: false)
+        let data = channelPassCode.dataUsingEncoding(NSISOLatin1StringEncoding, allowLossyConversion: false)
         
         if let filter = CIFilter(name: "CIQRCodeGenerator"){
             
@@ -41,6 +41,32 @@ class ShareViewController: UIViewController {
         
         QRImageView.image = UIImage(CIImage: transformedImage)
         
+    }
+    
+    @IBAction func onSaveImage(sender: UIButton) {
+        UIImageWriteToSavedPhotosAlbum(QRImageView.image!, self, Selector("image:didFinishSavingWithError:contextInfo:"), nil)
+    }
+    
+    func image(image: UIImage, didFinishSavingWithError error: NSErrorPointer, contextInfo: UnsafePointer<()>) {
+        dispatch_async(dispatch_get_main_queue(), {
+            let alert = UIAlertController(title: "Success", message: "This QR Code has been saved to your Camera Roll", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        })
+    }
+    
+    @IBAction func onCopy(sender: UIButton) {
+        copyText(passcodeLabel.text!) { () -> () in
+            let alert = UIAlertController(title: "Passcode Copied!", message: "Now share it with the world", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func copyText(textString:String, completion:() -> ()) {
+        let copy = UIPasteboard.generalPasteboard()
+        copy.string = textString
+        completion()
     }
     
     

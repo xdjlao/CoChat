@@ -109,6 +109,7 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCellWithIdentifier("UserMessageCell") as! UserMessageCell
             cell.messageLabel.text = currentMessage.messageText
             cell.profileImageView.image = UIImage(named: "profileImageDummy")
+            cell.selectionStyle = UITableViewCellSelectionStyle.None
             return cell
         }
             
@@ -118,6 +119,7 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource {
             user?.profileImage { (profileImage) in
                 cell.profileImageView.image = profileImage
             }
+            cell.selectionStyle = UITableViewCellSelectionStyle.None
             return cell
         }
     }
@@ -157,7 +159,6 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource {
             }
         }
     }
-    
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

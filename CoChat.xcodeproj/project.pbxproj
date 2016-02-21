@@ -33,6 +33,7 @@
 		A288F7DA1C7867EA00DF2847 /* MenuChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A288F7D91C7867EA00DF2847 /* MenuChannelViewController.swift */; };
 		A288F7DC1C78696100DF2847 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A288F7DB1C78696100DF2847 /* ShareViewController.swift */; };
 		A288F7DE1C7873D100DF2847 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A288F7DD1C7873D100DF2847 /* Login.storyboard */; };
+		A2BE2B051C79984B00ED71E4 /* Share.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2BE2B041C79984B00ED71E4 /* Share.storyboard */; };
 		FE075CF3C95FB29BE89AA0A4 /* Pods_CoChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70EBED03AAABBA95CBA945A5 /* Pods_CoChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		A288F7D91C7867EA00DF2847 /* MenuChannelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuChannelViewController.swift; sourceTree = "<group>"; };
 		A288F7DB1C78696100DF2847 /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		A288F7DD1C7873D100DF2847 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		A2BE2B041C79984B00ED71E4 /* Share.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Share.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,8 +151,8 @@
 			children = (
 				A288F7B81C785B2D00DF2847 /* MessagingViewController-Data.swift */,
 				A288F7BC1C785CAE00DF2847 /* MessagingViewController-UI.swift */,
-				A288F7D91C7867EA00DF2847 /* MenuChannelViewController.swift */,
-				A288F7DB1C78696100DF2847 /* ShareViewController.swift */,
+				A2BE2B081C799C6200ED71E4 /* MenuChannel */,
+				A2BE2B071C79997C00ED71E4 /* Share */,
 			);
 			name = Messaging;
 			sourceTree = "<group>";
@@ -233,10 +235,35 @@
 		A288F7D21C7860D800DF2847 /* Messaging */ = {
 			isa = PBXGroup;
 			children = (
+				A2BE2B061C7998C000ED71E4 /* Share */,
 				A288F7D51C78612A00DF2847 /* GeneralMessageCell.xib */,
 				A288F7D71C7862C700DF2847 /* UserMessageCell.xib */,
 			);
 			name = Messaging;
+			sourceTree = "<group>";
+		};
+		A2BE2B061C7998C000ED71E4 /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				A2BE2B041C79984B00ED71E4 /* Share.storyboard */,
+			);
+			name = Share;
+			sourceTree = "<group>";
+		};
+		A2BE2B071C79997C00ED71E4 /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				A288F7DB1C78696100DF2847 /* ShareViewController.swift */,
+			);
+			name = Share;
+			sourceTree = "<group>";
+		};
+		A2BE2B081C799C6200ED71E4 /* MenuChannel */ = {
+			isa = PBXGroup;
+			children = (
+				A288F7D91C7867EA00DF2847 /* MenuChannelViewController.swift */,
+			);
+			name = MenuChannel;
 			sourceTree = "<group>";
 		};
 		BA88D8AD8904B9765BBA1CB3 /* Frameworks */ = {
@@ -313,6 +340,7 @@
 				A288F7DE1C7873D100DF2847 /* Login.storyboard in Resources */,
 				A288F77A1C7840E600DF2847 /* Assets.xcassets in Resources */,
 				A288F7D61C78612A00DF2847 /* GeneralMessageCell.xib in Resources */,
+				A2BE2B051C79984B00ED71E4 /* Share.storyboard in Resources */,
 				A288F7781C7840E600DF2847 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
