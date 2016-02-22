@@ -44,18 +44,19 @@ class ShareViewController: UIViewController {
     }
     
     @IBAction func onSaveImage(sender: UIButton) {
-        UIImageWriteToSavedPhotosAlbum(QRImageView.image!, self, Selector("image:didFinishSavingWithError:contextInfo:"), nil)
+        //UIImageWriteToSavedPhotosAlbum(QRImageView.image!, self, Selector("image:didFinishSavingWithError:contextInfo:"), nil)
+        screenShotMethod()
     }
     
     func screenShotMethod() {
         //Create the UIImage
         UIGraphicsBeginImageContext(QRImageView.frame.size)
-        view.layer.renderInContext(UIGraphicsGetCurrentContext()!)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
+        QRImageView.layer.renderInContext(UIGraphicsGetCurrentContext()!)
+        let screenshot = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
         //Save it to the camera roll
-        UIImageWriteToSavedPhotosAlbum(image, self, Selector("image:didFinishSavingWithError:contextInfo:"), nil)
+        UIImageWriteToSavedPhotosAlbum(screenshot, self, Selector("image:didFinishSavingWithError:contextInfo:"), nil)
     }
     
     func image(image: UIImage, didFinishSavingWithError error: NSErrorPointer, contextInfo: UnsafePointer<()>) {

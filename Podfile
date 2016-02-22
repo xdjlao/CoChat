@@ -8,5 +8,6 @@ pod 'Firebase', '>= 2.5.0'
 pod 'FBSDKCoreKit'
 pod 'FBSDKShareKit'
 pod 'FBSDKLoginKit'
+pod 'AFNetworking', '~> 3.0'
 end
 

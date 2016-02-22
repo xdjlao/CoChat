@@ -84,6 +84,7 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-CoChat/AFNetworking.framework"
   install_framework "Pods-CoChat/Bolts.framework"
   install_framework "Pods-CoChat/FBSDKCoreKit.framework"
   install_framework "Pods-CoChat/FBSDKLoginKit.framework"
@@ -91,6 +92,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-CoChat/Firebase.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-CoChat/AFNetworking.framework"
   install_framework "Pods-CoChat/Bolts.framework"
   install_framework "Pods-CoChat/FBSDKCoreKit.framework"
   install_framework "Pods-CoChat/FBSDKLoginKit.framework"

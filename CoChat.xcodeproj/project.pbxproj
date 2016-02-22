@@ -34,6 +34,8 @@
 		A288F7DC1C78696100DF2847 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A288F7DB1C78696100DF2847 /* ShareViewController.swift */; };
 		A288F7DE1C7873D100DF2847 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A288F7DD1C7873D100DF2847 /* Login.storyboard */; };
 		A2BE2B051C79984B00ED71E4 /* Share.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2BE2B041C79984B00ED71E4 /* Share.storyboard */; };
+		A2BE2B0C1C7B9E1700ED71E4 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2BE2B0A1C7B9E1700ED71E4 /* Profile.storyboard */; };
+		A2BE2B0F1C7B9F4400ED71E4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B0E1C7B9F4400ED71E4 /* ProfileViewController.swift */; };
 		FE075CF3C95FB29BE89AA0A4 /* Pods_CoChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70EBED03AAABBA95CBA945A5 /* Pods_CoChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +72,9 @@
 		A288F7DB1C78696100DF2847 /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		A288F7DD1C7873D100DF2847 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		A2BE2B041C79984B00ED71E4 /* Share.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Share.storyboard; sourceTree = "<group>"; };
+		A2BE2B091C7B94CD00ED71E4 /* CoChat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CoChat.entitlements; sourceTree = "<group>"; };
+		A2BE2B0B1C7B9E1700ED71E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
+		A2BE2B0E1C7B9F4400ED71E4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +119,7 @@
 		A288F7711C7840E600DF2847 /* CoChat */ = {
 			isa = PBXGroup;
 			children = (
+				A2BE2B091C7B94CD00ED71E4 /* CoChat.entitlements */,
 				A288F7B71C7859D600DF2847 /* Extensions & Protocols */,
 				A288F7B61C7859B100DF2847 /* Model */,
 				A288F7C31C785F0600DF2847 /* Controller */,
@@ -170,6 +176,7 @@
 			children = (
 				A288F7A61C78447D00DF2847 /* MainTabBarViewController.swift */,
 				A288F7A41C7841B600DF2847 /* BrowseViewController.swift */,
+				A2BE2B0E1C7B9F4400ED71E4 /* ProfileViewController.swift */,
 			);
 			name = Tabs;
 			sourceTree = "<group>";
@@ -217,6 +224,7 @@
 			children = (
 				A288F7D21C7860D800DF2847 /* Messaging */,
 				A288F7761C7840E600DF2847 /* Main.storyboard */,
+				A2BE2B0D1C7B9E1F00ED71E4 /* Profile */,
 				A288F77B1C7840E600DF2847 /* LaunchScreen.storyboard */,
 				A288F7DD1C7873D100DF2847 /* Login.storyboard */,
 			);
@@ -266,6 +274,14 @@
 			name = MenuChannel;
 			sourceTree = "<group>";
 		};
+		A2BE2B0D1C7B9E1F00ED71E4 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A2BE2B0A1C7B9E1700ED71E4 /* Profile.storyboard */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
 		BA88D8AD8904B9765BBA1CB3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,6 +325,12 @@
 				TargetAttributes = {
 					A288F76E1C7840E600DF2847 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 9F59S7VZE2;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -337,6 +359,7 @@
 			files = (
 				A288F7D81C7862C700DF2847 /* UserMessageCell.xib in Resources */,
 				A288F77D1C7840E600DF2847 /* LaunchScreen.storyboard in Resources */,
+				A2BE2B0C1C7B9E1700ED71E4 /* Profile.storyboard in Resources */,
 				A288F7DE1C7873D100DF2847 /* Login.storyboard in Resources */,
 				A288F77A1C7840E600DF2847 /* Assets.xcassets in Resources */,
 				A288F7D61C78612A00DF2847 /* GeneralMessageCell.xib in Resources */,
@@ -418,6 +441,7 @@
 				A288F7CA1C785FAE00DF2847 /* LoginViewController.swift in Sources */,
 				A288F7D11C7860B500DF2847 /* GeneralMessageCell.swift in Sources */,
 				A288F7BD1C785CAE00DF2847 /* MessagingViewController-UI.swift in Sources */,
+				A2BE2B0F1C7B9F4400ED71E4 /* ProfileViewController.swift in Sources */,
 				A288F7731C7840E600DF2847 /* AppDelegate.swift in Sources */,
 				A288F7A91C78524600DF2847 /* ScanViewController.swift in Sources */,
 			);
@@ -440,6 +464,14 @@
 				A288F77C1C7840E600DF2847 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A2BE2B0A1C7B9E1700ED71E4 /* Profile.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A2BE2B0B1C7B9E1700ED71E4 /* Base */,
+			);
+			name = Profile.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -531,10 +563,14 @@
 			baseConfigurationReference = 587D22B4E734A1D30A6BED37 /* Pods-CoChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CoChat/CoChat.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CoChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lao.jerry.CoChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -543,10 +579,14 @@
 			baseConfigurationReference = 38620A9AF6B45CA19AD5E427 /* Pods-CoChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CoChat/CoChat.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CoChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lao.jerry.CoChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
