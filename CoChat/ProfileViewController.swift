@@ -1,11 +1,3 @@
-//
-//  ProfileViewController.swift
-//  CoChat
-//
-//  Created by Jerry on 2/22/16.
-//  Copyright © 2016 Jerry. All rights reserved.
-//
-
 import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit

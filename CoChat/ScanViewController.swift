@@ -6,18 +6,30 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
+    var passcodeView = true
     
-    @IBOutlet weak var cancelButton: UIButton!
-    @IBOutlet weak var scanView: UIView!
+    @IBOutlet weak var scanViewWrapper: UIView!
+    @IBOutlet weak var joinViewWrapper: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        let radius = CGFloat(40)
-        cancelButton.imageEdgeInsets = UIEdgeInsets(top: 30, left: 30, bottom: 30, right: 30)
-        cancelButton.layer.cornerRadius = radius
         
+    }
+    
+    
+    @IBAction func onSwitchPressed(sender: UIBarButtonItem) {
+        if passcodeView == true {
+            startScan()
+            passcodeView = false
+        } else {
+            stopScan()
+            passcodeView = true
+        }
+    }
+    
+    func startScan() {
         // Get an instance of the AVCaptureDevice class to initialize a device object and provide the video
         // as the media type parameter.
         let captureDevice = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
@@ -45,14 +57,10 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
         videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         videoPreviewLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
         videoPreviewLayer?.frame = view.layer.bounds
-        view.layer.addSublayer(videoPreviewLayer!)
+        scanViewWrapper.layer.addSublayer(videoPreviewLayer!)
         
         // Start video capture.
         captureSession?.startRunning()
-        
-        
-        // Move the message label to the top view
-        view.bringSubviewToFront(cancelButton)
         
         // Initialize QR Code Frame to highlight the QR code
         qrCodeFrameView = UIView()
@@ -60,11 +68,9 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
         qrCodeFrameView?.layer.borderWidth = 2
         view.addSubview(qrCodeFrameView!)
         view.bringSubviewToFront(qrCodeFrameView!)
-        
     }
     
-    @IBAction func onCancelButtonTapped(sender: UIButton) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    func stopScan() {
         captureSession?.stopRunning()
     }
     

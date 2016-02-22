@@ -8,7 +8,7 @@
         <!--Messaging View Controller-->
         <scene sceneID="oLD-aD-jOu">
             <objects>
-                <viewController id="efc-L1-N1A" customClass="MessagingViewController" customModule="CoChat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UIViewController-efc-L1-N1A" id="efc-L1-N1A" customClass="MessagingViewController" customModule="CoChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aqO-pp-ydO"/>
                         <viewControllerLayoutGuide type="bottom" id="DRZ-49-wV3"/>
@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="s0d-QT-e9S">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="s0d-QT-e9S">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -25,13 +25,13 @@
                                     <outlet property="delegate" destination="efc-L1-N1A" id="4L1-eE-W4G"/>
                                 </connections>
                             </tableView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d5T-IE-BNw">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d5T-IE-BNw">
                                 <rect key="frame" x="8" y="562" width="526" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbG-SN-nti">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbG-SN-nti">
                                 <rect key="frame" x="542" y="562" width="50" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="Ots-TJ-C8Y"/>
@@ -41,7 +41,7 @@
                                     <segue destination="7Ih-uX-rXT" kind="show" identifier="MessageToChannelSegue" id="GYp-nk-iiG"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4LP-hV-lVC">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4LP-hV-lVC">
                                 <rect key="frame" x="542" y="562" width="50" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="xtd-ab-I10"/>
@@ -122,7 +122,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="X6f-Vf-x8U">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="X6f-Vf-x8U">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -166,60 +166,12 @@
                     <connections>
                         <segue destination="KMU-u7-4ap" kind="relationship" relationship="viewControllers" id="Jx9-GY-NCE"/>
                         <segue destination="Oue-gC-ipT" kind="relationship" relationship="viewControllers" id="Pj0-i0-gog"/>
-                        <segue destination="CgH-2s-9cR" kind="presentation" identifier="TabToScan" id="Cfl-6n-2dV"/>
-                        <segue destination="8Ma-pL-Idg" kind="presentation" identifier="ScanToMessage" id="DaU-I7-cRX"/>
+                        <segue destination="ev7-5U-jaN" kind="relationship" relationship="viewControllers" id="F7c-wc-3CU"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="02D-f6-lDW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="245" y="307"/>
-        </scene>
-        <!--Scan View Controller-->
-        <scene sceneID="jxR-JX-phl">
-            <objects>
-                <viewController id="CgH-2s-9cR" customClass="ScanViewController" customModule="CoChat" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="BoV-cp-xwz"/>
-                        <viewControllerLayoutGuide type="bottom" id="Vct-mh-3vr"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="LRr-bg-QN5">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vyh-7T-aU9">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M70-Lf-34f">
-                                <rect key="frame" x="260" y="490" width="80" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="Z1X-Wa-U9r"/>
-                                    <constraint firstAttribute="width" constant="80" id="c5k-KT-eDD"/>
-                                </constraints>
-                                <state key="normal" image="cancel"/>
-                                <connections>
-                                    <action selector="onCancelButtonTapped:" destination="CgH-2s-9cR" eventType="touchUpInside" id="S75-TK-vet"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Vct-mh-3vr" firstAttribute="top" secondItem="M70-Lf-34f" secondAttribute="bottom" constant="30" id="6yp-fq-aAd"/>
-                            <constraint firstItem="M70-Lf-34f" firstAttribute="centerX" secondItem="LRr-bg-QN5" secondAttribute="centerX" id="E1F-5g-yRV"/>
-                            <constraint firstItem="vyh-7T-aU9" firstAttribute="leading" secondItem="LRr-bg-QN5" secondAttribute="leading" id="gXG-ki-dKW"/>
-                            <constraint firstItem="Vct-mh-3vr" firstAttribute="top" secondItem="vyh-7T-aU9" secondAttribute="bottom" id="nPK-QS-2h2"/>
-                            <constraint firstAttribute="trailing" secondItem="vyh-7T-aU9" secondAttribute="trailing" id="niu-Xm-IDb"/>
-                            <constraint firstItem="vyh-7T-aU9" firstAttribute="top" secondItem="LRr-bg-QN5" secondAttribute="top" id="u71-4t-a61"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="cancelButton" destination="M70-Lf-34f" id="bnx-YH-z8B"/>
-                        <outlet property="scanView" destination="vyh-7T-aU9" id="mY5-Lz-izK"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zMa-Pe-WcB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="913" y="307"/>
         </scene>
         <!--CHATTERBOX-->
         <scene sceneID="LBd-IA-h9J">
@@ -337,11 +289,34 @@
             </objects>
             <point key="canvasLocation" x="4269" y="1186"/>
         </scene>
+        <!--Join-->
+        <scene sceneID="s06-Nm-fTo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ev7-5U-jaN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Join" id="4Pr-yv-ymM"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Hc-jZ-2yt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wHY-7b-MwS" kind="relationship" relationship="rootViewController" id="ohO-FH-ikf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P6k-Se-kNa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="994" y="307"/>
+        </scene>
+        <!--Join-->
+        <scene sceneID="QyJ-6B-m3Z">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Join" id="wHY-7b-MwS" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ZZ0-63-uj1"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dcA-IN-OoD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1725" y="307"/>
+        </scene>
     </scenes>
-    <resources>
-        <image name="cancel" width="80" height="80"/>
-    </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="DaU-I7-cRX"/>
-    </inferredMetricsTieBreakers>
 </document>
