@@ -59,6 +59,11 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
         videoPreviewLayer?.frame = view.layer.bounds
         scanViewWrapper.layer.addSublayer(videoPreviewLayer!)
         
+        // Hide scanviewwrapper
+        scanViewWrapper.hidden = false
+        // Show joinviewwrapper
+        joinViewWrapper.hidden = true
+        
         // Start video capture.
         captureSession?.startRunning()
         
@@ -72,6 +77,8 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
     
     func stopScan() {
         captureSession?.stopRunning()
+        joinViewWrapper.hidden = false
+        scanViewWrapper.hidden = true
     }
     
     func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!) {
