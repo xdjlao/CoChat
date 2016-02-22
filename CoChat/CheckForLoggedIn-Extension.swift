@@ -5,53 +5,52 @@ import FBSDKLoginKit
 import FBSDKShareKit
 
 extension UIViewController {
-    func checkIfLoggedIn() -> Bool {
-        guard let authData = FirebaseManager.manager.ref.authData else {
-            
-            presentLoginScreen()
-            return false
-        }
-        return true
-    }
-    
-    func presentLoginScreen() {
-        let storyboard = UIStoryboard(name: "Login", bundle: nil)
-        guard let loginVC = storyboard.instantiateInitialViewController() as? LoginViewController else { return }
-        presentViewController(loginVC, animated: true) {
-            //??
-        }
-    }
-    
-    func createFBLoginButtonWithPosition(x: CGFloat, y: CGFloat) -> FBSDKLoginButton {
-        let fbLoginButton = FBSDKLoginButton()
-        let fbButtonSize = fbLoginButton.frame.size
-        let frame = CGRect(x: x - fbButtonSize.width/2, y: y - fbButtonSize.height/2, width: fbButtonSize.width, height: fbButtonSize.height)
-        fbLoginButton.frame = frame
-        fbLoginButton.readPermissions = ["public_profile", "email"]
-        view.addSubview(fbLoginButton)
-        return fbLoginButton
-    }
-    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
-        if let error = error {
-            print("Facebook login failed. Error: \(error)")
-        } else if result.isCancelled {
-            print("Facebook login was cancelled")
-        } else {
-            let accessToken = FBSDKAccessToken.currentAccessToken().tokenString
-            FirebaseManager.manager.ref.authWithOAuthProvider("facebook", token: accessToken, withCompletionBlock: { (error, authData) in
-                if let error = error {
-                    print("Login failed with error: \(error)")
-                } else {
-                    print("Logged in! \(authData)")
-                }
-            })
-        }
-    }
-    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
-        FirebaseManager.manager.ref.unauth()
-        FirebaseManager.manager.user = User(withDummyName: "Anonymous", dummyProfileImageURL: "none", dummyUID: "none")
-        viewDidAppear(true)
-    }
+   func checkIfLoggedIn() -> Bool {
+      guard let authData = FirebaseManager.manager.ref.authData else {
+         
+         presentLoginScreen()
+         return false
+      }
+      return true
+   }
+   
+   func presentLoginScreen() {
+      let storyboard = UIStoryboard(name: "Login", bundle: nil)
+      guard let loginVC = storyboard.instantiateInitialViewController() as? LoginViewController else { return }
+      presentViewController(loginVC, animated: true) {
+         //??
+      }
+   }
+   
+   func createFBLoginButtonWithPosition(x: CGFloat, y: CGFloat) -> FBSDKLoginButton {
+      let fbLoginButton = FBSDKLoginButton()
+      fbLoginButton.center = CGPoint(x: x, y: y)
+      fbLoginButton.readPermissions = ["public_profile", "email"]
+      view.addSubview(fbLoginButton)
+      return fbLoginButton
+   }
+   func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+      if let error = error {
+         print("Facebook login failed. Error: \(error)")
+      } else if result.isCancelled {
+         print("Facebook login was cancelled")
+      } else {
+         let accessToken = FBSDKAccessToken.currentAccessToken().tokenString
+         FirebaseManager.manager.ref.authWithOAuthProvider("facebook", token: accessToken, withCompletionBlock: { error, authData in
+            if let error = error {
+               print("Login failed with error: \(error)")
+            } else {
+               print("Logged in! \(authData)")
+               
+            }
+         })
+      }
+   }
+   func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
+      FirebaseManager.manager.ref.unauth()
+      FirebaseManager.manager.user = User(withDummyName: "Anonymous", dummyProfileImageURL: "none", dummyUID: "none")
+      viewDidAppear(true)
+   }
 }
 
 //protocol FBSDKLoginButtonDelegateConformer: FBSDKLoginButtonDelegate {
