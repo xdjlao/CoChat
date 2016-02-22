@@ -20,6 +20,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        profileImageView.image = UIImage(named: "profileImageDummy")
     }
 
     override func didReceiveMemoryWarning() {

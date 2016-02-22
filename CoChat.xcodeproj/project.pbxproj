@@ -36,6 +36,7 @@
 		A2BE2B051C79984B00ED71E4 /* Share.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2BE2B041C79984B00ED71E4 /* Share.storyboard */; };
 		A2BE2B0C1C7B9E1700ED71E4 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2BE2B0A1C7B9E1700ED71E4 /* Profile.storyboard */; };
 		A2BE2B0F1C7B9F4400ED71E4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B0E1C7B9F4400ED71E4 /* ProfileViewController.swift */; };
+		A2BE2B141C7BCC2500ED71E4 /* Join.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2BE2B121C7BCC2500ED71E4 /* Join.storyboard */; };
 		FE075CF3C95FB29BE89AA0A4 /* Pods_CoChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70EBED03AAABBA95CBA945A5 /* Pods_CoChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		A2BE2B091C7B94CD00ED71E4 /* CoChat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CoChat.entitlements; sourceTree = "<group>"; };
 		A2BE2B0B1C7B9E1700ED71E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
 		A2BE2B0E1C7B9F4400ED71E4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		A2BE2B131C7BCC2500ED71E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Join.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,14 +173,13 @@
 			name = Join;
 			sourceTree = "<group>";
 		};
-		A288F7C01C785ECA00DF2847 /* Tabs */ = {
+		A288F7C01C785ECA00DF2847 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
 				A288F7A61C78447D00DF2847 /* MainTabBarViewController.swift */,
-				A288F7A41C7841B600DF2847 /* BrowseViewController.swift */,
-				A2BE2B0E1C7B9F4400ED71E4 /* ProfileViewController.swift */,
+				A2BE2B101C7BC07600ED71E4 /* Tabs */,
 			);
-			name = Tabs;
+			name = TabBar;
 			sourceTree = "<group>";
 		};
 		A288F7C11C785EEF00DF2847 /* Other */ = {
@@ -205,7 +206,7 @@
 			children = (
 				A288F7BF1C785EBE00DF2847 /* Join */,
 				A288F7BE1C785EAE00DF2847 /* Messaging */,
-				A288F7C01C785ECA00DF2847 /* Tabs */,
+				A288F7C01C785ECA00DF2847 /* TabBar */,
 				A288F7CB1C785FC400DF2847 /* Login */,
 			);
 			name = Controller;
@@ -222,6 +223,7 @@
 		A288F7CC1C78606400DF2847 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				A2BE2B111C7BCBF500ED71E4 /* Tabs */,
 				A288F7D21C7860D800DF2847 /* Messaging */,
 				A288F7761C7840E600DF2847 /* Main.storyboard */,
 				A2BE2B0D1C7B9E1F00ED71E4 /* Profile */,
@@ -280,6 +282,23 @@
 				A2BE2B0A1C7B9E1700ED71E4 /* Profile.storyboard */,
 			);
 			name = Profile;
+			sourceTree = "<group>";
+		};
+		A2BE2B101C7BC07600ED71E4 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				A288F7A41C7841B600DF2847 /* BrowseViewController.swift */,
+				A2BE2B0E1C7B9F4400ED71E4 /* ProfileViewController.swift */,
+			);
+			name = Tabs;
+			sourceTree = "<group>";
+		};
+		A2BE2B111C7BCBF500ED71E4 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				A2BE2B121C7BCC2500ED71E4 /* Join.storyboard */,
+			);
+			name = Tabs;
 			sourceTree = "<group>";
 		};
 		BA88D8AD8904B9765BBA1CB3 /* Frameworks */ = {
@@ -363,6 +382,7 @@
 				A288F7DE1C7873D100DF2847 /* Login.storyboard in Resources */,
 				A288F77A1C7840E600DF2847 /* Assets.xcassets in Resources */,
 				A288F7D61C78612A00DF2847 /* GeneralMessageCell.xib in Resources */,
+				A2BE2B141C7BCC2500ED71E4 /* Join.storyboard in Resources */,
 				A2BE2B051C79984B00ED71E4 /* Share.storyboard in Resources */,
 				A288F7781C7840E600DF2847 /* Main.storyboard in Resources */,
 			);
@@ -472,6 +492,14 @@
 				A2BE2B0B1C7B9E1700ED71E4 /* Base */,
 			);
 			name = Profile.storyboard;
+			sourceTree = "<group>";
+		};
+		A2BE2B121C7BCC2500ED71E4 /* Join.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A2BE2B131C7BCC2500ED71E4 /* Base */,
+			);
+			name = Join.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
