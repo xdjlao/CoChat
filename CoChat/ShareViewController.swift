@@ -1,19 +1,33 @@
 import UIKit
 
 class ShareViewController: UIViewController {
-    // @IBOutlet var roomLabel: UILabel!
+    
     @IBOutlet var QRImageView: UIImageView!
+    @IBOutlet weak var shareItemLabel: UILabel!
+    @IBOutlet weak var shareItemSegmentedControl: UISegmentedControl!
+    
     var channel:Channel?
-    @IBOutlet weak var passcodeLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         generateQRCode()
+        showShareItem()
         navigationItem.title = "\((channel?.title)!)"
+        
     }
     
     func launchUniversalLink(){
         // do something
+    }
+    
+    func showShareItem() {
+        if shareItemSegmentedControl.selectedSegmentIndex == 0 {
+            guard let channelPasscode = channel?.password else {return}
+            shareItemLabel.text = channelPasscode
+        } else if shareItemSegmentedControl.selectedSegmentIndex == 1 {
+            let channelItem = "http://google.com/123456"
+            shareItemLabel.text = channelItem
+        }
     }
     
     
@@ -67,8 +81,12 @@ class ShareViewController: UIViewController {
         })
     }
     
+    @IBAction func onShareItemSegmentedControlChanged(sender: UISegmentedControl) {
+        showShareItem()
+    }
+    
     @IBAction func onCopy(sender: UIButton) {
-        copyText(passcodeLabel.text!) { () -> () in
+        copyText(shareItemLabel.text!) { () -> () in
             let alert = UIAlertController(title: "Passcode Copied!", message: "Now share it with the world", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)

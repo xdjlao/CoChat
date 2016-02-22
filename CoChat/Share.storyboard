@@ -63,6 +63,9 @@
                                     <segment title="Passcode"/>
                                     <segment title="Link"/>
                                 </segments>
+                                <connections>
+                                    <action selector="onShareItemSegmentedControlChanged:" destination="lXL-kM-yZF" eventType="valueChanged" id="cyb-7x-WL8"/>
+                                </connections>
                             </segmentedControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aHJ-ou-TRW">
                                 <rect key="frame" x="40" y="332" width="520" height="70"/>
@@ -141,7 +144,8 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="QRImageView" destination="RMq-CN-sU2" id="aG7-5P-nEQ"/>
-                        <outlet property="passcodeLabel" destination="fa3-Qt-m7V" id="5Zh-Vx-MxM"/>
+                        <outlet property="shareItemLabel" destination="fa3-Qt-m7V" id="d4z-9N-nNZ"/>
+                        <outlet property="shareItemSegmentedControl" destination="BXD-9e-U4r" id="4dW-xE-sgB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oth-py-zW8" userLabel="First Responder" sceneMemberID="firstResponder"/>
