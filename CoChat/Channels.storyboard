@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="UUJ-Vt-PVN">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--ChannelsVC-->
+        <scene sceneID="3dY-an-7Iw">
+            <objects>
+                <viewController id="UUJ-Vt-PVN" customClass="ChannelsVC" customModule="CoChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DMp-58-Wvj"/>
+                        <viewControllerLayoutGuide type="bottom" id="HdV-Lu-0ul"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="G4d-37-ggH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gRy-Wj-nqm">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gRy-Wj-nqm" firstAttribute="leading" secondItem="G4d-37-ggH" secondAttribute="leading" id="OWA-ei-N1H"/>
+                            <constraint firstItem="gRy-Wj-nqm" firstAttribute="top" secondItem="G4d-37-ggH" secondAttribute="top" id="QwI-Ni-qAS"/>
+                            <constraint firstItem="HdV-Lu-0ul" firstAttribute="top" secondItem="gRy-Wj-nqm" secondAttribute="bottom" id="jVy-WN-ty2"/>
+                            <constraint firstAttribute="trailing" secondItem="gRy-Wj-nqm" secondAttribute="trailing" id="nhe-Ty-15T"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WrJ-KX-W1D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="557" y="-6"/>
+        </scene>
+    </scenes>
+</document>

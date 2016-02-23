@@ -71,11 +71,20 @@
                     <connections>
                         <outlet property="overlayView" destination="GFW-IS-N4e" id="4Gj-HS-p6b"/>
                         <outlet property="tableView" destination="MSA-nq-rwv" id="h3q-L2-fr1"/>
+                        <segue destination="X6p-gC-kh3" kind="show" identifier="PushChannelsVC" id="DtR-2Z-I3L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MEl-RG-r5O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1244" y="502"/>
+        </scene>
+        <!--Channels-->
+        <scene sceneID="Q6P-kf-u08">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Channels" id="X6p-gC-kh3" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LiS-dL-XxN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1727.5" y="502"/>
         </scene>
     </scenes>
 </document>
