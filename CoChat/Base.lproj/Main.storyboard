@@ -154,10 +154,10 @@
             </objects>
             <point key="canvasLocation" x="2091" y="1954"/>
         </scene>
-        <!--Main Tab Bar View Controller-->
+        <!--Tab Bar Controller-->
         <scene sceneID="6OT-VS-bp5">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="H95-qJ-fS7" customClass="MainTabBarViewController" customModule="CoChat" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="H95-qJ-fS7" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="qt0-o6-8wg">
                         <autoresizingMask key="autoresizingMask"/>
@@ -165,8 +165,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="KMU-u7-4ap" kind="relationship" relationship="viewControllers" id="Jx9-GY-NCE"/>
-                        <segue destination="Oue-gC-ipT" kind="relationship" relationship="viewControllers" id="Pj0-i0-gog"/>
                         <segue destination="ev7-5U-jaN" kind="relationship" relationship="viewControllers" id="F7c-wc-3CU"/>
+                        <segue destination="Oue-gC-ipT" kind="relationship" relationship="viewControllers" id="Pj0-i0-gog"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="02D-f6-lDW" userLabel="First Responder" sceneMemberID="firstResponder"/>
