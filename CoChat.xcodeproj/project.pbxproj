@@ -44,6 +44,9 @@
 		A2BE2B0C1C7B9E1700ED71E4 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2BE2B0A1C7B9E1700ED71E4 /* Profile.storyboard */; };
 		A2BE2B0F1C7B9F4400ED71E4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B0E1C7B9F4400ED71E4 /* ProfileViewController.swift */; };
 		A2BE2B141C7BCC2500ED71E4 /* Join.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2BE2B121C7BCC2500ED71E4 /* Join.storyboard */; };
+		A2BE2B181C7CE33000ED71E4 /* WhisperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B171C7CE33000ED71E4 /* WhisperViewController.swift */; };
+		A2BE2B201C7CE44E00ED71E4 /* Whisper.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2BE2B1E1C7CE44E00ED71E4 /* Whisper.storyboard */; };
+		A2BE2B221C7CE49D00ED71E4 /* WhisperTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B211C7CE49D00ED71E4 /* WhisperTableViewCell.swift */; };
 		FE075CF3C95FB29BE89AA0A4 /* Pods_CoChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70EBED03AAABBA95CBA945A5 /* Pods_CoChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +93,9 @@
 		A2BE2B0B1C7B9E1700ED71E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
 		A2BE2B0E1C7B9F4400ED71E4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A2BE2B131C7BCC2500ED71E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Join.storyboard; sourceTree = "<group>"; };
+		A2BE2B171C7CE33000ED71E4 /* WhisperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhisperViewController.swift; sourceTree = "<group>"; };
+		A2BE2B1F1C7CE44E00ED71E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Whisper.storyboard; sourceTree = "<group>"; };
+		A2BE2B211C7CE49D00ED71E4 /* WhisperTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhisperTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,7 +224,6 @@
 		A288F7C31C785F0600DF2847 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A288F7BF1C785EBE00DF2847 /* Join */,
 				A288F7BE1C785EAE00DF2847 /* Messaging */,
 				A288F7C01C785ECA00DF2847 /* TabBar */,
 				A288F7CB1C785FC400DF2847 /* Login */,
@@ -244,7 +249,6 @@
 				91E9B9E51C7BCFC4006F4CF0 /* Channels.storyboard */,
 				91E9B9E01C7BCD33006F4CF0 /* Host.storyboard */,
 				91E9B9DF1C7BCD33006F4CF0 /* HostReusableCell.xib */,
-				A2BE2B0D1C7B9E1F00ED71E4 /* Profile */,
 				A288F77B1C7840E600DF2847 /* LaunchScreen.storyboard */,
 				A288F7DD1C7873D100DF2847 /* Login.storyboard */,
 			);
@@ -306,8 +310,10 @@
 		A2BE2B101C7BC07600ED71E4 /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
-				A288F7A41C7841B600DF2847 /* BrowseViewController.swift */,
-				A2BE2B0E1C7B9F4400ED71E4 /* ProfileViewController.swift */,
+				A2BE2B1B1C7CE35B00ED71E4 /* Whisper */,
+				A288F7BF1C785EBE00DF2847 /* Join */,
+				A2BE2B191C7CE34E00ED71E4 /* Browse */,
+				A2BE2B1A1C7CE35500ED71E4 /* Profile */,
 			);
 			name = Tabs;
 			sourceTree = "<group>";
@@ -315,9 +321,52 @@
 		A2BE2B111C7BCBF500ED71E4 /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
-				A2BE2B121C7BCC2500ED71E4 /* Join.storyboard */,
+				A2BE2B1D1C7CE3B200ED71E4 /* Whisper */,
+				A2BE2B0D1C7B9E1F00ED71E4 /* Profile */,
+				A2BE2B1C1C7CE37B00ED71E4 /* Join */,
 			);
 			name = Tabs;
+			sourceTree = "<group>";
+		};
+		A2BE2B191C7CE34E00ED71E4 /* Browse */ = {
+			isa = PBXGroup;
+			children = (
+				A288F7A41C7841B600DF2847 /* BrowseViewController.swift */,
+			);
+			name = Browse;
+			sourceTree = "<group>";
+		};
+		A2BE2B1A1C7CE35500ED71E4 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A2BE2B0E1C7B9F4400ED71E4 /* ProfileViewController.swift */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		A2BE2B1B1C7CE35B00ED71E4 /* Whisper */ = {
+			isa = PBXGroup;
+			children = (
+				A2BE2B171C7CE33000ED71E4 /* WhisperViewController.swift */,
+			);
+			name = Whisper;
+			sourceTree = "<group>";
+		};
+		A2BE2B1C1C7CE37B00ED71E4 /* Join */ = {
+			isa = PBXGroup;
+			children = (
+				A2BE2B121C7BCC2500ED71E4 /* Join.storyboard */,
+			);
+			name = Join;
+			sourceTree = "<group>";
+		};
+		A2BE2B1D1C7CE3B200ED71E4 /* Whisper */ = {
+			isa = PBXGroup;
+			children = (
+				A2BE2B1E1C7CE44E00ED71E4 /* Whisper.storyboard */,
+				A2BE2B211C7CE49D00ED71E4 /* WhisperTableViewCell.swift */,
+			);
+			name = Whisper;
 			sourceTree = "<group>";
 		};
 		BA88D8AD8904B9765BBA1CB3 /* Frameworks */ = {
@@ -406,6 +455,7 @@
 				91B18F5E1C7CE02300F20531 /* Messaging.storyboard in Resources */,
 				A2BE2B141C7BCC2500ED71E4 /* Join.storyboard in Resources */,
 				A2BE2B051C79984B00ED71E4 /* Share.storyboard in Resources */,
+				A2BE2B201C7CE44E00ED71E4 /* Whisper.storyboard in Resources */,
 				91E9B9E41C7BCD33006F4CF0 /* Host.storyboard in Resources */,
 				A288F7781C7840E600DF2847 /* Main.storyboard in Resources */,
 			);
@@ -478,6 +528,8 @@
 				A288F7DA1C7867EA00DF2847 /* MenuChannelViewController.swift in Sources */,
 				A288F7B91C785B2D00DF2847 /* MessagingViewController-Data.swift in Sources */,
 				A288F7AD1C7858FE00DF2847 /* Room.swift in Sources */,
+				A2BE2B221C7CE49D00ED71E4 /* WhisperTableViewCell.swift in Sources */,
+				A2BE2B181C7CE33000ED71E4 /* WhisperViewController.swift in Sources */,
 				A288F7B51C78599600DF2847 /* FirebaseType-Protocol&Extension.swift in Sources */,
 				A288F7CF1C78609700DF2847 /* UserMessageCell.swift in Sources */,
 				A288F7B11C78592900DF2847 /* User.swift in Sources */,
@@ -534,6 +586,14 @@
 				A2BE2B131C7BCC2500ED71E4 /* Base */,
 			);
 			name = Join.storyboard;
+			sourceTree = "<group>";
+		};
+		A2BE2B1E1C7CE44E00ED71E4 /* Whisper.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A2BE2B1F1C7CE44E00ED71E4 /* Base */,
+			);
+			name = Whisper.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
