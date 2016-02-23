@@ -31,7 +31,6 @@ class HostViewController: UIViewController {
       toggleAdvancedSettings = false
       let headerNib = UINib(nibName: "HostReusableCell", bundle: nil)
       tableView.registerNib(headerNib, forCellReuseIdentifier: "Host Reusable Cell")
-      tableView.scrollEnabled = false
       let addRoomButton = UIBarButtonItem(title: "Create Room", style: UIBarButtonItemStyle.Plain, target: self, action: "addRoomButtonWasTapped")
       navigationItem.rightBarButtonItem = addRoomButton
    }

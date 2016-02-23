@@ -21,8 +21,8 @@
                             <constraint firstAttribute="width" constant="44" id="sAj-h7-ThV"/>
                         </constraints>
                     </imageView>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="HeaderTitle" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MgF-gv-xfQ">
-                        <rect key="frame" x="60" y="18" width="110" height="30"/>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="HeaderTitle" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="MgF-gv-xfQ">
+                        <rect key="frame" x="60" y="18" width="195" height="30"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
@@ -42,7 +42,7 @@
                     <constraint firstAttribute="bottomMargin" secondItem="MgF-gv-xfQ" secondAttribute="bottom" constant="10" id="ZMT-i0-fci"/>
                     <constraint firstItem="2C0-W0-awp" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="cf9-VH-lsm"/>
                     <constraint firstItem="ZPf-RO-Yl0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="rQI-LE-TQi"/>
-                    <constraint firstItem="MgF-gv-xfQ" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="-142" id="s6J-Gv-nTK"/>
+                    <constraint firstItem="MgF-gv-xfQ" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="-57" id="s6J-Gv-nTK"/>
                     <constraint firstItem="ZPf-RO-Yl0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="tmF-Qv-BdO"/>
                     <constraint firstItem="MgF-gv-xfQ" firstAttribute="leading" secondItem="ZPf-RO-Yl0" secondAttribute="trailing" constant="8" id="xYF-VR-XDX"/>
                 </constraints>
