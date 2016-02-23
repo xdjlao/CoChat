@@ -11,7 +11,7 @@ import UIKit
 class HostViewController: UIViewController {
     @IBOutlet var overlayView: UIView!
     @IBOutlet var tableView: UITableView!
-    var cellContent = [
+    var cellContent:Dictionary<String, Array<String>> = [
         "basicContent":["Create A Room",
             "Name Of Room",
             "Description Of Room"],
@@ -64,53 +64,9 @@ extension HostViewController: HostReusableCellDelegate {
 extension HostViewController: UITableViewDelegate, UITableViewDataSource {    
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let basicContent:Array = cellContent["basicContent"]!
-        let advancedContent:Array = cellContent["advancedContent"]!
-        
         let cell = tableView.dequeueReusableCellWithIdentifier("Host Reusable Cell") as! HostReusableCell
-        cell.icon.image = nil
-        cell.userInteractionEnabled = true
-        cell.switchToggle.hidden = true
-        cell.selectionStyle = .None
-        cell.accessoryType = UITableViewCellAccessoryType.None
-        cell.title.userInteractionEnabled = true
-        
-        switch (indexPath.section, indexPath.row) {
-        case (0,0):
-            cell.icon.image = UIImage(named: "Create")
-            cell.title.text = basicContent[indexPath.row]
-            cell.userInteractionEnabled = false
-        case (1,0):
-            cell.icon.image = UIImage(named: "Settings")
-            cell.title.text = advancedContent[indexPath.row]
-            cell.title.userInteractionEnabled = false
-            cell.selectionStyle = .Gray
-        case (0,1):
-            cell.title.text = basicContent[indexPath.row]
-            cell.cellDelegate = self
-            cell.type = .NameOfRoom
-        case (0,2):
-            cell.title.text = basicContent[indexPath.row]
-            cell.cellDelegate = self
-            cell.type = .DescriptionOfRoom
-        case (1,1):
-            cell.title.text = advancedContent[indexPath.row]
-            cell.cellDelegate = self
-            cell.type = .PasscodeOfRoom
-        case (1,2):
-            cell.title.text = advancedContent[indexPath.row]
-            cell.title.userInteractionEnabled = false
-            cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
-            cell.selectionStyle = .Gray
-        case (1,3):
-            cell.title.text = advancedContent[indexPath.row]
-            cell.title.userInteractionEnabled = false
-            cell.type = .Privacy
-            cell.switchToggle.hidden = false
-            cell.cellDelegate = self
-        default:
-            assertionFailure()
-        }
+        cell.setUpCellAtIndexPath(indexPath, cellContent: cellContent)
+        cell.cellDelegate = self
         return cell
     }
 

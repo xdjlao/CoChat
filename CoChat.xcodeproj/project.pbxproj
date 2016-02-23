@@ -11,6 +11,8 @@
 		91E9B9E21C7BCD33006F4CF0 /* HostReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E9B9DE1C7BCD33006F4CF0 /* HostReusableCell.swift */; };
 		91E9B9E31C7BCD33006F4CF0 /* HostReusableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91E9B9DF1C7BCD33006F4CF0 /* HostReusableCell.xib */; };
 		91E9B9E41C7BCD33006F4CF0 /* Host.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91E9B9E01C7BCD33006F4CF0 /* Host.storyboard */; };
+		91E9B9E61C7BCFC4006F4CF0 /* Channels.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91E9B9E51C7BCFC4006F4CF0 /* Channels.storyboard */; };
+		91E9B9E81C7BD0F1006F4CF0 /* ChannelsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E9B9E71C7BD0F1006F4CF0 /* ChannelsVC.swift */; };
 		A288F7731C7840E600DF2847 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A288F7721C7840E600DF2847 /* AppDelegate.swift */; };
 		A288F7781C7840E600DF2847 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A288F7761C7840E600DF2847 /* Main.storyboard */; };
 		A288F77A1C7840E600DF2847 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A288F7791C7840E600DF2847 /* Assets.xcassets */; };
@@ -52,6 +54,8 @@
 		91E9B9DE1C7BCD33006F4CF0 /* HostReusableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostReusableCell.swift; sourceTree = "<group>"; };
 		91E9B9DF1C7BCD33006F4CF0 /* HostReusableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HostReusableCell.xib; sourceTree = "<group>"; };
 		91E9B9E01C7BCD33006F4CF0 /* Host.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Host.storyboard; sourceTree = "<group>"; };
+		91E9B9E51C7BCFC4006F4CF0 /* Channels.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Channels.storyboard; sourceTree = "<group>"; };
+		91E9B9E71C7BD0F1006F4CF0 /* ChannelsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelsVC.swift; sourceTree = "<group>"; };
 		A288F76F1C7840E600DF2847 /* CoChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A288F7721C7840E600DF2847 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A288F7771C7840E600DF2847 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -185,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				91E9B9DD1C7BCD33006F4CF0 /* HostViewController.swift */,
+				91E9B9E71C7BD0F1006F4CF0 /* ChannelsVC.swift */,
 				A288F7A61C78447D00DF2847 /* MainTabBarViewController.swift */,
 				A2BE2B101C7BC07600ED71E4 /* Tabs */,
 			);
@@ -235,6 +240,7 @@
 				A2BE2B111C7BCBF500ED71E4 /* Tabs */,
 				A288F7D21C7860D800DF2847 /* Messaging */,
 				A288F7761C7840E600DF2847 /* Main.storyboard */,
+				91E9B9E51C7BCFC4006F4CF0 /* Channels.storyboard */,
 				91E9B9E01C7BCD33006F4CF0 /* Host.storyboard */,
 				91E9B9DF1C7BCD33006F4CF0 /* HostReusableCell.xib */,
 				A2BE2B0D1C7B9E1F00ED71E4 /* Profile */,
@@ -390,6 +396,7 @@
 			files = (
 				A288F7D81C7862C700DF2847 /* UserMessageCell.xib in Resources */,
 				A288F77D1C7840E600DF2847 /* LaunchScreen.storyboard in Resources */,
+				91E9B9E61C7BCFC4006F4CF0 /* Channels.storyboard in Resources */,
 				91E9B9E31C7BCD33006F4CF0 /* HostReusableCell.xib in Resources */,
 				A2BE2B0C1C7B9E1700ED71E4 /* Profile.storyboard in Resources */,
 				A288F7DE1C7873D100DF2847 /* Login.storyboard in Resources */,
@@ -465,6 +472,7 @@
 				A288F7A71C78447D00DF2847 /* MainTabBarViewController.swift in Sources */,
 				A288F7B31C78593D00DF2847 /* Message.swift in Sources */,
 				91E9B9E21C7BCD33006F4CF0 /* HostReusableCell.swift in Sources */,
+				91E9B9E81C7BD0F1006F4CF0 /* ChannelsVC.swift in Sources */,
 				A288F7DA1C7867EA00DF2847 /* MenuChannelViewController.swift in Sources */,
 				A288F7B91C785B2D00DF2847 /* MessagingViewController-Data.swift in Sources */,
 				A288F7AD1C7858FE00DF2847 /* Room.swift in Sources */,
