@@ -54,6 +54,7 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource {
         
     }
     
+  
     
     // MARK - Nib Methods
     func registerNibs(){
@@ -63,7 +64,7 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.registerNib(userMessage, forCellReuseIdentifier: "UserMessageCell")
     }
     
-    
+    //in
     // MARK - Listeners
     func textViewBeganEditing(){
         //Flash red if over 140 count
@@ -86,19 +87,21 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource {
                 })
                 }, completion: nil)
         }
-        
-        
-        if textView.frame.size.height < textView.contentSize.height {
-            
-            let height = textView.contentSize.height
-            var frame = textView.frame
-            
-            UIView.animateWithDuration(0.5, delay: 0.0, options: [], animations: { () -> Void in
-                frame.size.height = height + 10.00
-                self.textView.frame = frame
-                
-                }, completion: nil)
-        }
+
+        textView.sizeToFit()
+        textView.layoutIfNeeded()
+//        
+//        if textView.frame.size.height > textView.contentSize.height {
+//            
+//            let height = textView.contentSize.height
+//            var frame = textView.frame
+//            
+//            UIView.animateWithDuration(0.5, delay: 0.0, options: [], animations: { () -> Void in
+//                frame.size.height = height + 10.00
+//                self.textViewContainerHeight.constant = frame.size.height
+//                print(self.textViewContainerHeight.constant)
+//                }, completion: nil)
+//        }
         
     }
     //MARK - TableView Delegate Methods
@@ -152,10 +155,14 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource {
         if indexPath.row == messages.count - 1 {
             if let generalCell = cell as? GeneralMessageCell {
                 generalMessageCellWillDisplay(generalCell, indexPath: indexPath)
+                tableView.scrollToBottom()
+
             }
             
             if let userCell = cell as? UserMessageCell {
                 userMessageCellWillDisplay(userCell, indexPath: indexPath)
+                tableView.scrollToBottom()
+
             }
         }
     }
@@ -184,7 +191,7 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "textViewBeganEditing", name: UITextViewTextDidChangeNotification, object: nil)
-        
+        textView.scrollEnabled = false
         registerNibs()
         
         tableViewOrientation()
