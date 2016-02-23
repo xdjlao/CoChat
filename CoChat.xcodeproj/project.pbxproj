@@ -85,7 +85,6 @@
 		A288F7DB1C78696100DF2847 /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		A288F7DD1C7873D100DF2847 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		A2BE2B041C79984B00ED71E4 /* Share.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Share.storyboard; sourceTree = "<group>"; };
-		A2BE2B091C7B94CD00ED71E4 /* CoChat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CoChat.entitlements; sourceTree = "<group>"; };
 		A2BE2B0B1C7B9E1700ED71E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
 		A2BE2B0E1C7B9F4400ED71E4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A2BE2B131C7BCC2500ED71E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Join.storyboard; sourceTree = "<group>"; };
@@ -133,7 +132,6 @@
 		A288F7711C7840E600DF2847 /* CoChat */ = {
 			isa = PBXGroup;
 			children = (
-				A2BE2B091C7B94CD00ED71E4 /* CoChat.entitlements */,
 				A288F7B71C7859D600DF2847 /* Extensions & Protocols */,
 				A288F7B61C7859B100DF2847 /* Model */,
 				A288F7C21C785EF900DF2847 /* View */,
@@ -365,7 +363,7 @@
 						DevelopmentTeam = 9F59S7VZE2;
 						SystemCapabilities = {
 							com.apple.SafariKeychain = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
