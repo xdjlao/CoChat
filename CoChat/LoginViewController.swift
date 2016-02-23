@@ -19,16 +19,16 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        ref.observeAuthEventWithBlock { authData in
-            if let authData = authData {
-                
-                self.manager.handleUserAuthData(authData, withMainQueueCompletionHandler: { user in
-                    self.dismissViewControllerAnimated(true, completion: {
-                        //dismiss?
-                    })
-                })
-            }
-        }
+//        ref.observeAuthEventWithBlock { authData in
+//            if let authData = authData {
+//                
+//                self.manager.handleUserAuthData(authData, withMainQueueCompletionHandler: { user in
+//                    self.dismissViewControllerAnimated(true, completion: {
+//                        //dismiss?
+//                    })
+//                })
+//            }
+//        }
     }
 }
 

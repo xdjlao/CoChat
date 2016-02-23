@@ -22,9 +22,6 @@ class User: FirebaseType {
         self.name = name
         self.profileImageURL = profileImageURL
         self.uid = uid
-        createNew { new in
-            //
-        }
     }
     
     required init(fromDictionary dictionary: [NSObject : AnyObject], andUID uid: String) {

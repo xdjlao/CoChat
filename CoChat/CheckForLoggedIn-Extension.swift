@@ -41,7 +41,11 @@ extension UIViewController {
                print("Login failed with error: \(error)")
             } else {
                print("Logged in! \(authData)")
-               
+               FirebaseManager.manager.handleUserAuthData(authData, withMainQueueCompletionHandler: { user in
+                  if self.isKindOfClass(LoginViewController) {
+                     self.dismissViewControllerAnimated(true, completion: nil)
+                  }
+               })
             }
          })
       }
@@ -53,7 +57,7 @@ extension UIViewController {
    }
 }
 
-//protocol FBSDKLoginButtonDelegateConformer: FBSDKLoginButtonDelegate {
+//@objc protocol FBSDKLoginButtonDelegateConformer: FBSDKLoginButtonDelegate {
 //   func createFBLoginButton(withPosition position: (x: CGFloat, y: CGFloat)) -> FBSDKLoginButton
 //   func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!)
 //   func loginButtonDidLogOut(loginButton: FBSDKLoginButton!)
@@ -64,7 +68,7 @@ extension UIViewController {
 //extension FBSDKLoginButtonDelegateConformer {
 //   func presentLoginScreen() {
 //      let storyboard = UIStoryboard(name: "Login", bundle: nil)
-//      guard let loginVC = storyboard.instantiateInitialViewController() as? LoginVC else { return }
+//      guard let loginVC = storyboard.instantiateInitialViewController() as? LoginViewController else { return }
 //      presentViewController(loginVC, animated: true) {
 //         //??
 //      }
