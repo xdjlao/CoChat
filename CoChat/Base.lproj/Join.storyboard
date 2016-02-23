@@ -88,8 +88,8 @@
         <!--UIViewController-efc-L1-N1A-->
         <scene sceneID="te3-nb-m4c">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="UIViewController-efc-L1-N1A" id="RnJ-Cn-YnU" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EvO-Wt-Uur" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="UIViewController-efc-L1-N1A" id="RnJ-Cn-YnU" sceneMemberID="viewController"/>
             </objects>
             <point key="canvasLocation" x="2091" y="1186"/>
         </scene>
