@@ -1,4 +1,5 @@
 import UIKit
+import Firebase
 
 class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannelViewControllerDelegate {
    @IBOutlet weak var textView: UITextView! {
@@ -57,6 +58,14 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
             let indexPath = NSIndexPath(forRow: self.messages.count - 1, inSection: 0)
             self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
             self.tableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Bottom, animated: false)
+            self.messages.sortInPlace { first, second in
+               let formatter = NSDateFormatter()
+               print(first.time)
+               print(second.time)
+               print("attempting to get date from string")
+            
+               return first.time.compare(second.time) == NSComparisonResult.OrderedAscending
+            }
          })
       }
    }
@@ -65,7 +74,11 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
    @IBAction func sendButton(sender: UIButton) {
       if (textView.text != "") {
          guard let user = user else { return }
-         let _ = Message(messageText: textView.text!, timeStamp: String(NSDate()), poster: user, channel: currentChannel)
+         let formatter = NSDateFormatter()
+         
+         formatter.dateStyle = .ShortStyle
+         formatter.timeStyle = .ShortStyle
+         let _ = Message(messageText: textView.text!, timeObject: FirebaseServerValue.timestamp(), poster: user, channel: currentChannel)
          textView.text = ""
       }
    }
