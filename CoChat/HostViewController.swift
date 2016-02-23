@@ -27,7 +27,6 @@ class HostViewController: UIViewController {
     var roomPassCode:String?
     var createChannels:Bool?
     var privateRoom:Bool?
-    
     var toggleAdvancedSettings = Bool()
     
     override func viewDidLoad() {
@@ -103,7 +102,7 @@ extension HostViewController: UITableViewDelegate, UITableViewDataSource {
             toggleAdvancedSettings = !toggleAdvancedSettings
             tableView.reloadSections(index, withRowAnimation: UITableViewRowAnimation.Fade)
         case(1,2):
-            performSegueWithIdentifier("PushChanelsVC", sender: self)
+            performSegueWithIdentifier("PushChannelsVC", sender: self)
         default:break
         }
     }

@@ -20,6 +20,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gRy-Wj-nqm">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="UUJ-Vt-PVN" id="KO3-e3-bz3"/>
+                                    <outlet property="delegate" destination="UUJ-Vt-PVN" id="2JS-t5-P5q"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -30,6 +34,9 @@
                             <constraint firstAttribute="trailing" secondItem="gRy-Wj-nqm" secondAttribute="trailing" id="nhe-Ty-15T"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="gRy-Wj-nqm" id="isI-nF-iSF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WrJ-KX-W1D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
