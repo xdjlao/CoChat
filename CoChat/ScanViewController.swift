@@ -10,6 +10,7 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
    
    @IBOutlet weak var scanViewWrapper: UIView!
    @IBOutlet weak var joinViewWrapper: UIView!
+   @IBOutlet weak var passcodeLabel: UITextField!
    
    
    @IBAction func onSwitchPressed(sender: UIBarButtonItem) {
@@ -21,6 +22,9 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
          passcodeView = true
       }
    }
+    @IBAction func onJoinButtonPressed(sender: UIButton) {
+        checkForRoomWithEntryKey(passcodeLabel.text!)
+    }
    
    func startScan() {
       // Get an instance of the AVCaptureDevice class to initialize a device object and provide the video
@@ -74,32 +78,28 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
       scanViewWrapper.hidden = true
    }
    
-   func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!) {
-      // Check if the metadataObjects array is not nil and it contains at least one object.
-      if metadataObjects == nil || metadataObjects.count == 0 {
-         qrCodeFrameView?.frame = CGRectZero
-         print("No QR detected")
-         return
-      }
-      
-      // Get the metadata object.
-      let metadataObj = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
-      
-      if metadataObj.type == AVMetadataObjectTypeQRCode {
-         // If the found metadata is equal to the QR code metadata then update the status label's text and set the bounds
-         let barCodeObject = videoPreviewLayer?.transformedMetadataObjectForMetadataObject(metadataObj as AVMetadataMachineReadableCodeObject) as! AVMetadataMachineReadableCodeObject
-         qrCodeFrameView?.frame = barCodeObject.bounds;
-         
-         if metadataObj.stringValue != nil {
-            let qrReturnValue = metadataObj.stringValue
-            self.dismissViewControllerAnimated(true, completion: { () -> Void in
-               self.captureSession?.stopRunning()
-               print(qrReturnValue)
-               //self.delegate?.qrReaderViewController!(self, didScanCode: qrReturnValue)
-            })
-         }
-      }
-   }
+    func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!) {
+        
+        // Check if the metadataObjects array is not nil and it contains at least one object.
+        if metadataObjects == nil || metadataObjects.count == 0 {
+            qrCodeFrameView?.frame = CGRectZero
+            print("No QR code is detected")
+            return
+        }
+        
+        // Get the metadata object.
+        let metadataObj = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
+        
+        if metadataObj.type == AVMetadataObjectTypeQRCode {
+            // If the found metadata is equal to the QR code metadata then update the status label's text and set the bounds
+            let barCodeObject = videoPreviewLayer?.transformedMetadataObjectForMetadataObject(metadataObj as AVMetadataMachineReadableCodeObject) as! AVMetadataMachineReadableCodeObject
+            qrCodeFrameView?.frame = barCodeObject.bounds;
+            
+            if metadataObj.stringValue != nil {
+                checkForRoomWithEntryKey(metadataObj.stringValue)
+            }
+        }
+    }
    
    func checkForRoomWithEntryKey(key: String) {
       FirebaseManager.manager.getObjectsByChildValue(Room(), childProperty: "entryKey", childValue: key) { rooms in
@@ -128,7 +128,8 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
    
    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
       if segue.identifier == SegueIdentifier.JoinToMessagesSegue.rawValue {
-         guard let mvc = segue.destinationViewController as? MessagingViewController else { return }
+         guard let nvc = segue.destinationViewController as? UINavigationController else { return }
+         guard let mvc = nvc.topViewController as? MessagingViewController else { return }
          guard let room = sender as? Room else { return }
          mvc.room = room
          mvc.currentChannel = room.channels[0]
