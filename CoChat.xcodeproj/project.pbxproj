@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		91B18F5E1C7CE02300F20531 /* Messaging.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91B18F5C1C7CE02300F20531 /* Messaging.storyboard */; };
+		91B18F601C7CE71900F20531 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B18F5F1C7CE71900F20531 /* TableView.swift */; };
 		91E9B9E11C7BCD33006F4CF0 /* HostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E9B9DD1C7BCD33006F4CF0 /* HostViewController.swift */; };
 		91E9B9E21C7BCD33006F4CF0 /* HostReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E9B9DE1C7BCD33006F4CF0 /* HostReusableCell.swift */; };
 		91E9B9E31C7BCD33006F4CF0 /* HostReusableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91E9B9DF1C7BCD33006F4CF0 /* HostReusableCell.xib */; };
@@ -55,6 +56,7 @@
 		587D22B4E734A1D30A6BED37 /* Pods-CoChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoChat/Pods-CoChat.debug.xcconfig"; sourceTree = "<group>"; };
 		70EBED03AAABBA95CBA945A5 /* Pods_CoChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91B18F5D1C7CE02300F20531 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Messaging.storyboard; sourceTree = "<group>"; };
+		91B18F5F1C7CE71900F20531 /* TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		91E9B9DD1C7BCD33006F4CF0 /* HostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostViewController.swift; sourceTree = "<group>"; };
 		91E9B9DE1C7BCD33006F4CF0 /* HostReusableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostReusableCell.swift; sourceTree = "<group>"; };
 		91E9B9DF1C7BCD33006F4CF0 /* HostReusableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HostReusableCell.xib; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			children = (
 				A288F7C51C785F4400DF2847 /* CheckForLoggedIn-Extension.swift */,
 				A288F7B41C78599600DF2847 /* FirebaseType-Protocol&Extension.swift */,
+				91B18F5F1C7CE71900F20531 /* TableView.swift */,
 				A288F7BA1C785C4500DF2847 /* TextToEnum-Extension.swift */,
 				A288F7C71C785F6800DF2847 /* UIColor-Extension.swift */,
 			);
@@ -522,6 +525,7 @@
 				A288F7DC1C78696100DF2847 /* ShareViewController.swift in Sources */,
 				A288F7AB1C78588A00DF2847 /* FirebaseManager.swift in Sources */,
 				A288F7A71C78447D00DF2847 /* MainTabBarViewController.swift in Sources */,
+				91B18F601C7CE71900F20531 /* TableView.swift in Sources */,
 				A288F7B31C78593D00DF2847 /* Message.swift in Sources */,
 				91E9B9E21C7BCD33006F4CF0 /* HostReusableCell.swift in Sources */,
 				91E9B9E81C7BD0F1006F4CF0 /* ChannelsVC.swift in Sources */,

@@ -16,6 +16,7 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
    }
    @IBOutlet weak var channelButtonOutlet: UIButton!
    @IBOutlet weak var sendButtonOutlet: UIButton!
+    @IBOutlet var textViewContainerHeight: NSLayoutConstraint!
    
    var messages = [Message]()
    
@@ -32,6 +33,8 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
       guard let roomLabel = textView else { return }
       roomLabel.text = room.title + " - " + currentChannel.title
       }
+    
+    
    }
    
    func addRoomToRecent() {
