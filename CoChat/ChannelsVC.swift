@@ -76,7 +76,6 @@ extension ChannelsVC: UITableViewDataSource, UITableViewDelegate {
             let frame = CGRectMake(0, 0, 45, 45)
             addButton.frame = frame
             addButton.setBackgroundImage(contactAddImage, forState: .Normal)
-            addButton.addTarget(self, action:"addChannelWasTapped", forControlEvents: .TouchUpInside)
             addButton.backgroundColor = UIColor.clearColor()
             cell.accessoryView = addButton
             cell.userInteractionEnabled = true
@@ -85,11 +84,18 @@ extension ChannelsVC: UITableViewDataSource, UITableViewDelegate {
         }
         return cell
     }
-    
-    func addChannelWasTapped(){
-        numberOfChannels++
-        tableView.reloadData()
-    }
+//    
+//    func addChannelWasTapped(){
+//        numberOfChannels++
+////        let sections = tableView.numberOfSections
+////        let range = 1 ... sections
+////        let index = NSIndexSet(indexesInRange: NSRange(range))
+////        tableView.reloadSections(index, withRowAnimation: UITableViewRowAnimation.Fade)
+//        
+//        UIView.animateWithDuration(1.0, delay: 0.0, options: [], animations: { () -> Void in
+//            self.tableView.reloadData()
+//            }, completion: nil)
+//    }
     
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -127,6 +133,9 @@ extension ChannelsVC: UITableViewDataSource, UITableViewDelegate {
         print(indexPath)
         let index = NSIndexSet(index: 1)
         switch (indexPath.section, indexPath.row){
+        case (0,0):
+            numberOfChannels++
+            tableView.reloadSections(index, withRowAnimation: UITableViewRowAnimation.Fade)
         case (1,0):
             toggleAdvancedSettings = !toggleAdvancedSettings
             tableView.reloadSections(index, withRowAnimation: UITableViewRowAnimation.Fade)
