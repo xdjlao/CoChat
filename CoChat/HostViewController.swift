@@ -25,9 +25,9 @@ class HostViewController: UIViewController {
     var nameOfRoom:String?
     var descriptionOfRoom:String?
     var roomPassCode:String?
-    var createChannels:Bool?
-    var privateRoom:Bool?
-    var toggleAdvancedSettings = Bool()
+    var createChannels = false
+    var privateRoom = 0
+    var toggleAdvancedSettings = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +39,25 @@ class HostViewController: UIViewController {
         let headerNib = UINib(nibName: "HostReusableCell", bundle: nil)
         tableView.registerNib(headerNib, forCellReuseIdentifier: "Host Reusable Cell")
         tableView.scrollEnabled = false
+        let addRoomButton = UIBarButtonItem(title: "Create Room", style: UIBarButtonItemStyle.Plain, target: self, action: "addRoomButtonWasTapped")
+        navigationItem.rightBarButtonItem = addRoomButton
     }
+
+func addRoomButtonWasTapped(){
+    if nameOfRoom != nil && descriptionOfRoom != nil {
+        if roomPassCode == nil {
+            roomPassCode = "123"
+        }
+    let room = Room(title: nameOfRoom!, subtitle: descriptionOfRoom!, host: FirebaseManager.manager.user, privateRoom: privateRoom, password: roomPassCode!) { (new) -> () in
+        
+    self.performSegueWithIdentifier("PushToMessagesVC", sender: self)
+    }
+    }
+    else {
+        //perform animations
+        print("no input received to create a unique room")
+    }
+}
 }
 
 extension HostViewController: HostReusableCellDelegate {
@@ -52,7 +70,7 @@ extension HostViewController: HostReusableCellDelegate {
         case .PasscodeOfRoom:
             roomPassCode = valueDidChange as? String
         case .Privacy:
-            privateRoom = valueDidChange as? Bool
+            privateRoom = valueDidChange as! Int
             print("switch was tapped inside HostVC")
         default:
             assertionFailure()
