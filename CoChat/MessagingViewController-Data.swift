@@ -34,8 +34,17 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
       }
    }
    
+   func addRoomToRecent() {
+      guard !user?.recentRooms.contains ({ (room: Room) -> Bool in
+         return room === self.room
+      }) else { return }
+      user?.recentRoomUIDs.append(room.uid)
+      user?.recentRooms.append(room)
+   }
+   
    override func viewDidLoad() {
       super.viewDidLoad()
+      
       textView.autocorrectionType = UITextAutocorrectionType.Yes
       uiSetup()
    }

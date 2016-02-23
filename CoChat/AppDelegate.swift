@@ -14,12 +14,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-        FirebaseManager.manager.ref.observeAuthEventWithBlock { authData in
-            if let authData = authData {
-                FirebaseManager.manager.handleUserAuthData(authData, withMainQueueCompletionHandler: nil)
-            }
-         print("facebook ref observeAuthEventWithBlock")
-        }
+//        FirebaseManager.manager.ref.observeAuthEventWithBlock { authData in
+//            if let authData = authData {
+//                FirebaseManager.manager.handleUserAuthData(authData, withMainQueueCompletionHandler: nil)
+//            }
+//         print("facebook ref observeAuthEventWithBlock")
+//        }
         //      FirebaseManager.manager.ref.unauth()
         return true
     }

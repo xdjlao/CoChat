@@ -3,7 +3,7 @@ import UIKit
 class HostViewController: UIViewController {
    @IBOutlet var overlayView: UIView!
    @IBOutlet var tableView: UITableView!
-   var cellContent:Dictionary<String, Array<String>> = [
+   var cellContent:[String: [String]] = [
       "basicContent":["Create A Room",
          "Name Of Room",
          "Description Of Room"],
@@ -14,11 +14,7 @@ class HostViewController: UIViewController {
          "Privacy"]
    ]
    
-   var nameOfRoom:String? {
-      didSet {
-      print("nameOfRoom set")
-      }
-   }
+   var nameOfRoom:String?
    var descriptionOfRoom:String?
    var roomPassCode:String?
    var createChannels = false
@@ -27,6 +23,7 @@ class HostViewController: UIViewController {
    
    override func viewDidLoad() {
       super.viewDidLoad()
+      
       setUpUI()
    }
    
@@ -40,6 +37,9 @@ class HostViewController: UIViewController {
    }
    
    func addRoomButtonWasTapped(){
+      if !checkIfLoggedIn() {
+         return
+      }
       
       guard let name = nameOfRoom, description = descriptionOfRoom else { return }
       let entryKey = roomPassCode ?? "123"
@@ -105,8 +105,7 @@ extension HostViewController: UITableViewDelegate, UITableViewDataSource {
       case 1:
          if toggleAdvancedSettings == true {
             return cellContent["advancedContent"]!.count
-         }
-         else {
+         } else {
             return 1
          }
       default:
@@ -121,7 +120,7 @@ extension HostViewController: UITableViewDelegate, UITableViewDataSource {
       case (1,0):
          toggleAdvancedSettings = !toggleAdvancedSettings
          tableView.reloadSections(index, withRowAnimation: UITableViewRowAnimation.Fade)
-      case(1,2):
+      case (1,2):
          performSegueWithIdentifier("PushChannelsVC", sender: self)
       default:break
       }
