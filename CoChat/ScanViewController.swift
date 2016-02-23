@@ -10,6 +10,7 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
    
    @IBOutlet weak var scanViewWrapper: UIView!
    @IBOutlet weak var joinViewWrapper: UIView!
+   @IBOutlet weak var passcodeLabel: UITextField!
    
    
    @IBAction func onSwitchPressed(sender: UIBarButtonItem) {
@@ -21,6 +22,9 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
          passcodeView = true
       }
    }
+    @IBAction func onJoinButtonPressed(sender: UIButton) {
+        checkForRoomWithEntryKey(passcodeLabel.text!)
+    }
    
    func startScan() {
       // Get an instance of the AVCaptureDevice class to initialize a device object and provide the video
