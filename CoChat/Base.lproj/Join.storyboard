@@ -82,18 +82,26 @@
                         <outlet property="joinViewWrapper" destination="hhe-WX-2Kj" id="7lP-8H-wjP"/>
                         <outlet property="passcodeLabel" destination="EOh-Xm-NHB" id="yxO-p5-XYH"/>
                         <outlet property="scanViewWrapper" destination="ISe-6M-65O" id="AhL-7w-tK4"/>
-                        <segue destination="RnJ-Cn-YnU" kind="show" identifier="JoinToMessagesSegue" id="sUZ-qv-MuA"/>
+                        <segue destination="TDq-ST-eG5" kind="presentation" identifier="JoinToMessagesSegue" id="KRh-Ie-iBw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zMa-Pe-WcB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1725" y="307"/>
         </scene>
+        <!--MessengerNavigationController-->
+        <scene sceneID="VRq-Sb-thz">
+            <objects>
+                <viewControllerPlaceholder referencedIdentifier="MessengerNavigationController" id="TDq-ST-eG5" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qet-Sy-HLF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1725.5" y="745"/>
+        </scene>
         <!--UIViewController-efc-L1-N1A-->
         <scene sceneID="te3-nb-m4c">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="UIViewController-efc-L1-N1A" id="RnJ-Cn-YnU" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EvO-Wt-Uur" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="UIViewController-efc-L1-N1A" id="RnJ-Cn-YnU" sceneMemberID="viewController"/>
             </objects>
             <point key="canvasLocation" x="1725" y="1122"/>
         </scene>
