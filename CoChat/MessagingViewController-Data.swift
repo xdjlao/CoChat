@@ -35,11 +35,12 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
    }
    
    func addRoomToRecent() {
-      guard !user?.recentRooms.contains ({ (room: Room) -> Bool in
+      guard let user = user else { return }
+      guard !(user.recentRooms.contains ({ (room: Room) -> Bool in
          return room === self.room
-      }) else { return }
-      user?.recentRoomUIDs.append(room.uid)
-      user?.recentRooms.append(room)
+      })) else { return }
+      user.recentRoomUIDs.append(room.uid)
+      user.recentRooms.append(room)
    }
    
    override func viewDidLoad() {
@@ -68,11 +69,6 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
             self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
             self.tableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Bottom, animated: false)
             self.messages.sortInPlace { first, second in
-               let formatter = NSDateFormatter()
-               print(first.time)
-               print(second.time)
-               print("attempting to get date from string")
-            
                return first.time.compare(second.time) == NSComparisonResult.OrderedAscending
             }
          })
@@ -111,7 +107,7 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
       } else if segue.identifier == "ShowShare" {
          guard let svc = segue.destinationViewController as? ShareViewController else { return }
          svc.channel = currentChannel
-        svc.room = room
+         svc.room = room
       }
    }
 }

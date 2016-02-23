@@ -134,7 +134,7 @@ extension ChannelsVC: UITableViewDataSource, UITableViewDelegate {
         let index = NSIndexSet(index: 1)
         switch (indexPath.section, indexPath.row){
         case (0,0):
-            numberOfChannels++
+            numberOfChannels += 1
             tableView.reloadSections(index, withRowAnimation: UITableViewRowAnimation.Fade)
         case (1,0):
             toggleAdvancedSettings = !toggleAdvancedSettings
