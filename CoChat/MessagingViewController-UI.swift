@@ -1,4 +1,5 @@
 import UIKit
+import AFNetworking
 
 extension MessagingViewController: UITableViewDelegate, UITableViewDataSource {
     
@@ -108,7 +109,12 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource {
         if currentMessage.poster.name == user?.name {
             let cell = tableView.dequeueReusableCellWithIdentifier("UserMessageCell") as! UserMessageCell
             cell.messageLabel.text = currentMessage.messageText
-            cell.profileImageView.image = UIImage(named: "profileImageDummy")
+         
+         if let user = user {
+            cell.profileImageView.setImageWithURL(NSURL(string: user.profileImageURL)!, placeholderImage: UIImage(named: "profileImageDummy"))
+         } else {
+            cell.profileImageView.setImageWithURL(NSURL(string: "www.jerrylao.com")!, placeholderImage: UIImage(named: "profileImageDummy"))
+         }
             cell.selectionStyle = UITableViewCellSelectionStyle.None
             return cell
         }
