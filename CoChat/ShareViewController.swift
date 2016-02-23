@@ -7,12 +7,13 @@ class ShareViewController: UIViewController {
     @IBOutlet weak var shareItemSegmentedControl: UISegmentedControl!
     
     var channel:Channel?
+    var room:Room?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         generateQRCode()
         showShareItem()
-        navigationItem.title = "\((channel?.title)!)"
+        navigationItem.title = "Share"
         
     }
     
@@ -32,7 +33,7 @@ class ShareViewController: UIViewController {
     
     
     func generateQRCode() {
-        guard let channelPassCode = channel?.password else {return}
+        guard let channelPassCode = room?.password else {return}
         
         let data = channelPassCode.dataUsingEncoding(NSISOLatin1StringEncoding, allowLossyConversion: false)
         

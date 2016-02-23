@@ -92,7 +92,7 @@
         <!--MessengerNavigationController-->
         <scene sceneID="VRq-Sb-thz">
             <objects>
-                <viewControllerPlaceholder referencedIdentifier="MessengerNavigationController" id="TDq-ST-eG5" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="MessengerNavigationController" id="TDq-ST-eG5" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qet-Sy-HLF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1725.5" y="745"/>
@@ -100,8 +100,8 @@
         <!--UIViewController-efc-L1-N1A-->
         <scene sceneID="te3-nb-m4c">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EvO-Wt-Uur" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="UIViewController-efc-L1-N1A" id="RnJ-Cn-YnU" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EvO-Wt-Uur" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1725" y="1122"/>
         </scene>

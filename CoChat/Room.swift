@@ -41,7 +41,7 @@ class Room: FirebaseType {
         self.subtitle = dictionary["subtitle"] as? String ?? "failed to get subtitle"
         
         self.privateRoom = dictionary["privateRoom"] as? Int ?? 0
-        self.password = dictionary["password"] as? String ?? "no password"
+        self.password = dictionary["entryKey"] as? String ?? "no password"
         
         let hostName = dictionary["hostName"] as? String ?? "failed to get hostName"
         let hostUID = dictionary["hostUID"] as? String ?? "failed to get hostUID"

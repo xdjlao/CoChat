@@ -89,6 +89,7 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
       } else if segue.identifier == "ShowShare" {
          guard let svc = segue.destinationViewController as? ShareViewController else { return }
          svc.channel = currentChannel
+        svc.room = room
       }
    }
 }
