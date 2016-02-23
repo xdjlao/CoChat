@@ -102,18 +102,31 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
    }
    
    func checkForRoomWithEntryKey(key: String) {
-      FirebaseManager.manager.getObjectsByChildValue(Room(), childProperty: "entryKey", childValue: key) { children in
-         guard let child = children?[0] else { return }
-         self.performSegueWithSegueIdentifier(.JoinToMessagesSegue, sender: child)
+      FirebaseManager.manager.getObjectsByChildValue(Room(), childProperty: "entryKey", childValue: key) { rooms in
+         guard let room = rooms?[0] else { return }
+         
+         FirebaseManager.manager.getChildrenForParent(Channel(), parent: room) { channels in
+            guard let channels = channels else { return }
+            room.channels = channels
+         }
+         
+         self.performSegueWithSegueIdentifier(.JoinToMessagesSegue, sender: room)
       }
    }
    
    func checkForRoomWithUID(uid: String) {
-      FirebaseManager.manager.getObjectForID(Room(), uid: uid) { child in
-         guard let child = child else { return }
-         self.performSegueWithSegueIdentifier(.JoinToMessagesSegue, sender: child)
+      FirebaseManager.manager.getObjectForID(Room(), uid: uid) { room in
+         guard let room = room else { return }
+         
+         FirebaseManager.manager.getChildrenForParent(Channel(), parent: room) { channels in
+            guard let channels = channels else { return }
+            room.channels = channels
+         }
+         
+         self.performSegueWithSegueIdentifier(.JoinToMessagesSegue, sender: room)
       }
    }
+   
    
    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
       if segue.identifier == SegueIdentifier.JoinToMessagesSegue.rawValue {

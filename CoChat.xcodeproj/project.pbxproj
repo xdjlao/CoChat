@@ -136,9 +136,9 @@
 				A2BE2B091C7B94CD00ED71E4 /* CoChat.entitlements */,
 				A288F7B71C7859D600DF2847 /* Extensions & Protocols */,
 				A288F7B61C7859B100DF2847 /* Model */,
+				A288F7C21C785EF900DF2847 /* View */,
 				A288F7C31C785F0600DF2847 /* Controller */,
 				A288F7C11C785EEF00DF2847 /* Other */,
-				A288F7C21C785EF900DF2847 /* View */,
 			);
 			path = CoChat;
 			sourceTree = "<group>";
