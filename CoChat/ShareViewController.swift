@@ -23,7 +23,7 @@ class ShareViewController: UIViewController {
     
     func showShareItem() {
         if shareItemSegmentedControl.selectedSegmentIndex == 0 {
-            guard let channelPasscode = channel?.password else {return}
+            guard let channelPasscode = room?.password else {return}
             shareItemLabel.text = channelPasscode
         } else if shareItemSegmentedControl.selectedSegmentIndex == 1 {
             let channelItem = "http://google.com/123456"
