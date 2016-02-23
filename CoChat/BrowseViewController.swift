@@ -56,8 +56,7 @@ class BrowseViewController: UIViewController {
         guard let room = sender as? Room else { return }
         mvc.room = room
         mvc.currentChannel = room.channels[0]
-    }
-    
+    }    
 }
 
 extension BrowseViewController: UITableViewDataSource, UITableViewDelegate {
