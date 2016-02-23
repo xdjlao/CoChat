@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4eD-Tj-DfR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10109" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4eD-Tj-DfR">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10083"/>
     </dependencies>
     <scenes>
         <!--Host View Controller-->
@@ -69,11 +69,20 @@
                         <outlet property="overlayView" destination="GFW-IS-N4e" id="4Gj-HS-p6b"/>
                         <outlet property="tableView" destination="MSA-nq-rwv" id="h3q-L2-fr1"/>
                         <segue destination="X6p-gC-kh3" kind="show" identifier="PushChannelsVC" id="DtR-2Z-I3L"/>
+                        <segue destination="e5H-Yb-H7h" kind="show" identifier="SegueToMessaging" id="Lcg-UQ-ttR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MEl-RG-r5O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1244" y="502"/>
+        </scene>
+        <!--MessengerNavigationController-->
+        <scene sceneID="3DG-zX-lYq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="MessengerNavigationController" id="e5H-Yb-H7h" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N2R-j6-IRY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1253.5" y="950"/>
         </scene>
         <!--Channels-->
         <scene sceneID="Q6P-kf-u08">

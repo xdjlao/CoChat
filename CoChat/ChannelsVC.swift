@@ -68,7 +68,7 @@ extension ChannelsVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Host Reusable Cell") as! HostReusableCell
         cell.setUpCellAtIndexPath(indexPath, cellContent: cellContent)
-        cell.cellDelegate = self
+        cell.delegate = self
         switch (indexPath.section, indexPath.row) {
         case (0,0):
             let contactAddImage = UIImage(named: "contactAdd")
