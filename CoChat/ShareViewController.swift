@@ -1,10 +1,13 @@
 import UIKit
+import Social
 
 class ShareViewController: UIViewController {
     
     @IBOutlet var QRImageView: UIImageView!
     @IBOutlet weak var shareItemLabel: UILabel!
     @IBOutlet weak var shareItemSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var facebookButtonOutlet: UIButton!
+    @IBOutlet weak var twitterButtonOutlet: UIButton!
     
     var channel:Channel?
     var room:Room?
@@ -100,5 +103,35 @@ class ShareViewController: UIViewController {
         completion()
     }
     
+    @IBAction func onFacebookButtonPressed(sender: UIButton) {
+        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook) {
+            let fbShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+            
+            self.presentViewController(fbShare, animated: true, completion: nil)
+            
+        } else {
+            let alert = UIAlertController(title: "Accounts", message: "Please login to a Facebook account to share.", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func onTwitterButtonPressed(sender: UIButton) {
+        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
+            
+            let tweetShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+            
+            self.presentViewController(tweetShare, animated: true, completion: nil)
+            
+        } else {
+            
+            let alert = UIAlertController(title: "Accounts", message: "Please login to a Twitter account to tweet.", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+    }
     
 }
