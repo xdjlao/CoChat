@@ -48,6 +48,7 @@
 		A2BE2B181C7CE33000ED71E4 /* WhisperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B171C7CE33000ED71E4 /* WhisperViewController.swift */; };
 		A2BE2B201C7CE44E00ED71E4 /* Whisper.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2BE2B1E1C7CE44E00ED71E4 /* Whisper.storyboard */; };
 		A2BE2B221C7CE49D00ED71E4 /* WhisperTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B211C7CE49D00ED71E4 /* WhisperTableViewCell.swift */; };
+		A2BE2B261C7CE97000ED71E4 /* WhisperMessagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B251C7CE97000ED71E4 /* WhisperMessagingViewController.swift */; };
 		FE075CF3C95FB29BE89AA0A4 /* Pods_CoChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70EBED03AAABBA95CBA945A5 /* Pods_CoChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +99,7 @@
 		A2BE2B171C7CE33000ED71E4 /* WhisperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhisperViewController.swift; sourceTree = "<group>"; };
 		A2BE2B1F1C7CE44E00ED71E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Whisper.storyboard; sourceTree = "<group>"; };
 		A2BE2B211C7CE49D00ED71E4 /* WhisperTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhisperTableViewCell.swift; sourceTree = "<group>"; };
+		A2BE2B251C7CE97000ED71E4 /* WhisperMessagingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhisperMessagingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -350,6 +352,7 @@
 		A2BE2B1B1C7CE35B00ED71E4 /* Whisper */ = {
 			isa = PBXGroup;
 			children = (
+				A2BE2B241C7CE94700ED71E4 /* WhisperMessaging */,
 				A2BE2B171C7CE33000ED71E4 /* WhisperViewController.swift */,
 			);
 			name = Whisper;
@@ -368,8 +371,24 @@
 			children = (
 				A2BE2B1E1C7CE44E00ED71E4 /* Whisper.storyboard */,
 				A2BE2B211C7CE49D00ED71E4 /* WhisperTableViewCell.swift */,
+				A2BE2B231C7CE92900ED71E4 /* WhisperMessaging */,
 			);
 			name = Whisper;
+			sourceTree = "<group>";
+		};
+		A2BE2B231C7CE92900ED71E4 /* WhisperMessaging */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = WhisperMessaging;
+			sourceTree = "<group>";
+		};
+		A2BE2B241C7CE94700ED71E4 /* WhisperMessaging */ = {
+			isa = PBXGroup;
+			children = (
+				A2BE2B251C7CE97000ED71E4 /* WhisperMessagingViewController.swift */,
+			);
+			name = WhisperMessaging;
 			sourceTree = "<group>";
 		};
 		BA88D8AD8904B9765BBA1CB3 /* Frameworks */ = {
@@ -415,7 +434,7 @@
 				TargetAttributes = {
 					A288F76E1C7840E600DF2847 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 72MNHNDUNH;
+						DevelopmentTeam = 9F59S7VZE2;
 						SystemCapabilities = {
 							com.apple.SafariKeychain = {
 								enabled = 0;
@@ -539,6 +558,7 @@
 				A288F7B11C78592900DF2847 /* User.swift in Sources */,
 				A288F7BB1C785C4500DF2847 /* TextToEnum-Extension.swift in Sources */,
 				A288F7A51C7841B600DF2847 /* BrowseViewController.swift in Sources */,
+				A2BE2B261C7CE97000ED71E4 /* WhisperMessagingViewController.swift in Sources */,
 				A288F7C61C785F4400DF2847 /* CheckForLoggedIn-Extension.swift in Sources */,
 				A288F7CA1C785FAE00DF2847 /* LoginViewController.swift in Sources */,
 				A288F7D11C7860B500DF2847 /* GeneralMessageCell.swift in Sources */,

@@ -236,11 +236,11 @@
             </objects>
             <point key="canvasLocation" x="2903" y="1186"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Whisper-->
         <scene sceneID="9vT-fD-2Uh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="q6v-5U-mOo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" id="bhw-j5-17j"/>
+                    <tabBarItem key="tabBarItem" title="Whisper" id="bhw-j5-17j"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="QNq-Go-GFt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
