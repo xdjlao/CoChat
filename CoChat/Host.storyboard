@@ -20,29 +20,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MSA-nq-rwv">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <view key="tableFooterView" alpha="0.0" contentMode="scaleToFill" id="GFW-IS-N4e">
-                                    <rect key="frame" x="0.0" y="180" width="600" height="600"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" white="0.75" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                </view>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AdvancedCell" id="n9J-DY-bQB">
-                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n9J-DY-bQB" id="23A-wo-LQt">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="pAS-EV-dTL">
-                                        <rect key="frame" x="0.0" y="136" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pAS-EV-dTL" id="1Hl-BF-EXJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="4eD-Tj-DfR" id="2M9-Q0-zWi"/>
                                     <outlet property="delegate" destination="4eD-Tj-DfR" id="Rnx-o1-wEO"/>
@@ -51,11 +28,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="MSA-nq-rwv" firstAttribute="top" secondItem="9eL-6t-8Eh" secondAttribute="bottom" constant="-64" id="6eY-Hd-qcE"/>
-                            <constraint firstItem="MSA-nq-rwv" firstAttribute="leading" secondItem="2S3-MP-wRp" secondAttribute="leading" id="IJL-JY-2gn"/>
-                            <constraint firstItem="Vkb-fg-KCl" firstAttribute="top" secondItem="MSA-nq-rwv" secondAttribute="bottom" id="mO4-M3-Eon"/>
-                            <constraint firstAttribute="trailing" secondItem="MSA-nq-rwv" secondAttribute="trailing" id="vlo-3b-naL"/>
+                            <constraint firstItem="Vkb-fg-KCl" firstAttribute="top" secondItem="MSA-nq-rwv" secondAttribute="bottom" id="AFp-p6-e4s"/>
                             <constraint firstItem="MSA-nq-rwv" firstAttribute="top" secondItem="9eL-6t-8Eh" secondAttribute="bottom" id="wAF-ex-TNp"/>
+                            <constraint firstItem="MSA-nq-rwv" firstAttribute="top" secondItem="2S3-MP-wRp" secondAttribute="top" id="woR-q4-t1x"/>
+                            <constraint firstItem="MSA-nq-rwv" firstAttribute="leading" secondItem="2S3-MP-wRp" secondAttribute="leading" id="yNq-tB-ATV"/>
+                            <constraint firstAttribute="trailing" secondItem="MSA-nq-rwv" secondAttribute="trailing" id="ytC-yJ-CZo"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -66,7 +43,6 @@
                     <navigationItem key="navigationItem" id="Lk3-Pz-7MV"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="overlayView" destination="GFW-IS-N4e" id="4Gj-HS-p6b"/>
                         <outlet property="tableView" destination="MSA-nq-rwv" id="h3q-L2-fr1"/>
                         <segue destination="X6p-gC-kh3" kind="show" identifier="PushChannelsVC" id="DtR-2Z-I3L"/>
                         <segue destination="e5H-Yb-H7h" kind="show" identifier="SegueToMessaging" id="Lcg-UQ-ttR"/>
