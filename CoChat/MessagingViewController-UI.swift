@@ -56,6 +56,8 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource {
    }
    
    
+  
+   
    
    // MARK - Nib Methods
    func registerNibs(){
@@ -91,18 +93,22 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource {
       
       textView.sizeToFit()
       textView.layoutIfNeeded()
-      //
-      //        if textView.frame.size.height > textView.contentSize.height {
-      //
-      //            let height = textView.contentSize.height
-      //            var frame = textView.frame
-      //
-      //            UIView.animateWithDuration(0.5, delay: 0.0, options: [], animations: { () -> Void in
-      //                frame.size.height = height + 10.00
-      //                self.textViewContainerHeight.constant = frame.size.height
-      //                print(self.textViewContainerHeight.constant)
-      //                }, completion: nil)
-      //        }
+      textView.textContainerInset = UIEdgeInsetsMake(8, 8, 8, 8)
+      let height = textView.sizeThatFits(CGSizeMake(textView.frame.size.width, CGFloat.max)).height
+      textView.contentSize.height = height
+      print(textView.frame.size.height)
+      print("Content size \(textView.contentSize.height)")
+      
+      if textView.frame.size.height < textView.contentSize.height {
+         
+         buttonsContainer.removeConstraint(buttonToTableViewConstraint)
+         let newHeight = textView.contentSize.height
+         var frame = textView.frame
+         
+         UIView.animateWithDuration(0.5, delay: 0.0, options: [], animations: { () -> Void in
+            frame.size.height = newHeight + 10.00
+            }, completion: nil)
+      }
       
    }
    //MARK - TableView Delegate Methods

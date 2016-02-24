@@ -16,8 +16,9 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
    }
    @IBOutlet weak var channelButtonOutlet: UIButton!
    @IBOutlet weak var sendButtonOutlet: UIButton!
-    @IBOutlet var textViewContainerHeight: NSLayoutConstraint!
-   
+   @IBOutlet weak var buttonToTableViewConstraint: NSLayoutConstraint!
+   @IBOutlet weak var buttonsContainer: UIView!
+    
    var messages = [Message]()
    
    let manager = FirebaseManager.manager
