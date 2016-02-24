@@ -31,5 +31,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidBecomeActive(application: UIApplication) {
         FBSDKAppEvents.activateApp()
     }
+    
+    func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
+        if url.host == "room" {
+            let messageStoryboard = UIStoryboard(name: "Host", bundle: nil)
+            let rootViewController = messageStoryboard.instantiateViewControllerWithIdentifier("HostViewController") as? HostViewController
+            self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+            
+            self.window!.rootViewController = rootViewController
+            
+            self.window!.makeKeyAndVisible()
+        }
+        return true
+    }
+
 }
 

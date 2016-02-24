@@ -102,7 +102,7 @@
                     <navigationItem key="navigationItem" title="CHATTERBOX" id="Rvh-Rw-ky5">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Cg8-XS-0YU">
                             <connections>
-                                <segue destination="AEp-Cz-6F3" kind="show" id="QMJ-pX-IYi"/>
+                                <segue destination="AEp-Cz-6F3" kind="show" identifier="SegueToHost" id="QMJ-pX-IYi"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
