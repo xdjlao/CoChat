@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -116,7 +116,6 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="buttonToTableViewConstraint" destination="Eb9-tr-PHQ" id="CKH-dc-V6W"/>
-                        <outlet property="buttonsToTableViewConstraint" destination="Eb9-tr-PHQ" id="gfZ-k1-sbx"/>
                         <outlet property="channelButtonOutlet" destination="rbG-SN-nti" id="s0Z-0G-cB3"/>
                         <outlet property="sendButtonOutlet" destination="4LP-hV-lVC" id="Gh0-Pa-J2z"/>
                         <outlet property="tableView" destination="s0d-QT-e9S" id="diQ-Jv-uzV"/>

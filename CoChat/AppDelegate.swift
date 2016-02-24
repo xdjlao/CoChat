@@ -33,15 +33,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
-        if url.host == "room" {
-            let messageStoryboard = UIStoryboard(name: "Host", bundle: nil)
-            let rootViewController = messageStoryboard.instantiateViewControllerWithIdentifier("HostViewController") as? HostViewController
-            self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-            
-            self.window!.rootViewController = rootViewController
-            
-            self.window!.makeKeyAndVisible()
+        guard let host = url.host else { return false }
+        guard let roomID = url.pathComponents else { return false }
+        if host == "room" && !roomID.isEmpty {
+            FirebaseManager.manager.checkForRoomWithEntryKey(roomID[1], completionHandler: { (room) -> () in
+    
+                let messageStoryboardNavigation = UIStoryboard(name: "Main", bundle: nil)
+                let rootViewController = messageStoryboardNavigation.instantiateViewControllerWithIdentifier("MessengerNavigationController") as? UINavigationController
+                let destinationViewController = rootViewController?.topViewController as! MessagingViewController
+                destinationViewController.room = room
+                destinationViewController.currentChannel = room!.channels[0]
+                self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+                self.window!.rootViewController = rootViewController
+                self.window!.makeKeyAndVisible()
+                
+            })
         }
+        
         return true
     }
 
