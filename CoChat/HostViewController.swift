@@ -18,7 +18,7 @@ class HostViewController: UIViewController {
     var descriptionOfRoom:String?
     var roomPassCode:String?
     var createChannels = false
-    var privateRoom = 0
+    var privateRoom = false
     var toggleAdvancedSettings = false
     
     override func viewDidLoad() {
@@ -46,8 +46,9 @@ class HostViewController: UIViewController {
         guard let name = nameOfRoom, description = descriptionOfRoom else { return }
         let entryKey = roomPassCode ?? "123"
         let user = FirebaseManager.manager.user
+        let privateRoomAsInt = convertBooltoInt(privateRoom)
         
-        Room.createNewRoomWith(name, subtitle: description, host: user, privateRoom: privateRoom, password: entryKey) { newRoom in
+        Room.createNewRoomWith(name, subtitle: description, host: user, privateRoom: privateRoomAsInt, password: entryKey) { newRoom in
             self.performSegueWithSegueIdentifier(SegueIdentifier.SegueToMessaging, sender: newRoom)
         }
     }
@@ -58,6 +59,15 @@ class HostViewController: UIViewController {
         guard let mvc = nvc.viewControllers[0] as? MessagingViewController else { return }
         mvc.room = room
         mvc.currentChannel = room.channels[0]
+    }
+    
+    func convertBooltoInt(bool:Bool) -> Int {
+        if bool == true {
+            return 1
+        }
+        else {
+            return 0
+        }
     }
 }
 
@@ -73,7 +83,9 @@ extension HostViewController: HostReusableCellDelegate {
         case .PasscodeOfRoom:
             roomPassCode = valueDidChange as? String
         case .Privacy:
-            privateRoom = valueDidChange as! Int
+            if let boolValue = valueDidChange as? Bool {
+                  privateRoom = boolValue
+            }
             print("switch was tapped inside HostVC")
         default:
             assertionFailure()
