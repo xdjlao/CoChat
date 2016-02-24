@@ -116,7 +116,7 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="buttonToTableViewConstraint" destination="Eb9-tr-PHQ" id="CKH-dc-V6W"/>
-                        <outlet property="buttonsContainer" destination="crp-tk-UTN" id="l1x-Fj-jhb"/>
+                        <outlet property="buttonsToTableViewConstraint" destination="Eb9-tr-PHQ" id="gfZ-k1-sbx"/>
                         <outlet property="channelButtonOutlet" destination="rbG-SN-nti" id="s0Z-0G-cB3"/>
                         <outlet property="sendButtonOutlet" destination="4LP-hV-lVC" id="Gh0-Pa-J2z"/>
                         <outlet property="tableView" destination="s0d-QT-e9S" id="diQ-Jv-uzV"/>
