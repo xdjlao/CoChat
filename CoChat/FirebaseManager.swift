@@ -101,8 +101,9 @@ class FirebaseManager {
    //   }
 }
 
-extension FirebaseManager {
-   
+
+//MARK - Listeners
+extension FirebaseManager {   
    func listenForChildForParent<T: FirebaseType, U: FirebaseType>(childType: T, parent: U, withCompletionHandler completionHandler: ((child: T) -> ())? ) -> UInt {
       let relationshipString = getRelationshipString(forChildType: childType, parent: parent)
       
@@ -111,4 +112,38 @@ extension FirebaseManager {
          completionHandler?(child: child)
       })
    }
+}
+
+extension FirebaseManager {
+   func checkForRoomWithEntryKey(key: String, completionHandler handler: (room: Room?) -> ()) {
+      FirebaseManager.manager.getObjectsByChildValue(Room(), childProperty: "entryKey", childValue: key) { rooms in
+         guard let room = rooms?[0] else {
+            handler(room: nil)
+            return
+         }
+         
+         FirebaseManager.manager.getChildrenForParent(Channel(), parent: room) { channels in
+            guard let channels = channels else {
+               handler(room: nil)
+               return
+            }
+            room.channels = channels
+            handler(room: room)
+         }
+      }
+   }
+   
+   //NYI
+   func checkForRoomWithUID(uid: String) {
+      FirebaseManager.manager.getObjectForID(Room(), uid: uid) { room in
+         guard let room = room else { return }
+         
+         FirebaseManager.manager.getChildrenForParent(Channel(), parent: room) { channels in
+            guard let channels = channels else { return }
+            room.channels = channels
+            
+         }
+      }
+   }
+
 }
