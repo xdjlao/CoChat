@@ -39,9 +39,15 @@ class HostReusableCell: UITableViewCell, UITextFieldDelegate {
    
    func textFieldDidBeginEditing(textField: UITextField) {
       originalTextValue = textField.text
-      textField.text = ""
+        textField.text = ""
    }
    
+    func textFieldDidEndEditing(textField: UITextField) {
+        if textField.text == ""  {
+            textField.text = originalTextValue
+        }
+    }
+    
    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
       guard textField.text != originalTextValue else { return true }
       delegate?.hostReusableCell(self, valueDidChange: textField.text)

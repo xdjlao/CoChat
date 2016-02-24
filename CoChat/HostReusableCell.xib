@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -12,16 +12,16 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="65.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZPf-RO-Yl0">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZPf-RO-Yl0">
                         <rect key="frame" x="8" y="11" width="44" height="44"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="44" id="sAj-h7-ThV"/>
                         </constraints>
                     </imageView>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" highlighted="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="HeaderTitle" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="MgF-gv-xfQ">
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" highlighted="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="HeaderTitle" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="MgF-gv-xfQ">
                         <rect key="frame" x="60" y="18" width="195" height="30"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <textInputTraits key="textInputTraits"/>
@@ -34,17 +34,13 @@
                     </switch>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="MgF-gv-xfQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="0sA-6S-jYl"/>
                     <constraint firstAttribute="bottomMargin" secondItem="2C0-W0-awp" secondAttribute="bottom" constant="8.5" id="2ft-7K-Drd"/>
                     <constraint firstAttribute="bottomMargin" secondItem="ZPf-RO-Yl0" secondAttribute="bottom" constant="3" id="8KU-XL-wfI"/>
                     <constraint firstItem="2C0-W0-awp" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="Jjs-V9-ALG"/>
                     <constraint firstItem="2C0-W0-awp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="S1n-sI-2N7"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="MgF-gv-xfQ" secondAttribute="bottom" constant="10" id="ZMT-i0-fci"/>
                     <constraint firstItem="2C0-W0-awp" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="cf9-VH-lsm"/>
                     <constraint firstItem="ZPf-RO-Yl0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="rQI-LE-TQi"/>
-                    <constraint firstItem="MgF-gv-xfQ" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="-57" id="s6J-Gv-nTK"/>
                     <constraint firstItem="ZPf-RO-Yl0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="tmF-Qv-BdO"/>
-                    <constraint firstItem="MgF-gv-xfQ" firstAttribute="leading" secondItem="ZPf-RO-Yl0" secondAttribute="trailing" constant="8" id="xYF-VR-XDX"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
