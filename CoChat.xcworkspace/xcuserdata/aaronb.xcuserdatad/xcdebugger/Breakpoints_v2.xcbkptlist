@@ -20,12 +20,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CoChat/ChannelsVC.swift"
-            timestampString = "478126162.293097"
+            timestampString = "478126800.144892"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "181"
-            endingLineNumber = "181"
-            landmarkName = "addNewChannel(_:)"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
+            landmarkName = "createChannel(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

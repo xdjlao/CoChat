@@ -13,7 +13,7 @@ class ChannelsVC: UIViewController {
     var toggleAdvancedSettings = false
     var room:String?
     var channelContent:[String: [String]] = [
-        "basicContent":["Create A Room",
+        "basicContent":[
             "Name Of Room",
             "Description Of Room"],
         
@@ -98,16 +98,10 @@ extension ChannelsVC: UITableViewDelegate, UITableViewDataSource {
                 headerCell.createButton.hidden = false
                 return headerCell}
         case (2,0):
-            //Basic Info Header
-            informationCell.icon.image = UIImage(named: "Create")
-            informationCell.title.text = basicContent![indexPath.row]
-            informationCell.userInteractionEnabled = false
-            return informationCell
-        case (2,1):
             informationCell.title.text = basicContent![indexPath.row]
             informationCell.type = .NameOfRoom
             return informationCell
-        case (2,2):
+        case (2,1):
             informationCell.title.text = basicContent![indexPath.row]
             informationCell.type = .DescriptionOfRoom
             return informationCell
@@ -156,13 +150,13 @@ extension ChannelsVC: UITableViewDelegate, UITableViewDataSource {
         switch section{
         case 0:
             //header
-            return 1
+            return channels.count
         case 1:
             //create or add room
             return 1
         case 2:
             //basic info
-            return 3
+            return 2
         default:
             if toggleAdvancedSettings == true {
                 //advancedSettingsDecompressed
@@ -174,6 +168,19 @@ extension ChannelsVC: UITableViewDelegate, UITableViewDataSource {
             }
         }
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print(indexPath)
+        let index = NSIndexSet(index: 3)
+        switch (indexPath.section, indexPath.row){
+        case (3,0):
+            toggleAdvancedSettings = !toggleAdvancedSettings
+            tableView.scrollEnabled = true
+            tableView.reloadSections(index, withRowAnimation: UITableViewRowAnimation.Fade)
+        default:break
+        }
+    }
+
 }
 
 extension ChannelsVC: ChannelHeaderCellDelegate {
@@ -190,7 +197,7 @@ extension ChannelsVC: ChannelHeaderCellDelegate {
         if channelPassCode == nil {
             channelPassCode = "123"
         }
-        let newChannel = Channel(withTempTitle: name, tempSubtitle: subTitle, tempPrivateChannel: privateRoom, tempPassword: channelPassCode!, roomName: room!)
+        let newChannel = Channel(withTempTitle: name, tempSubtitle: subTitle, tempPrivateChannel: privateRoom, tempPassword: channelPassCode!, roomName: "dummy")
         channels.append(newChannel)
         // add one more channel
         // set the sections so that only 2 sections are displayed the compressed newly added channel and the add another channel
