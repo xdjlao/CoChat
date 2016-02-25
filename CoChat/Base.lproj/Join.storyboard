@@ -89,10 +89,10 @@
             </objects>
             <point key="canvasLocation" x="1725" y="307"/>
         </scene>
-        <!--MessengerNavigationController-->
+        <!--MessagingNavigationViewController-->
         <scene sceneID="VRq-Sb-thz">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="MessengerNavigationController" id="TDq-ST-eG5" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="MessagingNavigationViewController" storyboardName="Main" referencedIdentifier="MessagingNavigationViewController" id="TDq-ST-eG5" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qet-Sy-HLF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1725.5" y="745"/>

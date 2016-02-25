@@ -103,7 +103,7 @@
                     <navigationItem key="navigationItem" id="ZSP-L2-hR0">
                         <barButtonItem key="leftBarButtonItem" systemItem="search" id="QFB-rC-jV3">
                             <connections>
-                                <action selector="onBrowseTapped:" destination="efc-L1-N1A" id="xHd-UM-703"/>
+                                <segue destination="Hn8-Qv-Mlm" kind="unwind" unwindAction="prepareForUnwind:" id="XdJ-Hy-Exa"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="mzy-9q-t1v">
@@ -123,6 +123,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ahP-qH-T9r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Hn8-Qv-Mlm" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="HqX-Bg-Den">
                     <connections>
                         <action selector="onBackgroundTapped:" destination="efc-L1-N1A" id="g57-6q-M70"/>

@@ -60,8 +60,8 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BXD-9e-U4r">
                                 <rect key="frame" x="227" y="284" width="147" height="29"/>
                                 <segments>
-                                    <segment title="Passcode"/>
                                     <segment title="Link"/>
+                                    <segment title="Passcode"/>
                                 </segments>
                                 <connections>
                                     <action selector="onShareItemSegmentedControlChanged:" destination="lXL-kM-yZF" eventType="valueChanged" id="cyb-7x-WL8"/>

@@ -54,7 +54,6 @@ class HostViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
         switch segue.identifier {
         case SegueIdentifier.SegueToMessaging.rawValue?:
             guard let nvc = segue.destinationViewController as? UINavigationController, room = sender as? Room else { return }

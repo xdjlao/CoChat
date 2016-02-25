@@ -52,10 +52,10 @@
             </objects>
             <point key="canvasLocation" x="1244" y="502"/>
         </scene>
-        <!--MessengerNavigationController-->
+        <!--MessagingNavigationViewController-->
         <scene sceneID="3DG-zX-lYq">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="MessengerNavigationController" id="e5H-Yb-H7h" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="MessagingNavigationViewController" storyboardName="Main" referencedIdentifier="MessagingNavigationViewController" id="e5H-Yb-H7h" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N2R-j6-IRY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1253.5" y="950"/>
