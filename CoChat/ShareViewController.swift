@@ -11,6 +11,7 @@ class ShareViewController: UIViewController {
     
     var channel:Channel?
     var room:Room?
+    var copied:String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,11 +27,13 @@ class ShareViewController: UIViewController {
     
     func showShareItem() {
         if shareItemSegmentedControl.selectedSegmentIndex == 0 {
-            guard let channelPasscode = room?.password else {return}
-            shareItemLabel.text = channelPasscode
-        } else if shareItemSegmentedControl.selectedSegmentIndex == 1 {
             let channelItem = "blndr://room/\(room!.password)"
+            copied = "Link"
             shareItemLabel.text = channelItem
+        } else if shareItemSegmentedControl.selectedSegmentIndex == 1 {
+            guard let channelPasscode = room?.password else {return}
+            copied = "Passcode"
+            shareItemLabel.text = channelPasscode
         }
     }
     
@@ -91,7 +94,7 @@ class ShareViewController: UIViewController {
     
     @IBAction func onCopy(sender: UIButton) {
         copyText(shareItemLabel.text!) { () -> () in
-            let alert = UIAlertController(title: "Passcode Copied!", message: "Now share it with the world", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: "\(self.copied) Copied!", message: "Now share it with the world", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
         }
@@ -106,6 +109,7 @@ class ShareViewController: UIViewController {
     @IBAction func onFacebookButtonPressed(sender: UIButton) {
         if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook) {
             let fbShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+            fbShare.setInitialText("Hello from Facebook")
             
             self.presentViewController(fbShare, animated: true, completion: nil)
             
@@ -121,6 +125,7 @@ class ShareViewController: UIViewController {
         if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
             
             let tweetShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+            tweetShare.setInitialText("Hello from Twitter")
             
             self.presentViewController(tweetShare, animated: true, completion: nil)
             

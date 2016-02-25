@@ -72,7 +72,7 @@
         <!--CHATTERBOX-->
         <scene sceneID="LBd-IA-h9J">
             <objects>
-                <viewController id="Se9-XC-vea" customClass="BrowseViewController" customModule="CoChat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BrowseViewController" id="Se9-XC-vea" customClass="BrowseViewController" customModule="CoChat" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="bsU-TE-vT7">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -108,7 +108,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="bsU-TE-vT7" id="0G2-OH-VHs"/>
-                        <segue destination="8Ma-pL-Idg" kind="show" identifier="SegueToMessaging" id="xrH-Ds-2aZ"/>
+                        <segue destination="8Ma-pL-Idg" kind="presentation" identifier="SegueToMessaging" id="xrH-Ds-2aZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h4N-6i-DOa" userLabel="First Responder" sceneMemberID="firstResponder"/>
