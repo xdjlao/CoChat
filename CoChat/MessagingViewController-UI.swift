@@ -91,6 +91,8 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource {
             }, completion: nil)
       }
       
+      tableView.sizeToFit()
+      tableView.layoutIfNeeded()
       textView.sizeToFit()
       textView.layoutIfNeeded()
       textView.textContainerInset = UIEdgeInsetsMake(8, 8, 8, 8)
