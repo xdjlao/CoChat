@@ -128,7 +128,7 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
    
    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
       if segue.identifier == SegueIdentifier.JoinToMessagesSegue.rawValue {
-         guard let nvc = segue.destinationViewController as? UINavigationController else { return }
+         guard let nvc = segue.destinationViewController as? MessagingNavigationViewController else { return }
          guard let mvc = nvc.topViewController as? MessagingViewController else { return }
          guard let room = sender as? Room else { return }
          mvc.room = room

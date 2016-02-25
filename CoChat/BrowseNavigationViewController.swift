@@ -1,20 +1,19 @@
 //
-//  MainTabBarViewController.swift
+//  BrowseNavigationViewController.swift
 //  CoChat
 //
-//  Created by Jerry on 2/19/16.
+//  Created by Jerry on 2/24/16.
 //  Copyright © 2016 Jerry. All rights reserved.
 //
 
 import UIKit
 
-class MainTabBarViewController: UITabBarController {
+class BrowseNavigationViewController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,18 +21,15 @@ class MainTabBarViewController: UITabBarController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {
-        //let sourceViewController = segue.sourceViewController
-    }
-    
 
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if segue.identifier == "TabToScan" {
-//            //let destination = segue.destinationViewController as! ScanViewController
-//        }
-//    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
 
 }

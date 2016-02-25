@@ -49,10 +49,10 @@
             </objects>
             <point key="canvasLocation" x="2091" y="1954"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar View Controller-->
         <scene sceneID="6OT-VS-bp5">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="H95-qJ-fS7" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarViewController" automaticallyAdjustsScrollViewInsets="NO" id="H95-qJ-fS7" customClass="MainTabBarViewController" customModule="CoChat" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="qt0-o6-8wg">
                         <autoresizingMask key="autoresizingMask"/>
@@ -118,7 +118,7 @@
         <!--Browse-->
         <scene sceneID="pCh-ib-eyG">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KMU-u7-4ap" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="BrowseNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" id="KMU-u7-4ap" customClass="BrowseNavigationViewController" customModule="CoChat" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Browse" id="n7h-k5-Fwl"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="i6d-Hn-EKg">
@@ -161,10 +161,10 @@
             </objects>
             <point key="canvasLocation" x="1661.5" y="971"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Messaging Navigation View Controller-->
         <scene sceneID="7gd-uz-Yfn">
             <objects>
-                <navigationController storyboardIdentifier="MessengerNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="8Ma-pL-Idg" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MessagingNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" id="8Ma-pL-Idg" customClass="MessagingNavigationViewController" customModule="CoChat" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gj4-bA-XCc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

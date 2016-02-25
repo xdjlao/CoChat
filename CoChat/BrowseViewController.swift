@@ -51,7 +51,7 @@ class BrowseViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        guard let nav = segue.destinationViewController as? UINavigationController else { return }
+        guard let nav = segue.destinationViewController as? MessagingNavigationViewController else { return }
         guard let mvc = nav.topViewController as? MessagingViewController else { return }
         guard let room = sender as? Room else { return }
         mvc.room = room

@@ -39,14 +39,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             FirebaseManager.manager.checkForRoomWithEntryKey(roomID[1], completionHandler: { (room) -> () in
     
                 let messageStoryboardNavigation = UIStoryboard(name: "Main", bundle: nil)
-                let rootViewController = messageStoryboardNavigation.instantiateViewControllerWithIdentifier("MessengerNavigationController") as? UINavigationController
-                let destinationViewController = rootViewController?.topViewController as! MessagingViewController
-                destinationViewController.room = room
-                destinationViewController.currentChannel = room!.channels[0]
-                self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-                self.window!.rootViewController = rootViewController
-                self.window!.makeKeyAndVisible()
-                
+                let rootViewController = messageStoryboardNavigation.instantiateViewControllerWithIdentifier("MainTabBarViewController") as? MainTabBarViewController
+                rootViewController?.selectedIndex = 0
+                print(rootViewController?.selectedViewController)
+                let browseNav = rootViewController?.selectedViewController as! BrowseNavigationViewController
+                let browseVC = browseNav.topViewController as! BrowseViewController
+                browseVC.performSegueWithIdentifier("SegueToMessaging", sender: room)
+            
             })
         }
         

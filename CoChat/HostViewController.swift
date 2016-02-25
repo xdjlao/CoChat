@@ -55,7 +55,7 @@ class HostViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         guard segue.identifier == SegueIdentifier.SegueToMessaging.rawValue else { return }
-        guard let nvc = segue.destinationViewController as? UINavigationController, room = sender as? Room else { return }
+        guard let nvc = segue.destinationViewController as? MessagingNavigationViewController, room = sender as? Room else { return }
         guard let mvc = nvc.viewControllers[0] as? MessagingViewController else { return }
         mvc.room = room
         mvc.currentChannel = room.channels[0]

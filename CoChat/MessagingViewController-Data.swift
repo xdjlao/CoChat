@@ -92,9 +92,9 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
       }
    }
    
-   @IBAction func onBrowseTapped(sender: UIBarButtonItem) {
-      dismissViewControllerAnimated(true, completion: nil)
-   }
+//   @IBAction func onBrowseTapped(sender: UIBarButtonItem) {
+//      performSegueWithIdentifier("", sender: nil)
+//   }
    
    func menuChannelViewController(menuChannelViewController: MenuChannelViewController, didSelectChannel channel: AnyObject) {
       guard let selectedChannel = channel as? Channel else { return }
