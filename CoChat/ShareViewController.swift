@@ -125,7 +125,15 @@ class ShareViewController: UIViewController {
         if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
             
             let tweetShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-            tweetShare.setInitialText("Hello from Twitter")
+            if shareItemSegmentedControl.selectedSegmentIndex == 0 {
+                let channelItem = "\(room!.title) link - blndr://room/\(room!.password)"
+                let initialText = channelItem
+                tweetShare.setInitialText(initialText)
+            } else if shareItemSegmentedControl.selectedSegmentIndex == 1 {
+                let channelPasscode = "\(room!.title) entry passcode - \(room!.password)"
+                let initialText = channelPasscode
+                tweetShare.setInitialText(initialText)
+            }
             
             self.presentViewController(tweetShare, animated: true, completion: nil)
             
