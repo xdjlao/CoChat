@@ -54,11 +54,21 @@ class HostViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        guard segue.identifier == SegueIdentifier.SegueToMessaging.rawValue else { return }
-        guard let nvc = segue.destinationViewController as? UINavigationController, room = sender as? Room else { return }
-        guard let mvc = nvc.viewControllers[0] as? MessagingViewController else { return }
-        mvc.room = room
-        mvc.currentChannel = room.channels[0]
+        
+        switch segue.identifier {
+        case SegueIdentifier.SegueToMessaging.rawValue?:
+            guard let nvc = segue.destinationViewController as? UINavigationController, room = sender as? Room else { return }
+            guard let mvc = nvc.viewControllers[0] as? MessagingViewController else { return }
+            mvc.room = room
+            mvc.currentChannel = room.channels[0]
+            return
+            
+        case SegueIdentifier.PushToChannelsVC.rawValue?:
+            guard let cvc =  UIViewController() as? ChannelsVC else { return }
+            cvc.room = nameOfRoom
+            return
+        default: break
+        }
     }
     
     func convertBooltoInt(bool:Bool) -> Int {
@@ -84,7 +94,7 @@ extension HostViewController: HostReusableCellDelegate {
             roomPassCode = valueDidChange as? String
         case .Privacy:
             if let boolValue = valueDidChange as? Bool {
-                  privateRoom = boolValue
+                privateRoom = boolValue
             }
             print("switch was tapped inside HostVC")
         default:
@@ -109,7 +119,7 @@ extension HostViewController: UITableViewDelegate, UITableViewDataSource {
         cell.delegate = self
         return cell
     }
-
+    
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 2
@@ -143,7 +153,7 @@ extension HostViewController: UITableViewDelegate, UITableViewDataSource {
         default:break
         }
     }
-
+    
 }
 
 

@@ -2,7 +2,7 @@ import UIKit
 import AFNetworking
 
 extension MessagingViewController: UITableViewDelegate, UITableViewDataSource {
-    
+
     func animatetextViewWithKeyboard(notification: NSNotification) {
         // change the view's height to accept the size of the keyboard
         let userInfo = notification.userInfo!

@@ -7,17 +7,17 @@
 //
 
 import UIKit
-protocol AddNewChannelCellDelegate : class{
+protocol ChannelHeaderCellDelegate : class{
     func addNewChannel(sender: AnyObject?)
     func createChannel(sender: AnyObject?)
 }
 
 
-class AddNewChannelCell: UITableViewCell {
-    weak var delegate: AddNewChannelCellDelegate?
-    @IBOutlet var addNewChannelLabel: UILabel!
+class ChannelHeaderCell: UITableViewCell {
+    weak var delegate: ChannelHeaderCellDelegate?
     @IBOutlet var addButton: UIButton!
     @IBOutlet var createButton: UIButton!
+    @IBOutlet var headerTitle: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,8 +25,11 @@ class AddNewChannelCell: UITableViewCell {
     
     @IBAction func addNewChannelWasTapped(sender: UIButton) {
       delegate?.addNewChannel(sender)
+        print("addNewChannelTappedinxxib")
     }
     @IBAction func createChannelWasTapped(sender: UIButton) {
         delegate?.createChannel(sender)
+        print("createNewChannelTappedinXib")
+
     }
 }

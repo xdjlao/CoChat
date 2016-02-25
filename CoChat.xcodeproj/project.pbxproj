@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		919549211C7E4F9D00C61805 /* AddNewChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9195491F1C7E4F9D00C61805 /* AddNewChannelCell.swift */; };
-		919549221C7E4F9D00C61805 /* AddNewChannelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 919549201C7E4F9D00C61805 /* AddNewChannelCell.xib */; };
+		919549211C7E4F9D00C61805 /* ChannelHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9195491F1C7E4F9D00C61805 /* ChannelHeaderCell.swift */; };
+		919549221C7E4F9D00C61805 /* ChannelHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 919549201C7E4F9D00C61805 /* ChannelHeaderCell.xib */; };
 		91B18F5E1C7CE02300F20531 /* Messaging.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91B18F5C1C7CE02300F20531 /* Messaging.storyboard */; };
 		91B18F601C7CE71900F20531 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B18F5F1C7CE71900F20531 /* TableView.swift */; };
 		91E9B9E11C7BCD33006F4CF0 /* HostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E9B9DD1C7BCD33006F4CF0 /* HostViewController.swift */; };
@@ -58,8 +58,8 @@
 		38620A9AF6B45CA19AD5E427 /* Pods-CoChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoChat/Pods-CoChat.release.xcconfig"; sourceTree = "<group>"; };
 		587D22B4E734A1D30A6BED37 /* Pods-CoChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoChat/Pods-CoChat.debug.xcconfig"; sourceTree = "<group>"; };
 		70EBED03AAABBA95CBA945A5 /* Pods_CoChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9195491F1C7E4F9D00C61805 /* AddNewChannelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewChannelCell.swift; sourceTree = "<group>"; };
-		919549201C7E4F9D00C61805 /* AddNewChannelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddNewChannelCell.xib; sourceTree = "<group>"; };
+		9195491F1C7E4F9D00C61805 /* ChannelHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelHeaderCell.swift; sourceTree = "<group>"; };
+		919549201C7E4F9D00C61805 /* ChannelHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChannelHeaderCell.xib; sourceTree = "<group>"; };
 		91B18F5D1C7CE02300F20531 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Messaging.storyboard; sourceTree = "<group>"; };
 		91B18F5F1C7CE71900F20531 /* TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		91E9B9DD1C7BCD33006F4CF0 /* HostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostViewController.swift; sourceTree = "<group>"; };
@@ -258,9 +258,9 @@
 				91E9B9E51C7BCFC4006F4CF0 /* Channels.storyboard */,
 				91E9B9E01C7BCD33006F4CF0 /* Host.storyboard */,
 				91E9B9DF1C7BCD33006F4CF0 /* HostReusableCell.xib */,
-				919549201C7E4F9D00C61805 /* AddNewChannelCell.xib */,
 				A288F77B1C7840E600DF2847 /* LaunchScreen.storyboard */,
 				A288F7DD1C7873D100DF2847 /* Login.storyboard */,
+				919549201C7E4F9D00C61805 /* ChannelHeaderCell.xib */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -269,9 +269,9 @@
 			isa = PBXGroup;
 			children = (
 				91E9B9DE1C7BCD33006F4CF0 /* HostReusableCell.swift */,
-				9195491F1C7E4F9D00C61805 /* AddNewChannelCell.swift */,
 				A288F7CE1C78609700DF2847 /* UserMessageCell.swift */,
 				A288F7D01C7860B500DF2847 /* GeneralMessageCell.swift */,
+				9195491F1C7E4F9D00C61805 /* ChannelHeaderCell.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -484,7 +484,7 @@
 				A2BE2B141C7BCC2500ED71E4 /* Join.storyboard in Resources */,
 				A2BE2B051C79984B00ED71E4 /* Share.storyboard in Resources */,
 				A2BE2B201C7CE44E00ED71E4 /* Whisper.storyboard in Resources */,
-				919549221C7E4F9D00C61805 /* AddNewChannelCell.xib in Resources */,
+				919549221C7E4F9D00C61805 /* ChannelHeaderCell.xib in Resources */,
 				91E9B9E41C7BCD33006F4CF0 /* Host.storyboard in Resources */,
 				A288F7781C7840E600DF2847 /* Main.storyboard in Resources */,
 			);
@@ -561,7 +561,7 @@
 				A2BE2B221C7CE49D00ED71E4 /* WhisperTableViewCell.swift in Sources */,
 				A2BE2B181C7CE33000ED71E4 /* WhisperViewController.swift in Sources */,
 				A288F7B51C78599600DF2847 /* FirebaseType-Protocol&Extension.swift in Sources */,
-				919549211C7E4F9D00C61805 /* AddNewChannelCell.swift in Sources */,
+				919549211C7E4F9D00C61805 /* ChannelHeaderCell.swift in Sources */,
 				A288F7CF1C78609700DF2847 /* UserMessageCell.swift in Sources */,
 				A288F7B11C78592900DF2847 /* User.swift in Sources */,
 				A288F7BB1C785C4500DF2847 /* TextToEnum-Extension.swift in Sources */,

@@ -47,11 +47,19 @@ class Channel: FirebaseType {
         uid = dummyUID
         title = dummyTitle
         subtitle = dummySubtitle
-        
         privateChannel = 0
         password = "none"
         
         room = Room(withDummyTitle: "dummy", dummySubtitle: "dummy", dummyUID: "dummy")
+    }
+    
+    //Merge these Two
+    init(withTempTitle tempTitle: String, tempSubtitle: String, tempPrivateChannel: Int, tempPassword: String, roomName:String) {
+        title = tempTitle
+        subtitle = tempSubtitle
+        privateChannel = tempPrivateChannel
+        password = tempPassword
+        self.room = Room(withDummyTitle:roomName, dummySubtitle: "channel", dummyUID: "channel")
     }
     
     init() {
@@ -63,5 +71,4 @@ class Channel: FirebaseType {
         self.subtitle = none
         self.room = Room(withDummyTitle: "dummy", dummySubtitle: "dummy", dummyUID: "dummy")
     }
-    
 }
