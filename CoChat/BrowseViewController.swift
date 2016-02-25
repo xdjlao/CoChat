@@ -19,12 +19,13 @@ class BrowseViewController: UIViewController {
     let manager = FirebaseManager.manager
     let ref = FirebaseManager.manager.ref
     
-    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
         getRecentRooms()
         getAllRooms()
+        
+        print("browse view did appear")
     }
     
     func getAllRooms() {
@@ -51,10 +52,14 @@ class BrowseViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        guard let nav = segue.destinationViewController as? UINavigationController else { return }
+        print("browse prepare for segue")
+        guard let nav = segue.destinationViewController as? MessagingNavigationViewController else { return }
         guard let mvc = nav.topViewController as? MessagingViewController else { return }
         guard let room = sender as? Room else { return }
         mvc.room = room
+        print("------------------------")
+        print(self.navigationController?.viewControllers)
+        print("------------------------")
         mvc.currentChannel = room.channels[0]
     }    
 }

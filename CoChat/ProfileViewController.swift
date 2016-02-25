@@ -2,65 +2,84 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 import FBSDKShareKit
+import AFNetworking
 
 class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
-   
-   var user: User? {
-      didSet{
-      guard let nameLabel = nameLabel else { return }
-      guard let user = user else { return }
-      nameLabel.text = user.name
-      }
-   }
-   
-   @IBOutlet weak var profileImageView: UIImageView! {
-      didSet {
-      let imageHeight = profileImageView.frame.size.height
-      profileImageView.layer.cornerRadius = imageHeight / 2
-      }
-   }
-   @IBOutlet weak var nameLabel: UILabel! {
-      didSet {
-      guard let user = user else { return }
-      nameLabel.text = user.name
-      }
-   }
-   @IBOutlet weak var recentTableView: UITableView! {
-      didSet {
-      recentTableView.delegate = self
-      recentTableView.dataSource = self
-      }
-   }
-   @IBOutlet weak var followingCountLabel: UILabel! {
-      didSet {
-      followingCountLabel.text = "Jerry we don't"
-      }
-   }
-   @IBOutlet weak var followerCountLabel: UILabel! {
-      didSet {
-      followerCountLabel.text = "have followers?"
-      }
-   }
-   override func viewDidAppear(animated: Bool) {
-      super.viewDidAppear(animated)
+    
+    var user: User? {
+        didSet{
+            guard let user = user else { return }
+            if let nameLabel = nameLabel {
+                nameLabel.text = user.name
+            }
+            if let profileImageView = profileImageView {
+                profileImageView.setImageWithURL(NSURL(string: user.profileImageURL)!, placeholderImage: UIImage(named: "profileImageDummy"))
+                let imageHeight = profileImageView.frame.size.height
+                profileImageView.layer.cornerRadius = imageHeight / 2
+            }
+        }
+    }
+    
+    @IBOutlet weak var profileImageView: UIImageView! {
+        didSet {
+            guard let user = user else { return }
+            profileImageView.setImageWithURL(NSURL(string: user.profileImageURL)!, placeholderImage: UIImage(named: "profileImageDummy"))
+            let imageHeight = profileImageView.frame.size.height
+            profileImageView.layer.cornerRadius = imageHeight / 2
+        }
+    }
+    @IBOutlet weak var nameLabel: UILabel! {
+        didSet {
+            guard let user = user else { return }
+            nameLabel.text = user.name
+        }
+    }
+    @IBOutlet weak var recentTableView: UITableView! {
+        didSet {
+            recentTableView.delegate = self
+            recentTableView.dataSource = self
+        }
+    }
+    @IBOutlet weak var followingCountLabel: UILabel! {
+        didSet {
+            followingCountLabel.text = "Jerry we don't"
+        }
+    }
+    @IBOutlet weak var followerCountLabel: UILabel! {
+        didSet {
+            followerCountLabel.text = "have followers?"
+        }
+    }
+   override func viewWillAppear(animated: Bool) {
+      super.viewWillAppear(animated)
+      print(__FUNCTION__)
       user = FirebaseManager.manager.user
    }
-   override func viewDidLoad() {
-      super.viewDidLoad()
-      let size = view.frame.size
-      let button = createFBLoginButtonWithPosition(size.width * 0.8, y: size.height * 0.1)
-      button.delegate = self
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+      
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let size = view.frame.size
+        let button = createFBLoginButtonWithPosition(size.width * 0.8, y: size.height * 0.1)
+        button.delegate = self
+    }
+   
+   override func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
+      super.loginButtonDidLogOut(loginButton)
+      user = FirebaseManager.manager.user
    }
 }
 
 extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
-   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      return 0
-   }
-   
-   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-      let cell = tableView.dequeueReusableCellWithCellIdentifier(.ProfileCell)
-      cell.textLabel?.text = "Let's copy twitch/facebook messenger/hangouts for things to put here?"
-      return cell
-   }  
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithCellIdentifier(.ProfileCell)
+        cell.textLabel?.text = "Let's copy twitch/facebook messenger/hangouts for things to put here?"
+        return cell
+    }  
 }

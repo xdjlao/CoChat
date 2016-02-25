@@ -10,9 +10,11 @@ class FirebaseManager {
    static let manager = FirebaseManager()
    let ref = Firebase(url: baseURL)
    var user: User
+   var channelMessages: [Message]
    
    init() {
       user = User(withDummyName: "Anonymous", dummyProfileImageURL: "none", dummyUID: "none")
+      channelMessages = [Message]()
    }
    
    func handleUserAuthData(authData: FAuthData, withMainQueueCompletionHandler completionHandler: ((user: User?) -> ())? ) {
@@ -101,14 +103,49 @@ class FirebaseManager {
    //   }
 }
 
+
+//MARK - Listeners
 extension FirebaseManager {
-   
    func listenForChildForParent<T: FirebaseType, U: FirebaseType>(childType: T, parent: U, withCompletionHandler completionHandler: ((child: T) -> ())? ) -> UInt {
       let relationshipString = getRelationshipString(forChildType: childType, parent: parent)
-      
-      return childType.type.firebase().queryOrderedByChild(relationshipString).queryEqualToValue(parent.uid).observeEventType(.ChildAdded, withBlock: { snapshot in
+      return childType.type.firebase().queryOrderedByChild(relationshipString).queryEqualToValue(parent.uid).queryLimitedToLast(1).observeEventType(.ChildAdded, withBlock: { snapshot in
          guard let child = T.singleFromSnapshot(snapshot) else { return }
          completionHandler?(child: child)
       })
    }
+
+}
+
+extension FirebaseManager {
+   func checkForRoomWithEntryKey(key: String, completionHandler handler: (room: Room?) -> ()) {
+      FirebaseManager.manager.getObjectsByChildValue(Room(), childProperty: "entryKey", childValue: key) { rooms in
+         guard let room = rooms?[0] else {
+            handler(room: nil)
+            return
+         }
+         
+         FirebaseManager.manager.getChildrenForParent(Channel(), parent: room) { channels in
+            guard let channels = channels else {
+               handler(room: nil)
+               return
+            }
+            room.channels = channels
+            handler(room: room)
+         }
+      }
+   }
+   
+   //NYI
+   func checkForRoomWithUID(uid: String) {
+      FirebaseManager.manager.getObjectForID(Room(), uid: uid) { room in
+         guard let room = room else { return }
+         
+         FirebaseManager.manager.getChildrenForParent(Channel(), parent: room) { channels in
+            guard let channels = channels else { return }
+            room.channels = channels
+            
+         }
+      }
+   }
+
 }

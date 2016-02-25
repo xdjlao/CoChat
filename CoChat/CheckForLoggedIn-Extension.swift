@@ -18,7 +18,7 @@ extension UIViewController {
       let storyboard = UIStoryboard(name: "Login", bundle: nil)
       guard let loginVC = storyboard.instantiateInitialViewController() as? LoginViewController else { return }
       presentViewController(loginVC, animated: true) {
-         //??
+         self.viewWillAppear(false)
       }
    }
    
@@ -42,8 +42,11 @@ extension UIViewController {
             } else {
                print("Logged in! \(authData)")
                FirebaseManager.manager.handleUserAuthData(authData, withMainQueueCompletionHandler: { user in
+                  self.viewWillAppear(false)
                   if self.isKindOfClass(LoginViewController) {
-                     self.dismissViewControllerAnimated(true, completion: nil)
+                     self.dismissViewControllerAnimated(true, completion: { 
+                        //
+                     })
                   }
                })
             }
@@ -51,8 +54,8 @@ extension UIViewController {
       }
    }
    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
-      FirebaseManager.manager.ref.unauth()
       FirebaseManager.manager.user = User(withDummyName: "Anonymous", dummyProfileImageURL: "none", dummyUID: "none")
+      FirebaseManager.manager.ref.unauth()      
       viewDidAppear(true)
    }
 }

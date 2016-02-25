@@ -14,6 +14,14 @@ class Message: FirebaseType {
    }
    let type = Type.Message
    
+   static func createNewMessageWith(messageText: String, timeObject: [NSObject: AnyObject], poster: User, channel: Channel,withCompletionHandler handler: ((new: Message) -> ())?) {
+      let message = Message(messageText: messageText, timeObject: timeObject, poster: poster, channel: channel)
+      message.createNew { newMessage in
+         guard let newMessage = newMessage as? Message else { return }
+         handler?(new: newMessage)
+      }
+   }
+   
    init(messageText: String, timeObject: [NSObject: AnyObject], poster: User, channel: Channel) {
       self.messageText = messageText
       self.time = NSDate()
@@ -22,8 +30,6 @@ class Message: FirebaseType {
       self.poster = poster
       
       self.channel = channel
-      
-      self.createNew(withCompletionHandler: nil)
    }
    
    required init(fromDictionary dictionary: [NSObject: AnyObject], andUID uid: String) {

@@ -9,5 +9,6 @@ pod 'FBSDKCoreKit'
 pod 'FBSDKShareKit'
 pod 'FBSDKLoginKit'
 pod 'AFNetworking', '~> 3.0'
+#pod 'MobileDeepLinking-iOS'
 end
 

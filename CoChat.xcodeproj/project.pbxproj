@@ -51,6 +51,11 @@
 		A2BE2B201C7CE44E00ED71E4 /* Whisper.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2BE2B1E1C7CE44E00ED71E4 /* Whisper.storyboard */; };
 		A2BE2B221C7CE49D00ED71E4 /* WhisperTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B211C7CE49D00ED71E4 /* WhisperTableViewCell.swift */; };
 		A2BE2B261C7CE97000ED71E4 /* WhisperMessagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B251C7CE97000ED71E4 /* WhisperMessagingViewController.swift */; };
+		A2BE2B281C7E60AD00ED71E4 /* DismissSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B271C7E60AD00ED71E4 /* DismissSegue.swift */; };
+		A2BE2B2A1C7E708C00ED71E4 /* MessagingNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B291C7E708C00ED71E4 /* MessagingNavigationViewController.swift */; };
+		A2BE2B2C1C7E72A200ED71E4 /* BrowseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B2B1C7E72A200ED71E4 /* BrowseNavigationViewController.swift */; };
+		D8AE2D191C7D28F00002A31D /* Whisper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE2D181C7D28F00002A31D /* Whisper.swift */; };
+		D8AE2D1B1C7D2E560002A31D /* DualQueriedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE2D1A1C7D2E560002A31D /* DualQueriedType.swift */; };
 		FE075CF3C95FB29BE89AA0A4 /* Pods_CoChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70EBED03AAABBA95CBA945A5 /* Pods_CoChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +109,11 @@
 		A2BE2B1F1C7CE44E00ED71E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Whisper.storyboard; sourceTree = "<group>"; };
 		A2BE2B211C7CE49D00ED71E4 /* WhisperTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhisperTableViewCell.swift; sourceTree = "<group>"; };
 		A2BE2B251C7CE97000ED71E4 /* WhisperMessagingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhisperMessagingViewController.swift; sourceTree = "<group>"; };
+		A2BE2B271C7E60AD00ED71E4 /* DismissSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissSegue.swift; sourceTree = "<group>"; };
+		A2BE2B291C7E708C00ED71E4 /* MessagingNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagingNavigationViewController.swift; sourceTree = "<group>"; };
+		A2BE2B2B1C7E72A200ED71E4 /* BrowseNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseNavigationViewController.swift; sourceTree = "<group>"; };
+		D8AE2D181C7D28F00002A31D /* Whisper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Whisper.swift; sourceTree = "<group>"; };
+		D8AE2D1A1C7D2E560002A31D /* DualQueriedType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DualQueriedType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,11 +170,14 @@
 		A288F7B61C7859B100DF2847 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A288F7B41C78599600DF2847 /* FirebaseType-Protocol&Extension.swift */,
+				D8AE2D1A1C7D2E560002A31D /* DualQueriedType.swift */,
 				A288F7AA1C78588A00DF2847 /* FirebaseManager.swift */,
+				A288F7B01C78592900DF2847 /* User.swift */,
+				A288F7AC1C7858FE00DF2847 /* Room.swift */,
 				A288F7AE1C78591800DF2847 /* Channel.swift */,
 				A288F7B21C78593D00DF2847 /* Message.swift */,
-				A288F7AC1C7858FE00DF2847 /* Room.swift */,
-				A288F7B01C78592900DF2847 /* User.swift */,
+				D8AE2D181C7D28F00002A31D /* Whisper.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -173,7 +186,6 @@
 			isa = PBXGroup;
 			children = (
 				A288F7C51C785F4400DF2847 /* CheckForLoggedIn-Extension.swift */,
-				A288F7B41C78599600DF2847 /* FirebaseType-Protocol&Extension.swift */,
 				91B18F5F1C7CE71900F20531 /* TableView.swift */,
 				A288F7BA1C785C4500DF2847 /* TextToEnum-Extension.swift */,
 				A288F7C71C785F6800DF2847 /* UIColor-Extension.swift */,
@@ -184,6 +196,7 @@
 		A288F7BE1C785EAE00DF2847 /* Messaging */ = {
 			isa = PBXGroup;
 			children = (
+				A2BE2B291C7E708C00ED71E4 /* MessagingNavigationViewController.swift */,
 				A288F7B81C785B2D00DF2847 /* MessagingViewController-Data.swift */,
 				A288F7BC1C785CAE00DF2847 /* MessagingViewController-UI.swift */,
 				A2BE2B081C799C6200ED71E4 /* MenuChannel */,
@@ -268,6 +281,7 @@
 		A288F7CD1C78606E00DF2847 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A2BE2B271C7E60AD00ED71E4 /* DismissSegue.swift */,
 				91E9B9DE1C7BCD33006F4CF0 /* HostReusableCell.swift */,
 				A288F7CE1C78609700DF2847 /* UserMessageCell.swift */,
 				A288F7D01C7860B500DF2847 /* GeneralMessageCell.swift */,
@@ -343,6 +357,7 @@
 			isa = PBXGroup;
 			children = (
 				A288F7A41C7841B600DF2847 /* BrowseViewController.swift */,
+				A2BE2B2B1C7E72A200ED71E4 /* BrowseNavigationViewController.swift */,
 			);
 			name = Browse;
 			sourceTree = "<group>";
@@ -548,6 +563,7 @@
 				91E9B9E11C7BCD33006F4CF0 /* HostViewController.swift in Sources */,
 				A288F7AF1C78591800DF2847 /* Channel.swift in Sources */,
 				A288F7C81C785F6800DF2847 /* UIColor-Extension.swift in Sources */,
+				D8AE2D1B1C7D2E560002A31D /* DualQueriedType.swift in Sources */,
 				A288F7DC1C78696100DF2847 /* ShareViewController.swift in Sources */,
 				A288F7AB1C78588A00DF2847 /* FirebaseManager.swift in Sources */,
 				A288F7A71C78447D00DF2847 /* MainTabBarViewController.swift in Sources */,
@@ -555,9 +571,11 @@
 				A288F7B31C78593D00DF2847 /* Message.swift in Sources */,
 				91E9B9E21C7BCD33006F4CF0 /* HostReusableCell.swift in Sources */,
 				91E9B9E81C7BD0F1006F4CF0 /* ChannelsVC.swift in Sources */,
+				D8AE2D191C7D28F00002A31D /* Whisper.swift in Sources */,
 				A288F7DA1C7867EA00DF2847 /* MenuChannelViewController.swift in Sources */,
 				A288F7B91C785B2D00DF2847 /* MessagingViewController-Data.swift in Sources */,
 				A288F7AD1C7858FE00DF2847 /* Room.swift in Sources */,
+				A2BE2B2A1C7E708C00ED71E4 /* MessagingNavigationViewController.swift in Sources */,
 				A2BE2B221C7CE49D00ED71E4 /* WhisperTableViewCell.swift in Sources */,
 				A2BE2B181C7CE33000ED71E4 /* WhisperViewController.swift in Sources */,
 				A288F7B51C78599600DF2847 /* FirebaseType-Protocol&Extension.swift in Sources */,
@@ -567,8 +585,10 @@
 				A288F7BB1C785C4500DF2847 /* TextToEnum-Extension.swift in Sources */,
 				A288F7A51C7841B600DF2847 /* BrowseViewController.swift in Sources */,
 				A2BE2B261C7CE97000ED71E4 /* WhisperMessagingViewController.swift in Sources */,
+				A2BE2B2C1C7E72A200ED71E4 /* BrowseNavigationViewController.swift in Sources */,
 				A288F7C61C785F4400DF2847 /* CheckForLoggedIn-Extension.swift in Sources */,
 				A288F7CA1C785FAE00DF2847 /* LoginViewController.swift in Sources */,
+				A2BE2B281C7E60AD00ED71E4 /* DismissSegue.swift in Sources */,
 				A288F7D11C7860B500DF2847 /* GeneralMessageCell.swift in Sources */,
 				A288F7BD1C785CAE00DF2847 /* MessagingViewController-UI.swift in Sources */,
 				A2BE2B0F1C7B9F4400ED71E4 /* ProfileViewController.swift in Sources */,

@@ -16,9 +16,16 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
    }
    @IBOutlet weak var channelButtonOutlet: UIButton!
    @IBOutlet weak var sendButtonOutlet: UIButton!
-    @IBOutlet var textViewContainerHeight: NSLayoutConstraint!
-   
-   var messages = [Message]()
+   @IBOutlet weak var buttonToTableViewConstraint: NSLayoutConstraint!
+   @IBOutlet weak var buttonsContainer: UIView!
+    
+   var messages = [Message]() {
+      didSet {
+      messages.sortInPlace { first, second in
+         return first.time.compare(second.time) == NSComparisonResult.OrderedAscending
+      }
+      }
+   }
    
    let manager = FirebaseManager.manager
    let ref = FirebaseManager.manager.ref
@@ -65,6 +72,7 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
       user = manager.user
       Type.Message.firebase().removeAllObservers()
       messages.removeAll()
+      getFirstTenMessages()
       tableView.reloadData()
       currentListener = listenForNewMessagesForCurrentChannel()
    }
@@ -76,31 +84,55 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
          NSOperationQueue.mainQueue().addOperationWithBlock({
             self.messages.append(child)
             let indexPath = NSIndexPath(forRow: self.messages.count - 1, inSection: 0)
-            self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-            self.messages.sortInPlace { first, second in
-               return first.time.compare(second.time) == NSComparisonResult.OrderedAscending
-            }
+            self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .None)
+            self.tableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Bottom, animated: false)
          })
       }
+   }
+   
+   var startUID: String!
+   var endUID: String!
+   var increment: UInt = 10
+   
+   func getFirstTenMessages() {
+      Message().type.firebase().queryOrderedByChild("channelUID").queryEqualToValue(currentChannel.uid).queryLimitedToLast(increment).observeSingleEventOfType(.Value, withBlock: { snapshot in
+         guard let children = Message.arrayFromSnapshot(snapshot) else { return }
+         self.startUID = children[0].uid
+         self.endUID = children[9].uid
+         var indexPaths = [NSIndexPath]()
+         children.forEach { message in
+            let indexPath = NSIndexPath(forRow: self.messages.count, inSection: 0)
+            indexPaths.append(indexPath)
+            self.messages.append(message)
+         }
+         
+         self.tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .None)
+         //self.tableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Bottom, animated: false)
+      })
+   }
+   
+   func getPreviousMessages() {
+      Message().type.firebase().queryOrderedByChild("channelUID").queryEqualToValue(currentChannel.uid).queryLimitedToNumberOfChildren(increment).queryEndingAtValue(endUID).observeSingleEventOfType(.Value, withBlock: { snapshot in
+         guard let children = Message.arrayFromSnapshot(snapshot) else { return }
+         self.startUID = children[0].uid
+         self.endUID = children[9].uid
+         self.messages.appendContentsOf(children)
+      })
    }
    
    //MARK Actions
    @IBAction func sendButton(sender: UIButton) {
       if (textView.text != "") {
          guard let user = user else { return }
-         let formatter = NSDateFormatter()
-         
-         formatter.dateStyle = .ShortStyle
-         formatter.timeStyle = .ShortStyle
-         let _ = Message(messageText: textView.text!, timeObject: FirebaseServerValue.timestamp(), poster: user, channel: currentChannel)
+         Message.createNewMessageWith(textView.text, timeObject: FirebaseServerValue.timestamp(), poster: user, channel: currentChannel, withCompletionHandler: nil)
          textView.text = ""
         self.tableView.scrollToLastMessage(false)
       }
    }
    
-   @IBAction func onBrowseTapped(sender: UIBarButtonItem) {
-      dismissViewControllerAnimated(true, completion: nil)
-   }
+//   @IBAction func onBrowseTapped(sender: UIBarButtonItem) {
+//      performSegueWithIdentifier("", sender: nil)
+//   }
    
    func menuChannelViewController(menuChannelViewController: MenuChannelViewController, didSelectChannel channel: AnyObject) {
       guard let selectedChannel = channel as? Channel else { return }
