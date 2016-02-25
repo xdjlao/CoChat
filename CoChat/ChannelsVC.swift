@@ -10,138 +10,147 @@ import UIKit
 
 class ChannelsVC: UIViewController {
     @IBOutlet var tableView: UITableView!
-    var cellContent:Dictionary<String, Array<String>> = [
-        "basicContent":["Add A Channel",
+    var numberOfChannels = 0
+    var toggleAddChannelLabel = false
+    var numberOfGroups = 0
+    
+    var cellContent:[String: [String]] = [
+        "basicContent":["Create A Room",
             "Name Of Room",
             "Description Of Room"],
         
         "advancedContent":["Advanced Settings",
             "Room Passcode",
-            "Embed Channels",
-            "Privacy"]
+            "Privacy",
+            "Embed Channels"]
     ]
     
     var nameOfRoom:String?
     var descriptionOfRoom:String?
     var roomPassCode:String?
-    var createChannels:Bool?
-    var privateRoom:Bool?
+    var createChannels = false
+    var privateRoom = false
+    var toggleAdvancedSettings = false
     
-    var toggleAdvancedSettings = Bool()
-    var numberOfChannels = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpUI()
-    }
-    
-    
-}
-
-
-extension ChannelsVC: HostReusableCellDelegate {
-    func hostReusableCell(cell: HostReusableCell, valueDidChange: AnyObject?) {
-        switch cell.type {
-        case .NameOfRoom:
-            nameOfRoom = valueDidChange as? String
-        case .DescriptionOfRoom:
-            descriptionOfRoom = valueDidChange as? String
-        case .PasscodeOfRoom:
-            roomPassCode = valueDidChange as? String
-        case .Privacy:
-            privateRoom = valueDidChange as? Bool
-            print("switch was tapped inside HostVC")
-        default:
-            assertionFailure()
-        }
-    }
-}
-
-extension ChannelsVC: UITableViewDataSource, UITableViewDelegate {
-    func setUpUI(){
-        toggleAdvancedSettings = false
+        let addNewChannelsNib = UINib(nibName: "AddNewChannelCell", bundle: nil)
+        tableView.registerNib(addNewChannelsNib, forCellReuseIdentifier: "AddNewChannelsCell")
         let headerNib = UINib(nibName: "HostReusableCell", bundle: nil)
         tableView.registerNib(headerNib, forCellReuseIdentifier: "Host Reusable Cell")
-        tableView.scrollEnabled = false
+    }
+}
+
+
+extension ChannelsVC: UITableViewDataSource, UITableViewDelegate {
+    
+    func configureTableView(){
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 40
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Host Reusable Cell") as! HostReusableCell
-        cell.setUpCellAtIndexPath(indexPath, cellContent: cellContent)
-        cell.delegate = self
         switch (indexPath.section, indexPath.row) {
         case (0,0):
-            let contactAddImage = UIImage(named: "contactAdd")
-            let addButton = UIButton(type: .Custom)
-            let frame = CGRectMake(0, 0, 45, 45)
-            addButton.frame = frame
-            addButton.setBackgroundImage(contactAddImage, forState: .Normal)
-            addButton.backgroundColor = UIColor.clearColor()
-            cell.accessoryView = addButton
-            cell.userInteractionEnabled = true
-            cell.title.userInteractionEnabled = false
-        default:break
+            let cell = tableView.dequeueReusableCellWithIdentifier("AddNewChannelsCell") as! AddNewChannelCell
+            cell.delegate = self
+            if toggleAddChannelLabel == false {
+                cell.createButton.hidden = true
+                cell.addButton.hidden = false
+                return cell
+            }
+            else {
+                cell.addNewChannelLabel.text = "New Channel"
+                cell.addButton.hidden = true
+                cell.createButton.hidden = false
+                return cell
+            }
+            
+        default:
+            let cell = tableView.dequeueReusableCellWithIdentifier("Host Reusable Cell") as! HostReusableCell
+            let newIndex = NSIndexPath(forRow: indexPath.row, inSection: indexPath.section)
+            cell.setUpCellAtIndexPath(newIndex, cellContent: cellContent)
+            cell.delegate = self
+            return cell
         }
-        return cell
-    }
-//    
-//    func addChannelWasTapped(){
-//        numberOfChannels++
-////        let sections = tableView.numberOfSections
-////        let range = 1 ... sections
-////        let index = NSIndexSet(indexesInRange: NSRange(range))
-////        tableView.reloadSections(index, withRowAnimation: UITableViewRowAnimation.Fade)
-//        
-//        UIView.animateWithDuration(1.0, delay: 0.0, options: [], animations: { () -> Void in
-//            self.tableView.reloadData()
-//            }, completion: nil)
-//    }
-    
-    
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 60
-    }
-    
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 2
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0:
-            if numberOfChannels == 0 {
+        switch numberOfChannels {
+        case numberOfGroups : return numberOfGroups + 1
+        default :
+            switch section {
+            case 0:
+                return cellContent["basicContent"]!.count
+            case 1:
+                if toggleAdvancedSettings == true {
+                    return cellContent["advancedContent"]!.count - 1
+                } else {
+                    return 1
+                }
+            case 2:
                 return 1
+            default:
+                return 0
             }
-            else {
-                return cellContent["basicContent"]!.count * numberOfChannels
-            }
-        case 1:
-            if numberOfChannels == 0 {
-                return 0}
-            if toggleAdvancedSettings == true {
-                return cellContent["advancedContent"]!.count
-            }
-            else {
-                return 1
-            }
-        default:
-            return 0
         }
     }
     
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        switch numberOfChannels {
+        case numberOfGroups :
+            return numberOfGroups + 1
+        default :
+            numberOfChannels = numberOfChannels * 2
+            return numberOfChannels
+                }
+    }
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print(indexPath)
         let index = NSIndexSet(index: 1)
         switch (indexPath.section, indexPath.row){
-        case (0,0):
-            numberOfChannels += 1
-            tableView.reloadSections(index, withRowAnimation: UITableViewRowAnimation.Fade)
         case (1,0):
             toggleAdvancedSettings = !toggleAdvancedSettings
+            tableView.scrollEnabled = true
             tableView.reloadSections(index, withRowAnimation: UITableViewRowAnimation.Fade)
-        case(1,2):
-            performSegueWithIdentifier("PushChanelsVC", sender: self)
         default:break
         }
     }
 }
+
+
+extension ChannelsVC: AddNewChannelCellDelegate {
+    func addNewChannel(sender: AnyObject?) {
+        numberOfChannels++
+        toggleAddChannelLabel = true
+        print("add button tapped")
+        tableView.reloadData()
+    }
+    
+    func createChannel(sender: AnyObject?) {
+        numberOfGroups++
+        numberOfChannels = numberOfGroups
+        tableView.reloadData()
+    }
+}
+
+extension ChannelsVC: HostReusableCellDelegate {
+    func hostReusableCell(cell: HostReusableCell, valueDidChange: AnyObject?) {
+        //add to local variables
+    }
+    
+    func addAnotherChannel(sender: AnyObject?) {
+        numberOfChannels = 1
+        numberOfGroups++
+        print("tapped")
+        tableView.reloadData()
+    }
+}
+
+
+
+
+
+

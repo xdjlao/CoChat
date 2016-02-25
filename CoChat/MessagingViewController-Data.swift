@@ -52,6 +52,13 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
       textView.autocorrectionType = UITextAutocorrectionType.Yes
       uiSetup()
    }
+    
+//    override func viewWillAppear(animated: Bool) {
+//        super.viewWillAppear(animated)
+//        if tableView.contentSize.height > view.frame.size.height {
+////            tableView.scrollToLastMessage(false)
+//        }
+//    }
    
    override func viewDidAppear(animated: Bool) {
       super.viewDidAppear(animated)
@@ -70,7 +77,6 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
             self.messages.append(child)
             let indexPath = NSIndexPath(forRow: self.messages.count - 1, inSection: 0)
             self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-            self.tableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Bottom, animated: false)
             self.messages.sortInPlace { first, second in
                return first.time.compare(second.time) == NSComparisonResult.OrderedAscending
             }
@@ -88,6 +94,7 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
          formatter.timeStyle = .ShortStyle
          let _ = Message(messageText: textView.text!, timeObject: FirebaseServerValue.timestamp(), poster: user, channel: currentChannel)
          textView.text = ""
+        self.tableView.scrollToLastMessage(false)
       }
    }
    

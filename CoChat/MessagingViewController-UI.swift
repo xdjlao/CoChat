@@ -134,18 +134,19 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func generalMessageCellWillDisplay(generalCell: GeneralMessageCell, indexPath: NSIndexPath) {
-        generalCell.profileImageView.alpha = 0.0
         generalCell.messageLabel.alpha = 0.0
         UIView.animateWithDuration(0.5, delay: 0.0, options: [], animations: { () -> Void in
             generalCell.alpha = 1.0
             generalCell.messageLabel.alpha = 1.0
             }, completion: { (Bool) -> Void in
                 print("General Message Was Displayed")
+                self.tableView.scrollToLastMessage(true)
         })
     }
     
     
     func userMessageCellWillDisplay(userCell: UserMessageCell, indexPath: NSIndexPath) {
+//        self.tableView.contentOffSetToLastMessage()
         userCell.profileImageView.alpha = 0.0
         userCell.messageLabel.alpha = 0.0
         UIView.animateWithDuration(0.5, delay: 0.0, options: [], animations: { () -> Void in
@@ -153,6 +154,8 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource {
             userCell.messageLabel.alpha = 1.0
             }, completion: { (Bool) -> Void in
                 print("User Message Was Displayed")
+                self.tableView.scrollToLastMessage(true)
+
         })
     }
     
@@ -161,18 +164,15 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource {
         if indexPath.row == messages.count - 1 {
             if let generalCell = cell as? GeneralMessageCell {
                 generalMessageCellWillDisplay(generalCell, indexPath: indexPath)
-                tableView.scrollToBottom()
 
             }
             
             if let userCell = cell as? UserMessageCell {
                 userMessageCellWillDisplay(userCell, indexPath: indexPath)
-                tableView.scrollToBottom()
 
             }
         }
     }
-    
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messages.count

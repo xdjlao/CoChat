@@ -10,8 +10,8 @@ class HostViewController: UIViewController {
         
         "advancedContent":["Advanced Settings",
             "Room Passcode",
-            "Embed Channels",
-            "Privacy"]
+            "Privacy",
+            "Embed Channels"]
     ]
     
     var nameOfRoom:String?
@@ -138,7 +138,7 @@ extension HostViewController: UITableViewDelegate, UITableViewDataSource {
             toggleAdvancedSettings = !toggleAdvancedSettings
             tableView.scrollEnabled = true
             tableView.reloadSections(index, withRowAnimation: UITableViewRowAnimation.Fade)
-        case (1,2):
+        case (1,3):
             performSegueWithIdentifier("PushChannelsVC", sender: self)
         default:break
         }
