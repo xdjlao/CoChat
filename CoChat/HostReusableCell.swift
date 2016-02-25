@@ -63,6 +63,7 @@ class HostReusableCell: UITableViewCell, UITextFieldDelegate {
         print(textField.text)
         
         let finalString = textField.text! + string
+        delegate?.hostReusableCell(self, valueDidChange: finalString)
         print(finalString)
         return true
     }
