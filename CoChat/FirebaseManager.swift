@@ -103,7 +103,7 @@ class FirebaseManager {
 
 
 //MARK - Listeners
-extension FirebaseManager {   
+extension FirebaseManager {
    func listenForChildForParent<T: FirebaseType, U: FirebaseType>(childType: T, parent: U, withCompletionHandler completionHandler: ((child: T) -> ())? ) -> UInt {
       let relationshipString = getRelationshipString(forChildType: childType, parent: parent)
       
