@@ -59,6 +59,13 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
       textView.autocorrectionType = UITextAutocorrectionType.Yes
       uiSetup()
    }
+    
+//    override func viewWillAppear(animated: Bool) {
+//        super.viewWillAppear(animated)
+//        if tableView.contentSize.height > view.frame.size.height {
+////            tableView.scrollToLastMessage(false)
+//        }
+//    }
    
    override func viewDidAppear(animated: Bool) {
       super.viewDidAppear(animated)
@@ -119,6 +126,7 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
          guard let user = user else { return }
          Message.createNewMessageWith(textView.text, timeObject: FirebaseServerValue.timestamp(), poster: user, channel: currentChannel, withCompletionHandler: nil)
          textView.text = ""
+        self.tableView.scrollToLastMessage(false)
       }
    }
    

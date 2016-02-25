@@ -2,7 +2,7 @@ import UIKit
 import AFNetworking
 
 extension MessagingViewController: UITableViewDelegate, UITableViewDataSource {
-   
+  
    func animatetextViewWithKeyboard(notification: NSNotification) {
       // change the view's height to accept the size of the keyboard
       let userInfo = notification.userInfo!
@@ -91,8 +91,6 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource {
             }, completion: nil)
       }
       
-      tableView.sizeToFit()
-      tableView.layoutIfNeeded()
       textView.sizeToFit()
       textView.layoutIfNeeded()
       textView.textContainerInset = UIEdgeInsetsMake(8, 8, 8, 8)
@@ -111,8 +109,8 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource {
             frame.size.height = newHeight + 10.00
             }, completion: nil)
       }
-      
    }
+   
    //MARK - TableView Delegate Methods
    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
       let currentMessage = messages[indexPath.row]
@@ -161,6 +159,7 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource {
          userCell.messageLabel.alpha = 1.0
          }, completion: { (Bool) -> Void in
             print("User Message Was Displayed")
+            self.tableView.scrollToLastMessage(true)
       })
    }
    
@@ -169,14 +168,10 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource {
       if indexPath.row == messages.count - 1 {
          if let generalCell = cell as? GeneralMessageCell {
             generalMessageCellWillDisplay(generalCell, indexPath: indexPath)
-            tableView.scrollToBottom()
-            
          }
          
          if let userCell = cell as? UserMessageCell {
             userMessageCellWillDisplay(userCell, indexPath: indexPath)
-            tableView.scrollToBottom()
-            
          }
       }
    }
@@ -223,5 +218,4 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource {
    func keyboardWillHide(notification: NSNotification) {
       animatetextViewWithKeyboard(notification)
    }
-   
 }

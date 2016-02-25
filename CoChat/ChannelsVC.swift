@@ -9,139 +9,228 @@
 import UIKit
 
 class ChannelsVC: UIViewController {
-    @IBOutlet var tableView: UITableView!
-    var cellContent:Dictionary<String, Array<String>> = [
-        "basicContent":["Add A Channel",
+    var toggleCompressedView = true
+    var toggleAdvancedSettings = false
+    var room:String?
+    var channelContent:[String: [String]] = [
+        "basicContent":["Create A Room",
             "Name Of Room",
             "Description Of Room"],
         
         "advancedContent":["Advanced Settings",
             "Room Passcode",
-            "Embed Channels",
-            "Privacy"]
+            "Privacy",
+            "Embed Channels"]
     ]
     
-    var nameOfRoom:String?
-    var descriptionOfRoom:String?
-    var roomPassCode:String?
-    var createChannels:Bool?
-    var privateRoom:Bool?
+    var nameOfChannel:String?
+    var descriptionOfChannel:String?
+    var channelPassCode:String?
+    var createChannels = false
+    var privateRoom = 0
     
-    var toggleAdvancedSettings = Bool()
-    var numberOfChannels = 0
+    var channels = [Channel]()
+    
+    @IBOutlet var tableView: UITableView!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpUI()
+        registerNibsForTableView()
+    
     }
     
-    
+    func registerNibsForTableView(){
+        let addNewChannelsNib = UINib(nibName: "ChannelHeaderCell", bundle: nil)
+        tableView.registerNib(addNewChannelsNib, forCellReuseIdentifier: "ChannelHeaderCell")
+        let headerNib = UINib(nibName: "HostReusableCell", bundle: nil)
+        tableView.registerNib(headerNib, forCellReuseIdentifier: "ChannelInformationCell")
+    }
+
 }
 
 
+extension ChannelsVC: UITableViewDelegate, UITableViewDataSource {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let informationCell = tableView.dequeueReusableCellWithIdentifier("ChannelInformationCell") as! HostReusableCell
+        let headerCell = tableView.dequeueReusableCellWithIdentifier("ChannelHeaderCell") as! ChannelHeaderCell
+        
+        headerCell.delegate = self
+        informationCell.delegate = self
+        
+        let basicContent =  channelContent["basicContent"]
+        let advancedContent = channelContent["advancedContent"]
+        
+        
+        informationCell.icon.image = nil
+        informationCell.userInteractionEnabled = true
+        informationCell.switchToggle.hidden = true
+        informationCell.selectionStyle = .None
+        informationCell.accessoryType = UITableViewCellAccessoryType.None
+        informationCell.title.userInteractionEnabled = true
+        
+        
+        switch(indexPath.section, indexPath.row){
+            
+        case (0 , indexPath.row):
+            if channels.count != 0 {
+                //createdChannelsCells
+                headerCell.headerTitle.text = channels[indexPath.row].title
+                headerCell.addButton.hidden = true
+                headerCell.createButton.hidden = true
+                //Add edit functionality
+                return headerCell
+            }
+            else{
+                headerCell.hidden = true
+            }
+        case (1,0):
+            if toggleCompressedView == true {
+                headerCell.headerTitle.text = "Add a Channel"
+                headerCell.addButton.hidden = false
+                headerCell.createButton.hidden = true
+                headerCell.addButton.enabled = true
+                return headerCell}
+            else {
+                headerCell.headerTitle.text = "Create Channel"
+                headerCell.addButton.hidden = true
+                headerCell.createButton.hidden = false
+                return headerCell}
+        case (2,0):
+            //Basic Info Header
+            informationCell.icon.image = UIImage(named: "Create")
+            informationCell.title.text = basicContent![indexPath.row]
+            informationCell.userInteractionEnabled = false
+            return informationCell
+        case (2,1):
+            informationCell.title.text = basicContent![indexPath.row]
+            informationCell.type = .NameOfRoom
+            return informationCell
+        case (2,2):
+            informationCell.title.text = basicContent![indexPath.row]
+            informationCell.type = .DescriptionOfRoom
+            return informationCell
+        case (3,0):
+            informationCell.icon.image = UIImage(named: "Settings")
+            informationCell.title.text = advancedContent![indexPath.row]
+            informationCell.title.userInteractionEnabled = false
+            informationCell.selectionStyle = .Gray
+            return informationCell
+        case (3,1):
+            informationCell.title.text = advancedContent![indexPath.row]
+            informationCell.type = .PasscodeOfRoom
+            return informationCell
+        case (3,2):
+            informationCell.title.text = advancedContent![indexPath.row]
+            informationCell.title.userInteractionEnabled = false
+            informationCell.type = .Privacy
+            informationCell.switchToggle.hidden = false
+            return informationCell
+        case (3,3):
+            informationCell.title.text = advancedContent![indexPath.row]
+            informationCell.title.userInteractionEnabled = false
+            informationCell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+            informationCell.selectionStyle = .Gray
+            return informationCell
+        default:
+            assertionFailure()
+        }
+        return headerCell
+    }
+    
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        if toggleCompressedView == true {
+            // show created channels || no header and the addRoom cell
+            return 2
+        }
+        else {
+            // non compressed view showing the created channels || no header & the create room & the basic info
+            return 4
+        }
+    }
+    
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch section{
+        case 0:
+            //header
+            return 1
+        case 1:
+            //create or add room
+            return 1
+        case 2:
+            //basic info
+            return 3
+        default:
+            if toggleAdvancedSettings == true {
+                //advancedSettingsDecompressed
+                return 3
+            }
+                //advancedSettingsCompressed
+            else {
+                return 1
+            }
+        }
+    }
+}
+
+extension ChannelsVC: ChannelHeaderCellDelegate {
+    func addNewChannel(sender: AnyObject?) {
+        toggleCompressedView = false
+        //Change the top label from add to create
+        print("add button tapped")
+        tableView.reloadData()
+    }
+    
+    func createChannel(sender: AnyObject?) {
+        toggleCompressedView = true
+        guard let name = nameOfChannel, subTitle = descriptionOfChannel else {return}
+        if channelPassCode == nil {
+            channelPassCode = "123"
+        }
+        let newChannel = Channel(withTempTitle: name, tempSubtitle: subTitle, tempPrivateChannel: privateRoom, tempPassword: channelPassCode!, roomName: room!)
+        channels.append(newChannel)
+        // add one more channel
+        // set the sections so that only 2 sections are displayed the compressed newly added channel and the add another channel
+        tableView.reloadData()
+    }
+}
+
 extension ChannelsVC: HostReusableCellDelegate {
     func hostReusableCell(cell: HostReusableCell, valueDidChange: AnyObject?) {
+        let addNewCell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection:1)) as! ChannelHeaderCell
         switch cell.type {
         case .NameOfRoom:
-            nameOfRoom = valueDidChange as? String
+            nameOfChannel = valueDidChange as? String
         case .DescriptionOfRoom:
-            descriptionOfRoom = valueDidChange as? String
+            descriptionOfChannel = valueDidChange as? String
         case .PasscodeOfRoom:
-            roomPassCode = valueDidChange as? String
+            channelPassCode = valueDidChange as? String
         case .Privacy:
-            privateRoom = valueDidChange as? Bool
+            if let boolValue = valueDidChange as? Bool {
+                if boolValue == true {
+                    privateRoom = 1
+                }
+                else {
+                    privateRoom = 0
+                }
+            }
             print("switch was tapped inside HostVC")
         default:
             assertionFailure()
         }
+        if nameOfChannel != nil && descriptionOfChannel != nil {
+            addNewCell.createButton.enabled = true
+        }
+    }
+    
+    func addAnotherChannel(sender: AnyObject?) {
+        // change this
+        print("tapped")
+        tableView.reloadData()
     }
 }
 
-extension ChannelsVC: UITableViewDataSource, UITableViewDelegate {
-    func setUpUI(){
-        toggleAdvancedSettings = false
-        let headerNib = UINib(nibName: "HostReusableCell", bundle: nil)
-        tableView.registerNib(headerNib, forCellReuseIdentifier: "Host Reusable Cell")
-        tableView.scrollEnabled = false
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Host Reusable Cell") as! HostReusableCell
-        cell.setUpCellAtIndexPath(indexPath, cellContent: cellContent)
-        cell.delegate = self
-        switch (indexPath.section, indexPath.row) {
-        case (0,0):
-            let contactAddImage = UIImage(named: "contactAdd")
-            let addButton = UIButton(type: .Custom)
-            let frame = CGRectMake(0, 0, 45, 45)
-            addButton.frame = frame
-            addButton.setBackgroundImage(contactAddImage, forState: .Normal)
-            addButton.backgroundColor = UIColor.clearColor()
-            cell.accessoryView = addButton
-            cell.userInteractionEnabled = true
-            cell.title.userInteractionEnabled = false
-        default:break
-        }
-        return cell
-    }
-//    
-//    func addChannelWasTapped(){
-//        numberOfChannels++
-////        let sections = tableView.numberOfSections
-////        let range = 1 ... sections
-////        let index = NSIndexSet(indexesInRange: NSRange(range))
-////        tableView.reloadSections(index, withRowAnimation: UITableViewRowAnimation.Fade)
-//        
-//        UIView.animateWithDuration(1.0, delay: 0.0, options: [], animations: { () -> Void in
-//            self.tableView.reloadData()
-//            }, completion: nil)
-//    }
-    
-    
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 60
-    }
-    
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 2
-    }
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0:
-            if numberOfChannels == 0 {
-                return 1
-            }
-            else {
-                return cellContent["basicContent"]!.count * numberOfChannels
-            }
-        case 1:
-            if numberOfChannels == 0 {
-                return 0}
-            if toggleAdvancedSettings == true {
-                return cellContent["advancedContent"]!.count
-            }
-            else {
-                return 1
-            }
-        default:
-            return 0
-        }
-    }
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print(indexPath)
-        let index = NSIndexSet(index: 1)
-        switch (indexPath.section, indexPath.row){
-        case (0,0):
-            numberOfChannels += 1
-            tableView.reloadSections(index, withRowAnimation: UITableViewRowAnimation.Fade)
-        case (1,0):
-            toggleAdvancedSettings = !toggleAdvancedSettings
-            tableView.reloadSections(index, withRowAnimation: UITableViewRowAnimation.Fade)
-        case(1,2):
-            performSegueWithIdentifier("PushChanelsVC", sender: self)
-        default:break
-        }
-    }
-}
+

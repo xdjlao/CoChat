@@ -9,11 +9,21 @@
 import UIKit
 
 extension UITableView {
-    func scrollToBottom(animated: Bool = true) {
-        let row = self.numberOfRowsInSection(0)
-        if row > 0 {
-            self.scrollToRowAtIndexPath(NSIndexPath(forRow: row - 1, inSection:0), atScrollPosition: .Bottom, animated: animated)
+    func scrollToLastMessage(animated: Bool = true) {
+        
+        let indexPathOfLastCell = lastIndexPath()
+        self.scrollToRowAtIndexPath(indexPathOfLastCell, atScrollPosition: UITableViewScrollPosition.Bottom, animated: true)
         }
+
+        func contentOffSetToLastMessage(){
+            self.contentOffset = CGPointMake(0, self.contentSize.height)
+        }
+        
+    func lastIndexPath() -> NSIndexPath {
+        let lastRowIndex = max(0, self.numberOfRowsInSection(0))
+        let indexPath = NSIndexPath(forRow: lastRowIndex - 1, inSection: 0)
+        return indexPath
     }
+
 }
 

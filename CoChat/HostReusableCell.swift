@@ -7,8 +7,9 @@
 //
 
 import UIKit
-protocol HostReusableCellDelegate: class {
+@objc protocol HostReusableCellDelegate: class {
    func hostReusableCell(cell: HostReusableCell, valueDidChange: AnyObject?)
+optional func addAnotherChannel(sender:AnyObject?)
 }
 
 enum HostCellType {
@@ -27,6 +28,8 @@ class HostReusableCell: UITableViewCell, UITextFieldDelegate {
    
    weak var delegate: HostReusableCellDelegate?
    
+    @IBOutlet var addButton: UIButton!
+    @IBOutlet var titleConstraintToLeftSuperView: NSLayoutConstraint!
    @IBOutlet var icon: UIImageView!
    @IBOutlet var title: UITextField! {
       didSet {
@@ -89,17 +92,28 @@ class HostReusableCell: UITableViewCell, UITextFieldDelegate {
          title.text = advancedContent![indexPath.row]
          type = .PasscodeOfRoom
       case (1,2):
+        title.text = advancedContent![indexPath.row]
+        title.userInteractionEnabled = false
+        type = .Privacy
+        switchToggle.hidden = false
+      case (1,3):
          title.text = advancedContent![indexPath.row]
          title.userInteractionEnabled = false
          accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
          selectionStyle = .Gray
-      case (1,3):
-         title.text = advancedContent![indexPath.row]
-         title.userInteractionEnabled = false
-         type = .Privacy
-         switchToggle.hidden = false
+      case (2,0):
+        title.text = "Add Another Channel"
+        title.userInteractionEnabled = false
+        titleConstraintToLeftSuperView.constant = 10
+        addButton.hidden = false
+        userInteractionEnabled = true
       default:
          assertionFailure()
       }
-   }   
+   }
+    
+    @IBAction func addButtonTapped(sender: UIButton) {
+        delegate?.addAnotherChannel!(sender)
+    }
+    
 }
