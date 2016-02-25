@@ -12,11 +12,11 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a Channel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03h-ro-L6m">
-                        <rect key="frame" x="8" y="8" width="188" height="27.5"/>
+                        <rect key="frame" x="8" y="8" width="188" height="28"/>
                         <constraints>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="188" id="xfA-TL-EvV"/>
                         </constraints>
@@ -35,7 +35,7 @@
                             <action selector="addNewChannelWasTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="gj0-B1-qUq"/>
                         </connections>
                     </button>
-                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wDw-N3-jIM">
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wDw-N3-jIM">
                         <rect key="frame" x="266" y="7" width="46" height="30"/>
                         <state key="normal" title="Create"/>
                         <connections>

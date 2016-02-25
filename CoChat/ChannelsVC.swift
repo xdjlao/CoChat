@@ -10,9 +10,9 @@ import UIKit
 
 class ChannelsVC: UIViewController {
     @IBOutlet var tableView: UITableView!
-    var numberOfChannels = 0
+    var numberOfChannels = 1
+    var numberOfSections = 1
     var toggleAddChannelLabel = false
-    var numberOfGroups = 0
     
     var cellContent:[String: [String]] = [
         "basicContent":["Create A Room",
@@ -24,6 +24,8 @@ class ChannelsVC: UIViewController {
             "Privacy",
             "Embed Channels"]
     ]
+    
+    var channelInformation = []
     
     var nameOfRoom:String?
     var descriptionOfRoom:String?
@@ -65,6 +67,10 @@ extension ChannelsVC: UITableViewDataSource, UITableViewDelegate {
                 cell.addNewChannelLabel.text = "New Channel"
                 cell.addButton.hidden = true
                 cell.createButton.hidden = false
+                if numberOfChannels > 1 {
+                    cell.addNewChannelLabel.text = nameOfRoom
+                }
+            
                 return cell
             }
             
@@ -78,15 +84,16 @@ extension ChannelsVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch numberOfChannels {
-        case numberOfGroups : return numberOfGroups + 1
+        switch numberOfSections {
+            // addchannelCell
+        case 1 : return 1
         default :
             switch section {
             case 0:
-                return cellContent["basicContent"]!.count
+                return cellContent["basicContent"]!.count // 3
             case 1:
                 if toggleAdvancedSettings == true {
-                    return cellContent["advancedContent"]!.count - 1
+                    return cellContent["advancedContent"]!.count - 1 // 4
                 } else {
                     return 1
                 }
@@ -99,13 +106,17 @@ extension ChannelsVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        switch numberOfChannels {
-        case numberOfGroups :
-            return numberOfGroups + 1
+        // first section is addNewChannelCell 
+        //second is basicDescription & advanced Settings
+        //third is add another Channel
+        switch numberOfSections {
+        case 1:
+            //addChannelCell
+            return 1
         default :
-            numberOfChannels = numberOfChannels * 2
-            return numberOfChannels
-                }
+            //basic & advanced Cell
+            return 2
+        }
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -123,27 +134,50 @@ extension ChannelsVC: UITableViewDataSource, UITableViewDelegate {
 
 extension ChannelsVC: AddNewChannelCellDelegate {
     func addNewChannel(sender: AnyObject?) {
-        numberOfChannels++
+        numberOfSections++
+        //Change the top label from add to create
         toggleAddChannelLabel = true
         print("add button tapped")
         tableView.reloadData()
     }
     
     func createChannel(sender: AnyObject?) {
-        numberOfGroups++
-        numberOfChannels = numberOfGroups
+        numberOfChannels++
+        numberOfSections = 1
+        toggleAddChannelLabel = false
+        // add one more channel
+//        numberOfSections = numberOfChannels
+        // set the sections so that only 2 sections are displayed the compressed newly added channel and the add another channel
         tableView.reloadData()
     }
 }
 
 extension ChannelsVC: HostReusableCellDelegate {
     func hostReusableCell(cell: HostReusableCell, valueDidChange: AnyObject?) {
-        //add to local variables
+        let addNewCell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection:0)) as! AddNewChannelCell
+            switch cell.type {
+            case .NameOfRoom:
+                nameOfRoom = valueDidChange as? String
+            case .DescriptionOfRoom:
+                descriptionOfRoom = valueDidChange as? String
+            case .PasscodeOfRoom:
+                roomPassCode = valueDidChange as? String
+            case .Privacy:
+                if let boolValue = valueDidChange as? Bool {
+                    privateRoom = boolValue
+                }
+                print("switch was tapped inside HostVC")
+            default:
+                assertionFailure()
+            }
+        if nameOfRoom != nil && descriptionOfRoom != nil {
+            addNewCell.createButton.enabled = true
+        }
     }
     
     func addAnotherChannel(sender: AnyObject?) {
-        numberOfChannels = 1
-        numberOfGroups++
+        // change this
+
         print("tapped")
         tableView.reloadData()
     }
