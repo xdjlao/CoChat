@@ -42,7 +42,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
                                         <state key="normal" title="CH"/>
                                         <connections>
-                                            <segue destination="J6o-1j-lIo" kind="show" identifier="MessageToChannelSegue" id="GYp-nk-iiG"/>
+                                            <segue destination="J6o-1j-lIo" kind="show" identifier="SegueToMenuChannelsVC" id="GYp-nk-iiG"/>
                                         </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4LP-hV-lVC">
@@ -101,7 +101,11 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="ZSP-L2-hR0">
-                        <barButtonItem key="leftBarButtonItem" systemItem="search" id="QFB-rC-jV3"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="search" id="QFB-rC-jV3">
+                            <connections>
+                                <segue destination="pcC-C2-Bz7" kind="unwind" unwindAction="prepareForUnwind:" id="yxe-sy-6n7"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="mzy-9q-t1v">
                             <connections>
                                 <segue destination="mYA-5B-jht" kind="show" identifier="SegueToShareViewController" id="rRY-bb-hHY"/>
@@ -119,6 +123,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ahP-qH-T9r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="pcC-C2-Bz7" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="HqX-Bg-Den">
                     <connections>
                         <action selector="onBackgroundTapped:" destination="efc-L1-N1A" id="g57-6q-M70"/>
