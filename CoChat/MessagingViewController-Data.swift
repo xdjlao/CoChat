@@ -16,8 +16,8 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
    }
    @IBOutlet weak var channelButtonOutlet: UIButton!
    @IBOutlet weak var sendButtonOutlet: UIButton!
-   @IBOutlet weak var buttonToTableViewConstraint: NSLayoutConstraint!
-   @IBOutlet weak var buttonsContainer: UIView!
+//   @IBOutlet weak var buttonToTableViewConstraint: NSLayoutConstraint!
+//   @IBOutlet weak var buttonsContainer: UIView!
     
    var messages = [Message]() {
       didSet {
@@ -59,13 +59,7 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
       textView.autocorrectionType = UITextAutocorrectionType.Yes
       uiSetup()
    }
-    
-//    override func viewWillAppear(animated: Bool) {
-//        super.viewWillAppear(animated)
-//        if tableView.contentSize.height > view.frame.size.height {
-////            tableView.scrollToLastMessage(false)
-//        }
-//    }
+
    
    override func viewDidAppear(animated: Bool) {
       super.viewDidAppear(animated)
@@ -114,7 +108,6 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
    }
    
    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     unwindForSegue(<#T##unwindSegue: UIStoryboardSegue##UIStoryboardSegue#>, towardsViewController: <#T##UIViewController#>)
       if segue.identifier == SegueIdentifier.SegueToMenuChannelsVC.rawValue {
          //let nav = segue.destinationViewController as! UINavigationController
          guard let mcvc = segue.destinationViewController as? MenuChannelViewController else { return }
