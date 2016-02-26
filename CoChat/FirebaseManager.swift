@@ -108,7 +108,7 @@ class FirebaseManager {
 extension FirebaseManager {
    func listenForChildForParent<T: FirebaseType, U: FirebaseType>(childType: T, parent: U, withCompletionHandler completionHandler: ((child: T) -> ())? ) -> UInt {
       let relationshipString = getRelationshipString(forChildType: childType, parent: parent)
-      return childType.type.firebase().queryOrderedByChild(relationshipString).queryEqualToValue(parent.uid).queryLimitedToLast(1).observeEventType(.ChildAdded, withBlock: { snapshot in
+      return childType.type.firebase().queryOrderedByChild(relationshipString).queryEqualToValue(parent.uid).observeEventType(.ChildAdded, withBlock: { snapshot in
          guard let child = T.singleFromSnapshot(snapshot) else { return }
          completionHandler?(child: child)
       })
