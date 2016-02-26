@@ -16,7 +16,8 @@ class ChannelsVC: UIViewController {
     weak var delegate: ChannelsVCDelegate?
     var toggleCompressedView = true
     var toggleAdvancedSettings = false
-    var room:String?
+    var room:Room?
+    var tempRoom:String?
     var channelContent:[String: [String]] = [
         "basicContent":[
             "Name Of Channel",
@@ -248,5 +249,3 @@ extension ChannelsVC: HostReusableCellDelegate {
         tableView.reloadData()
     }
 }
-
-

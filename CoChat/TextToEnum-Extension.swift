@@ -4,6 +4,8 @@ extension UIViewController {
     enum SegueIdentifier: String {
         case SegueToMain = "SegueToMain"
         case SegueToMessaging = "SegueToMessaging"
+        case SegueToChannelsVC = "SegueToChannelsVC"
+        case SegueToShare = "SegueToShareViewController"
         case MessageToChannelSegue = "MessageToChannelSegue"
         case JoinToMessagesSegue = "JoinToMessagesSegue"
         case PushToChannelsVC = "PushChannelsVC"

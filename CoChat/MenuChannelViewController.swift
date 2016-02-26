@@ -8,6 +8,7 @@ class MenuChannelViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     
     var channels: [Channel]!
+    var room:Room?
     
     weak var delegate: MenuChannelViewControllerDelegate?
     
@@ -58,6 +59,14 @@ extension MenuChannelViewController : UITableViewDataSource, UITableViewDelegate
     }
     
     func addChannel() {
-        print("Channel added")
+        print("add Channel Tapped")
+        performSegueWithSegueIdentifier(SegueIdentifier.SegueToChannelsVC, sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == SegueIdentifier.SegueToChannelsVC.rawValue {
+            guard let cvc = segue.destinationViewController as? ChannelsVC else {return}
+            cvc.room = room
+        }
     }
 }

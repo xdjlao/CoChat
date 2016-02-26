@@ -63,8 +63,8 @@ class HostViewController: UIViewController, ChannelsVCDelegate {
             return
             
         case SegueIdentifier.PushToChannelsVC.rawValue?:
-            guard let cvc =  segue.destinationViewController as? ChannelsVC else { return }
-            cvc.room = nameOfRoom
+            guard let cvc =  UIViewController() as? ChannelsVC else { return }
+            cvc.tempRoom = nameOfRoom!
             if channels.count > 0 {
                 cvc.channels = channels
             }
@@ -89,6 +89,7 @@ class HostViewController: UIViewController, ChannelsVCDelegate {
     }
 }
 
+
 //HostReusableCellDelegate
 extension HostViewController: HostReusableCellDelegate {
     func hostReusableCell(cell: HostReusableCell, valueDidChange: AnyObject?) {
@@ -110,7 +111,6 @@ extension HostViewController: HostReusableCellDelegate {
         }
     }
 }
-
 
 
 //MARK - UITableView
@@ -163,5 +163,3 @@ extension HostViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
 }
-
-
