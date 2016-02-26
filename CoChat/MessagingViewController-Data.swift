@@ -114,7 +114,8 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
    }
    
    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-      if segue.identifier == SegueIdentifier.MessageToChannelSegue.rawValue {
+     //unwindForSegue(<#T##unwindSegue: UIStoryboardSegue##UIStoryboardSegue#>, towardsViewController: <#T##UIViewController#>)
+      if segue.identifier == SegueIdentifier.SegueToMenuChannelsVC.rawValue {
          //let nav = segue.destinationViewController as! UINavigationController
          guard let mcvc = segue.destinationViewController as? MenuChannelViewController else { return }
          mcvc.delegate = self

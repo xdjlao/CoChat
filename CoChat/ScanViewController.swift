@@ -108,7 +108,7 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
          FirebaseManager.manager.getChildrenForParent(Channel(), parent: room) { channels in
             guard let channels = channels else { return }
             room.channels = channels
-            self.performSegueWithSegueIdentifier(.JoinToMessagesSegue, sender: room)
+            self.performSegueWithSegueIdentifier(.SegueToMessaging, sender: room)
          }
       }
    }
@@ -120,14 +120,14 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
          FirebaseManager.manager.getChildrenForParent(Channel(), parent: room) { channels in
             guard let channels = channels else { return }
             room.channels = channels
-            self.performSegueWithSegueIdentifier(.JoinToMessagesSegue, sender: room)
+            self.performSegueWithSegueIdentifier(.SegueToMessaging, sender: room)
          }
       }
    }
    
    
    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-      if segue.identifier == SegueIdentifier.JoinToMessagesSegue.rawValue {
+      if segue.identifier == SegueIdentifier.SegueToMessaging.rawValue {
          guard let nvc = segue.destinationViewController as? MessagingNavigationViewController else { return }
          guard let mvc = nvc.topViewController as? MessagingViewController else { return }
          guard let room = sender as? Room else { return }

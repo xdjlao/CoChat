@@ -21,6 +21,7 @@ class HostViewController: UIViewController, ChannelsVCDelegate {
     var privateRoom = false
     var toggleAdvancedSettings = false
     var channels = [Channel]()
+    var enableSegue = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +51,7 @@ class HostViewController: UIViewController, ChannelsVCDelegate {
         
         Room.createNewRoomWith(name, subtitle: description, host: user, privateRoom: privateRoomAsInt, password: entryKey) { newRoom in
             self.performSegueWithSegueIdentifier(SegueIdentifier.SegueToMessaging, sender: newRoom)
+        
         }
     }
     
@@ -59,10 +61,15 @@ class HostViewController: UIViewController, ChannelsVCDelegate {
             guard let nvc = segue.destinationViewController as? UINavigationController, room = sender as? Room else { return }
             guard let mvc = nvc.viewControllers[0] as? MessagingViewController else { return }
             mvc.room = room
+            
+            room.channels = channels.map { channel -> Channel in
+                return Channel(title: channel.title, subtitle: channel.subtitle, privateChannel: channel.privateChannel, password: channel.password, room: room)
+            }
+            
             mvc.currentChannel = room.channels[0]
             return
             
-        case SegueIdentifier.PushToChannelsVC.rawValue?:
+        case SegueIdentifier.SegueToChannelsVC.rawValue?:
             guard let cvc =  segue.destinationViewController as? ChannelsVC else { return }
             cvc.tempRoom = nameOfRoom!
             if channels.count > 0 {
@@ -70,17 +77,12 @@ class HostViewController: UIViewController, ChannelsVCDelegate {
             }
             cvc.delegate = self
             return
-        default: break
+        default: assertionFailure()
         }
     }
     
     func convertBooltoInt(bool:Bool) -> Int {
-        if bool == true {
-            return 1
-        }
-        else {
-            return 0
-        }
+        return bool == true ? 1 : 0
     }
     
     func channelsVC(channelsVC: ChannelsVC, didCreateChannel channel: AnyObject) {
@@ -96,6 +98,7 @@ extension HostViewController: HostReusableCellDelegate {
         switch cell.type {
         case .NameOfRoom:
             nameOfRoom = valueDidChange as? String
+            enableSegue = true
             navigationItem.rightBarButtonItem?.enabled = true
         case .DescriptionOfRoom:
             descriptionOfRoom = valueDidChange as? String
@@ -157,7 +160,9 @@ extension HostViewController: UITableViewDelegate, UITableViewDataSource {
             tableView.scrollEnabled = true
             tableView.reloadSections(index, withRowAnimation: UITableViewRowAnimation.Fade)
         case (1,3):
-            performSegueWithIdentifier("PushChannelsVC", sender: channels)
+            if enableSegue == true {
+            performSegueWithSegueIdentifier(SegueIdentifier.SegueToChannelsVC, sender: self)
+            }
         default:break
         }
     }

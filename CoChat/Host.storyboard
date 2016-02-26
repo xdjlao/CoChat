@@ -44,7 +44,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="tableView" destination="MSA-nq-rwv" id="h3q-L2-fr1"/>
-                        <segue destination="X6p-gC-kh3" kind="show" identifier="PushChannelsVC" id="DtR-2Z-I3L"/>
+                        <segue destination="X6p-gC-kh3" kind="show" identifier="SegueToChannelsVC" id="DtR-2Z-I3L"/>
                         <segue destination="e5H-Yb-H7h" kind="show" identifier="SegueToMessaging" id="Lcg-UQ-ttR"/>
                     </connections>
                 </viewController>
