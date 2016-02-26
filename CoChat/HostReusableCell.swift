@@ -10,6 +10,8 @@ import UIKit
 @objc protocol HostReusableCellDelegate: class {
     func hostReusableCell(cell: HostReusableCell, valueDidChange: AnyObject?)
     optional func addAnotherChannel(sender:AnyObject?)
+    optional func textFieldDidBeginEditingInCell(textField:UITextField)
+    optional func textFieldDidEndEditingInCell()
 }
 
 enum HostCellType {
@@ -43,25 +45,17 @@ class HostReusableCell: UITableViewCell, UITextFieldDelegate {
     func textFieldDidBeginEditing(textField: UITextField) {
         originalTextValue = textField.text
         textField.text = ""
+        delegate?.textFieldDidBeginEditingInCell!(textField)
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
         if textField.text == ""  {
             textField.text = originalTextValue
         }
+        delegate?.textFieldDidEndEditingInCell!()
     }
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
-//        guard textField.text != originalTextValue else { return true }
-//        let newRange = Range(start: string.startIndex, end: string.endIndex)
-//        let nameOfRoom = textField.text?.stringByReplacingCharactersInRange(newRange, withString: string)
-//        delegate?.hostReusableCell(self, valueDidChange: nameOfRoom)
-//
-        print("string :")
-        print(string)
-        print("textfieldtxt :")
-        print(textField.text)
-        
         let finalString = textField.text! + string
         delegate?.hostReusableCell(self, valueDidChange: finalString)
         print(finalString)
