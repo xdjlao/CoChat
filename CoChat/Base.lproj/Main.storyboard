@@ -80,7 +80,7 @@
             </objects>
             <point key="canvasLocation" x="245" y="307"/>
         </scene>
-        <!--CHATTERBOX-->
+        <!--Blndr-->
         <scene sceneID="LBd-IA-h9J">
             <objects>
                 <viewController storyboardIdentifier="BrowseViewController" id="Se9-XC-vea" customClass="BrowseViewController" customModule="CoChat" customModuleProvider="target" sceneMemberID="viewController">
@@ -110,7 +110,7 @@
                             <outlet property="dataSource" destination="Se9-XC-vea" id="kqg-Bz-Ofw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="CHATTERBOX" id="Rvh-Rw-ky5">
+                    <navigationItem key="navigationItem" title="Blndr" id="Rvh-Rw-ky5">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Cg8-XS-0YU">
                             <connections>
                                 <segue destination="AEp-Cz-6F3" kind="show" identifier="SegueToHost" id="QMJ-pX-IYi"/>
@@ -126,11 +126,11 @@
             </objects>
             <point key="canvasLocation" x="1190" y="1186"/>
         </scene>
-        <!--Browse-->
+        <!--Blndr-->
         <scene sceneID="pCh-ib-eyG">
             <objects>
                 <navigationController storyboardIdentifier="BrowseNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" id="KMU-u7-4ap" customClass="BrowseNavigationViewController" customModule="CoChat" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Browse" id="n7h-k5-Fwl"/>
+                    <tabBarItem key="tabBarItem" title="Blndr" id="n7h-k5-Fwl"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="i6d-Hn-EKg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
