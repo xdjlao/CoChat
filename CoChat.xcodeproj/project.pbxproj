@@ -266,11 +266,11 @@
 				A288F7D21C7860D800DF2847 /* Messaging */,
 				A288F7761C7840E600DF2847 /* Main.storyboard */,
 				91B18F5C1C7CE02300F20531 /* Messaging.storyboard */,
-				91E9B9E51C7BCFC4006F4CF0 /* Channels.storyboard */,
-				91E9B9E01C7BCD33006F4CF0 /* Host.storyboard */,
-				91E9B9DF1C7BCD33006F4CF0 /* HostReusableCell.xib */,
 				A288F77B1C7840E600DF2847 /* LaunchScreen.storyboard */,
 				A288F7DD1C7873D100DF2847 /* Login.storyboard */,
+				91E9B9E01C7BCD33006F4CF0 /* Host.storyboard */,
+				91E9B9DF1C7BCD33006F4CF0 /* HostReusableCell.xib */,
+				91E9B9E51C7BCFC4006F4CF0 /* Channels.storyboard */,
 				919549201C7E4F9D00C61805 /* ChannelHeaderCell.xib */,
 			);
 			name = Storyboard;

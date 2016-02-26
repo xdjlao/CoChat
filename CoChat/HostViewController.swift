@@ -127,6 +127,7 @@ extension HostViewController: HostReusableCellDelegate {
     func textFieldDidEndEditingInCell() {
         tableView.setContentOffset(CGPointMake(self.tableView.contentOffset.x, 0.0), animated: true)
     }
+
 }
 
 
