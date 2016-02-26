@@ -68,6 +68,7 @@ class HostViewController: UIViewController, ChannelsVCDelegate {
             if channels.count > 0 {
                 cvc.channels = channels
             }
+            cvc.delegate = self
             return
         default: break
         }
