@@ -11,7 +11,7 @@ import UIKit
 extension UITableView {
     func scrollToLastMessage(animated: Bool = true) {
         
-        let indexPathOfLastCell = lastIndexPath()
+        guard let indexPathOfLastCell = lastIndexPath() else { return }
         self.scrollToRowAtIndexPath(indexPathOfLastCell, atScrollPosition: UITableViewScrollPosition.Bottom, animated: true)
         }
 
@@ -19,8 +19,9 @@ extension UITableView {
             self.contentOffset = CGPointMake(0, self.contentSize.height)
         }
         
-    func lastIndexPath() -> NSIndexPath {
-        let lastRowIndex = max(0, self.numberOfRowsInSection(0))
+    func lastIndexPath() -> NSIndexPath? {
+        let lastRowIndex = self.numberOfRowsInSection(0)
+        guard lastRowIndex > 0 else { return nil }
         let indexPath = NSIndexPath(forRow: lastRowIndex - 1, inSection: 0)
         return indexPath
     }
