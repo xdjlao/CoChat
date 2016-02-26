@@ -63,7 +63,7 @@ class HostViewController: UIViewController, ChannelsVCDelegate {
             return
             
         case SegueIdentifier.PushToChannelsVC.rawValue?:
-            guard let cvc =  UIViewController() as? ChannelsVC else { return }
+            guard let cvc =  segue.destinationViewController as? ChannelsVC else { return }
             cvc.tempRoom = nameOfRoom!
             if channels.count > 0 {
                 cvc.channels = channels
