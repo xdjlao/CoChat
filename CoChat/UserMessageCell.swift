@@ -1,7 +1,7 @@
 import UIKit
 
 @objc protocol UserMessageCellDelegate {
-    optional func userMessageCell(userMessageCell: UserMessageCell, didTapUser user: User)
+    optional func userMessageCell(userMessageCell: UserMessageCell, didTapUser user: AnyObject)
 }
 
 class UserMessageCell: UITableViewCell {
@@ -31,6 +31,7 @@ class UserMessageCell: UITableViewCell {
     }
     
     func onTapHandle() {
-        delegate?.userMessageCell(self, didTapUser: user)
+        print(user?.name)
+        delegate?.userMessageCell!(self, didTapUser: user!)
     }
 }

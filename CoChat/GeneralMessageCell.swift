@@ -1,7 +1,7 @@
 import UIKit
 
 @objc protocol GeneralMessageCellDelegate {
-    optional func generalMessageCell(generalMessageCell: GeneralMessageCell, didTapUser user: User)
+    optional func generalMessageCell(generalMessageCell: GeneralMessageCell, didTapUser user: AnyObject)
 }
 
 class GeneralMessageCell: UITableViewCell {
@@ -30,6 +30,6 @@ class GeneralMessageCell: UITableViewCell {
     }
     
     func onTapHandle() {
-        delegate?.generalMessageCell(self, didTapUser: user)
+        delegate?.generalMessageCell!(self, didTapUser: user!)
     }
 }

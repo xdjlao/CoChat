@@ -122,6 +122,7 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, U
             cell.profileImageView.image = UIImage(named: "profileImageDummy")
          }
          cell.selectionStyle = UITableViewCellSelectionStyle.None
+         cell.delegate = self
          cell.user = user
          return cell
       }
@@ -132,6 +133,7 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, U
          cell.messageLabel.text = currentMessage.messageText
          cell.profileImageView.setImageWithURL(NSURL(string: currentMessage.poster.profileImageURL)!, placeholderImage:UIImage(named: "profileImageDummy"))
          cell.selectionStyle = UITableViewCellSelectionStyle.None
+         //cell.delegate = self
          cell.user = currentMessage.poster
          return cell
       }
@@ -174,8 +176,18 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, U
 //      }
 //}
     
-    func userMessageCell(userMessageCell: UserMessageCell, didTapUser cellID: Int) {
-        <#code#>
+    func userMessageCell(userMessageCell: UserMessageCell, didTapUser user: AnyObject) {
+        let currentUser = user as! User
+        let alertController = UIAlertController(title: currentUser.name, message: "", preferredStyle: UIAlertControllerStyle.Alert)
+        let reportAction = UIAlertAction(title: "Report", style: UIAlertActionStyle.Default) { (UIAlertAction) -> Void in
+            //
+        }
+        let messageAction = UIAlertAction(title: "Message", style: UIAlertActionStyle.Default) { (UIAlertAction) -> Void in
+            //
+        }
+        alertController.addAction(messageAction)
+        alertController.addAction(reportAction)
+        presentViewController(alertController, animated: true, completion: nil)
     }
 
    
