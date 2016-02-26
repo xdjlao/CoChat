@@ -254,6 +254,17 @@ extension ChannelsVC: HostReusableCellDelegate {
         }
     }
     
+    func textFieldDidBeginEditingInCell(textField: UITextField) {
+        let textFieldPosition = textField.convertPoint(CGPointZero, toView: self.tableView)
+        let indexPath = self.tableView.indexPathForRowAtPoint(textFieldPosition)
+        let cell = tableView.cellForRowAtIndexPath(indexPath!)
+        tableView.setContentOffset(CGPointMake(self.tableView.contentOffset.x, self.tableView.contentOffset.y + CGFloat(indexPath!.row) * (cell?.frame.height)! - (navigationController?.navigationBar.frame.height)!), animated: true)
+    }
+    
+    func textFieldDidEndEditingInCell() {
+        tableView.setContentOffset(CGPointMake(self.tableView.contentOffset.x, 0.0), animated: true)
+    }
+    
     func addAnotherChannel(sender: AnyObject?) {
         // change this
         print("tapped")
