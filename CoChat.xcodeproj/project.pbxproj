@@ -217,8 +217,6 @@
 			isa = PBXGroup;
 			children = (
 				A288F7A61C78447D00DF2847 /* MainTabBarViewController.swift */,
-				91E9B9DD1C7BCD33006F4CF0 /* HostViewController.swift */,
-				91E9B9E71C7BD0F1006F4CF0 /* ChannelsVC.swift */,
 				A2BE2B101C7BC07600ED71E4 /* Tabs */,
 			);
 			name = TabBar;
@@ -356,6 +354,7 @@
 		A2BE2B191C7CE34E00ED71E4 /* Browse */ = {
 			isa = PBXGroup;
 			children = (
+				A2BE2B2D1C7FE0D100ED71E4 /* Host */,
 				A288F7A41C7841B600DF2847 /* BrowseViewController.swift */,
 				A2BE2B2B1C7E72A200ED71E4 /* BrowseNavigationViewController.swift */,
 			);
@@ -410,6 +409,23 @@
 				A2BE2B251C7CE97000ED71E4 /* WhisperMessagingViewController.swift */,
 			);
 			name = WhisperMessaging;
+			sourceTree = "<group>";
+		};
+		A2BE2B2D1C7FE0D100ED71E4 /* Host */ = {
+			isa = PBXGroup;
+			children = (
+				A2BE2B2E1C7FE0E400ED71E4 /* Channels */,
+				91E9B9DD1C7BCD33006F4CF0 /* HostViewController.swift */,
+			);
+			name = Host;
+			sourceTree = "<group>";
+		};
+		A2BE2B2E1C7FE0E400ED71E4 /* Channels */ = {
+			isa = PBXGroup;
+			children = (
+				91E9B9E71C7BD0F1006F4CF0 /* ChannelsVC.swift */,
+			);
+			name = Channels;
 			sourceTree = "<group>";
 		};
 		BA88D8AD8904B9765BBA1CB3 /* Frameworks */ = {
