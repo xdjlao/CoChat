@@ -1,6 +1,6 @@
 import UIKit
 
-class HostViewController: UIViewController {
+class HostViewController: UIViewController, ChannelsVCDelegate {
     @IBOutlet var tableView: UITableView!
     
     var cellContent:[String: [String]] = [
@@ -20,6 +20,7 @@ class HostViewController: UIViewController {
     var createChannels = false
     var privateRoom = false
     var toggleAdvancedSettings = false
+    var channels = [Channel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,8 +63,11 @@ class HostViewController: UIViewController {
             return
             
         case SegueIdentifier.PushToChannelsVC.rawValue?:
-            guard let cvc =  UIViewController() as? ChannelsVC else { return }
+            guard let cvc =  segue.destinationViewController as? ChannelsVC else { return }
             cvc.room = nameOfRoom
+            if channels.count > 0 {
+                cvc.channels = channels
+            }
             return
         default: break
         }
@@ -76,6 +80,11 @@ class HostViewController: UIViewController {
         else {
             return 0
         }
+    }
+    
+    func channelsVC(channelsVC: ChannelsVC, didCreateChannel channel: AnyObject) {
+        let addChannel = channel as! Channel
+        channels.append(addChannel)
     }
 }
 
@@ -147,7 +156,7 @@ extension HostViewController: UITableViewDelegate, UITableViewDataSource {
             tableView.scrollEnabled = true
             tableView.reloadSections(index, withRowAnimation: UITableViewRowAnimation.Fade)
         case (1,3):
-            performSegueWithIdentifier("PushChannelsVC", sender: self)
+            performSegueWithIdentifier("PushChannelsVC", sender: channels)
         default:break
         }
     }

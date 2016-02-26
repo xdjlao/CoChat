@@ -8,7 +8,12 @@
 
 import UIKit
 
+@objc protocol ChannelsVCDelegate {
+    optional func channelsVC(channelsVC: ChannelsVC, didCreateChannel channel: AnyObject)
+}
+
 class ChannelsVC: UIViewController {
+    weak var delegate: ChannelsVCDelegate?
     var toggleCompressedView = true
     var toggleAdvancedSettings = false
     var room:String?
@@ -29,7 +34,7 @@ class ChannelsVC: UIViewController {
     var createChannels = false
     var privateRoom = 0
     
-    var channels = [Channel]()
+    var channels:[Channel]?
     
     @IBOutlet var tableView: UITableView!
     
@@ -38,7 +43,10 @@ class ChannelsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         registerNibsForTableView()
-    
+        
+        if channels == nil {
+            channels = [Channel]()
+        }
     }
     
     func registerNibsForTableView(){
@@ -74,9 +82,9 @@ extension ChannelsVC: UITableViewDelegate, UITableViewDataSource {
         switch(indexPath.section, indexPath.row){
             
         case (0 , indexPath.row):
-            if channels.count != 0 {
+            if channels!.count != 0 {
                 //createdChannelsCells
-                headerCell.headerTitle.text = channels[indexPath.row].title
+                headerCell.headerTitle.text = channels![indexPath.row].title
                 headerCell.addButton.hidden = true
                 headerCell.createButton.hidden = true
                 //Add edit functionality
@@ -150,7 +158,7 @@ extension ChannelsVC: UITableViewDelegate, UITableViewDataSource {
         switch section{
         case 0:
             //header
-            return channels.count
+            return channels!.count
         case 1:
             //create or add room
             return 1
@@ -198,7 +206,8 @@ extension ChannelsVC: ChannelHeaderCellDelegate {
             channelPassCode = "123"
         }
         let newChannel = Channel(withTempTitle: name, tempSubtitle: subTitle, tempPrivateChannel: privateRoom, tempPassword: channelPassCode!, roomName: "dummy")
-        channels.append(newChannel)
+        channels?.append(newChannel)
+        delegate?.channelsVC!(self, didCreateChannel: newChannel)
         // add one more channel
         // set the sections so that only 2 sections are displayed the compressed newly added channel and the add another channel
         tableView.reloadData()

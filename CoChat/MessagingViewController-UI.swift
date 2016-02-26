@@ -1,7 +1,7 @@
 import UIKit
 import AFNetworking
 
-extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, UserMessageCellDelegate, GeneralMessageCellDelegate {
+extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, GeneralMessageCellDelegate {
   
    func animatetextViewWithKeyboard(notification: NSNotification) {
       // change the view's height to accept the size of the keyboard
@@ -122,7 +122,6 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, U
             cell.profileImageView.image = UIImage(named: "profileImageDummy")
          }
          cell.selectionStyle = UITableViewCellSelectionStyle.None
-         cell.delegate = self
          cell.user = user
          return cell
       }
@@ -176,9 +175,13 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, U
 //      }
 //}
     
-    func userMessageCell(userMessageCell: UserMessageCell, didTapUser user: AnyObject) {
+    func generalMessageCell(generalMessageCell: GeneralMessageCell, didTapUser user: AnyObject) {
         let currentUser = user as! User
-        let alertController = UIAlertController(title: currentUser.name, message: "", preferredStyle: UIAlertControllerStyle.Alert)
+        showUserProfile(currentUser)
+    }
+    
+    func showUserProfile(user:User) {
+        let alertController = UIAlertController(title: user.name, message: "", preferredStyle: UIAlertControllerStyle.Alert)
         let reportAction = UIAlertAction(title: "Report", style: UIAlertActionStyle.Default) { (UIAlertAction) -> Void in
             //
         }

@@ -31,7 +31,6 @@ class UserMessageCell: UITableViewCell {
     }
     
     func onTapHandle() {
-        print(user?.name)
         delegate?.userMessageCell!(self, didTapUser: user!)
     }
 }

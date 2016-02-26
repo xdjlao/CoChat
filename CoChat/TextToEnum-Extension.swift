@@ -6,7 +6,7 @@ extension UIViewController {
         case SegueToMessaging = "SegueToMessaging"
         case MessageToChannelSegue = "MessageToChannelSegue"
         case JoinToMessagesSegue = "JoinToMessagesSegue"
-        case PushToChannelsVC = "PushToChannelsVC"
+        case PushToChannelsVC = "PushChannelsVC"
     }
     
     func performSegueWithSegueIdentifier(segueIdentifier: SegueIdentifier, sender: AnyObject?) {
