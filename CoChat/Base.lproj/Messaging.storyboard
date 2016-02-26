@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -101,14 +101,10 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="ZSP-L2-hR0">
-                        <barButtonItem key="leftBarButtonItem" systemItem="search" id="QFB-rC-jV3">
-                            <connections>
-                                <segue destination="Hn8-Qv-Mlm" kind="unwind" unwindAction="prepareForUnwind:" id="XdJ-Hy-Exa"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" systemItem="search" id="QFB-rC-jV3"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="mzy-9q-t1v">
                             <connections>
-                                <segue destination="mYA-5B-jht" kind="show" identifier="ShowShare" id="rRY-bb-hHY"/>
+                                <segue destination="mYA-5B-jht" kind="show" identifier="SegueToShareViewController" id="rRY-bb-hHY"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -123,7 +119,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ahP-qH-T9r" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="Hn8-Qv-Mlm" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="HqX-Bg-Den">
                     <connections>
                         <action selector="onBackgroundTapped:" destination="efc-L1-N1A" id="g57-6q-M70"/>

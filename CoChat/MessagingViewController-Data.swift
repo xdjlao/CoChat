@@ -118,9 +118,10 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
          //let nav = segue.destinationViewController as! UINavigationController
          guard let mcvc = segue.destinationViewController as? MenuChannelViewController else { return }
          mcvc.delegate = self
+         mcvc.room = room
          mcvc.channels = room.channels
          
-      } else if segue.identifier == "ShowShare" {
+      } else if segue.identifier == SegueIdentifier.SegueToShare.rawValue {
          guard let svc = segue.destinationViewController as? ShareViewController else { return }
          svc.channel = currentChannel
          svc.room = room

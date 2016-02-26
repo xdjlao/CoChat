@@ -63,7 +63,7 @@ class HostViewController: UIViewController {
             
         case SegueIdentifier.PushToChannelsVC.rawValue?:
             guard let cvc =  UIViewController() as? ChannelsVC else { return }
-            cvc.room = nameOfRoom
+            cvc.tempRoom = nameOfRoom!
             return
         default: break
         }
@@ -78,6 +78,7 @@ class HostViewController: UIViewController {
         }
     }
 }
+
 
 //HostReusableCellDelegate
 extension HostViewController: HostReusableCellDelegate {
@@ -100,7 +101,6 @@ extension HostViewController: HostReusableCellDelegate {
         }
     }
 }
-
 
 
 //MARK - UITableView
@@ -153,5 +153,3 @@ extension HostViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
 }
-
-
