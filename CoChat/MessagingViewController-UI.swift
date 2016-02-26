@@ -68,14 +68,6 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
     //in
     // MARK - Listeners
     func textViewBeganEditing(){
-        
-        //    var tVFrame = textView.frame
-        print("textViewFrame: \(textView.frame)")
-        //    tVFrame.size.height
-        print("textViewContentSize: \(textView.contentSize.height)")
-        //    textView.frame = tVFrame
-        print("newTextViewFrame: \(textView.frame)")
-        
         //Flash red if over 140 count
         if (self.textView.text?.characters.count > 140){
             UIView.animateKeyframesWithDuration(0.2, delay: 0.0, options: [], animations: { () -> Void in
@@ -96,13 +88,17 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
                 })
                 }, completion: nil)
         }
-        UIView.animateWithDuration(1.0, animations: { () -> Void in
+    }
+    
+    func textViewDidChange(textView: UITextView) {
+        UIView.animateWithDuration(0.2, animations: { () -> Void in
             let height = self.textView.sizeThatFits(CGSizeMake(self.textView.frame.size.width, CGFloat.max)).height
             print(height)
             self.textView.frame.size.height = height
             }) { (Bool) -> Void in
                 self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: self.messages.count - 1, inSection: 0), atScrollPosition: .Bottom, animated: true)
         }
+        
     }
     
     //MARK - TableView Delegate Methods
@@ -134,42 +130,43 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
         }
     }
     
-    //   func generalMessageCellWillDisplay(generalCell: GeneralMessageCell, indexPath: NSIndexPath) {
-    //      generalCell.profileImageView.alpha = 0.0
-    //      generalCell.messageLabel.alpha = 0.0
-    //      UIView.animateWithDuration(0.5, delay: 0.0, options: [], animations: { () -> Void in
-    //         generalCell.alpha = 1.0
-    //         generalCell.messageLabel.alpha = 1.0
-    //         }, completion: { (Bool) -> Void in
-    //            print("General Message Was Displayed")
-    //      })
-    //   }
-    //
-    //
-    //   func userMessageCellWillDisplay(userCell: UserMessageCell, indexPath: NSIndexPath) {
-    //      userCell.profileImageView.alpha = 0.0
-    //      userCell.messageLabel.alpha = 0.0
-    //      UIView.animateWithDuration(0.5, delay: 0.0, options: [], animations: { () -> Void in
-    //         userCell.profileImageView.alpha = 1.0
-    //         userCell.messageLabel.alpha = 1.0
-    //         }, completion: { (Bool) -> Void in
-    //            print("User Message Was Displayed")
-    ////            self.tableView.scrollToLastMessage(true)
-    //      })
-    //   }
-    //
+    func generalMessageCellWillDisplay(generalCell: GeneralMessageCell, indexPath: NSIndexPath) {
+        generalCell.profileImageView.alpha = 0.0
+        generalCell.messageLabel.alpha = 0.0
+        print("before animation \(generalCell.profileImageView.alpha)")
+        UIView.animateWithDuration(1.2, delay: 0.0, options: [.CurveEaseInOut], animations: { () -> Void in
+            generalCell.profileImageView.alpha = 1.0
+            generalCell.messageLabel.alpha = 1.0
+            print("after animation \(generalCell.profileImageView.alpha)")
+            }, completion: { (Bool) -> Void in
+                print("General Message Was Displayed")
+        })
+    }
     
-    //   func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-    //      if indexPath.row == messages.count - 1 {
-    //         if let generalCell = cell as? GeneralMessageCell {
-    //            generalMessageCellWillDisplay(generalCell, indexPath: indexPath)
-    //    }
-    //
-    //         if let userCell = cell as? UserMessageCell {
-    //            userMessageCellWillDisplay(userCell, indexPath: indexPath)
-    //         }
-    //      }
-    //}
+    func userMessageCellWillDisplay(userCell: UserMessageCell, indexPath: NSIndexPath) {
+        userCell.profileImageView.alpha = 0.0
+        userCell.messageLabel.alpha = 0.0
+        UIView.animateWithDuration(1.0, delay: 0.0, options:[.CurveEaseInOut], animations: { () -> Void in
+            userCell.profileImageView.alpha = 1.0
+            userCell.messageLabel.alpha = 1.0
+            }, completion: { (Bool) -> Void in
+                print("User Message Was Displayed")
+                //            self.tableView.scrollToLastMessage(true)
+        })
+    }
+    
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.row == messages.count - 1 {
+            if let generalCell = cell as? GeneralMessageCell {
+                generalMessageCellWillDisplay(generalCell, indexPath: indexPath)
+            }
+            
+            if let userCell = cell as? UserMessageCell {
+                userMessageCellWillDisplay(userCell, indexPath: indexPath)
+            }
+        }
+    }
     
     func generalMessageCell(generalMessageCell: GeneralMessageCell, didTapUser user: AnyObject) {
         let currentUser = user as! User
