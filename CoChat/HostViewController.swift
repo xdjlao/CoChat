@@ -42,7 +42,6 @@ class HostViewController: UIViewController {
         if !checkIfLoggedIn() {
             return
         }
-        
         guard let name = nameOfRoom, description = descriptionOfRoom else { return }
         let entryKey = roomPassCode ?? "123"
         let user = FirebaseManager.manager.user

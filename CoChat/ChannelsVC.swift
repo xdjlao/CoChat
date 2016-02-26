@@ -14,8 +14,8 @@ class ChannelsVC: UIViewController {
     var room:String?
     var channelContent:[String: [String]] = [
         "basicContent":[
-            "Name Of Room",
-            "Description Of Room"],
+            "Name Of Channel",
+            "Description Of Channel"],
         
         "advancedContent":["Advanced Settings",
             "Room Passcode",
