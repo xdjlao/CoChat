@@ -1,7 +1,7 @@
 import UIKit
 import AFNetworking
 
-extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, UserMessageCellDelegate {
+extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, UserMessageCellDelegate, GeneralMessageCellDelegate {
   
    func animatetextViewWithKeyboard(notification: NSNotification) {
       // change the view's height to accept the size of the keyboard
@@ -133,7 +133,7 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, U
          cell.messageLabel.text = currentMessage.messageText
          cell.profileImageView.setImageWithURL(NSURL(string: currentMessage.poster.profileImageURL)!, placeholderImage:UIImage(named: "profileImageDummy"))
          cell.selectionStyle = UITableViewCellSelectionStyle.None
-         //cell.delegate = self
+         cell.delegate = self
          cell.user = currentMessage.poster
          return cell
       }

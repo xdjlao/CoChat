@@ -30,6 +30,7 @@ class GeneralMessageCell: UITableViewCell {
     }
     
     func onTapHandle() {
+        print(user?.name)
         delegate?.generalMessageCell!(self, didTapUser: user!)
     }
 }
