@@ -44,6 +44,7 @@ class ChannelsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         registerNibsForTableView()
+//        setUpTableViewUI()
         
         if channels == nil {
             channels = [Channel]()
@@ -56,7 +57,12 @@ class ChannelsVC: UIViewController {
         let headerNib = UINib(nibName: "HostReusableCell", bundle: nil)
         tableView.registerNib(headerNib, forCellReuseIdentifier: "ChannelInformationCell")
     }
-
+//    
+//    func setUpTableViewUI(){
+//        tableView.separatorStyle = .None
+//        tableView.backgroundColor = UIColor.basicOrange()
+//    }
+    
 }
 
 
@@ -64,6 +70,11 @@ extension ChannelsVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let informationCell = tableView.dequeueReusableCellWithIdentifier("ChannelInformationCell") as! HostReusableCell
         let headerCell = tableView.dequeueReusableCellWithIdentifier("ChannelHeaderCell") as! ChannelHeaderCell
+        
+//        headerCell.headerTitle.textColor = UIColor.whiteColor()
+//        headerCell.backgroundColor = UIColor.orangeColor()
+//        informationCell.title.textColor = UIColor.whiteColor()
+//        informationCell.backgroundColor = UIColor.orangeColor()
         
         headerCell.delegate = self
         informationCell.delegate = self
@@ -189,7 +200,7 @@ extension ChannelsVC: UITableViewDelegate, UITableViewDataSource {
         default:break
         }
     }
-
+    
 }
 
 extension ChannelsVC: ChannelHeaderCellDelegate {
@@ -241,6 +252,17 @@ extension ChannelsVC: HostReusableCellDelegate {
         if nameOfChannel != nil && descriptionOfChannel != nil {
             addNewCell.createButton.enabled = true
         }
+    }
+    
+    func textFieldDidBeginEditingInCell(textField: UITextField) {
+        let textFieldPosition = textField.convertPoint(CGPointZero, toView: self.tableView)
+        let indexPath = self.tableView.indexPathForRowAtPoint(textFieldPosition)
+        let cell = tableView.cellForRowAtIndexPath(indexPath!)
+        tableView.setContentOffset(CGPointMake(self.tableView.contentOffset.x, self.tableView.contentOffset.y + CGFloat(indexPath!.row) * (cell?.frame.height)! - (navigationController?.navigationBar.frame.height)!), animated: true)
+    }
+    
+    func textFieldDidEndEditingInCell() {
+        tableView.setContentOffset(CGPointMake(self.tableView.contentOffset.x, 0.0), animated: true)
     }
     
     func addAnotherChannel(sender: AnyObject?) {
