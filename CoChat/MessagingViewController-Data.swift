@@ -98,7 +98,11 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
       Message().type.firebase().queryOrderedByChild("channelUID").queryEqualToValue(currentChannel.uid).queryLimitedToLast(increment).observeSingleEventOfType(.Value, withBlock: { snapshot in
          guard let children = Message.arrayFromSnapshot(snapshot) else { return }
          self.startUID = children[0].uid
-         self.endUID = children[9].uid
+        if children.count < 11 {
+            self.endUID = children.last?.uid
+        } else {
+            self.endUID = children[9].uid
+        }
          var indexPaths = [NSIndexPath]()
          children.forEach { message in
             let indexPath = NSIndexPath(forRow: self.messages.count, inSection: 0)

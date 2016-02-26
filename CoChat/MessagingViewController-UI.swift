@@ -1,7 +1,7 @@
 import UIKit
 import AFNetworking
 
-extension MessagingViewController: UITableViewDelegate, UITableViewDataSource {
+extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, UserMessageCellDelegate {
   
    func animatetextViewWithKeyboard(notification: NSNotification) {
       // change the view's height to accept the size of the keyboard
@@ -112,25 +112,27 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource {
    //MARK - TableView Delegate Methods
    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
       let currentMessage = messages[indexPath.row]
-      
       if currentMessage.poster.name == user?.name {
          let cell = tableView.dequeueReusableCellWithIdentifier("UserMessageCell") as! UserMessageCell
+         cell.tag = indexPath.row
          cell.messageLabel.text = currentMessage.messageText
-         
          if let user = user {
             cell.profileImageView.setImageWithURL(NSURL(string: user.profileImageURL)!, placeholderImage: UIImage(named: "profileImageDummy"))
          } else {
             cell.profileImageView.image = UIImage(named: "profileImageDummy")
          }
          cell.selectionStyle = UITableViewCellSelectionStyle.None
+         cell.user = user
          return cell
       }
          
       else {
          let cell = tableView.dequeueReusableCellWithIdentifier("GeneralMessageCell") as! GeneralMessageCell
+         cell.tag = indexPath.row
          cell.messageLabel.text = currentMessage.messageText
          cell.profileImageView.setImageWithURL(NSURL(string: currentMessage.poster.profileImageURL)!, placeholderImage:UIImage(named: "profileImageDummy"))
          cell.selectionStyle = UITableViewCellSelectionStyle.None
+         cell.user = currentMessage.poster
          return cell
       }
    }
@@ -171,7 +173,10 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource {
 //         }
 //      }
 //}
-
+    
+    func userMessageCell(userMessageCell: UserMessageCell, didTapUser cellID: Int) {
+        <#code#>
+    }
 
    
    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
