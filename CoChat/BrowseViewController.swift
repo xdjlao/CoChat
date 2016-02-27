@@ -11,13 +11,20 @@ class BrowseViewController: UIViewController {
         didSet {
             tableView.dataSource = self
             tableView.delegate = self
-            setUpTableView()
+            //setUpTableView()
         }
     }
     var recentRooms = [Room]()
     var topRooms = [Room]()
     let manager = FirebaseManager.manager
     let ref = FirebaseManager.manager.ref
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.rowHeight = 71
+        tableView.separatorColor = UIColor.clearColor()
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+    }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
@@ -66,32 +73,32 @@ class BrowseViewController: UIViewController {
 
 extension BrowseViewController: UITableViewDataSource, UITableViewDelegate {
     
-    func setUpTableView() {
-    }
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        if recentRooms.count == 0 {
-            return 1
-        } else {
-            return 2
-        }
-    }
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let width = tableView.frame.width
-        let header = UIView(frame: CGRect(x: 0, y: 0, width: width, height: 30))
-        let label = UILabel(frame: CGRect(x: 10, y: 0, width: width, height: 30))
-        header.backgroundColor = UIColor.lightGrayColor()
-        if recentRooms.count == 0 {
-            label.text = "Active Rooms"
-        } else {
-            switch section {
-            case 0: label.text = "Recent Rooms"
-            case 1: label.text = "Active Rooms"
-            default: label.text = "Nothing"
-            }
-        }
-        header.addSubview(label)
-        return header
-    }
+//    func setUpTableView() {
+//    }
+//    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+//        if recentRooms.count == 0 {
+//            return 1
+//        } else {
+//            return 2
+//        }
+//    }
+//    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let width = tableView.frame.width
+//        let header = UIView(frame: CGRect(x: 0, y: 0, width: width, height: 30))
+//        let label = UILabel(frame: CGRect(x: 10, y: 0, width: width, height: 30))
+//        header.backgroundColor = UIColor.lightGrayColor()
+//        if recentRooms.count == 0 {
+//            label.text = "Active Rooms"
+//        } else {
+//            switch section {
+//            case 0: label.text = "Recent Rooms"
+//            case 1: label.text = "Active Rooms"
+//            default: label.text = "Nothing"
+//            }
+//        }
+//        header.addSubview(label)
+//        return header
+//    }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if recentRooms.count == 0 {
             return topRooms.count
@@ -104,15 +111,7 @@ extension BrowseViewController: UITableViewDataSource, UITableViewDelegate {
         }
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if recentRooms.count == 0 {
-            return setUpTopRoomCell(forIndexPath: indexPath)
-        } else {
-            switch indexPath.section {
-            case 0: return setUpRecentRoomCell(forIndexPath: indexPath)
-            case 1: return setUpTopRoomCell(forIndexPath: indexPath)
-            default: assertionFailure("BrowseVC.tableView asked for more than two sections."); return setUpRecentRoomCell(forIndexPath: indexPath)
-            }
-        }
+        return setUpTopRoomCell(forIndexPath: indexPath)
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var room: Room!
@@ -132,19 +131,28 @@ extension BrowseViewController: UITableViewDataSource, UITableViewDelegate {
             self.performSegueWithSegueIdentifier(.SegueToMessaging, sender: room)
         }
     }
-    func setUpRecentRoomCell(forIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let room = recentRooms[indexPath.row]
-        let cell = tableView.dequeueReusableCellWithCellIdentifier(.RecentRoomCell)
-        cell.textLabel?.text = room.title
-        cell.selectionStyle = UITableViewCellSelectionStyle.None
-        return cell
-    }
+//    func setUpRecentRoomCell(forIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+//        let room = recentRooms[indexPath.row]
+//        let cell = tableView.dequeueReusableCellWithCellIdentifier(.RecentRoomCell)
+//        cell.textLabel?.text = room.title
+//        cell.selectionStyle = UITableViewCellSelectionStyle.None
+//        return cell
+//    }
     func setUpTopRoomCell(forIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let room = topRooms[indexPath.row]
-        let cell = tableView.dequeueReusableCellWithCellIdentifier(.RecentRoomCell)
-        cell.textLabel?.text = room.title
+        let cell = tableView.dequeueReusableCellWithCellIdentifier(.TopRoomCell) as! TopRoomCell
+        cell.countLabel.text = "\(indexPath.row + 1)"
+        cell.roomTitleLabel.text = room.title
         cell.selectionStyle = UITableViewCellSelectionStyle.None
         return cell
     }
+    
+//    func scrollViewDidScroll(scrollView: UIScrollView) {
+//        if scrollView.contentOffset.y + (navigationController?.navigationBar.frame.height)! + 20 < 0 {
+//            scrollView.scrollEnabled = false
+//        } else {
+//            scrollView.scrollEnabled = true
+//        }
+//    }
 }
 

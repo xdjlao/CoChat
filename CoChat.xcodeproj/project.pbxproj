@@ -54,6 +54,7 @@
 		A2BE2B281C7E60AD00ED71E4 /* DismissSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B271C7E60AD00ED71E4 /* DismissSegue.swift */; };
 		A2BE2B2A1C7E708C00ED71E4 /* MessagingNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B291C7E708C00ED71E4 /* MessagingNavigationViewController.swift */; };
 		A2BE2B2C1C7E72A200ED71E4 /* BrowseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B2B1C7E72A200ED71E4 /* BrowseNavigationViewController.swift */; };
+		A2BE2B3A1C81226C00ED71E4 /* TopRoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B391C81226C00ED71E4 /* TopRoomCell.swift */; };
 		D8AE2D191C7D28F00002A31D /* Whisper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE2D181C7D28F00002A31D /* Whisper.swift */; };
 		D8AE2D1B1C7D2E560002A31D /* DualQueriedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE2D1A1C7D2E560002A31D /* DualQueriedType.swift */; };
 		FE075CF3C95FB29BE89AA0A4 /* Pods_CoChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70EBED03AAABBA95CBA945A5 /* Pods_CoChat.framework */; };
@@ -112,6 +113,7 @@
 		A2BE2B271C7E60AD00ED71E4 /* DismissSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissSegue.swift; sourceTree = "<group>"; };
 		A2BE2B291C7E708C00ED71E4 /* MessagingNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagingNavigationViewController.swift; sourceTree = "<group>"; };
 		A2BE2B2B1C7E72A200ED71E4 /* BrowseNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseNavigationViewController.swift; sourceTree = "<group>"; };
+		A2BE2B391C81226C00ED71E4 /* TopRoomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopRoomCell.swift; sourceTree = "<group>"; };
 		D8AE2D181C7D28F00002A31D /* Whisper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Whisper.swift; sourceTree = "<group>"; };
 		D8AE2D1A1C7D2E560002A31D /* DualQueriedType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DualQueriedType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -284,6 +286,7 @@
 				A288F7CE1C78609700DF2847 /* UserMessageCell.swift */,
 				A288F7D01C7860B500DF2847 /* GeneralMessageCell.swift */,
 				9195491F1C7E4F9D00C61805 /* ChannelHeaderCell.swift */,
+				A2BE2B391C81226C00ED71E4 /* TopRoomCell.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -596,6 +599,7 @@
 				A2BE2B181C7CE33000ED71E4 /* WhisperViewController.swift in Sources */,
 				A288F7B51C78599600DF2847 /* FirebaseType-Protocol&Extension.swift in Sources */,
 				919549211C7E4F9D00C61805 /* ChannelHeaderCell.swift in Sources */,
+				A2BE2B3A1C81226C00ED71E4 /* TopRoomCell.swift in Sources */,
 				A288F7CF1C78609700DF2847 /* UserMessageCell.swift in Sources */,
 				A288F7B11C78592900DF2847 /* User.swift in Sources */,
 				A288F7BB1C785C4500DF2847 /* TextToEnum-Extension.swift in Sources */,

@@ -2,82 +2,91 @@ import UIKit
 import AVFoundation
 
 class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
-   
-   var captureSession:AVCaptureSession?
-   var videoPreviewLayer:AVCaptureVideoPreviewLayer?
-   var qrCodeFrameView:UIView?
-   var passcodeView = true
-   
-   @IBOutlet weak var scanViewWrapper: UIView!
-   @IBOutlet weak var joinViewWrapper: UIView!
-   @IBOutlet weak var passcodeLabel: UITextField!
-   
-   
-   @IBAction func onSwitchPressed(sender: UIBarButtonItem) {
-      if passcodeView == true {
-         startScan()
-         passcodeView = false
-      } else {
-         stopScan()
-         passcodeView = true
-      }
-   }
+    
+    var captureSession:AVCaptureSession?
+    var videoPreviewLayer:AVCaptureVideoPreviewLayer?
+    var qrCodeFrameView:UIView?
+    var passcodeView = true
+    
+    @IBOutlet weak var scanViewWrapper: UIView!
+    @IBOutlet weak var joinViewWrapper: UIView!
+    @IBOutlet weak var passcodeLabel: UITextField!
+    @IBOutlet weak var passcodeLabelWrapper: UIView!
+    @IBOutlet weak var joinButtonOutlet: UIButton!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let cornerRadius = CGFloat(5)
+        passcodeLabelWrapper.layer.cornerRadius = cornerRadius
+        joinButtonOutlet.layer.cornerRadius = cornerRadius
+    }
+    
+    @IBAction func onSwitchPressed(sender: UIBarButtonItem) {
+        if passcodeView == true {
+            startScan()
+            passcodeView = false
+        } else {
+            stopScan()
+            passcodeView = true
+        }
+    }
     @IBAction func onJoinButtonPressed(sender: UIButton) {
         checkForRoomWithEntryKey(passcodeLabel.text!)
     }
-   
-   func startScan() {
-      // Get an instance of the AVCaptureDevice class to initialize a device object and provide the video
-      // as the media type parameter.
-      let captureDevice = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
-      
-      do {
-         let input = try AVCaptureDeviceInput(device: captureDevice)
-         
-         // Initialize the captureSession object.
-         captureSession = AVCaptureSession()
-         // Set the input device on the capture session.
-         captureSession?.addInput(input as AVCaptureInput)
-         
-      } catch let error as NSError {
-         print(error.localizedDescription)
-      }
-      
-      let captureMetadataOutput = AVCaptureMetadataOutput()
-      captureSession?.addOutput(captureMetadataOutput)
-      
-      // Set delegate and use the default dispatch queue to execute the call back
-      captureMetadataOutput.setMetadataObjectsDelegate(self, queue: dispatch_get_main_queue())
-      captureMetadataOutput.metadataObjectTypes = [AVMetadataObjectTypeQRCode]
-      
-      // Initialize the video preview layer and add it as a sublayer to the viewPreview view's layer.
-      videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-      videoPreviewLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
-      videoPreviewLayer?.frame = view.layer.bounds
-      scanViewWrapper.layer.addSublayer(videoPreviewLayer!)
-      
-      // Hide scanviewwrapper
-      scanViewWrapper.hidden = false
-      // Show joinviewwrapper
-      joinViewWrapper.hidden = true
-      
-      // Start video capture.
-      captureSession?.startRunning()
-      
-      // Initialize QR Code Frame to highlight the QR code
-      qrCodeFrameView = UIView()
-      qrCodeFrameView?.layer.borderColor = UIColor.greenColor().CGColor
-      qrCodeFrameView?.layer.borderWidth = 2
-      view.addSubview(qrCodeFrameView!)
-      view.bringSubviewToFront(qrCodeFrameView!)
-   }
-   
-   func stopScan() {
-      captureSession?.stopRunning()
-      joinViewWrapper.hidden = false
-      scanViewWrapper.hidden = true
-   }
-   
+    
+    func startScan() {
+        // Get an instance of the AVCaptureDevice class to initialize a device object and provide the video
+        // as the media type parameter.
+        let captureDevice = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
+        
+        do {
+            let input = try AVCaptureDeviceInput(device: captureDevice)
+            
+            // Initialize the captureSession object.
+            captureSession = AVCaptureSession()
+            // Set the input device on the capture session.
+            captureSession?.addInput(input as AVCaptureInput)
+            
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
+        
+        let captureMetadataOutput = AVCaptureMetadataOutput()
+        captureSession?.addOutput(captureMetadataOutput)
+        
+        // Set delegate and use the default dispatch queue to execute the call back
+        captureMetadataOutput.setMetadataObjectsDelegate(self, queue: dispatch_get_main_queue())
+        captureMetadataOutput.metadataObjectTypes = [AVMetadataObjectTypeQRCode]
+        
+        // Initialize the video preview layer and add it as a sublayer to the viewPreview view's layer.
+        videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+        videoPreviewLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
+        videoPreviewLayer?.frame = view.layer.bounds
+        scanViewWrapper.layer.addSublayer(videoPreviewLayer!)
+        
+        // Hide scanviewwrapper
+        scanViewWrapper.hidden = false
+        // Show joinviewwrapper
+        joinViewWrapper.hidden = true
+        
+        // Start video capture.
+        captureSession?.startRunning()
+        
+        // Initialize QR Code Frame to highlight the QR code
+        qrCodeFrameView = UIView()
+        qrCodeFrameView?.layer.borderColor = UIColor.greenColor().CGColor
+        qrCodeFrameView?.layer.borderWidth = 2
+        view.addSubview(qrCodeFrameView!)
+        view.bringSubviewToFront(qrCodeFrameView!)
+    }
+    
+    func stopScan() {
+        captureSession?.stopRunning()
+        joinViewWrapper.hidden = false
+        scanViewWrapper.hidden = true
+    }
+    
     func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!) {
         
         // Check if the metadataObjects array is not nil and it contains at least one object.
@@ -100,39 +109,39 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
             }
         }
     }
-   
-   func checkForRoomWithEntryKey(key: String) {
-      FirebaseManager.manager.getObjectsByChildValue(Room(), childProperty: "entryKey", childValue: key) { rooms in
-         guard let room = rooms?[0] else { return }
-         
-         FirebaseManager.manager.getChildrenForParent(Channel(), parent: room) { channels in
-            guard let channels = channels else { return }
-            room.channels = channels
-            self.performSegueWithSegueIdentifier(.SegueToMessaging, sender: room)
-         }
-      }
-   }
-   
-   func checkForRoomWithUID(uid: String) {
-      FirebaseManager.manager.getObjectForID(Room(), uid: uid) { room in
-         guard let room = room else { return }
-         
-         FirebaseManager.manager.getChildrenForParent(Channel(), parent: room) { channels in
-            guard let channels = channels else { return }
-            room.channels = channels
-            self.performSegueWithSegueIdentifier(.SegueToMessaging, sender: room)
-         }
-      }
-   }
-   
-   
-   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-      if segue.identifier == SegueIdentifier.SegueToMessaging.rawValue {
-         guard let nvc = segue.destinationViewController as? MessagingNavigationViewController else { return }
-         guard let mvc = nvc.topViewController as? MessagingViewController else { return }
-         guard let room = sender as? Room else { return }
-         mvc.room = room
-         mvc.currentChannel = room.channels[0]
-      }
-   }
+    
+    func checkForRoomWithEntryKey(key: String) {
+        FirebaseManager.manager.getObjectsByChildValue(Room(), childProperty: "entryKey", childValue: key) { rooms in
+            guard let room = rooms?[0] else { return }
+            
+            FirebaseManager.manager.getChildrenForParent(Channel(), parent: room) { channels in
+                guard let channels = channels else { return }
+                room.channels = channels
+                self.performSegueWithSegueIdentifier(.SegueToMessaging, sender: room)
+            }
+        }
+    }
+    
+    func checkForRoomWithUID(uid: String) {
+        FirebaseManager.manager.getObjectForID(Room(), uid: uid) { room in
+            guard let room = room else { return }
+            
+            FirebaseManager.manager.getChildrenForParent(Channel(), parent: room) { channels in
+                guard let channels = channels else { return }
+                room.channels = channels
+                self.performSegueWithSegueIdentifier(.SegueToMessaging, sender: room)
+            }
+        }
+    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == SegueIdentifier.SegueToMessaging.rawValue {
+            guard let nvc = segue.destinationViewController as? MessagingNavigationViewController else { return }
+            guard let mvc = nvc.topViewController as? MessagingViewController else { return }
+            guard let room = sender as? Room else { return }
+            mvc.room = room
+            mvc.currentChannel = room.channels[0]
+        }
+    }
 }
