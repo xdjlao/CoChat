@@ -12,6 +12,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Firebase.defaultConfig().persistenceEnabled = true
     }
     
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         FirebaseManager.manager.ref.observeAuthEventWithBlock { authData in
@@ -23,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //      FirebaseManager.manager.ref.unauth()
         return true
     }
+    
     
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
         guard let host = url.host else { return false }
@@ -52,9 +54,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
+    
     func applicationDidBecomeActive(application: UIApplication) {
         FBSDKAppEvents.activateApp()
     }
-    
 }
-

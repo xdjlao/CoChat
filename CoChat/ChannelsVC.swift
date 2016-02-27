@@ -21,16 +21,14 @@ class ChannelsVC: UIViewController {
     var channelContent:[String: [String]] = [
         "basicContent":[
             "Name Of Channel",
-            "Description Of Channel"],
+            ],
         
         "advancedContent":["Advanced Settings",
-            "Room Passcode",
-            "Privacy",
-            "Embed Channels"]
+            "Room Entry Key",
+            "Public"]
     ]
     
     var nameOfChannel:String?
-    var descriptionOfChannel:String?
     var channelPassCode:String?
     var createChannels = false
     var privateRoom = 0
@@ -121,10 +119,6 @@ extension ChannelsVC: UITableViewDelegate, UITableViewDataSource {
             informationCell.title.text = basicContent![indexPath.row]
             informationCell.type = .NameOfRoom
             return informationCell
-        case (2,1):
-            informationCell.title.text = basicContent![indexPath.row]
-            informationCell.type = .DescriptionOfRoom
-            return informationCell
         case (3,0):
             informationCell.icon.image = UIImage(named: "Settings")
             informationCell.title.text = advancedContent![indexPath.row]
@@ -213,11 +207,11 @@ extension ChannelsVC: ChannelHeaderCellDelegate {
     
     func createChannel(sender: AnyObject?) {
         toggleCompressedView = true
-        guard let name = nameOfChannel, subTitle = descriptionOfChannel else {return}
+        guard let name = nameOfChannel else {return}
         if channelPassCode == nil {
             channelPassCode = "123"
         }
-        let newChannel = Channel(withTempTitle: name, tempSubtitle: subTitle, tempPrivateChannel: privateRoom, tempPassword: channelPassCode!, roomName: "dummy")
+        let newChannel = Channel(withTempTitle: name, tempPrivateChannel: privateRoom, tempPassword: channelPassCode!, roomName: "dummy")
         channels?.append(newChannel)
         delegate?.channelsVC!(self, didCreateChannel: newChannel)
         // add one more channel
@@ -232,8 +226,6 @@ extension ChannelsVC: HostReusableCellDelegate {
         switch cell.type {
         case .NameOfRoom:
             nameOfChannel = valueDidChange as? String
-        case .DescriptionOfRoom:
-            descriptionOfChannel = valueDidChange as? String
         case .PasscodeOfRoom:
             channelPassCode = valueDidChange as? String
         case .Privacy:
@@ -249,7 +241,7 @@ extension ChannelsVC: HostReusableCellDelegate {
         default:
             assertionFailure()
         }
-        if nameOfChannel != nil && descriptionOfChannel != nil {
+        if nameOfChannel != nil {
             addNewCell.createButton.enabled = true
         }
     }

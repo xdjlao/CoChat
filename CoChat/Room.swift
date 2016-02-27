@@ -4,7 +4,6 @@ import Firebase
 class Room: FirebaseType {
    var uid = "none"
    let title: String
-   let subtitle: String
    
    var privateRoom: Int
    var password: String
@@ -14,13 +13,12 @@ class Room: FirebaseType {
    let host: User
    
    var value: AnyObject {
-      return ["title": title, "subtitle": subtitle, "hostName": host.name, "hostUID": host.uid, "privateRoom": privateRoom, "entryKey": password]
+      return ["title": title, "hostName": host.name, "hostUID": host.uid, "privateRoom": privateRoom, "entryKey": password]
    }
    let type = Type.Room
    
-   private init(title: String, subtitle: String, host: User, privateRoom: Int, password: String) {
+   private init(title: String, host: User, privateRoom: Int, password: String) {
       self.title = title
-      self.subtitle = subtitle
       self.host = host
       
       self.privateRoom = privateRoom
@@ -29,11 +27,11 @@ class Room: FirebaseType {
       self.channels = [Channel]()
    }
    
-   static func createNewRoomWith(title: String, subtitle: String, host: User, privateRoom: Int, password: String, withCompletionHandler handler: ((new: Room) -> ())?) {
-      let room = Room(title: title, subtitle: subtitle, host: host, privateRoom: privateRoom, password: password)
+   static func createNewRoomWith(title: String, host: User, privateRoom: Int, password: String, withCompletionHandler handler: ((new: Room) -> ())?) {
+      let room = Room(title: title, host: host, privateRoom: privateRoom, password: password)
       room.createNew { new in
          guard let new = new as? Room else { return }
-         let main = Channel(title: "Main", subtitle: "Talk about things here.", privateChannel: 0, password: "none", room: new)
+         let main = Channel(title: "Main", privateChannel: 0, password: "none", room: new)
          room.channels.append(main)
          handler?(new: room)
       }
@@ -42,7 +40,6 @@ class Room: FirebaseType {
    required init(fromDictionary dictionary: [NSObject: AnyObject], andUID uid: String) {
       self.uid = uid
       self.title = dictionary["title"] as? String ?? "failed to get title"
-      self.subtitle = dictionary["subtitle"] as? String ?? "failed to get subtitle"
       
       self.privateRoom = dictionary["privateRoom"] as? Int ?? 0
       self.password = dictionary["entryKey"] as? String ?? "no password"
@@ -55,11 +52,10 @@ class Room: FirebaseType {
       self.host = User(name: hostName, profileImageURL: "none", uid: hostUID)
    }
    
-   init(withDummyTitle dummyTitle: String, dummySubtitle: String, dummyUID: String) {
+   init(withDummyTitle dummyTitle: String, dummyUID: String) {
       uid = dummyUID
       title = dummyTitle
-      subtitle = dummySubtitle
-      
+    
       privateRoom = 0
       password = "none"
       
@@ -71,7 +67,6 @@ class Room: FirebaseType {
       let none = "none"
       self.uid = none
       self.title = none
-      self.subtitle = none
       self.privateRoom = 0
       self.password = none
       self.channels = [Channel]()

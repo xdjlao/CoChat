@@ -16,7 +16,6 @@ import UIKit
 
 enum HostCellType {
     case NameOfRoom
-    case DescriptionOfRoom
     case PasscodeOfRoom
     case EnableChannels
     case Privacy
@@ -90,9 +89,6 @@ class HostReusableCell: UITableViewCell, UITextFieldDelegate {
         case (0,1):
             title.text = basicContent![indexPath.row]
             type = .NameOfRoom
-        case (0,2):
-            title.text = basicContent![indexPath.row]
-            type = .DescriptionOfRoom
         case (1,1):
             title.text = advancedContent![indexPath.row]
             type = .PasscodeOfRoom

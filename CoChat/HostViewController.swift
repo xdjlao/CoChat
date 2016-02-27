@@ -5,17 +5,15 @@ class HostViewController: UIViewController, ChannelsVCDelegate {
     
     var cellContent:[String: [String]] = [
         "basicContent":["Create A Room",
-            "Name Of Room",
-            "Description Of Room"],
+            "Name Of Room"],
         
         "advancedContent":["Advanced Settings",
-            "Room Passcode",
-            "Privacy",
+            "Room Entry Key",
+            "Public",
             "Embed Channels"]
     ]
     
     var nameOfRoom:String?
-    var descriptionOfRoom:String?
     var roomPassCode:String?
     var createChannels = false
     var privateRoom = false
@@ -44,12 +42,12 @@ class HostViewController: UIViewController, ChannelsVCDelegate {
         if !checkIfLoggedIn() {
             return
         }
-        guard let name = nameOfRoom, description = descriptionOfRoom else { return }
+        guard let name = nameOfRoom else { return }
         let entryKey = roomPassCode ?? "123"
         let user = FirebaseManager.manager.user
         let privateRoomAsInt = convertBooltoInt(privateRoom)
         
-        Room.createNewRoomWith(name, subtitle: description, host: user, privateRoom: privateRoomAsInt, password: entryKey) { newRoom in
+        Room.createNewRoomWith(name, host: user, privateRoom: privateRoomAsInt, password: entryKey) { newRoom in
             self.performSegueWithSegueIdentifier(SegueIdentifier.SegueToMessaging, sender: newRoom)
         
         }
@@ -63,9 +61,8 @@ class HostViewController: UIViewController, ChannelsVCDelegate {
             mvc.room = room
             
             room.channels = channels.map { channel -> Channel in
-                return Channel(title: channel.title, subtitle: channel.subtitle, privateChannel: channel.privateChannel, password: channel.password, room: room)
+                return Channel(title: channel.title, privateChannel: channel.privateChannel, password: channel.password, room: room)
             }
-            
             mvc.currentChannel = room.channels[0]
             return
             
@@ -100,15 +97,21 @@ extension HostViewController: HostReusableCellDelegate {
             nameOfRoom = valueDidChange as? String
             enableSegue = true
             navigationItem.rightBarButtonItem?.enabled = true
-        case .DescriptionOfRoom:
-            descriptionOfRoom = valueDidChange as? String
         case .PasscodeOfRoom:
             roomPassCode = valueDidChange as? String
         case .Privacy:
-            if let boolValue = valueDidChange as? Bool {
-                privateRoom = boolValue
-            }
+            if let aSwitch = valueDidChange as? UISwitch {
+                privateRoom = aSwitch.on
+                guard let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 2, inSection: 1)) as? HostReusableCell else {return}
+                switch privateRoom {
+                case false:
+                cell.title.text = "Private"
+                default:
+                cell.title.text = "Public"
+                }
+                
             print("switch was tapped inside HostVC")
+            }
         default:
             assertionFailure()
         }
