@@ -37,27 +37,6 @@ extension MenuChannelViewController : UITableViewDataSource, UITableViewDelegate
         navigationController?.popViewControllerAnimated(true)
     }
     
-    func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
-        launchAlertController(indexPath)
-    }
-    
-    func launchAlertController(indexPath:NSIndexPath){
-        let channel = channels[indexPath.row]
-        
-        let channelDescriptionAlertController = UIAlertController(title: channel.title, message: "\(channel.subtitle)\nPassCode:\(channel.password)" , preferredStyle: UIAlertControllerStyle.Alert)
-        
-        let cancel = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil)
-        
-        let goToChannel = UIAlertAction(title: "Go To Channel", style: UIAlertActionStyle.Destructive) {
-            (UIAlertAction) -> Void in
-            self.delegate?.menuChannelViewController!(self, didSelectChannel: channel)
-            self.navigationController?.popViewControllerAnimated(true)
-        }
-        channelDescriptionAlertController.addAction(cancel)
-        channelDescriptionAlertController.addAction(goToChannel)
-        presentViewController(channelDescriptionAlertController, animated: true, completion: nil)
-    }
-    
     func addChannel() {
         print("add Channel Tapped")
         performSegueWithSegueIdentifier(SegueIdentifier.SegueToChannelsVC, sender: self)

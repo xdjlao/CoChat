@@ -47,7 +47,7 @@ class Message: FirebaseType {
         
         let channelUID = dictionary["channelUID"] as? String ?? "failed to get channelUID"
         
-        self.channel = Channel(withDummyTitle: "dummy", dummySubtitle: "dummy", dummyUID: channelUID)
+        self.channel = Channel(withDummyTitle: "dummy", dummyUID: channelUID)
     }
     
     init(withDummyMessageText dummyMessageText: String, dummyTime: NSDate, dummyUID: String) {
@@ -56,7 +56,7 @@ class Message: FirebaseType {
         time = dummyTime
         timeObject = [NSObject: AnyObject]()
         poster = User(withDummyName: "dummy", dummyProfileImageURL: "dummy", dummyUID: "dummy")
-        channel = Channel(withDummyTitle: "dummy", dummySubtitle: "dummy", dummyUID: "dummy")
+        channel = Channel(withDummyTitle: "dummy", dummyUID: "dummy")
     }
     
     init() {
