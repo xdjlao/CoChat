@@ -38,7 +38,6 @@ extension MenuChannelViewController : UITableViewDataSource, UITableViewDelegate
     }
     
     func addChannel() {
-        print("add Channel Tapped")
         performSegueWithSegueIdentifier(SegueIdentifier.SegueToChannelsVC, sender: self)
     }
     

@@ -16,32 +16,87 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
    }
    @IBOutlet weak var channelButtonOutlet: UIButton!
    @IBOutlet weak var sendButtonOutlet: UIButton!
-//   @IBOutlet weak var buttonToTableViewConstraint: NSLayoutConstraint!
-//   @IBOutlet weak var buttonsContainer: UIView!
-    
-   var messages = [Message]() {
+   //   @IBOutlet weak var buttonToTableViewConstraint: NSLayoutConstraint!
+   //   @IBOutlet weak var buttonsContainer: UIView!
+   
+   
+   var messageFirebase: FirebaseArray<Message>! {
       didSet {
-      messages.sortInPlace { first, second in
+      self.tableView.reloadData()
+      }
+   }
+   
+   func setUpMessageFirebase() {
+      let firebaseArray = FirebaseArray<Message>()
+      firebaseArray.sortFunction = { first, second in
          return first.time.compare(second.time) == NSComparisonResult.OrderedAscending
       }
+      firebaseArray.ref = FirebaseManager.manager.ref.childByAppendingPath("Message")
+      firebaseArray.queryOrderedByChild = "channelUID"
+      firebaseArray.queryEqualToValue = self.currentChannel.uid
+      firebaseArray.eventType = .ChildAdded
+      firebaseArray.queryLimitedToLast = 10
+      firebaseArray.completionHandlerForValue = { number in
+         self.tableView.reloadData()
       }
+      firebaseArray.completionHandlerForChildAdded = {
+         let indexPath = NSIndexPath(forRow: firebaseArray.items.count - 1, inSection: 0)
+         self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .None)
+         self.tableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Bottom, animated: false)
+      }
+      
+      messageFirebase = firebaseArray
    }
    
    let manager = FirebaseManager.manager
    let ref = FirebaseManager.manager.ref
-   var user: User?
+   var user: User? {
+      didSet {
+      if currentChannel != nil {
+         setUpMessageFirebase()
+         doOperationQueueing()
+      }
+      }
+   }
    var room: Room! {
       didSet {
       navigationItem.title = room.title
       }
    }
+   
+   func doOperationQueueing() {
+      let operationQueue = NSOperationQueue()
+      operationQueue.suspended = true
+      
+      
+      let fetchFirst = FetchOperation()
+      fetchFirst.operationBlock = {
+         self.messageFirebase.onceQueryForValue()
+         print("fetchFirst done")
+      }
+      
+      let listen = FetchOperation()
+      listen.operationBlock = {
+         self.messageFirebase.startListener(forLast: 1)
+         print("listen done")
+      }
+      
+      listen.addDependency(fetchFirst)
+      
+      operationQueue.addOperation(fetchFirst)
+      operationQueue.addOperation(listen)
+      operationQueue.suspended = false
+   }
+   
    var currentChannel:Channel! {
       didSet {
+      if user != nil {
+         setUpMessageFirebase()
+         doOperationQueueing()
+      }
       guard let roomLabel = textView else { return }
       roomLabel.text = room.title + " - " + currentChannel.title
       }
-    
-    
    }
    
    func addRoomToRecent() {
@@ -59,29 +114,12 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
       textView.autocorrectionType = UITextAutocorrectionType.Yes
       uiSetup()
    }
-
+   
    
    override func viewDidAppear(animated: Bool) {
       super.viewDidAppear(animated)
       user = manager.user
-      Type.Message.firebase().removeAllObservers()
-      messages.removeAll()
       
-      tableView.reloadData()
-      currentListener = listenForNewMessagesForCurrentChannel()
-   }
-   
-   var currentListener: UInt?
-   
-   func listenForNewMessagesForCurrentChannel() -> UInt {
-      return manager.listenForChildForParent(Message(), parent: currentChannel) { child in
-         NSOperationQueue.mainQueue().addOperationWithBlock({
-            self.messages.append(child)
-            let indexPath = NSIndexPath(forRow: self.messages.count - 1, inSection: 0)
-            self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .None)
-            self.tableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Bottom, animated: false)
-         })
-      }
    }
    
    var startUID: String!
@@ -94,13 +132,13 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
          guard let user = user else { return }
          Message.createNewMessageWith(textView.text, timeObject: FirebaseServerValue.timestamp(), poster: user, channel: currentChannel, withCompletionHandler: nil)
          textView.text = ""
-        self.tableView.scrollToLastMessage(false)
+         self.tableView.scrollToLastMessage(false)
       }
    }
    
-//   @IBAction func onBrowseTapped(sender: UIBarButtonItem) {
-//      performSegueWithIdentifier("", sender: nil)
-//   }
+   //   @IBAction func onBrowseTapped(sender: UIBarButtonItem) {
+   //      performSegueWithIdentifier("", sender: nil)
+   //   }
    
    func menuChannelViewController(menuChannelViewController: MenuChannelViewController, didSelectChannel channel: AnyObject) {
       guard let selectedChannel = channel as? Channel else { return }
@@ -108,7 +146,7 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
    }
    
    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-
+      
       if segue.identifier == SegueIdentifier.SegueToMenuChannelsVC.rawValue {
          //let nav = segue.destinationViewController as! UINavigationController
          guard let mcvc = segue.destinationViewController as? MenuChannelViewController else { return }

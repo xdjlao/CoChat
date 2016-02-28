@@ -57,7 +57,6 @@ class HostReusableCell: UITableViewCell, UITextFieldDelegate {
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         let finalString = textField.text! + string
         delegate?.hostReusableCell(self, valueDidChange: finalString)
-        print(finalString)
         return true
     }
     

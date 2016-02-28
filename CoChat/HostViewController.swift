@@ -109,8 +109,6 @@ extension HostViewController: HostReusableCellDelegate {
                 default:
                 cell.title.text = "Public"
                 }
-                
-            print("switch was tapped inside HostVC")
             }
         default:
             assertionFailure()
@@ -168,7 +166,6 @@ extension HostViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print(indexPath)
         view.endEditing(true)
         let index = NSIndexSet(index: 1)
         switch (indexPath.section, indexPath.row){

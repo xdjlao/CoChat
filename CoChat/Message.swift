@@ -35,7 +35,6 @@ class Message: FirebaseType {
     required init(fromDictionary dictionary: [NSObject: AnyObject], andUID uid: String) {
         self.uid = uid
         self.messageText = dictionary["messageText"] as? String ?? "failed to get message text"
-        print(dictionary["timeObject"])
         self.time = NSDate(timeIntervalSince1970: dictionary["timeObject"] as? NSTimeInterval ?? NSTimeInterval())
         self.timeObject = [NSObject: AnyObject]()
         

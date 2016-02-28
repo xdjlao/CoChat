@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             print("facebook ref observeAuthEventWithBlock")
         }
-        //      FirebaseManager.manager.ref.unauth()
+        FirebaseManager.manager.ref.unauth()
         return true
     }
     

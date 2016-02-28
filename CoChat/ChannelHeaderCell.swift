@@ -25,12 +25,9 @@ class ChannelHeaderCell: UITableViewCell {
     
     @IBAction func addNewChannelWasTapped(sender: UIButton) {
       delegate?.addNewChannel(sender)
-        print("addNewChannelTappedinxxib")
     }
     
     @IBAction func createChannelWasTapped(sender: UIButton) {
         delegate?.createChannel(sender)
-        print("createNewChannelTappedinXib")
-
     }
 }

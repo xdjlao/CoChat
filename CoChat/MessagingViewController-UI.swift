@@ -93,11 +93,10 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
     func textViewDidChange(textView: UITextView) {
         UIView.animateWithDuration(0.2, animations: { () -> Void in
             let height = self.textView.sizeThatFits(CGSizeMake(self.textView.frame.size.width, CGFloat.max)).height
-            print(height)
             self.textView.frame.size.height = height
             }) { (Bool) -> Void in
-                if self.messages.count > 0 {
-                    self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: self.messages.count - 1, inSection: 0), atScrollPosition: .Bottom, animated: true)
+                if self.messageFirebase.items.count > 0 {
+                    self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: self.messageFirebase.items.count - 1, inSection: 0), atScrollPosition: .Bottom, animated: true)
                 }
         }
         
@@ -105,7 +104,7 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
     
     //MARK - TableView Delegate Methods
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let currentMessage = messages[indexPath.row]
+        let currentMessage = messageFirebase.items[indexPath.row]
         if currentMessage.poster.name == user?.name {
             let cell = tableView.dequeueReusableCellWithIdentifier("UserMessageCell") as! UserMessageCell
             cell.tag = indexPath.row
@@ -135,14 +134,11 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
     func generalMessageCellWillDisplay(generalCell: GeneralMessageCell, indexPath: NSIndexPath) {
         generalCell.profileImageView.alpha = 0.0
         generalCell.messageLabel.alpha = 0.0
-        print("before animation \(generalCell.profileImageView.alpha)")
         UIView.animateWithDuration(1.2, delay: 0.0, options: [.CurveEaseInOut], animations: { () -> Void in
             generalCell.profileImageView.alpha = 1.0
             generalCell.messageLabel.alpha = 1.0
-            print("after animation \(generalCell.profileImageView.alpha)")
-            }, completion: { (Bool) -> Void in
-                print("General Message Was Displayed")
-        })
+            }, completion: { bool in
+         })
     }
     
     func userMessageCellWillDisplay(userCell: UserMessageCell, indexPath: NSIndexPath) {
@@ -151,15 +147,15 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
         UIView.animateWithDuration(1.0, delay: 0.0, options:[.CurveEaseInOut], animations: { () -> Void in
             userCell.profileImageView.alpha = 1.0
             userCell.messageLabel.alpha = 1.0
-            }, completion: { (Bool) -> Void in
-                print("User Message Was Displayed")
+            }, completion: { bool in
+               
                 //            self.tableView.scrollToLastMessage(true)
         })
     }
     
     
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        if indexPath.row == messages.count - 1 {
+        if indexPath.row == messageFirebase.items.count - 1 {
             if let generalCell = cell as? GeneralMessageCell {
                 generalMessageCellWillDisplay(generalCell, indexPath: indexPath)
             }
@@ -190,7 +186,7 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return messages.count
+        return messageFirebase?.items.count ?? 0
     }
     
     

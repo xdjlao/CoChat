@@ -72,9 +72,6 @@ class FirebaseManager {
    }
    
    func getObjectsByChildValue<T: FirebaseType>(type: T, childProperty: String, childValue: String, withMainQueueCompletionHandler completionHandler: ((children: [T]?) -> ()) )  {
-      print(type.type.firebase())
-      print(childProperty)
-      print(childValue)
       type.type.firebase().queryOrderedByChild(childProperty).queryEqualToValue(childValue).observeSingleEventOfType(.Value, withBlock: { snapshot in
          let children = T.arrayFromSnapshot(snapshot)
          NSOperationQueue.mainQueue().addOperationWithBlock{
