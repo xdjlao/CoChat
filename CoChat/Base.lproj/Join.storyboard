@@ -147,10 +147,10 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="joinButtonOutlet" destination="3gq-Dg-vqr" id="wft-rt-EMz"/>
+                        <outlet property="joinButtonOutlet" destination="3gq-Dg-vqr" id="Ekq-Ue-dHU"/>
                         <outlet property="joinViewWrapper" destination="hhe-WX-2Kj" id="7lP-8H-wjP"/>
                         <outlet property="passcodeLabel" destination="EOh-Xm-NHB" id="yxO-p5-XYH"/>
-                        <outlet property="passcodeLabelWrapper" destination="wj8-am-JQy" id="XwC-Q1-ss5"/>
+                        <outlet property="passcodeLabelWrapper" destination="wj8-am-JQy" id="u27-zw-Cr1"/>
                         <outlet property="scanViewWrapper" destination="ISe-6M-65O" id="AhL-7w-tK4"/>
                         <segue destination="TDq-ST-eG5" kind="presentation" identifier="SegueToMessaging" id="KRh-Ie-iBw"/>
                     </connections>
