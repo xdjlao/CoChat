@@ -17,6 +17,16 @@
 		91E9B9E41C7BCD33006F4CF0 /* Host.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91E9B9E01C7BCD33006F4CF0 /* Host.storyboard */; };
 		91E9B9E61C7BCFC4006F4CF0 /* Channels.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91E9B9E51C7BCFC4006F4CF0 /* Channels.storyboard */; };
 		91E9B9E81C7BD0F1006F4CF0 /* ChannelsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E9B9E71C7BD0F1006F4CF0 /* ChannelsVC.swift */; };
+		91F5258A1C825845009C9BF1 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F525891C825845009C9BF1 /* UIColor+Extension.swift */; };
+		91F5259E1C82616B009C9BF1 /* Lato-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91F5258C1C82616B009C9BF1 /* Lato-Heavy.ttf */; };
+		91F525A01C82616B009C9BF1 /* Lato-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91F5258E1C82616B009C9BF1 /* Lato-Medium.ttf */; };
+		91F525A21C82616B009C9BF1 /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91F525901C82616B009C9BF1 /* Lato-Thin.ttf */; };
+		91F525A41C82616B009C9BF1 /* Lato-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91F525921C82616B009C9BF1 /* Lato-Semibold.ttf */; };
+		91F525A61C82616B009C9BF1 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91F525941C82616B009C9BF1 /* Lato-Black.ttf */; };
+		91F525A81C82616B009C9BF1 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91F525961C82616B009C9BF1 /* Lato-Bold.ttf */; };
+		91F525AA1C82616B009C9BF1 /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91F525981C82616B009C9BF1 /* Lato-Hairline.ttf */; };
+		91F525AD1C82616B009C9BF1 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91F5259B1C82616B009C9BF1 /* Lato-Light.ttf */; };
+		91F525AF1C82616B009C9BF1 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91F5259D1C82616B009C9BF1 /* Lato-Regular.ttf */; };
 		A288F7731C7840E600DF2847 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A288F7721C7840E600DF2847 /* AppDelegate.swift */; };
 		A288F7781C7840E600DF2847 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A288F7761C7840E600DF2847 /* Main.storyboard */; };
 		A288F77A1C7840E600DF2847 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A288F7791C7840E600DF2847 /* Assets.xcassets */; };
@@ -34,7 +44,7 @@
 		A288F7BB1C785C4500DF2847 /* TextToEnum-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A288F7BA1C785C4500DF2847 /* TextToEnum-Extension.swift */; };
 		A288F7BD1C785CAE00DF2847 /* MessagingViewController-UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A288F7BC1C785CAE00DF2847 /* MessagingViewController-UI.swift */; };
 		A288F7C61C785F4400DF2847 /* CheckForLoggedIn-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A288F7C51C785F4400DF2847 /* CheckForLoggedIn-Extension.swift */; };
-		A288F7C81C785F6800DF2847 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A288F7C71C785F6800DF2847 /* UIColor-Extension.swift */; };
+		A288F7C81C785F6800DF2847 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A288F7C71C785F6800DF2847 /* Theme.swift */; };
 		A288F7CA1C785FAE00DF2847 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A288F7C91C785FAE00DF2847 /* LoginViewController.swift */; };
 		A288F7CF1C78609700DF2847 /* UserMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A288F7CE1C78609700DF2847 /* UserMessageCell.swift */; };
 		A288F7D11C7860B500DF2847 /* GeneralMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A288F7D01C7860B500DF2847 /* GeneralMessageCell.swift */; };
@@ -73,6 +83,16 @@
 		91E9B9E01C7BCD33006F4CF0 /* Host.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Host.storyboard; sourceTree = "<group>"; };
 		91E9B9E51C7BCFC4006F4CF0 /* Channels.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Channels.storyboard; sourceTree = "<group>"; };
 		91E9B9E71C7BD0F1006F4CF0 /* ChannelsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelsVC.swift; sourceTree = "<group>"; };
+		91F525891C825845009C9BF1 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		91F5258C1C82616B009C9BF1 /* Lato-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Heavy.ttf"; sourceTree = "<group>"; };
+		91F5258E1C82616B009C9BF1 /* Lato-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Medium.ttf"; sourceTree = "<group>"; };
+		91F525901C82616B009C9BF1 /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Thin.ttf"; sourceTree = "<group>"; };
+		91F525921C82616B009C9BF1 /* Lato-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Semibold.ttf"; sourceTree = "<group>"; };
+		91F525941C82616B009C9BF1 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
+		91F525961C82616B009C9BF1 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		91F525981C82616B009C9BF1 /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Hairline.ttf"; sourceTree = "<group>"; };
+		91F5259B1C82616B009C9BF1 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
+		91F5259D1C82616B009C9BF1 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		A288F76F1C7840E600DF2847 /* CoChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A288F7721C7840E600DF2847 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A288F7771C7840E600DF2847 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -92,7 +112,7 @@
 		A288F7BA1C785C4500DF2847 /* TextToEnum-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TextToEnum-Extension.swift"; sourceTree = "<group>"; };
 		A288F7BC1C785CAE00DF2847 /* MessagingViewController-UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MessagingViewController-UI.swift"; sourceTree = "<group>"; };
 		A288F7C51C785F4400DF2847 /* CheckForLoggedIn-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CheckForLoggedIn-Extension.swift"; sourceTree = "<group>"; };
-		A288F7C71C785F6800DF2847 /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
+		A288F7C71C785F6800DF2847 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		A288F7C91C785FAE00DF2847 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A288F7CE1C78609700DF2847 /* UserMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMessageCell.swift; sourceTree = "<group>"; };
 		A288F7D01C7860B500DF2847 /* GeneralMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralMessageCell.swift; sourceTree = "<group>"; };
@@ -137,11 +157,29 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		91F5258B1C826144009C9BF1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				91F5258C1C82616B009C9BF1 /* Lato-Heavy.ttf */,
+				91F5258E1C82616B009C9BF1 /* Lato-Medium.ttf */,
+				91F525901C82616B009C9BF1 /* Lato-Thin.ttf */,
+				91F525921C82616B009C9BF1 /* Lato-Semibold.ttf */,
+				91F525941C82616B009C9BF1 /* Lato-Black.ttf */,
+				91F525961C82616B009C9BF1 /* Lato-Bold.ttf */,
+				91F525981C82616B009C9BF1 /* Lato-Hairline.ttf */,
+				91F5259B1C82616B009C9BF1 /* Lato-Light.ttf */,
+				91F5259D1C82616B009C9BF1 /* Lato-Regular.ttf */,
+			);
+			name = Resources;
+			path = CoChat;
+			sourceTree = "<group>";
+		};
 		A288F7661C7840E600DF2847 = {
 			isa = PBXGroup;
 			children = (
 				A288F7711C7840E600DF2847 /* CoChat */,
 				A288F7701C7840E600DF2847 /* Products */,
+				91F5258B1C826144009C9BF1 /* Resources */,
 				021FFAB5348A4F425247DBBC /* Pods */,
 				BA88D8AD8904B9765BBA1CB3 /* Frameworks */,
 			);
@@ -188,7 +226,8 @@
 				A288F7C51C785F4400DF2847 /* CheckForLoggedIn-Extension.swift */,
 				91B18F5F1C7CE71900F20531 /* TableView.swift */,
 				A288F7BA1C785C4500DF2847 /* TextToEnum-Extension.swift */,
-				A288F7C71C785F6800DF2847 /* UIColor-Extension.swift */,
+				A288F7C71C785F6800DF2847 /* Theme.swift */,
+				91F525891C825845009C9BF1 /* UIColor+Extension.swift */,
 			);
 			name = "Extensions & Protocols";
 			sourceTree = "<group>";
@@ -280,10 +319,10 @@
 			isa = PBXGroup;
 			children = (
 				A2BE2B271C7E60AD00ED71E4 /* DismissSegue.swift */,
-				91E9B9DE1C7BCD33006F4CF0 /* HostReusableCell.swift */,
 				A288F7CE1C78609700DF2847 /* UserMessageCell.swift */,
 				A288F7D01C7860B500DF2847 /* GeneralMessageCell.swift */,
 				9195491F1C7E4F9D00C61805 /* ChannelHeaderCell.swift */,
+				91E9B9DE1C7BCD33006F4CF0 /* HostReusableCell.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -333,6 +372,7 @@
 		A2BE2B101C7BC07600ED71E4 /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
+				A2BE2B2D1C7FE0D100ED71E4 /* Host */,
 				A2BE2B1B1C7CE35B00ED71E4 /* Whisper */,
 				A288F7BF1C785EBE00DF2847 /* Join */,
 				A2BE2B191C7CE34E00ED71E4 /* Browse */,
@@ -354,7 +394,6 @@
 		A2BE2B191C7CE34E00ED71E4 /* Browse */ = {
 			isa = PBXGroup;
 			children = (
-				A2BE2B2D1C7FE0D100ED71E4 /* Host */,
 				A288F7A41C7841B600DF2847 /* BrowseViewController.swift */,
 				A2BE2B2B1C7E72A200ED71E4 /* BrowseNavigationViewController.swift */,
 			);
@@ -504,18 +543,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				A288F7D81C7862C700DF2847 /* UserMessageCell.xib in Resources */,
+				91F525A61C82616B009C9BF1 /* Lato-Black.ttf in Resources */,
+				91F525A81C82616B009C9BF1 /* Lato-Bold.ttf in Resources */,
 				A288F77D1C7840E600DF2847 /* LaunchScreen.storyboard in Resources */,
 				91E9B9E61C7BCFC4006F4CF0 /* Channels.storyboard in Resources */,
 				91E9B9E31C7BCD33006F4CF0 /* HostReusableCell.xib in Resources */,
+				91F5259E1C82616B009C9BF1 /* Lato-Heavy.ttf in Resources */,
+				91F525AF1C82616B009C9BF1 /* Lato-Regular.ttf in Resources */,
 				A2BE2B0C1C7B9E1700ED71E4 /* Profile.storyboard in Resources */,
 				A288F7DE1C7873D100DF2847 /* Login.storyboard in Resources */,
 				A288F77A1C7840E600DF2847 /* Assets.xcassets in Resources */,
 				A288F7D61C78612A00DF2847 /* GeneralMessageCell.xib in Resources */,
 				91B18F5E1C7CE02300F20531 /* Messaging.storyboard in Resources */,
+				91F525A41C82616B009C9BF1 /* Lato-Semibold.ttf in Resources */,
 				A2BE2B141C7BCC2500ED71E4 /* Join.storyboard in Resources */,
 				A2BE2B051C79984B00ED71E4 /* Share.storyboard in Resources */,
+				91F525A01C82616B009C9BF1 /* Lato-Medium.ttf in Resources */,
+				91F525AD1C82616B009C9BF1 /* Lato-Light.ttf in Resources */,
+				91F525AA1C82616B009C9BF1 /* Lato-Hairline.ttf in Resources */,
 				A2BE2B201C7CE44E00ED71E4 /* Whisper.storyboard in Resources */,
 				919549221C7E4F9D00C61805 /* ChannelHeaderCell.xib in Resources */,
+				91F525A21C82616B009C9BF1 /* Lato-Thin.ttf in Resources */,
 				91E9B9E41C7BCD33006F4CF0 /* Host.storyboard in Resources */,
 				A288F7781C7840E600DF2847 /* Main.storyboard in Resources */,
 			);
@@ -578,7 +626,7 @@
 			files = (
 				91E9B9E11C7BCD33006F4CF0 /* HostViewController.swift in Sources */,
 				A288F7AF1C78591800DF2847 /* Channel.swift in Sources */,
-				A288F7C81C785F6800DF2847 /* UIColor-Extension.swift in Sources */,
+				A288F7C81C785F6800DF2847 /* Theme.swift in Sources */,
 				D8AE2D1B1C7D2E560002A31D /* DualQueriedType.swift in Sources */,
 				A288F7DC1C78696100DF2847 /* ShareViewController.swift in Sources */,
 				A288F7AB1C78588A00DF2847 /* FirebaseManager.swift in Sources */,
@@ -590,6 +638,7 @@
 				D8AE2D191C7D28F00002A31D /* Whisper.swift in Sources */,
 				A288F7DA1C7867EA00DF2847 /* MenuChannelViewController.swift in Sources */,
 				A288F7B91C785B2D00DF2847 /* MessagingViewController-Data.swift in Sources */,
+				91F5258A1C825845009C9BF1 /* UIColor+Extension.swift in Sources */,
 				A288F7AD1C7858FE00DF2847 /* Room.swift in Sources */,
 				A2BE2B2A1C7E708C00ED71E4 /* MessagingNavigationViewController.swift in Sources */,
 				A2BE2B221C7CE49D00ED71E4 /* WhisperTableViewCell.swift in Sources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="748" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="s0d-QT-e9S">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="555"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="554.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="efc-L1-N1A" id="9RF-g0-Lwk"/>
@@ -36,33 +36,27 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="crp-tk-UTN">
-                                <rect key="frame" x="545" y="560" width="50" height="35"/>
+                                <rect key="frame" x="545" y="559" width="50" height="36"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbG-SN-nti">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
-                                        <state key="normal" title="CH"/>
-                                        <connections>
-                                            <segue destination="J6o-1j-lIo" kind="show" identifier="SegueToMenuChannelsVC" id="GYp-nk-iiG"/>
-                                        </connections>
-                                    </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4LP-hV-lVC">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4LP-hV-lVC">
+                                        <rect key="frame" x="0.0" y="4" width="50" height="30"/>
                                         <state key="normal" title="SD"/>
                                         <connections>
                                             <action selector="sendButton:" destination="efc-L1-N1A" eventType="touchUpInside" id="zqF-dD-yeD"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbG-SN-nti">
+                                        <rect key="frame" x="0.0" y="4" width="50" height="30"/>
+                                        <state key="normal" title="CH"/>
+                                        <connections>
+                                            <segue destination="J6o-1j-lIo" kind="show" identifier="SegueToMenuChannelsVC" id="GYp-nk-iiG"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="rbG-SN-nti" secondAttribute="trailing" id="16M-E1-47T"/>
-                                    <constraint firstItem="rbG-SN-nti" firstAttribute="leading" secondItem="crp-tk-UTN" secondAttribute="leading" id="9Pa-Mk-aSD"/>
-                                    <constraint firstItem="4LP-hV-lVC" firstAttribute="top" secondItem="crp-tk-UTN" secondAttribute="top" id="BZc-ff-a2E"/>
-                                    <constraint firstAttribute="trailing" secondItem="4LP-hV-lVC" secondAttribute="trailing" id="JTH-xL-5Rn"/>
-                                    <constraint firstAttribute="height" constant="35" id="NHg-hj-ktV"/>
-                                    <constraint firstAttribute="width" constant="50" id="T7G-wm-Oe0"/>
-                                    <constraint firstItem="rbG-SN-nti" firstAttribute="top" secondItem="crp-tk-UTN" secondAttribute="top" id="rGN-Pe-I7e"/>
-                                    <constraint firstItem="4LP-hV-lVC" firstAttribute="leading" secondItem="crp-tk-UTN" secondAttribute="leading" id="s52-v5-Hs8"/>
+                                    <constraint firstAttribute="width" constant="50" id="2T2-wY-KWB"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="skB-Af-6GQ"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -71,20 +65,21 @@
                         <constraints>
                             <constraint firstItem="d5T-IE-BNw" firstAttribute="top" secondItem="s0d-QT-e9S" secondAttribute="bottom" constant="3.5" id="24s-Ae-emc"/>
                             <constraint firstItem="d5T-IE-BNw" firstAttribute="top" secondItem="s0d-QT-e9S" secondAttribute="bottom" constant="8" id="8BY-RJ-IyM"/>
+                            <constraint firstAttribute="trailing" secondItem="crp-tk-UTN" secondAttribute="trailing" constant="5" id="9oC-xz-Df5"/>
                             <constraint firstItem="crp-tk-UTN" firstAttribute="leading" secondItem="d5T-IE-BNw" secondAttribute="trailing" constant="60" id="HmW-2n-MLB"/>
                             <constraint firstItem="DRZ-49-wV3" firstAttribute="top" secondItem="d5T-IE-BNw" secondAttribute="bottom" constant="5" id="ISe-z5-R8a"/>
                             <constraint firstItem="d5T-IE-BNw" firstAttribute="leading" secondItem="ang-3F-qMH" secondAttribute="leadingMargin" constant="8" id="KHp-aK-u9Z"/>
+                            <constraint firstItem="DRZ-49-wV3" firstAttribute="top" secondItem="crp-tk-UTN" secondAttribute="bottom" constant="5" id="Ods-Ky-wyq"/>
                             <constraint firstItem="s0d-QT-e9S" firstAttribute="top" secondItem="ang-3F-qMH" secondAttribute="top" id="Qa0-iw-pud"/>
                             <constraint firstItem="d5T-IE-BNw" firstAttribute="leading" secondItem="ang-3F-qMH" secondAttribute="leading" constant="5" id="QvV-hn-pSY"/>
                             <constraint firstAttribute="trailing" secondItem="s0d-QT-e9S" secondAttribute="trailing" id="dEX-Eh-OyY"/>
                             <constraint firstAttribute="trailing" secondItem="d5T-IE-BNw" secondAttribute="trailing" constant="60" id="dkT-pq-Xod"/>
-                            <constraint firstItem="DRZ-49-wV3" firstAttribute="top" secondItem="crp-tk-UTN" secondAttribute="bottom" constant="5" id="jWu-z1-cCh"/>
+                            <constraint firstItem="crp-tk-UTN" firstAttribute="top" secondItem="s0d-QT-e9S" secondAttribute="bottom" constant="4.5" id="hle-QD-WLj"/>
                             <constraint firstItem="crp-tk-UTN" firstAttribute="leading" secondItem="d5T-IE-BNw" secondAttribute="trailing" constant="64" id="kuQ-zd-gwW"/>
                             <constraint firstItem="d5T-IE-BNw" firstAttribute="top" secondItem="s0d-QT-e9S" secondAttribute="bottom" constant="4" id="n7c-e0-RZA"/>
                             <constraint firstItem="s0d-QT-e9S" firstAttribute="leading" secondItem="ang-3F-qMH" secondAttribute="leading" id="nYG-nb-ysU"/>
                             <constraint firstItem="DRZ-49-wV3" firstAttribute="top" secondItem="d5T-IE-BNw" secondAttribute="bottom" constant="8" id="uXJ-lF-dcf"/>
                             <constraint firstItem="d5T-IE-BNw" firstAttribute="leading" secondItem="ang-3F-qMH" secondAttribute="leadingMargin" constant="5" id="ugb-2J-t83"/>
-                            <constraint firstAttribute="trailing" secondItem="crp-tk-UTN" secondAttribute="trailing" constant="5" id="vs5-CU-jMh"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -116,6 +111,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="buttonContainer" destination="crp-tk-UTN" id="OEI-n0-GBp"/>
                         <outlet property="channelButtonOutlet" destination="rbG-SN-nti" id="s0Z-0G-cB3"/>
                         <outlet property="sendButtonOutlet" destination="4LP-hV-lVC" id="Gh0-Pa-J2z"/>
                         <outlet property="tableView" destination="s0d-QT-e9S" id="diQ-Jv-uzV"/>

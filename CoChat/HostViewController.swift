@@ -32,10 +32,12 @@ class HostViewController: UIViewController, ChannelsVCDelegate {
         toggleAdvancedSettings = false
         let headerNib = UINib(nibName: "HostReusableCell", bundle: nil)
         tableView.registerNib(headerNib, forCellReuseIdentifier: "Host Reusable Cell")
+        tableView.scrollEnabled = false
+        tableView.backgroundColor = Theme.Colors.ForegroundColor.color
+        
         let addRoomButton = UIBarButtonItem(title: "Create Room", style: UIBarButtonItemStyle.Plain, target: self, action: "addRoomButtonWasTapped")
         navigationItem.rightBarButtonItem = addRoomButton
         navigationItem.rightBarButtonItem?.enabled = false
-        tableView.scrollEnabled = false
     }
     
     func addRoomButtonWasTapped(){
@@ -49,7 +51,7 @@ class HostViewController: UIViewController, ChannelsVCDelegate {
         
         Room.createNewRoomWith(name, host: user, privateRoom: privateRoomAsInt, password: entryKey) { newRoom in
             self.performSegueWithSegueIdentifier(SegueIdentifier.SegueToMessaging, sender: newRoom)
-        
+            
         }
     }
     
@@ -105,12 +107,10 @@ extension HostViewController: HostReusableCellDelegate {
                 guard let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 2, inSection: 1)) as? HostReusableCell else {return}
                 switch privateRoom {
                 case false:
-                cell.title.text = "Private"
+                    cell.title.text = "Private"
                 default:
-                cell.title.text = "Public"
+                    cell.title.text = "Public"
                 }
-                
-            print("switch was tapped inside HostVC")
             }
         default:
             assertionFailure()
@@ -128,7 +128,7 @@ extension HostViewController: HostReusableCellDelegate {
     func textFieldDidEndEditingInCell() {
         tableView.setContentOffset(CGPointMake(self.tableView.contentOffset.x, 0.0), animated: true)
     }
-
+    
 }
 
 
@@ -167,6 +167,10 @@ extension HostViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 66
+    }
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print(indexPath)
         view.endEditing(true)
@@ -178,10 +182,25 @@ extension HostViewController: UITableViewDelegate, UITableViewDataSource {
             tableView.reloadSections(index, withRowAnimation: UITableViewRowAnimation.Fade)
         case (1,3):
             if enableSegue == true {
-            performSegueWithSegueIdentifier(SegueIdentifier.SegueToChannelsVC, sender: self)
+                performSegueWithSegueIdentifier(SegueIdentifier.SegueToChannelsVC, sender: self)
+            }
+            else {
+                if let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 1, inSection: 0)) as? HostReusableCell {
+                    animateCellText(cell)}
             }
         default:break
         }
     }
     
+    func animateCellText(cell: HostReusableCell){
+        UIView.transitionWithView(cell.title, duration: 0.25, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
+            cell.title.textColor = UIColor.redColor()
+            cell.title.alpha = 1.0
+            }) { (Bool) -> Void in
+                UIView.transitionWithView(cell.title, duration: 0.25, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
+                    cell.title.textColor = UIColor.whiteColor()
+                    cell.title.alpha = 0.5
+                    }, completion: nil)
+        }
+    }
 }

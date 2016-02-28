@@ -12,6 +12,10 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
    @IBOutlet weak var joinViewWrapper: UIView!
    @IBOutlet weak var passcodeLabel: UITextField!
    
+    override func viewDidLoad() {
+        joinViewWrapper.backgroundColor = Theme.Colors.BackgroundColor.color
+        super.viewDidLoad()
+    }
    
    @IBAction func onSwitchPressed(sender: UIBarButtonItem) {
       if passcodeView == true {

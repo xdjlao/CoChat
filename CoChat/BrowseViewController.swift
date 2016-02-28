@@ -24,8 +24,6 @@ class BrowseViewController: UIViewController {
         
         getRecentRooms()
         getAllRooms()
-        
-        print("browse view did appear")
     }
     
     func getAllRooms() {

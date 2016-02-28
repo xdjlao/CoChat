@@ -14,6 +14,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        window?.tintColor = Theme.Colors.BackgroundColor.color
+        let navBarAppearance = UINavigationBar.appearance()
+        let navBarButtonAppearance = UIBarButtonItem.appearance()
+        let tabBarAppearance = UITabBar.appearance()
+        
+        navBarAppearance.titleTextAttributes = [
+            NSFontAttributeName: Theme.Fonts.BoldTitleTypeFace.font,
+            NSForegroundColorAttributeName: Theme.Colors.ButtonColor.color]
+        
+        navBarAppearance.barStyle = UIBarStyle.Black
+        navBarAppearance.barTintColor = Theme.Colors.NavigationBarColor.color
+        
+        navBarButtonAppearance.tintColor = Theme.Colors.ButtonColor.color
+        
+        tabBarAppearance.tintColor = Theme.Colors.ButtonColor.color
+        tabBarAppearance.backgroundColor = Theme.Colors.NavigationBarColor.color
+        
+        
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         FirebaseManager.manager.ref.observeAuthEventWithBlock { authData in
             if let authData = authData {

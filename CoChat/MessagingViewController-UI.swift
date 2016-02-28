@@ -91,10 +91,10 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
     }
     
     func textViewDidChange(textView: UITextView) {
-        UIView.animateWithDuration(0.2, animations: { () -> Void in
+        UIView.animateWithDuration(0.1, animations: { () -> Void in
             let height = self.textView.sizeThatFits(CGSizeMake(self.textView.frame.size.width, CGFloat.max)).height
-            print(height)
             self.textView.frame.size.height = height
+            self.buttonContainer.frame.size.height = textView.frame.size.height
             }) { (Bool) -> Void in
                 if self.messages.count > 0 {
                     self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: self.messages.count - 1, inSection: 0), atScrollPosition: .Bottom, animated: true)
@@ -135,13 +135,10 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
     func generalMessageCellWillDisplay(generalCell: GeneralMessageCell, indexPath: NSIndexPath) {
         generalCell.profileImageView.alpha = 0.0
         generalCell.messageLabel.alpha = 0.0
-        print("before animation \(generalCell.profileImageView.alpha)")
         UIView.animateWithDuration(1.2, delay: 0.0, options: [.CurveEaseInOut], animations: { () -> Void in
             generalCell.profileImageView.alpha = 1.0
             generalCell.messageLabel.alpha = 1.0
-            print("after animation \(generalCell.profileImageView.alpha)")
             }, completion: { (Bool) -> Void in
-                print("General Message Was Displayed")
         })
     }
     
@@ -152,8 +149,6 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
             userCell.profileImageView.alpha = 1.0
             userCell.messageLabel.alpha = 1.0
             }, completion: { (Bool) -> Void in
-                print("User Message Was Displayed")
-                //            self.tableView.scrollToLastMessage(true)
         })
     }
     
@@ -213,7 +208,12 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "textViewBeganEditing", name: UITextViewTextDidChangeNotification, object: nil)
         textView.scrollEnabled = false
         registerNibs()
-        
+        view.backgroundColor = Theme.Colors.BackgroundColor.color
+        sendButtonOutlet.backgroundColor = Theme.Colors.ButtonColor.color
+        sendButtonOutlet.tintColor = UIColor.whiteColor()
+        channelButtonOutlet.backgroundColor = Theme.Colors.ButtonColor.color
+        channelButtonOutlet.tintColor = UIColor.whiteColor()
+        buttonContainer.backgroundColor = Theme.Colors.ButtonColor.color
         tableViewOrientation()
     }
     

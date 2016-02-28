@@ -42,7 +42,7 @@ class ChannelsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         registerNibsForTableView()
-//        setUpTableViewUI()
+        setUpUI()
         
         if channels == nil {
             channels = [Channel]()
@@ -55,11 +55,12 @@ class ChannelsVC: UIViewController {
         let headerNib = UINib(nibName: "HostReusableCell", bundle: nil)
         tableView.registerNib(headerNib, forCellReuseIdentifier: "ChannelInformationCell")
     }
-//    
-//    func setUpTableViewUI(){
-//        tableView.separatorStyle = .None
-//        tableView.backgroundColor = UIColor.basicOrange()
-//    }
+    
+    func setUpUI(){
+        tableView.separatorStyle = .None
+        tableView.backgroundColor = Theme.Colors.ForegroundColor.color
+        
+    }
     
 }
 
@@ -68,11 +69,6 @@ extension ChannelsVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let informationCell = tableView.dequeueReusableCellWithIdentifier("ChannelInformationCell") as! HostReusableCell
         let headerCell = tableView.dequeueReusableCellWithIdentifier("ChannelHeaderCell") as! ChannelHeaderCell
-        
-//        headerCell.headerTitle.textColor = UIColor.whiteColor()
-//        headerCell.backgroundColor = UIColor.orangeColor()
-//        informationCell.title.textColor = UIColor.whiteColor()
-//        informationCell.backgroundColor = UIColor.orangeColor()
         
         headerCell.delegate = self
         informationCell.delegate = self
@@ -168,9 +164,9 @@ extension ChannelsVC: UITableViewDelegate, UITableViewDataSource {
         case 1:
             //create or add room
             return 1
-        case 2:
+        case 1:
             //basic info
-            return 2
+            return 1
         default:
             if toggleAdvancedSettings == true {
                 //advancedSettingsDecompressed
@@ -195,6 +191,9 @@ extension ChannelsVC: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 66
+    }
 }
 
 extension ChannelsVC: ChannelHeaderCellDelegate {
@@ -202,6 +201,8 @@ extension ChannelsVC: ChannelHeaderCellDelegate {
         toggleCompressedView = false
         //Change the top label from add to create
         print("add button tapped")
+//        UIView.animateWithDuration(1.0) { () -> Void in
+//            self.tableView.reloadRowsAtIndexPaths([NSIndexPath(index: 1)], withRowAnimation: .Fade)
         tableView.reloadData()
     }
     
