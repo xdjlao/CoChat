@@ -19,6 +19,9 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
             }
         }
     }
+    @IBOutlet var topContainer: UIView!
+    
+    @IBOutlet var settingsButton: UIButton!
     
     @IBOutlet weak var profileImageView: UIImageView! {
         didSet {
@@ -63,22 +66,53 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
         let size = view.frame.size
         let button = createFBLoginButtonWithPosition(size.width * 0.8, y: size.height * 0.1)
         button.delegate = self
+        setUpUI()
     }
    
    override func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
       super.loginButtonDidLogOut(loginButton)
       user = FirebaseManager.manager.user
    }
+    
+    func setUpUI (){
+        let backgroundColor = Theme.Colors.BackgroundColor.color
+        recentTableView.backgroundColor = backgroundColor
+        recentTableView.tableFooterView = UIView()
+        topContainer.backgroundColor = backgroundColor
+        nameLabel.font = Theme.Fonts.NormalTypeFace.font
+        settingsButton.hidden = true
+    }
 }
 
 extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 1
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithCellIdentifier(.ProfileCell)
         cell.textLabel?.text = "Let's copy twitch/facebook messenger/hangouts for things to put here?"
+        switch (indexPath.section, indexPath.row){
+        case (0,0):
+            cell.textLabel?.text = "Log Out"
+            cell.textLabel?.font = Theme.Fonts.BoldNormalTypeFace.font
+            cell.textLabel?.textColor = UIColor.whiteColor()
+            cell.backgroundColor = Theme.Colors.ForegroundColor.color
+        default:
+            break
+        }
         return cell
-    }  
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        switch (indexPath.section, indexPath.row){
+        case(0,0):
+            //Log Out here
+        break
+        default:
+            //Go To Recent Messages Here
+            break
+        }
+    }
+
 }

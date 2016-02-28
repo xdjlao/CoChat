@@ -17,6 +17,9 @@ class GeneralMessageCell: UITableViewCell {
         profileImageView.layer.cornerRadius = profileImageView.frame.size.width / 2
         profileImageView.clipsToBounds = true
         messageLabel.sizeToFit()
+        messageLabel.textColor = UIColor.whiteColor()
+        self.backgroundColor = Theme.Colors.ForegroundColor.color
+        messageLabel.font = Theme.Fonts.NormalTypeFace.font
         messageLabel.numberOfLines = 0
         messageLabel.layoutIfNeeded()
         addTapGesture()

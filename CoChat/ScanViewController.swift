@@ -2,35 +2,29 @@ import UIKit
 import AVFoundation
 
 class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
-    
-    var captureSession:AVCaptureSession?
-    var videoPreviewLayer:AVCaptureVideoPreviewLayer?
-    var qrCodeFrameView:UIView?
-    var passcodeView = true
-    
-    @IBOutlet weak var scanViewWrapper: UIView!
-    @IBOutlet weak var joinViewWrapper: UIView!
-    @IBOutlet weak var passcodeLabel: UITextField!
-    @IBOutlet weak var passcodeLabelWrapper: UIView!
-    @IBOutlet weak var joinButtonOutlet: UIButton!
-    
+   var captureSession:AVCaptureSession?
+   var videoPreviewLayer:AVCaptureVideoPreviewLayer?
+   var qrCodeFrameView:UIView?
+   var passcodeView = true
+   
+   @IBOutlet weak var scanViewWrapper: UIView!
+   @IBOutlet weak var joinViewWrapper: UIView!
+   @IBOutlet weak var passcodeLabel: UITextField!
+   
     override func viewDidLoad() {
+        joinViewWrapper.backgroundColor = Theme.Colors.BackgroundColor.color
         super.viewDidLoad()
-        
-        let cornerRadius = CGFloat(5)
-        passcodeLabelWrapper.layer.cornerRadius = cornerRadius
-        joinButtonOutlet.layer.cornerRadius = cornerRadius
     }
-    
-    @IBAction func onSwitchPressed(sender: UIBarButtonItem) {
-        if passcodeView == true {
-            startScan()
-            passcodeView = false
-        } else {
-            stopScan()
-            passcodeView = true
-        }
-    }
+   
+   @IBAction func onSwitchPressed(sender: UIBarButtonItem) {
+      if passcodeView == true {
+         startScan()
+         passcodeView = false
+      } else {
+         stopScan()
+         passcodeView = true
+      }
+   }
     @IBAction func onJoinButtonPressed(sender: UIButton) {
         checkForRoomWithEntryKey(passcodeLabel.text!)
     }

@@ -24,6 +24,15 @@ enum HostCellType {
 
 
 class HostReusableCell: UITableViewCell, UITextFieldDelegate {
+    override func awakeFromNib() {
+        backgroundColor = Theme.Colors.ForegroundColor.color
+        title.textColor = UIColor.whiteColor()
+        title.font = Theme.Fonts.BoldNormalTypeFace.font
+        icon.tintColor = Theme.Colors.ButtonColor.color
+        addButton.tintColor = Theme.Colors.ButtonColor.color
+        super.awakeFromNib()
+    }
+    
     var type = HostCellType.None
     var originalTextValue:String?
     
@@ -70,37 +79,42 @@ class HostReusableCell: UITableViewCell, UITextFieldDelegate {
         
         icon.image = nil
         userInteractionEnabled = true
+        title.userInteractionEnabled = true
+        addButton.hidden = true
         switchToggle.hidden = true
         selectionStyle = .None
         accessoryType = UITableViewCellAccessoryType.None
-        title.userInteractionEnabled = true
         
         switch (indexPath.section, indexPath.row) {
-        case (0,0):
-            icon.image = UIImage(named: "Create")
+        case (0,0)://Create a Room
+            titleConstraintToLeftSuperView.constant = 10
             title.text = basicContent![indexPath.row]
             userInteractionEnabled = false
-        case (1,0):
-            icon.image = UIImage(named: "Settings")
+        case (1,0)://Advanced Settings
             title.text = advancedContent![indexPath.row]
             title.userInteractionEnabled = false
-            selectionStyle = .Gray
+            addButton.hidden = false
+            addButton.imageView?.image = UIImage(named: "downChevron")
+            addButton.enabled = false
         case (0,1):
             title.text = basicContent![indexPath.row]
+            title.alpha = 0.5
             type = .NameOfRoom
         case (1,1):
             title.text = advancedContent![indexPath.row]
+            title.alpha = 0.5
             type = .PasscodeOfRoom
         case (1,2):
             title.text = advancedContent![indexPath.row]
             title.userInteractionEnabled = false
             type = .Privacy
             switchToggle.hidden = false
+            switchToggle.onTintColor = Theme.Colors.ButtonColor.color
         case (1,3):
             title.text = advancedContent![indexPath.row]
             title.userInteractionEnabled = false
+            userInteractionEnabled = true
             accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
-            selectionStyle = .Gray
         case (2,0):
             title.text = "Add Another Channel"
             title.userInteractionEnabled = false

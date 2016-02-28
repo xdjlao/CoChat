@@ -31,7 +31,6 @@ class BrowseViewController: UIViewController {
         
         getRecentRooms()
         getAllRooms()
-
     }
     
     func getAllRooms() {

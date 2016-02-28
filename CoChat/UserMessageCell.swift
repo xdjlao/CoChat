@@ -21,6 +21,9 @@ class UserMessageCell: UITableViewCell {
         messageLabel.layoutIfNeeded()
         contentView.frame.size.height = messageLabel.frame.size.height + 10
         addTapGesture()
+        backgroundColor = Theme.Colors.ForegroundColor.color
+        messageLabel.font = Theme.Fonts.NormalTypeFace.font
+        messageLabel.textColor = UIColor.whiteColor()
     }
     
     func addTapGesture() {

@@ -14,6 +14,7 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
       tableView.dataSource = self
       }
    }
+    @IBOutlet var buttonContainer: UIView!
    @IBOutlet weak var channelButtonOutlet: UIButton!
    @IBOutlet weak var sendButtonOutlet: UIButton!
    //   @IBOutlet weak var buttonToTableViewConstraint: NSLayoutConstraint!
@@ -131,8 +132,7 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
       if (textView.text != "") {
          guard let user = user else { return }
          Message.createNewMessageWith(textView.text, timeObject: FirebaseServerValue.timestamp(), poster: user, channel: currentChannel, withCompletionHandler: nil)
-         textView.text = ""
-         self.tableView.scrollToLastMessage(false)
+         textView.text = ""         
       }
    }
    

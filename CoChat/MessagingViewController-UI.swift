@@ -91,9 +91,10 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
     }
     
     func textViewDidChange(textView: UITextView) {
-        UIView.animateWithDuration(0.2, animations: { () -> Void in
+        UIView.animateWithDuration(0.1, animations: { () -> Void in
             let height = self.textView.sizeThatFits(CGSizeMake(self.textView.frame.size.width, CGFloat.max)).height
             self.textView.frame.size.height = height
+            self.buttonContainer.frame.size.height = textView.frame.size.height
             }) { (Bool) -> Void in
                 if self.messageFirebase.items.count > 0 {
                     self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: self.messageFirebase.items.count - 1, inSection: 0), atScrollPosition: .Bottom, animated: true)
@@ -209,7 +210,12 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "textViewBeganEditing", name: UITextViewTextDidChangeNotification, object: nil)
         textView.scrollEnabled = false
         registerNibs()
-        
+        view.backgroundColor = Theme.Colors.BackgroundColor.color
+        sendButtonOutlet.backgroundColor = Theme.Colors.ButtonColor.color
+        sendButtonOutlet.tintColor = UIColor.whiteColor()
+        channelButtonOutlet.backgroundColor = Theme.Colors.ButtonColor.color
+        channelButtonOutlet.tintColor = UIColor.whiteColor()
+        buttonContainer.backgroundColor = Theme.Colors.ButtonColor.color
         tableViewOrientation()
     }
     

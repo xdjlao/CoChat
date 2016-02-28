@@ -21,6 +21,11 @@ class ChannelHeaderCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        backgroundColor = Theme.Colors.ForegroundColor.color
+        headerTitle.textColor = UIColor.whiteColor()
+        headerTitle.font = Theme.Fonts.BoldNormalTypeFace.font
+        addButton.tintColor = UIColor.whiteColor()
+        addButton.tintColor = Theme.Colors.ButtonColor.color
     }
     
     @IBAction func addNewChannelWasTapped(sender: UIButton) {
