@@ -18,14 +18,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FeM-uM-58C">
-                                <rect key="frame" x="225" y="90" width="150" height="150"/>
+                                <rect key="frame" x="260" y="90" width="80" height="80"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="SbV-My-Q4f"/>
-                                    <constraint firstAttribute="height" constant="150" id="hKc-XJ-tQF"/>
+                                    <constraint firstAttribute="width" constant="80" id="SbV-My-Q4f"/>
+                                    <constraint firstAttribute="height" constant="80" id="hKc-XJ-tQF"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jerry Lao" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8H-5C-lWr">
-                                <rect key="frame" x="264" y="260" width="72" height="21"/>
+                                <rect key="frame" x="264" y="190" width="72" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
