@@ -136,6 +136,9 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
         }
     }
     
+    @IBAction func onTapResignKeyboard(sender: UITapGestureRecognizer) {
+        passcodeLabel.resignFirstResponder()
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == SegueIdentifier.SegueToMessaging.rawValue {
