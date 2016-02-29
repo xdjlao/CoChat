@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		919549211C7E4F9D00C61805 /* ChannelHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9195491F1C7E4F9D00C61805 /* ChannelHeaderCell.swift */; };
 		919549221C7E4F9D00C61805 /* ChannelHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 919549201C7E4F9D00C61805 /* ChannelHeaderCell.xib */; };
 		91B18F5E1C7CE02300F20531 /* Messaging.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91B18F5C1C7CE02300F20531 /* Messaging.storyboard */; };
 		91B18F601C7CE71900F20531 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B18F5F1C7CE71900F20531 /* TableView.swift */; };
@@ -27,6 +26,7 @@
 		91F525AA1C82616B009C9BF1 /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91F525981C82616B009C9BF1 /* Lato-Hairline.ttf */; };
 		91F525AD1C82616B009C9BF1 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91F5259B1C82616B009C9BF1 /* Lato-Light.ttf */; };
 		91F525AF1C82616B009C9BF1 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91F5259D1C82616B009C9BF1 /* Lato-Regular.ttf */; };
+		91FE4D0E1C83DDEC0000AB35 /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FE4D0D1C83DDEC0000AB35 /* temp.swift */; };
 		A288F7731C7840E600DF2847 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A288F7721C7840E600DF2847 /* AppDelegate.swift */; };
 		A288F7781C7840E600DF2847 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A288F7761C7840E600DF2847 /* Main.storyboard */; };
 		A288F77A1C7840E600DF2847 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A288F7791C7840E600DF2847 /* Assets.xcassets */; };
@@ -77,7 +77,6 @@
 		38620A9AF6B45CA19AD5E427 /* Pods-CoChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoChat/Pods-CoChat.release.xcconfig"; sourceTree = "<group>"; };
 		587D22B4E734A1D30A6BED37 /* Pods-CoChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoChat/Pods-CoChat.debug.xcconfig"; sourceTree = "<group>"; };
 		70EBED03AAABBA95CBA945A5 /* Pods_CoChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9195491F1C7E4F9D00C61805 /* ChannelHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelHeaderCell.swift; sourceTree = "<group>"; };
 		919549201C7E4F9D00C61805 /* ChannelHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChannelHeaderCell.xib; sourceTree = "<group>"; };
 		91B18F5D1C7CE02300F20531 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Messaging.storyboard; sourceTree = "<group>"; };
 		91B18F5F1C7CE71900F20531 /* TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
@@ -97,6 +96,7 @@
 		91F525981C82616B009C9BF1 /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Hairline.ttf"; sourceTree = "<group>"; };
 		91F5259B1C82616B009C9BF1 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		91F5259D1C82616B009C9BF1 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		91FE4D0D1C83DDEC0000AB35 /* temp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
 		A288F76F1C7840E600DF2847 /* CoChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A288F7721C7840E600DF2847 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A288F7771C7840E600DF2847 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -332,8 +332,8 @@
 				A2BE2B271C7E60AD00ED71E4 /* DismissSegue.swift */,
 				A288F7CE1C78609700DF2847 /* UserMessageCell.swift */,
 				A288F7D01C7860B500DF2847 /* GeneralMessageCell.swift */,
-				9195491F1C7E4F9D00C61805 /* ChannelHeaderCell.swift */,
 				91E9B9DE1C7BCD33006F4CF0 /* HostReusableCell.swift */,
+				91FE4D0D1C83DDEC0000AB35 /* temp.swift */,
 				A2BE2B391C81226C00ED71E4 /* TopRoomCell.swift */,
 			);
 			name = Classes;
@@ -655,8 +655,8 @@
 				A2BE2B2A1C7E708C00ED71E4 /* MessagingNavigationViewController.swift in Sources */,
 				A2BE2B221C7CE49D00ED71E4 /* WhisperTableViewCell.swift in Sources */,
 				A2BE2B181C7CE33000ED71E4 /* WhisperViewController.swift in Sources */,
+				91FE4D0E1C83DDEC0000AB35 /* temp.swift in Sources */,
 				A288F7B51C78599600DF2847 /* FirebaseType-Protocol&Extension.swift in Sources */,
-				919549211C7E4F9D00C61805 /* ChannelHeaderCell.swift in Sources */,
 				A2BE2B3A1C81226C00ED71E4 /* TopRoomCell.swift in Sources */,
 				A288F7CF1C78609700DF2847 /* UserMessageCell.swift in Sources */,
 				A288F7B11C78592900DF2847 /* User.swift in Sources */,

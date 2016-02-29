@@ -15,12 +15,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="65.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZPf-RO-Yl0">
-                        <rect key="frame" x="8" y="8" width="44" height="44"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="44" id="sAj-h7-ThV"/>
-                        </constraints>
-                    </imageView>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="HeaderTitle" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="MgF-gv-xfQ">
                         <rect key="frame" x="63" y="15" width="195" height="30"/>
                         <constraints>
@@ -53,25 +47,35 @@
                             <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </state>
                         <connections>
-                            <action selector="addButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="dyK-Ub-jWy"/>
+                            <action selector="addWasTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="d61-Fe-429"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0q-bs-qN4">
+                        <rect key="frame" x="266" y="15" width="46" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="46" id="K0j-fr-ic3"/>
+                            <constraint firstAttribute="height" constant="30" id="c5Y-GQ-CjT"/>
+                        </constraints>
+                        <state key="normal" title="Create"/>
+                        <connections>
+                            <action selector="createWasTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Hyc-Jy-F0V"/>
                         </connections>
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottomMargin" secondItem="ZPf-RO-Yl0" secondAttribute="bottom" constant="5.5" id="8KU-XL-wfI"/>
+                    <constraint firstItem="Y0q-bs-qN4" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="73J-Re-KU6"/>
                     <constraint firstItem="6vG-kO-X8v" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="12" id="J9O-b2-hiT"/>
                     <constraint firstItem="2C0-W0-awp" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="Jg2-wt-EIa"/>
                     <constraint firstItem="MgF-gv-xfQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="55" id="PAs-X6-004"/>
                     <constraint firstItem="6vG-kO-X8v" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="-6" id="R9w-Uc-m93"/>
                     <constraint firstItem="MgF-gv-xfQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="7" id="VgB-h4-ieL"/>
+                    <constraint firstItem="Y0q-bs-qN4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="7" id="dwm-B7-ARG"/>
                     <constraint firstItem="2C0-W0-awp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="6" id="hqT-ix-J2U"/>
-                    <constraint firstItem="ZPf-RO-Yl0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="rQI-LE-TQi"/>
-                    <constraint firstItem="ZPf-RO-Yl0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="tmF-Qv-BdO"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="addButton" destination="6vG-kO-X8v" id="rRb-ir-AyM"/>
-                <outlet property="icon" destination="ZPf-RO-Yl0" id="5o0-hZ-CHr"/>
+                <outlet property="createButton" destination="Y0q-bs-qN4" id="iOj-Ch-PD9"/>
                 <outlet property="switchToggle" destination="2C0-W0-awp" id="y8s-5d-PC5"/>
                 <outlet property="title" destination="MgF-gv-xfQ" id="isJ-LH-Ogt"/>
                 <outlet property="titleConstraintToLeftSuperView" destination="PAs-X6-004" id="11z-LX-Xy2"/>
