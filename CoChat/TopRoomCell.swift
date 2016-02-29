@@ -19,7 +19,7 @@ class TopRoomCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        countLabel.font = Theme.Fonts.BoldNormalTypeFace.font
+        countLabel.font = Theme.Fonts.BoldTitleTypeFace.font
         roomTitleLabel.font = Theme.Fonts.NormalTypeFace.font
         roomTitleLabel.textColor = UIColor.whiteColor()
         cellCountWrapperView.backgroundColor = Theme.Colors.DarkBackgroundColor.color

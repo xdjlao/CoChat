@@ -14,6 +14,7 @@ class MainTabBarViewController: UITabBarController {
         super.viewDidLoad()
         tabBar.barTintColor = Theme.Colors.NavigationBarColor.color
         tabBar.translucent = false
+        tabBar.setValue(true, forKey: "_hidesShadow")
     }
 
     override func didReceiveMemoryWarning() {

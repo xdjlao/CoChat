@@ -118,6 +118,7 @@ extension HostViewController: HostReusableCellDelegate {
     }
     
     func textFieldDidBeginEditingInCell(textField: UITextField) {
+        textField.alpha = 1.0
         let textFieldPosition = textField.convertPoint(CGPointZero, toView: self.tableView)
         let indexPath = self.tableView.indexPathForRowAtPoint(textFieldPosition)
         let cell = tableView.cellForRowAtIndexPath(indexPath!)

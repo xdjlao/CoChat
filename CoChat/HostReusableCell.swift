@@ -59,6 +59,7 @@ class HostReusableCell: UITableViewCell, UITextFieldDelegate {
     func textFieldDidEndEditing(textField: UITextField) {
         if textField.text == ""  {
             textField.text = originalTextValue
+            textField.alpha = 0.5
         }
         delegate?.textFieldDidEndEditingInCell!()
     }

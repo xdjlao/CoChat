@@ -18,7 +18,6 @@ class BrowseViewController: UIViewController {
     var topRooms = [Room]()
     let manager = FirebaseManager.manager
     let ref = FirebaseManager.manager.ref
-    var colorCounter = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,10 +35,7 @@ class BrowseViewController: UIViewController {
         tableView.rowHeight = 71
         tableView.separatorColor = UIColor.clearColor()
         tableView.separatorStyle = UITableViewCellSeparatorStyle.None
-        let tabBar = UITabBar.appearance()
-        tabBar.backgroundColor = Theme.Colors.BackgroundColor.color
         tableView.backgroundColor = Theme.Colors.NavigationBarColor.color
-        
     }
     
     func getAllRooms() {
@@ -113,6 +109,7 @@ extension BrowseViewController: UITableViewDataSource, UITableViewDelegate {
             }
         }
     }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         return setUpTopRoomCell(forIndexPath: indexPath)
     }
@@ -133,9 +130,7 @@ extension BrowseViewController: UITableViewDataSource, UITableViewDelegate {
                     default: assertionFailure("BrowseVC.tableView asked for more than two sections.")
                     }
                 }
-                
                 cell.cellWrapperView.backgroundColor = Theme.Colors.ForegroundColor.color
-                
                 self.manager.getChildrenForParent(Channel(), parent: room) { (children) in
                     guard let children = children else { return }
                     room.channels = children
@@ -150,11 +145,7 @@ extension BrowseViewController: UITableViewDataSource, UITableViewDelegate {
         cell.countLabel.text = "\(indexPath.row + 1)"
         cell.roomTitleLabel.text = room.title
         cell.selectionStyle = UITableViewCellSelectionStyle.None
-        if colorCounter > Theme.NeonColor.allValues.count - 1 {
-            colorCounter = 0
-        }
-        cell.countLabel.textColor = Theme.NeonColor.allValues[colorCounter].color
-        colorCounter++
+        cell.countLabel.textColor = Theme.Colors.DarkButtonColor.color
         return cell
     }
 }

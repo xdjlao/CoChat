@@ -6,6 +6,7 @@ struct Theme {
         case NavigationBarColor
         case ForegroundColor
         case ButtonColor
+        case DarkButtonColor
         case RedButtonColor
         
         var color: UIColor{
@@ -15,40 +16,42 @@ struct Theme {
             case .NavigationBarColor: return UIColor(r: 26, g: 35, b: 126)
             case .ForegroundColor: return UIColor(r: 121, g: 134, b: 203)
             case .ButtonColor: return UIColor(r: 0, g: 227, b: 205) // bright blue
+            case .DarkButtonColor: return UIColor(r: 51, g: 153, b: 255)
             case .RedButtonColor: return UIColor(r: 255, g: 51, b: 51)
             }
         }
     }
     
-    enum NeonColor: UInt32 {
-        case RedColor = 0
-        case BlueColor = 1
-        case YellowColor = 2
-        case GreenColor = 3
-        case PinkColor = 4
-        case PurpleColor = 5
-        case OrangeColor = 6
-        
-        static let allValues = [RedColor, BlueColor, YellowColor, GreenColor, PinkColor, PurpleColor, OrangeColor]
-        
-        var color: UIColor {
-            switch self {
-            case .RedColor: return UIColor(r:255, g: 51, b: 51)
-            case .BlueColor: return UIColor(r: 51, g: 255, b: 255)
-            case .YellowColor: return UIColor(r: 255, g: 255, b: 51)
-            case .GreenColor: return UIColor(r: 51, g: 255, b: 51)
-            case .PinkColor: return UIColor(r: 255, g: 51, b: 255)
-            case .PurpleColor: return UIColor(r: 155, g: 51, b: 255)
-            case .OrangeColor: return UIColor(r: 255, g: 155, b: 51)
-            }
-        }
-    }
+//    enum BoldColor: UInt32 {
+//        case RedColor = 0
+//        case BlueColor = 1
+//        case YellowColor = 2
+//        case GreenColor = 3
+//        case PinkColor = 4
+//        case PurpleColor = 5
+//        case OrangeColor = 6
+//        
+//        static let allValues = [RedColor, BlueColor, YellowColor, GreenColor, PinkColor, PurpleColor, OrangeColor]
+//        
+//        var color: UIColor {
+//            switch self {
+//            case .RedColor: return UIColor(r:255, g: 51, b: 51)
+//            case .YellowColor: return UIColor(r: 255, g: 255, b: 51)
+//            case .GreenColor: return UIColor(r: 51, g: 255, b: 51)
+//            case .PinkColor: return UIColor(r: 255, g: 51, b: 255)
+//            case .PurpleColor: return UIColor(r: 155, g: 51, b: 255)
+//            case .OrangeColor: return UIColor(r: 255, g: 155, b: 51)
+//            }
+//        }
+//    }
     
-    static func randomColor() -> NeonColor {
-        let maxValue = NeonColor.OrangeColor.rawValue
-        let randomValue = arc4random_uniform(maxValue)
-        return NeonColor(rawValue: randomValue)!
-    }
+    
+//    static func randomColor() -> NeonColor {
+//        let maxValue = NeonColor.OrangeColor.rawValue
+//        let randomValue = arc4random_uniform(maxValue)
+//        return NeonColor(rawValue: randomValue)!
+//    }
+    
     
     enum Fonts {
         case TitleTypeFace
