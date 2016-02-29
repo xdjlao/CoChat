@@ -69,6 +69,4 @@ extension FirebaseType {
       let object = Self(fromDictionary: dictionary, andUID: theUID)
       return object
    }
-   
-   
 }
