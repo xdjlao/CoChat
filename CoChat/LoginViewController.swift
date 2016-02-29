@@ -4,9 +4,6 @@ import FBSDKLoginKit
 import Firebase
 
 class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
-    
-    let manager = FirebaseManager.manager
-    let ref = FirebaseManager.manager.ref
    
     override func viewDidLoad() {
         super.viewDidLoad()

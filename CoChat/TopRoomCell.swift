@@ -14,10 +14,18 @@ class TopRoomCell: UITableViewCell {
     @IBOutlet weak var cellWrapperView: UIView!
     @IBOutlet weak var roomTitleLabel: UILabel!
     @IBOutlet weak var countLabel: UILabel!
+    @IBOutlet var countCellSeperator: UIView!
+    @IBOutlet var cellSeperator: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        countLabel.font = Theme.Fonts.BoldNormalTypeFace.font
+        roomTitleLabel.font = Theme.Fonts.NormalTypeFace.font
+        roomTitleLabel.textColor = UIColor.whiteColor()
+        cellCountWrapperView.backgroundColor = Theme.Colors.DarkBackgroundColor.color
+        cellWrapperView.backgroundColor = Theme.Colors.ForegroundColor.color
+        countCellSeperator.backgroundColor = Theme.Colors.ForegroundColor.color
+        cellSeperator.backgroundColor = Theme.Colors.DarkBackgroundColor.color
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

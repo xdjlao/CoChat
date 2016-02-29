@@ -23,7 +23,7 @@ class DismissSegue: UIStoryboardSegue {
                 destinationVC.presentingViewController
             })
         } else {
-            print("hello hello hello hello hello hello hello hello ")
+            
         }
     }
     

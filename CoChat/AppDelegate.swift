@@ -26,11 +26,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         navBarAppearance.barStyle = UIBarStyle.Black
         navBarAppearance.barTintColor = Theme.Colors.NavigationBarColor.color
-        
+        //set custom logo here
         navBarButtonAppearance.tintColor = Theme.Colors.ButtonColor.color
         
         tabBarAppearance.tintColor = Theme.Colors.ButtonColor.color
         tabBarAppearance.backgroundColor = Theme.Colors.NavigationBarColor.color
+        
         
         
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
@@ -40,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             print("facebook ref observeAuthEventWithBlock")
         }
-        //      FirebaseManager.manager.ref.unauth()
+        FirebaseManager.manager.ref.unauth()
         return true
     }
     

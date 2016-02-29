@@ -12,9 +12,8 @@ class MainTabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        
+        tabBar.barTintColor = Theme.Colors.NavigationBarColor.color
+        tabBar.translucent = false
     }
 
     override func didReceiveMemoryWarning() {

@@ -172,7 +172,6 @@ extension HostViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print(indexPath)
         view.endEditing(true)
         let index = NSIndexSet(index: 1)
         switch (indexPath.section, indexPath.row){

@@ -6,18 +6,7 @@ struct Theme {
         case NavigationBarColor
         case ForegroundColor
         case ButtonColor
-        
-        //based off of google material design color pallete
-        
-//        var tealColor: UIColor {
-//            switch self {
-//            case .BackgroundColor: return UIColor(r: 0, g: 150, b: 136) //500
-//            case .DarkBackgroundColor: return UIColor(r: 0, g: 77, b: 64) //900
-//            case .NavigationBarColor: return UIColor(r: 0, g: 121, b: 107) //700
-//            case .ForegroundColor: return UIColor(r: 77, g: 182, b: 172) //300
-//            case .ButtonColor: return UIColor(r: 0, g: 227, b: 205) //green 500
-//            }
-//        }
+        case RedButtonColor
         
         var color: UIColor{
             switch self {
@@ -25,23 +14,42 @@ struct Theme {
             case .DarkBackgroundColor: return UIColor(r: 48, g: 63, b: 159)
             case .NavigationBarColor: return UIColor(r: 26, g: 35, b: 126)
             case .ForegroundColor: return UIColor(r: 121, g: 134, b: 203)
-            case .ButtonColor: return UIColor(r: 0, g: 227, b: 205) // bright green
+            case .ButtonColor: return UIColor(r: 0, g: 227, b: 205) // bright blue
+            case .RedButtonColor: return UIColor(r: 255, g: 51, b: 51)
             }
         }
-        
-//        var redColor: UIColor {
-//            switch self {
-//            case .BackgroundColor: return UIColor(r: 244, g: 67, b: 54)
-//            case .DarkBackgroundColor: return UIColor(r: 183, g: 28, b: 28)
-//            case .NavigationBarColor: return UIColor(r: 211, g: 47, b: 47)
-//            case .ForegroundColor: return UIColor(r: 229, g: 115, b: 115)
-//            case .ButtonColor: return UIColor(r: 0, g: 150, b: 136) // indigo 500
-//            }
-//        }
     }
-
-
-
+    
+    enum NeonColor: UInt32 {
+        case RedColor = 0
+        case BlueColor = 1
+        case YellowColor = 2
+        case GreenColor = 3
+        case PinkColor = 4
+        case PurpleColor = 5
+        case OrangeColor = 6
+        
+        static let allValues = [RedColor, BlueColor, YellowColor, GreenColor, PinkColor, PurpleColor, OrangeColor]
+        
+        var color: UIColor {
+            switch self {
+            case .RedColor: return UIColor(r:255, g: 51, b: 51)
+            case .BlueColor: return UIColor(r: 51, g: 255, b: 255)
+            case .YellowColor: return UIColor(r: 255, g: 255, b: 51)
+            case .GreenColor: return UIColor(r: 51, g: 255, b: 51)
+            case .PinkColor: return UIColor(r: 255, g: 51, b: 255)
+            case .PurpleColor: return UIColor(r: 155, g: 51, b: 255)
+            case .OrangeColor: return UIColor(r: 255, g: 155, b: 51)
+            }
+        }
+    }
+    
+    static func randomColor() -> NeonColor {
+        let maxValue = NeonColor.OrangeColor.rawValue
+        let randomValue = arc4random_uniform(maxValue)
+        return NeonColor(rawValue: randomValue)!
+    }
+    
     enum Fonts {
         case TitleTypeFace
         case BoldTitleTypeFace
