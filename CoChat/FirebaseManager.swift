@@ -7,9 +7,16 @@ let baseURL = "https://NAJchat.firebaseio.com"
 
 class FirebaseManager {
    
+   var authData: FAuthData?
+   
    static let manager = FirebaseManager()
    let ref = Firebase(url: baseURL)
-   var user: User
+   var user: User {
+      didSet {
+      let notification = NSNotification(name: "FirebaseAuth", object: nil)
+      NSNotificationCenter.defaultCenter().postNotification(notification)
+      }
+   }
    var channelMessages: [Message]
    
    init() {
@@ -18,6 +25,7 @@ class FirebaseManager {
    }
    
    func handleUserAuthData(authData: FAuthData, withMainQueueCompletionHandler completionHandler: ((user: User?) -> ())? ) {
+      self.authData = authData
       let uid = authData.uid
       let name = authData.providerData["displayName"] as? String ?? "No username"
       let profileImageURL = authData.providerData["profileImageURL"] as? String ?? "No URL"
@@ -110,7 +118,7 @@ extension FirebaseManager {
          completionHandler?(child: child)
       })
    }
-
+   
 }
 
 extension FirebaseManager {
@@ -144,5 +152,5 @@ extension FirebaseManager {
          }
       }
    }
-
+   
 }
