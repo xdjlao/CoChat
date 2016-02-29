@@ -23,12 +23,7 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
    @IBOutlet weak var channelButtonOutlet: UIButton!
    @IBOutlet weak var sendButtonOutlet: UIButton!
    
-   var messageFirebase: FirebaseArray<Message>! {
-      didSet {
-      guard let tableView = self.tableView else { return }
-      tableView.reloadData()
-      }
-   }
+   var messageFirebase: FirebaseArray<Message>!
    
    func setUpMessageFirebase() {
       let firebaseArray = FirebaseArray<Message>()
@@ -40,9 +35,6 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
       firebaseArray.queryEqualToValue = self.currentChannel.uid
       firebaseArray.eventType = .ChildAdded
       firebaseArray.queryLimitedToLast = 10
-      firebaseArray.completionHandlerForValue = { number in
-         self.tableView.reloadData()
-      }
       firebaseArray.completionHandlerForChildAdded = {
          let indexPath = NSIndexPath(forRow: firebaseArray.items.count - 1, inSection: 0)
          self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .None)
