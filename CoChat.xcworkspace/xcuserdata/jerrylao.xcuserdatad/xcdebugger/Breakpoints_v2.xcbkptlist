@@ -68,12 +68,12 @@
                   moduleName = "CoChat"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jerrylao/Desktop/CoChat/CoChat/ProfileHeaderCell.swift"
-                  timestampString = "478410526.406124"
+                  timestampString = "478427144.59065"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0"
-                  offsetFromSymbolStart = "29">
+                  offsetFromSymbolStart = "20">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -83,12 +83,12 @@
                   moduleName = "CoChat"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jerrylao/Desktop/CoChat/CoChat/ProfileHeaderCell.swift"
-                  timestampString = "478410526.40657"
+                  timestampString = "478427144.590847"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "14"
                   endingLineNumber = "14"
-                  offsetFromSymbolStart = "77">
+                  offsetFromSymbolStart = "84">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -98,12 +98,12 @@
                   moduleName = "CoChat"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jerrylao/Desktop/CoChat/CoChat/ProfileHeaderCell.swift"
-                  timestampString = "478410526.408398"
+                  timestampString = "478427144.591025"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "14"
                   endingLineNumber = "14"
-                  offsetFromSymbolStart = "37">
+                  offsetFromSymbolStart = "44">
                </Location>
             </Locations>
          </BreakpointContent>

@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ISe-6M-65O">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DHc-JB-87V">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -126,20 +126,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="DHc-JB-87V" secondAttribute="trailing" id="6mK-xO-gbW"/>
                             <constraint firstAttribute="bottom" secondItem="hhe-WX-2Kj" secondAttribute="bottom" id="7kX-S2-sP2"/>
-                            <constraint firstAttribute="bottom" secondItem="ISe-6M-65O" secondAttribute="bottom" id="TGB-Aq-eap"/>
-                            <constraint firstAttribute="trailing" secondItem="ISe-6M-65O" secondAttribute="trailing" id="Yvv-IR-xav"/>
+                            <constraint firstItem="DHc-JB-87V" firstAttribute="top" secondItem="LRr-bg-QN5" secondAttribute="top" id="C2H-lW-pza"/>
+                            <constraint firstAttribute="bottom" secondItem="DHc-JB-87V" secondAttribute="bottom" id="Kmb-tQ-CrN"/>
                             <constraint firstAttribute="trailing" secondItem="hhe-WX-2Kj" secondAttribute="trailing" id="ZwW-at-IRd"/>
-                            <constraint firstItem="ISe-6M-65O" firstAttribute="top" secondItem="LRr-bg-QN5" secondAttribute="top" id="qcV-Lb-sJz"/>
+                            <constraint firstItem="DHc-JB-87V" firstAttribute="leading" secondItem="LRr-bg-QN5" secondAttribute="leading" id="bGz-Ag-ixS"/>
                             <constraint firstItem="hhe-WX-2Kj" firstAttribute="leading" secondItem="LRr-bg-QN5" secondAttribute="leading" id="t0f-wp-DoK"/>
                             <constraint firstItem="hhe-WX-2Kj" firstAttribute="top" secondItem="LRr-bg-QN5" secondAttribute="top" id="y5u-AE-8ra"/>
-                            <constraint firstItem="ISe-6M-65O" firstAttribute="leading" secondItem="LRr-bg-QN5" secondAttribute="leading" id="yyw-fZ-72X"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="ISe-6M-65O"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Join" id="0yr-Xp-Wx3">
                         <barButtonItem key="rightBarButtonItem" title="Switch" id="qkV-nm-spw">
@@ -155,7 +150,7 @@
                         <outlet property="joinViewWrapper" destination="hhe-WX-2Kj" id="7lP-8H-wjP"/>
                         <outlet property="passcodeLabel" destination="EOh-Xm-NHB" id="yxO-p5-XYH"/>
                         <outlet property="passcodeLabelWrapper" destination="wj8-am-JQy" id="u27-zw-Cr1"/>
-                        <outlet property="scanViewWrapper" destination="ISe-6M-65O" id="AhL-7w-tK4"/>
+                        <outlet property="scanViewWrapper" destination="DHc-JB-87V" id="wgo-nY-qk1"/>
                         <segue destination="TDq-ST-eG5" kind="presentation" identifier="SegueToMessaging" id="KRh-Ie-iBw"/>
                     </connections>
                 </viewController>
