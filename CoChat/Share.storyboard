@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lXL-kM-yZF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lXL-kM-yZF">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -72,7 +72,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASSABC123" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fa3-Qt-m7V">
                                         <rect key="frame" x="20" y="20" width="480" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -90,21 +90,21 @@
                                 <rect key="frame" x="40" y="422" width="520" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EeM-ja-16W">
-                                        <rect key="frame" x="0.0" y="0.0" width="174" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="173" height="30"/>
                                         <state key="normal" title="CP"/>
                                         <connections>
                                             <action selector="onCopy:" destination="lXL-kM-yZF" eventType="touchUpInside" id="elJ-61-PoB"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HfM-g2-JTR">
-                                        <rect key="frame" x="174" y="0.0" width="173" height="30"/>
+                                        <rect key="frame" x="173" y="0.0" width="174" height="30"/>
                                         <state key="normal" title="FB"/>
                                         <connections>
                                             <action selector="onFacebookButtonPressed:" destination="lXL-kM-yZF" eventType="touchUpInside" id="Rv4-9s-z0C"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9I-eX-DpO">
-                                        <rect key="frame" x="347" y="0.0" width="174" height="30"/>
+                                        <rect key="frame" x="347" y="0.0" width="173" height="30"/>
                                         <state key="normal" title="TW"/>
                                         <connections>
                                             <action selector="onTwitterButtonPressed:" destination="lXL-kM-yZF" eventType="touchUpInside" id="AIs-6w-5Rv"/>

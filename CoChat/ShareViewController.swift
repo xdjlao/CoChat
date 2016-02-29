@@ -12,6 +12,7 @@ class ShareViewController: UIViewController {
     var channel:Channel?
     var room:Room?
     var copied:String!
+    let baseURL = "https://blendchat.herokuapp.com/"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +28,7 @@ class ShareViewController: UIViewController {
     
     func showShareItem() {
         if shareItemSegmentedControl.selectedSegmentIndex == 0 {
-            let channelItem = "blndr://room/\(room!.password)"
+            let channelItem = baseURL+room!.password
             copied = "Link"
             shareItemLabel.text = channelItem
         } else if shareItemSegmentedControl.selectedSegmentIndex == 1 {
@@ -126,7 +127,7 @@ class ShareViewController: UIViewController {
             
             let tweetShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
             if shareItemSegmentedControl.selectedSegmentIndex == 0 {
-                let channelItem = "\(room!.title) link - blndr://room/\(room!.password)"
+                let channelItem = "\(room!.title) link - \(baseURL+room!.password)"
                 let initialText = channelItem
                 tweetShare.setInitialText(initialText)
             } else if shareItemSegmentedControl.selectedSegmentIndex == 1 {

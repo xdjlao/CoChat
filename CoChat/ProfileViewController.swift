@@ -55,7 +55,6 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
     }
    override func viewWillAppear(animated: Bool) {
       super.viewWillAppear(animated)
-      print(__FUNCTION__)
       user = FirebaseManager.manager.user
    }
     override func viewDidAppear(animated: Bool) {
