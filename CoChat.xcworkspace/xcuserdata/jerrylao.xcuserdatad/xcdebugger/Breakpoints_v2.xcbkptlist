@@ -45,5 +45,100 @@
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoChat/ProfileHeaderCell.swift"
+            timestampString = "478410464.134935"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "ProfileHeaderCell"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CoChat.ProfileHeaderCell.user.materializeForSet : Swift.Optional&lt;CoChat.User&gt;"
+                  moduleName = "CoChat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jerrylao/Desktop/CoChat/CoChat/ProfileHeaderCell.swift"
+                  timestampString = "478410526.406124"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "29">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CoChat.ProfileHeaderCell.init (CoChat.ProfileHeaderCell.Type)(style : __C.UITableViewCellStyle, reuseIdentifier : Swift.Optional&lt;Swift.String&gt;) -&gt; CoChat.ProfileHeaderCell"
+                  moduleName = "CoChat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jerrylao/Desktop/CoChat/CoChat/ProfileHeaderCell.swift"
+                  timestampString = "478410526.40657"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "77">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CoChat.ProfileHeaderCell.init (CoChat.ProfileHeaderCell.Type)(coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;CoChat.ProfileHeaderCell&gt;"
+                  moduleName = "CoChat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jerrylao/Desktop/CoChat/CoChat/ProfileHeaderCell.swift"
+                  timestampString = "478410526.408398"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "37">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoChat/ProfileHeaderCell.swift"
+            timestampString = "478410467.984873"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "ProfileHeaderCell"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoChat/ProfileHeaderCell.swift"
+            timestampString = "478410469.13083"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "ProfileHeaderCell"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

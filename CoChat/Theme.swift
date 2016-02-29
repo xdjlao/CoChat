@@ -7,6 +7,7 @@ struct Theme {
         case ForegroundColor
         case ButtonColor
         case RedButtonColor
+        case TransparentLabelColor
         
         var color: UIColor{
             switch self {
@@ -16,6 +17,7 @@ struct Theme {
             case .ForegroundColor: return UIColor(r: 121, g: 134, b: 203)
             case .ButtonColor: return UIColor(r: 0, g: 227, b: 205) // bright blue
             case .RedButtonColor: return UIColor(r: 255, g: 51, b: 51)
+            case .TransparentLabelColor: return UIColor(red: 121/255, green: 134/255, blue: 203/255, alpha: 0.3)
             }
         }
     }
