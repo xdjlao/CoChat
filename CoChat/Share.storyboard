@@ -99,41 +99,42 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cDt-8L-Ck5">
                                 <rect key="frame" x="0.0" y="414" width="600" height="186"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HfM-g2-JTR">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HfM-g2-JTR">
                                         <rect key="frame" x="275" y="68" width="50" height="50"/>
                                         <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="1WC-6f-bi9"/>
                                             <constraint firstAttribute="width" constant="50" id="uH7-Sm-OyP"/>
                                         </constraints>
-                                        <state key="normal" title="FB">
+                                        <state key="normal" image="facebook">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="onFacebookButtonPressed:" destination="lXL-kM-yZF" eventType="touchUpInside" id="Rv4-9s-z0C"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9I-eX-DpO">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9I-eX-DpO">
                                         <rect key="frame" x="383" y="68" width="50" height="50"/>
                                         <color key="backgroundColor" red="0.1137254902" green="0.79215686269999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="XlO-D5-r76"/>
                                             <constraint firstAttribute="height" constant="50" id="ymI-HJ-Fnz"/>
                                         </constraints>
-                                        <state key="normal" title="TW">
+                                        <state key="normal" image="twitter">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="onTwitterButtonPressed:" destination="lXL-kM-yZF" eventType="touchUpInside" id="AIs-6w-5Rv"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EeM-ja-16W">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EeM-ja-16W">
                                         <rect key="frame" x="167" y="68" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="JcB-mi-cLi"/>
                                             <constraint firstAttribute="width" constant="50" id="v9z-fa-9DP"/>
                                         </constraints>
-                                        <state key="normal" title="CP"/>
+                                        <state key="normal" image="copy"/>
                                         <connections>
                                             <action selector="onCopy:" destination="lXL-kM-yZF" eventType="touchUpInside" id="elJ-61-PoB"/>
                                         </connections>
@@ -192,4 +193,9 @@
             <point key="canvasLocation" x="2721" y="1218"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="copy" width="13" height="15"/>
+        <image name="facebook" width="15" height="15"/>
+        <image name="twitter" width="15" height="13"/>
+    </resources>
 </document>
