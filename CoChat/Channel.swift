@@ -23,9 +23,15 @@ class Channel: FirebaseType {
         self.password = password
         
         self.room = room
-        
-        self.createNew(withCompletionHandler: nil)
-    }
+   }
+   
+   static func createNewChannelWith(title: String, room: Room, privateChannel: Int, password: String, withCompletionHandler handler: ((new: Channel) -> ())?) {
+      let channel = Channel(title: title, privateChannel: privateChannel, password: password, room: room)
+      channel.createNew { new in
+         guard let new = new as? Channel else { return }
+         handler?(new: new)
+      }
+   }
     
     required init(fromDictionary dictionary: [NSObject: AnyObject], andUID uid: String) {
         self.uid = uid

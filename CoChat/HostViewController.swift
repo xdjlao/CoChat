@@ -52,7 +52,7 @@ class HostViewController: UIViewController, ChannelsVCDelegate {
       let privateRoomAsInt = convertBooltoInt(privateRoom)
       
       Room.createNewRoomWith(name, host: user, privateRoom: privateRoomAsInt, password: entryKey) { newRoom in
-         self.performSegueWithSegueIdentifier(SegueIdentifier.SegueToMessaging, sender: newRoom)         
+         self.performSegueWithSegueIdentifier(SegueIdentifier.SegueToMessaging, sender: newRoom)
       }
    }
    
@@ -62,13 +62,19 @@ class HostViewController: UIViewController, ChannelsVCDelegate {
          guard let nvc = segue.destinationViewController as? UINavigationController, room = sender as? Room else { return }
          guard let mvc = nvc.viewControllers[0] as? MessagingViewController else { return }
          mvc.room = room
-         
-         room.channels = channels.map { channel -> Channel in
-            return Channel(title: channel.title, privateChannel: channel.privateChannel, password: channel.password, room: room)
+         if channels.isEmpty {
+            Channel.createNewChannelWith("Main", room: room, privateChannel: 0, password: room.password, withCompletionHandler: { new in
+               room.channels.append(new)
+               mvc.currentChannel = room.channels[0]
+            })
+         } else {
+            for channel in channels {
+               Channel.createNewChannelWith(channel.title, room: room, privateChannel: channel.privateChannel, password: channel.password, withCompletionHandler: { new in
+                  room.channels.append(new)
+                  mvc.currentChannel = room.channels[0]
+               })
+            }
          }
-         mvc.currentChannel = room.channels[0]
-         return
-         
       case SegueIdentifier.SegueToChannelsVC.rawValue?:
          guard let cvc =  segue.destinationViewController as? ChannelsVC else { return }
          cvc.tempRoom = nameOfRoom!

@@ -31,9 +31,7 @@ class Room: FirebaseType {
       let room = Room(title: title, host: host, privateRoom: privateRoom, password: password)
       room.createNew { new in
          guard let new = new as? Room else { return }
-         let main = Channel(title: "Main", privateChannel: 0, password: "none", room: new)
-         room.channels.append(main)
-         handler?(new: room)
+         handler?(new: new)
       }
    }
    
