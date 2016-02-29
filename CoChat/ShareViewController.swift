@@ -44,6 +44,7 @@ class ShareViewController: UIViewController {
     func setSocialIcons() {
         facebookButtonOutlet.layer.cornerRadius = facebookButtonOutlet.frame.size.width/2
         twitterButtonOutlet.layer.cornerRadius = twitterButtonOutlet.frame.size.width/2
+        copyButtonOutlet.layer.cornerRadius = copyButtonOutlet.frame.size.width/2
     }
     
     func generateQRCode() {
