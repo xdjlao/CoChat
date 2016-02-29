@@ -6,53 +6,54 @@ import AFNetworking
 
 class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
     
-    var user: User? {
-        didSet{
-            guard let user = user else { return }
-            if let nameLabel = nameLabel {
-                nameLabel.text = user.name
-            }
-            if let profileImageView = profileImageView {
-                profileImageView.setImageWithURL(NSURL(string: user.profileImageURL)!, placeholderImage: UIImage(named: "profileImageDummy"))
-                let imageHeight = profileImageView.frame.size.height
-                profileImageView.layer.cornerRadius = imageHeight / 2
-            }
-        }
-    }
+    var user: User? //{
+       // didSet{
+            //guard let user = user else { return }
+//            if let nameLabel = nameLabel {
+//                nameLabel.text = user.name
+//            }
+//            if let profileImageView = profileImageView {
+//                profileImageView.setImageWithURL(NSURL(string: user.profileImageURL)!, placeholderImage: UIImage(named: "profileImageDummy"))
+//                let imageHeight = profileImageView.frame.size.height
+//                profileImageView.layer.cornerRadius = imageHeight / 2
+//            }
+        //}
+    //}
+    
     @IBOutlet var topContainer: UIView!
     
-    @IBOutlet var settingsButton: UIButton!
+    // @IBOutlet var settingsButton: UIButton!
     
-    @IBOutlet weak var profileImageView: UIImageView! {
-        didSet {
-            guard let user = user else { return }
-            profileImageView.setImageWithURL(NSURL(string: user.profileImageURL)!, placeholderImage: UIImage(named: "profileImageDummy"))
-            let imageHeight = profileImageView.frame.size.height
-            profileImageView.layer.cornerRadius = imageHeight / 2
-        }
-    }
-    @IBOutlet weak var nameLabel: UILabel! {
-        didSet {
-            guard let user = user else { return }
-            nameLabel.text = user.name
-        }
-    }
+//    @IBOutlet weak var profileImageView: UIImageView! {
+//        didSet {
+//            guard let user = user else { return }
+//            profileImageView.setImageWithURL(NSURL(string: user.profileImageURL)!, placeholderImage: UIImage(named: "profileImageDummy"))
+//            let imageHeight = profileImageView.frame.size.height
+//            profileImageView.layer.cornerRadius = imageHeight / 2
+//        }
+//    }
+//    @IBOutlet weak var nameLabel: UILabel! {
+//        didSet {
+//            guard let user = user else { return }
+//            nameLabel.text = user.name
+//        }
+//    }
     @IBOutlet weak var recentTableView: UITableView! {
         didSet {
             recentTableView.delegate = self
             recentTableView.dataSource = self
         }
     }
-    @IBOutlet weak var followingCountLabel: UILabel! {
-        didSet {
-            followingCountLabel.text = "Jerry we don't"
-        }
-    }
-    @IBOutlet weak var followerCountLabel: UILabel! {
-        didSet {
-            followerCountLabel.text = "have followers?"
-        }
-    }
+//    @IBOutlet weak var followingCountLabel: UILabel! {
+//        didSet {
+//            followingCountLabel.text = "Jerry we don't"
+//        }
+//    }
+//    @IBOutlet weak var followerCountLabel: UILabel! {
+//        didSet {
+//            followerCountLabel.text = "have followers?"
+//        }
+//    }
    override func viewWillAppear(animated: Bool) {
       super.viewWillAppear(animated)
       user = FirebaseManager.manager.user
@@ -79,8 +80,9 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
         recentTableView.backgroundColor = backgroundColor
         recentTableView.tableFooterView = UIView()
         topContainer.backgroundColor = backgroundColor
-        nameLabel.font = Theme.Fonts.NormalTypeFace.font
-        settingsButton.hidden = true
+        recentTableView.rowHeight = 100
+        // nameLabel.font = Theme.Fonts.NormalTypeFace.font
+        // settingsButton.hidden = true
     }
 }
 
@@ -90,14 +92,12 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithCellIdentifier(.ProfileCell)
-        cell.textLabel?.text = "Let's copy twitch/facebook messenger/hangouts for things to put here?"
+        let cell = tableView.dequeueReusableCellWithCellIdentifier(.ProfileCell) as! ProfileHeaderCell
         switch (indexPath.section, indexPath.row){
         case (0,0):
-            cell.textLabel?.text = "Log Out"
-            cell.textLabel?.font = Theme.Fonts.BoldNormalTypeFace.font
-            cell.textLabel?.textColor = UIColor.whiteColor()
-            cell.backgroundColor = Theme.Colors.ForegroundColor.color
+            if let user = user {
+                cell.user = user
+            }
         default:
             break
         }

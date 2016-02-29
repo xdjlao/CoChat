@@ -89,21 +89,21 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="8XK-Kt-m2j">
                                 <rect key="frame" x="40" y="422" width="520" height="30"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EeM-ja-16W">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EeM-ja-16W">
                                         <rect key="frame" x="0.0" y="0.0" width="173" height="30"/>
                                         <state key="normal" title="CP"/>
                                         <connections>
                                             <action selector="onCopy:" destination="lXL-kM-yZF" eventType="touchUpInside" id="elJ-61-PoB"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HfM-g2-JTR">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HfM-g2-JTR">
                                         <rect key="frame" x="173" y="0.0" width="174" height="30"/>
                                         <state key="normal" title="FB"/>
                                         <connections>
                                             <action selector="onFacebookButtonPressed:" destination="lXL-kM-yZF" eventType="touchUpInside" id="Rv4-9s-z0C"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9I-eX-DpO">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9I-eX-DpO">
                                         <rect key="frame" x="347" y="0.0" width="173" height="30"/>
                                         <state key="normal" title="TW"/>
                                         <connections>

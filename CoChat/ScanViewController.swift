@@ -34,6 +34,7 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
     func setUpUI(){
         joinViewWrapper.backgroundColor = Theme.Colors.BackgroundColor.color
         passcodeLabelWrapper.backgroundColor = Theme.Colors.ForegroundColor.color
+
     }
     
     func startScan() {
