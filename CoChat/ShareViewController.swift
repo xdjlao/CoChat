@@ -9,6 +9,7 @@ class ShareViewController: UIViewController {
     @IBOutlet weak var shareItemSegmentedControl: UISegmentedControl!
     @IBOutlet weak var facebookButtonOutlet: UIButton!
     @IBOutlet weak var twitterButtonOutlet: UIButton!
+    @IBOutlet weak var copyButtonOutlet: UIButton!
     
     var channel:Channel?
     var room:Room?
@@ -21,7 +22,7 @@ class ShareViewController: UIViewController {
         showShareItem()
         navigationItem.title = "Share"
         qrViewWrapper.backgroundColor = Theme.Colors.NavigationBarColor.color
-        
+        setSocialIcons()
     }
     
     func launchUniversalLink(){
@@ -40,6 +41,10 @@ class ShareViewController: UIViewController {
         }
     }
     
+    func setSocialIcons() {
+        facebookButtonOutlet.layer.cornerRadius = facebookButtonOutlet.frame.size.width/2
+        twitterButtonOutlet.layer.cornerRadius = twitterButtonOutlet.frame.size.width/2
+    }
     
     func generateQRCode() {
         guard let channelPassCode = room?.password else {return}

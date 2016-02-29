@@ -99,51 +99,67 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cDt-8L-Ck5">
                                 <rect key="frame" x="0.0" y="414" width="600" height="186"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="8XK-Kt-m2j">
-                                        <rect key="frame" x="75" y="78" width="450" height="30"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EeM-ja-16W">
-                                                <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
-                                                <state key="normal" title="CP"/>
-                                                <connections>
-                                                    <action selector="onCopy:" destination="lXL-kM-yZF" eventType="touchUpInside" id="elJ-61-PoB"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HfM-g2-JTR">
-                                                <rect key="frame" x="150" y="0.0" width="150" height="30"/>
-                                                <state key="normal" title="FB"/>
-                                                <connections>
-                                                    <action selector="onFacebookButtonPressed:" destination="lXL-kM-yZF" eventType="touchUpInside" id="Rv4-9s-z0C"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9I-eX-DpO">
-                                                <rect key="frame" x="300" y="0.0" width="150" height="30"/>
-                                                <state key="normal" title="TW"/>
-                                                <connections>
-                                                    <action selector="onTwitterButtonPressed:" destination="lXL-kM-yZF" eventType="touchUpInside" id="AIs-6w-5Rv"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HfM-g2-JTR">
+                                        <rect key="frame" x="275" y="68" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="c9I-eX-DpO" firstAttribute="top" secondItem="8XK-Kt-m2j" secondAttribute="top" id="0fS-Sa-CkE"/>
-                                            <constraint firstAttribute="bottom" secondItem="EeM-ja-16W" secondAttribute="bottom" id="5zs-Ah-k9C"/>
-                                            <constraint firstAttribute="trailing" secondItem="c9I-eX-DpO" secondAttribute="trailing" id="6Vg-in-LGt"/>
-                                            <constraint firstItem="HfM-g2-JTR" firstAttribute="top" secondItem="8XK-Kt-m2j" secondAttribute="top" id="EsP-lf-6DM"/>
-                                            <constraint firstAttribute="bottom" secondItem="c9I-eX-DpO" secondAttribute="bottom" id="FYS-sk-s30"/>
-                                            <constraint firstAttribute="bottom" secondItem="HfM-g2-JTR" secondAttribute="bottom" id="OMW-ub-NJU"/>
-                                            <constraint firstItem="HfM-g2-JTR" firstAttribute="leading" secondItem="EeM-ja-16W" secondAttribute="trailing" id="cHD-Je-VbK"/>
-                                            <constraint firstItem="EeM-ja-16W" firstAttribute="leading" secondItem="8XK-Kt-m2j" secondAttribute="leading" id="m3k-nu-g1L"/>
-                                            <constraint firstItem="c9I-eX-DpO" firstAttribute="leading" secondItem="HfM-g2-JTR" secondAttribute="trailing" id="p8k-Oq-YuV"/>
-                                            <constraint firstItem="EeM-ja-16W" firstAttribute="top" secondItem="8XK-Kt-m2j" secondAttribute="top" id="vbS-hd-mjs"/>
+                                            <constraint firstAttribute="height" constant="50" id="1WC-6f-bi9"/>
+                                            <constraint firstAttribute="width" constant="50" id="uH7-Sm-OyP"/>
                                         </constraints>
-                                    </stackView>
+                                        <state key="normal" title="FB">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onFacebookButtonPressed:" destination="lXL-kM-yZF" eventType="touchUpInside" id="Rv4-9s-z0C"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9I-eX-DpO">
+                                        <rect key="frame" x="383" y="68" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.1137254902" green="0.79215686269999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="XlO-D5-r76"/>
+                                            <constraint firstAttribute="height" constant="50" id="ymI-HJ-Fnz"/>
+                                        </constraints>
+                                        <state key="normal" title="TW">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onTwitterButtonPressed:" destination="lXL-kM-yZF" eventType="touchUpInside" id="AIs-6w-5Rv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EeM-ja-16W">
+                                        <rect key="frame" x="167" y="68" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="JcB-mi-cLi"/>
+                                            <constraint firstAttribute="width" constant="50" id="v9z-fa-9DP"/>
+                                        </constraints>
+                                        <state key="normal" title="CP"/>
+                                        <connections>
+                                            <action selector="onCopy:" destination="lXL-kM-yZF" eventType="touchUpInside" id="elJ-61-PoB"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="8XK-Kt-m2j" secondAttribute="trailing" constant="75" id="RP2-JC-GD7"/>
-                                    <constraint firstItem="8XK-Kt-m2j" firstAttribute="leading" secondItem="cDt-8L-Ck5" secondAttribute="leading" constant="75" id="b9J-Qb-vY0"/>
-                                    <constraint firstItem="8XK-Kt-m2j" firstAttribute="centerY" secondItem="cDt-8L-Ck5" secondAttribute="centerY" id="e1G-57-GjE"/>
+                                    <constraint firstItem="EeM-ja-16W" firstAttribute="centerY" secondItem="HfM-g2-JTR" secondAttribute="centerY" id="3IM-3l-2Hc"/>
+                                    <constraint firstItem="c9I-eX-DpO" firstAttribute="leading" secondItem="HfM-g2-JTR" secondAttribute="trailing" constant="50" id="7tI-nU-vTs"/>
+                                    <constraint firstAttribute="bottom" secondItem="HfM-g2-JTR" secondAttribute="bottom" constant="50" id="9Xa-9K-F56"/>
+                                    <constraint firstItem="HfM-g2-JTR" firstAttribute="leading" secondItem="EeM-ja-16W" secondAttribute="trailing" constant="58" id="Coi-UB-Sra"/>
+                                    <constraint firstItem="c9I-eX-DpO" firstAttribute="leading" secondItem="HfM-g2-JTR" secondAttribute="trailing" constant="58" id="F75-xt-jrs"/>
+                                    <constraint firstItem="HfM-g2-JTR" firstAttribute="centerX" secondItem="cDt-8L-Ck5" secondAttribute="centerX" id="GJf-JQ-3JU"/>
+                                    <constraint firstItem="HfM-g2-JTR" firstAttribute="leading" secondItem="EeM-ja-16W" secondAttribute="trailing" constant="50" id="RFv-AV-uWE"/>
+                                    <constraint firstItem="c9I-eX-DpO" firstAttribute="centerY" secondItem="HfM-g2-JTR" secondAttribute="centerY" id="hE8-VY-kWw"/>
+                                    <constraint firstItem="HfM-g2-JTR" firstAttribute="centerY" secondItem="cDt-8L-Ck5" secondAttribute="centerY" id="moT-TX-VZ2"/>
+                                    <constraint firstItem="HfM-g2-JTR" firstAttribute="top" secondItem="cDt-8L-Ck5" secondAttribute="top" constant="50" id="sGV-3O-WKH"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="9Xa-9K-F56"/>
+                                        <exclude reference="RFv-AV-uWE"/>
+                                        <exclude reference="sGV-3O-WKH"/>
+                                        <exclude reference="7tI-nU-vTs"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -163,6 +179,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="QRImageView" destination="RMq-CN-sU2" id="aG7-5P-nEQ"/>
+                        <outlet property="copyButtonOutlet" destination="EeM-ja-16W" id="uqq-oj-JaA"/>
                         <outlet property="facebookButtonOutlet" destination="HfM-g2-JTR" id="a93-Og-X5S"/>
                         <outlet property="qrViewWrapper" destination="7wz-KI-qHD" id="P5Z-xm-KRR"/>
                         <outlet property="shareItemLabel" destination="fa3-Qt-m7V" id="d4z-9N-nNZ"/>
