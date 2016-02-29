@@ -6,6 +6,7 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
       didSet {
       guard let currentChannelTitle = currentChannel?.title else { return }
       textView.text = currentChannelTitle
+      textView.autocorrectionType = UITextAutocorrectionType.Yes
       }
    }
    @IBOutlet weak var tableView: UITableView! {
@@ -14,16 +15,18 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
       tableView.dataSource = self
       }
    }
-    @IBOutlet var buttonContainer: UIView!
+   override func viewDidLoad() {
+      super.viewDidLoad()
+      uiSetup()
+   }
+   @IBOutlet var buttonContainer: UIView!
    @IBOutlet weak var channelButtonOutlet: UIButton!
    @IBOutlet weak var sendButtonOutlet: UIButton!
-   //   @IBOutlet weak var buttonToTableViewConstraint: NSLayoutConstraint!
-   //   @IBOutlet weak var buttonsContainer: UIView!
-   
    
    var messageFirebase: FirebaseArray<Message>! {
       didSet {
-      self.tableView.reloadData()
+      guard let tableView = self.tableView else { return }
+      tableView.reloadData()
       }
    }
    
@@ -45,83 +48,33 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
          self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .None)
          self.tableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Bottom, animated: false)
       }
-      
       messageFirebase = firebaseArray
-   }
-   
-   let manager = FirebaseManager.manager
-   let ref = FirebaseManager.manager.ref
-   var user: User? {
-      didSet {
-      if currentChannel != nil {
-         setUpMessageFirebase()
-         doOperationQueueing()
-      }
-      }
    }
    var room: Room! {
       didSet {
       navigationItem.title = room.title
       }
    }
-   
-   func doOperationQueueing() {
-      let operationQueue = NSOperationQueue()
-      operationQueue.suspended = true
-      
-      
-      let fetchFirst = FetchOperation()
-      fetchFirst.operationBlock = {
-         self.messageFirebase.onceQueryForValue()
-         print("fetchFirst done")
-      }
-      
-      let listen = FetchOperation()
-      listen.operationBlock = {
-         self.messageFirebase.startListener(forLast: 1)
-         print("listen done")
-      }
-      
-      listen.addDependency(fetchFirst)
-      
-      operationQueue.addOperation(fetchFirst)
-      operationQueue.addOperation(listen)
-      operationQueue.suspended = false
-   }
-   
    var currentChannel:Channel! {
       didSet {
-      if user != nil {
-         setUpMessageFirebase()
-         doOperationQueueing()
-      }
+      setUpMessageFirebase()
+      messageFirebase.startListenerForAll()
       guard let roomLabel = textView else { return }
       roomLabel.text = room.title + " - " + currentChannel.title
       }
    }
    
+   let manager = FirebaseManager.manager
+   let ref = FirebaseManager.manager.ref
+   
    func addRoomToRecent() {
-      guard let user = user else { return }
-      guard !(user.recentRooms.contains ({ (room: Room) -> Bool in
+      guard !(FirebaseManager.manager.user.recentRooms.contains ({ (room: Room) -> Bool in
          return room === self.room
       })) else { return }
-      user.recentRoomUIDs.append(room.uid)
-      user.recentRooms.append(room)
+      FirebaseManager.manager.user.recentRoomUIDs.append(room.uid)
+      FirebaseManager.manager.user.recentRooms.append(room)
    }
    
-   override func viewDidLoad() {
-      super.viewDidLoad()
-      
-      textView.autocorrectionType = UITextAutocorrectionType.Yes
-      uiSetup()
-   }
-   
-   
-   override func viewDidAppear(animated: Bool) {
-      super.viewDidAppear(animated)
-      user = manager.user
-      
-   }
    
    var startUID: String!
    var endUID: String!
@@ -129,16 +82,15 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
    
    //MARK Actions
    @IBAction func sendButton(sender: UIButton) {
+      if FirebaseManager.manager.authData == nil {
+         presentLoginScreen()
+         return
+      }
       if (textView.text != "") {
-         guard let user = user else { return }
-         Message.createNewMessageWith(textView.text, timeObject: FirebaseServerValue.timestamp(), poster: user, channel: currentChannel, withCompletionHandler: nil)
-         textView.text = ""         
+         Message.createNewMessageWith(textView.text, timeObject: FirebaseServerValue.timestamp(), poster: FirebaseManager.manager.user, channel: currentChannel, withCompletionHandler: nil)
+         textView.text = ""
       }
    }
-   
-   //   @IBAction func onBrowseTapped(sender: UIBarButtonItem) {
-   //      performSegueWithIdentifier("", sender: nil)
-   //   }
    
    func menuChannelViewController(menuChannelViewController: MenuChannelViewController, didSelectChannel channel: AnyObject) {
       guard let selectedChannel = channel as? Channel else { return }

@@ -5,21 +5,11 @@ import FBSDKLoginKit
 import FBSDKShareKit
 
 extension UIViewController {
-   func checkIfLoggedIn() -> Bool {
-      guard let authData = FirebaseManager.manager.ref.authData else {
-         
-         presentLoginScreen()
-         return false
-      }
-      return true
-   }
    
    func presentLoginScreen() {
       let storyboard = UIStoryboard(name: "Login", bundle: nil)
       guard let loginVC = storyboard.instantiateInitialViewController() as? LoginViewController else { return }
-      presentViewController(loginVC, animated: true) {
-         self.viewWillAppear(false)
-      }
+      presentViewController(loginVC, animated: true, completion: nil)
    }
    
    func createFBLoginButtonWithPosition(x: CGFloat, y: CGFloat) -> FBSDKLoginButton {
@@ -42,21 +32,17 @@ extension UIViewController {
             } else {
                print("Logged in! \(authData)")
                FirebaseManager.manager.handleUserAuthData(authData, withMainQueueCompletionHandler: { user in
-                  self.viewWillAppear(false)
-                  if self.isKindOfClass(LoginViewController) {
-                     self.dismissViewControllerAnimated(true, completion: { 
-                        //
-                     })
-                  }
+                  self.dismissViewControllerAnimated(true, completion: nil)
                })
             }
          })
-      }
+      }        
    }
+   
    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
       FirebaseManager.manager.user = User(withDummyName: "Anonymous", dummyProfileImageURL: "none", dummyUID: "none")
-      FirebaseManager.manager.ref.unauth()      
-      viewDidAppear(true)
+      FirebaseManager.manager.ref.unauth()
+      FirebaseManager.manager.authData = nil
    }
 }
 
