@@ -67,8 +67,9 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
       recentTableView.backgroundColor = backgroundColor
       recentTableView.tableFooterView = UIView()
       topContainer.backgroundColor = backgroundColor
-      nameLabel.font = Theme.Fonts.NormalTypeFace.font
-      settingsButton.hidden = true
+      recentTableView.rowHeight = 100
+      // nameLabel.font = Theme.Fonts.NormalTypeFace.font
+      // settingsButton.hidden = true
    }
 }
 
@@ -78,14 +79,10 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
    }
    
    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-      let cell = tableView.dequeueReusableCellWithCellIdentifier(.ProfileCell)
-      cell.textLabel?.text = "Let's copy twitch/facebook messenger/hangouts for things to put here?"
+      let cell = tableView.dequeueReusableCellWithCellIdentifier(.ProfileCell) as! ProfileHeaderCell
       switch (indexPath.section, indexPath.row){
       case (0,0):
-         cell.textLabel?.text = "Log Out"
-         cell.textLabel?.font = Theme.Fonts.BoldNormalTypeFace.font
-         cell.textLabel?.textColor = UIColor.whiteColor()
-         cell.backgroundColor = Theme.Colors.ForegroundColor.color
+         cell.user = FirebaseManager.manager.user
       default:
          break
       }
@@ -102,5 +99,4 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
          break
       }
    }
-   
 }

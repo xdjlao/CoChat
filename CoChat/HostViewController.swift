@@ -3,16 +3,6 @@ import UIKit
 class HostViewController: UIViewController, ChannelsVCDelegate {
    @IBOutlet var tableView: UITableView!
    
-   var cellContent:[String: [String]] = [
-      "basicContent":["Create A Room",
-         "Name Of Room"],
-      
-      "advancedContent":["Advanced Settings",
-         "Room Entry Key",
-         "Public",
-         "Embed Channels"]
-   ]
-   
    var nameOfRoom:String?
    var roomPassCode:String?
    var createChannels = false
@@ -23,7 +13,6 @@ class HostViewController: UIViewController, ChannelsVCDelegate {
    
    override func viewDidLoad() {
       super.viewDidLoad()
-      
       setUpUI()
       configureTableView()
    }
@@ -121,10 +110,12 @@ extension HostViewController: HostReusableCellDelegate {
          }
       default:
          assertionFailure()
+         
       }
    }
    
    func textFieldDidBeginEditingInCell(textField: UITextField) {
+      textField.alpha = 1.0
       let textFieldPosition = textField.convertPoint(CGPointZero, toView: self.tableView)
       let indexPath = self.tableView.indexPathForRowAtPoint(textFieldPosition)
       let cell = tableView.cellForRowAtIndexPath(indexPath!)
@@ -135,7 +126,6 @@ extension HostViewController: HostReusableCellDelegate {
    func textFieldDidEndEditingInCell() {
       tableView.setContentOffset(CGPointMake(self.tableView.contentOffset.x, 0.0), animated: true)
    }
-   
 }
 
 
@@ -149,29 +139,44 @@ extension HostViewController: UITableViewDelegate, UITableViewDataSource {
    
    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
       let cell = tableView.dequeueReusableCellWithIdentifier("Host Reusable Cell") as! HostReusableCell
-      cell.setUpCellAtIndexPath(indexPath, cellContent: cellContent)
-      cell.delegate = self
+      switch (indexPath.section, indexPath.row){
+      case (0, indexPath.row):
+         cell.hidden = true
+      case (1, 0):
+         cell.titleConstraintToLeftSuperView.constant = 10
+         cell.title.text = "Create a Room"
+         cell.switchToggle.hidden = true
+         cell.createButton.hidden = true
+         return cell
+      default:
+         cell.setUpCellAtIndexPath(indexPath)
+         cell.delegate = self
+      }
       return cell
    }
    
-   
    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-      return 2
+      return 4
    }
    
    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
       switch section {
       case 0:
-         return cellContent["basicContent"]!.count
+         return 0
       case 1:
+         return 1
+      case 2:
+         return cellContent["basicContent"]!.count
+      case 3:
          if toggleAdvancedSettings == true {
             return cellContent["advancedContent"]!.count
          } else {
             return 1
          }
       default:
-         return 0
+         assertionFailure("this section shouldn't exist")
       }
+      return 0
    }
    
    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -180,18 +185,20 @@ extension HostViewController: UITableViewDelegate, UITableViewDataSource {
    
    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
       view.endEditing(true)
-      let index = NSIndexSet(index: 1)
+      let index = NSIndexSet(index: 3)
       switch (indexPath.section, indexPath.row){
-      case (1,0):
+      case (3,0):
+         animateCellBackGround(indexPath)
          toggleAdvancedSettings = !toggleAdvancedSettings
          tableView.scrollEnabled = true
          tableView.reloadSections(index, withRowAnimation: UITableViewRowAnimation.Fade)
-      case (1,3):
+      case (3,3):
+         animateCellBackGround(indexPath)
          if enableSegue == true {
             performSegueWithSegueIdentifier(SegueIdentifier.SegueToChannelsVC, sender: self)
          }
          else {
-            if let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 1, inSection: 0)) as? HostReusableCell {
+            if let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 2)) as? HostReusableCell {
                animateCellText(cell)}
          }
       default:break
@@ -206,6 +213,17 @@ extension HostViewController: UITableViewDelegate, UITableViewDataSource {
          UIView.transitionWithView(cell.title, duration: 0.25, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
             cell.title.textColor = UIColor.whiteColor()
             cell.title.alpha = 0.5
+            }, completion: nil)
+      }
+   }
+   
+   func animateCellBackGround(indexPath: NSIndexPath){
+      let cell = tableView.cellForRowAtIndexPath(indexPath)
+      UIView.animateWithDuration(0.2, animations: { () -> Void in
+         cell?.backgroundColor = Theme.Colors.BackgroundColor.color
+      }) { (Bool) -> Void in
+         UIView.animateWithDuration(0.2, animations: { () -> Void in
+            cell?.backgroundColor = Theme.Colors.ForegroundColor.color
             }, completion: nil)
       }
    }

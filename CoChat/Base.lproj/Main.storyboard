@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10109" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H95-qJ-fS7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H95-qJ-fS7">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10083"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -26,7 +26,7 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="alV-kr-4ds" id="liZ-AC-EsU">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -66,7 +66,7 @@
             <objects>
                 <tabBarController storyboardIdentifier="MainTabBarViewController" automaticallyAdjustsScrollViewInsets="NO" id="H95-qJ-fS7" customClass="MainTabBarViewController" customModule="CoChat" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="qt0-o6-8wg">
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="qt0-o6-8wg">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -81,12 +81,12 @@
             </objects>
             <point key="canvasLocation" x="245" y="307"/>
         </scene>
-        <!--Blndr-->
+        <!--Blend-->
         <scene sceneID="LBd-IA-h9J">
             <objects>
                 <viewController storyboardIdentifier="BrowseViewController" id="Se9-XC-vea" customClass="BrowseViewController" customModule="CoChat" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="bsU-TE-vT7">
-                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
@@ -94,7 +94,7 @@
                                 <rect key="frame" x="0.0" y="28" width="600" height="72"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eoa-47-NS2" id="rrs-qQ-DjV">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="71.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="72"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Jr-3h-dn7" userLabel="Cell Separator">
@@ -156,7 +156,7 @@
                                                                 <constraint firstAttribute="height" constant="79" id="eI9-A3-6k8"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="15"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                             <variation key="default">
                                                                 <mask key="constraints">
@@ -281,7 +281,9 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="cellCountWrapperView" destination="CPu-o3-Gbi" id="go3-HC-pY2"/>
+                                    <outlet property="cellSeperator" destination="3OR-Cz-AEc" id="kz9-ZV-Sjd"/>
                                     <outlet property="cellWrapperView" destination="5Pl-Rg-Kcz" id="27m-JP-bLX"/>
+                                    <outlet property="countCellSeperator" destination="4Jr-3h-dn7" id="UhY-30-dsN"/>
                                     <outlet property="countLabel" destination="T6W-T4-QWT" id="R12-Ux-Ugj"/>
                                     <outlet property="roomTitleLabel" destination="yf4-j9-DHp" id="l0y-ac-G5S"/>
                                 </connections>
@@ -291,7 +293,7 @@
                             <outlet property="dataSource" destination="Se9-XC-vea" id="kqg-Bz-Ofw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Blndr" id="Rvh-Rw-ky5">
+                    <navigationItem key="navigationItem" title="Blend" id="Rvh-Rw-ky5">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Cg8-XS-0YU">
                             <connections>
                                 <segue destination="AEp-Cz-6F3" kind="show" identifier="SegueToHost" id="QMJ-pX-IYi"/>
@@ -305,13 +307,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h4N-6i-DOa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1190" y="1186"/>
+            <point key="canvasLocation" x="1100" y="1186"/>
         </scene>
-        <!--Blndr-->
+        <!--Blend-->
         <scene sceneID="pCh-ib-eyG">
             <objects>
                 <navigationController storyboardIdentifier="BrowseNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" id="KMU-u7-4ap" customClass="BrowseNavigationViewController" customModule="CoChat" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Blndr" id="n7h-k5-Fwl"/>
+                    <tabBarItem key="tabBarItem" title="Blend" id="n7h-k5-Fwl"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="i6d-Hn-EKg">
@@ -325,7 +327,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h8a-ni-MTT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="208" y="1186"/>
+            <point key="canvasLocation" x="245" y="1186"/>
         </scene>
         <!--Profile-->
         <scene sceneID="4Du-vd-znE">
@@ -371,7 +373,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="05g-W3-30Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2091" y="1186"/>
+            <point key="canvasLocation" x="2054" y="1186"/>
         </scene>
         <!--Share-->
         <scene sceneID="rJH-zr-s9O">

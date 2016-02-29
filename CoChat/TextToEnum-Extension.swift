@@ -23,7 +23,7 @@ extension UITableView {
         case Cell = "Cell"
         case RecentRoomCell = "RecentRoomCell"
         case TopRoomCell = "TopRoomCell"
-        case ProfileCell = "ProfileCell"
+        case ProfileCell = "ProfileHeaderCell"
     }
     
     func dequeueReusableCellWithCellIdentifier(cellIdentifier: CellIdentifier) -> UITableViewCell {

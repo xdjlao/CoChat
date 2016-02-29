@@ -9,7 +9,8 @@
 import UIKit
 @objc protocol HostReusableCellDelegate: class {
     func hostReusableCell(cell: HostReusableCell, valueDidChange: AnyObject?)
-    optional func addAnotherChannel(sender:AnyObject?)
+    optional func addNewChannel(sender:AnyObject?)
+    optional func createNewChannel(sender:AnyObject?)
     optional func textFieldDidBeginEditingInCell(textField:UITextField)
     optional func textFieldDidEndEditingInCell()
 }
@@ -22,13 +23,22 @@ enum HostCellType {
     case None
 }
 
+var cellContent:[String: [String]] = [
+    "basicContent":["Name Of Room"],
+    
+    "advancedContent":["Advanced Settings",
+        "Room Entry Key",
+        "Public",
+        "Embed Channels"]
+]
+
+
 
 class HostReusableCell: UITableViewCell, UITextFieldDelegate {
     override func awakeFromNib() {
         backgroundColor = Theme.Colors.ForegroundColor.color
         title.textColor = UIColor.whiteColor()
         title.font = Theme.Fonts.BoldNormalTypeFace.font
-        icon.tintColor = Theme.Colors.ButtonColor.color
         addButton.tintColor = Theme.Colors.ButtonColor.color
         super.awakeFromNib()
     }
@@ -40,13 +50,13 @@ class HostReusableCell: UITableViewCell, UITextFieldDelegate {
     
     @IBOutlet var addButton: UIButton!
     @IBOutlet var titleConstraintToLeftSuperView: NSLayoutConstraint!
-    @IBOutlet var icon: UIImageView!
+    @IBOutlet var switchToggle: UISwitch!
+    @IBOutlet var createButton: UIButton!
     @IBOutlet var title: UITextField! {
         didSet {
             title.delegate = self
         }
     }
-    @IBOutlet var switchToggle: UISwitch!
     
     
     
@@ -59,6 +69,7 @@ class HostReusableCell: UITableViewCell, UITextFieldDelegate {
     func textFieldDidEndEditing(textField: UITextField) {
         if textField.text == ""  {
             textField.text = originalTextValue
+            textField.alpha = 0.5
         }
         delegate?.textFieldDidEndEditingInCell!()
     }
@@ -73,61 +84,57 @@ class HostReusableCell: UITableViewCell, UITextFieldDelegate {
         delegate?.hostReusableCell(self, valueDidChange: sender)
     }
     
-    func setUpCellAtIndexPath(indexPath:NSIndexPath, cellContent:[String: [String]]?) {
-        let basicContent = cellContent?["basicContent"]
-        let advancedContent = cellContent?["advancedContent"]
-        
-        icon.image = nil
-        userInteractionEnabled = true
-        title.userInteractionEnabled = true
-        addButton.hidden = true
-        switchToggle.hidden = true
-        selectionStyle = .None
-        accessoryType = UITableViewCellAccessoryType.None
-        
+    func setUpCellAtIndexPath(indexPath:NSIndexPath) {
+        guard let basicContent = cellContent["basicContent"] else {return print("couldn't read basicContent")}
+        guard let advancedContent = cellContent["advancedContent"] else {return print("couldn't read basicContent")}
+        resetCellUI()
         switch (indexPath.section, indexPath.row) {
-        case (0,0)://Create a Room
-            titleConstraintToLeftSuperView.constant = 10
-            title.text = basicContent![indexPath.row]
-            userInteractionEnabled = false
-        case (1,0)://Advanced Settings
-            title.text = advancedContent![indexPath.row]
+        case (2,0):
+            title.text = basicContent[indexPath.row]
+            title.alpha = 0.5
+            type = .NameOfRoom
+        case (3,0):
+            title.text = advancedContent[indexPath.row]
             title.userInteractionEnabled = false
             addButton.hidden = false
             addButton.imageView?.image = UIImage(named: "downChevron")
+            addButton.alpha = 1.0
             addButton.enabled = false
-        case (0,1):
-            title.text = basicContent![indexPath.row]
-            title.alpha = 0.5
-            type = .NameOfRoom
-        case (1,1):
-            title.text = advancedContent![indexPath.row]
+        case (3,1):
+            title.text = advancedContent[indexPath.row]
             title.alpha = 0.5
             type = .PasscodeOfRoom
-        case (1,2):
-            title.text = advancedContent![indexPath.row]
+        case (3,2):
+            title.text = advancedContent[indexPath.row]
             title.userInteractionEnabled = false
             type = .Privacy
             switchToggle.hidden = false
-            switchToggle.onTintColor = Theme.Colors.ButtonColor.color
-        case (1,3):
-            title.text = advancedContent![indexPath.row]
+        case (3,3):
+            title.text = advancedContent[indexPath.row]
             title.userInteractionEnabled = false
-            userInteractionEnabled = true
             accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
-        case (2,0):
-            title.text = "Add Another Channel"
-            title.userInteractionEnabled = false
-            titleConstraintToLeftSuperView.constant = 10
-            addButton.hidden = false
-            userInteractionEnabled = true
         default:
             assertionFailure()
         }
     }
     
-    @IBAction func addButtonTapped(sender: UIButton) {
-        delegate?.addAnotherChannel!(sender)
+    func resetCellUI(){
+        userInteractionEnabled = true
+        title.userInteractionEnabled = true
+        selectionStyle = .None
+        accessoryType = UITableViewCellAccessoryType.None
+        addButton.hidden = true
+        switchToggle.hidden = true
+        createButton.hidden = true
+        selectionStyle = .None
+    }
+    
+    @IBAction func addWasTapped(sender: UIButton) {
+        delegate?.addNewChannel?(sender)
+    }
+    
+    @IBAction func createWasTapped(sender: UIButton) {
+        delegate?.createNewChannel?(sender)
     }
     
 }

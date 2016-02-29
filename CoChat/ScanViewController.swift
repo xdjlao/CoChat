@@ -14,7 +14,7 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
     @IBOutlet var passcodeLabelWrapper: UIView!
    
     override func viewDidLoad() {
-        joinViewWrapper.backgroundColor = Theme.Colors.BackgroundColor.color
+        setUpUI()
         super.viewDidLoad()
     }
    
@@ -29,6 +29,12 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
    }
     @IBAction func onJoinButtonPressed(sender: UIButton) {
         checkForRoomWithEntryKey(passcodeLabel.text!)
+    }
+    
+    func setUpUI(){
+        joinViewWrapper.backgroundColor = Theme.Colors.BackgroundColor.color
+        passcodeLabelWrapper.backgroundColor = Theme.Colors.ForegroundColor.color
+
     }
     
     func startScan() {
