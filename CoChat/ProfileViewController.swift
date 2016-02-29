@@ -24,6 +24,7 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
    }
    
    func updateUserLabels() {
+
       profileImageView.setImageWithURL(NSURL(string: FirebaseManager.manager.user.profileImageURL)!, placeholderImage: UIImage(named: "profileImageDummy"))
       nameLabel.text = FirebaseManager.manager.user.name
    }
