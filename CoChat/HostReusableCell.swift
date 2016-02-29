@@ -95,6 +95,7 @@ class HostReusableCell: UITableViewCell, UITextFieldDelegate {
             title.userInteractionEnabled = false
             addButton.hidden = false
             addButton.imageView?.image = UIImage(named: "downChevron")
+            addButton.alpha = 1.0
             addButton.enabled = false
         case (0,1):
             title.text = basicContent![indexPath.row]
