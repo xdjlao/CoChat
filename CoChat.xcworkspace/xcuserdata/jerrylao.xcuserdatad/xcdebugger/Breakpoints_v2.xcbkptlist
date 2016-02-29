@@ -108,12 +108,12 @@
                   moduleName = "CoChat"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jerrylao/Desktop/CoChat/CoChat/MessagingViewController-Data.swift"
-                  timestampString = "478463976.829498"
+                  timestampString = "478469060.311868"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "64"
                   endingLineNumber = "64"
-                  offsetFromSymbolStart = "28">
+                  offsetFromSymbolStart = "31">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -123,7 +123,7 @@
                   moduleName = "CoChat"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jerrylao/Desktop/CoChat/CoChat/MessagingViewController-Data.swift"
-                  timestampString = "478463976.829859"
+                  timestampString = "478469060.312154"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "65"
