@@ -16,6 +16,7 @@
 		91E9B9E41C7BCD33006F4CF0 /* Host.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91E9B9E01C7BCD33006F4CF0 /* Host.storyboard */; };
 		91E9B9E61C7BCFC4006F4CF0 /* Channels.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91E9B9E51C7BCFC4006F4CF0 /* Channels.storyboard */; };
 		91E9B9E81C7BD0F1006F4CF0 /* ChannelsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E9B9E71C7BD0F1006F4CF0 /* ChannelsVC.swift */; };
+		91F0C6F11C8412B200A473EA /* WhisperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F0C6F01C8412B200A473EA /* WhisperCell.swift */; };
 		91F5258A1C825845009C9BF1 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F525891C825845009C9BF1 /* UIColor+Extension.swift */; };
 		91F5259E1C82616B009C9BF1 /* Lato-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91F5258C1C82616B009C9BF1 /* Lato-Heavy.ttf */; };
 		91F525A01C82616B009C9BF1 /* Lato-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91F5258E1C82616B009C9BF1 /* Lato-Medium.ttf */; };
@@ -84,6 +85,7 @@
 		91E9B9E01C7BCD33006F4CF0 /* Host.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Host.storyboard; sourceTree = "<group>"; };
 		91E9B9E51C7BCFC4006F4CF0 /* Channels.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Channels.storyboard; sourceTree = "<group>"; };
 		91E9B9E71C7BD0F1006F4CF0 /* ChannelsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelsVC.swift; sourceTree = "<group>"; };
+		91F0C6F01C8412B200A473EA /* WhisperCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhisperCell.swift; sourceTree = "<group>"; };
 		91F525891C825845009C9BF1 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		91F5258C1C82616B009C9BF1 /* Lato-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Heavy.ttf"; sourceTree = "<group>"; };
 		91F5258E1C82616B009C9BF1 /* Lato-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Medium.ttf"; sourceTree = "<group>"; };
@@ -328,6 +330,7 @@
 				A288F7D01C7860B500DF2847 /* GeneralMessageCell.swift */,
 				91E9B9DE1C7BCD33006F4CF0 /* HostReusableCell.swift */,
 				A2BE2B391C81226C00ED71E4 /* TopRoomCell.swift */,
+				91F0C6F01C8412B200A473EA /* WhisperCell.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -516,7 +519,7 @@
 				TargetAttributes = {
 					A288F76E1C7840E600DF2847 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = C4P8U7398K;
+						DevelopmentTeam = 9F59S7VZE2;
 						SystemCapabilities = {
 							com.apple.SafariKeychain = {
 								enabled = 0;
@@ -644,6 +647,7 @@
 				D8AE2D191C7D28F00002A31D /* Whisper.swift in Sources */,
 				A288F7DA1C7867EA00DF2847 /* MenuChannelViewController.swift in Sources */,
 				A288F7B91C785B2D00DF2847 /* MessagingViewController-Data.swift in Sources */,
+				91F0C6F11C8412B200A473EA /* WhisperCell.swift in Sources */,
 				91F5258A1C825845009C9BF1 /* UIColor+Extension.swift in Sources */,
 				A288F7AD1C7858FE00DF2847 /* Room.swift in Sources */,
 				A2BE2B2A1C7E708C00ED71E4 /* MessagingNavigationViewController.swift in Sources */,

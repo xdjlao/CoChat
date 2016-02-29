@@ -3,11 +3,13 @@ import Social
 
 class ShareViewController: UIViewController {
     
+    @IBOutlet weak var qrViewWrapper: UIView!
     @IBOutlet var QRImageView: UIImageView!
     @IBOutlet weak var shareItemLabel: UILabel!
     @IBOutlet weak var shareItemSegmentedControl: UISegmentedControl!
     @IBOutlet weak var facebookButtonOutlet: UIButton!
     @IBOutlet weak var twitterButtonOutlet: UIButton!
+    @IBOutlet weak var copyButtonOutlet: UIButton!
     
     var channel:Channel?
     var room:Room?
@@ -19,7 +21,8 @@ class ShareViewController: UIViewController {
         generateQRCode()
         showShareItem()
         navigationItem.title = "Share"
-        
+        qrViewWrapper.backgroundColor = Theme.Colors.NavigationBarColor.color
+        setSocialIcons()
     }
     
     func launchUniversalLink(){
@@ -38,6 +41,10 @@ class ShareViewController: UIViewController {
         }
     }
     
+    func setSocialIcons() {
+        facebookButtonOutlet.layer.cornerRadius = facebookButtonOutlet.frame.size.width/2
+        twitterButtonOutlet.layer.cornerRadius = twitterButtonOutlet.frame.size.width/2
+    }
     
     func generateQRCode() {
         guard let channelPassCode = room?.password else {return}
@@ -62,11 +69,16 @@ class ShareViewController: UIViewController {
         let transformedImage = ciImage.imageByApplyingTransform(CGAffineTransformMakeScale(scaleX, scaleY))
         
         QRImageView.image = UIImage(CIImage: transformedImage)
-        
+        let tapGesture = UITapGestureRecognizer(target: self, action: "onImageTapped:")
+        QRImageView.addGestureRecognizer(tapGesture)
     }
-    
+
     @IBAction func onSaveImage(sender: UIButton) {
         //UIImageWriteToSavedPhotosAlbum(QRImageView.image!, self, Selector("image:didFinishSavingWithError:contextInfo:"), nil)
+        screenShotMethod()
+    }
+    
+    func onImageTapped(sender: UITapGestureRecognizer) {
         screenShotMethod()
     }
     
