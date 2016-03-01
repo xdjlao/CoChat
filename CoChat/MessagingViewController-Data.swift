@@ -38,13 +38,13 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
       }
    }
    
-   func addRoomToRecent() {
-      guard !(FirebaseManager.manager.user.recentRooms.contains ({ (room: Room) -> Bool in
-         return room === self.room
-      })) else { return }
-      FirebaseManager.manager.user.recentRoomUIDs.append(room.uid)
-      FirebaseManager.manager.user.recentRooms.append(room)
-   }
+//   func addRoomToRecent() {
+//      guard !(FirebaseManager.manager.user.recentRooms.contains ({ (room: Room) -> Bool in
+//         return room === self.room
+//      })) else { return }
+//      FirebaseManager.manager.user.recentRoomUIDs.append(room.uid)
+//      FirebaseManager.manager.user.recentRooms.append(room)
+//   }
    
    
    var startUID: String!

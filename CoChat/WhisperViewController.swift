@@ -3,6 +3,10 @@ import UIKit
 class WhisperViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
  var whispers = [Whisper]()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.backgroundColor = Theme.Colors.BackgroundColor.color
+    }
     
 }
 

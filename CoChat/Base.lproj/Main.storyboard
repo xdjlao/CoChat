@@ -22,13 +22,69 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuChannelCell" id="alV-kr-4ds">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuChannelCell" rowHeight="66" id="alV-kr-4ds" customClass="MenuChannelsCell" customModule="CoChat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="alV-kr-4ds" id="liZ-AC-EsU">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="65.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="caA-gT-JZD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="527" height="65.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ed7-R3-Jpr">
+                                                            <rect key="frame" x="8" y="0.0" width="519" height="65.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="527" id="2zn-Ji-cpR"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Ed7-R3-Jpr" secondAttribute="bottom" id="g3h-lx-nu9"/>
+                                                        <constraint firstItem="Ed7-R3-Jpr" firstAttribute="leading" secondItem="caA-gT-JZD" secondAttribute="leading" constant="8" id="hCS-9m-doO"/>
+                                                        <constraint firstItem="Ed7-R3-Jpr" firstAttribute="top" secondItem="caA-gT-JZD" secondAttribute="top" id="kCR-hQ-jUH"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Ed7-R3-Jpr" secondAttribute="trailing" id="tEP-C9-Mnh"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UES-dS-CYC">
+                                                    <rect key="frame" x="535" y="0.0" width="65" height="65.5"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cI6-bv-ALY">
+                                                            <rect key="frame" x="17" y="16" width="30" height="34"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="34" id="Sic-Xv-R8s"/>
+                                                                <constraint firstAttribute="width" constant="30" id="mea-Fi-C86"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <action selector="favoriteButtonWasTapped:" destination="alV-kr-4ds" eventType="touchUpInside" id="0z5-mW-Ec0"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="65" id="Mef-KI-2Mr"/>
+                                                        <constraint firstAttribute="height" constant="65.5" id="lAb-U2-YLq"/>
+                                                        <constraint firstItem="cI6-bv-ALY" firstAttribute="centerX" secondItem="UES-dS-CYC" secondAttribute="centerX" id="n1Y-hw-H0R"/>
+                                                        <constraint firstItem="cI6-bv-ALY" firstAttribute="centerY" secondItem="UES-dS-CYC" secondAttribute="centerY" id="yCX-Gk-qC5"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="UES-dS-CYC" secondAttribute="trailing" constant="-8" id="B4z-G9-ZhT"/>
+                                                <constraint firstItem="caA-gT-JZD" firstAttribute="leading" secondItem="liZ-AC-EsU" secondAttribute="leading" id="H4t-zF-TA8"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="UES-dS-CYC" secondAttribute="bottom" constant="-8" id="Xlv-xY-avC"/>
+                                                <constraint firstItem="caA-gT-JZD" firstAttribute="top" secondItem="liZ-AC-EsU" secondAttribute="top" id="bcI-67-dm9"/>
+                                                <constraint firstAttribute="bottom" secondItem="caA-gT-JZD" secondAttribute="bottom" id="byr-fW-14r"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="buttonContainer" destination="UES-dS-CYC" id="xow-4u-WNT"/>
+                                            <outlet property="channelsContainer" destination="caA-gT-JZD" id="FyB-Cx-xVC"/>
+                                            <outlet property="channelsLabel" destination="Ed7-R3-Jpr" id="8MG-1d-bAL"/>
+                                            <outlet property="favoriteButton" destination="cI6-bv-ALY" id="h40-2q-Jo2"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -46,6 +102,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="tableView" destination="X6f-Vf-x8U" id="YNl-iz-cmy"/>
                         <segue destination="dnP-eK-Vky" kind="show" identifier="SegueToChannelsVC" id="UWY-Vv-F8i"/>
                     </connections>
                 </viewController>
@@ -355,7 +412,7 @@
         <scene sceneID="pCh-ib-eyG">
             <objects>
                 <navigationController storyboardIdentifier="BrowseNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" id="KMU-u7-4ap" customClass="BrowseNavigationViewController" customModule="CoChat" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" enabled="NO" title="Blend" image="blendColorLogo-Small" id="n7h-k5-Fwl"/>
+                    <tabBarItem key="tabBarItem" title="Blend" image="blendColorLogo-Small" id="n7h-k5-Fwl"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="i6d-Hn-EKg">

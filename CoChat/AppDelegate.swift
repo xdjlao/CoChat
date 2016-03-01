@@ -44,19 +44,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
-    
-    //    func queueLaunchVideo(){
-    //
-    //        guard let filePath: String = NSBundle.mainBundle().pathForResource("launch", ofType: "mp4") else { return}
-    //        let videoUrl = NSURL(fileURLWithPath: filePath)
-    //        let mediaPlayer = MPMoviePlayerController(contentURL: videoUrl)
-    //        mediaPlayer.shouldAutoplay = true
-    //        mediaPlayer.movieSourceType = MPMovieSourceType.File
-    //        mediaPlayer.view.frame = containerView.frame
-    //        containerView.addSubview(mediaPlayer.view)
-    //        mediaPlayer.prepareToPlay()
-    //        mediaPlayer.play()
-    
    
 
 

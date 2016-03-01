@@ -27,7 +27,7 @@ class BrowseViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        getRecentRooms()
+//        getRecentRooms()
         getAllRooms()
     }
     
@@ -35,7 +35,7 @@ class BrowseViewController: UIViewController {
         tableView.rowHeight = 71
         tableView.separatorColor = UIColor.clearColor()
         tableView.separatorStyle = UITableViewCellSeparatorStyle.None
-        tableView.backgroundColor = Theme.Colors.NavigationBarColor.color
+        tableView.backgroundColor = Theme.Colors.BackgroundColor.color
     }
     
     func getAllRooms() {
@@ -45,21 +45,21 @@ class BrowseViewController: UIViewController {
         })
     }
     
-    func getRecentRooms() {
-        manager.user.recentRoomUIDs.forEach { roomUID in
-            ref.childByAppendingPath("/Room").queryOrderedByKey().queryEqualToValue(roomUID).observeSingleEventOfType(.Value, withBlock: { snapshot in
-                guard let value = snapshot.value as? [NSObject: AnyObject] else { return }
-                
-                let keys = Array(value.keys)
-                let values = Array(value.values)
-                let uid = keys[0] as? String ?? "No UID"
-                guard let roomInformation = values[0] as? [NSObject: AnyObject] else { return }
-                
-                let room = Room(fromDictionary: roomInformation, andUID: uid)
-                self.recentRooms.append(room)
-            })
-        }
-    }
+//    func getRecentRooms() {
+//        manager.user.recentRoomUIDs.forEach { roomUID in
+//            ref.childByAppendingPath("/Room").queryOrderedByKey().queryEqualToValue(roomUID).observeSingleEventOfType(.Value, withBlock: { snapshot in
+//                guard let value = snapshot.value as? [NSObject: AnyObject] else { return }
+//                
+//                let keys = Array(value.keys)
+//                let values = Array(value.values)
+//                let uid = keys[0] as? String ?? "No UID"
+//                guard let roomInformation = values[0] as? [NSObject: AnyObject] else { return }
+//                
+//                let room = Room(fromDictionary: roomInformation, andUID: uid)
+//                self.recentRooms.append(room)
+//            })
+//        }
+//    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         guard let nav = segue.destinationViewController as? MessagingNavigationViewController else { return }

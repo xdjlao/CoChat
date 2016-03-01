@@ -25,6 +25,7 @@ extension UITableView {
         case RecentRoomCell = "RecentRoomCell"
         case TopRoomCell = "TopRoomCell"
         case ProfileCell = "ProfileHeaderCell"
+        case MenuChannelsCell = "MenuChannelCell"
     }
     
     func dequeueReusableCellWithCellIdentifier(cellIdentifier: CellIdentifier) -> UITableViewCell {

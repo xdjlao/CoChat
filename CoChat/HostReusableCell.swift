@@ -64,7 +64,7 @@ class HostReusableCell: UITableViewCell, UITextFieldDelegate {
         originalTextValue = textField.text
         textField.text = ""
         delegate?.textFieldDidBeginEditingInCell!(textField)
-        delegate?.animateTextField!(textField)
+//        delegate?.animateTextField!(textField)
     }
     
     func textFieldDidEndEditing(textField: UITextField) {

@@ -13,6 +13,7 @@
 		912607BD1C855EB40015D487 /* RootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912607BC1C855EB40015D487 /* RootVC.swift */; };
 		912607C21C856C350015D487 /* LaunchVideo.mov in Resources */ = {isa = PBXBuildFile; fileRef = 912607C11C856C350015D487 /* LaunchVideo.mov */; };
 		919549221C7E4F9D00C61805 /* ChannelHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 919549201C7E4F9D00C61805 /* ChannelHeaderCell.xib */; };
+		919FBE191C8629C4008194AC /* MenuChannelsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919FBE181C8629C4008194AC /* MenuChannelsCell.swift */; };
 		91B18F5E1C7CE02300F20531 /* Messaging.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91B18F5C1C7CE02300F20531 /* Messaging.storyboard */; };
 		91B18F601C7CE71900F20531 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B18F5F1C7CE71900F20531 /* TableView.swift */; };
 		91E9B9E11C7BCD33006F4CF0 /* HostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E9B9DD1C7BCD33006F4CF0 /* HostViewController.swift */; };
@@ -64,7 +65,6 @@
 		A2BE2B141C7BCC2500ED71E4 /* Join.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2BE2B121C7BCC2500ED71E4 /* Join.storyboard */; };
 		A2BE2B181C7CE33000ED71E4 /* WhisperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B171C7CE33000ED71E4 /* WhisperViewController.swift */; };
 		A2BE2B201C7CE44E00ED71E4 /* Whisper.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2BE2B1E1C7CE44E00ED71E4 /* Whisper.storyboard */; };
-		A2BE2B261C7CE97000ED71E4 /* WhisperMessagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B251C7CE97000ED71E4 /* WhisperMessagingViewController.swift */; };
 		A2BE2B281C7E60AD00ED71E4 /* DismissSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B271C7E60AD00ED71E4 /* DismissSegue.swift */; };
 		A2BE2B2A1C7E708C00ED71E4 /* MessagingNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B291C7E708C00ED71E4 /* MessagingNavigationViewController.swift */; };
 		A2BE2B2C1C7E72A200ED71E4 /* BrowseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B2B1C7E72A200ED71E4 /* BrowseNavigationViewController.swift */; };
@@ -85,6 +85,7 @@
 		912607BC1C855EB40015D487 /* RootVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootVC.swift; sourceTree = "<group>"; };
 		912607C11C856C350015D487 /* LaunchVideo.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = LaunchVideo.mov; sourceTree = "<group>"; };
 		919549201C7E4F9D00C61805 /* ChannelHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChannelHeaderCell.xib; sourceTree = "<group>"; };
+		919FBE181C8629C4008194AC /* MenuChannelsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuChannelsCell.swift; sourceTree = "<group>"; };
 		91B18F5D1C7CE02300F20531 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Messaging.storyboard; sourceTree = "<group>"; };
 		91B18F5F1C7CE71900F20531 /* TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		91E9B9DD1C7BCD33006F4CF0 /* HostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostViewController.swift; sourceTree = "<group>"; };
@@ -138,7 +139,6 @@
 		A2BE2B131C7BCC2500ED71E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Join.storyboard; sourceTree = "<group>"; };
 		A2BE2B171C7CE33000ED71E4 /* WhisperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhisperViewController.swift; sourceTree = "<group>"; };
 		A2BE2B1F1C7CE44E00ED71E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Whisper.storyboard; sourceTree = "<group>"; };
-		A2BE2B251C7CE97000ED71E4 /* WhisperMessagingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhisperMessagingViewController.swift; sourceTree = "<group>"; };
 		A2BE2B271C7E60AD00ED71E4 /* DismissSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissSegue.swift; sourceTree = "<group>"; };
 		A2BE2B291C7E708C00ED71E4 /* MessagingNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagingNavigationViewController.swift; sourceTree = "<group>"; };
 		A2BE2B2B1C7E72A200ED71E4 /* BrowseNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseNavigationViewController.swift; sourceTree = "<group>"; };
@@ -321,7 +321,6 @@
 				A288F7D21C7860D800DF2847 /* Messaging */,
 				A288F7761C7840E600DF2847 /* Main.storyboard */,
 				912607B81C8550B10015D487 /* Launch.storyboard */,
-				91B18F5C1C7CE02300F20531 /* Messaging.storyboard */,
 				A288F7DD1C7873D100DF2847 /* Login.storyboard */,
 				91E9B9E01C7BCD33006F4CF0 /* Host.storyboard */,
 				91E9B9DF1C7BCD33006F4CF0 /* HostReusableCell.xib */,
@@ -348,6 +347,7 @@
 		A288F7D21C7860D800DF2847 /* Messaging */ = {
 			isa = PBXGroup;
 			children = (
+				91B18F5C1C7CE02300F20531 /* Messaging.storyboard */,
 				A2BE2B061C7998C000ED71E4 /* Share */,
 				A288F7D51C78612A00DF2847 /* GeneralMessageCell.xib */,
 				A288F7D71C7862C700DF2847 /* UserMessageCell.xib */,
@@ -375,6 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				A288F7D91C7867EA00DF2847 /* MenuChannelViewController.swift */,
+				919FBE181C8629C4008194AC /* MenuChannelsCell.swift */,
 			);
 			name = MenuChannel;
 			sourceTree = "<group>";
@@ -448,22 +449,13 @@
 			isa = PBXGroup;
 			children = (
 				A2BE2B1E1C7CE44E00ED71E4 /* Whisper.storyboard */,
-				A2BE2B231C7CE92900ED71E4 /* WhisperMessaging */,
 			);
 			name = Whisper;
-			sourceTree = "<group>";
-		};
-		A2BE2B231C7CE92900ED71E4 /* WhisperMessaging */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = WhisperMessaging;
 			sourceTree = "<group>";
 		};
 		A2BE2B241C7CE94700ED71E4 /* WhisperMessaging */ = {
 			isa = PBXGroup;
 			children = (
-				A2BE2B251C7CE97000ED71E4 /* WhisperMessagingViewController.swift */,
 			);
 			name = WhisperMessaging;
 			sourceTree = "<group>";
@@ -670,12 +662,12 @@
 				A288F7B11C78592900DF2847 /* User.swift in Sources */,
 				A288F7BB1C785C4500DF2847 /* TextToEnum-Extension.swift in Sources */,
 				A288F7A51C7841B600DF2847 /* BrowseViewController.swift in Sources */,
-				A2BE2B261C7CE97000ED71E4 /* WhisperMessagingViewController.swift in Sources */,
 				A2BE2B2C1C7E72A200ED71E4 /* BrowseNavigationViewController.swift in Sources */,
 				A288F7C61C785F4400DF2847 /* CheckForLoggedIn-Extension.swift in Sources */,
 				A288F7CA1C785FAE00DF2847 /* LoginViewController.swift in Sources */,
 				A2BE2B281C7E60AD00ED71E4 /* DismissSegue.swift in Sources */,
 				912607BD1C855EB40015D487 /* RootVC.swift in Sources */,
+				919FBE191C8629C4008194AC /* MenuChannelsCell.swift in Sources */,
 				A288F7D11C7860B500DF2847 /* GeneralMessageCell.swift in Sources */,
 				A288F7BD1C785CAE00DF2847 /* MessagingViewController-UI.swift in Sources */,
 				A2BE2B0F1C7B9F4400ED71E4 /* ProfileViewController.swift in Sources */,

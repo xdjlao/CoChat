@@ -4,7 +4,7 @@ import UIKit
     optional func menuChannelViewController(menuChannelViewController: MenuChannelViewController, didSelectChannel channel: AnyObject)
 }
 
-class MenuChannelViewController: UIViewController {
+class MenuChannelViewController: UIViewController, MenuChannelsCellDelegate {
     @IBOutlet var tableView: UITableView!
     
     var channels: [Channel]!
@@ -13,28 +13,47 @@ class MenuChannelViewController: UIViewController {
     weak var delegate: MenuChannelViewControllerDelegate?
     
     override func viewDidLoad() {
-        navigationItem.title = "Channels"
-        let addChannelButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "addChannel")
-        navigationItem.rightBarButtonItem = addChannelButton
+        setUpUI()
+    }
+    
+    func setUpUI(){
+    navigationItem.title = "Channels"
+    let addChannelButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "addChannel")
+    navigationItem.rightBarButtonItem = addChannelButton
+    view.backgroundColor = Theme.Colors.BackgroundColor.color
+    tableView.backgroundColor = Theme.Colors.BackgroundColor.color
+    tableView.separatorInset = UIEdgeInsetsZero
+    tableView.tableFooterView = UIView()
+    }
+    
+    func addFavorite(channelName: String) {
+        //query for channel UID and add to user here
+    }
+    func removeFavorite(channelName: String) {
+        //same same
+    }
+}
+
+extension MenuChannelViewController : UITableViewDataSource, UITableViewDelegate  {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithCellIdentifier(UITableView.CellIdentifier.MenuChannelsCell) as! MenuChannelsCell
+        cell.channelsLabel?.text = channels[indexPath.row].title
+        cell.delegate = self
+        return cell
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return channels.count
     }
     
-}
-
-extension MenuChannelViewController : UITableViewDataSource, UITableViewDelegate  {
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("MenuChannelCell", forIndexPath: indexPath)
-        cell.textLabel?.text = channels[indexPath.row].title
-        return cell
-    }
-    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let channel = channels[indexPath.row]
         self.delegate?.menuChannelViewController!(self, didSelectChannel: channel)
         navigationController?.popViewControllerAnimated(true)
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 66
     }
     
     func addChannel() {

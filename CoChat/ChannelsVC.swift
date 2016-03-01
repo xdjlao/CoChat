@@ -46,7 +46,7 @@ class ChannelsVC: UIViewController {
     
     func setUpUI(){
         tableView.separatorStyle = .None
-        tableView.backgroundColor = Theme.Colors.ForegroundColor.color
+        tableView.backgroundColor = Theme.Colors.BackgroundColor.color
     }
 }
 
