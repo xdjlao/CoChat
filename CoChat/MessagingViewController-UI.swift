@@ -182,7 +182,7 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
    
    
    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      return messages.count ?? 0
+      return messages.count
    }
    
    func tableViewOrientation(){

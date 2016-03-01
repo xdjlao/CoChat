@@ -12,9 +12,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Firebase.defaultConfig().persistenceEnabled = true
     }
     
-    
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
+    func uiSetup() {
         window?.tintColor = Theme.Colors.BackgroundColor.color
         let navBarAppearance = UINavigationBar.appearance()
         let navBarButtonAppearance = UIBarButtonItem.appearance()
@@ -33,14 +31,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tabBarAppearance.backgroundColor = Theme.Colors.NavigationBarColor.color
         
         
+    }
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        uiSetup()
         
-        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-      FirebaseManager.manager.ref.observeAuthEventWithBlock { (authData: FAuthData?) in
-         print(authData)
-            if let authData = authData {
-                FirebaseManager.manager.handleUserAuthData(authData, withMainQueueCompletionHandler: nil)
+        FirebaseManager.manager.ref.observeAuthEventWithBlock { authData in
+            guard let authData = authData else { return }
+            FirebaseManager.manager.handleUserAuthData(authData) { user in
+                guard let user = user else { return }
+                print("\(user.name) authed in appDelegate")
             }
         }
+        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         return true
     }
     
@@ -53,11 +55,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
                 let messageStoryboardNavigation = UIStoryboard(name: "Main", bundle: nil)
                 let mainTab = messageStoryboardNavigation.instantiateViewControllerWithIdentifier("MainTabBarViewController") as? MainTabBarViewController
-
+                
                 self.window!.rootViewController = mainTab
                 
                 let rootVC = self.window!.rootViewController as! MainTabBarViewController
-
+                
                 rootVC.selectedIndex = 0
                 
                 let browseNav = rootVC.viewControllers![0] as! BrowseNavigationViewController
@@ -65,12 +67,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     browseVC.performSegueWithSegueIdentifier(.SegueToMessaging, sender: room)
                 })
-                
             })
-            return true
-        } else {
-            return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
         }
+        return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
     }
     
     

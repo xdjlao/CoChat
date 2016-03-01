@@ -33,7 +33,6 @@ class FirebaseManager {
       user = User(name: name, profileImageURL: profileImageURL, uid: uid)
       getUserStoredData()
       completionHandler?(user: user)
-      print(__FUNCTION__)
    }
    
    func getUserStoredData() {

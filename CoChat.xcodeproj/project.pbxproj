@@ -68,7 +68,6 @@
 		A2BE2B3A1C81226C00ED71E4 /* TopRoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B391C81226C00ED71E4 /* TopRoomCell.swift */; };
 		D8AE2D191C7D28F00002A31D /* Whisper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE2D181C7D28F00002A31D /* Whisper.swift */; };
 		D8AE2D1B1C7D2E560002A31D /* DualQueriedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE2D1A1C7D2E560002A31D /* DualQueriedType.swift */; };
-		D8DF887A1C826E1C00871FFA /* FirebaseArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DF88791C826E1C00871FFA /* FirebaseArray.swift */; };
 		FE075CF3C95FB29BE89AA0A4 /* Pods_CoChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70EBED03AAABBA95CBA945A5 /* Pods_CoChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -139,7 +138,6 @@
 		A2BE2B391C81226C00ED71E4 /* TopRoomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopRoomCell.swift; sourceTree = "<group>"; };
 		D8AE2D181C7D28F00002A31D /* Whisper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Whisper.swift; sourceTree = "<group>"; };
 		D8AE2D1A1C7D2E560002A31D /* DualQueriedType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DualQueriedType.swift; sourceTree = "<group>"; };
-		D8DF88791C826E1C00871FFA /* FirebaseArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseArray.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,7 +216,6 @@
 				D8AE2D1A1C7D2E560002A31D /* DualQueriedType.swift */,
 				A288F7B01C78592900DF2847 /* User.swift */,
 				A288F7AA1C78588A00DF2847 /* FirebaseManager.swift */,
-				D8DF88791C826E1C00871FFA /* FirebaseArray.swift */,
 				A288F7AC1C7858FE00DF2847 /* Room.swift */,
 				A288F7AE1C78591800DF2847 /* Channel.swift */,
 				A288F7B21C78593D00DF2847 /* Message.swift */,
@@ -513,13 +510,13 @@
 		A288F7671C7840E600DF2847 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Jerry;
 				TargetAttributes = {
 					A288F76E1C7840E600DF2847 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 9F59S7VZE2;
+						DevelopmentTeam = 72MNHNDUNH;
 						SystemCapabilities = {
 							com.apple.SafariKeychain = {
 								enabled = 0;
@@ -669,7 +666,6 @@
 				A2BE2B0F1C7B9F4400ED71E4 /* ProfileViewController.swift in Sources */,
 				A288F7731C7840E600DF2847 /* AppDelegate.swift in Sources */,
 				A2A0A7111C83E93A00E4CDDC /* ProfileHeaderCell.swift in Sources */,
-				D8DF887A1C826E1C00871FFA /* FirebaseArray.swift in Sources */,
 				A288F7A91C78524600DF2847 /* ScanViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -814,13 +810,20 @@
 			baseConfigurationReference = 587D22B4E734A1D30A6BED37 /* Pods-CoChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/CoChat",
+				);
 				INFOPLIST_FILE = CoChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lao.jerry.CoChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -829,8 +832,14 @@
 			baseConfigurationReference = 38620A9AF6B45CA19AD5E427 /* Pods-CoChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/CoChat",
+				);
 				INFOPLIST_FILE = CoChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lao.jerry.CoChat;

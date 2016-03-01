@@ -5,45 +5,46 @@ import FBSDKLoginKit
 import FBSDKShareKit
 
 extension UIViewController {
-   
-   func presentLoginScreen() {
-      let storyboard = UIStoryboard(name: "Login", bundle: nil)
-      guard let loginVC = storyboard.instantiateInitialViewController() as? LoginViewController else { return }
-      presentViewController(loginVC, animated: true, completion: nil)
-   }
-   
-   func createFBLoginButtonWithPosition(x: CGFloat, y: CGFloat) -> FBSDKLoginButton {
-      let fbLoginButton = FBSDKLoginButton()
-      fbLoginButton.center = CGPoint(x: x, y: y)
-      fbLoginButton.readPermissions = ["public_profile", "email"]
-      view.addSubview(fbLoginButton)
-      return fbLoginButton
-   }
-   func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
-      if let error = error {
-         print("Facebook login failed. Error: \(error)")
-      } else if result.isCancelled {
-         print("Facebook login was cancelled")
-      } else {
-         let accessToken = FBSDKAccessToken.currentAccessToken().tokenString
-         FirebaseManager.manager.ref.authWithOAuthProvider("facebook", token: accessToken, withCompletionBlock: { error, authData in
-            if let error = error {
-               print("Login failed with error: \(error)")
-            } else {
-               print("Logged in! \(authData)")
-               FirebaseManager.manager.handleUserAuthData(authData, withMainQueueCompletionHandler: { user in
-                  self.dismissViewControllerAnimated(true, completion: nil)
-               })
-            }
-         })
-      }        
-   }
-   
-   func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
-      FirebaseManager.manager.user = User(withDummyName: "Anonymous", dummyProfileImageURL: "none", dummyUID: "none")
-      FirebaseManager.manager.ref.unauth()
-      FirebaseManager.manager.authData = nil
-   }
+    
+    func presentLoginScreen() {
+        let storyboard = UIStoryboard(name: "Login", bundle: nil)
+        guard let loginVC = storyboard.instantiateInitialViewController() as? LoginViewController else { return }
+        presentViewController(loginVC, animated: true, completion: nil)
+    }
+    
+    func createFBLoginButtonWithPosition(x: CGFloat, y: CGFloat) -> FBSDKLoginButton {
+        let fbLoginButton = FBSDKLoginButton()
+        fbLoginButton.center = CGPoint(x: x, y: y)
+        fbLoginButton.readPermissions = ["public_profile", "email"]
+        view.addSubview(fbLoginButton)
+        return fbLoginButton
+    }
+    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+        if let error = error {
+            print("Facebook login failed. Error: \(error)")
+        } else if result.isCancelled {
+            print("Facebook login was cancelled")
+        } else {
+            let accessToken = FBSDKAccessToken.currentAccessToken().tokenString
+            FirebaseManager.manager.ref.authWithOAuthProvider("facebook", token: accessToken, withCompletionBlock: { error, authData in
+                if let error = error {
+                    print("Login failed with error: \(error)")
+                } else {
+                    FirebaseManager.manager.handleUserAuthData(authData, withMainQueueCompletionHandler: { user in
+                        guard let user = user else { return }
+                        print("\(user.name) authed in Extension")
+                        self.dismissViewControllerAnimated(true, completion: nil)
+                    })
+                }
+            })
+        }
+    }
+    
+    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
+        FirebaseManager.manager.user = User(withDummyName: "Anonymous", dummyProfileImageURL: "none", dummyUID: "none")
+        FirebaseManager.manager.ref.unauth()
+        FirebaseManager.manager.authData = nil
+    }
 }
 
 //@objc protocol FBSDKLoginButtonDelegateConformer: FBSDKLoginButtonDelegate {
