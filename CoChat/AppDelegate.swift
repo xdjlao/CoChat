@@ -35,11 +35,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-        FirebaseManager.manager.ref.observeAuthEventWithBlock { authData in
+      FirebaseManager.manager.ref.observeAuthEventWithBlock { (authData: FAuthData?) in
+         print(authData)
             if let authData = authData {
                 FirebaseManager.manager.handleUserAuthData(authData, withMainQueueCompletionHandler: nil)
             }
-            print("facebook ref observeAuthEventWithBlock")
         }
         return true
     }

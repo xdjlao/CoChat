@@ -13,6 +13,7 @@ class FirebaseManager {
    let ref = Firebase(url: baseURL)
    var user: User {
       didSet {
+      print("user did get changed with profileImageURL \(user.profileImageURL)")
       let notification = NSNotification(name: "FirebaseAuth", object: nil)
       NSNotificationCenter.defaultCenter().postNotification(notification)
       }
@@ -32,6 +33,7 @@ class FirebaseManager {
       user = User(name: name, profileImageURL: profileImageURL, uid: uid)
       getUserStoredData()
       completionHandler?(user: user)
+      print(__FUNCTION__)
    }
    
    func getUserStoredData() {
