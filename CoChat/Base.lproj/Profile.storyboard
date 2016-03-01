@@ -69,13 +69,28 @@
                                             <outlet property="usernameLabel" destination="1NP-D3-b3Q" id="AFH-Yv-9Xj"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfileLogoutCell" id="y6S-Ga-731">
-                                        <rect key="frame" x="0.0" y="292" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfileLogoutCell" rowHeight="78" id="y6S-Ga-731" customClass="ProfileLogoutCell" customModule="CoChat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="292" width="600" height="78"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y6S-Ga-731" id="od0-O8-xhP">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="77"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ghu-7B-2wz">
+                                                    <rect key="frame" x="20" y="20" width="560" height="37"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="ghu-7B-2wz" secondAttribute="bottom" constant="20" id="3c1-oj-98k"/>
+                                                <constraint firstItem="ghu-7B-2wz" firstAttribute="leading" secondItem="od0-O8-xhP" secondAttribute="leading" constant="20" id="PYj-gk-z9e"/>
+                                                <constraint firstItem="ghu-7B-2wz" firstAttribute="top" secondItem="od0-O8-xhP" secondAttribute="top" constant="20" id="eCt-xi-o8d"/>
+                                                <constraint firstAttribute="trailing" secondItem="ghu-7B-2wz" secondAttribute="trailing" constant="20" id="vhw-aY-jui"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="logoutCellView" destination="ghu-7B-2wz" id="mBw-Q0-M3M"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

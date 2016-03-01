@@ -13,12 +13,17 @@ extension UIViewController {
    }
    
    func createFBLoginButtonWithPosition(x: CGFloat, y: CGFloat) -> FBSDKLoginButton {
-      let fbLoginButton = FBSDKLoginButton()
+      let fbLoginButton = createFBLoginButton()
       fbLoginButton.center = CGPoint(x: x, y: y)
-      fbLoginButton.readPermissions = ["public_profile", "email"]
       view.addSubview(fbLoginButton)
       return fbLoginButton
    }
+    
+    func createFBLoginButton() -> FBSDKLoginButton {
+        let fbLoginButton = FBSDKLoginButton()
+        fbLoginButton.readPermissions = ["public_profile", "email"]
+        return fbLoginButton
+    }
    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
       if let error = error {
          print("Facebook login failed. Error: \(error)")

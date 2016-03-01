@@ -6,6 +6,7 @@ import AFNetworking
 
 class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
     
+    private var loginButton:FBSDKLoginButton?
     @IBOutlet var topContainer: UIView!
     @IBOutlet weak var recentTableView: UITableView! {
         didSet {
@@ -16,9 +17,8 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let size = view.frame.size
-        let button = createFBLoginButtonWithPosition(size.width * 0.8, y: size.height * 0.1)
-        button.delegate = self
+        loginButton = createFBLoginButton()
+        loginButton!.delegate = self
         setUpUI()
     }
     
@@ -35,21 +35,25 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
 
 extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithCellIdentifier(.ProfileCell)
-        cell.selectionStyle = UITableViewCellSelectionStyle.None
         switch (indexPath.section, indexPath.row) {
         case(0,0):
-            cell = cell as! ProfileHeaderCell
+            let cell = tableView.dequeueReusableCellWithCellIdentifier(.ProfileCell) as! ProfileHeaderCell
+            cell.selectionStyle = UITableViewCellSelectionStyle.None
+            return cell
         case(0,1):
-            cell = cell as! LogoutCell
+            let cell = tableView.dequeueReusableCellWithCellIdentifier(.ProfileLogoutCell) as! ProfileLogoutCell
+            cell.selectionStyle = UITableViewCellSelectionStyle.None
+            cell.profileLogoutButton = loginButton
+            return cell
         default:
-            break
+            let cell = tableView.dequeueReusableCellWithCellIdentifier(.ProfileCell) as! ProfileHeaderCell
+            cell.selectionStyle = UITableViewCellSelectionStyle.None
+            return cell
         }
-        return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
