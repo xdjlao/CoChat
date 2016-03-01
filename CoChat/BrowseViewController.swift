@@ -89,8 +89,7 @@ extension BrowseViewController: UITableViewDataSource, UITableViewDelegate {
     //        if recentRooms.count == 0 {
     //            label.text = "Active Rooms"
     //        } else {
-    //            switch section {
-    //            case 0: label.text = "Recent Rooms"
+    //            switch section {    //            case 0: label.text = "Recent Rooms"
     //            case 1: label.text = "Active Rooms"
     //            default: label.text = "Nothing"
     //            }

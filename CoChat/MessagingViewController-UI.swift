@@ -109,7 +109,7 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
         if currentMessage.poster.name == FirebaseManager.manager.user.name {
             let cell = tableView.dequeueReusableCellWithIdentifier("UserMessageCell") as! UserMessageCell
             cell.tag = indexPath.row
-            cell.messageLabel.text = currentMessage.messageText
+            cell.messageLabel.text = currentMessage.text
             cell.profileImageView.setImageWithURL(NSURL(string: FirebaseManager.manager.user.profileImageURL)!, placeholderImage: UIImage(named: "profileImageDummy"))
             cell.selectionStyle = UITableViewCellSelectionStyle.None
             cell.user = FirebaseManager.manager.user
@@ -117,8 +117,9 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
         } else {
             let cell = tableView.dequeueReusableCellWithIdentifier("GeneralMessageCell") as! GeneralMessageCell
             cell.tag = indexPath.row
-            cell.messageLabel.text = currentMessage.messageText
-            cell.profileImageView.setImageWithURL(NSURL(string: currentMessage.poster.profileImageURL)!, placeholderImage:UIImage(named: "profileImageDummy"))
+            cell.messageLabel.text = currentMessage.text
+            let jerryFixThis = NSURL(string: currentMessage.poster.profileImageURL) ?? NSURL()
+            cell.profileImageView.setImageWithURL(jerryFixThis, placeholderImage:UIImage(named: "profileImageDummy"))
             cell.selectionStyle = UITableViewCellSelectionStyle.None
             cell.delegate = self
             cell.user = currentMessage.poster

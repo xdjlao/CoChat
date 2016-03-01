@@ -69,6 +69,7 @@
 		A2BE2B2C1C7E72A200ED71E4 /* BrowseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B2B1C7E72A200ED71E4 /* BrowseNavigationViewController.swift */; };
 		A2BE2B3A1C81226C00ED71E4 /* TopRoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B391C81226C00ED71E4 /* TopRoomCell.swift */; };
 		D8641ADF1C862F3F004E838E /* Whisper.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8641ADE1C862F3F004E838E /* Whisper.storyboard */; };
+		D8641AE11C86342B004E838E /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8641AE01C86342B004E838E /* Conversation.swift */; };
 		D8AE2D191C7D28F00002A31D /* Whisper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE2D181C7D28F00002A31D /* Whisper.swift */; };
 		D8AE2D1B1C7D2E560002A31D /* DualQueriedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE2D1A1C7D2E560002A31D /* DualQueriedType.swift */; };
 		FE075CF3C95FB29BE89AA0A4 /* Pods_CoChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70EBED03AAABBA95CBA945A5 /* Pods_CoChat.framework */; };
@@ -142,6 +143,7 @@
 		A2BE2B2B1C7E72A200ED71E4 /* BrowseNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseNavigationViewController.swift; sourceTree = "<group>"; };
 		A2BE2B391C81226C00ED71E4 /* TopRoomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopRoomCell.swift; sourceTree = "<group>"; };
 		D8641ADE1C862F3F004E838E /* Whisper.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Whisper.storyboard; sourceTree = "<group>"; };
+		D8641AE01C86342B004E838E /* Conversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		D8AE2D181C7D28F00002A31D /* Whisper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Whisper.swift; sourceTree = "<group>"; };
 		D8AE2D1A1C7D2E560002A31D /* DualQueriedType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DualQueriedType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -228,6 +230,7 @@
 				A288F7AE1C78591800DF2847 /* Channel.swift */,
 				A288F7B21C78593D00DF2847 /* Message.swift */,
 				D8AE2D181C7D28F00002A31D /* Whisper.swift */,
+				D8641AE01C86342B004E838E /* Conversation.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -644,6 +647,7 @@
 				91B18F601C7CE71900F20531 /* TableView.swift in Sources */,
 				A288F7B31C78593D00DF2847 /* Message.swift in Sources */,
 				91E9B9E21C7BCD33006F4CF0 /* HostReusableCell.swift in Sources */,
+				D8641AE11C86342B004E838E /* Conversation.swift in Sources */,
 				91E9B9E81C7BD0F1006F4CF0 /* ChannelsVC.swift in Sources */,
 				D8AE2D191C7D28F00002A31D /* Whisper.swift in Sources */,
 				A288F7DA1C7867EA00DF2847 /* MenuChannelViewController.swift in Sources */,
