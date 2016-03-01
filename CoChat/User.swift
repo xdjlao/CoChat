@@ -6,16 +6,17 @@ class User: FirebaseType {
    let name: String
    let profileImageURL: String
    
-   var recentRoomUIDs = [String]()
-   var recentRooms = [Room]()
+   var favoriteChannelsUIDs = [String]()
+   var favoriteChannels = [Channel]()
    
    func profileImage(handler: (profileImage: UIImage?) -> () ) {
       handler(profileImage: UIImage(named: "profileImageDummy"))
    }
    
    var value: AnyObject {
-      return ["name": name, "profileImageURL": profileImageURL, "recentRoomUIDs": recentRoomUIDs]
+      return ["name": name, "profileImageURL": profileImageURL, "favoriteChannelsUIDs": favoriteChannelsUIDs]
    }
+    
    let type = Type.User
    
    init(name: String, profileImageURL: String, uid: String) {
@@ -28,7 +29,7 @@ class User: FirebaseType {
       self.uid = uid
       self.name = "blech"
       self.profileImageURL = "blech"
-      self.recentRoomUIDs = dictionary["recentRoomUIDs"] as? [String] ?? [String]()
+      self.favoriteChannelsUIDs = dictionary["favoriteChannelsUIDs"] as? [String] ?? [String]()
    }
    
    init(withDummyName dummyName: String, dummyProfileImageURL: String, dummyUID: String) {
@@ -42,7 +43,7 @@ class User: FirebaseType {
       self.uid = none
       self.name = none
       self.profileImageURL = none
-      self.recentRoomUIDs = [String]()
-      self.recentRooms = [Room]()
+      self.favoriteChannelsUIDs = [String]()
+      self.favoriteChannels = [Channel]()
    }
 }

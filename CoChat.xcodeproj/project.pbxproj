@@ -298,7 +298,6 @@
 			isa = PBXGroup;
 			children = (
 				912607BC1C855EB40015D487 /* RootVC.swift */,
-				912607B81C8550B10015D487 /* Launch.storyboard */,
 				A288F7BE1C785EAE00DF2847 /* Messaging */,
 				A288F7C01C785ECA00DF2847 /* TabBar */,
 				A288F7CB1C785FC400DF2847 /* Login */,
@@ -321,6 +320,7 @@
 				A2BE2B111C7BCBF500ED71E4 /* Tabs */,
 				A288F7D21C7860D800DF2847 /* Messaging */,
 				A288F7761C7840E600DF2847 /* Main.storyboard */,
+				912607B81C8550B10015D487 /* Launch.storyboard */,
 				91B18F5C1C7CE02300F20531 /* Messaging.storyboard */,
 				A288F7DD1C7873D100DF2847 /* Login.storyboard */,
 				91E9B9E01C7BCD33006F4CF0 /* Host.storyboard */,

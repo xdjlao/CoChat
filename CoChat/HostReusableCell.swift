@@ -13,6 +13,7 @@ import UIKit
     optional func createNewChannel(sender:AnyObject?)
     optional func textFieldDidBeginEditingInCell(textField:UITextField)
     optional func textFieldDidEndEditingInCell()
+    optional func animateTextField(textField:UITextField)
 }
 
 enum HostCellType {
@@ -59,11 +60,11 @@ class HostReusableCell: UITableViewCell, UITextFieldDelegate {
     }
     
     
-    
     func textFieldDidBeginEditing(textField: UITextField) {
         originalTextValue = textField.text
         textField.text = ""
         delegate?.textFieldDidBeginEditingInCell!(textField)
+        delegate?.animateTextField!(textField)
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
