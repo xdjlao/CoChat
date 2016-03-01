@@ -64,14 +64,14 @@
 		A2BE2B0F1C7B9F4400ED71E4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B0E1C7B9F4400ED71E4 /* ProfileViewController.swift */; };
 		A2BE2B141C7BCC2500ED71E4 /* Join.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2BE2B121C7BCC2500ED71E4 /* Join.storyboard */; };
 		A2BE2B181C7CE33000ED71E4 /* WhisperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B171C7CE33000ED71E4 /* WhisperViewController.swift */; };
-		A2BE2B201C7CE44E00ED71E4 /* Whisper.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2BE2B1E1C7CE44E00ED71E4 /* Whisper.storyboard */; };
+		A2BE2B261C7CE97000ED71E4 /* WhisperMessagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B251C7CE97000ED71E4 /* WhisperMessagingViewController.swift */; };
 		A2BE2B281C7E60AD00ED71E4 /* DismissSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B271C7E60AD00ED71E4 /* DismissSegue.swift */; };
 		A2BE2B2A1C7E708C00ED71E4 /* MessagingNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B291C7E708C00ED71E4 /* MessagingNavigationViewController.swift */; };
 		A2BE2B2C1C7E72A200ED71E4 /* BrowseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B2B1C7E72A200ED71E4 /* BrowseNavigationViewController.swift */; };
 		A2BE2B3A1C81226C00ED71E4 /* TopRoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B391C81226C00ED71E4 /* TopRoomCell.swift */; };
+		D8641ADF1C862F3F004E838E /* Whisper.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8641ADE1C862F3F004E838E /* Whisper.storyboard */; };
 		D8AE2D191C7D28F00002A31D /* Whisper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE2D181C7D28F00002A31D /* Whisper.swift */; };
 		D8AE2D1B1C7D2E560002A31D /* DualQueriedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE2D1A1C7D2E560002A31D /* DualQueriedType.swift */; };
-		D8DF887A1C826E1C00871FFA /* FirebaseArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DF88791C826E1C00871FFA /* FirebaseArray.swift */; };
 		FE075CF3C95FB29BE89AA0A4 /* Pods_CoChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70EBED03AAABBA95CBA945A5 /* Pods_CoChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -138,14 +138,14 @@
 		A2BE2B0E1C7B9F4400ED71E4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A2BE2B131C7BCC2500ED71E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Join.storyboard; sourceTree = "<group>"; };
 		A2BE2B171C7CE33000ED71E4 /* WhisperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhisperViewController.swift; sourceTree = "<group>"; };
-		A2BE2B1F1C7CE44E00ED71E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Whisper.storyboard; sourceTree = "<group>"; };
+		A2BE2B251C7CE97000ED71E4 /* WhisperMessagingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhisperMessagingViewController.swift; sourceTree = "<group>"; };
 		A2BE2B271C7E60AD00ED71E4 /* DismissSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissSegue.swift; sourceTree = "<group>"; };
 		A2BE2B291C7E708C00ED71E4 /* MessagingNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagingNavigationViewController.swift; sourceTree = "<group>"; };
 		A2BE2B2B1C7E72A200ED71E4 /* BrowseNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseNavigationViewController.swift; sourceTree = "<group>"; };
 		A2BE2B391C81226C00ED71E4 /* TopRoomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopRoomCell.swift; sourceTree = "<group>"; };
+		D8641ADE1C862F3F004E838E /* Whisper.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Whisper.storyboard; sourceTree = "<group>"; };
 		D8AE2D181C7D28F00002A31D /* Whisper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Whisper.swift; sourceTree = "<group>"; };
 		D8AE2D1A1C7D2E560002A31D /* DualQueriedType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DualQueriedType.swift; sourceTree = "<group>"; };
-		D8DF88791C826E1C00871FFA /* FirebaseArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseArray.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,7 +226,6 @@
 				D8AE2D1A1C7D2E560002A31D /* DualQueriedType.swift */,
 				A288F7B01C78592900DF2847 /* User.swift */,
 				A288F7AA1C78588A00DF2847 /* FirebaseManager.swift */,
-				D8DF88791C826E1C00871FFA /* FirebaseArray.swift */,
 				A288F7AC1C7858FE00DF2847 /* Room.swift */,
 				A288F7AE1C78591800DF2847 /* Channel.swift */,
 				A288F7B21C78593D00DF2847 /* Message.swift */,
@@ -448,8 +447,8 @@
 		A2BE2B1D1C7CE3B200ED71E4 /* Whisper */ = {
 			isa = PBXGroup;
 			children = (
-				A2BE2B1E1C7CE44E00ED71E4 /* Whisper.storyboard */,
-			);
+				D8641ADE1C862F3F004E838E /* Whisper.storyboard */,
+);
 			name = Whisper;
 			sourceTree = "<group>";
 		};
@@ -515,13 +514,13 @@
 		A288F7671C7840E600DF2847 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Jerry;
 				TargetAttributes = {
 					A288F76E1C7840E600DF2847 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 9F59S7VZE2;
+						DevelopmentTeam = 72MNHNDUNH;
 						SystemCapabilities = {
 							com.apple.SafariKeychain = {
 								enabled = 0;
@@ -554,6 +553,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A288F7D81C7862C700DF2847 /* UserMessageCell.xib in Resources */,
+				D8641ADF1C862F3F004E838E /* Whisper.storyboard in Resources */,
 				912607B91C8550B10015D487 /* Launch.storyboard in Resources */,
 				91F525A61C82616B009C9BF1 /* Lato-Black.ttf in Resources */,
 				91F525A81C82616B009C9BF1 /* Lato-Bold.ttf in Resources */,
@@ -573,7 +573,6 @@
 				91F525A01C82616B009C9BF1 /* Lato-Medium.ttf in Resources */,
 				91F525AD1C82616B009C9BF1 /* Lato-Light.ttf in Resources */,
 				91F525AA1C82616B009C9BF1 /* Lato-Hairline.ttf in Resources */,
-				A2BE2B201C7CE44E00ED71E4 /* Whisper.storyboard in Resources */,
 				919549221C7E4F9D00C61805 /* ChannelHeaderCell.xib in Resources */,
 				91F525A21C82616B009C9BF1 /* Lato-Thin.ttf in Resources */,
 				91E9B9E41C7BCD33006F4CF0 /* Host.storyboard in Resources */,
@@ -673,7 +672,6 @@
 				A2BE2B0F1C7B9F4400ED71E4 /* ProfileViewController.swift in Sources */,
 				A288F7731C7840E600DF2847 /* AppDelegate.swift in Sources */,
 				A2A0A7111C83E93A00E4CDDC /* ProfileHeaderCell.swift in Sources */,
-				D8DF887A1C826E1C00871FFA /* FirebaseArray.swift in Sources */,
 				A288F7A91C78524600DF2847 /* ScanViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -711,14 +709,6 @@
 				A2BE2B131C7BCC2500ED71E4 /* Base */,
 			);
 			name = Join.storyboard;
-			sourceTree = "<group>";
-		};
-		A2BE2B1E1C7CE44E00ED71E4 /* Whisper.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A2BE2B1F1C7CE44E00ED71E4 /* Base */,
-			);
-			name = Whisper.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -810,13 +800,20 @@
 			baseConfigurationReference = 587D22B4E734A1D30A6BED37 /* Pods-CoChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/CoChat",
+				);
 				INFOPLIST_FILE = CoChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lao.jerry.CoChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -825,8 +822,14 @@
 			baseConfigurationReference = 38620A9AF6B45CA19AD5E427 /* Pods-CoChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/CoChat",
+				);
 				INFOPLIST_FILE = CoChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lao.jerry.CoChat;

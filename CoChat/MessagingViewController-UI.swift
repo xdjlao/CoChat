@@ -79,7 +79,7 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
             completion: nil
         )
     }
-
+    
     
     func flashRedTextView (textView: UITextView){
         UIView.animateKeyframesWithDuration(0.2, delay: 0.0, options: [], animations: { () -> Void in
@@ -100,7 +100,7 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
             })
             }, completion: nil)
     }
-
+    
     
     //MARK - TableView Delegate Methods
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -129,6 +129,7 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messages.count ?? 0
     }
+  
     
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.row == messages.count - 1 {
@@ -142,22 +143,21 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
         }
     }
     
-    func generalMessageCellWillDisplay(generalCell: GeneralMessageCell, indexPath: NSIndexPath) {
-        generalCell.profileImageView.alpha = 0.0
-        generalCell.messageLabel.alpha = 0.0
-        UIView.animateWithDuration(1.2, delay: 0.0, options: [.CurveEaseInOut], animations: { () -> Void in
-            generalCell.profileImageView.alpha = 1.0
-            generalCell.messageLabel.alpha = 1.0
-            }, completion: { bool in
-        })
-    }
-    
     func userMessageCellWillDisplay(userCell: UserMessageCell, indexPath: NSIndexPath) {
         userCell.profileImageView.alpha = 0.0
         userCell.messageLabel.alpha = 0.0
         UIView.animateWithDuration(1.0, delay: 0.0, options:[.CurveEaseInOut], animations: { () -> Void in
             userCell.profileImageView.alpha = 1.0
             userCell.messageLabel.alpha = 1.0
+            }, completion: { bool in
+        })
+    }
+    func generalMessageCellWillDisplay(generalCell: GeneralMessageCell, indexPath: NSIndexPath) {
+        generalCell.profileImageView.alpha = 0.0
+        generalCell.messageLabel.alpha = 0.0
+        UIView.animateWithDuration(1.2, delay: 0.0, options: [.CurveEaseInOut], animations: { () -> Void in
+            generalCell.profileImageView.alpha = 1.0
+            generalCell.messageLabel.alpha = 1.0
             }, completion: { bool in
         })
     }
@@ -177,9 +177,7 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
         alertController.addAction(reportAction)
         presentViewController(alertController, animated: true, completion: nil)
     }
-    
-    
-    
+
     
     func tableViewOrientation(){
         registerNibs()
@@ -190,7 +188,6 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
         //cells are dynamic
         tableView.estimatedRowHeight = 60.00
         tableView.rowHeight = UITableViewAutomaticDimension
-        
     }
     
     
@@ -215,8 +212,6 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
     func keyboardWillShow(notification: NSNotification) {
         animatetextViewWithKeyboard(notification)
     }
-    
-    
     func keyboardWillHide(notification: NSNotification) {
         animatetextViewWithKeyboard(notification)
     }

@@ -35,7 +35,6 @@ class RootVC: UIViewController {
         videoDidStopPlaying()
     }
     
-    
     func videoDidStopPlaying(){
         let segueID = SegueIdentifier.SegueToTabBar
         performSegueWithSegueIdentifier(segueID, sender: self)
