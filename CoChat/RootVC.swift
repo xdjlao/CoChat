@@ -32,6 +32,10 @@ class RootVC: UIViewController {
         videoDidStopPlaying()
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        performSegueWithSegueIdentifier(.SegueToTabBar, sender: self)
+    }
     
     func videoDidStopPlaying(){
         let segueID = SegueIdentifier.SegueToTabBar
