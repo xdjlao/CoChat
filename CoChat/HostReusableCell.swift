@@ -25,7 +25,7 @@ enum HostCellType {
 }
 
 var cellContent:[String: [String]] = [
-    "basicContent":["Name Of Room"],
+    "basicContent":["Title"],
     
     "advancedContent":["Advanced Settings",
         "Room Entry Key",
@@ -88,7 +88,6 @@ class HostReusableCell: UITableViewCell, UITextFieldDelegate {
     func setUpCellAtIndexPath(indexPath:NSIndexPath) {
         guard let basicContent = cellContent["basicContent"] else {return print("couldn't read basicContent")}
         guard let advancedContent = cellContent["advancedContent"] else {return print("couldn't read basicContent")}
-        resetCellUI()
         switch (indexPath.section, indexPath.row) {
         case (2,0):
             title.text = basicContent[indexPath.row]
@@ -101,6 +100,7 @@ class HostReusableCell: UITableViewCell, UITextFieldDelegate {
             addButton.imageView?.image = UIImage(named: "downChevron")
             addButton.alpha = 1.0
             addButton.enabled = false
+            setHeaderUI()
         case (3,1):
             title.text = advancedContent[indexPath.row]
             title.alpha = 0.5
@@ -120,9 +120,21 @@ class HostReusableCell: UITableViewCell, UITextFieldDelegate {
         }
     }
     
+    func setHeaderUI(){
+        layer.shadowOffset = CGSizeMake(1, 0)
+        layer.shadowColor = UIColor.blackColor().CGColor
+        layer.shadowRadius = 5
+        layer.shadowOpacity = 1.0
+        backgroundColor = Theme.Colors.DarkBackgroundColor.color
+        titleConstraintToLeftSuperView.constant = 10
+    }
+
+    
     func resetCellUI(){
         userInteractionEnabled = true
         title.userInteractionEnabled = true
+        backgroundColor = Theme.Colors.ForegroundColor.color
+        layer.shadowOpacity = 0.0
         selectionStyle = .None
         accessoryType = UITableViewCellAccessoryType.None
         addButton.hidden = true
