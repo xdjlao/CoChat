@@ -17,6 +17,8 @@ class ProfileHeaderCell: UITableViewCell {
             let profileURL = NSURL(string: (user?.profileImageURL)!)
             
             userImageView.setImageWithURL(profileURL!, placeholderImage: UIImage(named: "dummyProfileImage"))
+            userImageView.layer.cornerRadius = userImageView.frame.size.width/2
+            userImageView.clipsToBounds = true
             usernameLabel.text = user!.name
         }
     }
@@ -27,9 +29,9 @@ class ProfileHeaderCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        backgroundColor = Theme.Colors.NavigationBarColor.color
         usernameLabel.font = Theme.Fonts.BoldNormalTypeFace.font
         usernameLabel.textColor = UIColor.whiteColor()
+        backgroundColor = Theme.Colors.NavigationBarColor.color
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
