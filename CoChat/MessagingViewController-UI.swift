@@ -33,8 +33,8 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
             self.textView.frame.size.height = height
             self.buttonContainer.frame.size.height = textView.frame.size.height
             }) { (Bool) -> Void in
-                if self.messageFirebase.items.count > 0 {
-                    self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: self.messageFirebase.items.count - 1, inSection: 0), atScrollPosition: .Bottom, animated: true)
+                if self.messages.count > 0 {
+                    self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: self.messages.count - 1, inSection: 0), atScrollPosition: .Bottom, animated: true)
                 }
         }
     }
@@ -99,141 +99,125 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
                 self.textView.alpha = 1.0
             })
             }, completion: nil)
-      }
-   }
-   
-   func textViewDidChange(textView: UITextView) {
-      UIView.animateWithDuration(0.1, animations: { () -> Void in
-         let height = self.textView.sizeThatFits(CGSizeMake(self.textView.frame.size.width, CGFloat.max)).height
-         self.textView.frame.size.height = height
-         self.buttonContainer.frame.size.height = textView.frame.size.height
-      }) { (Bool) -> Void in
-         if self.messages.count > 0 {
-            self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: self.messages.count - 1, inSection: 0), atScrollPosition: .Bottom, animated: true)
-         }
-      }
-      
-   }
-   
-   //MARK - TableView Delegate Methods
-   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-      let currentMessage = messages[indexPath.row]
-      if currentMessage.poster.name == FirebaseManager.manager.user.name {
-         let cell = tableView.dequeueReusableCellWithIdentifier("UserMessageCell") as! UserMessageCell
-         cell.tag = indexPath.row
-         cell.messageLabel.text = currentMessage.messageText
-         cell.profileImageView.setImageWithURL(NSURL(string: FirebaseManager.manager.user.profileImageURL)!, placeholderImage: UIImage(named: "profileImageDummy"))
-         cell.selectionStyle = UITableViewCellSelectionStyle.None
-         cell.user = FirebaseManager.manager.user
-         return cell
-      } else {
-         let cell = tableView.dequeueReusableCellWithIdentifier("GeneralMessageCell") as! GeneralMessageCell
-         cell.tag = indexPath.row
-         cell.messageLabel.text = currentMessage.messageText
-         cell.profileImageView.setImageWithURL(NSURL(string: currentMessage.poster.profileImageURL)!, placeholderImage:UIImage(named: "profileImageDummy"))
-         cell.selectionStyle = UITableViewCellSelectionStyle.None
-         cell.delegate = self
-         cell.user = currentMessage.poster
-         return cell
-      }
-   }
-   
-   func generalMessageCellWillDisplay(generalCell: GeneralMessageCell, indexPath: NSIndexPath) {
-      generalCell.profileImageView.alpha = 0.0
-      generalCell.messageLabel.alpha = 0.0
-      UIView.animateWithDuration(1.2, delay: 0.0, options: [.CurveEaseInOut], animations: { () -> Void in
-         generalCell.profileImageView.alpha = 1.0
-         generalCell.messageLabel.alpha = 1.0
-         }, completion: { bool in
-      })
-   }
-   
-   func userMessageCellWillDisplay(userCell: UserMessageCell, indexPath: NSIndexPath) {
-      userCell.profileImageView.alpha = 0.0
-      userCell.messageLabel.alpha = 0.0
-      UIView.animateWithDuration(1.0, delay: 0.0, options:[.CurveEaseInOut], animations: { () -> Void in
-         userCell.profileImageView.alpha = 1.0
-         userCell.messageLabel.alpha = 1.0
-         }, completion: { bool in
+    }
+
+    
+    //MARK - TableView Delegate Methods
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let currentMessage = messages[indexPath.row]
+        
+        if currentMessage.poster.name == FirebaseManager.manager.user.name {
+            let cell = tableView.dequeueReusableCellWithIdentifier("UserMessageCell") as! UserMessageCell
+            cell.tag = indexPath.row
+            cell.messageLabel.text = currentMessage.messageText
+            cell.profileImageView.setImageWithURL(NSURL(string: FirebaseManager.manager.user.profileImageURL)!, placeholderImage: UIImage(named: "profileImageDummy"))
+            cell.selectionStyle = UITableViewCellSelectionStyle.None
+            cell.user = FirebaseManager.manager.user
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCellWithIdentifier("GeneralMessageCell") as! GeneralMessageCell
+            cell.tag = indexPath.row
+            cell.messageLabel.text = currentMessage.messageText
+            cell.profileImageView.setImageWithURL(NSURL(string: currentMessage.poster.profileImageURL)!, placeholderImage:UIImage(named: "profileImageDummy"))
+            cell.selectionStyle = UITableViewCellSelectionStyle.None
+            cell.delegate = self
+            cell.user = currentMessage.poster
+            return cell
+        }
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return messages.count ?? 0
+    }
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.row == messages.count - 1 {
+            if let generalCell = cell as? GeneralMessageCell {
+                generalMessageCellWillDisplay(generalCell, indexPath: indexPath)
+            }
             
-            //            self.tableView.scrollToLastMessage(true)
-      })
-   }
-   
-   
-   func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-      if indexPath.row == messages.count - 1 {
-         if let generalCell = cell as? GeneralMessageCell {
-            generalMessageCellWillDisplay(generalCell, indexPath: indexPath)
-         }
-         
-         if let userCell = cell as? UserMessageCell {
-            userMessageCellWillDisplay(userCell, indexPath: indexPath)
-         }
-      }
-   }
-   
-   func generalMessageCell(generalMessageCell: GeneralMessageCell, didTapUser user: AnyObject) {
-      let currentUser = user as! User
-      showUserProfile(currentUser)
-   }
-   
-   func showUserProfile(user:User) {
-      let alertController = UIAlertController(title: user.name, message: "", preferredStyle: UIAlertControllerStyle.Alert)
-      let reportAction = UIAlertAction(title: "Report", style: UIAlertActionStyle.Default) { (UIAlertAction) -> Void in
-         //
-      }
-      let messageAction = UIAlertAction(title: "Message", style: UIAlertActionStyle.Default) { (UIAlertAction) -> Void in
-         //
-      }
-      alertController.addAction(messageAction)
-      alertController.addAction(reportAction)
-      presentViewController(alertController, animated: true, completion: nil)
-   }
-   
-   
-   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      return messages.count ?? 0
-   }
-   
-   func tableViewOrientation(){
-      //removes lines
-      tableView.separatorStyle = .None
-      //removes autocorrectbar
-      textView.autocorrectionType = UITextAutocorrectionType.No
-      //cells are dynamic
-      tableView.estimatedRowHeight = 60.00
-      tableView.rowHeight = UITableViewAutomaticDimension
-   }   
-   
-   
-   func uiSetup() {
-      textView.delegate = self
-      NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
-      NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
-      NSNotificationCenter.defaultCenter().addObserver(self, selector: "textViewBeganEditing", name: UITextViewTextDidChangeNotification, object: nil)
-      textView.scrollEnabled = false
-      registerNibs()
-      view.backgroundColor = Theme.Colors.BackgroundColor.color
-      sendButtonOutlet.backgroundColor = Theme.Colors.ButtonColor.color
-      sendButtonOutlet.tintColor = UIColor.whiteColor()
-      channelButtonOutlet.backgroundColor = Theme.Colors.ButtonColor.color
-      channelButtonOutlet.tintColor = UIColor.whiteColor()
-      buttonContainer.backgroundColor = Theme.Colors.ButtonColor.color
-      tableViewOrientation()
-   }
-   
-   @IBAction func onBackgroundTapped(sender: UITapGestureRecognizer) {
-      textView.resignFirstResponder()
-   }
-   
-   func keyboardWillShow(notification: NSNotification) {
-      animatetextViewWithKeyboard(notification)
-   }
-   
-   
-   func keyboardWillHide(notification: NSNotification) {
-      animatetextViewWithKeyboard(notification)
-   }
->>>>>>> origin/thelimit
+            if let userCell = cell as? UserMessageCell {
+                userMessageCellWillDisplay(userCell, indexPath: indexPath)
+            }
+        }
+    }
+    
+    func generalMessageCellWillDisplay(generalCell: GeneralMessageCell, indexPath: NSIndexPath) {
+        generalCell.profileImageView.alpha = 0.0
+        generalCell.messageLabel.alpha = 0.0
+        UIView.animateWithDuration(1.2, delay: 0.0, options: [.CurveEaseInOut], animations: { () -> Void in
+            generalCell.profileImageView.alpha = 1.0
+            generalCell.messageLabel.alpha = 1.0
+            }, completion: { bool in
+        })
+    }
+    
+    func userMessageCellWillDisplay(userCell: UserMessageCell, indexPath: NSIndexPath) {
+        userCell.profileImageView.alpha = 0.0
+        userCell.messageLabel.alpha = 0.0
+        UIView.animateWithDuration(1.0, delay: 0.0, options:[.CurveEaseInOut], animations: { () -> Void in
+            userCell.profileImageView.alpha = 1.0
+            userCell.messageLabel.alpha = 1.0
+            }, completion: { bool in
+        })
+    }
+    
+    func generalMessageCell(generalMessageCell: GeneralMessageCell, didTapUser user: AnyObject) {
+        let currentUser = user as! User
+        showUserProfile(currentUser)
+    }
+    
+    func showUserProfile(user:User) {
+        let alertController = UIAlertController(title: user.name, message: "", preferredStyle: UIAlertControllerStyle.Alert)
+        let reportAction = UIAlertAction(title: "Report", style: UIAlertActionStyle.Default) { (UIAlertAction) -> Void in
+        }
+        let messageAction = UIAlertAction(title: "Message", style: UIAlertActionStyle.Default) { (UIAlertAction) -> Void in
+        }
+        alertController.addAction(messageAction)
+        alertController.addAction(reportAction)
+        presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    
+    
+    
+    func tableViewOrientation(){
+        registerNibs()
+        //removes lines
+        tableView.separatorStyle = .None
+        //removes autocorrectbar
+        textView.autocorrectionType = UITextAutocorrectionType.No
+        //cells are dynamic
+        tableView.estimatedRowHeight = 60.00
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
+    }
+    
+    
+    func uiSetup() {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
+        textView.scrollEnabled = false
+        textView.delegate = self
+        view.backgroundColor = Theme.Colors.BackgroundColor.color
+        sendButtonOutlet.backgroundColor = Theme.Colors.ButtonColor.color
+        sendButtonOutlet.tintColor = UIColor.whiteColor()
+        channelButtonOutlet.backgroundColor = Theme.Colors.ButtonColor.color
+        channelButtonOutlet.tintColor = UIColor.whiteColor()
+        buttonContainer.backgroundColor = Theme.Colors.ButtonColor.color
+        tableViewOrientation()
+    }
+    
+    @IBAction func onBackgroundTapped(sender: UITapGestureRecognizer) {
+        textView.resignFirstResponder()
+    }
+    
+    func keyboardWillShow(notification: NSNotification) {
+        animatetextViewWithKeyboard(notification)
+    }
+    
+    
+    func keyboardWillHide(notification: NSNotification) {
+        animatetextViewWithKeyboard(notification)
+    }
 }

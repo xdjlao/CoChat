@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		912607B51C8548590015D487 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912607B41C8548590015D487 /* Launch Screen.storyboard */; };
 		919549221C7E4F9D00C61805 /* ChannelHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 919549201C7E4F9D00C61805 /* ChannelHeaderCell.xib */; };
 		91B18F5E1C7CE02300F20531 /* Messaging.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91B18F5C1C7CE02300F20531 /* Messaging.storyboard */; };
 		91B18F601C7CE71900F20531 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B18F5F1C7CE71900F20531 /* TableView.swift */; };
@@ -17,7 +18,6 @@
 		91E9B9E61C7BCFC4006F4CF0 /* Channels.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91E9B9E51C7BCFC4006F4CF0 /* Channels.storyboard */; };
 		91E9B9E81C7BD0F1006F4CF0 /* ChannelsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E9B9E71C7BD0F1006F4CF0 /* ChannelsVC.swift */; };
 		91F0C6F11C8412B200A473EA /* WhisperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F0C6F01C8412B200A473EA /* WhisperCell.swift */; };
-		91F0C6F31C853B6F00A473EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91F0C6F21C853B6F00A473EA /* LaunchScreen.storyboard */; };
 		91F0C6F51C853BF900A473EA /* LaunchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F0C6F41C853BF900A473EA /* LaunchVC.swift */; };
 		91F5258A1C825845009C9BF1 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F525891C825845009C9BF1 /* UIColor+Extension.swift */; };
 		91F5259E1C82616B009C9BF1 /* Lato-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91F5258C1C82616B009C9BF1 /* Lato-Heavy.ttf */; };
@@ -76,6 +76,7 @@
 		38620A9AF6B45CA19AD5E427 /* Pods-CoChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoChat/Pods-CoChat.release.xcconfig"; sourceTree = "<group>"; };
 		587D22B4E734A1D30A6BED37 /* Pods-CoChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoChat/Pods-CoChat.debug.xcconfig"; sourceTree = "<group>"; };
 		70EBED03AAABBA95CBA945A5 /* Pods_CoChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		912607B41C8548590015D487 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		919549201C7E4F9D00C61805 /* ChannelHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChannelHeaderCell.xib; sourceTree = "<group>"; };
 		91B18F5D1C7CE02300F20531 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Messaging.storyboard; sourceTree = "<group>"; };
 		91B18F5F1C7CE71900F20531 /* TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
@@ -86,7 +87,6 @@
 		91E9B9E51C7BCFC4006F4CF0 /* Channels.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Channels.storyboard; sourceTree = "<group>"; };
 		91E9B9E71C7BD0F1006F4CF0 /* ChannelsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelsVC.swift; sourceTree = "<group>"; };
 		91F0C6F01C8412B200A473EA /* WhisperCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhisperCell.swift; sourceTree = "<group>"; };
-		91F0C6F21C853B6F00A473EA /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91F0C6F41C853BF900A473EA /* LaunchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchVC.swift; sourceTree = "<group>"; };
 		91F525891C825845009C9BF1 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		91F5258C1C82616B009C9BF1 /* Lato-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Heavy.ttf"; sourceTree = "<group>"; };
@@ -312,13 +312,13 @@
 				A2BE2B111C7BCBF500ED71E4 /* Tabs */,
 				A288F7D21C7860D800DF2847 /* Messaging */,
 				A288F7761C7840E600DF2847 /* Main.storyboard */,
-				91F0C6F21C853B6F00A473EA /* LaunchScreen.storyboard */,
 				91B18F5C1C7CE02300F20531 /* Messaging.storyboard */,
 				A288F7DD1C7873D100DF2847 /* Login.storyboard */,
 				91E9B9E01C7BCD33006F4CF0 /* Host.storyboard */,
 				91E9B9DF1C7BCD33006F4CF0 /* HostReusableCell.xib */,
 				91E9B9E51C7BCFC4006F4CF0 /* Channels.storyboard */,
 				919549201C7E4F9D00C61805 /* ChannelHeaderCell.xib */,
+				912607B41C8548590015D487 /* Launch Screen.storyboard */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -558,12 +558,12 @@
 				91E9B9E31C7BCD33006F4CF0 /* HostReusableCell.xib in Resources */,
 				91F5259E1C82616B009C9BF1 /* Lato-Heavy.ttf in Resources */,
 				91F525AF1C82616B009C9BF1 /* Lato-Regular.ttf in Resources */,
-				91F0C6F31C853B6F00A473EA /* LaunchScreen.storyboard in Resources */,
 				A2BE2B0C1C7B9E1700ED71E4 /* Profile.storyboard in Resources */,
 				A288F7DE1C7873D100DF2847 /* Login.storyboard in Resources */,
 				A288F77A1C7840E600DF2847 /* Assets.xcassets in Resources */,
 				A288F7D61C78612A00DF2847 /* GeneralMessageCell.xib in Resources */,
 				91B18F5E1C7CE02300F20531 /* Messaging.storyboard in Resources */,
+				912607B51C8548590015D487 /* Launch Screen.storyboard in Resources */,
 				91F525A41C82616B009C9BF1 /* Lato-Semibold.ttf in Resources */,
 				A2BE2B141C7BCC2500ED71E4 /* Join.storyboard in Resources */,
 				A2BE2B051C79984B00ED71E4 /* Share.storyboard in Resources */,
