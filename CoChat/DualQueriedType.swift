@@ -27,6 +27,14 @@ extension DualQueriedType {
             self.uid = firebase.key
             completionHandler?(new: self)
          })
+      case .Message:
+         FirebaseManager.manager.ref.childByAppendingPath("Channel").childByAppendingPath(creatorUID).childByAppendingPath("Messages").childByAutoId().setValue(value, withCompletionBlock: { (error, firebase) -> Void in
+            if let error = error {
+               print(error)
+            }
+            self.uid = firebase.key
+            completionHandler?(new: self)
+         })
       default: assertionFailure()
       }
    }
