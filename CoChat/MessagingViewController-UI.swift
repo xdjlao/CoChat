@@ -196,6 +196,7 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
         textView.scrollEnabled = false
         textView.delegate = self
+        textView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.8)
         view.backgroundColor = Theme.Colors.BackgroundColor.color
         sendButtonOutlet.backgroundColor = Theme.Colors.ButtonColor.color
         sendButtonOutlet.tintColor = UIColor.whiteColor()
