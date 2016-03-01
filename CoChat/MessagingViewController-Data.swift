@@ -23,26 +23,8 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
     @IBOutlet var buttonContainer: UIView!
     @IBOutlet weak var channelButtonOutlet: UIButton!
     @IBOutlet weak var sendButtonOutlet: UIButton!
-    
-    var messageFirebase: FirebaseArray<Message>!
-    
-    func setUpMessageFirebase() {
-        let firebaseArray = FirebaseArray<Message>()
-        firebaseArray.sortFunction = { first, second in
-            return first.time.compare(second.time) == NSComparisonResult.OrderedAscending
-        }
-        firebaseArray.ref = FirebaseManager.manager.ref.childByAppendingPath("Message")
-        firebaseArray.queryOrderedByChild = "channelUID"
-        firebaseArray.queryEqualToValue = self.currentChannel.uid
-        firebaseArray.eventType = .ChildAdded
-        firebaseArray.queryLimitedToLast = 10
-        firebaseArray.completionHandlerForChildAdded = {
-            let indexPath = NSIndexPath(forRow: firebaseArray.items.count - 1, inSection: 0)
-            self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .None)
-            self.tableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Bottom, animated: false)
-        }
-        messageFirebase = firebaseArray
-    }
+    var messages = [Message]()
+
     var room: Room! {
         didSet {
             navigationItem.title = room.title
@@ -50,8 +32,6 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
     }
     var currentChannel:Channel! {
         didSet {
-            setUpMessageFirebase()
-            messageFirebase.startListenerForAll()
             guard let roomLabel = textView else { return }
             roomLabel.text = room.title + " - " + currentChannel.title
         }

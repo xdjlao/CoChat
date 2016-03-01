@@ -13,24 +13,9 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
             recentTableView.dataSource = self
         }
     }
-    
-    func updateUserLabels() {
-        recentTableView.reloadData()
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        updateUserLabels()
-    }
-    
-    override func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
-        super.loginButtonDidLogOut(loginButton)
-        updateUserLabels()
-    }
-    
+
     override func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
         super.loginButton(loginButton, didCompleteWithResult: result, error: error)
-        updateUserLabels()
     }
     
     override func viewDidLoad() {
@@ -39,17 +24,6 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
         let button = createFBLoginButtonWithPosition(size.width * 0.8, y: size.height * 0.1)
         button.delegate = self
         setUpUI()
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateUserLabels", name: UIApplicationDidBecomeActiveNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateUserLabels", name: "FirebaseAuth", object: nil)
-    }
-    
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(animated)
-        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
     func setUpUI (){

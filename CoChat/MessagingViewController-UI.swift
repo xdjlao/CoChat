@@ -97,8 +97,8 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
          self.textView.frame.size.height = height
          self.buttonContainer.frame.size.height = textView.frame.size.height
       }) { (Bool) -> Void in
-         if self.messageFirebase.items.count > 0 {
-            self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: self.messageFirebase.items.count - 1, inSection: 0), atScrollPosition: .Bottom, animated: true)
+         if self.messages.count > 0 {
+            self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: self.messages.count - 1, inSection: 0), atScrollPosition: .Bottom, animated: true)
          }
       }
       
@@ -106,7 +106,7 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
    
    //MARK - TableView Delegate Methods
    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-      let currentMessage = messageFirebase.items[indexPath.row]
+      let currentMessage = messages[indexPath.row]
       if currentMessage.poster.name == FirebaseManager.manager.user.name {
          let cell = tableView.dequeueReusableCellWithIdentifier("UserMessageCell") as! UserMessageCell
          cell.tag = indexPath.row
@@ -151,7 +151,7 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
    
    
    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-      if indexPath.row == messageFirebase.items.count - 1 {
+      if indexPath.row == messages.count - 1 {
          if let generalCell = cell as? GeneralMessageCell {
             generalMessageCellWillDisplay(generalCell, indexPath: indexPath)
          }
@@ -182,7 +182,7 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
    
    
    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      return messageFirebase?.items.count ?? 0
+      return messages.count ?? 0
    }
    
    func tableViewOrientation(){
