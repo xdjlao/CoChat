@@ -46,7 +46,7 @@ class BrowseViewController: UIViewController {
     }
     
     func getRecentRooms() {
-        manager.user.recentRoomUIDs.forEach { roomUID in
+        manager.user.recentRoomsUIDs.forEach { roomUID in
             ref.childByAppendingPath("/Room").queryOrderedByKey().queryEqualToValue(roomUID).observeSingleEventOfType(.Value, withBlock: { snapshot in
                 guard let value = snapshot.value as? [NSObject: AnyObject] else { return }
                 

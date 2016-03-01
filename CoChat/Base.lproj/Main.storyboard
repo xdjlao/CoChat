@@ -355,7 +355,7 @@
         <scene sceneID="pCh-ib-eyG">
             <objects>
                 <navigationController storyboardIdentifier="BrowseNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" id="KMU-u7-4ap" customClass="BrowseNavigationViewController" customModule="CoChat" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Blend" id="n7h-k5-Fwl"/>
+                    <tabBarItem key="tabBarItem" title="Blend" image="blendColorLogo-Small" id="n7h-k5-Fwl"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="i6d-Hn-EKg">
@@ -506,4 +506,7 @@
             <point key="canvasLocation" x="-318" y="1186"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="blendColorLogo-Small" width="29" height="29"/>
+    </resources>
 </document>

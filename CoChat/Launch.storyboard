@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blendLogo" translatesAutoresizingMaskIntoConstraints="NO" id="uZk-in-bgs">
-                                <rect key="frame" x="180" y="230.5" width="240" height="139"/>
+                                <rect key="frame" x="180" y="231" width="240" height="139"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="139" id="Pt5-wA-4Ku"/>
                                     <constraint firstAttribute="width" constant="240" id="XZb-oD-AeE"/>
