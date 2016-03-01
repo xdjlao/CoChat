@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--LaunchVC-->
+        <!--View Controller-->
         <scene sceneID="3Cv-E4-4Q5">
             <objects>
-                <viewController id="PAR-wm-29N" customClass="LaunchVC" customModule="CoChat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PAR-wm-29N" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cgF-CW-DvG"/>
                         <viewControllerLayoutGuide type="bottom" id="sS3-L3-Gdo"/>

@@ -10,6 +10,8 @@
 		912607B51C8548590015D487 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912607B41C8548590015D487 /* Launch Screen.storyboard */; };
 		912607B71C854E560015D487 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 912607B61C854E560015D487 /* AVFoundation.framework */; };
 		912607B91C8550B10015D487 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912607B81C8550B10015D487 /* Launch.storyboard */; };
+		912607BD1C855EB40015D487 /* RootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912607BC1C855EB40015D487 /* RootVC.swift */; };
+		912607C21C856C350015D487 /* LaunchVideo.mov in Resources */ = {isa = PBXBuildFile; fileRef = 912607C11C856C350015D487 /* LaunchVideo.mov */; };
 		919549221C7E4F9D00C61805 /* ChannelHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 919549201C7E4F9D00C61805 /* ChannelHeaderCell.xib */; };
 		91B18F5E1C7CE02300F20531 /* Messaging.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91B18F5C1C7CE02300F20531 /* Messaging.storyboard */; };
 		91B18F601C7CE71900F20531 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B18F5F1C7CE71900F20531 /* TableView.swift */; };
@@ -20,7 +22,6 @@
 		91E9B9E61C7BCFC4006F4CF0 /* Channels.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91E9B9E51C7BCFC4006F4CF0 /* Channels.storyboard */; };
 		91E9B9E81C7BD0F1006F4CF0 /* ChannelsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E9B9E71C7BD0F1006F4CF0 /* ChannelsVC.swift */; };
 		91F0C6F11C8412B200A473EA /* WhisperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F0C6F01C8412B200A473EA /* WhisperCell.swift */; };
-		91F0C6F51C853BF900A473EA /* LaunchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F0C6F41C853BF900A473EA /* LaunchVC.swift */; };
 		91F5258A1C825845009C9BF1 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F525891C825845009C9BF1 /* UIColor+Extension.swift */; };
 		91F5259E1C82616B009C9BF1 /* Lato-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91F5258C1C82616B009C9BF1 /* Lato-Heavy.ttf */; };
 		91F525A01C82616B009C9BF1 /* Lato-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91F5258E1C82616B009C9BF1 /* Lato-Medium.ttf */; };
@@ -81,6 +82,8 @@
 		912607B41C8548590015D487 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		912607B61C854E560015D487 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		912607B81C8550B10015D487 /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
+		912607BC1C855EB40015D487 /* RootVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootVC.swift; sourceTree = "<group>"; };
+		912607C11C856C350015D487 /* LaunchVideo.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = LaunchVideo.mov; sourceTree = "<group>"; };
 		919549201C7E4F9D00C61805 /* ChannelHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChannelHeaderCell.xib; sourceTree = "<group>"; };
 		91B18F5D1C7CE02300F20531 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Messaging.storyboard; sourceTree = "<group>"; };
 		91B18F5F1C7CE71900F20531 /* TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
@@ -91,7 +94,6 @@
 		91E9B9E51C7BCFC4006F4CF0 /* Channels.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Channels.storyboard; sourceTree = "<group>"; };
 		91E9B9E71C7BD0F1006F4CF0 /* ChannelsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelsVC.swift; sourceTree = "<group>"; };
 		91F0C6F01C8412B200A473EA /* WhisperCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhisperCell.swift; sourceTree = "<group>"; };
-		91F0C6F41C853BF900A473EA /* LaunchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchVC.swift; sourceTree = "<group>"; };
 		91F525891C825845009C9BF1 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		91F5258C1C82616B009C9BF1 /* Lato-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Heavy.ttf"; sourceTree = "<group>"; };
 		91F5258E1C82616B009C9BF1 /* Lato-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Medium.ttf"; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 		A288F7711C7840E600DF2847 /* CoChat */ = {
 			isa = PBXGroup;
 			children = (
+				912607C11C856C350015D487 /* LaunchVideo.mov */,
 				A288F7B71C7859D600DF2847 /* Extensions & Protocols */,
 				A288F7B61C7859B100DF2847 /* Model */,
 				A288F7C21C785EF900DF2847 /* View */,
@@ -294,7 +297,7 @@
 		A288F7C31C785F0600DF2847 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				91F0C6F41C853BF900A473EA /* LaunchVC.swift */,
+				912607BC1C855EB40015D487 /* RootVC.swift */,
 				912607B81C8550B10015D487 /* Launch.storyboard */,
 				A288F7BE1C785EAE00DF2847 /* Messaging */,
 				A288F7C01C785ECA00DF2847 /* TabBar */,
@@ -582,6 +585,7 @@
 				919549221C7E4F9D00C61805 /* ChannelHeaderCell.xib in Resources */,
 				91F525A21C82616B009C9BF1 /* Lato-Thin.ttf in Resources */,
 				91E9B9E41C7BCD33006F4CF0 /* Host.storyboard in Resources */,
+				912607C21C856C350015D487 /* LaunchVideo.mov in Resources */,
 				A288F7781C7840E600DF2847 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -671,12 +675,12 @@
 				A288F7C61C785F4400DF2847 /* CheckForLoggedIn-Extension.swift in Sources */,
 				A288F7CA1C785FAE00DF2847 /* LoginViewController.swift in Sources */,
 				A2BE2B281C7E60AD00ED71E4 /* DismissSegue.swift in Sources */,
+				912607BD1C855EB40015D487 /* RootVC.swift in Sources */,
 				A288F7D11C7860B500DF2847 /* GeneralMessageCell.swift in Sources */,
 				A288F7BD1C785CAE00DF2847 /* MessagingViewController-UI.swift in Sources */,
 				A2BE2B0F1C7B9F4400ED71E4 /* ProfileViewController.swift in Sources */,
 				A288F7731C7840E600DF2847 /* AppDelegate.swift in Sources */,
 				A2A0A7111C83E93A00E4CDDC /* ProfileHeaderCell.swift in Sources */,
-				91F0C6F51C853BF900A473EA /* LaunchVC.swift in Sources */,
 				D8DF887A1C826E1C00871FFA /* FirebaseArray.swift in Sources */,
 				A288F7A91C78524600DF2847 /* ScanViewController.swift in Sources */,
 			);

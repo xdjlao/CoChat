@@ -12,23 +12,24 @@ import AVKit
 import AVFoundation
 
 class LaunchVC: UIViewController {
-@IBOutlet var containerView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        containerView.backgroundColor = Theme.Colors.NavigationBarColor.color
-        playVideo()
-    }
-    
-    func playVideo() {
-        guard let path = NSBundle.mainBundle().pathForResource("launch", ofType:"mp4") else {return}
-        let player = AVPlayer(URL: NSURL(fileURLWithPath: path))
+        view.backgroundColor = Theme.Colors.NavigationBarColor.color
+        
+        let myPlayerView = UIView(frame: self.view.bounds)
+        view.addSubview(myPlayerView)
+   
+        guard let path = NSBundle.mainBundle().pathForResource("Launch", ofType: "mp4") else {return}
+        let url = NSURL(fileURLWithPath: path)
+        let player = AVPlayer(URL: url)
         let playerController = AVPlayerViewController()
         playerController.player = player
-        view.addSubview(playerController.view)
-        view.bringSubviewToFront(playerController.view)
         player.play()
-    }
+        
+        let avLayer = AVPlayerLayer(player: player)
+        avLayer.frame = myPlayerView.bounds
+        myPlayerView.layer.addSublayer(avLayer)
     
-    
     }
+}
