@@ -17,6 +17,8 @@
 		91E9B9E61C7BCFC4006F4CF0 /* Channels.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91E9B9E51C7BCFC4006F4CF0 /* Channels.storyboard */; };
 		91E9B9E81C7BD0F1006F4CF0 /* ChannelsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E9B9E71C7BD0F1006F4CF0 /* ChannelsVC.swift */; };
 		91F0C6F11C8412B200A473EA /* WhisperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F0C6F01C8412B200A473EA /* WhisperCell.swift */; };
+		91F0C6F31C853B6F00A473EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91F0C6F21C853B6F00A473EA /* LaunchScreen.storyboard */; };
+		91F0C6F51C853BF900A473EA /* LaunchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F0C6F41C853BF900A473EA /* LaunchVC.swift */; };
 		91F5258A1C825845009C9BF1 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F525891C825845009C9BF1 /* UIColor+Extension.swift */; };
 		91F5259E1C82616B009C9BF1 /* Lato-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91F5258C1C82616B009C9BF1 /* Lato-Heavy.ttf */; };
 		91F525A01C82616B009C9BF1 /* Lato-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91F5258E1C82616B009C9BF1 /* Lato-Medium.ttf */; };
@@ -30,7 +32,6 @@
 		A288F7731C7840E600DF2847 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A288F7721C7840E600DF2847 /* AppDelegate.swift */; };
 		A288F7781C7840E600DF2847 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A288F7761C7840E600DF2847 /* Main.storyboard */; };
 		A288F77A1C7840E600DF2847 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A288F7791C7840E600DF2847 /* Assets.xcassets */; };
-		A288F77D1C7840E600DF2847 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A288F77B1C7840E600DF2847 /* LaunchScreen.storyboard */; };
 		A288F7A51C7841B600DF2847 /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A288F7A41C7841B600DF2847 /* BrowseViewController.swift */; };
 		A288F7A71C78447D00DF2847 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A288F7A61C78447D00DF2847 /* MainTabBarViewController.swift */; };
 		A288F7A91C78524600DF2847 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A288F7A81C78524600DF2847 /* ScanViewController.swift */; };
@@ -85,6 +86,8 @@
 		91E9B9E51C7BCFC4006F4CF0 /* Channels.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Channels.storyboard; sourceTree = "<group>"; };
 		91E9B9E71C7BD0F1006F4CF0 /* ChannelsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelsVC.swift; sourceTree = "<group>"; };
 		91F0C6F01C8412B200A473EA /* WhisperCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhisperCell.swift; sourceTree = "<group>"; };
+		91F0C6F21C853B6F00A473EA /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		91F0C6F41C853BF900A473EA /* LaunchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchVC.swift; sourceTree = "<group>"; };
 		91F525891C825845009C9BF1 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		91F5258C1C82616B009C9BF1 /* Lato-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Heavy.ttf"; sourceTree = "<group>"; };
 		91F5258E1C82616B009C9BF1 /* Lato-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Medium.ttf"; sourceTree = "<group>"; };
@@ -99,7 +102,6 @@
 		A288F7721C7840E600DF2847 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A288F7771C7840E600DF2847 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A288F7791C7840E600DF2847 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A288F77C1C7840E600DF2847 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A288F77E1C7840E600DF2847 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A288F7A41C7841B600DF2847 /* BrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
 		A288F7A61C78447D00DF2847 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 		A288F7C31C785F0600DF2847 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				91F0C6F41C853BF900A473EA /* LaunchVC.swift */,
 				A288F7BE1C785EAE00DF2847 /* Messaging */,
 				A288F7C01C785ECA00DF2847 /* TabBar */,
 				A288F7CB1C785FC400DF2847 /* Login */,
@@ -309,8 +312,8 @@
 				A2BE2B111C7BCBF500ED71E4 /* Tabs */,
 				A288F7D21C7860D800DF2847 /* Messaging */,
 				A288F7761C7840E600DF2847 /* Main.storyboard */,
+				91F0C6F21C853B6F00A473EA /* LaunchScreen.storyboard */,
 				91B18F5C1C7CE02300F20531 /* Messaging.storyboard */,
-				A288F77B1C7840E600DF2847 /* LaunchScreen.storyboard */,
 				A288F7DD1C7873D100DF2847 /* Login.storyboard */,
 				91E9B9E01C7BCD33006F4CF0 /* Host.storyboard */,
 				91E9B9DF1C7BCD33006F4CF0 /* HostReusableCell.xib */,
@@ -551,11 +554,11 @@
 				A288F7D81C7862C700DF2847 /* UserMessageCell.xib in Resources */,
 				91F525A61C82616B009C9BF1 /* Lato-Black.ttf in Resources */,
 				91F525A81C82616B009C9BF1 /* Lato-Bold.ttf in Resources */,
-				A288F77D1C7840E600DF2847 /* LaunchScreen.storyboard in Resources */,
 				91E9B9E61C7BCFC4006F4CF0 /* Channels.storyboard in Resources */,
 				91E9B9E31C7BCD33006F4CF0 /* HostReusableCell.xib in Resources */,
 				91F5259E1C82616B009C9BF1 /* Lato-Heavy.ttf in Resources */,
 				91F525AF1C82616B009C9BF1 /* Lato-Regular.ttf in Resources */,
+				91F0C6F31C853B6F00A473EA /* LaunchScreen.storyboard in Resources */,
 				A2BE2B0C1C7B9E1700ED71E4 /* Profile.storyboard in Resources */,
 				A288F7DE1C7873D100DF2847 /* Login.storyboard in Resources */,
 				A288F77A1C7840E600DF2847 /* Assets.xcassets in Resources */,
@@ -665,6 +668,7 @@
 				A2BE2B0F1C7B9F4400ED71E4 /* ProfileViewController.swift in Sources */,
 				A288F7731C7840E600DF2847 /* AppDelegate.swift in Sources */,
 				A2A0A7111C83E93A00E4CDDC /* ProfileHeaderCell.swift in Sources */,
+				91F0C6F51C853BF900A473EA /* LaunchVC.swift in Sources */,
 				D8DF887A1C826E1C00871FFA /* FirebaseArray.swift in Sources */,
 				A288F7A91C78524600DF2847 /* ScanViewController.swift in Sources */,
 			);
@@ -687,14 +691,6 @@
 				A288F7771C7840E600DF2847 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A288F77B1C7840E600DF2847 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A288F77C1C7840E600DF2847 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 		A2BE2B0A1C7B9E1700ED71E4 /* Profile.storyboard */ = {
