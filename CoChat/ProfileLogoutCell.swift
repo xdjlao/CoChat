@@ -12,10 +12,12 @@ import FBSDKLoginKit
 class ProfileLogoutCell: UITableViewCell {
     
     @IBOutlet weak var logoutCellView: UIView!
+    var superviewWidth:CGFloat!
     var profileLogoutButton:FBSDKLoginButton? {
         didSet {
             if let logout = profileLogoutButton {
-                logout.frame = logoutCellView.frame
+                let frame = logoutCellView.frame
+                logout.frame = CGRect(x: 0, y: 0, width: superviewWidth - 40 , height: frame.height)
                 logoutCellView.addSubview(logout)
             }
         }
@@ -24,6 +26,7 @@ class ProfileLogoutCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        backgroundColor = Theme.Colors.BackgroundColor.color
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

@@ -33,7 +33,6 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
         recentTableView.backgroundColor = backgroundColor
         recentTableView.tableFooterView = UIView()
         topContainer.backgroundColor = backgroundColor
-        recentTableView.rowHeight = 200
         recentTableView.separatorStyle = .None
     }
     
@@ -53,6 +52,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         case(0,cellArray.count + 1):
             let cell = tableView.dequeueReusableCellWithCellIdentifier(.ProfileLogoutCell) as! ProfileLogoutCell
             cell.selectionStyle = UITableViewCellSelectionStyle.None
+            cell.superviewWidth = view.frame.width
             cell.profileLogoutButton = loginButton
             return cell
         default:
@@ -78,6 +78,14 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         } else {
             scrollView.scrollEnabled = true
             recentTableView.reloadData()
+        }
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        switch (indexPath.section, indexPath.row) {
+        case(0,0): return 200
+        case(0,cellArray.count + 1): return 80
+        default: return tableView.rowHeight
         }
     }
 }
