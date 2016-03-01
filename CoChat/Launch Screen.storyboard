@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--LaunchVC-->
+        <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
-                <viewController id="01J-lp-oVM" customClass="LaunchVC" customModule="CoChat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
@@ -30,6 +30,9 @@
                             <constraint firstItem="Kf2-fo-Y7u" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="uec-RQ-p0r"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="containerView" destination="Kf2-fo-Y7u" id="Sje-wC-7Jn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		912607B51C8548590015D487 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912607B41C8548590015D487 /* Launch Screen.storyboard */; };
+		912607B71C854E560015D487 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 912607B61C854E560015D487 /* AVFoundation.framework */; };
+		912607B91C8550B10015D487 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912607B81C8550B10015D487 /* Launch.storyboard */; };
 		919549221C7E4F9D00C61805 /* ChannelHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 919549201C7E4F9D00C61805 /* ChannelHeaderCell.xib */; };
 		91B18F5E1C7CE02300F20531 /* Messaging.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91B18F5C1C7CE02300F20531 /* Messaging.storyboard */; };
 		91B18F601C7CE71900F20531 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B18F5F1C7CE71900F20531 /* TableView.swift */; };
@@ -77,6 +79,8 @@
 		587D22B4E734A1D30A6BED37 /* Pods-CoChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoChat/Pods-CoChat.debug.xcconfig"; sourceTree = "<group>"; };
 		70EBED03AAABBA95CBA945A5 /* Pods_CoChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		912607B41C8548590015D487 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		912607B61C854E560015D487 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		912607B81C8550B10015D487 /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		919549201C7E4F9D00C61805 /* ChannelHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChannelHeaderCell.xib; sourceTree = "<group>"; };
 		91B18F5D1C7CE02300F20531 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Messaging.storyboard; sourceTree = "<group>"; };
 		91B18F5F1C7CE71900F20531 /* TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
@@ -147,6 +151,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				912607B71C854E560015D487 /* AVFoundation.framework in Frameworks */,
 				FE075CF3C95FB29BE89AA0A4 /* Pods_CoChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,6 +295,7 @@
 			isa = PBXGroup;
 			children = (
 				91F0C6F41C853BF900A473EA /* LaunchVC.swift */,
+				912607B81C8550B10015D487 /* Launch.storyboard */,
 				A288F7BE1C785EAE00DF2847 /* Messaging */,
 				A288F7C01C785ECA00DF2847 /* TabBar */,
 				A288F7CB1C785FC400DF2847 /* Login */,
@@ -479,6 +485,7 @@
 		BA88D8AD8904B9765BBA1CB3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				912607B61C854E560015D487 /* AVFoundation.framework */,
 				70EBED03AAABBA95CBA945A5 /* Pods_CoChat.framework */,
 			);
 			name = Frameworks;
@@ -552,6 +559,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A288F7D81C7862C700DF2847 /* UserMessageCell.xib in Resources */,
+				912607B91C8550B10015D487 /* Launch.storyboard in Resources */,
 				91F525A61C82616B009C9BF1 /* Lato-Black.ttf in Resources */,
 				91F525A81C82616B009C9BF1 /* Lato-Bold.ttf in Resources */,
 				91E9B9E61C7BCFC4006F4CF0 /* Channels.storyboard in Resources */,

@@ -8,26 +8,27 @@
 
 import UIKit
 import MediaPlayer
+import AVKit
+import AVFoundation
 
 class LaunchVC: UIViewController {
-    @IBOutlet var containerView: UIView!
-
+@IBOutlet var containerView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "MoviePlayerStopedPlaying:", name: MPMoviePlayerPlaybackDidFinishNotification, object: nil)
         containerView.backgroundColor = Theme.Colors.NavigationBarColor.color
-        
+        playVideo()
     }
-    func queueLaunchVideo(){
-        
-        guard let filePath: String = NSBundle.mainBundle().pathForResource("launch", ofType: "mp4") else { return}
-     let videoUrl = NSURL(fileURLWithPath: filePath)
-     let mediaPlayer = MPMoviePlayerController(contentURL: videoUrl)
-    mediaPlayer.shouldAutoplay = true
-    mediaPlayer.movieSourceType = MPMovieSourceType.File
-    mediaPlayer.view.frame = containerView.frame
-    containerView.addSubview(mediaPlayer.view)
-    mediaPlayer.prepareToPlay()
-    mediaPlayer.play()
+    
+    func playVideo() {
+        guard let path = NSBundle.mainBundle().pathForResource("launch", ofType:"mp4") else {return}
+        let player = AVPlayer(URL: NSURL(fileURLWithPath: path))
+        let playerController = AVPlayerViewController()
+        playerController.player = player
+        view.addSubview(playerController.view)
+        view.bringSubviewToFront(playerController.view)
+        player.play()
     }
-}
+    
+    
+    }

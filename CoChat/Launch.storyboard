@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PAR-wm-29N">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--LaunchVC-->
+        <scene sceneID="3Cv-E4-4Q5">
+            <objects>
+                <viewController id="PAR-wm-29N" customClass="LaunchVC" customModule="CoChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cgF-CW-DvG"/>
+                        <viewControllerLayoutGuide type="bottom" id="sS3-L3-Gdo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HIY-O9-sYz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blendLogo" translatesAutoresizingMaskIntoConstraints="NO" id="uZk-in-bgs">
+                                <rect key="frame" x="180" y="230.5" width="240" height="139"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="139" id="Pt5-wA-4Ku"/>
+                                    <constraint firstAttribute="width" constant="240" id="XZb-oD-AeE"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.10196078431372549" green="0.13725490196078433" blue="0.49411764705882355" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="uZk-in-bgs" firstAttribute="centerY" secondItem="HIY-O9-sYz" secondAttribute="centerY" id="2JE-ft-mVS"/>
+                            <constraint firstItem="uZk-in-bgs" firstAttribute="centerX" secondItem="HIY-O9-sYz" secondAttribute="centerX" id="XJU-sH-R71"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TuP-AN-hLw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="450" y="367"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="blendLogo" width="500" height="500"/>
+    </resources>
+</document>
