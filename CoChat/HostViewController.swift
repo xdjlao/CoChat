@@ -100,7 +100,7 @@ extension HostViewController: HostReusableCellDelegate {
       case .Privacy:
          if let aSwitch = valueDidChange as? UISwitch {
             privateRoom = aSwitch.on
-            guard let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 2, inSection: 1)) as? HostReusableCell else {return}
+            guard let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 2, inSection: 3)) as? HostReusableCell else {return}
             switch privateRoom {
             case false:
                cell.title.text = "Private"

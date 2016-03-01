@@ -7,6 +7,7 @@ extension UIViewController {
         case SegueToChannelsVC = "SegueToChannelsVC"
         case SegueToShare = "SegueToShareViewController"
         case SegueToMenuChannelsVC = "SegueToMenuChannelsVC"
+        case SegueToTabBar = "segueToTabBar"
     }
     
     func performSegueWithSegueIdentifier(segueIdentifier: SegueIdentifier, sender: AnyObject?) {

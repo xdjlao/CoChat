@@ -29,7 +29,7 @@ var cellContent:[String: [String]] = [
     "advancedContent":["Advanced Settings",
         "Room Entry Key",
         "Public",
-        "Embed Channels"]
+        "Add Channels"]
 ]
 
 
@@ -107,6 +107,7 @@ class HostReusableCell: UITableViewCell, UITextFieldDelegate {
         case (3,2):
             title.text = advancedContent[indexPath.row]
             title.userInteractionEnabled = false
+            title.alpha = 1.0
             type = .Privacy
             switchToggle.hidden = false
         case (3,3):
