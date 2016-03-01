@@ -30,6 +30,7 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
       recentTableView.rowHeight = 200
       recentTableView.separatorStyle = .None
    }
+
 }
 
 extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {

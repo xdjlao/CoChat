@@ -39,7 +39,7 @@ class FirebaseManager {
       ref.childByAppendingPath("/User").queryOrderedByKey().queryEqualToValue(user.uid).observeSingleEventOfType(.Value, withBlock: { snapshot in
          guard let userDictionary = snapshot.value[self.user.uid] as? [NSObject: AnyObject] else { return }
          guard let recentRoomUIDs = userDictionary["recentRoomUIDs"] as? [String] else { return }
-         self.user.recentRoomUIDs = recentRoomUIDs
+         self.user.recentRoomsUIDs = recentRoomUIDs
       })
    }
    

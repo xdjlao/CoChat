@@ -108,7 +108,7 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
       guard !(FirebaseManager.manager.user.recentRooms.contains ({ (room: Room) -> Bool in
          return room === self.room
       })) else { return }
-      FirebaseManager.manager.user.recentRoomUIDs.append(room.uid)
+      FirebaseManager.manager.user.recentRoomsUIDs.append(room.uid)
       FirebaseManager.manager.user.recentRooms.append(room)
    }
    
