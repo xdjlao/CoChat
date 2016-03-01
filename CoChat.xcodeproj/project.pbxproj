@@ -58,6 +58,7 @@
 		A288F7DC1C78696100DF2847 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A288F7DB1C78696100DF2847 /* ShareViewController.swift */; };
 		A288F7DE1C7873D100DF2847 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A288F7DD1C7873D100DF2847 /* Login.storyboard */; };
 		A2A0A7111C83E93A00E4CDDC /* ProfileHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A0A7101C83E93A00E4CDDC /* ProfileHeaderCell.swift */; };
+		A2AC331D1C8624FC00A8E96A /* ProfileLogoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC331C1C8624FC00A8E96A /* ProfileLogoutCell.swift */; };
 		A2BE2B051C79984B00ED71E4 /* Share.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2BE2B041C79984B00ED71E4 /* Share.storyboard */; };
 		A2BE2B0C1C7B9E1700ED71E4 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2BE2B0A1C7B9E1700ED71E4 /* Profile.storyboard */; };
 		A2BE2B0F1C7B9F4400ED71E4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B0E1C7B9F4400ED71E4 /* ProfileViewController.swift */; };
@@ -132,6 +133,7 @@
 		A288F7DB1C78696100DF2847 /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		A288F7DD1C7873D100DF2847 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		A2A0A7101C83E93A00E4CDDC /* ProfileHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderCell.swift; sourceTree = "<group>"; };
+		A2AC331C1C8624FC00A8E96A /* ProfileLogoutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileLogoutCell.swift; sourceTree = "<group>"; };
 		A2BE2B041C79984B00ED71E4 /* Share.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Share.storyboard; sourceTree = "<group>"; };
 		A2BE2B0B1C7B9E1700ED71E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
 		A2BE2B0E1C7B9F4400ED71E4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -383,6 +385,7 @@
 			isa = PBXGroup;
 			children = (
 				A2BE2B0A1C7B9E1700ED71E4 /* Profile.storyboard */,
+				A2AC331C1C8624FC00A8E96A /* ProfileLogoutCell.swift */,
 				A2A0A7101C83E93A00E4CDDC /* ProfileHeaderCell.swift */,
 			);
 			name = Profile;
@@ -649,6 +652,7 @@
 				91E9B9E21C7BCD33006F4CF0 /* HostReusableCell.swift in Sources */,
 				D8641AE11C86342B004E838E /* Conversation.swift in Sources */,
 				91E9B9E81C7BD0F1006F4CF0 /* ChannelsVC.swift in Sources */,
+				A2AC331D1C8624FC00A8E96A /* ProfileLogoutCell.swift in Sources */,
 				D8AE2D191C7D28F00002A31D /* Whisper.swift in Sources */,
 				A288F7DA1C7867EA00DF2847 /* MenuChannelViewController.swift in Sources */,
 				A288F7B91C785B2D00DF2847 /* MessagingViewController-Data.swift in Sources */,

@@ -145,6 +145,10 @@ extension BrowseViewController: UITableViewDataSource, UITableViewDelegate {
         cell.roomTitleLabel.text = room.title
         cell.selectionStyle = UITableViewCellSelectionStyle.None
         cell.countLabel.textColor = Theme.Colors.DarkButtonColor.color
+        if indexPath.row == topRooms.count - 1 {
+            cell.cellSeperator.backgroundColor = Theme.Colors.NavigationBarColor.color
+            cell.countCellSeperator.backgroundColor = Theme.Colors.NavigationBarColor.color
+        }
         return cell
     }
 }
