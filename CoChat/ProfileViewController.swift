@@ -6,6 +6,7 @@ import AFNetworking
 
 class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
     
+    private var cellArray = [AnyObject]()
     private var loginButton:FBSDKLoginButton?
     @IBOutlet var topContainer: UIView!
     @IBOutlet weak var recentTableView: UITableView! {
@@ -19,7 +20,12 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
         super.viewDidLoad()
         loginButton = createFBLoginButton()
         loginButton!.delegate = self
+        setupArray()
         setUpUI()
+    }
+    
+    func setupArray() {
+        
     }
     
     func setUpUI (){
@@ -35,7 +41,7 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
 
 extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return cellArray.count + 2 // Add a profile header and profile logout cell
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -44,7 +50,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCellWithCellIdentifier(.ProfileCell) as! ProfileHeaderCell
             cell.selectionStyle = UITableViewCellSelectionStyle.None
             return cell
-        case(0,1):
+        case(0,cellArray.count + 1):
             let cell = tableView.dequeueReusableCellWithCellIdentifier(.ProfileLogoutCell) as! ProfileLogoutCell
             cell.selectionStyle = UITableViewCellSelectionStyle.None
             cell.profileLogoutButton = loginButton
