@@ -17,11 +17,14 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
             presentLoginScreen()
             return
         }
-        UIView.animateWithDuration(0.2, delay: 0.0, options: [], animations: { () -> Void in
-            self.textView.text = "" // Clear title
-            self.sendButtonOutlet.hidden = false
-            self.channelButtonOutlet.hidden = true
-            }, completion: nil)
+        if mode == Mode.Chat {
+            UIView.animateWithDuration(0.2, delay: 0.0, options: [], animations: { () -> Void in
+                self.textView.text = "" // Clear title
+                self.sendButtonOutlet.hidden = false
+                self.channelButtonOutlet.hidden = true
+                }, completion: nil)
+        }
+        
     }
     
     
@@ -41,17 +44,18 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
     }
     
     func textViewDidEndEditing(textView: UITextView) {
-        UIView.animateWithDuration(0.2, delay: 0.0, options: [], animations: { () -> Void in
-            if let curChan = self.currentChannel {
-                textView.text = "\(curChan.title) channel" // Room title
-            } else {
-                textView.text = "General Discussion"
-            }
-            self.sendButtonOutlet.hidden = true
-            self.channelButtonOutlet.hidden = false
-            }, completion: nil)
-        
-        
+        if mode == Mode.Chat {
+            UIView.animateWithDuration(0.2, delay: 0.0, options: [], animations: { () -> Void in
+                if let curChan = self.currentChannel {
+                    textView.text = "\(curChan.title) channel" // Room title
+                } else {
+                    textView.text = "General Discussion"
+                }
+                self.sendButtonOutlet.hidden = true
+                self.channelButtonOutlet.hidden = false
+                }, completion: nil)
+            
+        }
     }
     
     func animatetextViewWithKeyboard(notification: NSNotification) {
@@ -178,11 +182,19 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
     func showUserProfile(user:User) {
         let alertController = UIAlertController(title: user.name, message: "", preferredStyle: UIAlertControllerStyle.Alert)
         let reportAction = UIAlertAction(title: "Report", style: UIAlertActionStyle.Default) { (UIAlertAction) -> Void in
+            //
         }
-        let messageAction = UIAlertAction(title: "Message", style: UIAlertActionStyle.Default) { (UIAlertAction) -> Void in
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Destructive) { (UIAlertAction) -> Void in
+            //
         }
-        alertController.addAction(messageAction)
+        if mode == Mode.Chat {
+            let messageAction = UIAlertAction(title: "Message", style: UIAlertActionStyle.Default) { (UIAlertAction) -> Void in
+                //
+            }
+            alertController.addAction(messageAction)
+        }
         alertController.addAction(reportAction)
+        alertController.addAction(cancelAction)
         presentViewController(alertController, animated: true, completion: nil)
     }
     
@@ -202,6 +214,9 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
     func uiSetup() {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
+        if mode == Mode.Whisper {
+            navigationItem.rightBarButtonItem = nil
+        }
         topNav = navigationController!.navigationBar.frame.height
         topSection = topNav! + UIApplication.sharedApplication().statusBarFrame.size.height
         textView.scrollEnabled = false
@@ -214,8 +229,16 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
         channelButtonOutlet.backgroundColor = Theme.Colors.MessageButtonColor.color
         channelButtonOutlet.tintColor = UIColor.whiteColor()
         buttonContainer.backgroundColor = Theme.Colors.MessageButtonColor.color
-        if let currentChannelTitle = currentChannel?.title {
-            textView.text = "\(currentChannelTitle) channel"
+        if mode == Mode.Chat {
+            if let channelTitle = currentChannel?.title {
+                textView.text = "\(channelTitle) channel"
+            } else {
+                textView.text = ""
+            }
+        } else {
+            sendButtonOutlet.hidden = false
+            channelButtonOutlet.hidden = true
+            textView.text = ""
         }
         tableViewOrientation()
     }
