@@ -97,6 +97,7 @@ class HostReusableCell: UITableViewCell, UITextFieldDelegate {
             title.userInteractionEnabled = false
             type = .Privacy
             switchToggle.hidden = false
+            switchToggle.onTintColor = Theme.Colors.ButtonColor.color
             if enteredPrivacy != nil {
                 switchToggle.on = enteredPrivacy!
             }
