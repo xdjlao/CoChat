@@ -104,7 +104,7 @@
                                                                 </mask>
                                                             </variation>
                                                         </view>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cXD-FE-9K1">
+                                                        <view clipsSubviews="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="cXD-FE-9K1">
                                                             <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KN9-Oe-sRd">
@@ -211,6 +211,9 @@
                                             </variation>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="contentSeparatorView" destination="KjO-3D-4sN" id="x4v-zF-0EK"/>
+                                            <outlet property="contentWrapperView" destination="llI-gA-3wS" id="tZS-hY-awa"/>
+                                            <outlet property="imageSeparatorView" destination="TXA-M5-RiC" id="iif-82-r1j"/>
                                             <outlet property="messageLabel" destination="LKD-a9-9WR" id="tqd-rc-lLa"/>
                                             <outlet property="nameLabel" destination="K26-nm-Apg" id="egM-Qp-69W"/>
                                             <outlet property="profileImageView" destination="KN9-Oe-sRd" id="hKN-sx-TXj"/>
