@@ -25,6 +25,8 @@ class ShareViewController: UIViewController {
         navigationItem.title = "Share"
         qrViewWrapper.backgroundColor = Theme.Colors.NavigationBarColor.color
         setSocialIcons()
+        (shareItemSegmentedControl.subviews[0] as UIView).tintColor = UIColor.whiteColor()
+        (shareItemSegmentedControl.subviews[1] as UIView).tintColor = UIColor.whiteColor()
     }
     
     func launchUniversalLink(){
