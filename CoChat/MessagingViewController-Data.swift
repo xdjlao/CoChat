@@ -3,10 +3,11 @@ import Firebase
 
 
 class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannelViewControllerDelegate {
-    
+   
     @IBOutlet var buttonContainer: UIView!
     @IBOutlet weak var channelButtonOutlet: UIButton!
     @IBOutlet weak var sendButtonOutlet: UIButton!
+
     @IBOutlet weak var textView: UITextView! {
         didSet {
             textView.autocorrectionType = UITextAutocorrectionType.Yes
@@ -28,6 +29,16 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
         tableView.sendSubviewToBack(refreshControl)
         
         uiSetup()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        scrollToBottomMessage()
+    }
+    
+    func scrollToBottomMessage(keyboardHeight:CGFloat = 0) {
+        if tableView.contentSize.height > tableView.frame.height {
+            tableView.setContentOffset(CGPointMake(0, tableView.contentSize.height - tableView.frame.height - keyboardHeight), animated: false)
+        }
     }
     
     var oldestMessage: Message?
@@ -55,6 +66,7 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
         })
     }
     
+
     enum Mode {
         case Chat
         case Whisper
@@ -121,6 +133,7 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
         FirebaseManager.manager.ref.removeAllObservers()
     }
     
+
     var room: Room! {
         didSet {
             navigationItem.title = room.title

@@ -2,6 +2,7 @@ import UIKit
 import AFNetworking
 
 extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, GeneralMessageCellDelegate {
+    
     // MARK - Nib Methods
     func registerNibs(){
         let message = UINib(nibName:"GeneralMessageCell", bundle: nil)
@@ -62,10 +63,14 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
         let curve = userInfo[UIKeyboardAnimationCurveUserInfoKey] as! UInt
         
         if notification.name == UIKeyboardWillShowNotification {
-            self.view.frame.origin.y = -keyboardSize.height  // move up
+            let keyHeight = keyboardSize.height  // move up
+            self.view.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height - keyHeight)
+            scrollToBottomMessage(-keyHeight)
         }
         else {
-            self.view.frame.origin.y = 0 // move down
+            let keyHeight = keyboardSize.height
+            self.view.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height + keyHeight)
+            scrollToBottomMessage(keyHeight)
         }
         
         view.setNeedsUpdateConstraints()
@@ -197,6 +202,7 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
         textView.scrollEnabled = false
         textView.delegate = self
+        textView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.8)
         view.backgroundColor = Theme.Colors.BackgroundColor.color
         sendButtonOutlet.backgroundColor = Theme.Colors.ButtonColor.color
         sendButtonOutlet.tintColor = UIColor.whiteColor()
