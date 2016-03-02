@@ -33,6 +33,7 @@
 		91F525AA1C82616B009C9BF1 /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91F525981C82616B009C9BF1 /* Lato-Hairline.ttf */; };
 		91F525AD1C82616B009C9BF1 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91F5259B1C82616B009C9BF1 /* Lato-Light.ttf */; };
 		91F525AF1C82616B009C9BF1 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91F5259D1C82616B009C9BF1 /* Lato-Regular.ttf */; };
+		A25B5A9A1C87A10300DBC0B2 /* ProfileFavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B5A991C87A10300DBC0B2 /* ProfileFavoriteCell.swift */; };
 		A288F7731C7840E600DF2847 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A288F7721C7840E600DF2847 /* AppDelegate.swift */; };
 		A288F7781C7840E600DF2847 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A288F7761C7840E600DF2847 /* Main.storyboard */; };
 		A288F7A51C7841B600DF2847 /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A288F7A41C7841B600DF2847 /* BrowseViewController.swift */; };
@@ -106,6 +107,7 @@
 		91F525981C82616B009C9BF1 /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Hairline.ttf"; sourceTree = "<group>"; };
 		91F5259B1C82616B009C9BF1 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		91F5259D1C82616B009C9BF1 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		A25B5A991C87A10300DBC0B2 /* ProfileFavoriteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileFavoriteCell.swift; sourceTree = "<group>"; };
 		A288F76F1C7840E600DF2847 /* CoChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A288F7721C7840E600DF2847 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A288F7771C7840E600DF2847 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -388,6 +390,7 @@
 				A2BE2B0A1C7B9E1700ED71E4 /* Profile.storyboard */,
 				A2AC331C1C8624FC00A8E96A /* ProfileLogoutCell.swift */,
 				A2A0A7101C83E93A00E4CDDC /* ProfileHeaderCell.swift */,
+				A25B5A991C87A10300DBC0B2 /* ProfileFavoriteCell.swift */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -669,6 +672,7 @@
 				A288F7BD1C785CAE00DF2847 /* MessagingViewController-UI.swift in Sources */,
 				A2BE2B0F1C7B9F4400ED71E4 /* ProfileViewController.swift in Sources */,
 				A288F7731C7840E600DF2847 /* AppDelegate.swift in Sources */,
+				A25B5A9A1C87A10300DBC0B2 /* ProfileFavoriteCell.swift in Sources */,
 				A2A0A7111C83E93A00E4CDDC /* ProfileHeaderCell.swift in Sources */,
 				A288F7A91C78524600DF2847 /* ScanViewController.swift in Sources */,
 			);

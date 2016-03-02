@@ -26,6 +26,7 @@ extension UITableView {
         case RecentRoomCell = "RecentRoomCell"
         case TopRoomCell = "TopRoomCell"
         case ProfileCell = "ProfileHeaderCell"
+        case ProfileFavoriteCell = "ProfileFavoriteCell"
         case ProfileLogoutCell = "ProfileLogoutCell"
         case MenuChannelsCell = "MenuChannelCell"
     }
