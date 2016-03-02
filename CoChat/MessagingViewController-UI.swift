@@ -180,6 +180,7 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
         let reportAction = UIAlertAction(title: "Report", style: UIAlertActionStyle.Default) { (UIAlertAction) -> Void in
         }
         let messageAction = UIAlertAction(title: "Message", style: UIAlertActionStyle.Default) { (UIAlertAction) -> Void in
+            perfo
         }
         alertController.addAction(messageAction)
         alertController.addAction(reportAction)
