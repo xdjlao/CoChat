@@ -94,14 +94,15 @@ extension BrowseViewController: UITableViewDataSource, UITableViewDelegate {
         let room = self.rooms[indexPath.row]
         guard let cell = tableView.cellForRowAtIndexPath(indexPath) as? TopRoomCell else {return}
         
-        UIView.animateWithDuration(0.2, delay: 0.0, options: [], animations: {
+        UIView.animateWithDuration(0.2, delay: 0.0, options: [], animations: { () -> Void in
             cell.cellWrapperView.backgroundColor = Theme.Colors.BackgroundColor.color
-            }, completion: nil)
-
-        self.manager.getChildrenForParent(Channel(), parent: room) { (children) in
-            guard let children = children else { return }
-            room.channels = children
-            self.performSegueWithSegueIdentifier(.SegueToMessaging, sender: room)
+            }) { (Bool) -> Void in
+                cell.cellWrapperView.backgroundColor = Theme.Colors.ForegroundColor.color
+                self.manager.getChildrenForParent(Channel(), parent: room) { (children) in
+                    guard let children = children else { return }
+                    room.channels = children
+                    self.performSegueWithSegueIdentifier(.SegueToMessaging, sender: room)
+                }
         }
     }
     
