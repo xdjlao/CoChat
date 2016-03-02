@@ -30,6 +30,7 @@ class Room: FirebaseType {
    static func createNewRoomWith(title: String, host: User, privateRoom: Int, password: String, withCompletionHandler handler: ((new: Room) -> ())?) {
       let room = Room(title: title, host: host, privateRoom: privateRoom, password: password)
       room.createNew { new in
+        
          guard let new = new as? Room else { return }
          handler?(new: new)
       }

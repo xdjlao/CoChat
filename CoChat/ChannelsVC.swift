@@ -50,8 +50,48 @@ class ChannelsVC: UIViewController {
         let addChannelButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addChannelButtonWasTapped")
         addChannelButton.enabled = false
         navigationItem.rightBarButtonItem = addChannelButton
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
+    }
+    func keyboardWillShow(notification: NSNotification){
+        animateTableView(notification)
+    }
+
+    func keyboardWillHide(notification: NSNotification){
+        animateTableView(notification)
+    }
+    
+    func animateTableView(notification: NSNotification){
+        let userInfo = notification.userInfo!
+        
+        let keyboardSize = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+        
+        let duration = userInfo[UIKeyboardAnimationDurationUserInfoKey] as! Double
+        let curve = userInfo[UIKeyboardAnimationCurveUserInfoKey] as! UInt
+        
+        if notification.name == UIKeyboardWillShowNotification {
+            let keyHeight = keyboardSize.height // move up
+            tableView.frame = CGRect(x: 0, y: 0, width: tableView.frame.width, height: tableView.frame.height - keyHeight)
+        }
+        else {
+            let keyHeight = keyboardSize.height
+            tableView.frame = CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: tableView.frame.height + keyHeight)
+//            scrollToBottomMessage(keyHeight - topSection!)
+        }
+        tableView.setNeedsUpdateConstraints()
+        
+        let options = UIViewAnimationOptions(rawValue: curve << 16)
+        UIView.animateWithDuration(duration, delay: 0, options: options,
+            animations: {
+                self.tableView.layoutIfNeeded()
+                
+            },
+            completion: nil
+        )
+
     }
 }
+
 
 
 extension ChannelsVC: UITableViewDelegate, UITableViewDataSource {
@@ -187,23 +227,23 @@ extension ChannelsVC: HostReusableCellDelegate {
         tableView.reloadData()
     }
     
-    func textFieldDidBeginEditingInCell(textField: UITextField) {
-        guard let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 1, inSection: 3)) as? HostReusableCell else {return}
-        let nameRoomLocation = cell.title.convertRect(cell.frame, fromCoordinateSpace: UIApplication.sharedApplication().keyWindow!)
-        print("nameroomlocation \(nameRoomLocation)")
-        let textFieldLocation = cell.convertRect(textField.frame, fromCoordinateSpace: UIApplication.sharedApplication().keyWindow!)
-        print("textfieldLocation \(textFieldLocation)")
-        if textFieldLocation != nameRoomLocation {
-            
-            let textFieldPosition = textField.convertPoint(CGPointZero, toView: self.tableView)
-            let indexPath = self.tableView.indexPathForRowAtPoint(textFieldPosition)
-            let otherCell = tableView.cellForRowAtIndexPath(indexPath!)
-            
-            tableView.setContentOffset(CGPointMake(self.tableView.contentOffset.x, self.tableView.contentOffset.y + (CGFloat(indexPath!.row) * (otherCell?.frame.height)! + CGFloat(110)) - (navigationController?.navigationBar.frame.height)!), animated: true)
-        }
-    }
-    
-    func textFieldDidEndEditingInCell() {
-        tableView.setContentOffset(CGPointMake(0.0, 0.0), animated:true)
-    }
+//    func textFieldDidBeginEditingInCell(textField: UITextField) {
+//        guard let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 1, inSection: 3)) as? HostReusableCell else {return}
+//        let nameRoomLocation = cell.title.convertRect(cell.frame, fromCoordinateSpace: UIApplication.sharedApplication().keyWindow!)
+//        print("nameroomlocation \(nameRoomLocation)")
+//        let textFieldLocation = cell.convertRect(textField.frame, fromCoordinateSpace: UIApplication.sharedApplication().keyWindow!)
+//        print("textfieldLocation \(textFieldLocation)")
+//        if textFieldLocation != nameRoomLocation {
+//            
+//            let textFieldPosition = textField.convertPoint(CGPointZero, toView: self.tableView)
+//            let indexPath = self.tableView.indexPathForRowAtPoint(textFieldPosition)
+//            let otherCell = tableView.cellForRowAtIndexPath(indexPath!)
+//            
+//            tableView.setContentOffset(CGPointMake(self.tableView.contentOffset.x, self.tableView.contentOffset.y + (CGFloat(indexPath!.row) * (otherCell?.frame.height)! + CGFloat(110)) - (navigationController?.navigationBar.frame.height)!), animated: true)
+//        }
+//    }
+//    
+//    func textFieldDidEndEditingInCell() {
+//        tableView.setContentOffset(CGPointMake(0.0, 0.0), animated:true)
+//    }
 }

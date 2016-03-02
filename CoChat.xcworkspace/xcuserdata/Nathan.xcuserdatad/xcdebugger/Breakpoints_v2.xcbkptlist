@@ -282,11 +282,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CoChat/MenuChannelsCell.swift"
-            timestampString = "478646031.637593"
+            timestampString = "478647925.651793"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "favoriteButtonWasTapped(_:)"
             landmarkType = "5">
          </BreakpointContent>

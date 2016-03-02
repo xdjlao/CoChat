@@ -69,7 +69,7 @@
 		A2BE2B2C1C7E72A200ED71E4 /* BrowseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B2B1C7E72A200ED71E4 /* BrowseNavigationViewController.swift */; };
 		A2BE2B3A1C81226C00ED71E4 /* TopRoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B391C81226C00ED71E4 /* TopRoomCell.swift */; };
 		D804B1EF1C877DF2002D348C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D804B1EE1C877DF2002D348C /* Assets.xcassets */; };
-		D8641ADF1C862F3F004E838E /* Whisper.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8641ADE1C862F3F004E838E /* Whisper.storyboard */; };
+		D804B1F11C8795A2002D348C /* Whisper.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D804B1F01C8795A2002D348C /* Whisper.storyboard */; };
 		D8641AE11C86342B004E838E /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8641AE01C86342B004E838E /* Conversation.swift */; };
 		D8AE2D191C7D28F00002A31D /* Whisper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE2D181C7D28F00002A31D /* Whisper.swift */; };
 		D8AE2D1B1C7D2E560002A31D /* DualQueriedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE2D1A1C7D2E560002A31D /* DualQueriedType.swift */; };
@@ -144,7 +144,7 @@
 		A2BE2B2B1C7E72A200ED71E4 /* BrowseNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseNavigationViewController.swift; sourceTree = "<group>"; };
 		A2BE2B391C81226C00ED71E4 /* TopRoomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopRoomCell.swift; sourceTree = "<group>"; };
 		D804B1EE1C877DF2002D348C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D8641ADE1C862F3F004E838E /* Whisper.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Whisper.storyboard; sourceTree = "<group>"; };
+		D804B1F01C8795A2002D348C /* Whisper.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Whisper.storyboard; sourceTree = "<group>"; };
 		D8641AE01C86342B004E838E /* Conversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		D8AE2D181C7D28F00002A31D /* Whisper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Whisper.swift; sourceTree = "<group>"; };
 		D8AE2D1A1C7D2E560002A31D /* DualQueriedType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DualQueriedType.swift; sourceTree = "<group>"; };
@@ -450,7 +450,7 @@
 		A2BE2B1D1C7CE3B200ED71E4 /* Whisper */ = {
 			isa = PBXGroup;
 			children = (
-				D8641ADE1C862F3F004E838E /* Whisper.storyboard */,
+				D804B1F01C8795A2002D348C /* Whisper.storyboard */,
 			);
 			name = Whisper;
 			sourceTree = "<group>";
@@ -516,7 +516,7 @@
 				TargetAttributes = {
 					A288F76E1C7840E600DF2847 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 9F59S7VZE2;
+						DevelopmentTeam = C4P8U7398K;
 						SystemCapabilities = {
 							com.apple.SafariKeychain = {
 								enabled = 0;
@@ -549,7 +549,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A288F7D81C7862C700DF2847 /* UserMessageCell.xib in Resources */,
-				D8641ADF1C862F3F004E838E /* Whisper.storyboard in Resources */,
+				D804B1F11C8795A2002D348C /* Whisper.storyboard in Resources */,
 				912607B91C8550B10015D487 /* Launch.storyboard in Resources */,
 				91F525A61C82616B009C9BF1 /* Lato-Black.ttf in Resources */,
 				91F525A81C82616B009C9BF1 /* Lato-Bold.ttf in Resources */,

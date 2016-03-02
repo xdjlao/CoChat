@@ -15,7 +15,17 @@ class MenuChannelsCell: UITableViewCell {
     weak var delegate: MenuChannelsCellDelegate?
     var isFavorite = false
     
-    var channel: Channel!
+    var channel: Channel! {
+        didSet {
+            if FirebaseManager.manager.user.favoriteChannels.contains( { checkChannel -> Bool in
+                return checkChannel.uid == channel.uid
+            }) {
+                isFavorite = true
+            } else {
+                isFavorite = false
+            }
+        }
+    }
     
     @IBOutlet var buttonContainer: UIView!
     @IBOutlet var channelsContainer: UIView!
