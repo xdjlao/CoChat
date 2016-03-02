@@ -43,7 +43,7 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
     func textViewDidEndEditing(textView: UITextView) {
         UIView.animateWithDuration(0.2, delay: 0.0, options: [], animations: { () -> Void in
             if let curChan = self.currentChannel {
-                textView.text = "\(curChan.title)" // Room title
+                textView.text = "\(curChan.title) channel" // Room title
             } else {
                 textView.text = "General Discussion"
             }
@@ -208,11 +208,13 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
         textView.delegate = self
         textView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.8)
         view.backgroundColor = Theme.Colors.BackgroundColor.color
-        sendButtonOutlet.backgroundColor = Theme.Colors.ButtonColor.color
+        textView.layer.cornerRadius = 3
+        sendButtonOutlet.backgroundColor = Theme.Colors.MessageButtonColor.color
         sendButtonOutlet.tintColor = UIColor.whiteColor()
-        channelButtonOutlet.backgroundColor = Theme.Colors.ButtonColor.color
+        channelButtonOutlet.backgroundColor = Theme.Colors.MessageButtonColor.color
         channelButtonOutlet.tintColor = UIColor.whiteColor()
-        buttonContainer.backgroundColor = Theme.Colors.ButtonColor.color
+        buttonContainer.backgroundColor = Theme.Colors.MessageButtonColor.color
+        textView.text = "\(currentChannel!.title) channel"
         tableViewOrientation()
     }
     

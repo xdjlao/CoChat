@@ -6,6 +6,7 @@ struct Theme {
         case NavigationBarColor
         case ForegroundColor
         case ForegroundInsetColor
+        case MessageButtonColor
         case ButtonColor
         case DarkButtonColor
         case RedButtonColor
@@ -21,6 +22,7 @@ struct Theme {
             case .ForegroundColor: return UIColor(r: 121, g: 134, b: 203)
             case .ForegroundInsetColor: return UIColor(r: 96, g:107, b: 162)
             case .ButtonColor: return UIColor(r: 0, g: 227, b: 205) // bright blue
+            case .MessageButtonColor: return UIColor(r: 63, g: 81, b: 181)
             case .DarkButtonColor: return UIColor(r:    51, g: 153, b: 255)
             case .RedButtonColor: return UIColor(r: 255, g: 51, b: 51)
             case .TransparentLabelColor: return UIColor(red: 121/255, green: 134/255, blue: 203/255, alpha: 0.3)

@@ -22,7 +22,7 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
         didSet {
             tableView.delegate = self
             tableView.dataSource = self
-            tableView.backgroundColor = Theme.Colors.ForegroundColor.color
+            tableView.backgroundColor = Theme.Colors.BackgroundColor.color
         }
     }
     override func viewDidLoad() {
@@ -147,7 +147,7 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
         didSet {
             setUpListener()
             guard let roomLabel = textView else { return }
-            roomLabel.text = room.title + " - " + currentChannel!.title
+            roomLabel.text = "\(currentChannel!.title) channel"
         }
     }
     var currentConversation: Conversation? {

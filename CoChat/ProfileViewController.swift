@@ -52,7 +52,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         case(0,0):
             let cell = tableView.dequeueReusableCellWithCellIdentifier(.ProfileCell) as! ProfileHeaderCell
             cell.selectionStyle = UITableViewCellSelectionStyle.None
-            originalImageHeight = cell.userImageView.frame.height
+            originalImageHeight = 100
             return cell
         case(0,cellArray.count + 1):
             let cell = tableView.dequeueReusableCellWithCellIdentifier(.ProfileLogoutCell) as! ProfileLogoutCell
@@ -84,19 +84,15 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             scrollView.scrollEnabled = true
             let indexPath = NSIndexPath(forRow: 0, inSection: 0)
             if let cell = recentTableView.cellForRowAtIndexPath(indexPath) as? ProfileHeaderCell {
-                let centerPoint = cell.userImageView.center
-                if cell.userImageView.frame.height >= 0 && cell.userImageView.frame.height <= originalImageHeight {
-                    let newImageScale = scrollView.contentOffset.y - imageScale
-                    imageScale = imageScale + newImageScale
-                    var checkScale = cell.userImageView.frame.height - newImageScale
-                    if checkScale < 0 {
-                        checkScale = 0
-                    }
-                    if checkScale <= originalImageHeight && checkScale >= 0 {
-                        cell.userImageView.frame = CGRect(x: 0, y: 0, width: cell.userImageView.frame.width - newImageScale, height: cell.userImageView.frame.height - newImageScale)
-                        cell.userImageView.center = CGPointMake(centerPoint.x, centerPoint.y + newImageScale)
+                if scrollView.contentOffset.y <= 80 {
+                    let centerPoint = cell.userImageView.center
+                    if cell.userImageView.frame.height >= 20 && cell.userImageView.frame.height <= originalImageHeight {
+                        let newImageScale = scrollView.contentOffset.y - imageScale
+                        imageScale = imageScale + newImageScale
+                        let imageHeight = cell.userImageView.frame.height
+                        cell.userImageView.frame = CGRect(x: 0, y: 0, width: imageHeight - newImageScale, height: imageHeight - newImageScale)
+                        cell.userImageView.center = CGPointMake(centerPoint.x, centerPoint.y + newImageScale/1.5)
                         cell.userImageView.layer.cornerRadius = cell.userImageView.frame.width / 2
-                        
                     }
                 }
             }

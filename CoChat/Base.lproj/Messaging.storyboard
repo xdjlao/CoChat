@@ -38,16 +38,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="crp-tk-UTN">
                                 <rect key="frame" x="545" y="494" width="50" height="37"/>
                                 <subviews>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4LP-hV-lVC">
-                                        <rect key="frame" x="0.0" y="4" width="50" height="30"/>
-                                        <state key="normal" title="SD"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4LP-hV-lVC">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="38"/>
+                                        <state key="normal" image="send"/>
                                         <connections>
                                             <action selector="sendButton:" destination="efc-L1-N1A" eventType="touchUpInside" id="zqF-dD-yeD"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbG-SN-nti">
-                                        <rect key="frame" x="0.0" y="4" width="50" height="30"/>
-                                        <state key="normal" title="CH"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbG-SN-nti">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="38"/>
+                                        <state key="normal" image="channel"/>
                                         <connections>
                                             <segue destination="J6o-1j-lIo" kind="show" identifier="SegueToMenuChannelsVC" id="GYp-nk-iiG"/>
                                         </connections>
@@ -60,7 +60,6 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.95204326923076921" green="0.95204326923076921" blue="0.95204326923076921" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="d5T-IE-BNw" firstAttribute="top" secondItem="s0d-QT-e9S" secondAttribute="bottom" constant="5" id="24s-Ae-emc"/>
@@ -150,4 +149,8 @@
             <point key="canvasLocation" x="2091" y="1954"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="channel" width="27" height="25"/>
+        <image name="send" width="27" height="20"/>
+    </resources>
 </document>
