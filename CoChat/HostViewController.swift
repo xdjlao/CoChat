@@ -22,7 +22,7 @@ class HostViewController: UIViewController, ChannelsVCDelegate {
       let headerNib = UINib(nibName: "HostReusableCell", bundle: nil)
       tableView.registerNib(headerNib, forCellReuseIdentifier: "Host Reusable Cell")
       tableView.scrollEnabled = false
-      tableView.backgroundColor = Theme.Colors.ForegroundColor.color
+      tableView.backgroundColor = Theme.Colors.BackgroundColor.color
       
       let addRoomButton = UIBarButtonItem(title: "Create Room", style: UIBarButtonItemStyle.Plain, target: self, action: "addRoomButtonWasTapped")
       navigationItem.rightBarButtonItem = addRoomButton
@@ -144,9 +144,14 @@ extension HostViewController: UITableViewDelegate, UITableViewDataSource {
          cell.hidden = true
       case (1, 0):
          cell.titleConstraintToLeftSuperView.constant = 10
+         cell.backgroundColor = Theme.Colors.DarkBackgroundColor.color
          cell.title.text = "Create a Room"
          cell.switchToggle.hidden = true
          cell.createButton.hidden = true
+         cell.layer.shadowOffset = CGSizeMake(1, 0)
+         cell.layer.shadowColor = UIColor.blackColor().CGColor
+         cell.layer.shadowRadius = 5
+         cell.layer.shadowOpacity = 1.0
          return cell
       default:
          cell.setUpCellAtIndexPath(indexPath)

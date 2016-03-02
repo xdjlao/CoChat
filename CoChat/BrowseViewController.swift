@@ -27,7 +27,7 @@ class BrowseViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        getRecentRooms()
+//        getRecentRooms()
         getAllRooms()
     }
     
@@ -35,7 +35,7 @@ class BrowseViewController: UIViewController {
         tableView.rowHeight = 71
         tableView.separatorColor = UIColor.clearColor()
         tableView.separatorStyle = UITableViewCellSeparatorStyle.None
-        tableView.backgroundColor = Theme.Colors.NavigationBarColor.color
+        tableView.backgroundColor = Theme.Colors.BackgroundColor.color
     }
     
     func getAllRooms() {
@@ -59,8 +59,7 @@ class BrowseViewController: UIViewController {
                 self.recentRooms.append(room)
             })
         }
-    }
-    
+    }    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         guard let nav = segue.destinationViewController as? MessagingNavigationViewController else { return }
         guard let mvc = nav.topViewController as? MessagingViewController else { return }

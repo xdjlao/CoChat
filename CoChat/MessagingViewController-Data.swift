@@ -35,6 +35,7 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
     func getMoreMessages(refreshControl: UIRefreshControl) {
         guard let oldestMessage = oldestMessage else {
             refreshControl.endRefreshing()
+
             return
         }
         let ref = mode.firebase(forUID: currentUID)

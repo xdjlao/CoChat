@@ -16,7 +16,6 @@ class User: FirebaseType {
    var value: AnyObject {
       return ["name": name, "profileImageURL": profileImageURL, "recentRoomsUIDs": recentRoomsUIDs]
    }
-    
    let type = Type.User
    
    init(name: String, profileImageURL: String, uid: String) {
@@ -29,7 +28,7 @@ class User: FirebaseType {
       self.uid = uid
       self.name = "blech"
       self.profileImageURL = "blech"
-      self.recentRoomsUIDs = dictionary["recentRoomsUIDs"] as? [String] ?? [String]()
+    self.recentRoomsUIDs = dictionary["recentRoomsUIDs"] as? [String] ?? [String]()
    }
    
    init(withDummyName dummyName: String, dummyProfileImageURL: String, dummyUID: String) {

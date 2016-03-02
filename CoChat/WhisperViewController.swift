@@ -3,8 +3,12 @@ import Firebase
 
 class WhisperViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
+
     var conversations = [Conversation]()
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.backgroundColor = Theme.Colors.BackgroundColor.color
+    }
     
     override func viewWillAppear(animated: Bool) {
         let whisperRef = FirebaseManager.manager.ref.childByAppendingPath("Conversation")
@@ -26,6 +30,11 @@ class WhisperViewController: UIViewController {
             
             addToConversations(snapshot)
         })
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        FirebaseManager.manager.ref.removeAllObservers()
     }
 }
 

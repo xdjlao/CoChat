@@ -45,8 +45,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         return true
     }
-    
-    
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
         guard let host = url.host else { return false }
         guard let roomID = url.pathComponents else { return false }
@@ -69,6 +67,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 })
             })
         }
+        
         return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
     }
     
