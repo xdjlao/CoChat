@@ -7,6 +7,7 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
    var qrCodeFrameView:UIView?
    var passcodeView = true
    
+    @IBOutlet weak var joinTextFieldWrapperView: UIView!
    @IBOutlet weak var scanViewWrapper: UIView!
    @IBOutlet weak var joinViewWrapper: UIView!
    @IBOutlet weak var passcodeLabel: UITextField!
@@ -33,8 +34,11 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
     
     func setUpUI(){
         joinViewWrapper.backgroundColor = Theme.Colors.BackgroundColor.color
-        passcodeLabelWrapper.backgroundColor = Theme.Colors.ForegroundColor.color
-
+        passcodeLabelWrapper.backgroundColor = UIColor.clearColor()
+        joinTextFieldWrapperView.backgroundColor = Theme.Colors.NavigationBarColor.color
+        let placeholderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.3)
+        passcodeLabel.attributedPlaceholder = NSAttributedString(string: "Enter Key", attributes: [NSForegroundColorAttributeName : placeholderColor])
+        joinButtonOutlet.layer.cornerRadius = 10
     }
     
     func startScan() {

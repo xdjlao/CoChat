@@ -59,6 +59,7 @@
 		A288F7DC1C78696100DF2847 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A288F7DB1C78696100DF2847 /* ShareViewController.swift */; };
 		A288F7DE1C7873D100DF2847 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A288F7DD1C7873D100DF2847 /* Login.storyboard */; };
 		A2A0A7111C83E93A00E4CDDC /* ProfileHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A0A7101C83E93A00E4CDDC /* ProfileHeaderCell.swift */; };
+		A2AC331D1C8624FC00A8E96A /* ProfileLogoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC331C1C8624FC00A8E96A /* ProfileLogoutCell.swift */; };
 		A2BE2B051C79984B00ED71E4 /* Share.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2BE2B041C79984B00ED71E4 /* Share.storyboard */; };
 		A2BE2B0C1C7B9E1700ED71E4 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2BE2B0A1C7B9E1700ED71E4 /* Profile.storyboard */; };
 		A2BE2B0F1C7B9F4400ED71E4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B0E1C7B9F4400ED71E4 /* ProfileViewController.swift */; };
@@ -69,6 +70,7 @@
 		A2BE2B2C1C7E72A200ED71E4 /* BrowseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B2B1C7E72A200ED71E4 /* BrowseNavigationViewController.swift */; };
 		A2BE2B3A1C81226C00ED71E4 /* TopRoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B391C81226C00ED71E4 /* TopRoomCell.swift */; };
 		D8641ADF1C862F3F004E838E /* Whisper.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8641ADE1C862F3F004E838E /* Whisper.storyboard */; };
+		D8641AE11C86342B004E838E /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8641AE01C86342B004E838E /* Conversation.swift */; };
 		D8AE2D191C7D28F00002A31D /* Whisper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE2D181C7D28F00002A31D /* Whisper.swift */; };
 		D8AE2D1B1C7D2E560002A31D /* DualQueriedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE2D1A1C7D2E560002A31D /* DualQueriedType.swift */; };
 		FE075CF3C95FB29BE89AA0A4 /* Pods_CoChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70EBED03AAABBA95CBA945A5 /* Pods_CoChat.framework */; };
@@ -132,6 +134,7 @@
 		A288F7DB1C78696100DF2847 /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		A288F7DD1C7873D100DF2847 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		A2A0A7101C83E93A00E4CDDC /* ProfileHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderCell.swift; sourceTree = "<group>"; };
+		A2AC331C1C8624FC00A8E96A /* ProfileLogoutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileLogoutCell.swift; sourceTree = "<group>"; };
 		A2BE2B041C79984B00ED71E4 /* Share.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Share.storyboard; sourceTree = "<group>"; };
 		A2BE2B0B1C7B9E1700ED71E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
 		A2BE2B0E1C7B9F4400ED71E4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +145,7 @@
 		A2BE2B2B1C7E72A200ED71E4 /* BrowseNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseNavigationViewController.swift; sourceTree = "<group>"; };
 		A2BE2B391C81226C00ED71E4 /* TopRoomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopRoomCell.swift; sourceTree = "<group>"; };
 		D8641ADE1C862F3F004E838E /* Whisper.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Whisper.storyboard; sourceTree = "<group>"; };
+		D8641AE01C86342B004E838E /* Conversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		D8AE2D181C7D28F00002A31D /* Whisper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Whisper.swift; sourceTree = "<group>"; };
 		D8AE2D1A1C7D2E560002A31D /* DualQueriedType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DualQueriedType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -228,6 +232,7 @@
 				A288F7AE1C78591800DF2847 /* Channel.swift */,
 				A288F7B21C78593D00DF2847 /* Message.swift */,
 				D8AE2D181C7D28F00002A31D /* Whisper.swift */,
+				D8641AE01C86342B004E838E /* Conversation.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -381,6 +386,7 @@
 			isa = PBXGroup;
 			children = (
 				A2BE2B0A1C7B9E1700ED71E4 /* Profile.storyboard */,
+				A2AC331C1C8624FC00A8E96A /* ProfileLogoutCell.swift */,
 				A2A0A7101C83E93A00E4CDDC /* ProfileHeaderCell.swift */,
 			);
 			name = Profile;
@@ -518,7 +524,7 @@
 				TargetAttributes = {
 					A288F76E1C7840E600DF2847 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = C4P8U7398K;
+						DevelopmentTeam = 9F59S7VZE2;
 						SystemCapabilities = {
 							com.apple.SafariKeychain = {
 								enabled = 0;
@@ -644,7 +650,9 @@
 				91B18F601C7CE71900F20531 /* TableView.swift in Sources */,
 				A288F7B31C78593D00DF2847 /* Message.swift in Sources */,
 				91E9B9E21C7BCD33006F4CF0 /* HostReusableCell.swift in Sources */,
+				D8641AE11C86342B004E838E /* Conversation.swift in Sources */,
 				91E9B9E81C7BD0F1006F4CF0 /* ChannelsVC.swift in Sources */,
+				A2AC331D1C8624FC00A8E96A /* ProfileLogoutCell.swift in Sources */,
 				D8AE2D191C7D28F00002A31D /* Whisper.swift in Sources */,
 				A288F7DA1C7867EA00DF2847 /* MenuChannelViewController.swift in Sources */,
 				A288F7B91C785B2D00DF2847 /* MessagingViewController-Data.swift in Sources */,

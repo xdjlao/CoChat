@@ -146,11 +146,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="friendsName" destination="K26-nm-Apg" id="SJ4-cI-ImP"/>
                                             <outlet property="messageLabel" destination="LKD-a9-9WR" id="tqd-rc-lLa"/>
                                             <outlet property="nameLabel" destination="K26-nm-Apg" id="egM-Qp-69W"/>
                                             <outlet property="profileImageView" destination="KN9-Oe-sRd" id="hKN-sx-TXj"/>
-                                            <segue destination="Vhr-T0-Nyh" kind="show" id="RWu-PX-twq"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -173,11 +171,12 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="n34-SN-5Tk" id="e24-mq-8lQ"/>
+                        <segue destination="Vhr-T0-Nyh" kind="show" identifier="SegueToMessaging" id="9Kf-Ae-dto"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y94-KE-eNR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-318" y="1186"/>
+            <point key="canvasLocation" x="-395" y="1215"/>
         </scene>
         <!--UIViewController-efc-L1-N1A-->
         <scene sceneID="lk6-5d-w5W">
