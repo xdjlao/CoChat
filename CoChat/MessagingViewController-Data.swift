@@ -4,11 +4,14 @@ import Firebase
 
 class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannelViewControllerDelegate {
    
+    @IBOutlet weak var tableViewTopConstraint: NSLayoutConstraint!
     @IBOutlet var buttonContainer: UIView!
     @IBOutlet weak var channelButtonOutlet: UIButton!
     @IBOutlet weak var sendButtonOutlet: UIButton!
     var topSection:CGFloat?
+    var topNav:CGFloat?
     var firstType = true
+    var originalFrame:CGRect?
 
     @IBOutlet weak var textView: UITextView! {
         didSet {
@@ -29,7 +32,7 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
         refreshControl.addTarget(self, action: "getMoreMessages:", forControlEvents: .ValueChanged)
         tableView.addSubview(refreshControl)
         tableView.sendSubviewToBack(refreshControl)
-        
+        originalFrame = view.frame
         uiSetup()
     }
     

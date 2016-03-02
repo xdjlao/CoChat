@@ -83,16 +83,21 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         } else {
             scrollView.scrollEnabled = true
             let indexPath = NSIndexPath(forRow: 0, inSection: 0)
-            let cell = recentTableView.cellForRowAtIndexPath(indexPath) as! ProfileHeaderCell
-            let centerPoint = cell.userImageView.center
-            if cell.userImageView.frame.height >= 0 && cell.userImageView.frame.height <= originalImageHeight {
-                let newImageScale = scrollView.contentOffset.y - imageScale
-                imageScale = imageScale + newImageScale
-                let checkScale = cell.userImageView.frame.height - newImageScale
-                if checkScale <= originalImageHeight && checkScale >= 0 {
-                    cell.userImageView.frame = CGRect(x: 0, y: 0, width: cell.userImageView.frame.width - newImageScale, height: cell.userImageView.frame.height - newImageScale)
-                    cell.userImageView.center = CGPointMake(centerPoint.x, centerPoint.y + newImageScale)
-                    cell.userImageView.layer.cornerRadius = cell.userImageView.frame.width / 2
+            if let cell = recentTableView.cellForRowAtIndexPath(indexPath) as? ProfileHeaderCell {
+                let centerPoint = cell.userImageView.center
+                if cell.userImageView.frame.height >= 0 && cell.userImageView.frame.height <= originalImageHeight {
+                    let newImageScale = scrollView.contentOffset.y - imageScale
+                    imageScale = imageScale + newImageScale
+                    var checkScale = cell.userImageView.frame.height - newImageScale
+                    if checkScale < 0 {
+                        checkScale = 0
+                    }
+                    if checkScale <= originalImageHeight && checkScale >= 0 {
+                        cell.userImageView.frame = CGRect(x: 0, y: 0, width: cell.userImageView.frame.width - newImageScale, height: cell.userImageView.frame.height - newImageScale)
+                        cell.userImageView.center = CGPointMake(centerPoint.x, centerPoint.y + newImageScale)
+                        cell.userImageView.layer.cornerRadius = cell.userImageView.frame.width / 2
+                        
+                    }
                 }
             }
         }
