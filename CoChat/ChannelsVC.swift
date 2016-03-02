@@ -48,6 +48,7 @@ class ChannelsVC: UIViewController {
         tableView.separatorStyle = .None
         tableView.backgroundColor = Theme.Colors.BackgroundColor.color
         let addChannelButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addChannelButtonWasTapped")
+        addChannelButton.enabled = false
         navigationItem.rightBarButtonItem = addChannelButton
     }
 }
@@ -61,13 +62,13 @@ extension ChannelsVC: UITableViewDelegate, UITableViewDataSource {
         switch(indexPath.section, indexPath.row){
         case (0 , indexPath.row):
             if channels!.count != 0 {
-                //createdChannelsCells
                 cell.title.userInteractionEnabled = false
                 cell.title.text = channels![indexPath.row].title
                 return cell
             }
             else{
                 cell.hidden = true
+                cell.title.textColor = UIColor.whiteColor()
             }
         case (1,0):
             if toggleCompressedView == true {
@@ -81,8 +82,6 @@ extension ChannelsVC: UITableViewDelegate, UITableViewDataSource {
             else {
                 cell.title.text = "Create Channel"
                 cell.title.userInteractionEnabled = false
-                cell.createButton.hidden = false
-                cell.createButton.enabled = false
                 cell.selectionStyle = .None
                 cell.setHeaderUI()
                 return cell
@@ -145,12 +144,14 @@ extension ChannelsVC: UITableViewDelegate, UITableViewDataSource {
 
 extension ChannelsVC: HostReusableCellDelegate {
     func hostReusableCell(cell: HostReusableCell, valueDidChange: AnyObject?) {
-//        let addNewCell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection:1)) as! ChannelHeaderCell
         switch cell.type {
         case .NameOfRoom:
             nameOfChannel = valueDidChange as? String
-            if nameOfChannel != "Title" && nameOfChannel != "" {
-                
+            if nameOfChannel?.characters.count > 1 {
+              navigationItem.rightBarButtonItem?.enabled = true
+            }
+            else {
+                navigationItem.rightBarButtonItem?.enabled = false
             }
         case .PasscodeOfRoom:
             channelPassCode = valueDidChange as? String
@@ -166,13 +167,10 @@ extension ChannelsVC: HostReusableCellDelegate {
         default:
             assertionFailure()
         }
-        if nameOfChannel != nil {
-//            addNewCell.createButton.enabled = true
-        }
     }
     
 //MARK - FireBase Calls
-    func createNewChannel(sender: AnyObject?) {
+    func addChannelButtonWasTapped(){
         toggleCompressedView = true
         guard let name = nameOfChannel else {return}
         if channelPassCode == nil {

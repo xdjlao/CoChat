@@ -23,10 +23,10 @@ class HostViewController: UIViewController, ChannelsVCDelegate {
         tableView.registerNib(headerNib, forCellReuseIdentifier: "Host Reusable Cell")
         tableView.scrollEnabled = false
         tableView.backgroundColor = Theme.Colors.BackgroundColor.color
-        
         let addRoomButton = UIBarButtonItem(title: "Create Room", style: UIBarButtonItemStyle.Plain, target: self, action: "addRoomButtonWasTapped")
         navigationItem.rightBarButtonItem = addRoomButton
         navigationItem.rightBarButtonItem?.enabled = false
+        navigationController?.navigationBar.tintColor = Theme.Colors.ButtonColor.color
 }
     
     func addRoomButtonWasTapped(){
@@ -64,6 +64,7 @@ class HostViewController: UIViewController, ChannelsVCDelegate {
                     })
                 }
             }
+            
         case SegueIdentifier.SegueToChannelsVC.rawValue?:
             guard let cvc =  segue.destinationViewController as? ChannelsVC else { return }
             cvc.tempRoom = nameOfRoom!
@@ -93,7 +94,13 @@ extension HostViewController: HostReusableCellDelegate {
         case .NameOfRoom:
             nameOfRoom = valueDidChange as? String
             enableSegue = true
-            navigationItem.rightBarButtonItem?.enabled = true
+            let str = nameOfRoom as String?
+            if str?.characters.count > 1 {
+                navigationItem.rightBarButtonItem?.enabled = true
+            }
+            else {
+                navigationItem.rightBarButtonItem?.enabled = false
+            }
         case .PasscodeOfRoom:
             roomPassCode = valueDidChange as? String
         case .Privacy:
