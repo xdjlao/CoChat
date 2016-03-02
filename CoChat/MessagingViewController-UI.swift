@@ -214,9 +214,6 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
     func uiSetup() {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
-        if mode == Mode.Whisper {
-            navigationItem.rightBarButtonItem = nil
-        }
         topNav = navigationController!.navigationBar.frame.height
         topSection = topNav! + UIApplication.sharedApplication().statusBarFrame.size.height
         textView.scrollEnabled = false
@@ -229,17 +226,19 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
         channelButtonOutlet.backgroundColor = Theme.Colors.MessageButtonColor.color
         channelButtonOutlet.tintColor = UIColor.whiteColor()
         buttonContainer.backgroundColor = Theme.Colors.MessageButtonColor.color
-        if mode == Mode.Chat {
-            if let channelTitle = currentChannel?.title {
-                textView.text = "\(channelTitle) channel"
-            } else {
-                textView.text = ""
-            }
-        } else {
-            sendButtonOutlet.hidden = false
-            channelButtonOutlet.hidden = true
-            textView.text = ""
-        }
+        
+        // JERRY THIS DOESN"T WORK FIX IT YOU MISERABLE HUMAN BEING
+//        if mode == Mode.Chat {
+//            if let channelTitle = currentChannel?.title {
+//                textView.text = "\(channelTitle) channel"
+//            } else {
+//                textView.text = ""
+//            }
+//        } else {
+//            sendButtonOutlet.hidden = false
+//            channelButtonOutlet.hidden = true
+//            textView.text = ""
+//        }
         tableViewOrientation()
     }
     
