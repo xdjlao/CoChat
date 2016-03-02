@@ -33,10 +33,10 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
             let height = self.textView.sizeThatFits(CGSizeMake(self.textView.frame.size.width, CGFloat.max)).height
             self.textView.frame.size.height = height
             self.buttonContainer.frame.size.height = textView.frame.size.height
-            }) { (Bool) -> Void in
-                if self.messages.count > 0 {
-                    self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: self.messages.count - 1, inSection: 0), atScrollPosition: .Bottom, animated: true)
-                }
+        }) { (Bool) -> Void in
+            if self.messages.count > 0 {
+                self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: self.messages.count - 1, inSection: 0), atScrollPosition: .Bottom, animated: true)
+            }
         }
     }
     
@@ -79,11 +79,11 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
         
         let options = UIViewAnimationOptions(rawValue: curve << 16)
         UIView.animateWithDuration(duration, delay: 0, options: options,
-            animations: {
-                self.view.layoutIfNeeded()
-                
+                                   animations: {
+                                    self.view.layoutIfNeeded()
+                                    
             },
-            completion: nil
+                                   completion: nil
         )
     }
     
@@ -137,7 +137,7 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messages.count ?? 0
     }
-  
+    
     
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.row == messages.count - 1 {
@@ -185,7 +185,7 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
         alertController.addAction(reportAction)
         presentViewController(alertController, animated: true, completion: nil)
     }
-
+    
     
     func tableViewOrientation(){
         registerNibs()
@@ -214,7 +214,9 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
         channelButtonOutlet.backgroundColor = Theme.Colors.MessageButtonColor.color
         channelButtonOutlet.tintColor = UIColor.whiteColor()
         buttonContainer.backgroundColor = Theme.Colors.MessageButtonColor.color
-        textView.text = "\(currentChannel!.title) channel"
+        if let currentChannelTitle = currentChannel?.title {
+            textView.text = "\(currentChannelTitle) channel"
+        }
         tableViewOrientation()
     }
     

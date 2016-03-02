@@ -68,7 +68,7 @@
 		A2BE2B2A1C7E708C00ED71E4 /* MessagingNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B291C7E708C00ED71E4 /* MessagingNavigationViewController.swift */; };
 		A2BE2B2C1C7E72A200ED71E4 /* BrowseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B2B1C7E72A200ED71E4 /* BrowseNavigationViewController.swift */; };
 		A2BE2B3A1C81226C00ED71E4 /* TopRoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B391C81226C00ED71E4 /* TopRoomCell.swift */; };
-		D804B1ED1C877C44002D348C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D804B1EC1C877C44002D348C /* Assets.xcassets */; };
+		D804B1EF1C877DF2002D348C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D804B1EE1C877DF2002D348C /* Assets.xcassets */; };
 		D8641ADF1C862F3F004E838E /* Whisper.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8641ADE1C862F3F004E838E /* Whisper.storyboard */; };
 		D8641AE11C86342B004E838E /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8641AE01C86342B004E838E /* Conversation.swift */; };
 		D8AE2D191C7D28F00002A31D /* Whisper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE2D181C7D28F00002A31D /* Whisper.swift */; };
@@ -143,7 +143,7 @@
 		A2BE2B291C7E708C00ED71E4 /* MessagingNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagingNavigationViewController.swift; sourceTree = "<group>"; };
 		A2BE2B2B1C7E72A200ED71E4 /* BrowseNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseNavigationViewController.swift; sourceTree = "<group>"; };
 		A2BE2B391C81226C00ED71E4 /* TopRoomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopRoomCell.swift; sourceTree = "<group>"; };
-		D804B1EC1C877C44002D348C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D804B1EE1C877DF2002D348C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8641ADE1C862F3F004E838E /* Whisper.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Whisper.storyboard; sourceTree = "<group>"; };
 		D8641AE01C86342B004E838E /* Conversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		D8AE2D181C7D28F00002A31D /* Whisper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Whisper.swift; sourceTree = "<group>"; };
@@ -280,7 +280,7 @@
 		A288F7C11C785EEF00DF2847 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				D804B1EC1C877C44002D348C /* Assets.xcassets */,
+				D804B1EE1C877DF2002D348C /* Assets.xcassets */,
 				A288F7721C7840E600DF2847 /* AppDelegate.swift */,
 				A288F77E1C7840E600DF2847 /* Info.plist */,
 			);
@@ -554,7 +554,7 @@
 				91F525A61C82616B009C9BF1 /* Lato-Black.ttf in Resources */,
 				91F525A81C82616B009C9BF1 /* Lato-Bold.ttf in Resources */,
 				91E9B9E61C7BCFC4006F4CF0 /* Channels.storyboard in Resources */,
-				D804B1ED1C877C44002D348C /* Assets.xcassets in Resources */,
+				D804B1EF1C877DF2002D348C /* Assets.xcassets in Resources */,
 				91E9B9E31C7BCD33006F4CF0 /* HostReusableCell.xib in Resources */,
 				91F5259E1C82616B009C9BF1 /* Lato-Heavy.ttf in Resources */,
 				91F525AF1C82616B009C9BF1 /* Lato-Regular.ttf in Resources */,
