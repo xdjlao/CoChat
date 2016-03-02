@@ -29,7 +29,7 @@ extension FirebaseType {
         guard let value = value as? [NSObject: AnyObject] else { return }
         switch type {
         case .User:
-            Firebase(url: baseURL).childByAppendingPath("/\(uid)").updateChildValues(value)
+            Firebase(url: baseURL).childByAppendingPath("User").childByAppendingPath("/\(uid)").updateChildValues(value)
         case .Message, .Room , .Channel:
             Firebase(url: baseURL).childByAppendingPath("/\(uid)").updateChildValues(value)
         default: assertionFailure()

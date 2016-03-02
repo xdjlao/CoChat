@@ -158,14 +158,6 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
         }
     }
     
-    func addRoomToRecent() {
-        guard !(FirebaseManager.manager.user.recentRooms.contains ({ (room: Room) -> Bool in
-            return room === self.room
-        })) else { return }
-        FirebaseManager.manager.user.recentRoomsUIDs.append(room.uid)
-        FirebaseManager.manager.user.recentRooms.append(room)
-    }
-    
     //MARK Actions
     @IBAction func sendButton(sender: UIButton) {
         if FirebaseManager.manager.authData == nil {
