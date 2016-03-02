@@ -1,24 +1,15 @@
-//
-//  WhisperCell.swift
-//  CoChat
-//
-//  Created by Aaron B on 2/28/16.
-//  Copyright © 2016 Jerry. All rights reserved.
-//
-
 import UIKit
 
 class WhisperCell: UITableViewCell {
     @IBOutlet var messageLabel: UILabel!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var profileImageView: UIImageView!
+    @IBOutlet var labelContainer: UIView!
+    @IBOutlet var imageContainer: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        labelContainer.backgroundColor = Theme.Colors.ForegroundColor.color
+        imageContainer.backgroundColor = Theme.Colors.ForegroundColor.color
     }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-
 }
