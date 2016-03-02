@@ -35,7 +35,6 @@
 		91F525AF1C82616B009C9BF1 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91F5259D1C82616B009C9BF1 /* Lato-Regular.ttf */; };
 		A288F7731C7840E600DF2847 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A288F7721C7840E600DF2847 /* AppDelegate.swift */; };
 		A288F7781C7840E600DF2847 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A288F7761C7840E600DF2847 /* Main.storyboard */; };
-		A288F77A1C7840E600DF2847 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A288F7791C7840E600DF2847 /* Assets.xcassets */; };
 		A288F7A51C7841B600DF2847 /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A288F7A41C7841B600DF2847 /* BrowseViewController.swift */; };
 		A288F7A71C78447D00DF2847 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A288F7A61C78447D00DF2847 /* MainTabBarViewController.swift */; };
 		A288F7A91C78524600DF2847 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A288F7A81C78524600DF2847 /* ScanViewController.swift */; };
@@ -69,6 +68,7 @@
 		A2BE2B2A1C7E708C00ED71E4 /* MessagingNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B291C7E708C00ED71E4 /* MessagingNavigationViewController.swift */; };
 		A2BE2B2C1C7E72A200ED71E4 /* BrowseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B2B1C7E72A200ED71E4 /* BrowseNavigationViewController.swift */; };
 		A2BE2B3A1C81226C00ED71E4 /* TopRoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B391C81226C00ED71E4 /* TopRoomCell.swift */; };
+		D82DA0561C877A5900401D60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D82DA0551C877A5900401D60 /* Assets.xcassets */; };
 		D8641ADF1C862F3F004E838E /* Whisper.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8641ADE1C862F3F004E838E /* Whisper.storyboard */; };
 		D8641AE11C86342B004E838E /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8641AE01C86342B004E838E /* Conversation.swift */; };
 		D8AE2D191C7D28F00002A31D /* Whisper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE2D181C7D28F00002A31D /* Whisper.swift */; };
@@ -109,7 +109,6 @@
 		A288F76F1C7840E600DF2847 /* CoChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A288F7721C7840E600DF2847 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A288F7771C7840E600DF2847 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A288F7791C7840E600DF2847 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A288F77E1C7840E600DF2847 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A288F7A41C7841B600DF2847 /* BrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
 		A288F7A61C78447D00DF2847 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +143,7 @@
 		A2BE2B291C7E708C00ED71E4 /* MessagingNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagingNavigationViewController.swift; sourceTree = "<group>"; };
 		A2BE2B2B1C7E72A200ED71E4 /* BrowseNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseNavigationViewController.swift; sourceTree = "<group>"; };
 		A2BE2B391C81226C00ED71E4 /* TopRoomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopRoomCell.swift; sourceTree = "<group>"; };
+		D82DA0551C877A5900401D60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8641ADE1C862F3F004E838E /* Whisper.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Whisper.storyboard; sourceTree = "<group>"; };
 		D8641AE01C86342B004E838E /* Conversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		D8AE2D181C7D28F00002A31D /* Whisper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Whisper.swift; sourceTree = "<group>"; };
@@ -280,8 +280,8 @@
 		A288F7C11C785EEF00DF2847 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				D82DA0551C877A5900401D60 /* Assets.xcassets */,
 				A288F7721C7840E600DF2847 /* AppDelegate.swift */,
-				A288F7791C7840E600DF2847 /* Assets.xcassets */,
 				A288F77E1C7840E600DF2847 /* Info.plist */,
 			);
 			name = Other;
@@ -559,7 +559,6 @@
 				91F525AF1C82616B009C9BF1 /* Lato-Regular.ttf in Resources */,
 				A2BE2B0C1C7B9E1700ED71E4 /* Profile.storyboard in Resources */,
 				A288F7DE1C7873D100DF2847 /* Login.storyboard in Resources */,
-				A288F77A1C7840E600DF2847 /* Assets.xcassets in Resources */,
 				A288F7D61C78612A00DF2847 /* GeneralMessageCell.xib in Resources */,
 				91B18F5E1C7CE02300F20531 /* Messaging.storyboard in Resources */,
 				912607B51C8548590015D487 /* Launch Screen.storyboard in Resources */,
@@ -573,6 +572,7 @@
 				91F525A21C82616B009C9BF1 /* Lato-Thin.ttf in Resources */,
 				910133CB1C86B1D40077F33F /* LaunchVideo.mov in Resources */,
 				91E9B9E41C7BCD33006F4CF0 /* Host.storyboard in Resources */,
+				D82DA0561C877A5900401D60 /* Assets.xcassets in Resources */,
 				A288F7781C7840E600DF2847 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
