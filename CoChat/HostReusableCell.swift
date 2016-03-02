@@ -41,6 +41,7 @@ class HostReusableCell: UITableViewCell, UITextFieldDelegate {
         title.textColor = UIColor.whiteColor()
         title.font = Theme.Fonts.BoldNormalTypeFace.font
         addButton.tintColor = Theme.Colors.ButtonColor.color
+        createButton.tintColor = Theme.Colors.ButtonColor.color
         super.awakeFromNib()
     }
     
@@ -132,6 +133,7 @@ class HostReusableCell: UITableViewCell, UITextFieldDelegate {
     
     func resetCellUI(){
         userInteractionEnabled = true
+        title.textColor = UIColor.whiteColor()
         title.userInteractionEnabled = true
         backgroundColor = Theme.Colors.ForegroundColor.color
         layer.shadowOpacity = 0.0

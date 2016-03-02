@@ -27,7 +27,7 @@ class HostViewController: UIViewController, ChannelsVCDelegate {
         let addRoomButton = UIBarButtonItem(title: "Create Room", style: UIBarButtonItemStyle.Plain, target: self, action: "addRoomButtonWasTapped")
         navigationItem.rightBarButtonItem = addRoomButton
         navigationItem.rightBarButtonItem?.enabled = false
-    }
+}
     
     func addRoomButtonWasTapped(){
         if FirebaseManager.manager.authData == nil {
@@ -86,7 +86,6 @@ class HostViewController: UIViewController, ChannelsVCDelegate {
     }
 }
 
-
 //HostReusableCellDelegate
 extension HostViewController: HostReusableCellDelegate {
     func hostReusableCell(cell: HostReusableCell, valueDidChange: AnyObject?) {
@@ -110,21 +109,28 @@ extension HostViewController: HostReusableCellDelegate {
             }
         default:
             assertionFailure()
-            
         }
     }
     
     func textFieldDidBeginEditingInCell(textField: UITextField) {
         textField.alpha = 1.0
+        guard let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 1, inSection: 3)) as? HostReusableCell else {return}
+        let nameRoomLocation = cell.title.convertRect(cell.frame, fromCoordinateSpace: UIApplication.sharedApplication().keyWindow!)
+        print("nameroomlocation \(nameRoomLocation)")
+        let textFieldLocation = cell.convertRect(textField.frame, fromCoordinateSpace: UIApplication.sharedApplication().keyWindow!)
+        print("textfieldLocation \(textFieldLocation)")
+        if textFieldLocation != nameRoomLocation {
+            
         let textFieldPosition = textField.convertPoint(CGPointZero, toView: self.tableView)
         let indexPath = self.tableView.indexPathForRowAtPoint(textFieldPosition)
-        let cell = tableView.cellForRowAtIndexPath(indexPath!)
+        let otherCell = tableView.cellForRowAtIndexPath(indexPath!)
         
-        tableView.setContentOffset(CGPointMake(self.tableView.contentOffset.x, self.tableView.contentOffset.y + CGFloat(indexPath!.row) * (cell?.frame.height)! - (navigationController?.navigationBar.frame.height)!), animated: true)
+        tableView.setContentOffset(CGPointMake(self.tableView.contentOffset.x, self.tableView.contentOffset.y + (CGFloat(indexPath!.row) * (otherCell?.frame.height)! + CGFloat(110)) - (navigationController?.navigationBar.frame.height)!), animated: true)
+        }
     }
     
     func textFieldDidEndEditingInCell() {
-        tableView.setContentOffset(CGPointMake(self.tableView.contentOffset.x, 0.0), animated: true)
+        tableView.setContentOffset(CGPointMake(0.0, 0.0), animated: false)
     }
 }
 
@@ -145,8 +151,7 @@ extension HostViewController: UITableViewDelegate, UITableViewDataSource {
             cell.hidden = true
         case (1, 0):
             cell.title.text = "Create a Room"
-            cell.switchToggle.hidden = true
-            cell.createButton.hidden = true
+            cell.title.userInteractionEnabled = false
             cell.setHeaderUI()
             return cell
         default:
