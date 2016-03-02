@@ -31,7 +31,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gEt-eL-yVD">
-                                                    <rect key="frame" x="250" y="50" width="100" height="100"/>
+                                                    <rect key="frame" x="250" y="20" width="100" height="100"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="gEt-eL-yVD" secondAttribute="height" multiplier="1:1" id="F5y-qc-4dT"/>
                                                         <constraint firstAttribute="height" constant="100" id="L7c-Q7-jZG"/>
@@ -44,7 +44,7 @@
                                                     </variation>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jerry Lao" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1NP-D3-b3Q">
-                                                    <rect key="frame" x="8" y="158" width="584" height="21"/>
+                                                    <rect key="frame" x="8" y="140" width="584" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -52,15 +52,17 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="gEt-eL-yVD" firstAttribute="centerX" secondItem="FRc-DS-jnx" secondAttribute="centerX" id="D8e-Jr-xpJ"/>
+                                                <constraint firstItem="gEt-eL-yVD" firstAttribute="top" secondItem="FRc-DS-jnx" secondAttribute="top" constant="20" id="KAS-dw-AAg"/>
                                                 <constraint firstItem="1NP-D3-b3Q" firstAttribute="leading" secondItem="gEt-eL-yVD" secondAttribute="leading" id="PYe-kq-XVZ"/>
                                                 <constraint firstItem="1NP-D3-b3Q" firstAttribute="trailing" secondItem="FRc-DS-jnx" secondAttribute="trailingMargin" id="T7V-Hy-y0K"/>
                                                 <constraint firstItem="1NP-D3-b3Q" firstAttribute="leading" secondItem="FRc-DS-jnx" secondAttribute="leadingMargin" id="VCi-Lf-eMW"/>
-                                                <constraint firstItem="1NP-D3-b3Q" firstAttribute="top" secondItem="gEt-eL-yVD" secondAttribute="bottom" constant="8" id="g25-jZ-Hq6"/>
+                                                <constraint firstItem="1NP-D3-b3Q" firstAttribute="top" secondItem="gEt-eL-yVD" secondAttribute="bottom" constant="20" id="g25-jZ-Hq6"/>
                                                 <constraint firstItem="gEt-eL-yVD" firstAttribute="centerY" secondItem="FRc-DS-jnx" secondAttribute="centerY" id="mnO-AM-zph"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
                                                     <exclude reference="PYe-kq-XVZ"/>
+                                                    <exclude reference="mnO-AM-zph"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>

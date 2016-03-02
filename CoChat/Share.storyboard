@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lXL-kM-yZF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lXL-kM-yZF">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="280"/>
                                 <subviews>
                                     <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RMq-CN-sU2">
-                                        <rect key="frame" x="225" y="45" width="150" height="150"/>
+                                        <rect key="frame" x="225" y="35" width="150" height="150"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="8t9-Bb-Jac"/>
@@ -37,7 +37,7 @@
                                         </variation>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T6b-dV-Xhb">
-                                        <rect key="frame" x="268" y="20" width="65" height="20"/>
+                                        <rect key="frame" x="268" y="10" width="65" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="RQG-IC-yiN"/>
                                         </constraints>
@@ -50,7 +50,8 @@
                                         </connections>
                                     </button>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BXD-9e-U4r">
-                                        <rect key="frame" x="227" y="225" width="147" height="29"/>
+                                        <rect key="frame" x="227" y="215" width="147" height="29"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <segments>
                                             <segment title="Link"/>
                                             <segment title="Passcode"/>
@@ -69,7 +70,7 @@
                                     <constraint firstItem="RMq-CN-sU2" firstAttribute="top" secondItem="T6b-dV-Xhb" secondAttribute="bottom" constant="5" id="dyN-Rh-cpn"/>
                                     <constraint firstItem="RMq-CN-sU2" firstAttribute="centerY" secondItem="7wz-KI-qHD" secondAttribute="centerY" id="fCJ-FR-uRa"/>
                                     <constraint firstItem="BXD-9e-U4r" firstAttribute="top" secondItem="RMq-CN-sU2" secondAttribute="bottom" constant="30" id="hbq-J9-dpd"/>
-                                    <constraint firstItem="RMq-CN-sU2" firstAttribute="top" secondItem="7wz-KI-qHD" secondAttribute="top" constant="45" id="nAO-qi-etP"/>
+                                    <constraint firstItem="RMq-CN-sU2" firstAttribute="top" secondItem="7wz-KI-qHD" secondAttribute="top" constant="35" id="nAO-qi-etP"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -83,7 +84,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASSABC123" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fa3-Qt-m7V">
                                         <rect key="frame" x="20" y="20" width="560" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>

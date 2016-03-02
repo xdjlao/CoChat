@@ -7,6 +7,8 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
     @IBOutlet var buttonContainer: UIView!
     @IBOutlet weak var channelButtonOutlet: UIButton!
     @IBOutlet weak var sendButtonOutlet: UIButton!
+    var topSection:CGFloat?
+    var firstType = true
 
     @IBOutlet weak var textView: UITextView! {
         didSet {

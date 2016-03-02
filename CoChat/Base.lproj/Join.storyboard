@@ -77,13 +77,13 @@
                                                 <rect key="frame" x="20" y="20" width="560" height="160"/>
                                                 <subviews>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Entry key" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EOh-Xm-NHB">
-                                                        <rect key="frame" x="0.0" y="50" width="560" height="60"/>
+                                                        <rect key="frame" x="0.0" y="10" width="560" height="100"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="Shg-vV-7XX"/>
                                                         </constraints>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
-                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="join"/>
                                                         <variation key="default">
                                                             <mask key="constraints">
                                                                 <exclude reference="Shg-vV-7XX"/>
@@ -98,7 +98,7 @@
                                                     <constraint firstAttribute="trailing" secondItem="EOh-Xm-NHB" secondAttribute="trailing" id="McO-Xg-wms"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="hna-dc-Tny"/>
                                                     <constraint firstItem="EOh-Xm-NHB" firstAttribute="leading" secondItem="wj8-am-JQy" secondAttribute="leading" id="qJJ-Zu-IwX"/>
-                                                    <constraint firstItem="EOh-Xm-NHB" firstAttribute="top" secondItem="wj8-am-JQy" secondAttribute="top" constant="50" id="x3A-NL-Tcd"/>
+                                                    <constraint firstItem="EOh-Xm-NHB" firstAttribute="top" secondItem="wj8-am-JQy" secondAttribute="top" constant="10" id="x3A-NL-Tcd"/>
                                                 </constraints>
                                                 <variation key="default">
                                                     <mask key="constraints">
