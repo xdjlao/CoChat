@@ -103,9 +103,11 @@ extension HostViewController: HostReusableCellDelegate {
             }
         case .PasscodeOfRoom:
             roomPassCode = valueDidChange as? String
+            cell.enteredPasscode = roomPassCode!
         case .Privacy:
             if let aSwitch = valueDidChange as? UISwitch {
                 privateRoom = aSwitch.on
+                cell.enteredPrivacy = privateRoom
                 guard let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 2, inSection: 3)) as? HostReusableCell else {return}
                 switch privateRoom {
                 case false:

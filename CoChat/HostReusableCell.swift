@@ -44,6 +44,8 @@ class HostReusableCell: UITableViewCell, UITextFieldDelegate {
     
     var type = HostCellType.None
     var originalTextValue:String?
+    var enteredPasscode = ""
+    var enteredPrivacy:Bool?
     
     weak var delegate: HostReusableCellDelegate?
     
@@ -55,7 +57,6 @@ class HostReusableCell: UITableViewCell, UITextFieldDelegate {
             title.delegate = self
         }
     }
-    
     
     func textFieldDidBeginEditing(textField: UITextField) {
         originalTextValue = textField.text
@@ -88,7 +89,6 @@ class HostReusableCell: UITableViewCell, UITextFieldDelegate {
             title.placeholder = basicContent[indexPath.row]
             title.text = ""
             type = .NameOfRoom
-            titleConstraintToLeftSuperView.constant = 55
         case (3,0):
             title.text = advancedContent[indexPath.row]
             title.userInteractionEnabled = false
@@ -98,13 +98,16 @@ class HostReusableCell: UITableViewCell, UITextFieldDelegate {
             setHeaderUI()
         case (3,1):
             title.placeholder = advancedContent[indexPath.row]
-            title.text = ""
+            title.text = enteredPasscode
             type = .PasscodeOfRoom
         case (3,2):
             title.text = advancedContent[indexPath.row]
             title.userInteractionEnabled = false
             type = .Privacy
             switchToggle.hidden = false
+            if enteredPrivacy != nil {
+                switchToggle.on = enteredPrivacy!
+            }
             titleConstraintToLeftSuperView.constant = 55
         case (3,3):
             title.text = advancedContent[indexPath.row]
@@ -124,8 +127,8 @@ class HostReusableCell: UITableViewCell, UITextFieldDelegate {
         titleConstraintToLeftSuperView.constant = 10
     }
 
-    
     func resetCellUI(){
+        titleConstraintToLeftSuperView.constant = 55
         userInteractionEnabled = true
         title.textColor = UIColor.whiteColor()
         title.userInteractionEnabled = true
