@@ -68,7 +68,7 @@ extension WhisperViewController: UITableViewDelegate, UITableViewDataSource {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         guard let mvc = segue.destinationViewController as? MessagingViewController else { return }
-        mvc.currentConversation = sender as! Conversation
+        mvc.currentConversation = sender as? Conversation
     }
     
 }

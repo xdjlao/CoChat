@@ -9,11 +9,9 @@
 import UIKit
 @objc protocol HostReusableCellDelegate: class {
     func hostReusableCell(cell: HostReusableCell, valueDidChange: AnyObject?)
-    optional func addNewChannel(sender:AnyObject?)
     optional func createNewChannel(sender:AnyObject?)
     optional func textFieldDidBeginEditingInCell(textField:UITextField)
     optional func textFieldDidEndEditingInCell()
-    optional func animateTextField(textField:UITextField)
 }
 
 enum HostCellType {
@@ -41,7 +39,6 @@ class HostReusableCell: UITableViewCell, UITextFieldDelegate {
         title.textColor = UIColor.whiteColor()
         title.font = Theme.Fonts.BoldNormalTypeFace.font
         addButton.tintColor = Theme.Colors.ButtonColor.color
-        createButton.tintColor = Theme.Colors.ButtonColor.color
         super.awakeFromNib()
     }
     
@@ -53,7 +50,6 @@ class HostReusableCell: UITableViewCell, UITextFieldDelegate {
     @IBOutlet var addButton: UIButton!
     @IBOutlet var titleConstraintToLeftSuperView: NSLayoutConstraint!
     @IBOutlet var switchToggle: UISwitch!
-    @IBOutlet var createButton: UIButton!
     @IBOutlet var title: UITextField! {
         didSet {
             title.delegate = self
@@ -65,13 +61,11 @@ class HostReusableCell: UITableViewCell, UITextFieldDelegate {
         originalTextValue = textField.text
         textField.text = ""
         delegate?.textFieldDidBeginEditingInCell!(textField)
-//        delegate?.animateTextField!(textField)
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
         if textField.text == ""  {
             textField.text = originalTextValue
-            textField.alpha = 0.5
         }
         delegate?.textFieldDidEndEditingInCell!()
     }
@@ -91,27 +85,27 @@ class HostReusableCell: UITableViewCell, UITextFieldDelegate {
         guard let advancedContent = cellContent["advancedContent"] else {return print("couldn't read basicContent")}
         switch (indexPath.section, indexPath.row) {
         case (2,0):
-            title.text = basicContent[indexPath.row]
-            title.alpha = 0.5
+            title.placeholder = basicContent[indexPath.row]
+            title.text = ""
             type = .NameOfRoom
+            titleConstraintToLeftSuperView.constant = 55
         case (3,0):
             title.text = advancedContent[indexPath.row]
             title.userInteractionEnabled = false
             addButton.hidden = false
             addButton.imageView?.image = UIImage(named: "downChevron")
-            addButton.alpha = 1.0
             addButton.enabled = false
             setHeaderUI()
         case (3,1):
-            title.text = advancedContent[indexPath.row]
-            title.alpha = 0.5
+            title.placeholder = advancedContent[indexPath.row]
+            title.text = ""
             type = .PasscodeOfRoom
         case (3,2):
             title.text = advancedContent[indexPath.row]
             title.userInteractionEnabled = false
-            title.alpha = 1.0
             type = .Privacy
             switchToggle.hidden = false
+            titleConstraintToLeftSuperView.constant = 55
         case (3,3):
             title.text = advancedContent[indexPath.row]
             title.userInteractionEnabled = false
@@ -141,16 +135,6 @@ class HostReusableCell: UITableViewCell, UITextFieldDelegate {
         accessoryType = UITableViewCellAccessoryType.None
         addButton.hidden = true
         switchToggle.hidden = true
-        createButton.hidden = true
         selectionStyle = .None
     }
-    
-    @IBAction func addWasTapped(sender: UIButton) {
-        delegate?.addNewChannel?(sender)
-    }
-    
-    @IBAction func createWasTapped(sender: UIButton) {
-        delegate?.createNewChannel?(sender)
-    }
-    
 }

@@ -22,16 +22,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             NSFontAttributeName: Theme.Fonts.BoldTitleTypeFace.font,
             NSForegroundColorAttributeName: Theme.Colors.ButtonColor.color]
         
-//        navBarAppearance.barStyle = .Default
+        //navBarAppearance.barStyle = .Default
         navBarAppearance.barTintColor = Theme.Colors.NavigationBarColor.color
         //set custom logo here
         navBarButtonAppearance.tintColor = Theme.Colors.ButtonColor.color
         
         tabBarAppearance.tintColor = Theme.Colors.ButtonColor.color
         tabBarAppearance.backgroundColor = Theme.Colors.NavigationBarColor.color
-        
-        
     }
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         uiSetup()
         

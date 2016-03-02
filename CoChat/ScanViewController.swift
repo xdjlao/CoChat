@@ -1,7 +1,7 @@
 import UIKit
 import AVFoundation
 
-class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
+class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate, UITextFieldDelegate {
    var captureSession:AVCaptureSession?
    var videoPreviewLayer:AVCaptureVideoPreviewLayer?
    var qrCodeFrameView:UIView?
@@ -16,6 +16,7 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
    
     override func viewDidLoad() {
         setUpUI()
+        passcodeLabel.delegate = self
         super.viewDidLoad()
     }
    
@@ -32,7 +33,14 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
         checkForRoomWithEntryKey(passcodeLabel.text!)
     }
     
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        checkForRoomWithEntryKey(passcodeLabel.text!)
+        return true
+    }
+    
     func setUpUI(){
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
+        navigationController?.navigationBar.shadowImage = UIImage()
         joinViewWrapper.backgroundColor = Theme.Colors.BackgroundColor.color
         passcodeLabelWrapper.backgroundColor = UIColor.clearColor()
         joinTextFieldWrapperView.backgroundColor = Theme.Colors.NavigationBarColor.color
