@@ -48,17 +48,20 @@ extension WhisperViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("WhisperCell", forIndexPath: indexPath) as! WhisperCell
         let conversation = conversations[indexPath.row]
-        if conversation.firstUser.name == FirebaseManager.manager.user.name {
-            cell.nameLabel.text = conversation.secondUser.name
-        } else if conversation.secondUser.name == FirebaseManager.manager.user.name {
-            cell.nameLabel.text = conversation.firstUser.name
-        }
-        cell.messageLabel.text = "placeholder"
-        cell.profileImageView.image = UIImage(named: "dummyImage")
+        let otherUser = getOtherUser(conversation.firstUser, secondUser: conversation.secondUser)
+        cell.messageLabel.text = "Latest message"
+        cell.nameLabel.text = otherUser.name
+        cell.profileImageView.setImageWithURL(NSURL(string: otherUser.profileImageURL)!, placeholderImage: UIImage(named: "profileImageDummy"))
         return cell
     }
     
-    
+    func getOtherUser(firstUser: User, secondUser: User) -> User {
+        if firstUser.uid == FirebaseManager.manager.user.uid {
+            return secondUser
+        } else {
+            return firstUser
+        }
+    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return conversations.count
