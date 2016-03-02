@@ -116,8 +116,7 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
         }
     }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
+    func setUpListener() {
         let ref = mode.firebase(forUID: currentUID)
         ref.queryLimitedToFirst(11).observeEventType(.ChildAdded, withBlock: { snapshot in
             guard let message = Message.singleFromSnapshot(snapshot, withCreatorUID: self.currentUID) else { return }
@@ -143,12 +142,14 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
     }
     var currentChannel:Channel? {
         didSet {
+            setUpListener()
             guard let roomLabel = textView else { return }
             roomLabel.text = room.title + " - " + currentChannel!.title
         }
     }
     var currentConversation: Conversation? {
         didSet {
+            setUpListener()
             guard let label = textView else { return }
             label.text = currentConversation?.secondUser.name
         }

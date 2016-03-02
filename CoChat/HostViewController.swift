@@ -23,10 +23,10 @@ class HostViewController: UIViewController, ChannelsVCDelegate {
         tableView.registerNib(headerNib, forCellReuseIdentifier: "Host Reusable Cell")
         tableView.scrollEnabled = false
         tableView.backgroundColor = Theme.Colors.BackgroundColor.color
-        
         let addRoomButton = UIBarButtonItem(title: "Create Room", style: UIBarButtonItemStyle.Plain, target: self, action: "addRoomButtonWasTapped")
         navigationItem.rightBarButtonItem = addRoomButton
         navigationItem.rightBarButtonItem?.enabled = false
+        navigationController?.navigationBar.tintColor = Theme.Colors.ButtonColor.color
 }
     
     func addRoomButtonWasTapped(){
@@ -34,14 +34,27 @@ class HostViewController: UIViewController, ChannelsVCDelegate {
             presentLoginScreen()
             return
         }
-        
         guard let name = nameOfRoom else { return }
-        let entryKey = roomPassCode ?? "123"
-        let user = FirebaseManager.manager.user
-        let privateRoomAsInt = convertBooltoInt(privateRoom)
-        
-        Room.createNewRoomWith(name, host: user, privateRoom: privateRoomAsInt, password: entryKey) { newRoom in
-            self.performSegueWithSegueIdentifier(SegueIdentifier.SegueToMessaging, sender: newRoom)
+        guard let roomPassCode = roomPassCode else {
+            let alertController = UIAlertController(title: "JERRY FIX THIS", message: "FIX THIS JERRY", preferredStyle: .Alert)
+            let action = UIAlertAction(title: "FUCKING SHIT JERRY", style: UIAlertActionStyle.Destructive, handler: nil)
+            alertController.addAction(action)
+            self.presentViewController(alertController, animated: true, completion: nil)
+            return
+        }
+        FirebaseManager.manager.checkForUniqueEntryKey(roomPassCode) { result in
+            if result {
+                let privateRoomAsInt = self.convertBooltoInt(self.privateRoom)
+                let user = FirebaseManager.manager.user
+                Room.createNewRoomWith(name, host: user, privateRoom: privateRoomAsInt, password: roomPassCode) { newRoom in
+                    self.performSegueWithSegueIdentifier(SegueIdentifier.SegueToMessaging, sender: newRoom)
+                }
+            } else {
+                let alertController = UIAlertController(title: "JERRY FIX THIS", message: "FIX THIS JERRY", preferredStyle: .Alert)
+                let action = UIAlertAction(title: "FUCKING SHIT JERRY", style: UIAlertActionStyle.Destructive, handler: nil)
+                alertController.addAction(action)
+                self.presentViewController(alertController, animated: true, completion: nil)
+            }
         }
     }
     
@@ -64,6 +77,7 @@ class HostViewController: UIViewController, ChannelsVCDelegate {
                     })
                 }
             }
+            
         case SegueIdentifier.SegueToChannelsVC.rawValue?:
             guard let cvc =  segue.destinationViewController as? ChannelsVC else { return }
             cvc.tempRoom = nameOfRoom!
@@ -93,7 +107,13 @@ extension HostViewController: HostReusableCellDelegate {
         case .NameOfRoom:
             nameOfRoom = valueDidChange as? String
             enableSegue = true
-            navigationItem.rightBarButtonItem?.enabled = true
+            let str = nameOfRoom as String?
+            if str?.characters.count > 1 {
+                navigationItem.rightBarButtonItem?.enabled = true
+            }
+            else {
+                navigationItem.rightBarButtonItem?.enabled = false
+            }
         case .PasscodeOfRoom:
             roomPassCode = valueDidChange as? String
         case .Privacy:
@@ -113,7 +133,6 @@ extension HostViewController: HostReusableCellDelegate {
     }
     
     func textFieldDidBeginEditingInCell(textField: UITextField) {
-        textField.alpha = 1.0
         guard let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 1, inSection: 3)) as? HostReusableCell else {return}
         let nameRoomLocation = cell.title.convertRect(cell.frame, fromCoordinateSpace: UIApplication.sharedApplication().keyWindow!)
         print("nameroomlocation \(nameRoomLocation)")

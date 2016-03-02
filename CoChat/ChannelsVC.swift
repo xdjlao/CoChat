@@ -48,8 +48,8 @@ class ChannelsVC: UIViewController {
         tableView.separatorStyle = .None
         tableView.backgroundColor = Theme.Colors.BackgroundColor.color
         let addChannelButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addChannelButtonWasTapped")
-        
-//        navigationItem.rightBarButtonItem = addRoomButton
+        addChannelButton.enabled = false
+        navigationItem.rightBarButtonItem = addChannelButton
     }
 }
 
@@ -62,13 +62,13 @@ extension ChannelsVC: UITableViewDelegate, UITableViewDataSource {
         switch(indexPath.section, indexPath.row){
         case (0 , indexPath.row):
             if channels!.count != 0 {
-                //createdChannelsCells
                 cell.title.userInteractionEnabled = false
                 cell.title.text = channels![indexPath.row].title
                 return cell
             }
             else{
                 cell.hidden = true
+                cell.title.textColor = UIColor.whiteColor()
             }
         case (1,0):
             if toggleCompressedView == true {
@@ -82,8 +82,6 @@ extension ChannelsVC: UITableViewDelegate, UITableViewDataSource {
             else {
                 cell.title.text = "Create Channel"
                 cell.title.userInteractionEnabled = false
-                cell.createButton.hidden = false
-                cell.createButton.enabled = false
                 cell.selectionStyle = .None
                 cell.setHeaderUI()
                 return cell
@@ -146,12 +144,14 @@ extension ChannelsVC: UITableViewDelegate, UITableViewDataSource {
 
 extension ChannelsVC: HostReusableCellDelegate {
     func hostReusableCell(cell: HostReusableCell, valueDidChange: AnyObject?) {
-//        let addNewCell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection:1)) as! ChannelHeaderCell
         switch cell.type {
         case .NameOfRoom:
             nameOfChannel = valueDidChange as? String
-            if nameOfChannel != "Title" && nameOfChannel != "" {
-                
+            if nameOfChannel?.characters.count > 1 {
+              navigationItem.rightBarButtonItem?.enabled = true
+            }
+            else {
+                navigationItem.rightBarButtonItem?.enabled = false
             }
         case .PasscodeOfRoom:
             channelPassCode = valueDidChange as? String
@@ -167,13 +167,10 @@ extension ChannelsVC: HostReusableCellDelegate {
         default:
             assertionFailure()
         }
-        if nameOfChannel != nil {
-//            addNewCell.createButton.enabled = true
-        }
     }
     
 //MARK - FireBase Calls
-    func createNewChannel(sender: AnyObject?) {
+    func addChannelButtonWasTapped(){
         toggleCompressedView = true
         guard let name = nameOfChannel else {return}
         if channelPassCode == nil {
@@ -191,14 +188,22 @@ extension ChannelsVC: HostReusableCellDelegate {
     }
     
     func textFieldDidBeginEditingInCell(textField: UITextField) {
-//        let textFieldPosition = textField.convertPoint(CGPointZero, toView: self.tableView)
-//        let indexPath = self.tableView.indexPathForRowAtPoint(textFieldPosition)
-//        let cell = tableView.cellForRowAtIndexPath(indexPath!)
-//        textField.alpha = 1.0
-//        tableView.setContentOffset(CGPointMake(self.tableView.contentOffset.x, self.tableView.contentOffset.y + CGFloat(indexPath!.row) * (cell?.frame.height)! - (navigationController?.navigationBar.frame.height)!), animated: true)
+        guard let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 1, inSection: 3)) as? HostReusableCell else {return}
+        let nameRoomLocation = cell.title.convertRect(cell.frame, fromCoordinateSpace: UIApplication.sharedApplication().keyWindow!)
+        print("nameroomlocation \(nameRoomLocation)")
+        let textFieldLocation = cell.convertRect(textField.frame, fromCoordinateSpace: UIApplication.sharedApplication().keyWindow!)
+        print("textfieldLocation \(textFieldLocation)")
+        if textFieldLocation != nameRoomLocation {
+            
+            let textFieldPosition = textField.convertPoint(CGPointZero, toView: self.tableView)
+            let indexPath = self.tableView.indexPathForRowAtPoint(textFieldPosition)
+            let otherCell = tableView.cellForRowAtIndexPath(indexPath!)
+            
+            tableView.setContentOffset(CGPointMake(self.tableView.contentOffset.x, self.tableView.contentOffset.y + (CGFloat(indexPath!.row) * (otherCell?.frame.height)! + CGFloat(110)) - (navigationController?.navigationBar.frame.height)!), animated: true)
+        }
     }
     
     func textFieldDidEndEditingInCell() {
-//        tableView.setContentOffset(CGPointMake(self.tableView.contentOffset.x, 0.0), animated: true)
+        tableView.setContentOffset(CGPointMake(0.0, 0.0), animated:true)
     }
 }
