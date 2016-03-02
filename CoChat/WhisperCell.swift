@@ -13,6 +13,7 @@ class WhisperCell: UITableViewCell {
         super.awakeFromNib()
         contentWrapperView.backgroundColor = Theme.Colors.ForegroundColor.color
         nameLabel.textColor = UIColor.whiteColor()
+        nameLabel.font = Theme.Fonts.NormalTypeFace.font
         messageLabel.textColor = UIColor.whiteColor()
         timestampLabel.textColor = UIColor.whiteColor()
     }
