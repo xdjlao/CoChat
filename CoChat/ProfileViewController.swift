@@ -29,6 +29,8 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
     }
     
     func setUpUI (){
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
+        navigationController?.navigationBar.shadowImage = UIImage()
         let backgroundColor = Theme.Colors.BackgroundColor.color
         recentTableView.backgroundColor = backgroundColor
         recentTableView.tableFooterView = UIView()
