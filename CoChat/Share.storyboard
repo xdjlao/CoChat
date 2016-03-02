@@ -51,7 +51,6 @@
                                     </button>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BXD-9e-U4r">
                                         <rect key="frame" x="227" y="215" width="147" height="29"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <segments>
                                             <segment title="Link"/>
                                             <segment title="Passcode"/>
