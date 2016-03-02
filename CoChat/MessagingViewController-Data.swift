@@ -41,7 +41,7 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
     }
     
     func scrollToBottomMessage(keyboardHeight:CGFloat = 0) {
-        if tableView.contentSize.height > tableView.frame.height {
+        if tableView.contentSize.height - keyboardHeight > tableView.frame.height {
             tableView.setContentOffset(CGPointMake(0, tableView.contentSize.height - tableView.frame.height - keyboardHeight), animated: false)
         }
     }

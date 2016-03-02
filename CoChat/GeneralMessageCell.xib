@@ -24,7 +24,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPh-Z6-axk">
-                        <rect key="frame" x="46" y="16" width="25" height="14"/>
+                        <rect key="frame" x="46" y="11" width="25" height="19"/>
                         <constraints>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="25" id="0Jh-fT-ZJA"/>
                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="252" id="pR5-gc-YB8"/>
@@ -39,7 +39,7 @@
                     <constraint firstItem="iYQ-xg-GTk" firstAttribute="top" secondItem="HXD-p5-lX3" secondAttribute="topMargin" id="5At-OC-hl5"/>
                     <constraint firstItem="iYQ-xg-GTk" firstAttribute="leading" secondItem="HXD-p5-lX3" secondAttribute="leadingMargin" id="QMa-F6-2Vn"/>
                     <constraint firstItem="hPh-Z6-axk" firstAttribute="leading" secondItem="iYQ-xg-GTk" secondAttribute="trailing" constant="8" id="VnQ-29-BvX"/>
-                    <constraint firstItem="hPh-Z6-axk" firstAttribute="top" secondItem="HXD-p5-lX3" secondAttribute="topMargin" constant="8" id="cvk-Z9-Kes"/>
+                    <constraint firstItem="hPh-Z6-axk" firstAttribute="top" secondItem="HXD-p5-lX3" secondAttribute="topMargin" constant="3" id="cvk-Z9-Kes"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
