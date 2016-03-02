@@ -8,6 +8,8 @@ class WhisperViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.backgroundColor = Theme.Colors.BackgroundColor.color
+        tableView.rowHeight = 71
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.None
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -56,6 +58,8 @@ extension WhisperViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return conversations.count
     }
@@ -66,8 +70,8 @@ extension WhisperViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        guard let mvc = segue.destinationViewController as? MessagingViewController else { return }
+        guard let nvc = segue.destinationViewController as? MessagingNavigationViewController else { return }
+        guard let mvc = nvc.topViewController as? MessagingViewController else { return }
         mvc.currentConversation = sender as? Conversation
     }
     
