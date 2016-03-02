@@ -11,6 +11,8 @@ class WhisperViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
+        conversations.removeAll()
+        tableView.reloadData()
         let whisperRef = FirebaseManager.manager.ref.childByAppendingPath("Conversation")
         let userUID = FirebaseManager.manager.user.uid
         func addToConversations(snapshot: FDataSnapshot) {
@@ -34,7 +36,9 @@ class WhisperViewController: UIViewController {
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
-        FirebaseManager.manager.ref.removeAllObservers()
+
+        FirebaseManager.manager.ref.childByAppendingPath("Conversation").queryOrderedByChild("firstUID").removeAllObservers()
+        FirebaseManager.manager.ref.childByAppendingPath("Conversation").queryOrderedByChild("secondUID").removeAllObservers()
     }
 }
 
