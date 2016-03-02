@@ -64,19 +64,15 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
         let curve = userInfo[UIKeyboardAnimationCurveUserInfoKey] as! UInt
         
         if notification.name == UIKeyboardWillShowNotification {
-            if firstType == true {
-                firstType = false
-            } else {
-                topSection = 0
-            }
             let keyHeight = keyboardSize.height // move up
-            self.view.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height - keyHeight + topSection!)
+            self.view.frame = CGRect(x: 0, y: 0, width: originalFrame!.width, height: originalFrame!.height - keyHeight)
+            tableViewTopConstraint.constant = topNav!
             scrollToBottomMessage(-keyHeight)
         }
         else {
             let keyHeight = keyboardSize.height
-            self.view.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height + keyHeight)
-            scrollToBottomMessage(keyHeight)
+            self.view.frame = originalFrame!
+            scrollToBottomMessage(keyHeight - topSection!)
         }
         
         view.setNeedsUpdateConstraints()
@@ -206,7 +202,8 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
     func uiSetup() {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
-        topSection = navigationController!.navigationBar.frame.height + UIApplication.sharedApplication().statusBarFrame.size.height
+        topNav = navigationController!.navigationBar.frame.height
+        topSection = topNav! + UIApplication.sharedApplication().statusBarFrame.size.height
         textView.scrollEnabled = false
         textView.delegate = self
         textView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.8)
