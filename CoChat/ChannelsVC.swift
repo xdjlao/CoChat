@@ -47,6 +47,9 @@ class ChannelsVC: UIViewController {
     func setUpUI(){
         tableView.separatorStyle = .None
         tableView.backgroundColor = Theme.Colors.BackgroundColor.color
+        let addChannelButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addChannelButtonWasTapped")
+        
+//        navigationItem.rightBarButtonItem = addRoomButton
     }
 }
 
@@ -55,17 +58,13 @@ extension ChannelsVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ChannelInformationCell") as! HostReusableCell
         cell.delegate = self
-        cell.createButton.hidden = true
-        cell.switchToggle.hidden = true
-        cell.addButton.hidden = true
-        cell.title.userInteractionEnabled = false
-
+        cell.resetCellUI()
         switch(indexPath.section, indexPath.row){
         case (0 , indexPath.row):
             if channels!.count != 0 {
                 //createdChannelsCells
+                cell.title.userInteractionEnabled = false
                 cell.title.text = channels![indexPath.row].title
-                //Add edit functionality
                 return cell
             }
             else{
@@ -74,16 +73,19 @@ extension ChannelsVC: UITableViewDelegate, UITableViewDataSource {
         case (1,0):
             if toggleCompressedView == true {
                 cell.title.text = "Add a Channel"
+                cell.title.userInteractionEnabled = false
                 cell.addButton.hidden = false
                 cell.userInteractionEnabled = true
+                cell.setHeaderUI()
                 return cell
             }
             else {
                 cell.title.text = "Create Channel"
-                cell.titleConstraintToLeftSuperView.constant = 10
+                cell.title.userInteractionEnabled = false
                 cell.createButton.hidden = false
-                cell.createButton.enabled = true
+                cell.createButton.enabled = false
                 cell.selectionStyle = .None
+                cell.setHeaderUI()
                 return cell
             }
         default:
@@ -148,6 +150,9 @@ extension ChannelsVC: HostReusableCellDelegate {
         switch cell.type {
         case .NameOfRoom:
             nameOfChannel = valueDidChange as? String
+            if nameOfChannel != "Title" && nameOfChannel != "" {
+                
+            }
         case .PasscodeOfRoom:
             channelPassCode = valueDidChange as? String
         case .Privacy:
@@ -186,14 +191,14 @@ extension ChannelsVC: HostReusableCellDelegate {
     }
     
     func textFieldDidBeginEditingInCell(textField: UITextField) {
-        let textFieldPosition = textField.convertPoint(CGPointZero, toView: self.tableView)
-        let indexPath = self.tableView.indexPathForRowAtPoint(textFieldPosition)
-        let cell = tableView.cellForRowAtIndexPath(indexPath!)
-        textField.alpha = 1.0
-        tableView.setContentOffset(CGPointMake(self.tableView.contentOffset.x, self.tableView.contentOffset.y + CGFloat(indexPath!.row) * (cell?.frame.height)! - (navigationController?.navigationBar.frame.height)!), animated: true)
+//        let textFieldPosition = textField.convertPoint(CGPointZero, toView: self.tableView)
+//        let indexPath = self.tableView.indexPathForRowAtPoint(textFieldPosition)
+//        let cell = tableView.cellForRowAtIndexPath(indexPath!)
+//        textField.alpha = 1.0
+//        tableView.setContentOffset(CGPointMake(self.tableView.contentOffset.x, self.tableView.contentOffset.y + CGFloat(indexPath!.row) * (cell?.frame.height)! - (navigationController?.navigationBar.frame.height)!), animated: true)
     }
     
     func textFieldDidEndEditingInCell() {
-        tableView.setContentOffset(CGPointMake(self.tableView.contentOffset.x, 0.0), animated: true)
+//        tableView.setContentOffset(CGPointMake(self.tableView.contentOffset.x, 0.0), animated: true)
     }
 }

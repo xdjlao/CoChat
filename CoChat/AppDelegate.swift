@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             NSFontAttributeName: Theme.Fonts.BoldTitleTypeFace.font,
             NSForegroundColorAttributeName: Theme.Colors.ButtonColor.color]
         
-        navBarAppearance.barStyle = UIBarStyle.Black
+//        navBarAppearance.barStyle = .Default
         navBarAppearance.barTintColor = Theme.Colors.NavigationBarColor.color
         //set custom logo here
         navBarButtonAppearance.tintColor = Theme.Colors.ButtonColor.color
@@ -45,6 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         return true
     }
+    
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
         guard let host = url.host else { return false }
         guard let roomID = url.pathComponents else { return false }
