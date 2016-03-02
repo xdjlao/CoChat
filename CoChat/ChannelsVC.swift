@@ -48,8 +48,7 @@ class ChannelsVC: UIViewController {
         tableView.separatorStyle = .None
         tableView.backgroundColor = Theme.Colors.BackgroundColor.color
         let addChannelButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addChannelButtonWasTapped")
-        
-//        navigationItem.rightBarButtonItem = addRoomButton
+        navigationItem.rightBarButtonItem = addChannelButton
     }
 }
 
