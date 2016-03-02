@@ -35,7 +35,13 @@ class HostViewController: UIViewController, ChannelsVCDelegate {
             return
         }
         guard let name = nameOfRoom else { return }
-        guard let roomPassCode = roomPassCode else { return }
+        guard let roomPassCode = roomPassCode else {
+            let alertController = UIAlertController(title: "JERRY FIX THIS", message: "FIX THIS JERRY", preferredStyle: .Alert)
+            let action = UIAlertAction(title: "FUCKING SHIT JERRY", style: UIAlertActionStyle.Destructive, handler: nil)
+            alertController.addAction(action)
+            self.presentViewController(alertController, animated: true, completion: nil)
+            return
+        }
         FirebaseManager.manager.checkForUniqueEntryKey(roomPassCode) { result in
             if result {
                 let privateRoomAsInt = self.convertBooltoInt(self.privateRoom)

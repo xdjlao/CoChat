@@ -155,7 +155,7 @@ extension FirebaseManager {
     }
     
     func checkForUniqueEntryKey(entryKey: String, withResultHandler handler: ( Bool -> ())) {
-        ref.childByAppendingPath("Room").observeSingleEventOfType(.Value, withBlock: { snapshot in
+        ref.childByAppendingPath("Room").queryOrderedByChild("posterName").observeSingleEventOfType(.Value, withBlock: { snapshot in
             guard let rooms = Room.arrayFromSnapshot(snapshot) else {
                 handler(false)
                 return
@@ -165,8 +165,8 @@ extension FirebaseManager {
                     handler(false)
                     return
                 }
-                handler(true)
             }
+            handler(true)
         })
     }
 }
