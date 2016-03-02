@@ -20,12 +20,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CoChat/HostViewController.swift"
-            timestampString = "478582853.457786"
+            timestampString = "478585208.169442"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
-            landmarkName = "textFieldDidBeginEditingInCell(_:)"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "hostReusableCell(_:valueDidChange:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -35,13 +35,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CoChat/RootVC.swift"
-            timestampString = "478570177.824212"
+            filePath = "CoChat/HostReusableCell.swift"
+            timestampString = "478586344.71105"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "viewDidAppear(_:)"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "setUpCellAtIndexPath(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -51,29 +51,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CoChat/MainTabBarViewController.swift"
-            timestampString = "478573066.340485"
+            filePath = "CoChat/HostViewController.swift"
+            timestampString = "478586559.35818"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "setupTabBarUI()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CoChat/MainTabBarViewController.swift"
-            timestampString = "478573976.239748"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "setupTabBarUI()"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "hostReusableCell(_:valueDidChange:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

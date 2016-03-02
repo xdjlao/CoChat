@@ -8,13 +8,14 @@
 
 import UIKit
 protocol MenuChannelsCellDelegate: class {
-    func addFavorite(channelName:String)
-    func removeFavorite(channelName:String)
+    func channelFavoritingChanged(channel: Channel, isFavorite: Bool)
 }
 
 class MenuChannelsCell: UITableViewCell {
     weak var delegate: MenuChannelsCellDelegate?
     var isFavorite = false
+    
+    var channel: Channel!
     
     @IBOutlet var buttonContainer: UIView!
     @IBOutlet var channelsContainer: UIView!
@@ -34,18 +35,14 @@ class MenuChannelsCell: UITableViewCell {
     }
     
     @IBAction func favoriteButtonWasTapped(sender: UIButton) {
-        guard let channelName = channelsLabel?.text else{return}
+        
+        isFavorite = !isFavorite
+        delegate?.channelFavoritingChanged(channel, isFavorite: isFavorite)
         switch isFavorite {
-        case false:
-            favoriteButton.setImage(UIImage(named: "favoriteFilled"), forState: .Normal)
-            isFavorite = !isFavorite
-            delegate?.addFavorite(channelName)
-            return
         case true:
+            favoriteButton.setImage(UIImage(named: "favoriteFilled"), forState: .Normal)
+        case false:
             favoriteButton.setImage(UIImage(named: "favorite"), forState: .Normal)
-            isFavorite = !isFavorite
-            delegate?.removeFavorite(channelName)
-            return
         }
     }
 }

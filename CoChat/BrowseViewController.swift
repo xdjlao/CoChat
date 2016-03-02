@@ -2,11 +2,6 @@ import UIKit
 
 class BrowseViewController: UIViewController {
     
-    enum RecentOrTop: Int{
-        case Recent = 0
-        case Top = 1
-    }
-    
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.dataSource = self
@@ -14,8 +9,8 @@ class BrowseViewController: UIViewController {
             //setUpTableView()
         }
     }
-    var recentRooms = [Room]()
-    var topRooms = [Room]()
+    
+    var rooms = [Room]()
     let manager = FirebaseManager.manager
     let ref = FirebaseManager.manager.ref
     
@@ -26,8 +21,6 @@ class BrowseViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        
-//        getRecentRooms()
         getAllRooms()
     }
     
@@ -39,9 +32,9 @@ class BrowseViewController: UIViewController {
     }
     
     func getAllRooms() {
-        self.topRooms.removeAll()
+        self.rooms.removeAll()
         ref.childByAppendingPath("/Room").queryOrderedByChild("privateRoom").queryEqualToValue(0).observeEventType(.Value, withBlock: { snapshot in
-            self.topRooms = Room.arrayFromSnapshot(snapshot) ?? [Room]()
+            self.rooms = Room.arrayFromSnapshot(snapshot) ?? [Room]()
             self.tableView.reloadData()
         })
     }
@@ -51,21 +44,7 @@ class BrowseViewController: UIViewController {
         ref.childByAppendingPath("Room").removeAllObservers()
     }
     
-    func getRecentRooms() {
-        manager.user.recentRoomsUIDs.forEach { roomUID in
-            ref.childByAppendingPath("/Room").queryOrderedByKey().queryEqualToValue(roomUID).observeSingleEventOfType(.Value, withBlock: { snapshot in
-                guard let value = snapshot.value as? [NSObject: AnyObject] else { return }
-                
-                let keys = Array(value.keys)
-                let values = Array(value.values)
-                let uid = keys[0] as? String ?? "No UID"
-                guard let roomInformation = values[0] as? [NSObject: AnyObject] else { return }
-                
-                let room = Room(fromDictionary: roomInformation, andUID: uid)
-                self.recentRooms.append(room)
-            })
-        }
-    }    
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         guard let nav = segue.destinationViewController as? MessagingNavigationViewController else { return }
         guard let mvc = nav.topViewController as? MessagingViewController else { return }
@@ -103,54 +82,37 @@ extension BrowseViewController: UITableViewDataSource, UITableViewDelegate {
     //        return header
     //    }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if recentRooms.count == 0 {
-            return topRooms.count
-        } else {
-            switch section {
-            case 0: return recentRooms.count
-            case 1: return topRooms.count
-            default: assertionFailure("BrowseVC.tableView asked for more than two sections."); return 0
-            }
-        }
+        return rooms.count
+        
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return setUpTopRoomCell(forIndexPath: indexPath)
+        return setUpRoomCell(forIndexPath: indexPath)
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var room: Room!
+        let room = self.rooms[indexPath.row]
         guard let cell = tableView.cellForRowAtIndexPath(indexPath) as? TopRoomCell else {return}
         
-        UIView.animateWithDuration(0.2, delay: 0.0, options: [], animations: { () -> Void in
+        UIView.animateWithDuration(0.2, delay: 0.0, options: [], animations: {
             cell.cellWrapperView.backgroundColor = Theme.Colors.BackgroundColor.color
-            }) { (Bool) -> Void in
-                if self.recentRooms.count == 0 {
-                    room = self.topRooms[indexPath.row]
-                } else {
-                    switch indexPath.section {
-                    case 0: room = self.recentRooms[indexPath.row]
-                    case 1: room = self.topRooms[indexPath.row]
-                    default: assertionFailure("BrowseVC.tableView asked for more than two sections.")
-                    }
-                }
-                cell.cellWrapperView.backgroundColor = Theme.Colors.ForegroundColor.color
-                self.manager.getChildrenForParent(Channel(), parent: room) { (children) in
-                    guard let children = children else { return }
-                    room.channels = children
-                    self.performSegueWithSegueIdentifier(.SegueToMessaging, sender: room)
-                }
+            }, completion: nil)
+
+        self.manager.getChildrenForParent(Channel(), parent: room) { (children) in
+            guard let children = children else { return }
+            room.channels = children
+            self.performSegueWithSegueIdentifier(.SegueToMessaging, sender: room)
         }
     }
     
-    func setUpTopRoomCell(forIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let room = topRooms[indexPath.row]
+    func setUpRoomCell(forIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let room = rooms[indexPath.row]
         let cell = tableView.dequeueReusableCellWithCellIdentifier(.TopRoomCell) as! TopRoomCell
         cell.countLabel.text = "\(indexPath.row + 1)"
         cell.roomTitleLabel.text = room.title
         cell.selectionStyle = UITableViewCellSelectionStyle.None
         cell.countLabel.textColor = Theme.Colors.DarkButtonColor.color
-        if indexPath.row == topRooms.count - 1 {
+        if indexPath.row == rooms.count - 1 {
             cell.cellSeperator.backgroundColor = Theme.Colors.BackgroundColor.color
             cell.countCellSeperator.backgroundColor = Theme.Colors.BackgroundColor.color
         }
