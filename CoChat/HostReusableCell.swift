@@ -39,7 +39,6 @@ class HostReusableCell: UITableViewCell, UITextFieldDelegate {
         title.textColor = UIColor.whiteColor()
         title.font = Theme.Fonts.BoldNormalTypeFace.font
         addButton.tintColor = Theme.Colors.ButtonColor.color
-        createButton.tintColor = Theme.Colors.ButtonColor.color
         super.awakeFromNib()
     }
     
@@ -51,7 +50,6 @@ class HostReusableCell: UITableViewCell, UITextFieldDelegate {
     @IBOutlet var addButton: UIButton!
     @IBOutlet var titleConstraintToLeftSuperView: NSLayoutConstraint!
     @IBOutlet var switchToggle: UISwitch!
-    @IBOutlet var createButton: UIButton!
     @IBOutlet var title: UITextField! {
         didSet {
             title.delegate = self
@@ -137,12 +135,6 @@ class HostReusableCell: UITableViewCell, UITextFieldDelegate {
         accessoryType = UITableViewCellAccessoryType.None
         addButton.hidden = true
         switchToggle.hidden = true
-        createButton.hidden = true
         selectionStyle = .None
     }
-    
-    @IBAction func createWasTapped(sender: UIButton) {
-        delegate?.createNewChannel?(sender)
-    }
-    
 }

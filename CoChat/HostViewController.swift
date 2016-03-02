@@ -120,7 +120,6 @@ extension HostViewController: HostReusableCellDelegate {
     }
     
     func textFieldDidBeginEditingInCell(textField: UITextField) {
-        textField.alpha = 1.0
         guard let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 1, inSection: 3)) as? HostReusableCell else {return}
         let nameRoomLocation = cell.title.convertRect(cell.frame, fromCoordinateSpace: UIApplication.sharedApplication().keyWindow!)
         print("nameroomlocation \(nameRoomLocation)")

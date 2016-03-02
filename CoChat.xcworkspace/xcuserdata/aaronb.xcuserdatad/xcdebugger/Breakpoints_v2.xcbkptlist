@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CoChat/HostViewController.swift"
-            timestampString = "478581351.699226"
+            timestampString = "478582853.457786"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
             landmarkName = "textFieldDidBeginEditingInCell(_:)"
             landmarkType = "5">
          </BreakpointContent>

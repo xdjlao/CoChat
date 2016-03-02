@@ -188,14 +188,22 @@ extension ChannelsVC: HostReusableCellDelegate {
     }
     
     func textFieldDidBeginEditingInCell(textField: UITextField) {
-//        let textFieldPosition = textField.convertPoint(CGPointZero, toView: self.tableView)
-//        let indexPath = self.tableView.indexPathForRowAtPoint(textFieldPosition)
-//        let cell = tableView.cellForRowAtIndexPath(indexPath!)
-//        textField.alpha = 1.0
-//        tableView.setContentOffset(CGPointMake(self.tableView.contentOffset.x, self.tableView.contentOffset.y + CGFloat(indexPath!.row) * (cell?.frame.height)! - (navigationController?.navigationBar.frame.height)!), animated: true)
+        guard let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 1, inSection: 3)) as? HostReusableCell else {return}
+        let nameRoomLocation = cell.title.convertRect(cell.frame, fromCoordinateSpace: UIApplication.sharedApplication().keyWindow!)
+        print("nameroomlocation \(nameRoomLocation)")
+        let textFieldLocation = cell.convertRect(textField.frame, fromCoordinateSpace: UIApplication.sharedApplication().keyWindow!)
+        print("textfieldLocation \(textFieldLocation)")
+        if textFieldLocation != nameRoomLocation {
+            
+            let textFieldPosition = textField.convertPoint(CGPointZero, toView: self.tableView)
+            let indexPath = self.tableView.indexPathForRowAtPoint(textFieldPosition)
+            let otherCell = tableView.cellForRowAtIndexPath(indexPath!)
+            
+            tableView.setContentOffset(CGPointMake(self.tableView.contentOffset.x, self.tableView.contentOffset.y + (CGFloat(indexPath!.row) * (otherCell?.frame.height)! + CGFloat(110)) - (navigationController?.navigationBar.frame.height)!), animated: true)
+        }
     }
     
     func textFieldDidEndEditingInCell() {
-//        tableView.setContentOffset(CGPointMake(self.tableView.contentOffset.x, 0.0), animated: true)
+        tableView.setContentOffset(CGPointMake(0.0, 0.0), animated:true)
     }
 }
