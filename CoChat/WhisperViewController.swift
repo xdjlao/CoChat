@@ -23,21 +23,17 @@ class WhisperViewController: UIViewController {
                 self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
             }
         }
-        
         whisperRef.queryOrderedByChild("firstUID").queryEqualToValue(userUID).observeEventType(.ChildAdded, withBlock: { snapshot in
-            
             addToConversations(snapshot)
         })
         whisperRef.queryOrderedByChild("secondUID").queryEqualToValue(userUID).observeEventType(.ChildAdded, withBlock: { snapshot in
-            
             addToConversations(snapshot)
         })
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
-
-        FirebaseManager.manager.ref.childByAppendingPath("Conversation").queryOrderedByChild("firstUID").removeAllObservers()
+            FirebaseManager.manager.ref.childByAppendingPath("Conversation").queryOrderedByChild("firstUID").removeAllObservers()
         FirebaseManager.manager.ref.childByAppendingPath("Conversation").queryOrderedByChild("secondUID").removeAllObservers()
     }
 }
@@ -66,7 +62,6 @@ extension WhisperViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
         guard let mvc = segue.destinationViewController as? MessagingViewController else { return }
         mvc.currentConversation = sender as? Conversation
     }

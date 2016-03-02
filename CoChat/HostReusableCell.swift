@@ -1,11 +1,3 @@
-//
-//  HeaderCell.swift
-//  hostProject
-//
-//  Created by Aaron B on 2/21/16.
-//  Copyright © 2016 Bikis Design. All rights reserved.
-//
-
 import UIKit
 @objc protocol HostReusableCellDelegate: class {
     func hostReusableCell(cell: HostReusableCell, valueDidChange: AnyObject?)

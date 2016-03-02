@@ -116,7 +116,6 @@ extension HostViewController: HostReusableCellDelegate {
             }
         case .PasscodeOfRoom:
             roomPassCode = valueDidChange as? String
-            cell.enteredPasscode = roomPassCode!
         case .Privacy:
             if let aSwitch = valueDidChange as? UISwitch {
                 privateRoom = aSwitch.on
@@ -167,6 +166,9 @@ extension HostViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Host Reusable Cell") as! HostReusableCell
         cell.resetCellUI()
+        if roomPassCode != nil {
+            cell.enteredPasscode = roomPassCode!}
+        cell.enteredPrivacy = privateRoom
         switch (indexPath.section, indexPath.row){
         case (0, indexPath.row):
             cell.hidden = true
