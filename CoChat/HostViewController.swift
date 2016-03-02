@@ -1,4 +1,4 @@
-import UIKit
+    import UIKit
 
 class HostViewController: UIViewController, ChannelsVCDelegate {
     @IBOutlet var tableView: UITableView!
@@ -27,7 +27,7 @@ class HostViewController: UIViewController, ChannelsVCDelegate {
         navigationItem.rightBarButtonItem = addRoomButton
         navigationItem.rightBarButtonItem?.enabled = false
         navigationController?.navigationBar.tintColor = Theme.Colors.ButtonColor.color
-}
+    }
     
     func addRoomButtonWasTapped(){
         if FirebaseManager.manager.authData == nil {
@@ -35,28 +35,60 @@ class HostViewController: UIViewController, ChannelsVCDelegate {
             return
         }
         guard let name = nameOfRoom else { return }
-        guard let roomPassCode = roomPassCode else {
-            let alertController = UIAlertController(title: "JERRY FIX THIS", message: "FIX THIS JERRY", preferredStyle: .Alert)
-            let action = UIAlertAction(title: "FUCKING SHIT JERRY", style: UIAlertActionStyle.Destructive, handler: nil)
-            alertController.addAction(action)
-            self.presentViewController(alertController, animated: true, completion: nil)
-            return
+        if let enteredPassCode = roomPassCode {
+            FirebaseManager.manager.checkForUniqueEntryKey(enteredPassCode) { result in
+                if result {
+                    let privateRoomAsInt = self.convertBooltoInt(self.privateRoom)
+                    let user = FirebaseManager.manager.user
+                    Room.createNewRoomWith(name, host: user, privateRoom: privateRoomAsInt, password: enteredPassCode) { newRoom in
+                        self.performSegueWithSegueIdentifier(SegueIdentifier.SegueToMessaging, sender: newRoom)
+                    }
+                } else {
+                    self.alertNonUniquePassCode()
+                }
+            }
         }
-        FirebaseManager.manager.checkForUniqueEntryKey(roomPassCode) { result in
+        else {
+            generateRandomPassCode(2)
+        }
+    }
+    
+    func alertNonUniquePassCode(){
+        let alertController = UIAlertController(title: "Your Entry Key is already being used", message: "Please try again or let us make one for you by leaving it empty", preferredStyle: .Alert)
+        let action = UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Destructive, handler: nil)
+        alertController.addAction(action)
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    
+    func generateRandomPassCode(numDigits:Int) {
+        let alphaNumerial = "ABCDEFGHIJKLMNOPQRSTUVWXYZ012345678910"
+        var finalString = ""
+        for _ in 0...numDigits {
+            let randomNumber = arc4random_uniform(UInt32(alphaNumerial.characters.count))
+            let index = alphaNumerial.startIndex.advancedBy((Int(randomNumber)))
+            let str = alphaNumerial[index]
+            finalString = "\(finalString)\(str)"
+        }
+        checkForUniqueGeneratedPassCode(finalString)
+    }
+    
+    func checkForUniqueGeneratedPassCode(generatedPassCode:String){
+        FirebaseManager.manager.checkForUniqueEntryKey(generatedPassCode) { result in
             if result {
                 let privateRoomAsInt = self.convertBooltoInt(self.privateRoom)
                 let user = FirebaseManager.manager.user
-                Room.createNewRoomWith(name, host: user, privateRoom: privateRoomAsInt, password: roomPassCode) { newRoom in
+                print("hi")
+                Room.createNewRoomWith(self.nameOfRoom!, host: user, privateRoom: privateRoomAsInt, password:generatedPassCode) { newRoom in
+                    print("create new room started")
                     self.performSegueWithSegueIdentifier(SegueIdentifier.SegueToMessaging, sender: newRoom)
                 }
             } else {
-                let alertController = UIAlertController(title: "JERRY FIX THIS", message: "FIX THIS JERRY", preferredStyle: .Alert)
-                let action = UIAlertAction(title: "FUCKING SHIT JERRY", style: UIAlertActionStyle.Destructive, handler: nil)
-                alertController.addAction(action)
-                self.presentViewController(alertController, animated: true, completion: nil)
+                self.generateRandomPassCode(2)
             }
         }
     }
+    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         switch segue.identifier {
@@ -141,11 +173,11 @@ extension HostViewController: HostReusableCellDelegate {
         print("textfieldLocation \(textFieldLocation)")
         if textFieldLocation != nameRoomLocation {
             
-        let textFieldPosition = textField.convertPoint(CGPointZero, toView: self.tableView)
-        let indexPath = self.tableView.indexPathForRowAtPoint(textFieldPosition)
-        let otherCell = tableView.cellForRowAtIndexPath(indexPath!)
-        
-        tableView.setContentOffset(CGPointMake(self.tableView.contentOffset.x, self.tableView.contentOffset.y + (CGFloat(indexPath!.row) * (otherCell?.frame.height)! + CGFloat(110)) - (navigationController?.navigationBar.frame.height)!), animated: true)
+            let textFieldPosition = textField.convertPoint(CGPointZero, toView: self.tableView)
+            let indexPath = self.tableView.indexPathForRowAtPoint(textFieldPosition)
+            let otherCell = tableView.cellForRowAtIndexPath(indexPath!)
+            
+            tableView.setContentOffset(CGPointMake(self.tableView.contentOffset.x, self.tableView.contentOffset.y + (CGFloat(indexPath!.row) * (otherCell?.frame.height)! + CGFloat(110)) - (navigationController?.navigationBar.frame.height)!), animated: true)
         }
     }
     
