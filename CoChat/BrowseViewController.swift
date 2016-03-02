@@ -39,10 +39,16 @@ class BrowseViewController: UIViewController {
     }
     
     func getAllRooms() {
+        self.topRooms.removeAll()
         ref.childByAppendingPath("/Room").queryOrderedByChild("privateRoom").queryEqualToValue(0).observeEventType(.Value, withBlock: { snapshot in
             self.topRooms = Room.arrayFromSnapshot(snapshot) ?? [Room]()
             self.tableView.reloadData()
         })
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        ref.childByAppendingPath("Room").removeAllObservers()
     }
     
     func getRecentRooms() {

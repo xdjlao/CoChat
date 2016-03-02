@@ -34,14 +34,27 @@ class HostViewController: UIViewController, ChannelsVCDelegate {
             presentLoginScreen()
             return
         }
-        
         guard let name = nameOfRoom else { return }
-        let entryKey = roomPassCode ?? "123"
-        let user = FirebaseManager.manager.user
-        let privateRoomAsInt = convertBooltoInt(privateRoom)
-        
-        Room.createNewRoomWith(name, host: user, privateRoom: privateRoomAsInt, password: entryKey) { newRoom in
-            self.performSegueWithSegueIdentifier(SegueIdentifier.SegueToMessaging, sender: newRoom)
+        guard let roomPassCode = roomPassCode else {
+            let alertController = UIAlertController(title: "JERRY FIX THIS", message: "FIX THIS JERRY", preferredStyle: .Alert)
+            let action = UIAlertAction(title: "FUCKING SHIT JERRY", style: UIAlertActionStyle.Destructive, handler: nil)
+            alertController.addAction(action)
+            self.presentViewController(alertController, animated: true, completion: nil)
+            return
+        }
+        FirebaseManager.manager.checkForUniqueEntryKey(roomPassCode) { result in
+            if result {
+                let privateRoomAsInt = self.convertBooltoInt(self.privateRoom)
+                let user = FirebaseManager.manager.user
+                Room.createNewRoomWith(name, host: user, privateRoom: privateRoomAsInt, password: roomPassCode) { newRoom in
+                    self.performSegueWithSegueIdentifier(SegueIdentifier.SegueToMessaging, sender: newRoom)
+                }
+            } else {
+                let alertController = UIAlertController(title: "JERRY FIX THIS", message: "FIX THIS JERRY", preferredStyle: .Alert)
+                let action = UIAlertAction(title: "FUCKING SHIT JERRY", style: UIAlertActionStyle.Destructive, handler: nil)
+                alertController.addAction(action)
+                self.presentViewController(alertController, animated: true, completion: nil)
+            }
         }
     }
     
