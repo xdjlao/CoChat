@@ -22,7 +22,7 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
         didSet {
             tableView.delegate = self
             tableView.dataSource = self
-            tableView.backgroundColor = Theme.Colors.ForegroundColor.color
+            tableView.backgroundColor = Theme.Colors.BackgroundColor.color
         }
     }
     override func viewDidLoad() {
@@ -41,7 +41,7 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
     }
     
     func scrollToBottomMessage(keyboardHeight:CGFloat = 0) {
-        if tableView.contentSize.height > tableView.frame.height {
+        if tableView.contentSize.height - keyboardHeight > tableView.frame.height {
             tableView.setContentOffset(CGPointMake(0, tableView.contentSize.height - tableView.frame.height - keyboardHeight), animated: false)
         }
     }
@@ -147,7 +147,7 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
         didSet {
             setUpListener()
             guard let roomLabel = textView else { return }
-            roomLabel.text = room.title + " - " + currentChannel!.title
+            roomLabel.text = "\(currentChannel!.title) channel"
         }
     }
     var currentConversation: Conversation? {
@@ -156,14 +156,6 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
             guard let label = textView else { return }
             label.text = currentConversation?.secondUser.name
         }
-    }
-    
-    func addRoomToRecent() {
-        guard !(FirebaseManager.manager.user.recentRooms.contains ({ (room: Room) -> Bool in
-            return room === self.room
-        })) else { return }
-        FirebaseManager.manager.user.recentRoomsUIDs.append(room.uid)
-        FirebaseManager.manager.user.recentRooms.append(room)
     }
     
     //MARK Actions

@@ -18,7 +18,7 @@ class GeneralMessageCell: UITableViewCell {
         profileImageView.clipsToBounds = true
         messageLabel.sizeToFit()
         messageLabel.textColor = UIColor.whiteColor()
-        self.backgroundColor = Theme.Colors.ForegroundColor.color
+        self.backgroundColor = Theme.Colors.BackgroundColor.color
         messageLabel.font = Theme.Fonts.NormalTypeFace.font
         messageLabel.numberOfLines = 0
         messageLabel.layoutIfNeeded()

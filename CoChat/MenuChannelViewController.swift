@@ -4,7 +4,7 @@ import UIKit
     optional func menuChannelViewController(menuChannelViewController: MenuChannelViewController, didSelectChannel channel: AnyObject)
 }
 
-class MenuChannelViewController: UIViewController, MenuChannelsCellDelegate {
+class MenuChannelViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     
     var channels: [Channel]!
@@ -17,13 +17,13 @@ class MenuChannelViewController: UIViewController, MenuChannelsCellDelegate {
     }
     
     func setUpUI(){
-    navigationItem.title = "Channels"
-    let addChannelButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "addChannel")
-    navigationItem.rightBarButtonItem = addChannelButton
-    view.backgroundColor = Theme.Colors.BackgroundColor.color
-    tableView.backgroundColor = Theme.Colors.BackgroundColor.color
-    tableView.separatorInset = UIEdgeInsetsZero
-    tableView.tableFooterView = UIView()
+        navigationItem.title = "Channels"
+        let addChannelButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "addChannel")
+        navigationItem.rightBarButtonItem = addChannelButton
+        view.backgroundColor = Theme.Colors.BackgroundColor.color
+        tableView.backgroundColor = Theme.Colors.BackgroundColor.color
+        tableView.separatorInset = UIEdgeInsetsZero
+        tableView.tableFooterView = UIView()
     }
     
     func addFavorite(channelName: String) {
@@ -34,10 +34,29 @@ class MenuChannelViewController: UIViewController, MenuChannelsCellDelegate {
     }
 }
 
+extension MenuChannelViewController: MenuChannelsCellDelegate {
+    func channelFavoritingChanged(channel: Channel, isFavorite: Bool) {
+        let user = FirebaseManager.manager.user
+        
+        switch isFavorite {
+        case true:
+            user.favoriteChannels.append(channel)
+            user.saveSelf()
+        case false:
+            let index = user.favoriteChannels.indexOf { testChannel -> Bool in
+                return channel.uid == testChannel.uid
+            }
+            user.favoriteChannels.removeAtIndex(index!)
+            user.saveSelf()
+        }
+    }
+}
+
 extension MenuChannelViewController : UITableViewDataSource, UITableViewDelegate  {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithCellIdentifier(UITableView.CellIdentifier.MenuChannelsCell) as! MenuChannelsCell
-        cell.channelsLabel?.text = channels[indexPath.row].title
+        cell.channel = channels[indexPath.row]
+        cell.channelsLabel?.text = cell.channel.title
         cell.delegate = self
         return cell
     }
