@@ -4,11 +4,14 @@ import Firebase
 
 class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannelViewControllerDelegate {
    
+    @IBOutlet weak var tableViewTopConstraint: NSLayoutConstraint!
     @IBOutlet var buttonContainer: UIView!
     @IBOutlet weak var channelButtonOutlet: UIButton!
     @IBOutlet weak var sendButtonOutlet: UIButton!
     var topSection:CGFloat?
+    var topNav:CGFloat?
     var firstType = true
+    var originalFrame:CGRect?
 
     @IBOutlet weak var textView: UITextView! {
         didSet {
@@ -19,7 +22,7 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
         didSet {
             tableView.delegate = self
             tableView.dataSource = self
-            tableView.backgroundColor = Theme.Colors.ForegroundColor.color
+            tableView.backgroundColor = Theme.Colors.BackgroundColor.color
         }
     }
     override func viewDidLoad() {
@@ -29,7 +32,7 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
         refreshControl.addTarget(self, action: "getMoreMessages:", forControlEvents: .ValueChanged)
         tableView.addSubview(refreshControl)
         tableView.sendSubviewToBack(refreshControl)
-        
+        originalFrame = view.frame
         uiSetup()
     }
     
@@ -38,7 +41,7 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
     }
     
     func scrollToBottomMessage(keyboardHeight:CGFloat = 0) {
-        if tableView.contentSize.height > tableView.frame.height {
+        if tableView.contentSize.height - keyboardHeight > tableView.frame.height {
             tableView.setContentOffset(CGPointMake(0, tableView.contentSize.height - tableView.frame.height - keyboardHeight), animated: false)
         }
     }
@@ -144,7 +147,7 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
         didSet {
             setUpListener()
             guard let roomLabel = textView else { return }
-            roomLabel.text = room.title + " - " + currentChannel!.title
+            roomLabel.text = "\(currentChannel!.title) channel"
         }
     }
     var currentConversation: Conversation? {

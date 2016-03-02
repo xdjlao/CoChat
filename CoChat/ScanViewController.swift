@@ -24,6 +24,7 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
       if passcodeView == true {
          startScan()
          passcodeView = false
+         passcodeLabel.resignFirstResponder()
       } else {
          stopScan()
          passcodeView = true
@@ -96,9 +97,9 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
     }
     
     func stopScan() {
-        captureSession?.stopRunning()
         joinViewWrapper.hidden = false
         scanViewWrapper.hidden = true
+        captureSession?.stopRunning()
     }
     
     func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!) {
@@ -119,18 +120,22 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
             qrCodeFrameView?.frame = barCodeObject.bounds;
             
             if metadataObj.stringValue != nil {
-                checkForRoomWithEntryKey(metadataObj.stringValue)
+                checkForRoomWithEntryKey(metadataObj.stringValue, isScanned: true)
             }
         }
     }
     
-    func checkForRoomWithEntryKey(key: String) {
+    func checkForRoomWithEntryKey(key: String, isScanned: Bool = false) {
         FirebaseManager.manager.getObjectsByChildValue(Room(), childProperty: "entryKey", childValue: key) { rooms in
             guard let room = rooms?[0] else { return }
-            
             FirebaseManager.manager.getChildrenForParent(Channel(), parent: room) { channels in
                 guard let channels = channels else { return }
                 room.channels = channels
+                if isScanned == true {
+                    self.qrCodeFrameView?.frame = CGRectZero
+                    self.stopScan()
+                    self.passcodeView = true
+                }
                 self.performSegueWithSegueIdentifier(.SegueToMessaging, sender: room)
             }
         }

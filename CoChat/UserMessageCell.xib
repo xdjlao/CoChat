@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -12,7 +12,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VR6-ft-t5f" id="EPa-su-OF7">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xev-QV-mr9">
@@ -24,20 +24,20 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KxS-Z7-of3">
-                        <rect key="frame" x="249" y="16" width="25" height="14"/>
+                        <rect key="frame" x="249" y="11" width="25" height="19"/>
                         <constraints>
                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="252" id="6dc-7r-Ohs"/>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="25" id="frN-cH-XHC"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="xev-QV-mr9" firstAttribute="top" secondItem="EPa-su-OF7" secondAttribute="topMargin" id="87N-Cw-69i"/>
                     <constraint firstItem="xev-QV-mr9" firstAttribute="leading" secondItem="KxS-Z7-of3" secondAttribute="trailing" constant="8" id="Kxd-in-I0k"/>
-                    <constraint firstItem="KxS-Z7-of3" firstAttribute="top" secondItem="EPa-su-OF7" secondAttribute="topMargin" constant="8" id="anh-J6-CXg"/>
+                    <constraint firstItem="KxS-Z7-of3" firstAttribute="top" secondItem="EPa-su-OF7" secondAttribute="topMargin" constant="3" id="anh-J6-CXg"/>
                     <constraint firstItem="xev-QV-mr9" firstAttribute="leading" secondItem="EPa-su-OF7" secondAttribute="leadingMargin" constant="154" id="bIM-Ee-v5z"/>
                     <constraint firstAttribute="bottomMargin" secondItem="KxS-Z7-of3" secondAttribute="bottom" constant="5" id="cjO-Hm-Ux8"/>
                     <constraint firstAttribute="trailingMargin" secondItem="xev-QV-mr9" secondAttribute="trailing" id="vUr-fb-A9R"/>
