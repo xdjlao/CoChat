@@ -86,9 +86,17 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         case(0,0):
             //Log Out here
             break
-        default:
-            //Go To Recent Messages Here
+        case(0,cellArray.count - 1):
             break
+        default:
+            guard let cell = tableView.cellForRowAtIndexPath(indexPath) as? ProfileFavoriteCell else {return}
+            UIView.animateWithDuration(0.2, delay: 0.0, options: [], animations: { () -> Void in
+                cell.favoriteContentWrapperView.backgroundColor = Theme.Colors.BackgroundColor.color
+                }) { (Bool) -> Void in
+                    cell.favoriteContentWrapperView.backgroundColor = Theme.Colors.ForegroundColor.color
+                    let channel = self.cellArray[indexPath.row] as! Channel
+                    self.performSegueWithSegueIdentifier(.ProfileToMessagingSegue, sender: channel)
+            }
         }
     }
     func scrollViewDidScroll(scrollView: UIScrollView) {
@@ -119,5 +127,13 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         case(0,cellArray.count - 1): return 80
         default: return 71
         }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let destination = segue.destinationViewController as! MessagingNavigationViewController
+        let mvc = destination.topViewController as! MessagingViewController
+        let channel = sender as! Channel
+        let room = channel.room
+        mvc.room = room
     }
 }

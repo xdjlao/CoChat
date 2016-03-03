@@ -32,7 +32,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bWd-5k-YmJ">
                                                     <rect key="frame" x="0.0" y="25" width="600" height="150"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gEt-eL-yVD">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gEt-eL-yVD">
                                                             <rect key="frame" x="250" y="0.0" width="100" height="100"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="gEt-eL-yVD" secondAttribute="height" multiplier="1:1" id="F5y-qc-4dT"/>
@@ -202,11 +202,20 @@
                     <connections>
                         <outlet property="recentTableView" destination="ghT-3i-Dr4" id="Vhp-kr-A4b"/>
                         <outlet property="topContainer" destination="W2I-d8-mFh" id="F8U-1c-uU4"/>
+                        <segue destination="fJ2-VB-hA9" kind="presentation" identifier="ProfileToMessagingSegue" id="tho-uw-PAh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xJi-ES-B7O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4269" y="1186"/>
+        </scene>
+        <!--MessagingNavigationViewController-->
+        <scene sceneID="RIJ-N3-Lpd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="MessagingNavigationViewController" id="fJ2-VB-hA9" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fTR-7H-0B3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4880.5" y="1186"/>
         </scene>
     </scenes>
 </document>

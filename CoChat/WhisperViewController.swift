@@ -53,6 +53,14 @@ extension WhisperViewController: UITableViewDelegate, UITableViewDataSource {
                 cell.messageLabel.text = "Latest message"
         cell.nameLabel.text = otherUser.name
         cell.profileImageView.setImageWithURL(NSURL(string: otherUser.profileImageURL)!, placeholderImage: UIImage(named: "profileImageDummy"))
+        if indexPath.row != conversations.count - 1 {
+            cell.contentSeparatorView.backgroundColor = Theme.Colors.ForegroundColor.color
+            cell.imageSeparatorView.backgroundColor = Theme.Colors.DarkBackgroundColor.color
+        } else {
+            cell.contentSeparatorView.backgroundColor = Theme.Colors.BackgroundColor.color
+            cell.imageSeparatorView.backgroundColor = Theme.Colors.BackgroundColor.color
+        }
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
         return cell
     }
     
@@ -87,8 +95,16 @@ extension WhisperViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let conversation = conversations[indexPath.row]
-        performSegueWithSegueIdentifier(.SegueToMessaging, sender: conversation)
+        
+        guard let cell = tableView.cellForRowAtIndexPath(indexPath) as? WhisperCell else {return}
+        UIView.animateWithDuration(0.2, delay: 0.0, options: [], animations: { () -> Void in
+            cell.contentWrapperView.backgroundColor = Theme.Colors.BackgroundColor.color
+            }) { (Bool) -> Void in
+                cell.contentWrapperView.backgroundColor = Theme.Colors.ForegroundColor.color
+                let conversation = self.conversations[indexPath.row]
+                self.performSegueWithSegueIdentifier(.SegueToMessaging, sender: conversation)
+        }
+
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
