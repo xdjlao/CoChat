@@ -51,7 +51,7 @@ extension WhisperViewController: UITableViewDelegate, UITableViewDataSource {
 
         let conversation = conversations[indexPath.row]
         let otherUser = getOtherUser(conversation.firstUser, secondUser: conversation.secondUser)
-                cell.messageLabel.text = "Latest message"
+                cell.messageLabel.text = conversation.lastMessage
         cell.nameLabel.text = otherUser.name
         cell.profileImageView.setImageWithURL(NSURL(string: otherUser.profileImageURL)!, placeholderImage: UIImage(named: "profileImageDummy"))
         if indexPath.row != conversations.count - 1 {

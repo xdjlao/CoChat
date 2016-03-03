@@ -7,7 +7,7 @@ class Conversation: FirebaseType {
     var lastMessage: String
     
     var value: AnyObject {
-        return ["firstUID": firstUser.uid, "firstName": firstUser.name, "firstProfileImageURL": firstUser.profileImageURL, "secondUID": secondUser.uid, "secondName": secondUser.name, "secondProfileImageURL": secondUser.profileImageURL, "uid": uid]
+        return ["firstUID": firstUser.uid, "firstName": firstUser.name, "firstProfileImageURL": firstUser.profileImageURL, "secondUID": secondUser.uid, "secondName": secondUser.name, "secondProfileImageURL": secondUser.profileImageURL, "lastMessage": lastMessage]
     }
     let type = Type.Conversation
     

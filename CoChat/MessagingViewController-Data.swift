@@ -38,6 +38,7 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        self.tableView.reloadData()
         
         if currentChannel != nil || currentConversation != nil {
             if currentChannel != nil {

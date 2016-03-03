@@ -314,13 +314,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CoChat/MessagingViewController-Data.swift"
-            timestampString = "478649271.980574"
+            timestampString = "478668354.671784"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "getMoreMessages(_:)"
-            landmarkType = "5">
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "MessagingViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -330,12 +330,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CoChat/MessagingViewController-Data.swift"
-            timestampString = "478654018.966715"
+            timestampString = "478668354.671784"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "getMoreMessages(_:)"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "scrollToBottomMessage(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
