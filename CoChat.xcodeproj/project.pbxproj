@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		910133CB1C86B1D40077F33F /* LaunchVideo.mov in Resources */ = {isa = PBXBuildFile; fileRef = 910133CA1C86B1D40077F33F /* LaunchVideo.mov */; };
 		912607B51C8548590015D487 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912607B41C8548590015D487 /* Launch Screen.storyboard */; };
 		912607B91C8550B10015D487 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912607B81C8550B10015D487 /* Launch.storyboard */; };
 		912607BD1C855EB40015D487 /* RootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912607BC1C855EB40015D487 /* RootVC.swift */; };
 		91470D8D1C87D77C004B5442 /* ViewController-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91470D8C1C87D77C004B5442 /* ViewController-Extension.swift */; };
+		91470D911C87FF32004B5442 /* LaunchVideo.mov in Resources */ = {isa = PBXBuildFile; fileRef = 91470D901C87FF32004B5442 /* LaunchVideo.mov */; };
 		919549221C7E4F9D00C61805 /* ChannelHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 919549201C7E4F9D00C61805 /* ChannelHeaderCell.xib */; };
 		919FBE191C8629C4008194AC /* MenuChannelsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919FBE181C8629C4008194AC /* MenuChannelsCell.swift */; };
 		91B18F5E1C7CE02300F20531 /* Messaging.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91B18F5C1C7CE02300F20531 /* Messaging.storyboard */; };
@@ -82,12 +82,12 @@
 		38620A9AF6B45CA19AD5E427 /* Pods-CoChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoChat/Pods-CoChat.release.xcconfig"; sourceTree = "<group>"; };
 		587D22B4E734A1D30A6BED37 /* Pods-CoChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoChat/Pods-CoChat.debug.xcconfig"; sourceTree = "<group>"; };
 		70EBED03AAABBA95CBA945A5 /* Pods_CoChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		910133CA1C86B1D40077F33F /* LaunchVideo.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = LaunchVideo.mov; sourceTree = "<group>"; };
 		912607B41C8548590015D487 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		912607B61C854E560015D487 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		912607B81C8550B10015D487 /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		912607BC1C855EB40015D487 /* RootVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootVC.swift; sourceTree = "<group>"; };
 		91470D8C1C87D77C004B5442 /* ViewController-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController-Extension.swift"; sourceTree = "<group>"; };
+		91470D901C87FF32004B5442 /* LaunchVideo.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = LaunchVideo.mov; sourceTree = "<group>"; };
 		919549201C7E4F9D00C61805 /* ChannelHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChannelHeaderCell.xib; sourceTree = "<group>"; };
 		919FBE181C8629C4008194AC /* MenuChannelsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuChannelsCell.swift; sourceTree = "<group>"; };
 		91B18F5D1C7CE02300F20531 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Messaging.storyboard; sourceTree = "<group>"; };
@@ -196,6 +196,7 @@
 		A288F7661C7840E600DF2847 = {
 			isa = PBXGroup;
 			children = (
+				91470D901C87FF32004B5442 /* LaunchVideo.mov */,
 				A288F7711C7840E600DF2847 /* CoChat */,
 				A288F7701C7840E600DF2847 /* Products */,
 				91F5258B1C826144009C9BF1 /* Resources */,
@@ -215,7 +216,6 @@
 		A288F7711C7840E600DF2847 /* CoChat */ = {
 			isa = PBXGroup;
 			children = (
-				910133CA1C86B1D40077F33F /* LaunchVideo.mov */,
 				A288F7B71C7859D600DF2847 /* Extensions & Protocols */,
 				A288F7B61C7859B100DF2847 /* Model */,
 				A288F7C21C785EF900DF2847 /* View */,
@@ -563,6 +563,7 @@
 				D804B1EF1C877DF2002D348C /* Assets.xcassets in Resources */,
 				91E9B9E31C7BCD33006F4CF0 /* HostReusableCell.xib in Resources */,
 				91F5259E1C82616B009C9BF1 /* Lato-Heavy.ttf in Resources */,
+				91470D911C87FF32004B5442 /* LaunchVideo.mov in Resources */,
 				91F525AF1C82616B009C9BF1 /* Lato-Regular.ttf in Resources */,
 				A2BE2B0C1C7B9E1700ED71E4 /* Profile.storyboard in Resources */,
 				A288F7DE1C7873D100DF2847 /* Login.storyboard in Resources */,
@@ -577,7 +578,6 @@
 				91F525AA1C82616B009C9BF1 /* Lato-Hairline.ttf in Resources */,
 				919549221C7E4F9D00C61805 /* ChannelHeaderCell.xib in Resources */,
 				91F525A21C82616B009C9BF1 /* Lato-Thin.ttf in Resources */,
-				910133CB1C86B1D40077F33F /* LaunchVideo.mov in Resources */,
 				91E9B9E41C7BCD33006F4CF0 /* Host.storyboard in Resources */,
 				A288F7781C7840E600DF2847 /* Main.storyboard in Resources */,
 			);

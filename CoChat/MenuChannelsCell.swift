@@ -13,7 +13,7 @@ protocol MenuChannelsCellDelegate: class {
 
 class MenuChannelsCell: UITableViewCell {
     weak var delegate: MenuChannelsCellDelegate?
-    var isFavorite = false
+    var isFavorite = true
     
     var channel: Channel! {
         didSet {
@@ -41,13 +41,16 @@ class MenuChannelsCell: UITableViewCell {
         channelsContainer.backgroundColor = Theme.Colors.ForegroundColor.color
         backgroundColor = Theme.Colors.ForegroundColor.color
         channelsLabel.textColor = UIColor.whiteColor()
-        favoriteButton.setImage(UIImage(named: "favorite"), forState: .Normal)
+        setFavoriteButton()
     }
     
     @IBAction func favoriteButtonWasTapped(sender: UIButton) {
-        
         isFavorite = !isFavorite
         delegate?.channelFavoritingChanged(channel, isFavorite: isFavorite)
+        setFavoriteButton()
+    }
+
+    func setFavoriteButton(){
         switch isFavorite {
         case true:
             favoriteButton.setImage(UIImage(named: "favoriteFilled"), forState: .Normal)
