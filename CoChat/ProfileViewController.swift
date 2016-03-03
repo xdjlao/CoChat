@@ -132,7 +132,14 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             }) { (Bool) -> Void in
                 cell.favoriteContentWrapperView.backgroundColor = Theme.Colors.ForegroundColor.color
                 let channel = self.cellArray[indexPath.row] as! Channel
-                self.performSegueWithSegueIdentifier(.ProfileToMessagingSegue, sender: channel)
+                
+                FirebaseManager.manager.ref.childByAppendingPath("Channel").queryOrderedByChild("roomUID").queryEqualToValue(channel.room.uid).observeSingleEventOfType(.Value, withBlock: { snapshot in
+                    
+                    guard let channels = Channel.arrayFromSnapshot(snapshot) else { return }
+                    
+                    channel.room.channels = channels
+                    self.performSegueWithSegueIdentifier(.ProfileToMessagingSegue, sender: channel)
+                })
             }
         }
     }
@@ -169,8 +176,9 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let destination = segue.destinationViewController as! MessagingNavigationViewController
         let mvc = destination.topViewController as! MessagingViewController
+        
         let channel = sender as! Channel
-        let room = channel.room
-        mvc.room = room
+        mvc.currentChannel = channel
+        mvc.room = channel.room
     }
 }
