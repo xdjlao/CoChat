@@ -33,8 +33,11 @@ class BrowseViewController: UIViewController {
     
     func getAllRooms() {
         self.rooms.removeAll()
-        ref.childByAppendingPath("/Room").queryOrderedByChild("privateRoom").queryEqualToValue(0).observeEventType(.Value, withBlock: { snapshot in
-            self.rooms = Room.arrayFromSnapshot(snapshot) ?? [Room]()
+        ref.childByAppendingPath("/Room").queryOrderedByChild("privateRoom").queryEqualToValue(0).observeEventType(.ChildAdded, withBlock: { snapshot in
+            guard let room = Room.singleFromSnapshot(snapshot) else { return }
+            if room.privateRoom == 0 {
+                self.rooms.append(room)
+            }
             self.tableView.reloadData()
         })
     }

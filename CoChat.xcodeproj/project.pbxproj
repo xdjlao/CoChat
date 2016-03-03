@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		910133CB1C86B1D40077F33F /* LaunchVideo.mov in Resources */ = {isa = PBXBuildFile; fileRef = 910133CA1C86B1D40077F33F /* LaunchVideo.mov */; };
 		912607B51C8548590015D487 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912607B41C8548590015D487 /* Launch Screen.storyboard */; };
 		912607B91C8550B10015D487 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912607B81C8550B10015D487 /* Launch.storyboard */; };
 		912607BD1C855EB40015D487 /* RootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912607BC1C855EB40015D487 /* RootVC.swift */; };
+		91470D8D1C87D77C004B5442 /* ViewController-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91470D8C1C87D77C004B5442 /* ViewController-Extension.swift */; };
+		91470D911C87FF32004B5442 /* LaunchVideo.mov in Resources */ = {isa = PBXBuildFile; fileRef = 91470D901C87FF32004B5442 /* LaunchVideo.mov */; };
 		919549221C7E4F9D00C61805 /* ChannelHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 919549201C7E4F9D00C61805 /* ChannelHeaderCell.xib */; };
 		919FBE191C8629C4008194AC /* MenuChannelsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919FBE181C8629C4008194AC /* MenuChannelsCell.swift */; };
 		91B18F5E1C7CE02300F20531 /* Messaging.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91B18F5C1C7CE02300F20531 /* Messaging.storyboard */; };
@@ -81,11 +82,12 @@
 		38620A9AF6B45CA19AD5E427 /* Pods-CoChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoChat/Pods-CoChat.release.xcconfig"; sourceTree = "<group>"; };
 		587D22B4E734A1D30A6BED37 /* Pods-CoChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoChat/Pods-CoChat.debug.xcconfig"; sourceTree = "<group>"; };
 		70EBED03AAABBA95CBA945A5 /* Pods_CoChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		910133CA1C86B1D40077F33F /* LaunchVideo.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = LaunchVideo.mov; sourceTree = "<group>"; };
 		912607B41C8548590015D487 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		912607B61C854E560015D487 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		912607B81C8550B10015D487 /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		912607BC1C855EB40015D487 /* RootVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootVC.swift; sourceTree = "<group>"; };
+		91470D8C1C87D77C004B5442 /* ViewController-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController-Extension.swift"; sourceTree = "<group>"; };
+		91470D901C87FF32004B5442 /* LaunchVideo.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = LaunchVideo.mov; sourceTree = "<group>"; };
 		919549201C7E4F9D00C61805 /* ChannelHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChannelHeaderCell.xib; sourceTree = "<group>"; };
 		919FBE181C8629C4008194AC /* MenuChannelsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuChannelsCell.swift; sourceTree = "<group>"; };
 		91B18F5D1C7CE02300F20531 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Messaging.storyboard; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 		A288F7661C7840E600DF2847 = {
 			isa = PBXGroup;
 			children = (
+				91470D901C87FF32004B5442 /* LaunchVideo.mov */,
 				A288F7711C7840E600DF2847 /* CoChat */,
 				A288F7701C7840E600DF2847 /* Products */,
 				91F5258B1C826144009C9BF1 /* Resources */,
@@ -213,7 +216,6 @@
 		A288F7711C7840E600DF2847 /* CoChat */ = {
 			isa = PBXGroup;
 			children = (
-				910133CA1C86B1D40077F33F /* LaunchVideo.mov */,
 				A288F7B71C7859D600DF2847 /* Extensions & Protocols */,
 				A288F7B61C7859B100DF2847 /* Model */,
 				A288F7C21C785EF900DF2847 /* View */,
@@ -246,6 +248,7 @@
 				A288F7BA1C785C4500DF2847 /* TextToEnum-Extension.swift */,
 				A288F7C71C785F6800DF2847 /* Theme.swift */,
 				91F525891C825845009C9BF1 /* UIColor+Extension.swift */,
+				91470D8C1C87D77C004B5442 /* ViewController-Extension.swift */,
 			);
 			name = "Extensions & Protocols";
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 		A288F7C01C785ECA00DF2847 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				912607BC1C855EB40015D487 /* RootVC.swift */,
 				A288F7A61C78447D00DF2847 /* MainTabBarViewController.swift */,
 				A2BE2B101C7BC07600ED71E4 /* Tabs */,
 			);
@@ -301,7 +305,6 @@
 		A288F7C31C785F0600DF2847 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				912607BC1C855EB40015D487 /* RootVC.swift */,
 				A288F7BE1C785EAE00DF2847 /* Messaging */,
 				A288F7C01C785ECA00DF2847 /* TabBar */,
 				A288F7CB1C785FC400DF2847 /* Login */,
@@ -344,6 +347,9 @@
 				91E9B9DE1C7BCD33006F4CF0 /* HostReusableCell.swift */,
 				A2BE2B391C81226C00ED71E4 /* TopRoomCell.swift */,
 				91F0C6F01C8412B200A473EA /* WhisperCell.swift */,
+				A2AC331C1C8624FC00A8E96A /* ProfileLogoutCell.swift */,
+				A2A0A7101C83E93A00E4CDDC /* ProfileHeaderCell.swift */,
+				A25B5A991C87A10300DBC0B2 /* ProfileFavoriteCell.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -388,9 +394,6 @@
 			isa = PBXGroup;
 			children = (
 				A2BE2B0A1C7B9E1700ED71E4 /* Profile.storyboard */,
-				A2AC331C1C8624FC00A8E96A /* ProfileLogoutCell.swift */,
-				A2A0A7101C83E93A00E4CDDC /* ProfileHeaderCell.swift */,
-				A25B5A991C87A10300DBC0B2 /* ProfileFavoriteCell.swift */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -461,8 +464,8 @@
 		A2BE2B2D1C7FE0D100ED71E4 /* Host */ = {
 			isa = PBXGroup;
 			children = (
-				A2BE2B2E1C7FE0E400ED71E4 /* Channels */,
 				91E9B9DD1C7BCD33006F4CF0 /* HostViewController.swift */,
+				A2BE2B2E1C7FE0E400ED71E4 /* Channels */,
 			);
 			name = Host;
 			sourceTree = "<group>";
@@ -519,7 +522,7 @@
 				TargetAttributes = {
 					A288F76E1C7840E600DF2847 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 72MNHNDUNH;
+						DevelopmentTeam = C4P8U7398K;
 						SystemCapabilities = {
 							com.apple.SafariKeychain = {
 								enabled = 0;
@@ -560,6 +563,7 @@
 				D804B1EF1C877DF2002D348C /* Assets.xcassets in Resources */,
 				91E9B9E31C7BCD33006F4CF0 /* HostReusableCell.xib in Resources */,
 				91F5259E1C82616B009C9BF1 /* Lato-Heavy.ttf in Resources */,
+				91470D911C87FF32004B5442 /* LaunchVideo.mov in Resources */,
 				91F525AF1C82616B009C9BF1 /* Lato-Regular.ttf in Resources */,
 				A2BE2B0C1C7B9E1700ED71E4 /* Profile.storyboard in Resources */,
 				A288F7DE1C7873D100DF2847 /* Login.storyboard in Resources */,
@@ -574,7 +578,6 @@
 				91F525AA1C82616B009C9BF1 /* Lato-Hairline.ttf in Resources */,
 				919549221C7E4F9D00C61805 /* ChannelHeaderCell.xib in Resources */,
 				91F525A21C82616B009C9BF1 /* Lato-Thin.ttf in Resources */,
-				910133CB1C86B1D40077F33F /* LaunchVideo.mov in Resources */,
 				91E9B9E41C7BCD33006F4CF0 /* Host.storyboard in Resources */,
 				A288F7781C7840E600DF2847 /* Main.storyboard in Resources */,
 			);
@@ -660,6 +663,7 @@
 				A2BE2B3A1C81226C00ED71E4 /* TopRoomCell.swift in Sources */,
 				A288F7CF1C78609700DF2847 /* UserMessageCell.swift in Sources */,
 				A288F7B11C78592900DF2847 /* User.swift in Sources */,
+				91470D8D1C87D77C004B5442 /* ViewController-Extension.swift in Sources */,
 				A288F7BB1C785C4500DF2847 /* TextToEnum-Extension.swift in Sources */,
 				A288F7A51C7841B600DF2847 /* BrowseViewController.swift in Sources */,
 				A2BE2B2C1C7E72A200ED71E4 /* BrowseNavigationViewController.swift in Sources */,

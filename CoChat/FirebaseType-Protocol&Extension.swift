@@ -50,6 +50,14 @@ extension FirebaseType {
                 self.uid = firebase.key
                 completionHandler?(new: self)
             })
+        case .Conversation:
+            type.firebase().childByAutoId().setValue(value, withCompletionBlock: { error, firebase in
+                if let error = error {
+                    print(error)
+                }
+                self.uid = firebase.key
+                completionHandler?(new:self)
+            })
         default: assertionFailure()
         }
     }

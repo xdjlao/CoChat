@@ -11,7 +11,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         super.init()
         Firebase.defaultConfig().persistenceEnabled = true
     }
-    
     func uiSetup() {
         window?.tintColor = Theme.Colors.BackgroundColor.color
         let navBarAppearance = UINavigationBar.appearance()

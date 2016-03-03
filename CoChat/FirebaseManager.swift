@@ -36,11 +36,20 @@ class FirebaseManager {
     }
     
     func getUserStoredData() {
-        ref.childByAppendingPath("/User").queryOrderedByKey().queryEqualToValue(user.uid).observeSingleEventOfType(.Value, withBlock: { snapshot in
+        ref.childByAppendingPath("User").queryOrderedByKey().queryEqualToValue(user.uid).observeSingleEventOfType(.Value, withBlock: { snapshot in
+            
             guard let userDictionary = snapshot.value[self.user.uid] as? [NSObject: AnyObject] else { return }
-            guard let favoriteChannelsUIDs = userDictionary["favoriteChannelsUIDs"] as? [String] else { return }
-            self.user.favoriteChannels = favoriteChannelsUIDs.map{ uid -> Channel in
-                return Channel(withDummyTitle: "none", dummyUID: uid)
+            
+            if let favoriteChannelsUIDs = userDictionary["favoriteChannelsUIDs"] as? [String] {
+                
+                self.user.favoriteChannels = favoriteChannelsUIDs.map { uid -> Channel in
+                    return Channel(withDummyTitle: "none", dummyUID: uid)
+                }
+            }
+            if let conversationPartnersUIDs = userDictionary["conversationPartnersUIDs"] as? [String] {
+                self.user.conversationPartners = conversationPartnersUIDs.map { uid -> User in
+                    return User(name: "none", profileImageURL: "none", uid: uid)
+                }
             }
         })
     }

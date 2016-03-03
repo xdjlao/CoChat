@@ -22,16 +22,14 @@ class MenuChannelViewController: UIViewController {
         navigationItem.rightBarButtonItem = addChannelButton
         view.backgroundColor = Theme.Colors.BackgroundColor.color
         tableView.backgroundColor = Theme.Colors.BackgroundColor.color
+        navigationController?.navigationBar.tintColor = Theme.Colors.ButtonColor.color
         tableView.separatorInset = UIEdgeInsetsZero
         tableView.tableFooterView = UIView()
+        //disable add channel icon
+        navigationItem.rightBarButtonItem?.tintColor = UIColor.clearColor()
+        navigationItem.rightBarButtonItem?.enabled = false
     }
     
-    func addFavorite(channelName: String) {
-        //query for channel UID and add to user here
-    }
-    func removeFavorite(channelName: String) {
-        //same same
-    }
 }
 
 extension MenuChannelViewController: MenuChannelsCellDelegate {

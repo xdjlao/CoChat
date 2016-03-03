@@ -8,7 +8,7 @@ class Channel: FirebaseType {
     var privateChannel: Int
     var password: String
     
-    let room: Room
+    var room: Room
     
     var value: AnyObject {
         return ["title": title, "roomTitle": room.title, "roomUID": room.uid, "privateChannel": privateChannel, "password": password]
@@ -40,8 +40,8 @@ class Channel: FirebaseType {
         self.privateChannel = dictionary["privateChannel"] as? Int ?? 0
         self.password = dictionary["password"] as? String ?? "none"
         
-        let roomName = dictionary["hostName"] as? String ?? "failed to get hostName"
-        let roomUID = dictionary["hoseUID"] as? String ?? "failed to get hostUID"
+        let roomName = dictionary["roomTitle"] as? String ?? "failed to get roomName"
+        let roomUID = dictionary["roomUID"] as? String ?? "failed to get roomUID"
         
         self.room = Room(withDummyTitle: roomName, dummyUID: roomUID)
     }
