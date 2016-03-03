@@ -63,7 +63,7 @@ struct Theme {
 //    }
     
     
-    enum Fonts {
+    enum{
         case TitleTypeFace
         case BoldTitleTypeFace
         case NormalTypeFace
