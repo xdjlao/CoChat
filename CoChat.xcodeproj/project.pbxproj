@@ -11,6 +11,7 @@
 		912607B51C8548590015D487 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912607B41C8548590015D487 /* Launch Screen.storyboard */; };
 		912607B91C8550B10015D487 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912607B81C8550B10015D487 /* Launch.storyboard */; };
 		912607BD1C855EB40015D487 /* RootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912607BC1C855EB40015D487 /* RootVC.swift */; };
+		91470D8D1C87D77C004B5442 /* ViewController-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91470D8C1C87D77C004B5442 /* ViewController-Extension.swift */; };
 		919549221C7E4F9D00C61805 /* ChannelHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 919549201C7E4F9D00C61805 /* ChannelHeaderCell.xib */; };
 		919FBE191C8629C4008194AC /* MenuChannelsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919FBE181C8629C4008194AC /* MenuChannelsCell.swift */; };
 		91B18F5E1C7CE02300F20531 /* Messaging.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91B18F5C1C7CE02300F20531 /* Messaging.storyboard */; };
@@ -86,6 +87,7 @@
 		912607B61C854E560015D487 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		912607B81C8550B10015D487 /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		912607BC1C855EB40015D487 /* RootVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootVC.swift; sourceTree = "<group>"; };
+		91470D8C1C87D77C004B5442 /* ViewController-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController-Extension.swift"; sourceTree = "<group>"; };
 		919549201C7E4F9D00C61805 /* ChannelHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChannelHeaderCell.xib; sourceTree = "<group>"; };
 		919FBE181C8629C4008194AC /* MenuChannelsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuChannelsCell.swift; sourceTree = "<group>"; };
 		91B18F5D1C7CE02300F20531 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Messaging.storyboard; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 				A288F7BA1C785C4500DF2847 /* TextToEnum-Extension.swift */,
 				A288F7C71C785F6800DF2847 /* Theme.swift */,
 				91F525891C825845009C9BF1 /* UIColor+Extension.swift */,
+				91470D8C1C87D77C004B5442 /* ViewController-Extension.swift */,
 			);
 			name = "Extensions & Protocols";
 			sourceTree = "<group>";
@@ -660,6 +663,7 @@
 				A2BE2B3A1C81226C00ED71E4 /* TopRoomCell.swift in Sources */,
 				A288F7CF1C78609700DF2847 /* UserMessageCell.swift in Sources */,
 				A288F7B11C78592900DF2847 /* User.swift in Sources */,
+				91470D8D1C87D77C004B5442 /* ViewController-Extension.swift in Sources */,
 				A288F7BB1C785C4500DF2847 /* TextToEnum-Extension.swift in Sources */,
 				A288F7A51C7841B600DF2847 /* BrowseViewController.swift in Sources */,
 				A2BE2B2C1C7E72A200ED71E4 /* BrowseNavigationViewController.swift in Sources */,
