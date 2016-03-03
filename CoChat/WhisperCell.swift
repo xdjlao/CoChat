@@ -8,6 +8,7 @@ class WhisperCell: UITableViewCell {
     @IBOutlet var contentWrapperView: UIView!
     @IBOutlet var imageSeparatorView: UIView!
     @IBOutlet var contentSeparatorView: UIView!
+    @IBOutlet var container: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

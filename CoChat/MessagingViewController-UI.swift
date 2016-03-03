@@ -189,7 +189,7 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
         }
         if mode == Mode.Chat {
             let messageAction = UIAlertAction(title: "Message", style: UIAlertActionStyle.Default) { (UIAlertAction) -> Void in
-                performSegueWithSegueIdentifier(SegueIdentifier.SegueFromMessageToWhisper, sender: self)
+//                performSegueWithSegueIdentifier(SegueIdentifier.SegueFromMessageToWhisper, sender)
             }
             alertController.addAction(messageAction)
         }

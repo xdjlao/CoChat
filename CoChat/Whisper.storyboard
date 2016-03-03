@@ -211,6 +211,7 @@
                                             </variation>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="container" destination="cuS-zE-8CE" id="4w2-GH-1eF"/>
                                             <outlet property="contentSeparatorView" destination="KjO-3D-4sN" id="x4v-zF-0EK"/>
                                             <outlet property="contentWrapperView" destination="llI-gA-3wS" id="tZS-hY-awa"/>
                                             <outlet property="imageSeparatorView" destination="TXA-M5-RiC" id="iif-82-r1j"/>

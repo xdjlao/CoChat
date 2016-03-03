@@ -43,12 +43,32 @@ class WhisperViewController: UIViewController {
 extension WhisperViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("WhisperCell", forIndexPath: indexPath) as! WhisperCell
+        if conversations.count == 0 {
+            noWhispersCell(cell)
+            return cell
+        }
+
         let conversation = conversations[indexPath.row]
         let otherUser = getOtherUser(conversation.firstUser, secondUser: conversation.secondUser)
-        cell.messageLabel.text = "Latest message"
+                cell.messageLabel.text = "Latest message"
         cell.nameLabel.text = otherUser.name
         cell.profileImageView.setImageWithURL(NSURL(string: otherUser.profileImageURL)!, placeholderImage: UIImage(named: "profileImageDummy"))
         return cell
+    }
+    
+    func noWhispersCell(cell:WhisperCell){
+        cell.messageLabel.hidden = true
+        cell.textLabel?.text = "You don't have any Whispers!"
+        cell.textLabel?.textColor = UIColor.whiteColor()
+        cell.profileImageView.hidden = true
+        cell.nameLabel.hidden = true
+        cell.timestampLabel.hidden = true
+        cell.backgroundColor = Theme.Colors.ForegroundColor.color
+        cell.contentSeparatorView.hidden = true
+        cell.contentWrapperView.hidden = true
+        cell.imageSeparatorView.hidden = true
+        cell.container.hidden = true
+        cell.backgroundColor = Theme.Colors.ForegroundColor.color
     }
     
     func getOtherUser(firstUser: User, secondUser: User) -> User {
@@ -60,6 +80,9 @@ extension WhisperViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if conversations.count == 0 {
+            return 1
+        }
         return conversations.count
     }
     
