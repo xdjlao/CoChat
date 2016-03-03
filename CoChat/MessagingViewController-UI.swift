@@ -36,10 +36,10 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
             let height = self.textView.sizeThatFits(CGSizeMake(self.textView.frame.size.width, CGFloat.max)).height
             self.textView.frame.size.height = height
             self.buttonContainer.frame.size.height = textView.frame.size.height
-            }) { (Bool) -> Void in
-                if self.messages.count > 0 {
-                    self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: self.messages.count - 1, inSection: 0), atScrollPosition: .Bottom, animated: true)
-                }
+        }) { (Bool) -> Void in
+            if self.messages.count > 0 {
+                self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: self.messages.count - 1, inSection: 0), atScrollPosition: .Bottom, animated: true)
+            }
         }
     }
     
@@ -83,11 +83,11 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
         
         let options = UIViewAnimationOptions(rawValue: curve << 16)
         UIView.animateWithDuration(duration, delay: 0, options: options,
-            animations: {
-                self.view.layoutIfNeeded()
-                
+                                   animations: {
+                                    self.view.layoutIfNeeded()
+                                    
             },
-            completion: nil
+                                   completion: nil
         )
     }
     
@@ -190,14 +190,20 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
         if mode == Mode.Chat {
             let messageAction = UIAlertAction(title: "Message", style: UIAlertActionStyle.Default) { (UIAlertAction) -> Void in
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                guard let mvc = storyboard.instantiateViewControllerWithIdentifier("MessagingNavigationViewController") as? MessagingNavigationViewController else { return }
-                self.presentViewController(mvc, animated: true, completion: nil)
+                guard let mnvc = storyboard.instantiateViewControllerWithIdentifier("MessagingNavigationViewController") as? MessagingNavigationViewController else { return }
+                guard let mvc = mnvc.viewControllers[0] as? MessagingViewController else { return }
+                Conversation.createNewConversationWith(FirebaseManager.manager.user, secondUser: user, withCompletionHandler: { (new) in
+                    NSOperationQueue.mainQueue().addOperationWithBlock {
+                        mvc.currentConversation = new
+                        self.presentViewController(mnvc, animated: true, completion: nil)
+                    }
+                })
             }
             alertController.addAction(messageAction)
-            alertController.addAction(reportAction)
-            alertController.addAction(cancelAction)
-            presentViewController(alertController, animated: true, completion: nil)
         }
+        alertController.addAction(reportAction)
+        alertController.addAction(cancelAction)
+        presentViewController(alertController, animated: true, completion: nil)
     }
     
     
@@ -216,8 +222,11 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
     func uiSetup() {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
-        topNav = navigationController!.navigationBar.frame.height
-        topSection = topNav! + UIApplication.sharedApplication().statusBarFrame.size.height
+        
+        if let navigationController = navigationController {
+            topNav = navigationController.navigationBar.frame.height
+            topSection = topNav! + UIApplication.sharedApplication().statusBarFrame.size.height
+        }
         textView.scrollEnabled = false
         textView.delegate = self
         textView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.8)

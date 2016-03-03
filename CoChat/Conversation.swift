@@ -11,8 +11,7 @@ class Conversation: FirebaseType {
     }
     let type = Type.Conversation
     
-    init(uid: String, firstUser: User?, firstUID: String?, firstName: String?, firstProfileImageURL: String?, secondUser: User?, secondUID: String?, secondName: String?, secondProfileImageURL: String?) {
-        self.uid = uid
+    init(firstUser: User?, firstUID: String?, firstName: String?, firstProfileImageURL: String?, secondUser: User?, secondUID: String?, secondName: String?, secondProfileImageURL: String?) {
         if let firstUser = firstUser {
             self.firstUser = firstUser
         } else if let firstName = firstName, firstUID = firstUID, firstProfileImageURL = secondProfileImageURL {
@@ -27,7 +26,7 @@ class Conversation: FirebaseType {
         } else {
             self.secondUser = User(name: "none", profileImageURL: "none", uid: "none")
         }
-        self.lastMessage = "None"
+        self.lastMessage = ""
     }
     
     required init(fromDictionary dictionary: [NSObject: AnyObject], andUID uid: String) {
@@ -57,5 +56,12 @@ class Conversation: FirebaseType {
         firstUser = User(name: "none", profileImageURL: "none", uid: "none")
         secondUser = User(name: "none", profileImageURL: "none", uid: "none")
         lastMessage = none
+    }
+    static func createNewConversationWith(firstUser: User, secondUser: User, withCompletionHandler handler: ((new: Conversation) -> ())?) {
+        let conversation = Conversation(firstUser: firstUser, firstUID: nil, firstName: nil, firstProfileImageURL: nil, secondUser: secondUser, secondUID: nil, secondName: nil, secondProfileImageURL: nil )
+        conversation.createNew { new in
+            guard let new = new as? Conversation else { return }
+            handler?(new: new)
+        }
     }
 }
