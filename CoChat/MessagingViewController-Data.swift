@@ -169,6 +169,7 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
                     conversation.lastMessage = message.text
                     conversation.saveSelf()
                 }
+                self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: self.messages.count - 1, inSection: 0), atScrollPosition: .Bottom, animated: true)
             }
         })
     }
@@ -195,6 +196,13 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
     var currentConversation: Conversation? {
         didSet {
             setUpListener()
+            let firstUser = currentConversation!.firstUser
+            let secondUser = currentConversation!.secondUser
+            if firstUser.uid != FirebaseManager.manager.user.uid {
+                navigationItem.title = firstUser.name
+            } else {
+                navigationItem.title = secondUser.name
+            }
             guard let label = textView else { return }
             label.text = currentConversation?.secondUser.name
             sendButtonOutlet.hidden = false

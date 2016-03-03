@@ -22,10 +22,12 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
    
    @IBAction func onSwitchPressed(sender: UIBarButtonItem) {
       if passcodeView == true {
+         navigationItem.rightBarButtonItem?.title = "Close"
          startScan()
          passcodeView = false
          passcodeLabel.resignFirstResponder()
       } else {
+        navigationItem.rightBarButtonItem?.title = "Scan"
          stopScan()
          passcodeView = true
       }

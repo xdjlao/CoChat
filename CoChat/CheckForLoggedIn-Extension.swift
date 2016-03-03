@@ -39,7 +39,7 @@ extension UIViewController {
                     FirebaseManager.manager.handleUserAuthData(authData, withMainQueueCompletionHandler: { user in
                         guard let user = user else { return }
                         print("\(user.name) authed in Extension")
-                        self.dismissViewControllerAnimated(true, completion: nil)
+                        // self.dismissViewControllerAnimated(true, completion: nil)
                     })
                 }
             })
