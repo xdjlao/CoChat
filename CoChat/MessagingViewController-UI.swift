@@ -237,19 +237,6 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
         channelButtonOutlet.backgroundColor = Theme.Colors.MessageButtonColor.color
         channelButtonOutlet.tintColor = UIColor.whiteColor()
         buttonContainer.backgroundColor = Theme.Colors.MessageButtonColor.color
-        
-        // JERRY THIS DOESN"T WORK FIX IT YOU MISERABLE HUMAN BEING
-        //        if mode == Mode.Chat {
-        //            if let channelTitle = currentChannel?.title {
-        //                textView.text = "\(channelTitle) channel"
-        //            } else {
-        //                textView.text = ""
-        //            }
-        //        } else {
-        //            sendButtonOutlet.hidden = false
-        //            channelButtonOutlet.hidden = true
-        //            textView.text = ""
-        //        }
         tableViewOrientation()
     }
     

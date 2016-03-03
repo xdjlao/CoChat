@@ -36,7 +36,22 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
         uiSetup()
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if currentChannel != nil || currentConversation != nil {
+            if currentChannel != nil {
+                sendButtonOutlet.hidden = true
+                channelButtonOutlet.hidden = false
+            } else {
+                sendButtonOutlet.hidden = false
+                channelButtonOutlet.hidden = true
+            }
+        }
+    }
+    
     override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         scrollToBottomMessage()
     }
     
@@ -170,6 +185,8 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
             setUpListener()
             guard let roomLabel = textView else { return }
             roomLabel.text = "\(currentChannel!.title) channel"
+            sendButtonOutlet.hidden = true
+            channelButtonOutlet.hidden = false
         }
     }
     var currentConversation: Conversation? {
@@ -177,6 +194,8 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
             setUpListener()
             guard let label = textView else { return }
             label.text = currentConversation?.secondUser.name
+            sendButtonOutlet.hidden = false
+            channelButtonOutlet.hidden = true
         }
     }
     
