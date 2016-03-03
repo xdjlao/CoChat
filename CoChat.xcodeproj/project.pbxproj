@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		910133CB1C86B1D40077F33F /* LaunchVideo.mov in Resources */ = {isa = PBXBuildFile; fileRef = 910133CA1C86B1D40077F33F /* LaunchVideo.mov */; };
 		912607B51C8548590015D487 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912607B41C8548590015D487 /* Launch Screen.storyboard */; };
-		912607B71C854E560015D487 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 912607B61C854E560015D487 /* AVFoundation.framework */; };
 		912607B91C8550B10015D487 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912607B81C8550B10015D487 /* Launch.storyboard */; };
 		912607BD1C855EB40015D487 /* RootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912607BC1C855EB40015D487 /* RootVC.swift */; };
 		919549221C7E4F9D00C61805 /* ChannelHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 919549201C7E4F9D00C61805 /* ChannelHeaderCell.xib */; };
@@ -70,6 +69,7 @@
 		A2BE2B3A1C81226C00ED71E4 /* TopRoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE2B391C81226C00ED71E4 /* TopRoomCell.swift */; };
 		D804B1EF1C877DF2002D348C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D804B1EE1C877DF2002D348C /* Assets.xcassets */; };
 		D804B1F11C8795A2002D348C /* Whisper.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D804B1F01C8795A2002D348C /* Whisper.storyboard */; };
+		D80D7A691C879F2700C18B7D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 912607B61C854E560015D487 /* AVFoundation.framework */; };
 		D8641AE11C86342B004E838E /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8641AE01C86342B004E838E /* Conversation.swift */; };
 		D8AE2D191C7D28F00002A31D /* Whisper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE2D181C7D28F00002A31D /* Whisper.swift */; };
 		D8AE2D1B1C7D2E560002A31D /* DualQueriedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE2D1A1C7D2E560002A31D /* DualQueriedType.swift */; };
@@ -155,7 +155,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				912607B71C854E560015D487 /* AVFoundation.framework in Frameworks */,
+				D80D7A691C879F2700C18B7D /* AVFoundation.framework in Frameworks */,
 				FE075CF3C95FB29BE89AA0A4 /* Pods_CoChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -516,7 +516,7 @@
 				TargetAttributes = {
 					A288F76E1C7840E600DF2847 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = C4P8U7398K;
+						DevelopmentTeam = 72MNHNDUNH;
 						SystemCapabilities = {
 							com.apple.SafariKeychain = {
 								enabled = 0;

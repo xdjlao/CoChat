@@ -51,21 +51,23 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
     func getMoreMessages(refreshControl: UIRefreshControl) {
         guard let oldestMessage = oldestMessage else {
             refreshControl.endRefreshing()
-
             return
         }
         let ref = mode.firebase(forUID: currentUID)
-        ref.queryLimitedToLast(10).queryStartingAtValue(oldestMessage.uid).observeSingleEventOfType(.Value, withBlock: { snapshot in
-            guard let messages = Message.arrayFromSnapshot(snapshot, withCreatorUID: self.currentUID) else { return }
+        ref.queryOrderedByKey().queryLimitedToNumberOfChildren(10).queryEndingAtValue(oldestMessage.uid).observeSingleEventOfType(.Value, withBlock: { snapshot in
+            guard let messages = Message.arrayFromSnapshot(snapshot, withCreatorUID: self.currentUID) else {
+                refreshControl.endRefreshing()
+                return
+            }
             
             NSOperationQueue.mainQueue().addOperationWithBlock {
                 for message in messages {
                     self.messages.append(message)
-                    self.sortMessages()
                     self.oldestMessageCheck(message)
                     let indexPath = NSIndexPath(forRow: self.messages.count - 1, inSection: 0)
                     self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
                 }
+                self.sortMessages()
                 refreshControl.endRefreshing()
             }
         })
@@ -108,9 +110,24 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
     var messages = [Message]()
     
     func sortMessages() {
+        var nonDuplicates = [Message]()
+        
+        func contains(message: Message) -> Bool {
+            return nonDuplicates.contains( { testMessage -> Bool in
+                return testMessage.uid == message.uid
+            })
+        }
+        
+        for message in messages {
+            if !contains(message) {
+                nonDuplicates.append(message)
+            }
+        }
+        messages = nonDuplicates
         messages.sortInPlace { first, second in
             return first.time.compare(second.time) == NSComparisonResult.OrderedAscending
         }
+        self.tableView.reloadData()
     }
     
     func oldestMessageCheck(toCompare: Message) {
@@ -121,14 +138,19 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
     
     func setUpListener() {
         let ref = mode.firebase(forUID: currentUID)
-        ref.queryLimitedToFirst(11).observeEventType(.ChildAdded, withBlock: { snapshot in
+        ref.queryLimitedToLast(11).observeEventType(.ChildAdded, withBlock: { snapshot in
+            
             guard let message = Message.singleFromSnapshot(snapshot, withCreatorUID: self.currentUID) else { return }
             NSOperationQueue.mainQueue().addOperationWithBlock {
                 self.messages.append(message)
-                self.sortMessages()
                 self.oldestMessageCheck(message)
                 let indexPath = NSIndexPath(forRow: self.messages.count - 1, inSection: 0)
                 self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+                self.sortMessages()
+                if let conversation = self.currentConversation {
+                    conversation.lastMessage = message.text
+                    conversation.saveSelf()
+                }
             }
         })
     }

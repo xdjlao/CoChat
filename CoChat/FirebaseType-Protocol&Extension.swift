@@ -30,9 +30,11 @@ extension FirebaseType {
         switch type {
         case .User:
             Firebase(url: baseURL).childByAppendingPath("User").childByAppendingPath("/\(uid)").updateChildValues(value)
-        case .Message, .Room , .Channel:
+        case .Message, .Room , .Channel, .Whisper:
+            assertionFailure()
             Firebase(url: baseURL).childByAppendingPath("/\(uid)").updateChildValues(value)
-        default: assertionFailure()
+        case .Conversation:
+            Firebase(url: baseURL).childByAppendingPath("Conversation").childByAppendingPath("/\(uid)").updateChildValues(value)
         }
     }
     
