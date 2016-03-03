@@ -12,7 +12,8 @@ class WhisperViewController: UIViewController {
         tableView.separatorStyle = UITableViewCellSeparatorStyle.None
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         conversations.removeAll()
         tableView.reloadData()
         let whisperRef = FirebaseManager.manager.ref.childByAppendingPath("Conversation")

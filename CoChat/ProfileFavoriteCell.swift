@@ -12,6 +12,7 @@ class ProfileFavoriteCell: UITableViewCell {
 
     @IBOutlet var favoriteImageView: UIImageView!
     @IBOutlet var favoriteChannelLabel: UILabel!
+    @IBOutlet var favoriteChannelLabelName: UILabel!
     @IBOutlet var imageWrapperView: UIView!
     @IBOutlet var favoriteContentWrapperView: UIView!
     @IBOutlet var imageSeparatorView: UIView!

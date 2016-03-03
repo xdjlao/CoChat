@@ -22,15 +22,24 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
         super.viewDidLoad()
         loginButton = createFBLoginButton()
         loginButton!.delegate = self
-        setupArray()
         setUpUI()
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        setupArray()
+        recentTableView.reloadData()
+    }
+    
     func setupArray() {
+        cellArray = []
         cellArray.append("Header")
-        for fav in FirebaseManager.manager.user.favoriteChannels {
-            cellArray.append(fav)
+        var tempArray:[Channel] = []
+        for fav: Channel in FirebaseManager.manager.user.favoriteChannels {
+            tempArray.append(fav)
         }
+        let reverseArray = NSArray(array: tempArray.reverse())
+        cellArray.appendContentsOf(reverseArray)
         cellArray.append("Footer")
     }
     
@@ -68,7 +77,8 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCellWithCellIdentifier(.ProfileFavoriteCell) as! ProfileFavoriteCell
             let favoriteChannel = cellArray[indexPath.row] as! Channel
             cell.favoriteImageView.image = UIImage(named: "favoriteFilled")
-            cell.favoriteChannelLabel.text = favoriteChannel.title
+            cell.favoriteChannelLabel.text = favoriteChannel.room.title
+            cell.favoriteChannelLabelName.text =  favoriteChannel.title
             cell.selectionStyle = UITableViewCellSelectionStyle.None
             if indexPath.row != cellArray.count - 2 {
                 cell.imageSeparatorView.backgroundColor = Theme.Colors.ForegroundColor.color
