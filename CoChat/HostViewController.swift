@@ -78,7 +78,6 @@ class HostViewController: UIViewController, ChannelsVCDelegate {
             guard let nvc = segue.destinationViewController as? UINavigationController, room = sender as? Room else { return }
             guard let mvc = nvc.viewControllers[0] as? MessagingViewController else { return }
             mvc.room = room
-            mvc.fromHost = true
             if channels.isEmpty {
                 Channel.createNewChannelWith("Main", room: room, privateChannel: 0, password: room.password, withCompletionHandler: { new in
                     room.channels.append(new)

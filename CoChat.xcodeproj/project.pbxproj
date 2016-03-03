@@ -276,6 +276,7 @@
 		A288F7C01C785ECA00DF2847 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				912607BC1C855EB40015D487 /* RootVC.swift */,
 				A288F7A61C78447D00DF2847 /* MainTabBarViewController.swift */,
 				A2BE2B101C7BC07600ED71E4 /* Tabs */,
 			);
@@ -304,7 +305,6 @@
 		A288F7C31C785F0600DF2847 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				912607BC1C855EB40015D487 /* RootVC.swift */,
 				A288F7BE1C785EAE00DF2847 /* Messaging */,
 				A288F7C01C785ECA00DF2847 /* TabBar */,
 				A288F7CB1C785FC400DF2847 /* Login */,
@@ -347,6 +347,9 @@
 				91E9B9DE1C7BCD33006F4CF0 /* HostReusableCell.swift */,
 				A2BE2B391C81226C00ED71E4 /* TopRoomCell.swift */,
 				91F0C6F01C8412B200A473EA /* WhisperCell.swift */,
+				A2AC331C1C8624FC00A8E96A /* ProfileLogoutCell.swift */,
+				A2A0A7101C83E93A00E4CDDC /* ProfileHeaderCell.swift */,
+				A25B5A991C87A10300DBC0B2 /* ProfileFavoriteCell.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -391,9 +394,6 @@
 			isa = PBXGroup;
 			children = (
 				A2BE2B0A1C7B9E1700ED71E4 /* Profile.storyboard */,
-				A2AC331C1C8624FC00A8E96A /* ProfileLogoutCell.swift */,
-				A2A0A7101C83E93A00E4CDDC /* ProfileHeaderCell.swift */,
-				A25B5A991C87A10300DBC0B2 /* ProfileFavoriteCell.swift */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -464,8 +464,8 @@
 		A2BE2B2D1C7FE0D100ED71E4 /* Host */ = {
 			isa = PBXGroup;
 			children = (
-				A2BE2B2E1C7FE0E400ED71E4 /* Channels */,
 				91E9B9DD1C7BCD33006F4CF0 /* HostViewController.swift */,
+				A2BE2B2E1C7FE0E400ED71E4 /* Channels */,
 			);
 			name = Host;
 			sourceTree = "<group>";

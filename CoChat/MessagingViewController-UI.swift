@@ -259,6 +259,10 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
             topNav = navigationController.navigationBar.frame.height
             topSection = topNav! + UIApplication.sharedApplication().statusBarFrame.size.height
         }
+        if fromWhisper == true {
+            navigationItem.rightBarButtonItem?.tintColor = UIColor.clearColor()
+            navigationItem.rightBarButtonItem?.enabled = false
+        }
         textView.scrollEnabled = false
         textView.delegate = self
         textView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.8)
