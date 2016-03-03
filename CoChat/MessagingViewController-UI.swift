@@ -36,10 +36,10 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
             let height = self.textView.sizeThatFits(CGSizeMake(self.textView.frame.size.width, CGFloat.max)).height
             self.textView.frame.size.height = height
             self.buttonContainer.frame.size.height = textView.frame.size.height
-        }) { (Bool) -> Void in
-            if self.messages.count > 0 {
-                self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: self.messages.count - 1, inSection: 0), atScrollPosition: .Bottom, animated: true)
-            }
+            }) { (Bool) -> Void in
+                if self.messages.count > 0 {
+                    self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: self.messages.count - 1, inSection: 0), atScrollPosition: .Bottom, animated: true)
+                }
         }
     }
     
@@ -83,11 +83,11 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
         
         let options = UIViewAnimationOptions(rawValue: curve << 16)
         UIView.animateWithDuration(duration, delay: 0, options: options,
-                                   animations: {
-                                    self.view.layoutIfNeeded()
-                                    
+            animations: {
+                self.view.layoutIfNeeded()
+                
             },
-                                   completion: nil
+            completion: nil
         )
     }
     
@@ -189,13 +189,15 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
         }
         if mode == Mode.Chat {
             let messageAction = UIAlertAction(title: "Message", style: UIAlertActionStyle.Default) { (UIAlertAction) -> Void in
-//                performSegueWithSegueIdentifier(SegueIdentifier.SegueFromMessageToWhisper, sender)
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                guard let mvc = storyboard.instantiateViewControllerWithIdentifier("MessagingNavigationViewController") as? MessagingNavigationViewController else { return }
+                self.presentViewController(mvc, animated: true, completion: nil)
             }
             alertController.addAction(messageAction)
+            alertController.addAction(reportAction)
+            alertController.addAction(cancelAction)
+            presentViewController(alertController, animated: true, completion: nil)
         }
-        alertController.addAction(reportAction)
-        alertController.addAction(cancelAction)
-        presentViewController(alertController, animated: true, completion: nil)
     }
     
     
@@ -228,17 +230,17 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
         buttonContainer.backgroundColor = Theme.Colors.MessageButtonColor.color
         
         // JERRY THIS DOESN"T WORK FIX IT YOU MISERABLE HUMAN BEING
-//        if mode == Mode.Chat {
-//            if let channelTitle = currentChannel?.title {
-//                textView.text = "\(channelTitle) channel"
-//            } else {
-//                textView.text = ""
-//            }
-//        } else {
-//            sendButtonOutlet.hidden = false
-//            channelButtonOutlet.hidden = true
-//            textView.text = ""
-//        }
+        //        if mode == Mode.Chat {
+        //            if let channelTitle = currentChannel?.title {
+        //                textView.text = "\(channelTitle) channel"
+        //            } else {
+        //                textView.text = ""
+        //            }
+        //        } else {
+        //            sendButtonOutlet.hidden = false
+        //            channelButtonOutlet.hidden = true
+        //            textView.text = ""
+        //        }
         tableViewOrientation()
     }
     
