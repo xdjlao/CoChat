@@ -171,6 +171,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="RightBarButton" destination="qkV-nm-spw" id="yhL-TV-sQI"/>
                         <outlet property="joinButtonOutlet" destination="3gq-Dg-vqr" id="Ekq-Ue-dHU"/>
                         <outlet property="joinTextFieldWrapperView" destination="zln-7d-PzV" id="eTL-CY-xPv"/>
                         <outlet property="joinViewWrapper" destination="hhe-WX-2Kj" id="7lP-8H-wjP"/>
