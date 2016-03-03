@@ -84,36 +84,54 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ezJ-uH-mRU">
-                                                            <rect key="frame" x="20" y="20" width="30" height="30"/>
+                                                            <rect key="frame" x="25" y="25" width="20" height="20"/>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="ezJ-uH-mRU" secondAttribute="trailing" constant="20" id="2ma-RS-1ct"/>
+                                                        <constraint firstAttribute="trailing" secondItem="ezJ-uH-mRU" secondAttribute="trailing" constant="25" id="2ma-RS-1ct"/>
                                                         <constraint firstAttribute="height" constant="70" id="2qw-jt-mGj"/>
-                                                        <constraint firstItem="ezJ-uH-mRU" firstAttribute="leading" secondItem="TgA-G7-nZk" secondAttribute="leading" constant="20" id="7Kk-LV-N22"/>
+                                                        <constraint firstItem="ezJ-uH-mRU" firstAttribute="leading" secondItem="TgA-G7-nZk" secondAttribute="leading" constant="25" id="7Kk-LV-N22"/>
                                                         <constraint firstAttribute="width" constant="70" id="GSR-mX-UhM"/>
-                                                        <constraint firstAttribute="bottom" secondItem="ezJ-uH-mRU" secondAttribute="bottom" constant="20" id="nGh-E4-BT0"/>
-                                                        <constraint firstItem="ezJ-uH-mRU" firstAttribute="top" secondItem="TgA-G7-nZk" secondAttribute="top" constant="20" id="p6Q-p3-igg"/>
+                                                        <constraint firstAttribute="bottom" secondItem="ezJ-uH-mRU" secondAttribute="bottom" constant="25" id="nGh-E4-BT0"/>
+                                                        <constraint firstItem="ezJ-uH-mRU" firstAttribute="top" secondItem="TgA-G7-nZk" secondAttribute="top" constant="25" id="p6Q-p3-igg"/>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m0N-UE-ydU">
                                                     <rect key="frame" x="70" y="0.0" width="530" height="70"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8O3-ZK-Pwt">
-                                                            <rect key="frame" x="20" y="24" width="502" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Room name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8O3-ZK-Pwt">
+                                                            <rect key="frame" x="20" y="5" width="502" height="35"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="35" id="FQd-nn-yri"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="17"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Channel name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IvC-pV-lwe">
+                                                            <rect key="frame" x="20" y="40" width="502" height="14"/>
+                                                            <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="13"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="8O3-ZK-Pwt" secondAttribute="trailing" constant="8" id="3O6-oU-ipl"/>
+                                                        <constraint firstAttribute="trailing" secondItem="IvC-pV-lwe" secondAttribute="trailing" constant="8" id="3nh-jQ-YTn"/>
                                                         <constraint firstItem="8O3-ZK-Pwt" firstAttribute="leading" secondItem="m0N-UE-ydU" secondAttribute="leading" constant="20" id="IJa-HL-5Vb"/>
+                                                        <constraint firstItem="8O3-ZK-Pwt" firstAttribute="top" secondItem="m0N-UE-ydU" secondAttribute="top" constant="5" id="J5K-eC-cUB"/>
+                                                        <constraint firstItem="IvC-pV-lwe" firstAttribute="top" secondItem="8O3-ZK-Pwt" secondAttribute="bottom" id="JJr-7e-kuz"/>
                                                         <constraint firstAttribute="height" constant="70" id="fQ6-hx-D9D"/>
                                                         <constraint firstItem="8O3-ZK-Pwt" firstAttribute="centerY" secondItem="m0N-UE-ydU" secondAttribute="centerY" id="pn9-ve-bu2"/>
+                                                        <constraint firstItem="IvC-pV-lwe" firstAttribute="leading" secondItem="8O3-ZK-Pwt" secondAttribute="leading" id="qO9-kH-MPr"/>
                                                     </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="pn9-ve-bu2"/>
+                                                        </mask>
+                                                    </variation>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kti-Vj-SO6">
                                                     <rect key="frame" x="0.0" y="70" width="70" height="1"/>
@@ -153,6 +171,7 @@
                                         <connections>
                                             <outlet property="contentSeparatorView" destination="aEH-7p-EDa" id="hS1-ks-Tt8"/>
                                             <outlet property="favoriteChannelLabel" destination="8O3-ZK-Pwt" id="h0B-nm-rYc"/>
+                                            <outlet property="favoriteChannelLabelName" destination="IvC-pV-lwe" id="cAx-kE-bZi"/>
                                             <outlet property="favoriteContentWrapperView" destination="m0N-UE-ydU" id="L1y-bo-UlV"/>
                                             <outlet property="favoriteImageView" destination="ezJ-uH-mRU" id="Mbw-RJ-IwF"/>
                                             <outlet property="imageSeparatorView" destination="kti-Vj-SO6" id="jzn-rx-3sw"/>

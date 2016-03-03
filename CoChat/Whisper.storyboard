@@ -100,6 +100,7 @@
                                                                 <mask key="constraints">
                                                                     <exclude reference="wWY-g4-Whd"/>
                                                                     <exclude reference="ifd-ia-XtU"/>
+                                                                    <exclude reference="lhc-xl-GTr"/>
                                                                     <exclude reference="CBN-pG-er9"/>
                                                                 </mask>
                                                             </variation>
