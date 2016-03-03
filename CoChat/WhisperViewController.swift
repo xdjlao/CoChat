@@ -21,8 +21,7 @@ class WhisperViewController: UIViewController {
             NSOperationQueue.mainQueue().addOperationWithBlock {
                 guard let conversation = Conversation.singleFromSnapshot(snapshot) else { return }
                 self.conversations.append(conversation)
-                let indexPath = NSIndexPath(forRow: self.conversations.count - 1, inSection: 0)
-                self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+                self.tableView.reloadData()
             }
         }
         whisperRef.queryOrderedByChild("firstUID").queryEqualToValue(userUID).observeEventType(.ChildAdded, withBlock: { snapshot in
@@ -35,7 +34,7 @@ class WhisperViewController: UIViewController {
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
-            FirebaseManager.manager.ref.childByAppendingPath("Conversation").queryOrderedByChild("firstUID").removeAllObservers()
+        FirebaseManager.manager.ref.childByAppendingPath("Conversation").queryOrderedByChild("firstUID").removeAllObservers()
         FirebaseManager.manager.ref.childByAppendingPath("Conversation").queryOrderedByChild("secondUID").removeAllObservers()
     }
 }
@@ -43,10 +42,10 @@ class WhisperViewController: UIViewController {
 extension WhisperViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("WhisperCell", forIndexPath: indexPath) as! WhisperCell
-        if conversations.count == 0 {
-            noWhispersCell(cell)
-            return cell
-        }
+//        if conversations.count == 0 {
+//            noWhispersCell(cell)
+//            return cell
+//        }
 
         let conversation = conversations[indexPath.row]
         let otherUser = getOtherUser(conversation.firstUser, secondUser: conversation.secondUser)
