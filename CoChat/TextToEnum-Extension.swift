@@ -8,6 +8,7 @@ extension UIViewController {
         case SegueToShare = "SegueToShareViewController"
         case SegueToMenuChannelsVC = "SegueToMenuChannelsVC"
         case SegueToTabBar = "segueToTabBar"
+        case SegueFromMessageToWhisper = "segueFromMessageToWhisper"
     }
     
     func performSegueWithSegueIdentifier(segueIdentifier: SegueIdentifier, sender: AnyObject?) {
@@ -25,6 +26,7 @@ extension UITableView {
         case RecentRoomCell = "RecentRoomCell"
         case TopRoomCell = "TopRoomCell"
         case ProfileCell = "ProfileHeaderCell"
+        case ProfileFavoriteCell = "ProfileFavoriteCell"
         case ProfileLogoutCell = "ProfileLogoutCell"
         case MenuChannelsCell = "MenuChannelCell"
     }

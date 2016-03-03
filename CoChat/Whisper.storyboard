@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ON3-Bt-YOU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ON3-Bt-YOU">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -26,7 +26,7 @@
                                         <rect key="frame" x="0.0" y="92" width="600" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2hs-ed-rlW" id="aac-Us-9X5">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="71"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="71.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cuS-zE-8CE">
@@ -104,7 +104,7 @@
                                                                 </mask>
                                                             </variation>
                                                         </view>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cXD-FE-9K1">
+                                                        <view clipsSubviews="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="cXD-FE-9K1">
                                                             <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KN9-Oe-sRd">
@@ -211,6 +211,10 @@
                                             </variation>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="container" destination="cuS-zE-8CE" id="4w2-GH-1eF"/>
+                                            <outlet property="contentSeparatorView" destination="KjO-3D-4sN" id="x4v-zF-0EK"/>
+                                            <outlet property="contentWrapperView" destination="llI-gA-3wS" id="tZS-hY-awa"/>
+                                            <outlet property="imageSeparatorView" destination="TXA-M5-RiC" id="iif-82-r1j"/>
                                             <outlet property="messageLabel" destination="LKD-a9-9WR" id="tqd-rc-lLa"/>
                                             <outlet property="nameLabel" destination="K26-nm-Apg" id="egM-Qp-69W"/>
                                             <outlet property="profileImageView" destination="KN9-Oe-sRd" id="hKN-sx-TXj"/>
@@ -250,7 +254,7 @@
                 <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="MessagingNavigationViewController" id="Vhr-T0-Nyh" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8eR-aw-XPI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="175" y="1186"/>
+            <point key="canvasLocation" x="174" y="1215"/>
         </scene>
     </scenes>
 </document>

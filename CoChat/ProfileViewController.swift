@@ -27,7 +27,11 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
     }
     
     func setupArray() {
-        
+        cellArray.append("Header")
+        for fav in FirebaseManager.manager.user.favoriteChannels {
+            cellArray.append(fav)
+        }
+        cellArray.append("Footer")
     }
     
     func setUpUI (){
@@ -44,7 +48,7 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
 
 extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cellArray.count + 2 // Add a profile header and profile logout cell
+        return cellArray.count // Add a profile header and profile logout cell
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -54,15 +58,25 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             cell.selectionStyle = UITableViewCellSelectionStyle.None
             originalImageHeight = 100
             return cell
-        case(0,cellArray.count + 1):
+        case(0,cellArray.count - 1):
             let cell = tableView.dequeueReusableCellWithCellIdentifier(.ProfileLogoutCell) as! ProfileLogoutCell
             cell.selectionStyle = UITableViewCellSelectionStyle.None
             cell.superviewWidth = view.frame.width
             cell.profileLogoutButton = loginButton
             return cell
         default:
-            let cell = tableView.dequeueReusableCellWithCellIdentifier(.ProfileCell) as! ProfileHeaderCell
+            let cell = tableView.dequeueReusableCellWithCellIdentifier(.ProfileFavoriteCell) as! ProfileFavoriteCell
+            let favoriteChannel = cellArray[indexPath.row] as! Channel
+            cell.favoriteImageView.image = UIImage(named: "favoriteFilled")
+            cell.favoriteChannelLabel.text = favoriteChannel.title
             cell.selectionStyle = UITableViewCellSelectionStyle.None
+            if indexPath.row != cellArray.count - 2 {
+                cell.imageSeparatorView.backgroundColor = Theme.Colors.ForegroundColor.color
+                cell.contentSeparatorView.backgroundColor = Theme.Colors.DarkBackgroundColor.color
+            } else {
+                cell.imageSeparatorView.backgroundColor = Theme.Colors.BackgroundColor.color
+                cell.contentSeparatorView.backgroundColor = Theme.Colors.BackgroundColor.color
+            }
             return cell
         }
     }
@@ -102,8 +116,8 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         switch (indexPath.section, indexPath.row) {
         case(0,0): return 200
-        case(0,cellArray.count + 1): return 80
-        default: return tableView.rowHeight
+        case(0,cellArray.count - 1): return 80
+        default: return 71
         }
     }
 }

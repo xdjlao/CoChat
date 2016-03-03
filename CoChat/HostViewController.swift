@@ -268,13 +268,13 @@ extension HostViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func animateCellText(cell: HostReusableCell){
-        UIView.transitionWithView(cell.title, duration: 0.25, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
-            cell.title.textColor = UIColor.redColor()
-            cell.title.alpha = 1.0
+        UIView.animateWithDuration(0.2, animations: { () -> Void in
+            cell.alpha = 0.5
+            cell.backgroundColor = UIColor.redColor()
             }) { (Bool) -> Void in
-                UIView.transitionWithView(cell.title, duration: 0.25, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
-                    cell.title.textColor = UIColor.whiteColor()
-                    cell.title.alpha = 0.5
+                UIView.animateWithDuration(0.2, animations: { () -> Void in
+                    cell.backgroundColor = Theme.Colors.ForegroundColor.color
+                    cell.alpha = 1.0
                     }, completion: nil)
         }
     }
