@@ -34,11 +34,14 @@ class Conversation: FirebaseType {
         
         let firstName = dictionary["firstName"] as? String ?? "none"
         let firstUID = dictionary["firstUID"] as? String ?? "none"
-        self.firstUser = User(name: firstName, profileImageURL: "noneYet", uid: firstUID)
+        let firstProfileImageURL = dictionary["firstProfileImageURL"] as? String ?? "none"
+        
+        self.firstUser = User(name: firstName, profileImageURL: firstProfileImageURL, uid: firstUID)
         
         let secondName = dictionary["secondName"] as? String ?? "none"
         let secondUID = dictionary["secondUID"] as? String ?? "none"
-        self.secondUser = User(name: secondName, profileImageURL: "noneYet", uid: secondUID)
+        let secondProfileImageURL = dictionary["secondProfileImageURL"] as? String ?? "none"
+        self.secondUser = User(name: secondName, profileImageURL: secondProfileImageURL, uid: secondUID)
         
         self.lastMessage = dictionary["lastMessage"] as? String ?? "None"
     }

@@ -22,6 +22,7 @@ class WhisperViewController: UIViewController {
             NSOperationQueue.mainQueue().addOperationWithBlock {
                 guard let conversation = Conversation.singleFromSnapshot(snapshot) else { return }
                 self.conversations.append(conversation)
+                
                 self.tableView.reloadData()
             }
         }
