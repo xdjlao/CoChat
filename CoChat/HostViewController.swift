@@ -1,4 +1,4 @@
-    import UIKit
+import UIKit
 
 class HostViewController: UIViewController, ChannelsVCDelegate {
     @IBOutlet var tableView: UITableView!
@@ -6,7 +6,7 @@ class HostViewController: UIViewController, ChannelsVCDelegate {
     var nameOfRoom:String?
     var roomPassCode:String?
     var createChannels = false
-    var privateRoom = false
+    var privateRoom = 0
     var toggleAdvancedSettings = false
     var channels = [Channel]()
     var enableSegue = false
@@ -35,56 +35,38 @@ class HostViewController: UIViewController, ChannelsVCDelegate {
             return
         }
         guard let name = nameOfRoom else { return }
+        let user = FirebaseManager.manager.user
         if let enteredPassCode = roomPassCode {
-            FirebaseManager.manager.checkForUniqueEntryKey(enteredPassCode) { result in
-                if result {
-                    let privateRoomAsInt = self.convertBooltoInt(self.privateRoom)
-                    let user = FirebaseManager.manager.user
-                    Room.createNewRoomWith(name, host: user, privateRoom: privateRoomAsInt, password: enteredPassCode) { newRoom in
-                        self.performSegueWithSegueIdentifier(SegueIdentifier.SegueToMessaging, sender: newRoom)
+        FirebaseManager.manager.checkForUniqueEntryKey(enteredPassCode) { result in
+                    if result {
+                        Room.createNewRoomWith(name, host: user, privateRoom: self.privateRoom, password: enteredPassCode) { newRoom in
+                            self.performSegueWithSegueIdentifier(SegueIdentifier.SegueToMessaging, sender: newRoom)
+                            return
+                        }
                     }
-                } else {
-                    self.alertNonUniquePassCode()
+                    else{
+                        self.alertNonUniquePassCode()
+                    }
                 }
             }
-        }
-        else {
-            generateRandomPassCode(2)
-        }
-    }
-    
-    func alertNonUniquePassCode(){
-        let alertController = UIAlertController(title: "Your Entry Key is already being used", message: "Please try again or let us make one for you by leaving it empty", preferredStyle: .Alert)
-        let action = UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Destructive, handler: nil)
-        alertController.addAction(action)
-        self.presentViewController(alertController, animated: true, completion: nil)
-    }
-    
-    
-    func generateRandomPassCode(numDigits:Int) {
-        let alphaNumerial = "ABCDEFGHIJKLMNOPQRSTUVWXYZ012345678910"
-        var finalString = ""
-        for _ in 0...numDigits {
-            let randomNumber = arc4random_uniform(UInt32(alphaNumerial.characters.count))
-            let index = alphaNumerial.startIndex.advancedBy((Int(randomNumber)))
-            let str = alphaNumerial[index]
-            finalString = "\(finalString)\(str)"
-        }
-        checkForUniqueGeneratedPassCode(finalString)
-    }
-    
-    func checkForUniqueGeneratedPassCode(generatedPassCode:String){
-        FirebaseManager.manager.checkForUniqueEntryKey(generatedPassCode) { result in
-            if result {
-                let privateRoomAsInt = self.convertBooltoInt(self.privateRoom)
-                let user = FirebaseManager.manager.user
-                print("hi")
-                Room.createNewRoomWith(self.nameOfRoom!, host: user, privateRoom: privateRoomAsInt, password:generatedPassCode) { newRoom in
-                    print("create new room started")
-                    self.performSegueWithSegueIdentifier(SegueIdentifier.SegueToMessaging, sender: newRoom)
+            else {
+                createRandomPassCode()
                 }
-            } else {
-                self.generateRandomPassCode(2)
+            }
+
+    
+    func createRandomPassCode() {
+        let passCode = generateRandomPassCode()
+        let user = FirebaseManager.manager.user
+        FirebaseManager.manager.checkForUniqueEntryKey(passCode) { result in
+            if result {
+                    Room.createNewRoomWith(self.nameOfRoom!, host:user, privateRoom: self.privateRoom, password: passCode) {newRoom in
+                    self.performSegueWithSegueIdentifier(SegueIdentifier.SegueToMessaging, sender: newRoom)
+                return
+            }
+            }
+            else {
+                self.createRandomPassCode()
             }
         }
     }
@@ -96,6 +78,7 @@ class HostViewController: UIViewController, ChannelsVCDelegate {
             guard let nvc = segue.destinationViewController as? UINavigationController, room = sender as? Room else { return }
             guard let mvc = nvc.viewControllers[0] as? MessagingViewController else { return }
             mvc.room = room
+            mvc.fromHost = true
             if channels.isEmpty {
                 Channel.createNewChannelWith("Main", room: room, privateChannel: 0, password: room.password, withCompletionHandler: { new in
                     room.channels.append(new)
@@ -122,10 +105,6 @@ class HostViewController: UIViewController, ChannelsVCDelegate {
         }
     }
     
-    func convertBooltoInt(bool:Bool) -> Int {
-        return bool == true ? 1 : 0
-    }
-    
     func channelsVC(channelsVC: ChannelsVC, didCreateChannel channel: AnyObject) {
         let addChannel = channel as! Channel
         channels.append(addChannel)
@@ -150,11 +129,12 @@ extension HostViewController: HostReusableCellDelegate {
             roomPassCode = valueDidChange as? String
         case .Privacy:
             if let aSwitch = valueDidChange as? UISwitch {
-                privateRoom = aSwitch.on
-                cell.enteredPrivacy = privateRoom
+                let privacy = aSwitch.on
+                cell.enteredPrivacy = privacy
+                privateRoom = convertBooltoInt(privacy)
                 guard let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 2, inSection: 3)) as? HostReusableCell else {return}
                 switch privateRoom {
-                case false:
+                case 0:
                     cell.title.text = "Private"
                 default:
                     cell.title.text = "Public"
@@ -199,8 +179,7 @@ extension HostViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCellWithIdentifier("Host Reusable Cell") as! HostReusableCell
         cell.resetCellUI()
         if roomPassCode != nil {
-            cell.enteredPasscode = roomPassCode!}
-        cell.enteredPrivacy = privateRoom
+        cell.enteredPasscode = roomPassCode!}
         switch (indexPath.section, indexPath.row){
         case (0, indexPath.row):
             cell.hidden = true

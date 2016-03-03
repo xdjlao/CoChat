@@ -12,6 +12,7 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
     var topNav:CGFloat?
     var firstType = true
     var originalFrame:CGRect?
+    var fromHost = false
 
     @IBOutlet weak var textView: UITextView! {
         didSet {
@@ -35,6 +36,7 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
         originalFrame = view.frame
         uiSetup()
     }
+  
     
     override func viewDidAppear(animated: Bool) {
         scrollToBottomMessage()

@@ -56,7 +56,7 @@ class ChannelsVC: UIViewController {
     func keyboardWillShow(notification: NSNotification){
         animateTableView(notification)
     }
-
+    
     func keyboardWillHide(notification: NSNotification){
         animateTableView(notification)
     }
@@ -87,7 +87,7 @@ class ChannelsVC: UIViewController {
             },
             completion: nil
         )
-
+        
     }
 }
 
@@ -187,7 +187,7 @@ extension ChannelsVC: HostReusableCellDelegate {
         case .NameOfRoom:
             nameOfChannel = valueDidChange as? String
             if nameOfChannel?.characters.count > 1 {
-              navigationItem.rightBarButtonItem?.enabled = true
+                navigationItem.rightBarButtonItem?.enabled = true
             }
             else {
                 navigationItem.rightBarButtonItem?.enabled = false
@@ -195,31 +195,52 @@ extension ChannelsVC: HostReusableCellDelegate {
         case .PasscodeOfRoom:
             channelPassCode = valueDidChange as? String
         case .Privacy:
-            if let boolValue = valueDidChange as? Bool {
-                if boolValue == true {
-                    privateRoom = 1
-                }
-                else {
-                    privateRoom = 0
-                }
-            }
+            let privacy = valueDidChange as! Bool
+            privateRoom = convertBooltoInt(privacy)
         default:
             assertionFailure()
         }
     }
     
-//MARK - FireBase Calls
+    //MARK - FireBase Calls
     func addChannelButtonWasTapped(){
         toggleCompressedView = true
-        guard let name = nameOfChannel else {return}
-        if channelPassCode == nil {
-            channelPassCode = "123"
+        guard let name = nameOfChannel else { return }
+        if let enteredPassCode = channelPassCode {
+            FirebaseManager.manager.checkForUniqueEntryKey(enteredPassCode) { result in
+                if result {
+                    self.addNewChannel(name, privateRoom: self.privateRoom, password: enteredPassCode)
+                    return
+                }
+                else{
+                    self.alertNonUniquePassCode()
+                }
+            }
         }
-        let newChannel = Channel(withTempTitle: name, tempPrivateChannel: privateRoom, tempPassword: channelPassCode!, roomName: "nameOfRoom")
+        else {
+            createRandomPassCode()
+        }
+    }
+    
+    func addNewChannel(name:String, privateRoom:Int, password:String){
+        let newChannel = Channel(withTempTitle: name, tempPrivateChannel: privateRoom, tempPassword: password, roomName: "placeholder")
         channels?.append(newChannel)
         delegate?.channelsVC!(self, didCreateChannel: newChannel)
         tableView.reloadData()
     }
+    
+    func createRandomPassCode() {
+        let passCode = generateRandomPassCode()
+        FirebaseManager.manager.checkForUniqueEntryKey(passCode) { (result) -> () in
+            if result {
+                self.addNewChannel(self.nameOfChannel!, privateRoom: self.privateRoom, password: passCode)
+                return
+            }
+            else {
+                self.createRandomPassCode()
+            }
+        }
+        }
     
     func addNewChannel(sender: AnyObject?) {
         toggleCompressedView = false
