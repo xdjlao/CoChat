@@ -88,9 +88,9 @@ extension WhisperViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if conversations.count == 0 {
-            return 1
-        }
+//        if conversations.count == 0 {
+//            return 1
+//        }
         return conversations.count
     }
     
