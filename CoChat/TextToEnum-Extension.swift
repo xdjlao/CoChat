@@ -9,6 +9,7 @@ extension UIViewController {
         case SegueToMenuChannelsVC = "SegueToMenuChannelsVC"
         case SegueToTabBar = "segueToTabBar"
         case SegueFromMessageToWhisper = "segueFromMessageToWhisper"
+        case ProfileToMessagingSegue = "ProfileToMessagingSegue"
     }
     
     func performSegueWithSegueIdentifier(segueIdentifier: SegueIdentifier, sender: AnyObject?) {
