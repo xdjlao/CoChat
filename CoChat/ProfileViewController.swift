@@ -23,6 +23,33 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
         loginButton = createFBLoginButton()
         loginButton!.delegate = self
         setUpUI()
+
+        let favoriteChannels = FirebaseManager.manager.user.favoriteChannels
+        FirebaseManager.manager.user.favoriteChannels.removeAll()
+        for channel in favoriteChannels {
+            
+            FirebaseManager.manager.ref.childByAppendingPath("Channel").queryOrderedByKey().queryEqualToValue(channel.uid).observeSingleEventOfType(.ChildAdded, withBlock: { snapshot in
+                
+                guard let snapshottedChannel = Channel.singleFromSnapshot(snapshot) else { return }
+                
+                FirebaseManager.manager.ref.childByAppendingPath("Room").queryOrderedByKey().queryEqualToValue(snapshottedChannel.room.uid).observeSingleEventOfType(.ChildAdded, withBlock: { snapshot in
+                    
+                    guard let room = Room.singleFromSnapshot(snapshot) else { return }
+                    
+                    snapshottedChannel.room = room
+                    NSOperationQueue.mainQueue().addOperationWithBlock {
+                        self.setupArray()
+                        self.recentTableView.reloadData()
+                    }
+                })
+                FirebaseManager.manager.user.favoriteChannels.append(snapshottedChannel)
+                NSOperationQueue.mainQueue().addOperationWithBlock {
+                    self.setupArray()
+                    self.recentTableView.reloadData()
+                }
+            })
+        }
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -102,10 +129,10 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             guard let cell = tableView.cellForRowAtIndexPath(indexPath) as? ProfileFavoriteCell else {return}
             UIView.animateWithDuration(0.2, delay: 0.0, options: [], animations: { () -> Void in
                 cell.favoriteContentWrapperView.backgroundColor = Theme.Colors.BackgroundColor.color
-                }) { (Bool) -> Void in
-                    cell.favoriteContentWrapperView.backgroundColor = Theme.Colors.ForegroundColor.color
-                    let channel = self.cellArray[indexPath.row] as! Channel
-                    self.performSegueWithSegueIdentifier(.ProfileToMessagingSegue, sender: channel)
+            }) { (Bool) -> Void in
+                cell.favoriteContentWrapperView.backgroundColor = Theme.Colors.ForegroundColor.color
+                let channel = self.cellArray[indexPath.row] as! Channel
+                self.performSegueWithSegueIdentifier(.ProfileToMessagingSegue, sender: channel)
             }
         }
     }
