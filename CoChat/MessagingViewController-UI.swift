@@ -192,18 +192,50 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 guard let mnvc = storyboard.instantiateViewControllerWithIdentifier("MessagingNavigationViewController") as? MessagingNavigationViewController else { return }
                 guard let mvc = mnvc.viewControllers[0] as? MessagingViewController else { return }
-                Conversation.createNewConversationWith(FirebaseManager.manager.user, secondUser: user, withCompletionHandler: { (new) in
-                    NSOperationQueue.mainQueue().addOperationWithBlock {
-                        mvc.currentConversation = new
-                        self.presentViewController(mnvc, animated: true, completion: nil)
-                    }
-                })
+                
+                let contains = FirebaseManager.manager.user.conversationPartners.contains { userToTest -> Bool in
+                    return userToTest.uid == user.uid
+                }
+                
+                if contains {
+                    FirebaseManager.manager.ref.childByAppendingPath("Conversation").queryOrderedByChild("firstUID").queryEqualToValue(user.uid).observeSingleEventOfType(.ChildAdded, withBlock: { snapshot in
+                        guard let conversation = Conversation.singleFromSnapshot(snapshot) else { return }
+                        if conversation.secondUser.uid == FirebaseManager.manager.user.uid {
+                            NSOperationQueue.mainQueue().addOperationWithBlock {
+                                mvc.currentConversation = conversation
+                                self.presentViewController(mnvc, animated: true, completion: nil)
+                            }
+                        }
+                    })
+                    FirebaseManager.manager.ref.childByAppendingPath("Conversation").queryOrderedByChild("secondUID").queryEqualToValue(user.uid).observeSingleEventOfType(.ChildAdded, withBlock: { snapshot in
+                        guard let conversation = Conversation.singleFromSnapshot(snapshot) else { return }
+                        if conversation.firstUser.uid == FirebaseManager.manager.user.uid {
+                            NSOperationQueue.mainQueue().addOperationWithBlock {
+                                mvc.currentConversation = conversation
+                                self.presentViewController(mnvc, animated: true, completion: nil)
+                            }
+                        }
+                    })
+                } else {
+                    Conversation.createNewConversationWith(FirebaseManager.manager.user, secondUser: user, withCompletionHandler: { (new) in
+                        NSOperationQueue.mainQueue().addOperationWithBlock {
+                            mvc.currentConversation = new
+                            FirebaseManager.manager.user.conversationPartners.append(user)
+                            FirebaseManager.manager.user.saveSelf()
+                            self.presentViewController(mnvc, animated: true, completion: nil)
+                        }
+                    })
+                }
             }
             alertController.addAction(messageAction)
         }
         alertController.addAction(reportAction)
         alertController.addAction(cancelAction)
         presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    func createNewConversation() {
+        
     }
     
     

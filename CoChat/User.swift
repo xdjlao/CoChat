@@ -7,6 +7,7 @@ class User: FirebaseType {
     let profileImageURL: String
     
     var favoriteChannels = [Channel]()
+    var conversationPartners = [User]()
     
     func profileImage(handler: (profileImage: UIImage?) -> () ) {
         handler(profileImage: UIImage(named: "profileImageDummy"))
@@ -16,7 +17,10 @@ class User: FirebaseType {
         let favoriteChannelsUIDs = favoriteChannels.map { channel -> String in
             return channel.uid
         }
-        return ["name": name, "profileImageURL": profileImageURL, "favoriteChannelsUIDs": favoriteChannelsUIDs]
+        let conversationPartnersUIDs = conversationPartners.map { partner -> String in
+            return partner.uid
+        }
+        return ["name": name, "profileImageURL": profileImageURL, "favoriteChannelsUIDs": favoriteChannelsUIDs, "conversationPartnersUIDs": conversationPartnersUIDs]
     }
     
     let type = Type.User
@@ -35,6 +39,10 @@ class User: FirebaseType {
         self.favoriteChannels = favoriteChannelUIDs.map { uid -> Channel in
             return Channel(withDummyTitle: "none", dummyUID: uid)
         }
+        let conversationPartnersUIDs = dictionary["conversationPartnersUIDs"] as? [String] ?? [String]()
+        self.conversationPartners = conversationPartnersUIDs.map { uid -> User in
+            return User(name: "none", profileImageURL: "none", uid: uid)
+        }
     }
     
     init(withDummyName dummyName: String, dummyProfileImageURL: String, dummyUID: String) {
@@ -48,6 +56,5 @@ class User: FirebaseType {
         self.uid = none
         self.name = none
         self.profileImageURL = none
-        self.favoriteChannels = [Channel]()
     }
 }
