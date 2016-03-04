@@ -24,6 +24,7 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
             tableView.delegate = self
             tableView.dataSource = self
             tableView.backgroundColor = Theme.Colors.BackgroundColor.color
+            setUpListener()
         }
     }
     override func viewDidLoad() {
@@ -156,6 +157,7 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
     
     func setUpListener() {
         let ref = mode.firebase(forUID: currentUID)
+        guard let tableView = self.tableView else { return }
         ref.queryLimitedToLast(11).observeEventType(.ChildAdded, withBlock: { snapshot in
             
             guard let message = Message.singleFromSnapshot(snapshot, withCreatorUID: self.currentUID) else { return }
@@ -163,7 +165,7 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
                 self.messages.append(message)
                 self.oldestMessageCheck(message)
                 let indexPath = NSIndexPath(forRow: self.messages.count - 1, inSection: 0)
-                self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+                tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
                 self.sortMessages()
                 if let conversation = self.currentConversation {
                     conversation.lastMessage = message.text
