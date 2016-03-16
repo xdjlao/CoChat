@@ -20,6 +20,55 @@ extension UIViewController {
             let str = alphaNumerial[index]
             finalString = "\(finalString)\(str)"
         }
-    return finalString
+        return finalString
+    }
+    
+    func allTextFieldsAreFilled(textFields:[UITextField]) -> Bool{
+        var allFields = false
+        for tF in textFields {
+            if tF.text == "" || tF.text == nil  {
+                animateTextField(tF) }
+            else {
+                allFields = true
+            }
+        }
+        if allFields == false {
+            return false
+        }
+        return true
+    }
+    
+    func animateTextField(textField:UITextField){
+        UIView.animateWithDuration(0.2, animations: { () -> Void in
+            textField.backgroundColor = UIColor.redColor()
+            }) { (Bool) -> Void in
+                UIView.animateWithDuration(0.2, animations: { () -> Void in
+                    textField.backgroundColor = Theme.Colors.ForegroundColor.color
+                    }, completion: nil)
+        }
+    }
+    
+    func passwordsMatch(tF1:UITextField, tF2:UITextField) -> Bool {
+        if tF1.text == tF2.text {
+            return true
+        }
+        else {
+            animateTextField(tF1)
+            animateTextField(tF2)
+            return false
+        }
+    }
+    
+    func isValidEmail(textField:UITextField) -> Bool {
+        // println("validate calendar: \(testStr)")
+        let emailRegEx = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        if emailTest.evaluateWithObject(textField.text) {
+            return true
+        }
+        else {
+            animateTextField(textField)
+            return false
+        }
     }
 }

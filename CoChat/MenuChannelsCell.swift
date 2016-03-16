@@ -13,7 +13,7 @@ protocol MenuChannelsCellDelegate: class {
 
 class MenuChannelsCell: UITableViewCell {
     weak var delegate: MenuChannelsCellDelegate?
-    var isFavorite = true
+    var isFavorite = false
     
     var channel: Channel! {
         didSet {

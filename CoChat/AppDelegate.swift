@@ -23,9 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //navBarAppearance.barStyle = .Default
         navBarAppearance.barTintColor = Theme.Colors.NavigationBarColor.color
-        //set custom logo here
         navBarButtonAppearance.tintColor = Theme.Colors.ButtonColor.color
-        
         tabBarAppearance.tintColor = Theme.Colors.ButtonColor.color
         tabBarAppearance.backgroundColor = Theme.Colors.NavigationBarColor.color
     }

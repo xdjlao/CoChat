@@ -12,6 +12,7 @@ class Message: DualQueriedType {
     var value: AnyObject {
         return ["posterUID": poster.uid, "posterName": poster.name, "posterThumbnail": poster.profileImageURL, "text": text, "timeObject": timeObject, "channelUID": channel.uid]
     }
+    
     let type = Type.Message
     
     static func createNewMessageWith(text: String, timeObject: [NSObject: AnyObject], poster: User, channel: Channel?, withCompletionHandler handler: ((new: Message) -> ())?) {

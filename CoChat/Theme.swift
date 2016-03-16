@@ -70,6 +70,7 @@ struct Theme {
         case LightNormalTypeFace
         case BoldNormalTypeFace
         case SubTitleTypeFace
+        case Simplifica
         
         var font: UIFont {
             switch self{
@@ -79,6 +80,7 @@ struct Theme {
             case .LightNormalTypeFace: return UIFont(name: "Lato-Thin", size: 16)!
             case .BoldNormalTypeFace: return UIFont(name: "Lato-Regular", size: 16)!
             case .SubTitleTypeFace: return UIFont(name: "Lato-Hairline", size: 16)!
+            case .Simplifica: return UIFont(name: "Simplifica", size: 18)!
             }
         }
     }

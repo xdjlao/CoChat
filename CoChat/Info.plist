@@ -83,6 +83,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Lato-Heavy.ttf</string>
+		<string>Simplifica.ttf</string>
 		<string>Lato-Medium.ttf</string>
 		<string>Lato-Thin.ttf</string>
 		<string>Lato-Semibold.ttf</string>

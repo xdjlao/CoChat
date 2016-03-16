@@ -7,7 +7,6 @@ class ShareViewController: UIViewController {
     @IBOutlet var QRImageView: UIImageView!
     @IBOutlet weak var shareItemLabel: UILabel!
     @IBOutlet weak var shareItemSegmentedControl: UISegmentedControl!
-    @IBOutlet weak var facebookButtonOutlet: UIButton!
     @IBOutlet weak var twitterButtonOutlet: UIButton!
     @IBOutlet weak var copyButtonOutlet: UIButton!
     
@@ -46,7 +45,6 @@ class ShareViewController: UIViewController {
     }
     
     func setSocialIcons() {
-        facebookButtonOutlet.layer.cornerRadius = facebookButtonOutlet.frame.size.width/2
         twitterButtonOutlet.layer.cornerRadius = twitterButtonOutlet.frame.size.width/2
         copyButtonOutlet.layer.cornerRadius = copyButtonOutlet.frame.size.width/2
     }
@@ -79,7 +77,6 @@ class ShareViewController: UIViewController {
     }
 
     @IBAction func onSaveImage(sender: UIButton) {
-        //UIImageWriteToSavedPhotosAlbum(QRImageView.image!, self, Selector("image:didFinishSavingWithError:contextInfo:"), nil)
         screenShotMethod()
     }
     
@@ -122,21 +119,6 @@ class ShareViewController: UIViewController {
         let copy = UIPasteboard.generalPasteboard()
         copy.string = textString
         completion()
-    }
-    
-    @IBAction func onFacebookButtonPressed(sender: UIButton) {
-        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook) {
-            let fbShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
-            fbShare.setInitialText("Hello from Facebook")
-            
-            self.presentViewController(fbShare, animated: true, completion: nil)
-            
-        } else {
-            let alert = UIAlertController(title: "Accounts", message: "Please login to a Facebook account to share.", preferredStyle: UIAlertControllerStyle.Alert)
-            
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
-        }
     }
     
     @IBAction func onTwitterButtonPressed(sender: UIButton) {

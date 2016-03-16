@@ -1,7 +1,8 @@
 import UIKit
 import AFNetworking
+import MessageUI
 
-extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, GeneralMessageCellDelegate {
+extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, GeneralMessageCellDelegate, MFMailComposeViewControllerDelegate {
     
     // MARK - Nib Methods
     func registerNibs(){
@@ -182,7 +183,13 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
     func showUserProfile(user:User) {
         let alertController = UIAlertController(title: user.name, message: "", preferredStyle: UIAlertControllerStyle.Alert)
         let reportAction = UIAlertAction(title: "Report", style: UIAlertActionStyle.Default) { (UIAlertAction) -> Void in
-            //
+            let mailComposeViewController = self.configuredMailComposeViewController()
+            if MFMailComposeViewController.canSendMail() {
+                self.presentViewController(mailComposeViewController, animated: true, completion: nil)
+            } else {
+                self.showSendMailErrorAlert()
+            }
+            
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Destructive) { (UIAlertAction) -> Void in
             //
@@ -232,6 +239,26 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
         alertController.addAction(reportAction)
         alertController.addAction(cancelAction)
         presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    func configuredMailComposeViewController() -> MFMailComposeViewController {
+        let mailComposerVC = MFMailComposeViewController()
+        mailComposerVC.mailComposeDelegate = self
+        mailComposerVC.setToRecipients(["aaron.bikis@gmail.com"])
+        mailComposerVC.setSubject("Notifying Blend support")
+        mailComposerVC.setMessageBody("", isHTML: false)
+        
+        return mailComposerVC
+    }
+    
+    func showSendMailErrorAlert() {
+        let sendMailErrorAlert = UIAlertView(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", delegate: self, cancelButtonTitle: "OK")
+        sendMailErrorAlert.show()
+    }
+    
+    // MARK: MFMailComposeViewControllerDelegate Method
+    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+        controller.dismissViewControllerAnimated(true, completion: nil)
     }
     
     func createNewConversation() {

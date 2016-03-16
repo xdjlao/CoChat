@@ -7,8 +7,9 @@ import FBSDKShareKit
 extension UIViewController {
     
     func presentLoginScreen() {
+
         let storyboard = UIStoryboard(name: "Login", bundle: nil)
-        guard let loginVC = storyboard.instantiateInitialViewController() as? LoginViewController else { return }
+        guard let loginVC = storyboard.instantiateInitialViewController() as? LoginNavigationVC else { return }
         presentViewController(loginVC, animated: true, completion: nil)
     }
     
