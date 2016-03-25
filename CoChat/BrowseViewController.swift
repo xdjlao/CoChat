@@ -86,7 +86,6 @@ extension BrowseViewController: UITableViewDataSource, UITableViewDelegate {
     //    }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return rooms.count
-        
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

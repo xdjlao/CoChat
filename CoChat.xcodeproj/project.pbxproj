@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		911596AA1C9890F800864711 /* LoginEmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911596A91C9890F800864711 /* LoginEmailVC.swift */; };
 		912607B51C8548590015D487 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912607B41C8548590015D487 /* Launch Screen.storyboard */; };
 		912607B91C8550B10015D487 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912607B81C8550B10015D487 /* Launch.storyboard */; };
 		912607BD1C855EB40015D487 /* RootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912607BC1C855EB40015D487 /* RootVC.swift */; };
 		91470D8D1C87D77C004B5442 /* ViewController-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91470D8C1C87D77C004B5442 /* ViewController-Extension.swift */; };
 		91470D911C87FF32004B5442 /* LaunchVideo.mov in Resources */ = {isa = PBXBuildFile; fileRef = 91470D901C87FF32004B5442 /* LaunchVideo.mov */; };
 		919549221C7E4F9D00C61805 /* ChannelHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 919549201C7E4F9D00C61805 /* ChannelHeaderCell.xib */; };
+		919FB7851C94CF89004D6993 /* EmailSignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919FB7841C94CF89004D6993 /* EmailSignUpVC.swift */; };
+		919FB78B1C94D134004D6993 /* LoginNavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919FB78A1C94D134004D6993 /* LoginNavigationVC.swift */; };
 		919FBE191C8629C4008194AC /* MenuChannelsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919FBE181C8629C4008194AC /* MenuChannelsCell.swift */; };
 		91B18F5E1C7CE02300F20531 /* Messaging.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91B18F5C1C7CE02300F20531 /* Messaging.storyboard */; };
 		91B18F601C7CE71900F20531 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B18F5F1C7CE71900F20531 /* TableView.swift */; };
+		91E93C441C88C2E40014921C /* Simplifica.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91E93C431C88C2AC0014921C /* Simplifica.ttf */; };
 		91E9B9E11C7BCD33006F4CF0 /* HostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E9B9DD1C7BCD33006F4CF0 /* HostViewController.swift */; };
 		91E9B9E21C7BCD33006F4CF0 /* HostReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E9B9DE1C7BCD33006F4CF0 /* HostReusableCell.swift */; };
 		91E9B9E31C7BCD33006F4CF0 /* HostReusableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91E9B9DF1C7BCD33006F4CF0 /* HostReusableCell.xib */; };
@@ -82,6 +86,7 @@
 		38620A9AF6B45CA19AD5E427 /* Pods-CoChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoChat/Pods-CoChat.release.xcconfig"; sourceTree = "<group>"; };
 		587D22B4E734A1D30A6BED37 /* Pods-CoChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoChat/Pods-CoChat.debug.xcconfig"; sourceTree = "<group>"; };
 		70EBED03AAABBA95CBA945A5 /* Pods_CoChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		911596A91C9890F800864711 /* LoginEmailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginEmailVC.swift; sourceTree = "<group>"; };
 		912607B41C8548590015D487 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		912607B61C854E560015D487 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		912607B81C8550B10015D487 /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
@@ -89,9 +94,12 @@
 		91470D8C1C87D77C004B5442 /* ViewController-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController-Extension.swift"; sourceTree = "<group>"; };
 		91470D901C87FF32004B5442 /* LaunchVideo.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = LaunchVideo.mov; sourceTree = "<group>"; };
 		919549201C7E4F9D00C61805 /* ChannelHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChannelHeaderCell.xib; sourceTree = "<group>"; };
+		919FB7841C94CF89004D6993 /* EmailSignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailSignUpVC.swift; sourceTree = "<group>"; };
+		919FB78A1C94D134004D6993 /* LoginNavigationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginNavigationVC.swift; sourceTree = "<group>"; };
 		919FBE181C8629C4008194AC /* MenuChannelsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuChannelsCell.swift; sourceTree = "<group>"; };
 		91B18F5D1C7CE02300F20531 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Messaging.storyboard; sourceTree = "<group>"; };
 		91B18F5F1C7CE71900F20531 /* TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		91E93C431C88C2AC0014921C /* Simplifica.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Simplifica.ttf; sourceTree = "<group>"; };
 		91E9B9DD1C7BCD33006F4CF0 /* HostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostViewController.swift; sourceTree = "<group>"; };
 		91E9B9DE1C7BCD33006F4CF0 /* HostReusableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostReusableCell.swift; sourceTree = "<group>"; };
 		91E9B9DF1C7BCD33006F4CF0 /* HostReusableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HostReusableCell.xib; sourceTree = "<group>"; };
@@ -183,6 +191,7 @@
 				91F5258E1C82616B009C9BF1 /* Lato-Medium.ttf */,
 				91F525901C82616B009C9BF1 /* Lato-Thin.ttf */,
 				91F525921C82616B009C9BF1 /* Lato-Semibold.ttf */,
+				91E93C431C88C2AC0014921C /* Simplifica.ttf */,
 				91F525941C82616B009C9BF1 /* Lato-Black.ttf */,
 				91F525961C82616B009C9BF1 /* Lato-Bold.ttf */,
 				91F525981C82616B009C9BF1 /* Lato-Hairline.ttf */,
@@ -315,7 +324,10 @@
 		A288F7CB1C785FC400DF2847 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				919FB78A1C94D134004D6993 /* LoginNavigationVC.swift */,
 				A288F7C91C785FAE00DF2847 /* LoginViewController.swift */,
+				919FB7841C94CF89004D6993 /* EmailSignUpVC.swift */,
+				911596A91C9890F800864711 /* LoginEmailVC.swift */,
 				A288F7C51C785F4400DF2847 /* CheckForLoggedIn-Extension.swift */,
 			);
 			name = Login;
@@ -554,6 +566,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91E93C441C88C2E40014921C /* Simplifica.ttf in Resources */,
 				A288F7D81C7862C700DF2847 /* UserMessageCell.xib in Resources */,
 				D804B1F11C8795A2002D348C /* Whisper.storyboard in Resources */,
 				912607B91C8550B10015D487 /* Launch.storyboard in Resources */,
@@ -641,6 +654,7 @@
 				91E9B9E11C7BCD33006F4CF0 /* HostViewController.swift in Sources */,
 				A288F7AF1C78591800DF2847 /* Channel.swift in Sources */,
 				A288F7C81C785F6800DF2847 /* Theme.swift in Sources */,
+				919FB7851C94CF89004D6993 /* EmailSignUpVC.swift in Sources */,
 				D8AE2D1B1C7D2E560002A31D /* DualQueriedType.swift in Sources */,
 				A288F7DC1C78696100DF2847 /* ShareViewController.swift in Sources */,
 				A288F7AB1C78588A00DF2847 /* FirebaseManager.swift in Sources */,
@@ -661,12 +675,14 @@
 				A2BE2B181C7CE33000ED71E4 /* WhisperViewController.swift in Sources */,
 				A288F7B51C78599600DF2847 /* FirebaseType-Protocol&Extension.swift in Sources */,
 				A2BE2B3A1C81226C00ED71E4 /* TopRoomCell.swift in Sources */,
+				919FB78B1C94D134004D6993 /* LoginNavigationVC.swift in Sources */,
 				A288F7CF1C78609700DF2847 /* UserMessageCell.swift in Sources */,
 				A288F7B11C78592900DF2847 /* User.swift in Sources */,
 				91470D8D1C87D77C004B5442 /* ViewController-Extension.swift in Sources */,
 				A288F7BB1C785C4500DF2847 /* TextToEnum-Extension.swift in Sources */,
 				A288F7A51C7841B600DF2847 /* BrowseViewController.swift in Sources */,
 				A2BE2B2C1C7E72A200ED71E4 /* BrowseNavigationViewController.swift in Sources */,
+				911596AA1C9890F800864711 /* LoginEmailVC.swift in Sources */,
 				A288F7C61C785F4400DF2847 /* CheckForLoggedIn-Extension.swift in Sources */,
 				A288F7CA1C785FAE00DF2847 /* LoginViewController.swift in Sources */,
 				A2BE2B281C7E60AD00ED71E4 /* DismissSegue.swift in Sources */,
@@ -816,7 +832,7 @@
 				);
 				INFOPLIST_FILE = CoChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = lao.jerry.CoChat;
+				PRODUCT_BUNDLE_IDENTIFIER = lao.jerry.CoChat2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -838,7 +854,7 @@
 				);
 				INFOPLIST_FILE = CoChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = lao.jerry.CoChat;
+				PRODUCT_BUNDLE_IDENTIFIER = lao.jerry.CoChat2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

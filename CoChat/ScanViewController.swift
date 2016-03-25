@@ -7,6 +7,7 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
    var qrCodeFrameView:UIView?
    var passcodeView = true
    
+    @IBOutlet var RightBarButton: UIBarButtonItem!
     @IBOutlet weak var joinTextFieldWrapperView: UIView!
    @IBOutlet weak var scanViewWrapper: UIView!
    @IBOutlet weak var joinViewWrapper: UIView!
@@ -55,6 +56,7 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
     func startScan() {
         // Get an instance of the AVCaptureDevice class to initialize a device object and provide the video
         // as the media type parameter.
+        RightBarButton.title = "Passcode"
         let captureDevice = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
         
         do {
@@ -102,6 +104,7 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
         joinViewWrapper.hidden = false
         scanViewWrapper.hidden = true
         captureSession?.stopRunning()
+        RightBarButton.title = "QR Scanner"
     }
     
     func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!) {

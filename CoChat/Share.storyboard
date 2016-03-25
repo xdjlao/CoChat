@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lXL-kM-yZF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lXL-kM-yZF">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -99,26 +99,24 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cDt-8L-Ck5">
                                 <rect key="frame" x="0.0" y="414" width="600" height="186"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HfM-g2-JTR">
-                                        <rect key="frame" x="275" y="68" width="50" height="50"/>
-                                        <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EeM-ja-16W">
+                                        <rect key="frame" x="178" y="68" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="1WC-6f-bi9"/>
-                                            <constraint firstAttribute="width" constant="50" id="uH7-Sm-OyP"/>
+                                            <constraint firstAttribute="height" constant="50" id="EYv-CD-6xp"/>
+                                            <constraint firstAttribute="width" constant="50" id="Vcb-WE-JUF"/>
                                         </constraints>
-                                        <state key="normal" image="facebook">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
+                                        <state key="normal" image="copy"/>
                                         <connections>
-                                            <action selector="onFacebookButtonPressed:" destination="lXL-kM-yZF" eventType="touchUpInside" id="Rv4-9s-z0C"/>
+                                            <action selector="onCopy:" destination="lXL-kM-yZF" eventType="touchUpInside" id="elJ-61-PoB"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9I-eX-DpO">
-                                        <rect key="frame" x="383" y="68" width="50" height="50"/>
+                                        <rect key="frame" x="374" y="68" width="50" height="50"/>
                                         <color key="backgroundColor" red="0.1137254902" green="0.79215686269999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="XlO-D5-r76"/>
-                                            <constraint firstAttribute="height" constant="50" id="ymI-HJ-Fnz"/>
+                                            <constraint firstAttribute="width" constant="50" id="4Lc-yg-OfB"/>
+                                            <constraint firstAttribute="height" constant="50" id="S1O-dh-jyn"/>
                                         </constraints>
                                         <state key="normal" image="twitter">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -127,40 +125,14 @@
                                             <action selector="onTwitterButtonPressed:" destination="lXL-kM-yZF" eventType="touchUpInside" id="AIs-6w-5Rv"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EeM-ja-16W">
-                                        <rect key="frame" x="167" y="68" width="50" height="50"/>
-                                        <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="JcB-mi-cLi"/>
-                                            <constraint firstAttribute="width" constant="50" id="v9z-fa-9DP"/>
-                                        </constraints>
-                                        <state key="normal" image="copy"/>
-                                        <connections>
-                                            <action selector="onCopy:" destination="lXL-kM-yZF" eventType="touchUpInside" id="elJ-61-PoB"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="EeM-ja-16W" firstAttribute="centerY" secondItem="HfM-g2-JTR" secondAttribute="centerY" id="3IM-3l-2Hc"/>
-                                    <constraint firstItem="c9I-eX-DpO" firstAttribute="leading" secondItem="HfM-g2-JTR" secondAttribute="trailing" constant="50" id="7tI-nU-vTs"/>
-                                    <constraint firstAttribute="bottom" secondItem="HfM-g2-JTR" secondAttribute="bottom" constant="50" id="9Xa-9K-F56"/>
-                                    <constraint firstItem="HfM-g2-JTR" firstAttribute="leading" secondItem="EeM-ja-16W" secondAttribute="trailing" constant="58" id="Coi-UB-Sra"/>
-                                    <constraint firstItem="c9I-eX-DpO" firstAttribute="leading" secondItem="HfM-g2-JTR" secondAttribute="trailing" constant="58" id="F75-xt-jrs"/>
-                                    <constraint firstItem="HfM-g2-JTR" firstAttribute="centerX" secondItem="cDt-8L-Ck5" secondAttribute="centerX" id="GJf-JQ-3JU"/>
-                                    <constraint firstItem="HfM-g2-JTR" firstAttribute="leading" secondItem="EeM-ja-16W" secondAttribute="trailing" constant="50" id="RFv-AV-uWE"/>
-                                    <constraint firstItem="c9I-eX-DpO" firstAttribute="centerY" secondItem="HfM-g2-JTR" secondAttribute="centerY" id="hE8-VY-kWw"/>
-                                    <constraint firstItem="HfM-g2-JTR" firstAttribute="centerY" secondItem="cDt-8L-Ck5" secondAttribute="centerY" id="moT-TX-VZ2"/>
-                                    <constraint firstItem="HfM-g2-JTR" firstAttribute="top" secondItem="cDt-8L-Ck5" secondAttribute="top" constant="50" id="sGV-3O-WKH"/>
+                                    <constraint firstAttribute="bottom" secondItem="EeM-ja-16W" secondAttribute="bottom" constant="68" id="84o-W6-ePZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="c9I-eX-DpO" secondAttribute="bottom" constant="68" id="FF5-El-OCp"/>
+                                    <constraint firstItem="EeM-ja-16W" firstAttribute="leading" secondItem="cDt-8L-Ck5" secondAttribute="leading" constant="178" id="IXJ-Ys-OdX"/>
+                                    <constraint firstAttribute="trailing" secondItem="c9I-eX-DpO" secondAttribute="trailing" constant="176" id="cbK-wn-9mc"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="9Xa-9K-F56"/>
-                                        <exclude reference="RFv-AV-uWE"/>
-                                        <exclude reference="sGV-3O-WKH"/>
-                                        <exclude reference="7tI-nU-vTs"/>
-                                    </mask>
-                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -181,7 +153,6 @@
                     <connections>
                         <outlet property="QRImageView" destination="RMq-CN-sU2" id="aG7-5P-nEQ"/>
                         <outlet property="copyButtonOutlet" destination="EeM-ja-16W" id="uqq-oj-JaA"/>
-                        <outlet property="facebookButtonOutlet" destination="HfM-g2-JTR" id="a93-Og-X5S"/>
                         <outlet property="qrViewWrapper" destination="7wz-KI-qHD" id="P5Z-xm-KRR"/>
                         <outlet property="shareItemLabel" destination="fa3-Qt-m7V" id="d4z-9N-nNZ"/>
                         <outlet property="shareItemSegmentedControl" destination="BXD-9e-U4r" id="4dW-xE-sgB"/>
@@ -195,7 +166,6 @@
     </scenes>
     <resources>
         <image name="copy" width="26" height="30"/>
-        <image name="facebook" width="15" height="15"/>
         <image name="twitter" width="15" height="13"/>
     </resources>
 </document>

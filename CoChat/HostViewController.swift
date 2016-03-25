@@ -147,9 +147,7 @@ extension HostViewController: HostReusableCellDelegate {
     func textFieldDidBeginEditingInCell(textField: UITextField) {
         guard let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 1, inSection: 3)) as? HostReusableCell else {return}
         let nameRoomLocation = cell.title.convertRect(cell.frame, fromCoordinateSpace: UIApplication.sharedApplication().keyWindow!)
-        print("nameroomlocation \(nameRoomLocation)")
         let textFieldLocation = cell.convertRect(textField.frame, fromCoordinateSpace: UIApplication.sharedApplication().keyWindow!)
-        print("textfieldLocation \(textFieldLocation)")
         if textFieldLocation != nameRoomLocation {
             
             let textFieldPosition = textField.convertPoint(CGPointZero, toView: self.tableView)
@@ -162,6 +160,7 @@ extension HostViewController: HostReusableCellDelegate {
     
     func textFieldDidEndEditingInCell() {
         tableView.setContentOffset(CGPointMake(0.0, 0.0), animated: false)
+        
     }
 }
 
@@ -187,6 +186,15 @@ extension HostViewController: UITableViewDelegate, UITableViewDataSource {
             cell.title.userInteractionEnabled = false
             cell.setHeaderUI()
             return cell
+        case (2, 0):
+            if nameOfRoom != nil {
+             cell.title.text = nameOfRoom
+             cell.title.userInteractionEnabled = true
+            }
+            else {
+                cell.setUpCellAtIndexPath(indexPath)
+                cell.delegate = self
+            }
         default:
             cell.setUpCellAtIndexPath(indexPath)
             cell.delegate = self
