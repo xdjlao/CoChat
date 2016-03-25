@@ -12,7 +12,7 @@ import AFNetworking
 class ProfileHeaderCell: UITableViewCell {
     
     func setUIforUser() {
-        print(__FUNCTION__)
+        print(#function)
         let profileURL = NSURL(string: (FirebaseManager.manager.user.profileImageURL))
         if profileURL != "none" {
            userImageView.setImageWithURL(profileURL!, placeholderImage: UIImage(named: "profileImageDummy"))
@@ -36,8 +36,8 @@ class ProfileHeaderCell: UITableViewCell {
         
         setUIforUser()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "setUIforUser", name: UIApplicationDidBecomeActiveNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "setUIforUser", name: "FirebaseAuth", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ProfileHeaderCell.setUIforUser), name: UIApplicationDidBecomeActiveNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ProfileHeaderCell.setUIforUser), name: "FirebaseAuth", object: nil)
     }
     
     deinit {

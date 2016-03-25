@@ -72,7 +72,7 @@ class ShareViewController: UIViewController {
         let transformedImage = ciImage.imageByApplyingTransform(CGAffineTransformMakeScale(scaleX, scaleY))
         
         QRImageView.image = UIImage(CIImage: transformedImage)
-        let tapGesture = UITapGestureRecognizer(target: self, action: "onImageTapped:")
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ShareViewController.onImageTapped(_:)))
         QRImageView.addGestureRecognizer(tapGesture)
     }
 

@@ -12,7 +12,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "checkForDismiss", name: "FirebaseAuth", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginViewController.checkForDismiss), name: "FirebaseAuth", object: nil)
         setUpUI()
     }
     

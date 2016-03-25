@@ -31,11 +31,35 @@ class FirebaseManager {
         let name = authData.providerData["displayName"] as? String ?? "No username"
         let profileImageURL = authData.providerData["profileImageURL"] as? String ?? "No URL"
         user = User(name: name, profileImageURL: profileImageURL, uid: uid)
-        getUserStoredData()
-        completionHandler?(user: user)
+        user.saveSelf()
+        getUserStoredData() {
+            completionHandler?(user: self.user)
+            self.user.saveSelf()
+            let theUser = self.user
+            self.user = User(name: "test", profileImageURL: "test", uid: "test")
+            self.user = theUser
+        }
     }
     
-    func getUserStoredData() {
+    func handleUserAuthData(authData: FAuthData, name: String?, withMainQueueCompletionHandler completionHandler: ((user: User?) -> ())? ) {
+        self.authData = authData
+        let uid = authData.uid
+        let theName = name ?? "No username."
+        let profileImageURL = authData.providerData["profileImageURL"] as? String ?? "No URL"
+        user = User(name: theName, profileImageURL: profileImageURL, uid: uid)
+        if name != nil {
+            user.saveSelf()
+        }
+        getUserStoredData() {
+            completionHandler?(user: self.user)
+            self.user.saveSelf()
+            let theUser = self.user
+            self.user = User(name: "test", profileImageURL: "test", uid: "test")
+            self.user = theUser
+        }
+    }
+    
+    func getUserStoredData(completionHandler: () -> ()) {
         ref.childByAppendingPath("User").queryOrderedByKey().queryEqualToValue(user.uid).observeSingleEventOfType(.Value, withBlock: { snapshot in
             
             guard let userDictionary = snapshot.value[self.user.uid] as? [NSObject: AnyObject] else { return }
@@ -51,6 +75,11 @@ class FirebaseManager {
                     return User(name: "none", profileImageURL: "none", uid: uid)
                 }
             }
+            if let name = userDictionary["name"] as? String {
+                
+                self.user.name = name
+            }
+            completionHandler()
         })
     }
     

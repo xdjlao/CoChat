@@ -3,7 +3,7 @@ import Firebase
 
 class User: FirebaseType {
     var uid = "none"
-    let name: String
+    var name: String
     let profileImageURL: String
     
     var favoriteChannels = [Channel]()

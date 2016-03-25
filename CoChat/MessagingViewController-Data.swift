@@ -31,7 +31,7 @@ class MessagingViewController: UIViewController, UITextViewDelegate, MenuChannel
         super.viewDidLoad()
         
         let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: "getMoreMessages:", forControlEvents: .ValueChanged)
+        refreshControl.addTarget(self, action: #selector(MessagingViewController.getMoreMessages(_:)), forControlEvents: .ValueChanged)
         tableView.addSubview(refreshControl)
         tableView.sendSubviewToBack(refreshControl)
         originalFrame = view.frame

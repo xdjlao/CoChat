@@ -279,8 +279,8 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
     
     
     func uiSetup() {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MessagingViewController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MessagingViewController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
         
         if let navigationController = navigationController {
             topNav = navigationController.navigationBar.frame.height

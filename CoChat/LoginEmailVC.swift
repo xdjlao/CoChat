@@ -1,11 +1,4 @@
-//
-//  LoginEmailVC.swift
-//  CoChat
-//
-//  Created by Aaron B on 3/15/16.
-//  Copyright © 2016 Jerry. All rights reserved.
-//
-
+import Firebase
 import UIKit
 
 class LoginEmailVC: UIViewController {
@@ -36,7 +29,7 @@ class LoginEmailVC: UIViewController {
         logInButtonContainer.layer.cornerRadius = 10
         view.backgroundColor = Theme.Colors.BackgroundColor.color
         
-        let tapGesture = UITapGestureRecognizer(target: self, action:"handleSingleTap:")
+        let tapGesture = UITapGestureRecognizer(target: self, action:#selector(LoginEmailVC.handleSingleTap(_:)))
         tapGesture.cancelsTouchesInView = false
         view.addGestureRecognizer(tapGesture)
     }
@@ -49,7 +42,19 @@ class LoginEmailVC: UIViewController {
     
     @IBAction func logInButtonWasTapped(sender: UIButton) {
         if allTextFieldsAreFilled(textFields) && isValidEmail(emailTextField) {
-            //authenicate user here
+            
+            let ref = FirebaseManager.manager.ref
+            
+            ref.authUser(emailTextField.text!, password: passwordTextField.text!, withCompletionBlock: { error, authData in
+                if let error = error {
+                    print(error)
+                }
+                guard let authData = authData else { return }
+                FirebaseManager.manager.handleUserAuthData(authData, name: nil, withMainQueueCompletionHandler: { user in
+                    //
+                })
+            })
+            
         }
     }
 }

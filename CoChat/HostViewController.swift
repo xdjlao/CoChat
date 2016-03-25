@@ -23,7 +23,7 @@ class HostViewController: UIViewController, ChannelsVCDelegate {
         tableView.registerNib(headerNib, forCellReuseIdentifier: "Host Reusable Cell")
         tableView.scrollEnabled = false
         tableView.backgroundColor = Theme.Colors.BackgroundColor.color
-        let addRoomButton = UIBarButtonItem(title: "Create Room", style: UIBarButtonItemStyle.Plain, target: self, action: "addRoomButtonWasTapped")
+        let addRoomButton = UIBarButtonItem(title: "Create Room", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(HostViewController.addRoomButtonWasTapped))
         navigationItem.rightBarButtonItem = addRoomButton
         navigationItem.rightBarButtonItem?.enabled = false
         navigationController?.navigationBar.tintColor = Theme.Colors.ButtonColor.color
