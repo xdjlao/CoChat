@@ -9,6 +9,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     @IBOutlet var signUpButton: UIButton!
     @IBOutlet var signUpButtonContainer: UIView!
     @IBOutlet var loginInEmailContainer: UIView!
+    @IBOutlet var loginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,14 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         signUpButtonContainer.layer.cornerRadius = 10
         view.backgroundColor = Theme.Colors.BackgroundColor.color
         let button = createFBLoginButtonWithPosition(view.center.x, y: facebookAuthContainer.center.y)
+        
+        let signUpLabel = signUpButton.titleLabel
+        let loginLabel = loginButton.titleLabel
+        loginLabel?.minimumScaleFactor = 0.5
+        signUpLabel?.minimumScaleFactor = 0.5
+        loginLabel?.adjustsFontSizeToFitWidth = true
+        signUpLabel?.adjustsFontSizeToFitWidth = true
+        
         button.delegate = self
         navigationController?.navigationBar.tintColor = Theme.Colors.ButtonColor.color
     }

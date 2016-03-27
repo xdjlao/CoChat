@@ -137,6 +137,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="facebookAuthContainer" destination="0bc-KL-D4N" id="Iyf-Au-nT3"/>
+                        <outlet property="loginButton" destination="f2J-lp-pbx" id="Qi7-F5-2ej"/>
                         <outlet property="loginInEmailContainer" destination="Jxm-ax-BV4" id="zMR-z8-U1q"/>
                         <outlet property="logoContainer" destination="pF9-Js-sJT" id="14l-qq-dVb"/>
                         <outlet property="signUpButton" destination="Vqr-lA-2nr" id="M3a-v1-6Sa"/>

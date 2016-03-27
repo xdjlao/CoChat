@@ -48,7 +48,7 @@ extension WhisperViewController: UITableViewDelegate, UITableViewDataSource {
         let otherUser = getOtherUser(conversation.firstUser, secondUser: conversation.secondUser)
                 cell.messageLabel.text = conversation.lastMessage
         cell.nameLabel.text = otherUser.name
-        cell.profileImageView.setImageWithURL(NSURL(string: otherUser.profileImageURL)!, placeholderImage: UIImage(named: "profileImageDummy"))
+        cell.profileImageView.setImageWithURL(NSURL(string: otherUser.profileImageURL)!, placeholderImage: UIImage(named: "blendColorLogo-60"))
         if indexPath.row != conversations.count - 1 {
             cell.contentSeparatorView.backgroundColor = Theme.Colors.ForegroundColor.color
             cell.imageSeparatorView.backgroundColor = Theme.Colors.DarkBackgroundColor.color

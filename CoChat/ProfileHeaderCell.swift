@@ -15,9 +15,9 @@ class ProfileHeaderCell: UITableViewCell {
         print(__FUNCTION__)
         let profileURL = NSURL(string: (FirebaseManager.manager.user.profileImageURL))
         if profileURL != "none" {
-           userImageView.setImageWithURL(profileURL!, placeholderImage: UIImage(named: "profileImageDummy"))
+           userImageView.setImageWithURL(profileURL!, placeholderImage: UIImage(named: "blendColorLogo-60"))
         } else {
-            userImageView.image = UIImage(named: "profileImageDummy")
+            userImageView.image = UIImage(named: "blendColorLogo-60")
         }
         userImageView.layer.cornerRadius = userImageView.frame.size.width/2
         userImageView.clipsToBounds = true

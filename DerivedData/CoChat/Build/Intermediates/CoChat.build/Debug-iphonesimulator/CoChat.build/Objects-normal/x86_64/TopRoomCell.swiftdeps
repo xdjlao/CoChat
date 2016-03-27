@@ -1,0 +1,539 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "TopRoomCell"
+provides-nominal:
+- "C6CoChat11TopRoomCell"
+provides-member:
+- ["C6CoChat11TopRoomCell", ""]
+provides-dynamic-lookup:
+- "cellCountWrapperView"
+- "cellSeperator"
+- "countLabel"
+- "setSelected"
+- "countCellSeperator"
+- "cellWrapperView"
+- "roomTitleLabel"
+- "awakeFromNib"
+depends-top-level:
+- !private "Theme"
+- "UITableViewCell"
+- !private "UIColor"
+- "UIView"
+- "TopRoomCell"
+- "UILabel"
+- "Bool"
+depends-member:
+- !private ["PSs9AnyObject", "Theme"]
+- !private ["PSs9AnyObject", "UIColor"]
+- ["PSs9AnyObject", "awakeFromNib"]
+- !private ["PSs9AnyObject", "backgroundColor"]
+- ["PSs9AnyObject", "cellCountWrapperView"]
+- ["PSs9AnyObject", "cellSeperator"]
+- ["PSs9AnyObject", "cellWrapperView"]
+- ["PSs9AnyObject", "countCellSeperator"]
+- ["PSs9AnyObject", "countLabel"]
+- !private ["PSs9AnyObject", "font"]
+- ["PSs9AnyObject", "init"]
+- ["PSs9AnyObject", "roomTitleLabel"]
+- ["PSs9AnyObject", "setSelected"]
+- !private ["PSs9AnyObject", "textColor"]
+- !private ["PSs9AnyObject", "whiteColor"]
+- ["PSs9AnyObject", ""]
+- !private ["PSs11CVarArgType", "Theme"]
+- !private ["PSs11CVarArgType", "UIColor"]
+- ["PSs11CVarArgType", "awakeFromNib"]
+- !private ["PSs11CVarArgType", "backgroundColor"]
+- ["PSs11CVarArgType", "cellCountWrapperView"]
+- ["PSs11CVarArgType", "cellSeperator"]
+- ["PSs11CVarArgType", "cellWrapperView"]
+- ["PSs11CVarArgType", "countCellSeperator"]
+- ["PSs11CVarArgType", "countLabel"]
+- !private ["PSs11CVarArgType", "font"]
+- ["PSs11CVarArgType", "init"]
+- ["PSs11CVarArgType", "roomTitleLabel"]
+- ["PSs11CVarArgType", "setSelected"]
+- !private ["PSs11CVarArgType", "textColor"]
+- !private ["PSs11CVarArgType", "whiteColor"]
+- ["PSs11CVarArgType", ""]
+- !private ["OV6CoChat5Theme6Colors", "DarkBackgroundColor"]
+- !private ["OV6CoChat5Theme6Colors", "ForegroundColor"]
+- !private ["OV6CoChat5Theme6Colors", "color"]
+- !private ["PSs23CustomStringConvertible", "Theme"]
+- !private ["PSs23CustomStringConvertible", "UIColor"]
+- ["PSs23CustomStringConvertible", "awakeFromNib"]
+- !private ["PSs23CustomStringConvertible", "backgroundColor"]
+- ["PSs23CustomStringConvertible", "cellCountWrapperView"]
+- ["PSs23CustomStringConvertible", "cellSeperator"]
+- ["PSs23CustomStringConvertible", "cellWrapperView"]
+- ["PSs23CustomStringConvertible", "countCellSeperator"]
+- ["PSs23CustomStringConvertible", "countLabel"]
+- !private ["PSs23CustomStringConvertible", "font"]
+- ["PSs23CustomStringConvertible", "init"]
+- ["PSs23CustomStringConvertible", "roomTitleLabel"]
+- ["PSs23CustomStringConvertible", "setSelected"]
+- !private ["PSs23CustomStringConvertible", "textColor"]
+- !private ["PSs23CustomStringConvertible", "whiteColor"]
+- ["PSs23CustomStringConvertible", ""]
+- !private ["PSs9Equatable", "BoldTitleTypeFace"]
+- !private ["PSs9Equatable", "DarkBackgroundColor"]
+- !private ["PSs9Equatable", "ForegroundColor"]
+- !private ["PSs9Equatable", "NormalTypeFace"]
+- !private ["PSs9Equatable", "Theme"]
+- !private ["PSs9Equatable", "UIColor"]
+- ["PSs9Equatable", "awakeFromNib"]
+- !private ["PSs9Equatable", "backgroundColor"]
+- ["PSs9Equatable", "cellCountWrapperView"]
+- ["PSs9Equatable", "cellSeperator"]
+- ["PSs9Equatable", "cellWrapperView"]
+- !private ["PSs9Equatable", "color"]
+- ["PSs9Equatable", "countCellSeperator"]
+- ["PSs9Equatable", "countLabel"]
+- !private ["PSs9Equatable", "font"]
+- ["PSs9Equatable", "init"]
+- ["PSs9Equatable", "roomTitleLabel"]
+- ["PSs9Equatable", "setSelected"]
+- !private ["PSs9Equatable", "textColor"]
+- !private ["PSs9Equatable", "whiteColor"]
+- ["PSs9Equatable", ""]
+- !private ["OV6CoChat5Theme5Fonts", "BoldTitleTypeFace"]
+- !private ["OV6CoChat5Theme5Fonts", "NormalTypeFace"]
+- !private ["OV6CoChat5Theme5Fonts", "font"]
+- !private ["PSs8Hashable", "BoldTitleTypeFace"]
+- !private ["PSs8Hashable", "DarkBackgroundColor"]
+- !private ["PSs8Hashable", "ForegroundColor"]
+- !private ["PSs8Hashable", "NormalTypeFace"]
+- !private ["PSs8Hashable", "Theme"]
+- !private ["PSs8Hashable", "UIColor"]
+- ["PSs8Hashable", "awakeFromNib"]
+- !private ["PSs8Hashable", "backgroundColor"]
+- ["PSs8Hashable", "cellCountWrapperView"]
+- ["PSs8Hashable", "cellSeperator"]
+- ["PSs8Hashable", "cellWrapperView"]
+- !private ["PSs8Hashable", "color"]
+- ["PSs8Hashable", "countCellSeperator"]
+- ["PSs8Hashable", "countLabel"]
+- !private ["PSs8Hashable", "font"]
+- ["PSs8Hashable", "init"]
+- ["PSs8Hashable", "roomTitleLabel"]
+- ["PSs8Hashable", "setSelected"]
+- !private ["PSs8Hashable", "textColor"]
+- !private ["PSs8Hashable", "whiteColor"]
+- ["PSs8Hashable", ""]
+- !private ["PSo8NSCoding", "Theme"]
+- !private ["PSo8NSCoding", "UIColor"]
+- ["PSo8NSCoding", "awakeFromNib"]
+- !private ["PSo8NSCoding", "backgroundColor"]
+- ["PSo8NSCoding", "cellCountWrapperView"]
+- ["PSo8NSCoding", "cellSeperator"]
+- ["PSo8NSCoding", "cellWrapperView"]
+- ["PSo8NSCoding", "countCellSeperator"]
+- ["PSo8NSCoding", "countLabel"]
+- !private ["PSo8NSCoding", "font"]
+- ["PSo8NSCoding", "init"]
+- ["PSo8NSCoding", "roomTitleLabel"]
+- ["PSo8NSCoding", "setSelected"]
+- !private ["PSo8NSCoding", "textColor"]
+- !private ["PSo8NSCoding", "whiteColor"]
+- ["PSo8NSCoding", ""]
+- !private ["PSo9NSCopying", "whiteColor"]
+- ["CSo8NSObject", "Bool"]
+- !private ["CSo8NSObject", "Theme"]
+- !private ["CSo8NSObject", "UIColor"]
+- ["CSo8NSObject", "UILabel"]
+- ["CSo8NSObject", "UIView"]
+- ["CSo8NSObject", "awakeFromNib"]
+- !private ["CSo8NSObject", "backgroundColor"]
+- ["CSo8NSObject", "cellCountWrapperView"]
+- ["CSo8NSObject", "cellSeperator"]
+- ["CSo8NSObject", "cellWrapperView"]
+- ["CSo8NSObject", "countCellSeperator"]
+- ["CSo8NSObject", "countLabel"]
+- !private ["CSo8NSObject", "font"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "roomTitleLabel"]
+- ["CSo8NSObject", "setSelected"]
+- !private ["CSo8NSObject", "textColor"]
+- !private ["CSo8NSObject", "whiteColor"]
+- !private ["PSo16NSObjectProtocol", "Theme"]
+- !private ["PSo16NSObjectProtocol", "UIColor"]
+- ["PSo16NSObjectProtocol", "awakeFromNib"]
+- !private ["PSo16NSObjectProtocol", "backgroundColor"]
+- ["PSo16NSObjectProtocol", "cellCountWrapperView"]
+- ["PSo16NSObjectProtocol", "cellSeperator"]
+- ["PSo16NSObjectProtocol", "cellWrapperView"]
+- ["PSo16NSObjectProtocol", "countCellSeperator"]
+- ["PSo16NSObjectProtocol", "countLabel"]
+- !private ["PSo16NSObjectProtocol", "font"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "roomTitleLabel"]
+- ["PSo16NSObjectProtocol", "setSelected"]
+- !private ["PSo16NSObjectProtocol", "textColor"]
+- !private ["PSo16NSObjectProtocol", "whiteColor"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "whiteColor"]
+- !private ["V6CoChat5Theme", "Colors"]
+- !private ["V6CoChat5Theme", "Fonts"]
+- ["C6CoChat11TopRoomCell", "Bool"]
+- !private ["C6CoChat11TopRoomCell", "Theme"]
+- !private ["C6CoChat11TopRoomCell", "UIColor"]
+- ["C6CoChat11TopRoomCell", "UILabel"]
+- ["C6CoChat11TopRoomCell", "UIView"]
+- ["C6CoChat11TopRoomCell", "awakeFromNib"]
+- ["C6CoChat11TopRoomCell", "cellCountWrapperView"]
+- ["C6CoChat11TopRoomCell", "cellSeperator"]
+- ["C6CoChat11TopRoomCell", "cellWrapperView"]
+- ["C6CoChat11TopRoomCell", "countCellSeperator"]
+- ["C6CoChat11TopRoomCell", "countLabel"]
+- ["C6CoChat11TopRoomCell", "deinit"]
+- ["C6CoChat11TopRoomCell", "init"]
+- ["C6CoChat11TopRoomCell", "roomTitleLabel"]
+- ["C6CoChat11TopRoomCell", "setSelected"]
+- !private ["PSo29UIAccessibilityIdentification", "Theme"]
+- !private ["PSo29UIAccessibilityIdentification", "UIColor"]
+- ["PSo29UIAccessibilityIdentification", "awakeFromNib"]
+- !private ["PSo29UIAccessibilityIdentification", "backgroundColor"]
+- ["PSo29UIAccessibilityIdentification", "cellCountWrapperView"]
+- ["PSo29UIAccessibilityIdentification", "cellSeperator"]
+- ["PSo29UIAccessibilityIdentification", "cellWrapperView"]
+- ["PSo29UIAccessibilityIdentification", "countCellSeperator"]
+- ["PSo29UIAccessibilityIdentification", "countLabel"]
+- !private ["PSo29UIAccessibilityIdentification", "font"]
+- ["PSo29UIAccessibilityIdentification", "init"]
+- ["PSo29UIAccessibilityIdentification", "roomTitleLabel"]
+- ["PSo29UIAccessibilityIdentification", "setSelected"]
+- !private ["PSo29UIAccessibilityIdentification", "textColor"]
+- ["PSo29UIAccessibilityIdentification", ""]
+- !private ["PSo12UIAppearance", "Theme"]
+- !private ["PSo12UIAppearance", "UIColor"]
+- ["PSo12UIAppearance", "awakeFromNib"]
+- !private ["PSo12UIAppearance", "backgroundColor"]
+- ["PSo12UIAppearance", "cellCountWrapperView"]
+- ["PSo12UIAppearance", "cellSeperator"]
+- ["PSo12UIAppearance", "cellWrapperView"]
+- ["PSo12UIAppearance", "countCellSeperator"]
+- ["PSo12UIAppearance", "countLabel"]
+- !private ["PSo12UIAppearance", "font"]
+- ["PSo12UIAppearance", "init"]
+- ["PSo12UIAppearance", "roomTitleLabel"]
+- ["PSo12UIAppearance", "setSelected"]
+- !private ["PSo12UIAppearance", "textColor"]
+- ["PSo12UIAppearance", ""]
+- !private ["PSo21UIAppearanceContainer", "Theme"]
+- !private ["PSo21UIAppearanceContainer", "UIColor"]
+- ["PSo21UIAppearanceContainer", "awakeFromNib"]
+- !private ["PSo21UIAppearanceContainer", "backgroundColor"]
+- ["PSo21UIAppearanceContainer", "cellCountWrapperView"]
+- ["PSo21UIAppearanceContainer", "cellSeperator"]
+- ["PSo21UIAppearanceContainer", "cellWrapperView"]
+- ["PSo21UIAppearanceContainer", "countCellSeperator"]
+- ["PSo21UIAppearanceContainer", "countLabel"]
+- !private ["PSo21UIAppearanceContainer", "font"]
+- ["PSo21UIAppearanceContainer", "init"]
+- ["PSo21UIAppearanceContainer", "roomTitleLabel"]
+- ["PSo21UIAppearanceContainer", "setSelected"]
+- !private ["PSo21UIAppearanceContainer", "textColor"]
+- ["PSo21UIAppearanceContainer", ""]
+- !private ["CSo7UIColor", "whiteColor"]
+- !private ["PSo17UICoordinateSpace", "Theme"]
+- !private ["PSo17UICoordinateSpace", "UIColor"]
+- ["PSo17UICoordinateSpace", "awakeFromNib"]
+- !private ["PSo17UICoordinateSpace", "backgroundColor"]
+- ["PSo17UICoordinateSpace", "cellCountWrapperView"]
+- ["PSo17UICoordinateSpace", "cellSeperator"]
+- ["PSo17UICoordinateSpace", "cellWrapperView"]
+- ["PSo17UICoordinateSpace", "countCellSeperator"]
+- ["PSo17UICoordinateSpace", "countLabel"]
+- !private ["PSo17UICoordinateSpace", "font"]
+- ["PSo17UICoordinateSpace", "init"]
+- ["PSo17UICoordinateSpace", "roomTitleLabel"]
+- ["PSo17UICoordinateSpace", "setSelected"]
+- !private ["PSo17UICoordinateSpace", "textColor"]
+- ["PSo17UICoordinateSpace", ""]
+- !private ["PSo13UIDynamicItem", "Theme"]
+- !private ["PSo13UIDynamicItem", "UIColor"]
+- ["PSo13UIDynamicItem", "awakeFromNib"]
+- !private ["PSo13UIDynamicItem", "backgroundColor"]
+- ["PSo13UIDynamicItem", "cellCountWrapperView"]
+- ["PSo13UIDynamicItem", "cellSeperator"]
+- ["PSo13UIDynamicItem", "cellWrapperView"]
+- ["PSo13UIDynamicItem", "countCellSeperator"]
+- ["PSo13UIDynamicItem", "countLabel"]
+- !private ["PSo13UIDynamicItem", "font"]
+- ["PSo13UIDynamicItem", "init"]
+- ["PSo13UIDynamicItem", "roomTitleLabel"]
+- ["PSo13UIDynamicItem", "setSelected"]
+- !private ["PSo13UIDynamicItem", "textColor"]
+- ["PSo13UIDynamicItem", ""]
+- !private ["PSo18UIFocusEnvironment", "Theme"]
+- !private ["PSo18UIFocusEnvironment", "UIColor"]
+- ["PSo18UIFocusEnvironment", "awakeFromNib"]
+- !private ["PSo18UIFocusEnvironment", "backgroundColor"]
+- ["PSo18UIFocusEnvironment", "cellCountWrapperView"]
+- ["PSo18UIFocusEnvironment", "cellSeperator"]
+- ["PSo18UIFocusEnvironment", "cellWrapperView"]
+- ["PSo18UIFocusEnvironment", "countCellSeperator"]
+- ["PSo18UIFocusEnvironment", "countLabel"]
+- !private ["PSo18UIFocusEnvironment", "font"]
+- ["PSo18UIFocusEnvironment", "init"]
+- ["PSo18UIFocusEnvironment", "roomTitleLabel"]
+- ["PSo18UIFocusEnvironment", "setSelected"]
+- !private ["PSo18UIFocusEnvironment", "textColor"]
+- ["PSo18UIFocusEnvironment", ""]
+- !private ["PSo27UIGestureRecognizerDelegate", "Theme"]
+- !private ["PSo27UIGestureRecognizerDelegate", "UIColor"]
+- ["PSo27UIGestureRecognizerDelegate", "awakeFromNib"]
+- ["PSo27UIGestureRecognizerDelegate", "cellCountWrapperView"]
+- ["PSo27UIGestureRecognizerDelegate", "cellSeperator"]
+- ["PSo27UIGestureRecognizerDelegate", "cellWrapperView"]
+- ["PSo27UIGestureRecognizerDelegate", "countCellSeperator"]
+- ["PSo27UIGestureRecognizerDelegate", "countLabel"]
+- ["PSo27UIGestureRecognizerDelegate", "init"]
+- ["PSo27UIGestureRecognizerDelegate", "roomTitleLabel"]
+- ["PSo27UIGestureRecognizerDelegate", "setSelected"]
+- ["PSo27UIGestureRecognizerDelegate", ""]
+- !private ["CSo7UILabel", "font"]
+- !private ["CSo7UILabel", "textColor"]
+- ["CSo11UIResponder", "Bool"]
+- !private ["CSo11UIResponder", "Theme"]
+- !private ["CSo11UIResponder", "UIColor"]
+- ["CSo11UIResponder", "UILabel"]
+- ["CSo11UIResponder", "UIView"]
+- ["CSo11UIResponder", "awakeFromNib"]
+- !private ["CSo11UIResponder", "backgroundColor"]
+- ["CSo11UIResponder", "cellCountWrapperView"]
+- ["CSo11UIResponder", "cellSeperator"]
+- ["CSo11UIResponder", "cellWrapperView"]
+- ["CSo11UIResponder", "countCellSeperator"]
+- ["CSo11UIResponder", "countLabel"]
+- !private ["CSo11UIResponder", "font"]
+- ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "roomTitleLabel"]
+- ["CSo11UIResponder", "setSelected"]
+- !private ["CSo11UIResponder", "textColor"]
+- ["CSo15UITableViewCell", "Bool"]
+- !private ["CSo15UITableViewCell", "Theme"]
+- !private ["CSo15UITableViewCell", "UIColor"]
+- ["CSo15UITableViewCell", "UILabel"]
+- ["CSo15UITableViewCell", "UIView"]
+- ["CSo15UITableViewCell", "awakeFromNib"]
+- ["CSo15UITableViewCell", "cellCountWrapperView"]
+- ["CSo15UITableViewCell", "cellSeperator"]
+- ["CSo15UITableViewCell", "cellWrapperView"]
+- ["CSo15UITableViewCell", "countCellSeperator"]
+- ["CSo15UITableViewCell", "countLabel"]
+- ["CSo15UITableViewCell", "init"]
+- ["CSo15UITableViewCell", "roomTitleLabel"]
+- ["CSo15UITableViewCell", "setSelected"]
+- ["CSo15UITableViewCell", ""]
+- !private ["PSo18UITraitEnvironment", "Theme"]
+- !private ["PSo18UITraitEnvironment", "UIColor"]
+- ["PSo18UITraitEnvironment", "awakeFromNib"]
+- !private ["PSo18UITraitEnvironment", "backgroundColor"]
+- ["PSo18UITraitEnvironment", "cellCountWrapperView"]
+- ["PSo18UITraitEnvironment", "cellSeperator"]
+- ["PSo18UITraitEnvironment", "cellWrapperView"]
+- ["PSo18UITraitEnvironment", "countCellSeperator"]
+- ["PSo18UITraitEnvironment", "countLabel"]
+- !private ["PSo18UITraitEnvironment", "font"]
+- ["PSo18UITraitEnvironment", "init"]
+- ["PSo18UITraitEnvironment", "roomTitleLabel"]
+- ["PSo18UITraitEnvironment", "setSelected"]
+- !private ["PSo18UITraitEnvironment", "textColor"]
+- ["PSo18UITraitEnvironment", ""]
+- ["CSo6UIView", "Bool"]
+- !private ["CSo6UIView", "Theme"]
+- !private ["CSo6UIView", "UIColor"]
+- ["CSo6UIView", "UILabel"]
+- ["CSo6UIView", "UIView"]
+- ["CSo6UIView", "awakeFromNib"]
+- !private ["CSo6UIView", "backgroundColor"]
+- ["CSo6UIView", "cellCountWrapperView"]
+- ["CSo6UIView", "cellSeperator"]
+- ["CSo6UIView", "cellWrapperView"]
+- ["CSo6UIView", "countCellSeperator"]
+- ["CSo6UIView", "countLabel"]
+- !private ["CSo6UIView", "font"]
+- ["CSo6UIView", "init"]
+- ["CSo6UIView", "roomTitleLabel"]
+- ["CSo6UIView", "setSelected"]
+- !private ["CSo6UIView", "textColor"]
+- !private ["PSs24_ColorLiteralConvertible", "whiteColor"]
+- !private ["PSs12_Reflectable", "Theme"]
+- !private ["PSs12_Reflectable", "UIColor"]
+- ["PSs12_Reflectable", "awakeFromNib"]
+- !private ["PSs12_Reflectable", "backgroundColor"]
+- ["PSs12_Reflectable", "cellCountWrapperView"]
+- ["PSs12_Reflectable", "cellSeperator"]
+- ["PSs12_Reflectable", "cellWrapperView"]
+- ["PSs12_Reflectable", "countCellSeperator"]
+- ["PSs12_Reflectable", "countLabel"]
+- !private ["PSs12_Reflectable", "font"]
+- ["PSs12_Reflectable", "init"]
+- ["PSs12_Reflectable", "roomTitleLabel"]
+- ["PSs12_Reflectable", "setSelected"]
+- !private ["PSs12_Reflectable", "textColor"]
+- ["PSs12_Reflectable", ""]
+depends-nominal:
+- "PSs9AnyObject"
+- "PSs11CVarArgType"
+- !private "OV6CoChat5Theme6Colors"
+- "PSs23CustomStringConvertible"
+- "PSs9Equatable"
+- !private "OV6CoChat5Theme5Fonts"
+- "PSs8Hashable"
+- "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "V6CoChat5Theme"
+- "C6CoChat11TopRoomCell"
+- "PSo29UIAccessibilityIdentification"
+- "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- !private "CSo7UIColor"
+- "PSo17UICoordinateSpace"
+- "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- "PSo27UIGestureRecognizerDelegate"
+- !private "CSo7UILabel"
+- "CSo11UIResponder"
+- "CSo15UITableViewCell"
+- "PSo18UITraitEnvironment"
+- "CSo6UIView"
+- !private "PSs24_ColorLiteralConvertible"
+- "PSs12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FirebaseServerValue.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FTransactionResult.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FMutableData.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FirebaseApp.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FQuery.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/Firebase.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FEventType.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FDataSnapshot.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FConfig.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FAuthType.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FAuthData.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/Firebase-umbrella.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Modules/module.modulemap"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BoltsVersion.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/Bolts.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFTaskCompletionSource.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFTask.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFExecutor.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFCancellationTokenSource.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFCancellationTokenRegistration.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFCancellationToken.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFWebViewAppLinkResolver.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFURL_Internal.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFURL.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFMeasurementEvent_Internal.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFMeasurementEvent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFAppLinkTarget.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFAppLinkReturnToRefererView_Internal.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFAppLinkReturnToRefererView.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFAppLinkReturnToRefererController.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFAppLinkResolving.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFAppLinkNavigation.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFAppLink_Internal.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFAppLink.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/Bolts-umbrella.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Modules/module.modulemap"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKProfilePictureView.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKProfile.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKMutableCopying.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKGraphErrorRecoveryProcessor.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKUtility.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKTestUsersManager.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKSettings.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKGraphRequestDataAttachment.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKGraphRequest.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKCoreKit.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKConstants.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKButton.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKAppLinkUtility.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKAppLinkResolver.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKApplicationDelegate.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKAppEvents.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKMacros.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKGraphRequestConnection.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKCopying.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKAccessToken.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKCoreKit-umbrella.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Modules/module.modulemap"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKLoginKit.framework/Headers/FBSDKLoginTooltipView.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKLoginKit.framework/Headers/FBSDKLoginManagerLoginResult.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKLoginKit.framework/Headers/FBSDKLoginKit.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKLoginKit.framework/Headers/FBSDKLoginConstants.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKLoginKit.framework/Headers/FBSDKTooltipView.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKLoginKit.framework/Headers/FBSDKLoginManager.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKLoginKit.framework/Headers/FBSDKLoginButton.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKLoginKit.framework/Headers/FBSDKLoginKit-umbrella.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKLoginKit.framework/Modules/module.modulemap"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareVideoContent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareVideo.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKSharePhotoContent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKSharePhoto.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareOpenGraphContent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareOpenGraphAction.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareLinkContent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareKit.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareDialogMode.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareDialog.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareConstants.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareButton.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareOpenGraphValueContainer.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareOpenGraphObject.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareAPI.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKSharingButton.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKSendButton.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKSharingContent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKSharing.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKMessageDialog.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKLikeControl.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKLiking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKLikeObjectType.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKLikeButton.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKGameRequestDialog.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKGameRequestContent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKAppInviteDialog.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKAppInviteContent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKAppGroupJoinDialog.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKAppGroupContent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKAppGroupAddDialog.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareKit-umbrella.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/UIProgressView+AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/UIWebView+AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/UIRefreshControl+AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/UIKit+AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/UIImageView+AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/UIImage+AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/UIButton+AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/UIActivityIndicatorView+AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFNetworkActivityIndicatorManager.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFImageDownloader.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFAutoPurgingImageCache.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFHTTPSessionManager.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFURLSessionManager.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFNetworkReachabilityManager.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFSecurityPolicy.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFURLResponseSerialization.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFURLRequestSerialization.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFNetworking-umbrella.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Modules/module.modulemap"
+interface-hash: "695ef42b4a23bdd64ef6ad1aa46d12b1"

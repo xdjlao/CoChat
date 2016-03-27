@@ -1,0 +1,301 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "RootVC"
+provides-nominal:
+- "C6CoChat6RootVC"
+provides-member:
+- ["C6CoChat6RootVC", ""]
+provides-dynamic-lookup:
+- "viewDidAppear"
+- "videoDidStopPlaying"
+- "viewDidLoad"
+- "container"
+depends-top-level:
+- "UIView"
+- "Bool"
+- "UIViewController"
+- "RootVC"
+depends-member:
+- ["PSs9AnyObject", "container"]
+- ["PSs9AnyObject", "init"]
+- !private ["PSs9AnyObject", "performSegueWithSegueIdentifier"]
+- ["PSs9AnyObject", "videoDidStopPlaying"]
+- ["PSs9AnyObject", "viewDidAppear"]
+- ["PSs9AnyObject", "viewDidLoad"]
+- ["PSs9AnyObject", ""]
+- ["PSs11CVarArgType", "container"]
+- ["PSs11CVarArgType", "init"]
+- !private ["PSs11CVarArgType", "performSegueWithSegueIdentifier"]
+- ["PSs11CVarArgType", "videoDidStopPlaying"]
+- ["PSs11CVarArgType", "viewDidAppear"]
+- ["PSs11CVarArgType", "viewDidLoad"]
+- ["PSs11CVarArgType", ""]
+- ["PSs23CustomStringConvertible", "container"]
+- ["PSs23CustomStringConvertible", "init"]
+- !private ["PSs23CustomStringConvertible", "performSegueWithSegueIdentifier"]
+- ["PSs23CustomStringConvertible", "videoDidStopPlaying"]
+- ["PSs23CustomStringConvertible", "viewDidAppear"]
+- ["PSs23CustomStringConvertible", "viewDidLoad"]
+- ["PSs23CustomStringConvertible", ""]
+- !private ["PSs9Equatable", "SegueToTabBar"]
+- ["PSs9Equatable", "container"]
+- ["PSs9Equatable", "init"]
+- !private ["PSs9Equatable", "performSegueWithSegueIdentifier"]
+- ["PSs9Equatable", "videoDidStopPlaying"]
+- ["PSs9Equatable", "viewDidAppear"]
+- ["PSs9Equatable", "viewDidLoad"]
+- ["PSs9Equatable", ""]
+- !private ["PSs8Hashable", "SegueToTabBar"]
+- ["PSs8Hashable", "container"]
+- ["PSs8Hashable", "init"]
+- !private ["PSs8Hashable", "performSegueWithSegueIdentifier"]
+- ["PSs8Hashable", "videoDidStopPlaying"]
+- ["PSs8Hashable", "viewDidAppear"]
+- ["PSs8Hashable", "viewDidLoad"]
+- ["PSs8Hashable", ""]
+- ["PSo8NSCoding", "container"]
+- ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "performSegueWithSegueIdentifier"]
+- ["PSo8NSCoding", "videoDidStopPlaying"]
+- ["PSo8NSCoding", "viewDidAppear"]
+- ["PSo8NSCoding", "viewDidLoad"]
+- ["PSo8NSCoding", ""]
+- ["PSo26NSExtensionRequestHandling", "container"]
+- ["PSo26NSExtensionRequestHandling", "init"]
+- !private ["PSo26NSExtensionRequestHandling", "performSegueWithSegueIdentifier"]
+- ["PSo26NSExtensionRequestHandling", "videoDidStopPlaying"]
+- ["PSo26NSExtensionRequestHandling", "viewDidAppear"]
+- ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
+- ["PSo26NSExtensionRequestHandling", ""]
+- ["CSo8NSObject", "Bool"]
+- ["CSo8NSObject", "UIView"]
+- ["CSo8NSObject", "container"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "performSegueWithSegueIdentifier"]
+- ["CSo8NSObject", "videoDidStopPlaying"]
+- ["CSo8NSObject", "viewDidAppear"]
+- ["CSo8NSObject", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", "container"]
+- ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "performSegueWithSegueIdentifier"]
+- ["PSo16NSObjectProtocol", "videoDidStopPlaying"]
+- ["PSo16NSObjectProtocol", "viewDidAppear"]
+- ["PSo16NSObjectProtocol", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSs16RawRepresentable", "SegueToTabBar"]
+- ["C6CoChat6RootVC", "Bool"]
+- ["C6CoChat6RootVC", "UIView"]
+- ["C6CoChat6RootVC", "container"]
+- ["C6CoChat6RootVC", "deinit"]
+- ["C6CoChat6RootVC", "init"]
+- !private ["C6CoChat6RootVC", "performSegueWithSegueIdentifier"]
+- ["C6CoChat6RootVC", "videoDidStopPlaying"]
+- ["C6CoChat6RootVC", "viewDidAppear"]
+- ["C6CoChat6RootVC", "viewDidLoad"]
+- !private ["OE6CoChatCSo16UIViewController15SegueIdentifier", "SegueToTabBar"]
+- ["PSo21UIAppearanceContainer", "container"]
+- ["PSo21UIAppearanceContainer", "init"]
+- !private ["PSo21UIAppearanceContainer", "performSegueWithSegueIdentifier"]
+- ["PSo21UIAppearanceContainer", "videoDidStopPlaying"]
+- ["PSo21UIAppearanceContainer", "viewDidAppear"]
+- ["PSo21UIAppearanceContainer", "viewDidLoad"]
+- ["PSo21UIAppearanceContainer", ""]
+- ["PSo18UIContentContainer", "container"]
+- ["PSo18UIContentContainer", "init"]
+- !private ["PSo18UIContentContainer", "performSegueWithSegueIdentifier"]
+- ["PSo18UIContentContainer", "videoDidStopPlaying"]
+- ["PSo18UIContentContainer", "viewDidAppear"]
+- ["PSo18UIContentContainer", "viewDidLoad"]
+- ["PSo18UIContentContainer", ""]
+- ["PSo18UIFocusEnvironment", "container"]
+- ["PSo18UIFocusEnvironment", "init"]
+- !private ["PSo18UIFocusEnvironment", "performSegueWithSegueIdentifier"]
+- ["PSo18UIFocusEnvironment", "videoDidStopPlaying"]
+- ["PSo18UIFocusEnvironment", "viewDidAppear"]
+- ["PSo18UIFocusEnvironment", "viewDidLoad"]
+- ["PSo18UIFocusEnvironment", ""]
+- ["CSo11UIResponder", "Bool"]
+- ["CSo11UIResponder", "UIView"]
+- ["CSo11UIResponder", "container"]
+- ["CSo11UIResponder", "init"]
+- !private ["CSo11UIResponder", "performSegueWithSegueIdentifier"]
+- ["CSo11UIResponder", "videoDidStopPlaying"]
+- ["CSo11UIResponder", "viewDidAppear"]
+- ["CSo11UIResponder", "viewDidLoad"]
+- ["PSo16UIStateRestoring", "container"]
+- ["PSo16UIStateRestoring", "init"]
+- !private ["PSo16UIStateRestoring", "performSegueWithSegueIdentifier"]
+- ["PSo16UIStateRestoring", "videoDidStopPlaying"]
+- ["PSo16UIStateRestoring", "viewDidAppear"]
+- ["PSo16UIStateRestoring", "viewDidLoad"]
+- ["PSo16UIStateRestoring", ""]
+- ["PSo18UITraitEnvironment", "container"]
+- ["PSo18UITraitEnvironment", "init"]
+- !private ["PSo18UITraitEnvironment", "performSegueWithSegueIdentifier"]
+- ["PSo18UITraitEnvironment", "videoDidStopPlaying"]
+- ["PSo18UITraitEnvironment", "viewDidAppear"]
+- ["PSo18UITraitEnvironment", "viewDidLoad"]
+- ["PSo18UITraitEnvironment", ""]
+- ["CSo16UIViewController", "Bool"]
+- ["CSo16UIViewController", "UIView"]
+- ["CSo16UIViewController", "container"]
+- ["CSo16UIViewController", "init"]
+- !private ["CSo16UIViewController", "performSegueWithSegueIdentifier"]
+- ["CSo16UIViewController", "videoDidStopPlaying"]
+- ["CSo16UIViewController", "viewDidAppear"]
+- ["CSo16UIViewController", "viewDidLoad"]
+- ["CSo16UIViewController", ""]
+depends-nominal:
+- "PSs9AnyObject"
+- "PSs11CVarArgType"
+- "PSs23CustomStringConvertible"
+- "PSs9Equatable"
+- "PSs8Hashable"
+- "PSo8NSCoding"
+- "PSo26NSExtensionRequestHandling"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSs16RawRepresentable"
+- "C6CoChat6RootVC"
+- !private "OE6CoChatCSo16UIViewController15SegueIdentifier"
+- "PSo21UIAppearanceContainer"
+- "PSo18UIContentContainer"
+- "PSo18UIFocusEnvironment"
+- "CSo11UIResponder"
+- "PSo16UIStateRestoring"
+- "PSo18UITraitEnvironment"
+- "CSo16UIViewController"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FirebaseServerValue.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FTransactionResult.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FMutableData.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FirebaseApp.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FQuery.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/Firebase.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FEventType.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FDataSnapshot.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FConfig.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FAuthType.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FAuthData.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/Firebase-umbrella.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Modules/module.modulemap"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BoltsVersion.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/Bolts.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFTaskCompletionSource.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFTask.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFExecutor.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFCancellationTokenSource.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFCancellationTokenRegistration.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFCancellationToken.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFWebViewAppLinkResolver.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFURL_Internal.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFURL.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFMeasurementEvent_Internal.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFMeasurementEvent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFAppLinkTarget.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFAppLinkReturnToRefererView_Internal.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFAppLinkReturnToRefererView.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFAppLinkReturnToRefererController.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFAppLinkResolving.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFAppLinkNavigation.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFAppLink_Internal.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFAppLink.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/Bolts-umbrella.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Modules/module.modulemap"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKProfilePictureView.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKProfile.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKMutableCopying.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKGraphErrorRecoveryProcessor.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKUtility.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKTestUsersManager.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKSettings.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKGraphRequestDataAttachment.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKGraphRequest.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKCoreKit.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKConstants.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKButton.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKAppLinkUtility.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKAppLinkResolver.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKApplicationDelegate.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKAppEvents.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKMacros.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKGraphRequestConnection.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKCopying.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKAccessToken.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKCoreKit-umbrella.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Modules/module.modulemap"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKLoginKit.framework/Headers/FBSDKLoginTooltipView.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKLoginKit.framework/Headers/FBSDKLoginManagerLoginResult.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKLoginKit.framework/Headers/FBSDKLoginKit.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKLoginKit.framework/Headers/FBSDKLoginConstants.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKLoginKit.framework/Headers/FBSDKTooltipView.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKLoginKit.framework/Headers/FBSDKLoginManager.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKLoginKit.framework/Headers/FBSDKLoginButton.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKLoginKit.framework/Headers/FBSDKLoginKit-umbrella.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKLoginKit.framework/Modules/module.modulemap"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareVideoContent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareVideo.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKSharePhotoContent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKSharePhoto.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareOpenGraphContent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareOpenGraphAction.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareLinkContent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareKit.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareDialogMode.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareDialog.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareConstants.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareButton.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareOpenGraphValueContainer.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareOpenGraphObject.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareAPI.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKSharingButton.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKSendButton.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKSharingContent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKSharing.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKMessageDialog.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKLikeControl.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKLiking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKLikeObjectType.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKLikeButton.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKGameRequestDialog.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKGameRequestContent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKAppInviteDialog.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKAppInviteContent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKAppGroupJoinDialog.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKAppGroupContent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKAppGroupAddDialog.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareKit-umbrella.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/UIProgressView+AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/UIWebView+AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/UIRefreshControl+AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/UIKit+AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/UIImageView+AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/UIImage+AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/UIButton+AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/UIActivityIndicatorView+AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFNetworkActivityIndicatorManager.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFImageDownloader.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFAutoPurgingImageCache.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFHTTPSessionManager.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFURLSessionManager.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFNetworkReachabilityManager.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFSecurityPolicy.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFURLResponseSerialization.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFURLRequestSerialization.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFNetworking-umbrella.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Modules/module.modulemap"
+interface-hash: "570016d14db4ed2721493a43ba45461a"

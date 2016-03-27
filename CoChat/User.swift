@@ -10,7 +10,7 @@ class User: FirebaseType {
     var conversationPartners = [User]()
     
     func profileImage(handler: (profileImage: UIImage?) -> () ) {
-        handler(profileImage: UIImage(named: "profileImageDummy"))
+        handler(profileImage: UIImage(named: "blendColorLogo-60"))
     }
     
     var value: AnyObject {

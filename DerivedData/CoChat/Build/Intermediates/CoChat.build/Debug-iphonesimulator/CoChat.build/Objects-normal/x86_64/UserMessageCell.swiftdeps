@@ -1,0 +1,777 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "UserMessageCellDelegate"
+- "UserMessageCell"
+provides-nominal:
+- "P6CoChat23UserMessageCellDelegate"
+- "C6CoChat15UserMessageCell"
+provides-member:
+- ["P6CoChat23UserMessageCellDelegate", ""]
+- ["C6CoChat15UserMessageCell", ""]
+provides-dynamic-lookup:
+- "addTapGesture"
+- "messageLabel"
+- "delegate"
+- "onTapHandle"
+- "profileImageView"
+- "userMessageCell"
+- "awakeFromNib"
+depends-top-level:
+- "UILabel"
+- "UIImageView"
+- "UserMessageCellDelegate"
+- "AnyObject"
+- "UserMessageCell"
+- !private "StringLiteralType"
+- !private "UITapGestureRecognizer"
+- !private "/"
+- "UITableViewCell"
+- !private "UIColor"
+- !private "Theme"
+- !private "+"
+- !private "BooleanLiteralType"
+- "User"
+depends-member:
+- !private ["PSs9AnyObject", "Theme"]
+- !private ["PSs9AnyObject", "UIColor"]
+- !private ["PSs9AnyObject", "UITapGestureRecognizer"]
+- !private ["PSs9AnyObject", "addGestureRecognizer"]
+- ["PSs9AnyObject", "addTapGesture"]
+- ["PSs9AnyObject", "awakeFromNib"]
+- !private ["PSs9AnyObject", "backgroundColor"]
+- !private ["PSs9AnyObject", "clearColor"]
+- !private ["PSs9AnyObject", "clipsToBounds"]
+- !private ["PSs9AnyObject", "contentView"]
+- !private ["PSs9AnyObject", "cornerRadius"]
+- ["PSs9AnyObject", "delegate"]
+- !private ["PSs9AnyObject", "font"]
+- !private ["PSs9AnyObject", "frame"]
+- ["PSs9AnyObject", "init"]
+- !private ["PSs9AnyObject", "layer"]
+- !private ["PSs9AnyObject", "layoutIfNeeded"]
+- ["PSs9AnyObject", "messageLabel"]
+- !private ["PSs9AnyObject", "numberOfLines"]
+- !private ["PSs9AnyObject", "numberOfTapsRequired"]
+- ["PSs9AnyObject", "onTapHandle"]
+- ["PSs9AnyObject", "profileImageView"]
+- !private ["PSs9AnyObject", "sizeToFit"]
+- !private ["PSs9AnyObject", "textColor"]
+- ["PSs9AnyObject", "user"]
+- !private ["PSs9AnyObject", "userInteractionEnabled"]
+- !private ["PSs9AnyObject", "whiteColor"]
+- ["PSs9AnyObject", ""]
+- !private ["CSo7CALayer", "cornerRadius"]
+- !private ["PSo13CAMediaTiming", "cornerRadius"]
+- !private ["V12CoreGraphics7CGFloat", "deinit"]
+- !private ["VSC6CGRect", "size"]
+- !private ["VSC6CGSize", "height"]
+- !private ["VSC6CGSize", "width"]
+- !private ["PSs11CVarArgType", "Theme"]
+- !private ["PSs11CVarArgType", "UIColor"]
+- !private ["PSs11CVarArgType", "UITapGestureRecognizer"]
+- !private ["PSs11CVarArgType", "addGestureRecognizer"]
+- ["PSs11CVarArgType", "addTapGesture"]
+- ["PSs11CVarArgType", "awakeFromNib"]
+- !private ["PSs11CVarArgType", "backgroundColor"]
+- !private ["PSs11CVarArgType", "clearColor"]
+- !private ["PSs11CVarArgType", "clipsToBounds"]
+- !private ["PSs11CVarArgType", "contentView"]
+- !private ["PSs11CVarArgType", "cornerRadius"]
+- ["PSs11CVarArgType", "delegate"]
+- !private ["PSs11CVarArgType", "font"]
+- !private ["PSs11CVarArgType", "frame"]
+- ["PSs11CVarArgType", "init"]
+- !private ["PSs11CVarArgType", "layer"]
+- !private ["PSs11CVarArgType", "layoutIfNeeded"]
+- ["PSs11CVarArgType", "messageLabel"]
+- !private ["PSs11CVarArgType", "numberOfLines"]
+- !private ["PSs11CVarArgType", "numberOfTapsRequired"]
+- ["PSs11CVarArgType", "onTapHandle"]
+- ["PSs11CVarArgType", "profileImageView"]
+- !private ["PSs11CVarArgType", "sizeToFit"]
+- !private ["PSs11CVarArgType", "textColor"]
+- ["PSs11CVarArgType", "user"]
+- !private ["PSs11CVarArgType", "userInteractionEnabled"]
+- !private ["PSs11CVarArgType", "whiteColor"]
+- ["PSs11CVarArgType", ""]
+- !private ["PSs23CustomStringConvertible", "Theme"]
+- !private ["PSs23CustomStringConvertible", "UIColor"]
+- !private ["PSs23CustomStringConvertible", "UITapGestureRecognizer"]
+- !private ["PSs23CustomStringConvertible", "addGestureRecognizer"]
+- ["PSs23CustomStringConvertible", "addTapGesture"]
+- ["PSs23CustomStringConvertible", "awakeFromNib"]
+- !private ["PSs23CustomStringConvertible", "backgroundColor"]
+- !private ["PSs23CustomStringConvertible", "clearColor"]
+- !private ["PSs23CustomStringConvertible", "clipsToBounds"]
+- !private ["PSs23CustomStringConvertible", "contentView"]
+- !private ["PSs23CustomStringConvertible", "cornerRadius"]
+- ["PSs23CustomStringConvertible", "delegate"]
+- !private ["PSs23CustomStringConvertible", "font"]
+- !private ["PSs23CustomStringConvertible", "frame"]
+- ["PSs23CustomStringConvertible", "init"]
+- !private ["PSs23CustomStringConvertible", "layer"]
+- !private ["PSs23CustomStringConvertible", "layoutIfNeeded"]
+- ["PSs23CustomStringConvertible", "messageLabel"]
+- !private ["PSs23CustomStringConvertible", "numberOfLines"]
+- !private ["PSs23CustomStringConvertible", "numberOfTapsRequired"]
+- ["PSs23CustomStringConvertible", "onTapHandle"]
+- ["PSs23CustomStringConvertible", "profileImageView"]
+- !private ["PSs23CustomStringConvertible", "sizeToFit"]
+- !private ["PSs23CustomStringConvertible", "textColor"]
+- ["PSs23CustomStringConvertible", "user"]
+- !private ["PSs23CustomStringConvertible", "userInteractionEnabled"]
+- !private ["PSs23CustomStringConvertible", "whiteColor"]
+- ["PSs23CustomStringConvertible", ""]
+- !private ["PSs9Equatable", "NormalTypeFace"]
+- !private ["PSs9Equatable", "Theme"]
+- !private ["PSs9Equatable", "UIColor"]
+- !private ["PSs9Equatable", "UITapGestureRecognizer"]
+- !private ["PSs9Equatable", "addGestureRecognizer"]
+- ["PSs9Equatable", "addTapGesture"]
+- ["PSs9Equatable", "awakeFromNib"]
+- !private ["PSs9Equatable", "backgroundColor"]
+- !private ["PSs9Equatable", "clearColor"]
+- !private ["PSs9Equatable", "clipsToBounds"]
+- !private ["PSs9Equatable", "contentView"]
+- !private ["PSs9Equatable", "cornerRadius"]
+- ["PSs9Equatable", "delegate"]
+- !private ["PSs9Equatable", "font"]
+- !private ["PSs9Equatable", "frame"]
+- !private ["PSs9Equatable", "height"]
+- ["PSs9Equatable", "init"]
+- !private ["PSs9Equatable", "layer"]
+- !private ["PSs9Equatable", "layoutIfNeeded"]
+- ["PSs9Equatable", "messageLabel"]
+- !private ["PSs9Equatable", "numberOfLines"]
+- !private ["PSs9Equatable", "numberOfTapsRequired"]
+- ["PSs9Equatable", "onTapHandle"]
+- ["PSs9Equatable", "profileImageView"]
+- !private ["PSs9Equatable", "size"]
+- !private ["PSs9Equatable", "sizeToFit"]
+- !private ["PSs9Equatable", "textColor"]
+- ["PSs9Equatable", "user"]
+- !private ["PSs9Equatable", "userInteractionEnabled"]
+- !private ["PSs9Equatable", "whiteColor"]
+- !private ["PSs9Equatable", "width"]
+- ["PSs9Equatable", ""]
+- !private ["OV6CoChat5Theme5Fonts", "NormalTypeFace"]
+- !private ["OV6CoChat5Theme5Fonts", "font"]
+- !private ["PSs8Hashable", "NormalTypeFace"]
+- !private ["PSs8Hashable", "Theme"]
+- !private ["PSs8Hashable", "UIColor"]
+- !private ["PSs8Hashable", "UITapGestureRecognizer"]
+- !private ["PSs8Hashable", "addGestureRecognizer"]
+- ["PSs8Hashable", "addTapGesture"]
+- ["PSs8Hashable", "awakeFromNib"]
+- !private ["PSs8Hashable", "backgroundColor"]
+- !private ["PSs8Hashable", "clearColor"]
+- !private ["PSs8Hashable", "clipsToBounds"]
+- !private ["PSs8Hashable", "contentView"]
+- !private ["PSs8Hashable", "cornerRadius"]
+- ["PSs8Hashable", "delegate"]
+- !private ["PSs8Hashable", "font"]
+- !private ["PSs8Hashable", "frame"]
+- ["PSs8Hashable", "init"]
+- !private ["PSs8Hashable", "layer"]
+- !private ["PSs8Hashable", "layoutIfNeeded"]
+- ["PSs8Hashable", "messageLabel"]
+- !private ["PSs8Hashable", "numberOfLines"]
+- !private ["PSs8Hashable", "numberOfTapsRequired"]
+- ["PSs8Hashable", "onTapHandle"]
+- ["PSs8Hashable", "profileImageView"]
+- !private ["PSs8Hashable", "sizeToFit"]
+- !private ["PSs8Hashable", "textColor"]
+- ["PSs8Hashable", "user"]
+- !private ["PSs8Hashable", "userInteractionEnabled"]
+- !private ["PSs8Hashable", "whiteColor"]
+- ["PSs8Hashable", ""]
+- !private ["PSo8NSCoding", "Theme"]
+- !private ["PSo8NSCoding", "UIColor"]
+- !private ["PSo8NSCoding", "UITapGestureRecognizer"]
+- !private ["PSo8NSCoding", "addGestureRecognizer"]
+- ["PSo8NSCoding", "addTapGesture"]
+- ["PSo8NSCoding", "awakeFromNib"]
+- !private ["PSo8NSCoding", "backgroundColor"]
+- !private ["PSo8NSCoding", "clearColor"]
+- !private ["PSo8NSCoding", "clipsToBounds"]
+- !private ["PSo8NSCoding", "contentView"]
+- !private ["PSo8NSCoding", "cornerRadius"]
+- ["PSo8NSCoding", "delegate"]
+- !private ["PSo8NSCoding", "font"]
+- !private ["PSo8NSCoding", "frame"]
+- ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "layer"]
+- !private ["PSo8NSCoding", "layoutIfNeeded"]
+- ["PSo8NSCoding", "messageLabel"]
+- !private ["PSo8NSCoding", "numberOfLines"]
+- ["PSo8NSCoding", "onTapHandle"]
+- ["PSo8NSCoding", "profileImageView"]
+- !private ["PSo8NSCoding", "sizeToFit"]
+- !private ["PSo8NSCoding", "textColor"]
+- ["PSo8NSCoding", "user"]
+- !private ["PSo8NSCoding", "userInteractionEnabled"]
+- !private ["PSo8NSCoding", "whiteColor"]
+- ["PSo8NSCoding", ""]
+- !private ["PSo9NSCopying", "clearColor"]
+- !private ["PSo9NSCopying", "whiteColor"]
+- !private ["CSo8NSObject", "Theme"]
+- !private ["CSo8NSObject", "UIColor"]
+- ["CSo8NSObject", "UIImageView"]
+- ["CSo8NSObject", "UILabel"]
+- !private ["CSo8NSObject", "UITapGestureRecognizer"]
+- ["CSo8NSObject", "User"]
+- ["CSo8NSObject", "UserMessageCellDelegate"]
+- !private ["CSo8NSObject", "addGestureRecognizer"]
+- ["CSo8NSObject", "addTapGesture"]
+- ["CSo8NSObject", "awakeFromNib"]
+- !private ["CSo8NSObject", "backgroundColor"]
+- !private ["CSo8NSObject", "clearColor"]
+- !private ["CSo8NSObject", "clipsToBounds"]
+- !private ["CSo8NSObject", "contentView"]
+- !private ["CSo8NSObject", "cornerRadius"]
+- ["CSo8NSObject", "delegate"]
+- !private ["CSo8NSObject", "font"]
+- !private ["CSo8NSObject", "frame"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "layer"]
+- !private ["CSo8NSObject", "layoutIfNeeded"]
+- ["CSo8NSObject", "messageLabel"]
+- !private ["CSo8NSObject", "numberOfLines"]
+- !private ["CSo8NSObject", "numberOfTapsRequired"]
+- ["CSo8NSObject", "onTapHandle"]
+- ["CSo8NSObject", "profileImageView"]
+- !private ["CSo8NSObject", "sizeToFit"]
+- !private ["CSo8NSObject", "textColor"]
+- ["CSo8NSObject", "user"]
+- !private ["CSo8NSObject", "userInteractionEnabled"]
+- !private ["CSo8NSObject", "whiteColor"]
+- !private ["PSo16NSObjectProtocol", "Theme"]
+- !private ["PSo16NSObjectProtocol", "UIColor"]
+- !private ["PSo16NSObjectProtocol", "UITapGestureRecognizer"]
+- !private ["PSo16NSObjectProtocol", "addGestureRecognizer"]
+- ["PSo16NSObjectProtocol", "addTapGesture"]
+- ["PSo16NSObjectProtocol", "awakeFromNib"]
+- !private ["PSo16NSObjectProtocol", "backgroundColor"]
+- !private ["PSo16NSObjectProtocol", "clearColor"]
+- !private ["PSo16NSObjectProtocol", "clipsToBounds"]
+- !private ["PSo16NSObjectProtocol", "contentView"]
+- !private ["PSo16NSObjectProtocol", "cornerRadius"]
+- ["PSo16NSObjectProtocol", "delegate"]
+- !private ["PSo16NSObjectProtocol", "font"]
+- !private ["PSo16NSObjectProtocol", "frame"]
+- ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "layer"]
+- !private ["PSo16NSObjectProtocol", "layoutIfNeeded"]
+- ["PSo16NSObjectProtocol", "messageLabel"]
+- !private ["PSo16NSObjectProtocol", "numberOfLines"]
+- !private ["PSo16NSObjectProtocol", "numberOfTapsRequired"]
+- ["PSo16NSObjectProtocol", "onTapHandle"]
+- ["PSo16NSObjectProtocol", "profileImageView"]
+- !private ["PSo16NSObjectProtocol", "sizeToFit"]
+- !private ["PSo16NSObjectProtocol", "textColor"]
+- ["PSo16NSObjectProtocol", "user"]
+- !private ["PSo16NSObjectProtocol", "userInteractionEnabled"]
+- !private ["PSo16NSObjectProtocol", "whiteColor"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "clearColor"]
+- !private ["PSo14NSSecureCoding", "whiteColor"]
+- !private ["Sq", "deinit"]
+- !private ["V10ObjectiveC8Selector", "deinit"]
+- !private ["V6CoChat5Theme", "Fonts"]
+- !private ["PSo29UIAccessibilityIdentification", "Theme"]
+- !private ["PSo29UIAccessibilityIdentification", "UIColor"]
+- !private ["PSo29UIAccessibilityIdentification", "UITapGestureRecognizer"]
+- !private ["PSo29UIAccessibilityIdentification", "addGestureRecognizer"]
+- ["PSo29UIAccessibilityIdentification", "addTapGesture"]
+- ["PSo29UIAccessibilityIdentification", "awakeFromNib"]
+- !private ["PSo29UIAccessibilityIdentification", "backgroundColor"]
+- !private ["PSo29UIAccessibilityIdentification", "clipsToBounds"]
+- !private ["PSo29UIAccessibilityIdentification", "contentView"]
+- ["PSo29UIAccessibilityIdentification", "delegate"]
+- !private ["PSo29UIAccessibilityIdentification", "font"]
+- !private ["PSo29UIAccessibilityIdentification", "frame"]
+- ["PSo29UIAccessibilityIdentification", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "layer"]
+- !private ["PSo29UIAccessibilityIdentification", "layoutIfNeeded"]
+- ["PSo29UIAccessibilityIdentification", "messageLabel"]
+- !private ["PSo29UIAccessibilityIdentification", "numberOfLines"]
+- ["PSo29UIAccessibilityIdentification", "onTapHandle"]
+- ["PSo29UIAccessibilityIdentification", "profileImageView"]
+- !private ["PSo29UIAccessibilityIdentification", "sizeToFit"]
+- !private ["PSo29UIAccessibilityIdentification", "textColor"]
+- ["PSo29UIAccessibilityIdentification", "user"]
+- !private ["PSo29UIAccessibilityIdentification", "userInteractionEnabled"]
+- ["PSo29UIAccessibilityIdentification", ""]
+- !private ["PSo12UIAppearance", "Theme"]
+- !private ["PSo12UIAppearance", "UIColor"]
+- !private ["PSo12UIAppearance", "UITapGestureRecognizer"]
+- !private ["PSo12UIAppearance", "addGestureRecognizer"]
+- ["PSo12UIAppearance", "addTapGesture"]
+- ["PSo12UIAppearance", "awakeFromNib"]
+- !private ["PSo12UIAppearance", "backgroundColor"]
+- !private ["PSo12UIAppearance", "clipsToBounds"]
+- !private ["PSo12UIAppearance", "contentView"]
+- ["PSo12UIAppearance", "delegate"]
+- !private ["PSo12UIAppearance", "font"]
+- !private ["PSo12UIAppearance", "frame"]
+- ["PSo12UIAppearance", "init"]
+- !private ["PSo12UIAppearance", "layer"]
+- !private ["PSo12UIAppearance", "layoutIfNeeded"]
+- ["PSo12UIAppearance", "messageLabel"]
+- !private ["PSo12UIAppearance", "numberOfLines"]
+- ["PSo12UIAppearance", "onTapHandle"]
+- ["PSo12UIAppearance", "profileImageView"]
+- !private ["PSo12UIAppearance", "sizeToFit"]
+- !private ["PSo12UIAppearance", "textColor"]
+- ["PSo12UIAppearance", "user"]
+- !private ["PSo12UIAppearance", "userInteractionEnabled"]
+- ["PSo12UIAppearance", ""]
+- !private ["PSo21UIAppearanceContainer", "Theme"]
+- !private ["PSo21UIAppearanceContainer", "UIColor"]
+- !private ["PSo21UIAppearanceContainer", "UITapGestureRecognizer"]
+- !private ["PSo21UIAppearanceContainer", "addGestureRecognizer"]
+- ["PSo21UIAppearanceContainer", "addTapGesture"]
+- ["PSo21UIAppearanceContainer", "awakeFromNib"]
+- !private ["PSo21UIAppearanceContainer", "backgroundColor"]
+- !private ["PSo21UIAppearanceContainer", "clipsToBounds"]
+- !private ["PSo21UIAppearanceContainer", "contentView"]
+- ["PSo21UIAppearanceContainer", "delegate"]
+- !private ["PSo21UIAppearanceContainer", "font"]
+- !private ["PSo21UIAppearanceContainer", "frame"]
+- ["PSo21UIAppearanceContainer", "init"]
+- !private ["PSo21UIAppearanceContainer", "layer"]
+- !private ["PSo21UIAppearanceContainer", "layoutIfNeeded"]
+- ["PSo21UIAppearanceContainer", "messageLabel"]
+- !private ["PSo21UIAppearanceContainer", "numberOfLines"]
+- ["PSo21UIAppearanceContainer", "onTapHandle"]
+- ["PSo21UIAppearanceContainer", "profileImageView"]
+- !private ["PSo21UIAppearanceContainer", "sizeToFit"]
+- !private ["PSo21UIAppearanceContainer", "textColor"]
+- ["PSo21UIAppearanceContainer", "user"]
+- !private ["PSo21UIAppearanceContainer", "userInteractionEnabled"]
+- ["PSo21UIAppearanceContainer", ""]
+- !private ["CSo7UIColor", "clearColor"]
+- !private ["CSo7UIColor", "whiteColor"]
+- !private ["PSo17UICoordinateSpace", "Theme"]
+- !private ["PSo17UICoordinateSpace", "UIColor"]
+- !private ["PSo17UICoordinateSpace", "UITapGestureRecognizer"]
+- !private ["PSo17UICoordinateSpace", "addGestureRecognizer"]
+- ["PSo17UICoordinateSpace", "addTapGesture"]
+- ["PSo17UICoordinateSpace", "awakeFromNib"]
+- !private ["PSo17UICoordinateSpace", "backgroundColor"]
+- !private ["PSo17UICoordinateSpace", "clipsToBounds"]
+- !private ["PSo17UICoordinateSpace", "contentView"]
+- ["PSo17UICoordinateSpace", "delegate"]
+- !private ["PSo17UICoordinateSpace", "font"]
+- !private ["PSo17UICoordinateSpace", "frame"]
+- ["PSo17UICoordinateSpace", "init"]
+- !private ["PSo17UICoordinateSpace", "layer"]
+- !private ["PSo17UICoordinateSpace", "layoutIfNeeded"]
+- ["PSo17UICoordinateSpace", "messageLabel"]
+- !private ["PSo17UICoordinateSpace", "numberOfLines"]
+- ["PSo17UICoordinateSpace", "onTapHandle"]
+- ["PSo17UICoordinateSpace", "profileImageView"]
+- !private ["PSo17UICoordinateSpace", "sizeToFit"]
+- !private ["PSo17UICoordinateSpace", "textColor"]
+- ["PSo17UICoordinateSpace", "user"]
+- !private ["PSo17UICoordinateSpace", "userInteractionEnabled"]
+- ["PSo17UICoordinateSpace", ""]
+- !private ["PSo13UIDynamicItem", "Theme"]
+- !private ["PSo13UIDynamicItem", "UIColor"]
+- !private ["PSo13UIDynamicItem", "UITapGestureRecognizer"]
+- !private ["PSo13UIDynamicItem", "addGestureRecognizer"]
+- ["PSo13UIDynamicItem", "addTapGesture"]
+- ["PSo13UIDynamicItem", "awakeFromNib"]
+- !private ["PSo13UIDynamicItem", "backgroundColor"]
+- !private ["PSo13UIDynamicItem", "clipsToBounds"]
+- !private ["PSo13UIDynamicItem", "contentView"]
+- ["PSo13UIDynamicItem", "delegate"]
+- !private ["PSo13UIDynamicItem", "font"]
+- !private ["PSo13UIDynamicItem", "frame"]
+- ["PSo13UIDynamicItem", "init"]
+- !private ["PSo13UIDynamicItem", "layer"]
+- !private ["PSo13UIDynamicItem", "layoutIfNeeded"]
+- ["PSo13UIDynamicItem", "messageLabel"]
+- !private ["PSo13UIDynamicItem", "numberOfLines"]
+- ["PSo13UIDynamicItem", "onTapHandle"]
+- ["PSo13UIDynamicItem", "profileImageView"]
+- !private ["PSo13UIDynamicItem", "sizeToFit"]
+- !private ["PSo13UIDynamicItem", "textColor"]
+- ["PSo13UIDynamicItem", "user"]
+- !private ["PSo13UIDynamicItem", "userInteractionEnabled"]
+- ["PSo13UIDynamicItem", ""]
+- !private ["PSo18UIFocusEnvironment", "Theme"]
+- !private ["PSo18UIFocusEnvironment", "UIColor"]
+- !private ["PSo18UIFocusEnvironment", "UITapGestureRecognizer"]
+- !private ["PSo18UIFocusEnvironment", "addGestureRecognizer"]
+- ["PSo18UIFocusEnvironment", "addTapGesture"]
+- ["PSo18UIFocusEnvironment", "awakeFromNib"]
+- !private ["PSo18UIFocusEnvironment", "backgroundColor"]
+- !private ["PSo18UIFocusEnvironment", "clipsToBounds"]
+- !private ["PSo18UIFocusEnvironment", "contentView"]
+- ["PSo18UIFocusEnvironment", "delegate"]
+- !private ["PSo18UIFocusEnvironment", "font"]
+- !private ["PSo18UIFocusEnvironment", "frame"]
+- ["PSo18UIFocusEnvironment", "init"]
+- !private ["PSo18UIFocusEnvironment", "layer"]
+- !private ["PSo18UIFocusEnvironment", "layoutIfNeeded"]
+- ["PSo18UIFocusEnvironment", "messageLabel"]
+- !private ["PSo18UIFocusEnvironment", "numberOfLines"]
+- ["PSo18UIFocusEnvironment", "onTapHandle"]
+- ["PSo18UIFocusEnvironment", "profileImageView"]
+- !private ["PSo18UIFocusEnvironment", "sizeToFit"]
+- !private ["PSo18UIFocusEnvironment", "textColor"]
+- ["PSo18UIFocusEnvironment", "user"]
+- !private ["PSo18UIFocusEnvironment", "userInteractionEnabled"]
+- ["PSo18UIFocusEnvironment", ""]
+- !private ["CSo19UIGestureRecognizer", "init"]
+- !private ["CSo19UIGestureRecognizer", "numberOfTapsRequired"]
+- !private ["PSo27UIGestureRecognizerDelegate", "Theme"]
+- !private ["PSo27UIGestureRecognizerDelegate", "UIColor"]
+- !private ["PSo27UIGestureRecognizerDelegate", "UITapGestureRecognizer"]
+- ["PSo27UIGestureRecognizerDelegate", "addTapGesture"]
+- ["PSo27UIGestureRecognizerDelegate", "awakeFromNib"]
+- !private ["PSo27UIGestureRecognizerDelegate", "backgroundColor"]
+- !private ["PSo27UIGestureRecognizerDelegate", "contentView"]
+- ["PSo27UIGestureRecognizerDelegate", "delegate"]
+- ["PSo27UIGestureRecognizerDelegate", "init"]
+- ["PSo27UIGestureRecognizerDelegate", "messageLabel"]
+- ["PSo27UIGestureRecognizerDelegate", "onTapHandle"]
+- ["PSo27UIGestureRecognizerDelegate", "profileImageView"]
+- ["PSo27UIGestureRecognizerDelegate", "user"]
+- ["PSo27UIGestureRecognizerDelegate", ""]
+- !private ["CSo11UIImageView", "addGestureRecognizer"]
+- !private ["CSo11UIImageView", "clipsToBounds"]
+- !private ["CSo11UIImageView", "frame"]
+- !private ["CSo11UIImageView", "layer"]
+- !private ["CSo11UIImageView", "userInteractionEnabled"]
+- !private ["CSo7UILabel", "font"]
+- !private ["CSo7UILabel", "frame"]
+- !private ["CSo7UILabel", "layoutIfNeeded"]
+- !private ["CSo7UILabel", "numberOfLines"]
+- !private ["CSo7UILabel", "sizeToFit"]
+- !private ["CSo7UILabel", "textColor"]
+- !private ["CSo11UIResponder", "Theme"]
+- !private ["CSo11UIResponder", "UIColor"]
+- ["CSo11UIResponder", "UIImageView"]
+- ["CSo11UIResponder", "UILabel"]
+- !private ["CSo11UIResponder", "UITapGestureRecognizer"]
+- ["CSo11UIResponder", "User"]
+- ["CSo11UIResponder", "UserMessageCellDelegate"]
+- !private ["CSo11UIResponder", "addGestureRecognizer"]
+- ["CSo11UIResponder", "addTapGesture"]
+- ["CSo11UIResponder", "awakeFromNib"]
+- !private ["CSo11UIResponder", "backgroundColor"]
+- !private ["CSo11UIResponder", "clipsToBounds"]
+- !private ["CSo11UIResponder", "contentView"]
+- ["CSo11UIResponder", "delegate"]
+- !private ["CSo11UIResponder", "font"]
+- !private ["CSo11UIResponder", "frame"]
+- ["CSo11UIResponder", "init"]
+- !private ["CSo11UIResponder", "layer"]
+- !private ["CSo11UIResponder", "layoutIfNeeded"]
+- ["CSo11UIResponder", "messageLabel"]
+- !private ["CSo11UIResponder", "numberOfLines"]
+- ["CSo11UIResponder", "onTapHandle"]
+- ["CSo11UIResponder", "profileImageView"]
+- !private ["CSo11UIResponder", "sizeToFit"]
+- !private ["CSo11UIResponder", "textColor"]
+- ["CSo11UIResponder", "user"]
+- !private ["CSo11UIResponder", "userInteractionEnabled"]
+- !private ["CSo15UITableViewCell", "Theme"]
+- !private ["CSo15UITableViewCell", "UIColor"]
+- ["CSo15UITableViewCell", "UIImageView"]
+- ["CSo15UITableViewCell", "UILabel"]
+- !private ["CSo15UITableViewCell", "UITapGestureRecognizer"]
+- ["CSo15UITableViewCell", "User"]
+- ["CSo15UITableViewCell", "UserMessageCellDelegate"]
+- ["CSo15UITableViewCell", "addTapGesture"]
+- ["CSo15UITableViewCell", "awakeFromNib"]
+- !private ["CSo15UITableViewCell", "backgroundColor"]
+- !private ["CSo15UITableViewCell", "contentView"]
+- ["CSo15UITableViewCell", "delegate"]
+- ["CSo15UITableViewCell", "init"]
+- ["CSo15UITableViewCell", "messageLabel"]
+- ["CSo15UITableViewCell", "onTapHandle"]
+- ["CSo15UITableViewCell", "profileImageView"]
+- ["CSo15UITableViewCell", "user"]
+- ["CSo15UITableViewCell", ""]
+- !private ["CSo22UITapGestureRecognizer", "init"]
+- !private ["CSo22UITapGestureRecognizer", "numberOfTapsRequired"]
+- !private ["PSo18UITraitEnvironment", "Theme"]
+- !private ["PSo18UITraitEnvironment", "UIColor"]
+- !private ["PSo18UITraitEnvironment", "UITapGestureRecognizer"]
+- !private ["PSo18UITraitEnvironment", "addGestureRecognizer"]
+- ["PSo18UITraitEnvironment", "addTapGesture"]
+- ["PSo18UITraitEnvironment", "awakeFromNib"]
+- !private ["PSo18UITraitEnvironment", "backgroundColor"]
+- !private ["PSo18UITraitEnvironment", "clipsToBounds"]
+- !private ["PSo18UITraitEnvironment", "contentView"]
+- ["PSo18UITraitEnvironment", "delegate"]
+- !private ["PSo18UITraitEnvironment", "font"]
+- !private ["PSo18UITraitEnvironment", "frame"]
+- ["PSo18UITraitEnvironment", "init"]
+- !private ["PSo18UITraitEnvironment", "layer"]
+- !private ["PSo18UITraitEnvironment", "layoutIfNeeded"]
+- ["PSo18UITraitEnvironment", "messageLabel"]
+- !private ["PSo18UITraitEnvironment", "numberOfLines"]
+- ["PSo18UITraitEnvironment", "onTapHandle"]
+- ["PSo18UITraitEnvironment", "profileImageView"]
+- !private ["PSo18UITraitEnvironment", "sizeToFit"]
+- !private ["PSo18UITraitEnvironment", "textColor"]
+- ["PSo18UITraitEnvironment", "user"]
+- !private ["PSo18UITraitEnvironment", "userInteractionEnabled"]
+- ["PSo18UITraitEnvironment", ""]
+- !private ["CSo6UIView", "Theme"]
+- !private ["CSo6UIView", "UIColor"]
+- ["CSo6UIView", "UIImageView"]
+- ["CSo6UIView", "UILabel"]
+- !private ["CSo6UIView", "UITapGestureRecognizer"]
+- ["CSo6UIView", "User"]
+- ["CSo6UIView", "UserMessageCellDelegate"]
+- !private ["CSo6UIView", "addGestureRecognizer"]
+- ["CSo6UIView", "addTapGesture"]
+- ["CSo6UIView", "awakeFromNib"]
+- !private ["CSo6UIView", "backgroundColor"]
+- !private ["CSo6UIView", "clipsToBounds"]
+- !private ["CSo6UIView", "contentView"]
+- ["CSo6UIView", "delegate"]
+- !private ["CSo6UIView", "font"]
+- !private ["CSo6UIView", "frame"]
+- ["CSo6UIView", "init"]
+- !private ["CSo6UIView", "layer"]
+- !private ["CSo6UIView", "layoutIfNeeded"]
+- ["CSo6UIView", "messageLabel"]
+- !private ["CSo6UIView", "numberOfLines"]
+- ["CSo6UIView", "onTapHandle"]
+- ["CSo6UIView", "profileImageView"]
+- !private ["CSo6UIView", "sizeToFit"]
+- !private ["CSo6UIView", "textColor"]
+- ["CSo6UIView", "user"]
+- !private ["CSo6UIView", "userInteractionEnabled"]
+- !private ["C6CoChat4User", "deinit"]
+- !private ["C6CoChat15UserMessageCell", "Theme"]
+- !private ["C6CoChat15UserMessageCell", "UIColor"]
+- ["C6CoChat15UserMessageCell", "UIImageView"]
+- ["C6CoChat15UserMessageCell", "UILabel"]
+- !private ["C6CoChat15UserMessageCell", "UITapGestureRecognizer"]
+- ["C6CoChat15UserMessageCell", "User"]
+- ["C6CoChat15UserMessageCell", "UserMessageCellDelegate"]
+- ["C6CoChat15UserMessageCell", "addTapGesture"]
+- ["C6CoChat15UserMessageCell", "awakeFromNib"]
+- !private ["C6CoChat15UserMessageCell", "backgroundColor"]
+- !private ["C6CoChat15UserMessageCell", "contentView"]
+- ["C6CoChat15UserMessageCell", "deinit"]
+- ["C6CoChat15UserMessageCell", "delegate"]
+- ["C6CoChat15UserMessageCell", "init"]
+- ["C6CoChat15UserMessageCell", "messageLabel"]
+- ["C6CoChat15UserMessageCell", "onTapHandle"]
+- ["C6CoChat15UserMessageCell", "profileImageView"]
+- ["C6CoChat15UserMessageCell", "user"]
+- ["P6CoChat23UserMessageCellDelegate", "AnyObject"]
+- ["P6CoChat23UserMessageCellDelegate", "UserMessageCell"]
+- ["P6CoChat23UserMessageCellDelegate", "userMessageCell"]
+- !private ["PSs24_ColorLiteralConvertible", "clearColor"]
+- !private ["PSs24_ColorLiteralConvertible", "whiteColor"]
+- !private ["PSs12_Reflectable", "Theme"]
+- !private ["PSs12_Reflectable", "UIColor"]
+- !private ["PSs12_Reflectable", "UITapGestureRecognizer"]
+- !private ["PSs12_Reflectable", "addGestureRecognizer"]
+- ["PSs12_Reflectable", "addTapGesture"]
+- ["PSs12_Reflectable", "awakeFromNib"]
+- !private ["PSs12_Reflectable", "backgroundColor"]
+- !private ["PSs12_Reflectable", "clipsToBounds"]
+- !private ["PSs12_Reflectable", "contentView"]
+- ["PSs12_Reflectable", "delegate"]
+- !private ["PSs12_Reflectable", "font"]
+- !private ["PSs12_Reflectable", "frame"]
+- !private ["PSs12_Reflectable", "height"]
+- ["PSs12_Reflectable", "init"]
+- !private ["PSs12_Reflectable", "layer"]
+- !private ["PSs12_Reflectable", "layoutIfNeeded"]
+- ["PSs12_Reflectable", "messageLabel"]
+- !private ["PSs12_Reflectable", "numberOfLines"]
+- ["PSs12_Reflectable", "onTapHandle"]
+- ["PSs12_Reflectable", "profileImageView"]
+- !private ["PSs12_Reflectable", "size"]
+- !private ["PSs12_Reflectable", "sizeToFit"]
+- !private ["PSs12_Reflectable", "textColor"]
+- ["PSs12_Reflectable", "user"]
+- !private ["PSs12_Reflectable", "userInteractionEnabled"]
+- !private ["PSs12_Reflectable", "width"]
+- ["PSs12_Reflectable", ""]
+depends-nominal:
+- "PSs9AnyObject"
+- !private "CSo7CALayer"
+- !private "PSo13CAMediaTiming"
+- !private "V12CoreGraphics7CGFloat"
+- !private "VSC6CGRect"
+- !private "VSC6CGSize"
+- "PSs11CVarArgType"
+- "PSs23CustomStringConvertible"
+- "PSs9Equatable"
+- !private "OV6CoChat5Theme5Fonts"
+- "PSs8Hashable"
+- "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "Sq"
+- !private "V10ObjectiveC8Selector"
+- !private "V6CoChat5Theme"
+- "PSo29UIAccessibilityIdentification"
+- "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- !private "CSo7UIColor"
+- "PSo17UICoordinateSpace"
+- "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- !private "CSo19UIGestureRecognizer"
+- "PSo27UIGestureRecognizerDelegate"
+- !private "CSo11UIImageView"
+- !private "CSo7UILabel"
+- "CSo11UIResponder"
+- "CSo15UITableViewCell"
+- !private "CSo22UITapGestureRecognizer"
+- "PSo18UITraitEnvironment"
+- "CSo6UIView"
+- !private "C6CoChat4User"
+- "C6CoChat15UserMessageCell"
+- "P6CoChat23UserMessageCellDelegate"
+- !private "PSs24_ColorLiteralConvertible"
+- "PSs12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FirebaseServerValue.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FTransactionResult.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FMutableData.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FirebaseApp.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FQuery.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/Firebase.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FEventType.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FDataSnapshot.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FConfig.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FAuthType.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FAuthData.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/Firebase-umbrella.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Modules/module.modulemap"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BoltsVersion.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/Bolts.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFTaskCompletionSource.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFTask.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFExecutor.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFCancellationTokenSource.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFCancellationTokenRegistration.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFCancellationToken.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFWebViewAppLinkResolver.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFURL_Internal.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFURL.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFMeasurementEvent_Internal.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFMeasurementEvent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFAppLinkTarget.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFAppLinkReturnToRefererView_Internal.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFAppLinkReturnToRefererView.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFAppLinkReturnToRefererController.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFAppLinkResolving.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFAppLinkNavigation.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFAppLink_Internal.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFAppLink.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/Bolts-umbrella.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Modules/module.modulemap"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKProfilePictureView.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKProfile.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKMutableCopying.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKGraphErrorRecoveryProcessor.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKUtility.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKTestUsersManager.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKSettings.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKGraphRequestDataAttachment.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKGraphRequest.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKCoreKit.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKConstants.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKButton.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKAppLinkUtility.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKAppLinkResolver.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKApplicationDelegate.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKAppEvents.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKMacros.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKGraphRequestConnection.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKCopying.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKAccessToken.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKCoreKit-umbrella.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Modules/module.modulemap"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKLoginKit.framework/Headers/FBSDKLoginTooltipView.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKLoginKit.framework/Headers/FBSDKLoginManagerLoginResult.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKLoginKit.framework/Headers/FBSDKLoginKit.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKLoginKit.framework/Headers/FBSDKLoginConstants.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKLoginKit.framework/Headers/FBSDKTooltipView.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKLoginKit.framework/Headers/FBSDKLoginManager.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKLoginKit.framework/Headers/FBSDKLoginButton.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKLoginKit.framework/Headers/FBSDKLoginKit-umbrella.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKLoginKit.framework/Modules/module.modulemap"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareVideoContent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareVideo.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKSharePhotoContent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKSharePhoto.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareOpenGraphContent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareOpenGraphAction.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareLinkContent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareKit.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareDialogMode.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareDialog.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareConstants.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareButton.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareOpenGraphValueContainer.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareOpenGraphObject.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareAPI.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKSharingButton.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKSendButton.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKSharingContent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKSharing.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKMessageDialog.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKLikeControl.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKLiking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKLikeObjectType.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKLikeButton.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKGameRequestDialog.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKGameRequestContent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKAppInviteDialog.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKAppInviteContent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKAppGroupJoinDialog.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKAppGroupContent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKAppGroupAddDialog.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareKit-umbrella.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/UIProgressView+AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/UIWebView+AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/UIRefreshControl+AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/UIKit+AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/UIImageView+AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/UIImage+AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/UIButton+AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/UIActivityIndicatorView+AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFNetworkActivityIndicatorManager.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFImageDownloader.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFAutoPurgingImageCache.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFHTTPSessionManager.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFURLSessionManager.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFNetworkReachabilityManager.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFSecurityPolicy.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFURLResponseSerialization.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFURLRequestSerialization.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFNetworking-umbrella.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Modules/module.modulemap"
+interface-hash: "bb98de0295cfad52d3cccbf428e27787"

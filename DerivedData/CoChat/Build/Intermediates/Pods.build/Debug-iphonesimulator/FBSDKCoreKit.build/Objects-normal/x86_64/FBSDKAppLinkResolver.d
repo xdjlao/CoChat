@@ -1,0 +1,39 @@
+dependencies: \
+  /Users/aaronb/Development/CoChat/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKAppLinkResolver.m \
+  /Users/aaronb/Development/CoChat/Pods/Target\ Support\ Files/FBSDKCoreKit/FBSDKCoreKit-prefix.pch \
+  /Users/aaronb/Development/CoChat/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKAppLinkResolver.h \
+  /Users/aaronb/Development/CoChat/Pods/Bolts/Bolts/Common/BoltsVersion.h \
+  /Users/aaronb/Development/CoChat/Pods/Bolts/Bolts/Common/Bolts.h \
+  /Users/aaronb/Development/CoChat/Pods/Bolts/Bolts/Common/BFTaskCompletionSource.h \
+  /Users/aaronb/Development/CoChat/Pods/Bolts/Bolts/Common/BFTask.h \
+  /Users/aaronb/Development/CoChat/Pods/Bolts/Bolts/Common/BFExecutor.h \
+  /Users/aaronb/Development/CoChat/Pods/Bolts/Bolts/Common/BFCancellationTokenSource.h \
+  /Users/aaronb/Development/CoChat/Pods/Bolts/Bolts/Common/BFCancellationTokenRegistration.h \
+  /Users/aaronb/Development/CoChat/Pods/Bolts/Bolts/Common/BFCancellationToken.h \
+  /Users/aaronb/Development/CoChat/Pods/Bolts/Bolts/iOS/BFWebViewAppLinkResolver.h \
+  /Users/aaronb/Development/CoChat/Pods/Bolts/Bolts/iOS/BFURL_Internal.h \
+  /Users/aaronb/Development/CoChat/Pods/Bolts/Bolts/iOS/BFURL.h \
+  /Users/aaronb/Development/CoChat/Pods/Bolts/Bolts/iOS/BFMeasurementEvent_Internal.h \
+  /Users/aaronb/Development/CoChat/Pods/Bolts/Bolts/iOS/BFMeasurementEvent.h \
+  /Users/aaronb/Development/CoChat/Pods/Bolts/Bolts/iOS/BFAppLinkTarget.h \
+  /Users/aaronb/Development/CoChat/Pods/Bolts/Bolts/iOS/BFAppLinkReturnToRefererView_Internal.h \
+  /Users/aaronb/Development/CoChat/Pods/Bolts/Bolts/iOS/BFAppLinkReturnToRefererView.h \
+  /Users/aaronb/Development/CoChat/Pods/Bolts/Bolts/iOS/BFAppLinkReturnToRefererController.h \
+  /Users/aaronb/Development/CoChat/Pods/Bolts/Bolts/iOS/BFAppLinkResolving.h \
+  /Users/aaronb/Development/CoChat/Pods/Bolts/Bolts/iOS/BFAppLinkNavigation.h \
+  /Users/aaronb/Development/CoChat/Pods/Bolts/Bolts/iOS/BFAppLink_Internal.h \
+  /Users/aaronb/Development/CoChat/Pods/Bolts/Bolts/iOS/BFAppLink.h \
+  /Users/aaronb/Development/CoChat/Pods/Target\ Support\ Files/Bolts/Bolts-umbrella.h \
+  /Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Intermediates/Pods.build/Debug-iphonesimulator/Bolts.build/module.modulemap \
+  /Users/aaronb/Development/CoChat/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/Internal/Network/FBSDKGraphRequest+Internal.h \
+  /Users/aaronb/Development/CoChat/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKGraphRequest.h \
+  /Users/aaronb/Development/CoChat/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKGraphRequestConnection.h \
+  /Users/aaronb/Development/CoChat/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKMacros.h \
+  /Users/aaronb/Development/CoChat/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/Internal/FBSDKLogger.h \
+  /Users/aaronb/Development/CoChat/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/Internal/FBSDKSettings+Internal.h \
+  /Users/aaronb/Development/CoChat/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/Internal/TokenCaching/FBSDKAccessTokenCache.h \
+  /Users/aaronb/Development/CoChat/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKAccessToken.h \
+  /Users/aaronb/Development/CoChat/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKCopying.h \
+  /Users/aaronb/Development/CoChat/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/Internal/TokenCaching/FBSDKAccessTokenCaching.h \
+  /Users/aaronb/Development/CoChat/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKSettings.h \
+  /Users/aaronb/Development/CoChat/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKUtility.h
