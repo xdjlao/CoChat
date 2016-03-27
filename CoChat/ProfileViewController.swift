@@ -10,6 +10,7 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
     private var loginButton:FBSDKLoginButton?
     private var imageScale = CGFloat(0)
     private var originalImageHeight:CGFloat?
+    var userLogedIn = true
     @IBOutlet var topContainer: UIView!
     @IBOutlet weak var recentTableView: UITableView! {
         didSet {
@@ -20,10 +21,8 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginButton = createFBLoginButton()
-        loginButton!.delegate = self
         setUpUI()
-
+        
         let favoriteChannels = FirebaseManager.manager.user.favoriteChannels
         FirebaseManager.manager.user.favoriteChannels.removeAll()
         for channel in favoriteChannels {
@@ -94,11 +93,26 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             cell.selectionStyle = UITableViewCellSelectionStyle.None
             originalImageHeight = 100
             return cell
-        case(0,cellArray.count - 1):
+        case(0, cellArray.count - 1):
             let cell = tableView.dequeueReusableCellWithCellIdentifier(.ProfileLogoutCell) as! ProfileLogoutCell
             cell.selectionStyle = UITableViewCellSelectionStyle.None
-            cell.superviewWidth = view.frame.width
-            cell.profileLogoutButton = loginButton
+            cell.signUpButton.layer.cornerRadius = 10
+            let buttonTitle = cell.signUpButton.titleLabel
+            buttonTitle?.textAlignment = .Center
+            if cellArray.count == 2 {
+                buttonTitle?.text = "Sign Up or Login"
+                cell.signUpButton.removeTarget(self, action: "logOutUser:", forControlEvents: .TouchUpInside)
+                cell.signUpButton.addTarget(self, action: "signUpUser:", forControlEvents: .TouchUpInside)
+                userLogedIn = false
+                cell.signUpButton.backgroundColor = Theme.Colors.ButtonColor.color
+            }
+            else {
+                buttonTitle?.text = "Log Out"
+                userLogedIn = true
+                cell.signUpButton.removeTarget(self, action: "signUpUser:", forControlEvents: .TouchUpInside)
+                cell.signUpButton.addTarget(self, action: "logOutUser:", forControlEvents: .TouchUpInside)
+                cell.signUpButton.backgroundColor = Theme.Colors.DarkButtonColor.color
+                }
             return cell
         default:
             let cell = tableView.dequeueReusableCellWithCellIdentifier(.ProfileFavoriteCell) as! ProfileFavoriteCell
@@ -129,17 +143,17 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             guard let cell = tableView.cellForRowAtIndexPath(indexPath) as? ProfileFavoriteCell else {return}
             UIView.animateWithDuration(0.2, delay: 0.0, options: [], animations: { () -> Void in
                 cell.favoriteContentWrapperView.backgroundColor = Theme.Colors.BackgroundColor.color
-            }) { (Bool) -> Void in
-                cell.favoriteContentWrapperView.backgroundColor = Theme.Colors.ForegroundColor.color
-                let channel = self.cellArray[indexPath.row] as! Channel
-                
-                FirebaseManager.manager.ref.childByAppendingPath("Channel").queryOrderedByChild("roomUID").queryEqualToValue(channel.room.uid).observeSingleEventOfType(.Value, withBlock: { snapshot in
+                }) { (Bool) -> Void in
+                    cell.favoriteContentWrapperView.backgroundColor = Theme.Colors.ForegroundColor.color
+                    let channel = self.cellArray[indexPath.row] as! Channel
                     
-                    guard let channels = Channel.arrayFromSnapshot(snapshot) else { return }
-                    
-                    channel.room.channels = channels
-                    self.performSegueWithSegueIdentifier(.ProfileToMessagingSegue, sender: channel)
-                })
+                    FirebaseManager.manager.ref.childByAppendingPath("Channel").queryOrderedByChild("roomUID").queryEqualToValue(channel.room.uid).observeSingleEventOfType(.Value, withBlock: { snapshot in
+                        
+                        guard let channels = Channel.arrayFromSnapshot(snapshot) else { return }
+                        
+                        channel.room.channels = channels
+                        self.performSegueWithSegueIdentifier(.ProfileToMessagingSegue, sender: channel)
+                    })
             }
         }
     }
@@ -171,6 +185,14 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         case(0,cellArray.count - 1): return 80
         default: return 71
         }
+    }
+    
+    @IBAction func logOutUser (sender:UIButton){
+    //MARK: - Log Out User Here
+    }
+    
+    @IBAction func signUpUser (sender:UIButton){
+        presentLoginScreen()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

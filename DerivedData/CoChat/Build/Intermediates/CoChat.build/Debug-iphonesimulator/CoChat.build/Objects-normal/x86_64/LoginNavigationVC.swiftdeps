@@ -6,8 +6,8 @@ provides-nominal:
 provides-member:
 - ["C6CoChat17LoginNavigationVC", ""]
 provides-dynamic-lookup:
-- "didReceiveMemoryWarning"
 - "viewDidLoad"
+- "didReceiveMemoryWarning"
 depends-top-level:
 - "LoginNavigationVC"
 - "UINavigationController"

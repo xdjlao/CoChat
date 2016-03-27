@@ -77,7 +77,7 @@ class EmailSignUpVC: UIViewController, UITextFieldDelegate {
     @IBAction func signUpButtonWasTapped(sender: UIButton) {
         if allTextFieldsAreFilled(textFields) && passwordsMatch(passwordTextField, tF2: rePasswordTextField)
             && isValidEmail(emailTextField) {
-                //Authentice User Info here
+//MARK: -Authentice User Info here
         }
     }
     

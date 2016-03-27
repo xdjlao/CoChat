@@ -9,28 +9,28 @@ provides-member:
 - ["P6CoChat23UserMessageCellDelegate", ""]
 - ["C6CoChat15UserMessageCell", ""]
 provides-dynamic-lookup:
-- "addTapGesture"
-- "messageLabel"
-- "delegate"
-- "onTapHandle"
 - "profileImageView"
-- "userMessageCell"
+- "delegate"
 - "awakeFromNib"
+- "addTapGesture"
+- "userMessageCell"
+- "messageLabel"
+- "onTapHandle"
 depends-top-level:
 - "UILabel"
-- "UIImageView"
-- "UserMessageCellDelegate"
-- "AnyObject"
 - "UserMessageCell"
-- !private "StringLiteralType"
 - !private "UITapGestureRecognizer"
-- !private "/"
-- "UITableViewCell"
+- !private "StringLiteralType"
+- "UIImageView"
 - !private "UIColor"
+- "UITableViewCell"
+- !private "/"
+- "UserMessageCellDelegate"
 - !private "Theme"
+- "AnyObject"
 - !private "+"
-- !private "BooleanLiteralType"
 - "User"
+- !private "BooleanLiteralType"
 depends-member:
 - !private ["PSs9AnyObject", "Theme"]
 - !private ["PSs9AnyObject", "UIColor"]

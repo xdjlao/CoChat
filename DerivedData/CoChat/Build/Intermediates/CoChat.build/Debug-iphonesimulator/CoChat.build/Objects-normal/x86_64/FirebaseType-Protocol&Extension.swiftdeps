@@ -14,23 +14,23 @@ provides-member:
 - ["P6CoChat12FirebaseType", "singleFromSnapshot"]
 provides-dynamic-lookup:
 depends-top-level:
-- "String"
-- !private "print"
-- !private "UnicodeScalarType"
 - !private "assertionFailure"
 - !private "Void"
-- "Firebase"
-- "NSObject"
-- "FirebaseType"
-- "StringLiteralType"
-- "=="
-- !private "~="
-- "Type"
-- !private "??"
-- "FDataSnapshot"
-- !private "+"
 - "AnyObject"
 - !private "baseURL"
+- !private "??"
+- !private "~="
+- "=="
+- "Firebase"
+- !private "print"
+- "FDataSnapshot"
+- !private "+"
+- "String"
+- "Type"
+- "NSObject"
+- "FirebaseType"
+- !private "UnicodeScalarType"
+- "StringLiteralType"
 depends-member:
 - !private ["PSs9AnyObject", "childByAppendingPath"]
 - !private ["PSs9AnyObject", "childByAutoId"]

@@ -7,24 +7,24 @@ provides-member:
 - ["C6CoChat7Message", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "Channel"
-- "Type"
-- "StringLiteralType"
-- "NSObject"
-- "AnyObject"
-- "Message"
-- "NSDate"
-- !private "NSTimeInterval"
-- !private "FirebaseManager"
-- "String"
-- !private "print"
-- !private "??"
-- !private "assertionFailure"
 - "User"
-- "DualQueriedType"
+- "Channel"
 - "Conversation"
+- "DualQueriedType"
+- "NSObject"
 - !private "Dictionary"
+- "StringLiteralType"
+- "Type"
+- "NSDate"
+- "AnyObject"
+- !private "FirebaseManager"
+- !private "assertionFailure"
+- "Message"
+- !private "??"
+- !private "NSTimeInterval"
+- "String"
 - !private "Void"
+- !private "print"
 depends-member:
 - !private ["PSs16AbsoluteValuable", "init"]
 - !private ["PSs9AnyObject", "AnyObject"]

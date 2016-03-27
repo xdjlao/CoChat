@@ -548,12 +548,11 @@ SWIFT_CLASS("_TtC6CoChat17ProfileHeaderCell")
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class FBSDKLoginButton;
 
 SWIFT_CLASS("_TtC6CoChat17ProfileLogoutCell")
 @interface ProfileLogoutCell : UITableViewCell
+@property (nonatomic, strong) IBOutlet UIButton * __null_unspecified signUpButton;
 @property (nonatomic, weak) IBOutlet UIView * __null_unspecified logoutCellView;
-@property (nonatomic, strong) FBSDKLoginButton * __nullable profileLogoutButton;
 - (void)awakeFromNib;
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated;
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * __nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
@@ -563,6 +562,7 @@ SWIFT_CLASS("_TtC6CoChat17ProfileLogoutCell")
 
 SWIFT_CLASS("_TtC6CoChat21ProfileViewController")
 @interface ProfileViewController : UIViewController <FBSDKLoginButtonDelegate>
+@property (nonatomic) BOOL userLogedIn;
 @property (nonatomic, strong) IBOutlet UIView * __null_unspecified topContainer;
 @property (nonatomic, weak) IBOutlet UITableView * __null_unspecified recentTableView;
 - (void)viewDidLoad;
@@ -580,6 +580,8 @@ SWIFT_CLASS("_TtC6CoChat21ProfileViewController")
 - (void)tableView:(UITableView * __nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * __nonnull)indexPath;
 - (void)scrollViewDidScroll:(UIScrollView * __nonnull)scrollView;
 - (CGFloat)tableView:(UITableView * __nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * __nonnull)indexPath;
+- (IBAction)logOutUser:(UIButton * __nonnull)sender;
+- (IBAction)signUpUser:(UIButton * __nonnull)sender;
 - (void)prepareForSegue:(UIStoryboardSegue * __nonnull)segue sender:(id __nullable)sender;
 @end
 
@@ -693,6 +695,7 @@ SWIFT_CLASS("_TtC6CoChat11TopRoomCell")
 @interface UIViewController (SWIFT_EXTENSION(CoChat))
 @end
 
+@class FBSDKLoginButton;
 @class FBSDKLoginManagerLoginResult;
 
 @interface UIViewController (SWIFT_EXTENSION(CoChat))

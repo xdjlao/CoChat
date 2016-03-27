@@ -6,24 +6,24 @@ provides-nominal:
 provides-member:
 - ["C6CoChat19ProfileFavoriteCell", ""]
 provides-dynamic-lookup:
-- "setSelected"
-- "favoriteChannelLabel"
-- "awakeFromNib"
-- "imageSeparatorView"
 - "favoriteImageView"
 - "favoriteChannelLabelName"
-- "favoriteContentWrapperView"
+- "imageSeparatorView"
+- "awakeFromNib"
+- "setSelected"
 - "imageWrapperView"
+- "favoriteChannelLabel"
+- "favoriteContentWrapperView"
 - "contentSeparatorView"
 depends-top-level:
-- "UIImageView"
-- !private "UIColor"
-- "UIView"
 - "UILabel"
-- "Bool"
 - "ProfileFavoriteCell"
-- !private "Theme"
+- !private "UIColor"
 - "UITableViewCell"
+- "UIView"
+- "UIImageView"
+- "Bool"
+- !private "Theme"
 depends-member:
 - !private ["PSs9AnyObject", "Theme"]
 - !private ["PSs9AnyObject", "UIColor"]

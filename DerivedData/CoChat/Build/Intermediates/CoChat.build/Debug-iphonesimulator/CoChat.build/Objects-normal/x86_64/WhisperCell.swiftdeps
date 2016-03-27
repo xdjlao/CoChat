@@ -7,22 +7,22 @@ provides-member:
 - ["C6CoChat11WhisperCell", ""]
 provides-dynamic-lookup:
 - "messageLabel"
-- "contentSeparatorView"
 - "timestampLabel"
 - "imageSeparatorView"
 - "profileImageView"
 - "awakeFromNib"
-- "container"
 - "contentWrapperView"
+- "container"
+- "contentSeparatorView"
 - "nameLabel"
 depends-top-level:
-- !private "UIColor"
-- "UIView"
-- "UILabel"
-- !private "Theme"
 - "UITableViewCell"
+- "UILabel"
 - "WhisperCell"
 - "UIImageView"
+- !private "UIColor"
+- "UIView"
+- !private "Theme"
 depends-member:
 - !private ["PSs9AnyObject", "Theme"]
 - !private ["PSs9AnyObject", "UIColor"]

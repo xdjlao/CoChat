@@ -49,7 +49,7 @@ class LoginEmailVC: UIViewController {
     
     @IBAction func logInButtonWasTapped(sender: UIButton) {
         if allTextFieldsAreFilled(textFields) && isValidEmail(emailTextField) {
-            //authenicate user here
+            //MARK: - Authenicate user here
         }
     }
 }

@@ -11,11 +11,11 @@ provides-member:
 - ["OV6CoChat5Theme5Fonts", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "UIColor"
-- "=="
-- "Theme"
-- !private "StringLiteralType"
 - !private "/"
+- "=="
+- !private "StringLiteralType"
+- "UIColor"
+- "Theme"
 - "UIFont"
 depends-member:
 - !private ["PSs9AnyObject", "init"]

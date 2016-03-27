@@ -7,10 +7,10 @@ provides-member:
 provides-dynamic-lookup:
 - "lastIndexPath"
 depends-top-level:
-- !private "-"
-- "NSIndexPath"
-- !private ">"
 - "UITableView"
+- !private "-"
+- !private ">"
+- "NSIndexPath"
 depends-member:
 - !private ["PSs9AnyObject", "NSIndexPath"]
 - !private ["PSs9AnyObject", "init"]

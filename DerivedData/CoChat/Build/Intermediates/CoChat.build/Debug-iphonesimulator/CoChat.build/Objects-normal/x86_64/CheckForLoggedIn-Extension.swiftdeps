@@ -9,27 +9,27 @@ provides-member:
 - ["CSo16UIViewController", "loginButton"]
 - ["CSo16UIViewController", "loginButtonDidLogOut"]
 provides-dynamic-lookup:
-- "createFBLoginButtonWithPosition"
-- "createFBLoginButton"
-- "loginButton"
 - "presentLoginScreen"
+- "loginButton"
+- "createFBLoginButtonWithPosition"
 - "loginButtonDidLogOut"
+- "createFBLoginButton"
 depends-top-level:
-- !private "StringLiteralType"
-- "UIViewController"
-- !private "CGPoint"
-- !private "FBSDKAccessToken"
-- !private "FirebaseManager"
-- !private "Array"
-- !private "print"
 - !private "LoginNavigationVC"
-- !private "UIStoryboard"
-- "NSError"
-- "FBSDKLoginManagerLoginResult"
-- !private "User"
+- !private "print"
 - "FBSDKLoginButton"
+- "UIViewController"
+- !private "FBSDKAccessToken"
+- !private "Array"
+- !private "StringLiteralType"
+- !private "UIStoryboard"
+- !private "User"
+- "NSError"
 - "CGFloat"
+- !private "FirebaseManager"
+- "FBSDKLoginManagerLoginResult"
 - !private "BooleanLiteralType"
+- !private "CGPoint"
 depends-member:
 - !private ["PSs9AnyObject", "CGPoint"]
 - !private ["PSs9AnyObject", "FBSDKAccessToken"]

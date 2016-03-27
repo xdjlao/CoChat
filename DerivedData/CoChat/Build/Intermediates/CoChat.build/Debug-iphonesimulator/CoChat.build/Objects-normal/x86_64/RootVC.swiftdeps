@@ -8,13 +8,13 @@ provides-member:
 provides-dynamic-lookup:
 - "viewDidAppear"
 - "videoDidStopPlaying"
-- "viewDidLoad"
 - "container"
+- "viewDidLoad"
 depends-top-level:
-- "UIView"
 - "Bool"
-- "UIViewController"
 - "RootVC"
+- "UIView"
+- "UIViewController"
 depends-member:
 - ["PSs9AnyObject", "container"]
 - ["PSs9AnyObject", "init"]

@@ -6,27 +6,27 @@ provides-nominal:
 provides-member:
 - ["C6CoChat17ProfileHeaderCell", ""]
 provides-dynamic-lookup:
-- "usernameLabel"
-- "setUIforUser"
-- "awakeFromNib"
 - "userImageView"
+- "awakeFromNib"
+- "setUIforUser"
+- "usernameLabel"
 depends-top-level:
-- !private "UIColor"
-- "UILabel"
-- !private "print"
-- !private "!="
-- !private "FirebaseManager"
-- !private "UIImage"
-- !private "StringLiteralType"
-- !private "UIApplicationDidBecomeActiveNotification"
-- !private "Theme"
-- "UIImageView"
-- !private "NSNotificationCenter"
-- "ProfileHeaderCell"
 - !private "NSURL"
+- "ProfileHeaderCell"
 - !private "/"
 - "UITableViewCell"
 - !private "BooleanLiteralType"
+- "UILabel"
+- !private "UIColor"
+- !private "!="
+- !private "NSNotificationCenter"
+- "UIImageView"
+- !private "FirebaseManager"
+- !private "Theme"
+- !private "UIApplicationDidBecomeActiveNotification"
+- !private "StringLiteralType"
+- !private "UIImage"
+- !private "print"
 depends-member:
 - !private ["PSs9AnyObject", "FirebaseManager"]
 - !private ["PSs9AnyObject", "NSNotificationCenter"]

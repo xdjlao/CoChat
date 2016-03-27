@@ -8,12 +8,12 @@ provides-member:
 provides-dynamic-lookup:
 - "perform"
 depends-top-level:
-- !private "MessagingViewController"
-- !private "Void"
 - !private "UITabBarController"
+- !private "Void"
 - "UIStoryboardSegue"
-- "DismissSegue"
 - !private "BooleanLiteralType"
+- !private "MessagingViewController"
+- "DismissSegue"
 depends-member:
 - !private ["PSs9AnyObject", "destinationViewController"]
 - !private ["PSs9AnyObject", "dismissViewControllerAnimated"]

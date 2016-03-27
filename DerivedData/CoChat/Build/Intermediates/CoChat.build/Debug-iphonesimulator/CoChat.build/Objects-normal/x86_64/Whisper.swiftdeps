@@ -7,18 +7,18 @@ provides-member:
 - ["C6CoChat7Whisper", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "??"
+- !private "assertionFailure"
 - "Type"
-- !private "Dictionary"
 - "StringLiteralType"
 - "NSObject"
 - "User"
-- !private "NSTimeInterval"
 - "NSDate"
+- !private "NSTimeInterval"
+- !private "??"
+- "AnyObject"
 - "DualQueriedType"
 - "Whisper"
-- !private "assertionFailure"
-- "AnyObject"
+- !private "Dictionary"
 - "String"
 depends-member:
 - !private ["PSs16AbsoluteValuable", "init"]

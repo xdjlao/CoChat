@@ -6,17 +6,17 @@ provides-nominal:
 provides-member:
 - ["C6CoChat24MainTabBarViewController", ""]
 provides-dynamic-lookup:
+- "setupTabBarUI"
 - "prepareForUnwind"
 - "viewDidLoad"
-- "setupTabBarUI"
 depends-top-level:
-- !private "StringLiteralType"
-- "UIStoryboardSegue"
-- !private "UIImage"
 - !private "print"
+- "UIStoryboardSegue"
 - "MainTabBarViewController"
-- !private "Theme"
+- !private "StringLiteralType"
 - "UITabBarController"
+- !private "UIImage"
+- !private "Theme"
 - !private "BooleanLiteralType"
 depends-member:
 - !private ["PSs9AnyObject", "Theme"]
