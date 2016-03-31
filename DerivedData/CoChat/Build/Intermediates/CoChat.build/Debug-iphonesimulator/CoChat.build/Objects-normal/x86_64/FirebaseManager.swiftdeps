@@ -12,75 +12,76 @@ provides-member:
 - ["C6CoChat15FirebaseManager", "checkForUniqueEntryKey"]
 provides-dynamic-lookup:
 depends-top-level:
-- "Room"
-- "String"
 - "Bool"
-- !private "??"
-- !private "NSNotification"
-- !private "=="
-- "Message"
-- "StringLiteralType"
-- !private "print"
-- !private "NSObject"
-- "UInt"
-- "FirebaseManager"
-- "Firebase"
-- "User"
-- "FAuthData"
-- !private "Channel"
 - "baseURL"
-- !private "assertionFailure"
-- !private "UnicodeScalarType"
+- !private "NSNotification"
+- "Firebase"
+- "Room"
+- !private "Channel"
+- "FirebaseManager"
 - !private "NSNotificationCenter"
-- !private "NSOperationQueue"
+- !private "NSObject"
 - !private "AnyObject"
-- "FirebaseType"
 - "BooleanLiteralType"
+- !private "UnicodeScalarType"
+- "FAuthData"
+- !private "!="
+- "Message"
+- !private "assertionFailure"
+- !private "print"
+- !private "=="
+- "User"
+- !private "NSOperationQueue"
+- "StringLiteralType"
+- "String"
+- "UInt"
+- !private "??"
+- "FirebaseType"
 depends-member:
-- !private ["PSs9AnyObject", "Channel"]
-- ["PSs9AnyObject", "Firebase"]
-- ["PSs9AnyObject", "FirebaseManager"]
-- !private ["PSs9AnyObject", "Message"]
-- !private ["PSs9AnyObject", "NSNotification"]
-- !private ["PSs9AnyObject", "NSNotificationCenter"]
-- !private ["PSs9AnyObject", "NSOperationQueue"]
-- !private ["PSs9AnyObject", "Room"]
-- !private ["PSs9AnyObject", "User"]
-- !private ["PSs9AnyObject", "addOperationWithBlock"]
-- !private ["PSs9AnyObject", "arrayFromSnapshot"]
-- !private ["PSs9AnyObject", "assertionFailure"]
-- !private ["PSs9AnyObject", "authData"]
-- ["PSs9AnyObject", "baseURL"]
-- !private ["PSs9AnyObject", "channelMessages"]
-- !private ["PSs9AnyObject", "channels"]
-- !private ["PSs9AnyObject", "childByAppendingPath"]
-- !private ["PSs9AnyObject", "conversationPartners"]
-- !private ["PSs9AnyObject", "defaultCenter"]
-- !private ["PSs9AnyObject", "favoriteChannels"]
-- !private ["PSs9AnyObject", "getChildrenForParent"]
-- !private ["PSs9AnyObject", "getObjectForID"]
-- !private ["PSs9AnyObject", "getObjectsByChildValue"]
-- !private ["PSs9AnyObject", "getRelationshipString"]
-- !private ["PSs9AnyObject", "getUserStoredData"]
-- ["PSs9AnyObject", "init"]
-- !private ["PSs9AnyObject", "mainQueue"]
-- !private ["PSs9AnyObject", "manager"]
-- !private ["PSs9AnyObject", "observeEventType"]
-- !private ["PSs9AnyObject", "observeSingleEventOfType"]
-- !private ["PSs9AnyObject", "password"]
-- !private ["PSs9AnyObject", "postNotification"]
-- !private ["PSs9AnyObject", "print"]
-- !private ["PSs9AnyObject", "profileImageURL"]
-- !private ["PSs9AnyObject", "providerData"]
-- !private ["PSs9AnyObject", "queryEqualToValue"]
-- !private ["PSs9AnyObject", "queryOrderedByChild"]
-- !private ["PSs9AnyObject", "queryOrderedByKey"]
-- !private ["PSs9AnyObject", "ref"]
-- !private ["PSs9AnyObject", "subscript"]
-- !private ["PSs9AnyObject", "uid"]
-- !private ["PSs9AnyObject", "user"]
-- !private ["PSs9AnyObject", "value"]
-- ["PSs9AnyObject", ""]
+- !private ["Ps9AnyObject", "Channel"]
+- ["Ps9AnyObject", "Firebase"]
+- ["Ps9AnyObject", "FirebaseManager"]
+- !private ["Ps9AnyObject", "Message"]
+- !private ["Ps9AnyObject", "NSNotification"]
+- !private ["Ps9AnyObject", "NSNotificationCenter"]
+- !private ["Ps9AnyObject", "NSOperationQueue"]
+- !private ["Ps9AnyObject", "Room"]
+- !private ["Ps9AnyObject", "User"]
+- !private ["Ps9AnyObject", "addOperationWithBlock"]
+- !private ["Ps9AnyObject", "arrayFromSnapshot"]
+- !private ["Ps9AnyObject", "assertionFailure"]
+- !private ["Ps9AnyObject", "authData"]
+- ["Ps9AnyObject", "baseURL"]
+- !private ["Ps9AnyObject", "channelMessages"]
+- !private ["Ps9AnyObject", "channels"]
+- !private ["Ps9AnyObject", "childByAppendingPath"]
+- !private ["Ps9AnyObject", "conversationPartners"]
+- !private ["Ps9AnyObject", "defaultCenter"]
+- !private ["Ps9AnyObject", "favoriteChannels"]
+- !private ["Ps9AnyObject", "getChildrenForParent"]
+- !private ["Ps9AnyObject", "getObjectForID"]
+- !private ["Ps9AnyObject", "getObjectsByChildValue"]
+- !private ["Ps9AnyObject", "getRelationshipString"]
+- !private ["Ps9AnyObject", "getUserStoredData"]
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "mainQueue"]
+- !private ["Ps9AnyObject", "manager"]
+- !private ["Ps9AnyObject", "observeEventType"]
+- !private ["Ps9AnyObject", "observeSingleEventOfType"]
+- !private ["Ps9AnyObject", "password"]
+- !private ["Ps9AnyObject", "postNotification"]
+- !private ["Ps9AnyObject", "print"]
+- !private ["Ps9AnyObject", "profileImageURL"]
+- !private ["Ps9AnyObject", "providerData"]
+- !private ["Ps9AnyObject", "queryEqualToValue"]
+- !private ["Ps9AnyObject", "queryOrderedByChild"]
+- !private ["Ps9AnyObject", "queryOrderedByKey"]
+- !private ["Ps9AnyObject", "ref"]
+- !private ["Ps9AnyObject", "subscript"]
+- !private ["Ps9AnyObject", "uid"]
+- !private ["Ps9AnyObject", "user"]
+- !private ["Ps9AnyObject", "value"]
+- ["Ps9AnyObject", ""]
 - !private ["Sa", "Generator"]
 - !private ["Sa", "Index"]
 - !private ["Sa", "SubSequence"]
@@ -89,125 +90,138 @@ depends-member:
 - !private ["Sa", "init"]
 - !private ["Sa", "map"]
 - !private ["Sa", "subscript"]
-- !private ["PSs23ArrayLiteralConvertible", "Generator"]
-- !private ["PSs23ArrayLiteralConvertible", "Index"]
-- !private ["PSs23ArrayLiteralConvertible", "SubSequence"]
-- !private ["PSs23ArrayLiteralConvertible", "_Element"]
-- !private ["PSs23ArrayLiteralConvertible", "init"]
-- !private ["PSs23ArrayLiteralConvertible", "map"]
-- !private ["PSs23ArrayLiteralConvertible", "subscript"]
-- !private ["VSs10ArraySlice", "Generator"]
-- !private ["VSs10ArraySlice", "Index"]
-- !private ["PSs22BidirectionalIndexType", "Distance"]
-- !private ["PSs22BidirectionalIndexType", "IntegerLiteralType"]
-- !private ["PSs21BitwiseOperationsType", "Distance"]
-- !private ["PSs21BitwiseOperationsType", "IntegerLiteralType"]
+- !private ["Ps23ArrayLiteralConvertible", "Generator"]
+- !private ["Ps23ArrayLiteralConvertible", "Index"]
+- !private ["Ps23ArrayLiteralConvertible", "SubSequence"]
+- !private ["Ps23ArrayLiteralConvertible", "_Element"]
+- !private ["Ps23ArrayLiteralConvertible", "init"]
+- !private ["Ps23ArrayLiteralConvertible", "map"]
+- !private ["Ps23ArrayLiteralConvertible", "subscript"]
+- !private ["Vs10ArraySlice", "Generator"]
+- !private ["Vs10ArraySlice", "Index"]
+- !private ["Ps22BidirectionalIndexType", "Distance"]
+- !private ["Ps22BidirectionalIndexType", "IntegerLiteralType"]
+- !private ["Ps21BitwiseOperationsType", "Distance"]
+- !private ["Ps21BitwiseOperationsType", "IntegerLiteralType"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["Sb", "deinit"]
-- !private ["PSs25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
-- !private ["PSs11BooleanType", "_getBuiltinLogicValue"]
-- !private ["PSs11CVarArgType", "Distance"]
-- !private ["PSs11CVarArgType", "IntegerLiteralType"]
-- !private ["PSs11CVarArgType", "addOperationWithBlock"]
-- !private ["PSs11CVarArgType", "childByAppendingPath"]
-- !private ["PSs11CVarArgType", "defaultCenter"]
-- ["PSs11CVarArgType", "init"]
-- !private ["PSs11CVarArgType", "mainQueue"]
-- !private ["PSs11CVarArgType", "observeEventType"]
-- !private ["PSs11CVarArgType", "observeSingleEventOfType"]
-- !private ["PSs11CVarArgType", "postNotification"]
-- !private ["PSs11CVarArgType", "providerData"]
-- !private ["PSs11CVarArgType", "queryEqualToValue"]
-- !private ["PSs11CVarArgType", "queryOrderedByChild"]
-- !private ["PSs11CVarArgType", "queryOrderedByKey"]
-- !private ["PSs11CVarArgType", "uid"]
-- !private ["PSs11CVarArgType", "value"]
+- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- !private ["Ps11CVarArgType", "Distance"]
+- !private ["Ps11CVarArgType", "IntegerLiteralType"]
+- !private ["Ps11CVarArgType", "addOperationWithBlock"]
+- !private ["Ps11CVarArgType", "childByAppendingPath"]
+- !private ["Ps11CVarArgType", "defaultCenter"]
+- ["Ps11CVarArgType", "init"]
+- !private ["Ps11CVarArgType", "mainQueue"]
+- !private ["Ps11CVarArgType", "observeEventType"]
+- !private ["Ps11CVarArgType", "observeSingleEventOfType"]
+- !private ["Ps11CVarArgType", "postNotification"]
+- !private ["Ps11CVarArgType", "providerData"]
+- !private ["Ps11CVarArgType", "queryEqualToValue"]
+- !private ["Ps11CVarArgType", "queryOrderedByChild"]
+- !private ["Ps11CVarArgType", "queryOrderedByKey"]
+- !private ["Ps11CVarArgType", "uid"]
+- !private ["Ps11CVarArgType", "value"]
 - !private ["C6CoChat7Channel", "deinit"]
 - !private ["C6CoChat7Channel", "init"]
-- !private ["VSs9Character", "deinit"]
-- !private ["PSs14CollectionType", "Generator"]
-- !private ["PSs14CollectionType", "Index"]
-- !private ["PSs14CollectionType", "SubSequence"]
-- !private ["PSs14CollectionType", "_Element"]
-- !private ["PSs14CollectionType", "init"]
-- !private ["PSs14CollectionType", "map"]
-- !private ["PSs14CollectionType", "subscript"]
-- !private ["PSs10Comparable", "Distance"]
-- !private ["PSs10Comparable", "IntegerLiteralType"]
-- !private ["PSs10Comparable", "_DisabledRangeIndex"]
-- !private ["PSs10Comparable", "init"]
-- !private ["PSs28CustomDebugStringConvertible", "Generator"]
-- !private ["PSs28CustomDebugStringConvertible", "Index"]
-- !private ["PSs28CustomDebugStringConvertible", "Some"]
-- !private ["PSs28CustomDebugStringConvertible", "SubSequence"]
-- !private ["PSs28CustomDebugStringConvertible", "_Element"]
-- !private ["PSs28CustomDebugStringConvertible", "init"]
-- !private ["PSs28CustomDebugStringConvertible", "map"]
-- !private ["PSs28CustomDebugStringConvertible", "subscript"]
-- !private ["PSs23CustomStringConvertible", "Distance"]
-- !private ["PSs23CustomStringConvertible", "Generator"]
-- !private ["PSs23CustomStringConvertible", "Index"]
-- !private ["PSs23CustomStringConvertible", "IntegerLiteralType"]
-- !private ["PSs23CustomStringConvertible", "SubSequence"]
-- !private ["PSs23CustomStringConvertible", "_Element"]
-- !private ["PSs23CustomStringConvertible", "_getBuiltinLogicValue"]
-- !private ["PSs23CustomStringConvertible", "addOperationWithBlock"]
-- !private ["PSs23CustomStringConvertible", "childByAppendingPath"]
-- !private ["PSs23CustomStringConvertible", "defaultCenter"]
-- ["PSs23CustomStringConvertible", "init"]
-- !private ["PSs23CustomStringConvertible", "mainQueue"]
-- !private ["PSs23CustomStringConvertible", "map"]
-- !private ["PSs23CustomStringConvertible", "observeEventType"]
-- !private ["PSs23CustomStringConvertible", "observeSingleEventOfType"]
-- !private ["PSs23CustomStringConvertible", "postNotification"]
-- !private ["PSs23CustomStringConvertible", "providerData"]
-- !private ["PSs23CustomStringConvertible", "queryEqualToValue"]
-- !private ["PSs23CustomStringConvertible", "queryOrderedByChild"]
-- !private ["PSs23CustomStringConvertible", "queryOrderedByKey"]
-- !private ["PSs23CustomStringConvertible", "subscript"]
-- !private ["PSs23CustomStringConvertible", "uid"]
-- !private ["PSs23CustomStringConvertible", "value"]
-- !private ["VSs10Dictionary", "Generator"]
-- !private ["VSs10Dictionary", "Index"]
-- !private ["VSs10Dictionary", "SubSequence"]
-- !private ["VSs10Dictionary", "_Element"]
-- !private ["VSs10Dictionary", "deinit"]
-- !private ["VSs10Dictionary", "subscript"]
-- !private ["VSs15DictionaryIndex", "Distance"]
-- !private ["VSs15DictionaryIndex", "_DisabledRangeIndex"]
-- !private ["VSs15DictionaryIndex", "deinit"]
-- !private ["PSs28DictionaryLiteralConvertible", "Generator"]
-- !private ["PSs28DictionaryLiteralConvertible", "Index"]
-- !private ["PSs28DictionaryLiteralConvertible", "SubSequence"]
-- !private ["PSs28DictionaryLiteralConvertible", "_Element"]
-- !private ["PSs28DictionaryLiteralConvertible", "subscript"]
+- !private ["Vs9Character", "deinit"]
+- !private ["Ps14CollectionType", "Generator"]
+- !private ["Ps14CollectionType", "Index"]
+- !private ["Ps14CollectionType", "SubSequence"]
+- !private ["Ps14CollectionType", "_Element"]
+- !private ["Ps14CollectionType", "init"]
+- !private ["Ps14CollectionType", "map"]
+- !private ["Ps14CollectionType", "subscript"]
+- !private ["Ps10Comparable", "Distance"]
+- !private ["Ps10Comparable", "IntegerLiteralType"]
+- !private ["Ps10Comparable", "_DisabledRangeIndex"]
+- !private ["Ps10Comparable", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "Generator"]
+- !private ["Ps28CustomDebugStringConvertible", "Index"]
+- !private ["Ps28CustomDebugStringConvertible", "Some"]
+- !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
+- !private ["Ps28CustomDebugStringConvertible", "_Element"]
+- !private ["Ps28CustomDebugStringConvertible", "addOperationWithBlock"]
+- !private ["Ps28CustomDebugStringConvertible", "childByAppendingPath"]
+- !private ["Ps28CustomDebugStringConvertible", "defaultCenter"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "mainQueue"]
+- !private ["Ps28CustomDebugStringConvertible", "map"]
+- !private ["Ps28CustomDebugStringConvertible", "observeEventType"]
+- !private ["Ps28CustomDebugStringConvertible", "observeSingleEventOfType"]
+- !private ["Ps28CustomDebugStringConvertible", "postNotification"]
+- !private ["Ps28CustomDebugStringConvertible", "providerData"]
+- !private ["Ps28CustomDebugStringConvertible", "queryEqualToValue"]
+- !private ["Ps28CustomDebugStringConvertible", "queryOrderedByChild"]
+- !private ["Ps28CustomDebugStringConvertible", "queryOrderedByKey"]
+- !private ["Ps28CustomDebugStringConvertible", "subscript"]
+- !private ["Ps28CustomDebugStringConvertible", "uid"]
+- !private ["Ps28CustomDebugStringConvertible", "value"]
+- !private ["Ps23CustomStringConvertible", "Distance"]
+- !private ["Ps23CustomStringConvertible", "Generator"]
+- !private ["Ps23CustomStringConvertible", "Index"]
+- !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
+- !private ["Ps23CustomStringConvertible", "SubSequence"]
+- !private ["Ps23CustomStringConvertible", "_Element"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "addOperationWithBlock"]
+- !private ["Ps23CustomStringConvertible", "childByAppendingPath"]
+- !private ["Ps23CustomStringConvertible", "defaultCenter"]
+- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "mainQueue"]
+- !private ["Ps23CustomStringConvertible", "map"]
+- !private ["Ps23CustomStringConvertible", "observeEventType"]
+- !private ["Ps23CustomStringConvertible", "observeSingleEventOfType"]
+- !private ["Ps23CustomStringConvertible", "postNotification"]
+- !private ["Ps23CustomStringConvertible", "providerData"]
+- !private ["Ps23CustomStringConvertible", "queryEqualToValue"]
+- !private ["Ps23CustomStringConvertible", "queryOrderedByChild"]
+- !private ["Ps23CustomStringConvertible", "queryOrderedByKey"]
+- !private ["Ps23CustomStringConvertible", "subscript"]
+- !private ["Ps23CustomStringConvertible", "uid"]
+- !private ["Ps23CustomStringConvertible", "value"]
+- !private ["Vs10Dictionary", "Generator"]
+- !private ["Vs10Dictionary", "Index"]
+- !private ["Vs10Dictionary", "SubSequence"]
+- !private ["Vs10Dictionary", "_Element"]
+- !private ["Vs10Dictionary", "deinit"]
+- !private ["Vs10Dictionary", "subscript"]
+- !private ["Vs15DictionaryIndex", "Distance"]
+- !private ["Vs15DictionaryIndex", "_DisabledRangeIndex"]
+- !private ["Vs15DictionaryIndex", "deinit"]
+- !private ["Ps28DictionaryLiteralConvertible", "Generator"]
+- !private ["Ps28DictionaryLiteralConvertible", "Index"]
+- !private ["Ps28DictionaryLiteralConvertible", "SubSequence"]
+- !private ["Ps28DictionaryLiteralConvertible", "_Element"]
+- !private ["Ps28DictionaryLiteralConvertible", "subscript"]
 - !private ["Sd", "deinit"]
-- ["PSs9Equatable", "Channel"]
-- !private ["PSs9Equatable", "ChildAdded"]
-- !private ["PSs9Equatable", "Distance"]
-- !private ["PSs9Equatable", "IntegerLiteralType"]
-- ["PSs9Equatable", "Message"]
-- ["PSs9Equatable", "Room"]
-- ["PSs9Equatable", "User"]
-- !private ["PSs9Equatable", "Value"]
-- !private ["PSs9Equatable", "_DisabledRangeIndex"]
-- !private ["PSs9Equatable", "_getBuiltinLogicValue"]
-- !private ["PSs9Equatable", "addOperationWithBlock"]
-- !private ["PSs9Equatable", "childByAppendingPath"]
-- !private ["PSs9Equatable", "defaultCenter"]
-- !private ["PSs9Equatable", "firebase"]
-- ["PSs9Equatable", "init"]
-- !private ["PSs9Equatable", "mainQueue"]
-- !private ["PSs9Equatable", "observeEventType"]
-- !private ["PSs9Equatable", "observeSingleEventOfType"]
-- !private ["PSs9Equatable", "postNotification"]
-- !private ["PSs9Equatable", "providerData"]
-- !private ["PSs9Equatable", "queryEqualToValue"]
-- !private ["PSs9Equatable", "queryOrderedByChild"]
-- !private ["PSs9Equatable", "queryOrderedByKey"]
-- !private ["PSs9Equatable", "uid"]
-- !private ["PSs9Equatable", "value"]
-- !private ["PSs41ExtendedGraphemeClusterLiteralConvertible", "init"]
+- ["Ps9Equatable", "Channel"]
+- !private ["Ps9Equatable", "ChildAdded"]
+- !private ["Ps9Equatable", "Distance"]
+- !private ["Ps9Equatable", "IntegerLiteralType"]
+- ["Ps9Equatable", "Message"]
+- ["Ps9Equatable", "Room"]
+- ["Ps9Equatable", "User"]
+- !private ["Ps9Equatable", "Value"]
+- !private ["Ps9Equatable", "_DisabledRangeIndex"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "addOperationWithBlock"]
+- !private ["Ps9Equatable", "childByAppendingPath"]
+- !private ["Ps9Equatable", "defaultCenter"]
+- !private ["Ps9Equatable", "firebase"]
+- ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "mainQueue"]
+- !private ["Ps9Equatable", "observeEventType"]
+- !private ["Ps9Equatable", "observeSingleEventOfType"]
+- !private ["Ps9Equatable", "postNotification"]
+- !private ["Ps9Equatable", "providerData"]
+- !private ["Ps9Equatable", "queryEqualToValue"]
+- !private ["Ps9Equatable", "queryOrderedByChild"]
+- !private ["Ps9Equatable", "queryOrderedByKey"]
+- !private ["Ps9Equatable", "uid"]
+- !private ["Ps9Equatable", "value"]
+- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
 - !private ["CSo9FAuthData", "providerData"]
 - !private ["CSo9FAuthData", "uid"]
 - !private ["CSo13FDataSnapshot", "value"]
@@ -272,80 +286,80 @@ depends-member:
 - !private ["P6CoChat12FirebaseType", "type"]
 - !private ["P6CoChat12FirebaseType", "uid"]
 - !private ["Sf", "deinit"]
-- !private ["PSs16ForwardIndexType", "Distance"]
-- !private ["PSs16ForwardIndexType", "IntegerLiteralType"]
-- !private ["PSs16ForwardIndexType", "_DisabledRangeIndex"]
-- !private ["PSs13GeneratorType", "Element"]
-- ["PSs8Hashable", "Channel"]
-- !private ["PSs8Hashable", "ChildAdded"]
-- !private ["PSs8Hashable", "Distance"]
-- !private ["PSs8Hashable", "IntegerLiteralType"]
-- ["PSs8Hashable", "Message"]
-- ["PSs8Hashable", "Room"]
-- ["PSs8Hashable", "User"]
-- !private ["PSs8Hashable", "Value"]
-- !private ["PSs8Hashable", "_getBuiltinLogicValue"]
-- !private ["PSs8Hashable", "addOperationWithBlock"]
-- !private ["PSs8Hashable", "childByAppendingPath"]
-- !private ["PSs8Hashable", "defaultCenter"]
-- !private ["PSs8Hashable", "firebase"]
-- ["PSs8Hashable", "init"]
-- !private ["PSs8Hashable", "mainQueue"]
-- !private ["PSs8Hashable", "observeEventType"]
-- !private ["PSs8Hashable", "observeSingleEventOfType"]
-- !private ["PSs8Hashable", "postNotification"]
-- !private ["PSs8Hashable", "providerData"]
-- !private ["PSs8Hashable", "queryEqualToValue"]
-- !private ["PSs8Hashable", "queryOrderedByChild"]
-- !private ["PSs8Hashable", "queryOrderedByKey"]
-- !private ["PSs8Hashable", "uid"]
-- !private ["PSs8Hashable", "value"]
+- !private ["Ps16ForwardIndexType", "Distance"]
+- !private ["Ps16ForwardIndexType", "IntegerLiteralType"]
+- !private ["Ps16ForwardIndexType", "_DisabledRangeIndex"]
+- !private ["Ps13GeneratorType", "Element"]
+- ["Ps8Hashable", "Channel"]
+- !private ["Ps8Hashable", "ChildAdded"]
+- !private ["Ps8Hashable", "Distance"]
+- !private ["Ps8Hashable", "IntegerLiteralType"]
+- ["Ps8Hashable", "Message"]
+- ["Ps8Hashable", "Room"]
+- ["Ps8Hashable", "User"]
+- !private ["Ps8Hashable", "Value"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "addOperationWithBlock"]
+- !private ["Ps8Hashable", "childByAppendingPath"]
+- !private ["Ps8Hashable", "defaultCenter"]
+- !private ["Ps8Hashable", "firebase"]
+- ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "mainQueue"]
+- !private ["Ps8Hashable", "observeEventType"]
+- !private ["Ps8Hashable", "observeSingleEventOfType"]
+- !private ["Ps8Hashable", "postNotification"]
+- !private ["Ps8Hashable", "providerData"]
+- !private ["Ps8Hashable", "queryEqualToValue"]
+- !private ["Ps8Hashable", "queryOrderedByChild"]
+- !private ["Ps8Hashable", "queryOrderedByKey"]
+- !private ["Ps8Hashable", "uid"]
+- !private ["Ps8Hashable", "value"]
 - !private ["SQ", "deinit"]
-- !private ["PSs9Indexable", "Generator"]
-- !private ["PSs9Indexable", "Index"]
-- !private ["PSs9Indexable", "SubSequence"]
-- !private ["PSs9Indexable", "_Element"]
-- !private ["PSs9Indexable", "init"]
-- !private ["PSs9Indexable", "map"]
-- !private ["PSs9Indexable", "subscript"]
-- !private ["VSs17IndexingGenerator", "Element"]
+- !private ["Ps9Indexable", "Generator"]
+- !private ["Ps9Indexable", "Index"]
+- !private ["Ps9Indexable", "SubSequence"]
+- !private ["Ps9Indexable", "_Element"]
+- !private ["Ps9Indexable", "init"]
+- !private ["Ps9Indexable", "map"]
+- !private ["Ps9Indexable", "subscript"]
+- !private ["Vs17IndexingGenerator", "Element"]
 - !private ["Si", "Distance"]
 - !private ["Si", "IntegerLiteralType"]
 - !private ["Si", "deinit"]
-- !private ["VSs5Int16", "deinit"]
-- !private ["VSs5Int32", "deinit"]
-- !private ["VSs5Int64", "deinit"]
-- !private ["VSs4Int8", "deinit"]
-- !private ["PSs21IntegerArithmeticType", "Distance"]
-- !private ["PSs21IntegerArithmeticType", "IntegerLiteralType"]
-- !private ["PSs25IntegerLiteralConvertible", "Distance"]
-- !private ["PSs25IntegerLiteralConvertible", "IntegerLiteralType"]
-- !private ["PSs11IntegerType", "Distance"]
-- !private ["PSs11IntegerType", "IntegerLiteralType"]
-- !private ["PSs14MirrorPathType", "Distance"]
-- !private ["PSs14MirrorPathType", "IntegerLiteralType"]
-- !private ["PSs14MirrorPathType", "init"]
-- !private ["PSs21MutableCollectionType", "Generator"]
-- !private ["PSs21MutableCollectionType", "Index"]
-- !private ["PSs21MutableCollectionType", "SubSequence"]
-- !private ["PSs21MutableCollectionType", "_Element"]
-- !private ["PSs21MutableCollectionType", "init"]
-- !private ["PSs21MutableCollectionType", "map"]
-- !private ["PSs21MutableCollectionType", "subscript"]
-- !private ["PSs16MutableIndexable", "Generator"]
-- !private ["PSs16MutableIndexable", "Index"]
-- !private ["PSs16MutableIndexable", "SubSequence"]
-- !private ["PSs16MutableIndexable", "_Element"]
-- !private ["PSs16MutableIndexable", "init"]
-- !private ["PSs16MutableIndexable", "map"]
-- !private ["PSs16MutableIndexable", "subscript"]
-- !private ["PSs16MutableSliceable", "Generator"]
-- !private ["PSs16MutableSliceable", "Index"]
-- !private ["PSs16MutableSliceable", "SubSequence"]
-- !private ["PSs16MutableSliceable", "_Element"]
-- !private ["PSs16MutableSliceable", "init"]
-- !private ["PSs16MutableSliceable", "map"]
-- !private ["PSs16MutableSliceable", "subscript"]
+- !private ["Vs5Int16", "deinit"]
+- !private ["Vs5Int32", "deinit"]
+- !private ["Vs5Int64", "deinit"]
+- !private ["Vs4Int8", "deinit"]
+- !private ["Ps21IntegerArithmeticType", "Distance"]
+- !private ["Ps21IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["Ps25IntegerLiteralConvertible", "Distance"]
+- !private ["Ps25IntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["Ps11IntegerType", "Distance"]
+- !private ["Ps11IntegerType", "IntegerLiteralType"]
+- !private ["Ps14MirrorPathType", "Distance"]
+- !private ["Ps14MirrorPathType", "IntegerLiteralType"]
+- !private ["Ps14MirrorPathType", "init"]
+- !private ["Ps21MutableCollectionType", "Generator"]
+- !private ["Ps21MutableCollectionType", "Index"]
+- !private ["Ps21MutableCollectionType", "SubSequence"]
+- !private ["Ps21MutableCollectionType", "_Element"]
+- !private ["Ps21MutableCollectionType", "init"]
+- !private ["Ps21MutableCollectionType", "map"]
+- !private ["Ps21MutableCollectionType", "subscript"]
+- !private ["Ps16MutableIndexable", "Generator"]
+- !private ["Ps16MutableIndexable", "Index"]
+- !private ["Ps16MutableIndexable", "SubSequence"]
+- !private ["Ps16MutableIndexable", "_Element"]
+- !private ["Ps16MutableIndexable", "init"]
+- !private ["Ps16MutableIndexable", "map"]
+- !private ["Ps16MutableIndexable", "subscript"]
+- !private ["Ps16MutableSliceable", "Generator"]
+- !private ["Ps16MutableSliceable", "Index"]
+- !private ["Ps16MutableSliceable", "SubSequence"]
+- !private ["Ps16MutableSliceable", "_Element"]
+- !private ["Ps16MutableSliceable", "init"]
+- !private ["Ps16MutableSliceable", "map"]
+- !private ["Ps16MutableSliceable", "subscript"]
 - !private ["PSo8NSCoding", "init"]
 - !private ["PSo9NSCopying", "init"]
 - !private ["PSo16NSMutableCopying", "init"]
@@ -386,153 +400,151 @@ depends-member:
 - !private ["PSo14NSSecureCoding", "init"]
 - !private ["CSo8NSString", "deinit"]
 - !private ["CSo8NSString", "init"]
-- !private ["PSs21NilLiteralConvertible", "Some"]
+- !private ["Ps21NilLiteralConvertible", "Some"]
 - !private ["Sq", "Some"]
 - !private ["Sq", "deinit"]
-- !private ["PSs16OutputStreamType", "init"]
-- !private ["PSs21RandomAccessIndexType", "Distance"]
-- !private ["PSs21RandomAccessIndexType", "IntegerLiteralType"]
-- !private ["VSs5Range", "deinit"]
-- !private ["PSs30RangeReplaceableCollectionType", "Generator"]
-- !private ["PSs30RangeReplaceableCollectionType", "Index"]
-- !private ["PSs30RangeReplaceableCollectionType", "SubSequence"]
-- !private ["PSs30RangeReplaceableCollectionType", "_Element"]
-- !private ["PSs30RangeReplaceableCollectionType", "init"]
-- !private ["PSs30RangeReplaceableCollectionType", "map"]
-- !private ["PSs30RangeReplaceableCollectionType", "subscript"]
-- ["PSs16RawRepresentable", "Channel"]
-- !private ["PSs16RawRepresentable", "ChildAdded"]
-- ["PSs16RawRepresentable", "Message"]
-- ["PSs16RawRepresentable", "Room"]
-- ["PSs16RawRepresentable", "User"]
-- !private ["PSs16RawRepresentable", "Value"]
-- !private ["PSs16RawRepresentable", "firebase"]
+- !private ["Ps16OutputStreamType", "init"]
+- !private ["Ps21RandomAccessIndexType", "Distance"]
+- !private ["Ps21RandomAccessIndexType", "IntegerLiteralType"]
+- !private ["Vs5Range", "deinit"]
+- !private ["Ps30RangeReplaceableCollectionType", "Generator"]
+- !private ["Ps30RangeReplaceableCollectionType", "Index"]
+- !private ["Ps30RangeReplaceableCollectionType", "SubSequence"]
+- !private ["Ps30RangeReplaceableCollectionType", "_Element"]
+- !private ["Ps30RangeReplaceableCollectionType", "init"]
+- !private ["Ps30RangeReplaceableCollectionType", "map"]
+- !private ["Ps30RangeReplaceableCollectionType", "subscript"]
+- ["Ps16RawRepresentable", "Channel"]
+- !private ["Ps16RawRepresentable", "ChildAdded"]
+- ["Ps16RawRepresentable", "Message"]
+- ["Ps16RawRepresentable", "Room"]
+- ["Ps16RawRepresentable", "User"]
+- !private ["Ps16RawRepresentable", "Value"]
+- !private ["Ps16RawRepresentable", "firebase"]
 - !private ["C6CoChat4Room", "arrayFromSnapshot"]
 - !private ["C6CoChat4Room", "channels"]
 - !private ["C6CoChat4Room", "deinit"]
 - !private ["C6CoChat4Room", "init"]
 - !private ["C6CoChat4Room", "password"]
-- !private ["PSs12SequenceType", "Element"]
-- !private ["PSs12SequenceType", "Generator"]
-- !private ["PSs12SequenceType", "Index"]
-- !private ["PSs12SequenceType", "SubSequence"]
-- !private ["PSs12SequenceType", "_Element"]
-- !private ["PSs12SequenceType", "init"]
-- !private ["PSs12SequenceType", "map"]
-- !private ["PSs12SequenceType", "subscript"]
-- !private ["PSs17SignedIntegerType", "Distance"]
-- !private ["PSs17SignedIntegerType", "IntegerLiteralType"]
-- !private ["PSs16SignedNumberType", "Distance"]
-- !private ["PSs16SignedNumberType", "IntegerLiteralType"]
-- !private ["VSs5Slice", "Generator"]
-- !private ["VSs5Slice", "Index"]
-- !private ["VSs5Slice", "SubSequence"]
-- !private ["VSs5Slice", "_Element"]
-- !private ["VSs12StaticString", "deinit"]
-- !private ["PSs10Streamable", "init"]
-- !private ["PSs10Strideable", "Distance"]
-- !private ["PSs10Strideable", "IntegerLiteralType"]
+- !private ["Ps12SequenceType", "Element"]
+- !private ["Ps12SequenceType", "Generator"]
+- !private ["Ps12SequenceType", "Index"]
+- !private ["Ps12SequenceType", "SubSequence"]
+- !private ["Ps12SequenceType", "_Element"]
+- !private ["Ps12SequenceType", "init"]
+- !private ["Ps12SequenceType", "map"]
+- !private ["Ps12SequenceType", "subscript"]
+- !private ["Ps17SignedIntegerType", "Distance"]
+- !private ["Ps17SignedIntegerType", "IntegerLiteralType"]
+- !private ["Ps16SignedNumberType", "Distance"]
+- !private ["Ps16SignedNumberType", "IntegerLiteralType"]
+- !private ["Vs5Slice", "Generator"]
+- !private ["Vs5Slice", "Index"]
+- !private ["Vs5Slice", "SubSequence"]
+- !private ["Vs5Slice", "_Element"]
+- !private ["Vs12StaticString", "deinit"]
+- !private ["Ps10Streamable", "init"]
+- !private ["Ps10Strideable", "Distance"]
+- !private ["Ps10Strideable", "IntegerLiteralType"]
 - !private ["SS", "deinit"]
 - !private ["SS", "init"]
-- !private ["PSs30StringInterpolationConvertible", "init"]
-- !private ["PSs24StringLiteralConvertible", "init"]
+- !private ["Ps30StringInterpolationConvertible", "init"]
+- !private ["Ps24StringLiteralConvertible", "init"]
 - ["O6CoChat4Type", "Channel"]
 - ["O6CoChat4Type", "Message"]
 - ["O6CoChat4Type", "Room"]
 - ["O6CoChat4Type", "User"]
 - !private ["O6CoChat4Type", "firebase"]
 - !private ["Su", "deinit"]
-- !private ["VSs6UInt16", "deinit"]
-- !private ["VSs6UInt32", "deinit"]
-- !private ["VSs6UInt64", "deinit"]
-- !private ["VSs5UInt8", "deinit"]
+- !private ["Vs6UInt16", "deinit"]
+- !private ["Vs6UInt32", "deinit"]
+- !private ["Vs6UInt64", "deinit"]
+- !private ["Vs5UInt8", "deinit"]
 - !private ["Sc", "deinit"]
-- !private ["PSs31UnicodeScalarLiteralConvertible", "init"]
+- !private ["Ps31UnicodeScalarLiteralConvertible", "init"]
 - !private ["C6CoChat4User", "conversationPartners"]
 - !private ["C6CoChat4User", "deinit"]
 - !private ["C6CoChat4User", "favoriteChannels"]
 - !private ["C6CoChat4User", "init"]
 - !private ["C6CoChat4User", "profileImageURL"]
 - !private ["C6CoChat4User", "uid"]
-- !private ["PSs10_ArrayType", "Generator"]
-- !private ["PSs10_ArrayType", "Index"]
-- !private ["PSs10_ArrayType", "SubSequence"]
-- !private ["PSs10_ArrayType", "_Element"]
-- !private ["PSs10_ArrayType", "init"]
-- !private ["PSs10_ArrayType", "map"]
-- !private ["PSs10_ArrayType", "subscript"]
-- !private ["PSs33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
-- !private ["PSs49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
-- !private ["PSs33_BuiltinIntegerLiteralConvertible", "Distance"]
-- !private ["PSs33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
-- !private ["PSs32_BuiltinStringLiteralConvertible", "init"]
-- !private ["PSs37_BuiltinUTF16StringLiteralConvertible", "init"]
-- !private ["PSs39_BuiltinUnicodeScalarLiteralConvertible", "init"]
-- !private ["PSs16_CocoaStringType", "init"]
-- !private ["PSs24_DestructorSafeContainer", "Generator"]
-- !private ["PSs24_DestructorSafeContainer", "Index"]
-- !private ["PSs24_DestructorSafeContainer", "SubSequence"]
-- !private ["PSs24_DestructorSafeContainer", "_Element"]
-- !private ["PSs24_DestructorSafeContainer", "init"]
-- !private ["PSs24_DestructorSafeContainer", "map"]
-- !private ["PSs24_DestructorSafeContainer", "subscript"]
-- !private ["PSs14_Incrementable", "Distance"]
-- !private ["PSs14_Incrementable", "IntegerLiteralType"]
-- !private ["PSs14_Incrementable", "_DisabledRangeIndex"]
-- !private ["PSs22_IntegerArithmeticType", "Distance"]
-- !private ["PSs22_IntegerArithmeticType", "IntegerLiteralType"]
-- !private ["PSs12_IntegerType", "Distance"]
-- !private ["PSs12_IntegerType", "IntegerLiteralType"]
-- !private ["PSs21_ObjectiveCBridgeable", "Distance"]
-- !private ["PSs21_ObjectiveCBridgeable", "Generator"]
-- !private ["PSs21_ObjectiveCBridgeable", "Index"]
-- !private ["PSs21_ObjectiveCBridgeable", "IntegerLiteralType"]
-- !private ["PSs21_ObjectiveCBridgeable", "SubSequence"]
-- !private ["PSs21_ObjectiveCBridgeable", "_Element"]
-- !private ["PSs21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
-- !private ["PSs21_ObjectiveCBridgeable", "init"]
-- !private ["PSs21_ObjectiveCBridgeable", "map"]
-- !private ["PSs21_ObjectiveCBridgeable", "subscript"]
-- !private ["PSs22_RandomAccessAmbiguity", "Distance"]
-- !private ["PSs22_RandomAccessAmbiguity", "IntegerLiteralType"]
-- !private ["PSs12_Reflectable", "Distance"]
-- !private ["PSs12_Reflectable", "Generator"]
-- !private ["PSs12_Reflectable", "Index"]
-- !private ["PSs12_Reflectable", "IntegerLiteralType"]
-- !private ["PSs12_Reflectable", "Some"]
-- !private ["PSs12_Reflectable", "SubSequence"]
-- !private ["PSs12_Reflectable", "_Element"]
-- !private ["PSs12_Reflectable", "_getBuiltinLogicValue"]
-- !private ["PSs12_Reflectable", "init"]
-- !private ["PSs12_Reflectable", "map"]
-- !private ["PSs12_Reflectable", "subscript"]
-- !private ["PSs18_SignedIntegerType", "Distance"]
-- !private ["PSs18_SignedIntegerType", "IntegerLiteralType"]
-- !private ["PSs11_Strideable", "Distance"]
-- !private ["PSs11_Strideable", "IntegerLiteralType"]
+- !private ["Ps10_ArrayType", "Generator"]
+- !private ["Ps10_ArrayType", "Index"]
+- !private ["Ps10_ArrayType", "SubSequence"]
+- !private ["Ps10_ArrayType", "_Element"]
+- !private ["Ps10_ArrayType", "init"]
+- !private ["Ps10_ArrayType", "map"]
+- !private ["Ps10_ArrayType", "subscript"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "Distance"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["Ps32_BuiltinStringLiteralConvertible", "init"]
+- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "init"]
+- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "init"]
+- !private ["Ps24_DestructorSafeContainer", "Generator"]
+- !private ["Ps24_DestructorSafeContainer", "Index"]
+- !private ["Ps24_DestructorSafeContainer", "SubSequence"]
+- !private ["Ps24_DestructorSafeContainer", "_Element"]
+- !private ["Ps24_DestructorSafeContainer", "init"]
+- !private ["Ps24_DestructorSafeContainer", "map"]
+- !private ["Ps24_DestructorSafeContainer", "subscript"]
+- !private ["Ps14_Incrementable", "Distance"]
+- !private ["Ps14_Incrementable", "IntegerLiteralType"]
+- !private ["Ps14_Incrementable", "_DisabledRangeIndex"]
+- !private ["Ps22_IntegerArithmeticType", "Distance"]
+- !private ["Ps22_IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["Ps12_IntegerType", "Distance"]
+- !private ["Ps12_IntegerType", "IntegerLiteralType"]
+- !private ["Ps21_ObjectiveCBridgeable", "Distance"]
+- !private ["Ps21_ObjectiveCBridgeable", "Generator"]
+- !private ["Ps21_ObjectiveCBridgeable", "Index"]
+- !private ["Ps21_ObjectiveCBridgeable", "IntegerLiteralType"]
+- !private ["Ps21_ObjectiveCBridgeable", "SubSequence"]
+- !private ["Ps21_ObjectiveCBridgeable", "_Element"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "map"]
+- !private ["Ps21_ObjectiveCBridgeable", "subscript"]
+- !private ["Vs26_OptionalNilComparisonType", "deinit"]
+- !private ["Ps22_RandomAccessAmbiguity", "Distance"]
+- !private ["Ps22_RandomAccessAmbiguity", "IntegerLiteralType"]
+- !private ["Ps12_Reflectable", "Distance"]
+- !private ["Ps12_Reflectable", "Generator"]
+- !private ["Ps12_Reflectable", "Index"]
+- !private ["Ps12_Reflectable", "IntegerLiteralType"]
+- !private ["Ps12_Reflectable", "Some"]
+- !private ["Ps12_Reflectable", "SubSequence"]
+- !private ["Ps12_Reflectable", "_Element"]
+- !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
+- !private ["Ps12_Reflectable", "init"]
+- !private ["Ps12_Reflectable", "map"]
+- !private ["Ps12_Reflectable", "subscript"]
+- !private ["Ps18_SignedIntegerType", "Distance"]
+- !private ["Ps18_SignedIntegerType", "IntegerLiteralType"]
 depends-nominal:
-- "PSs9AnyObject"
+- "Ps9AnyObject"
 - !private "Sa"
-- !private "PSs23ArrayLiteralConvertible"
-- !private "VSs10ArraySlice"
-- !private "PSs22BidirectionalIndexType"
-- !private "PSs21BitwiseOperationsType"
+- !private "Ps23ArrayLiteralConvertible"
+- !private "Vs10ArraySlice"
+- !private "Ps22BidirectionalIndexType"
+- !private "Ps21BitwiseOperationsType"
 - !private "Sb"
-- !private "PSs25BooleanLiteralConvertible"
-- !private "PSs11BooleanType"
-- "PSs11CVarArgType"
+- !private "Ps25BooleanLiteralConvertible"
+- !private "Ps11BooleanType"
+- "Ps11CVarArgType"
 - !private "C6CoChat7Channel"
-- !private "VSs9Character"
-- !private "PSs14CollectionType"
-- !private "PSs10Comparable"
-- !private "PSs28CustomDebugStringConvertible"
-- "PSs23CustomStringConvertible"
-- !private "VSs10Dictionary"
-- !private "VSs15DictionaryIndex"
-- !private "PSs28DictionaryLiteralConvertible"
+- !private "Vs9Character"
+- !private "Ps14CollectionType"
+- !private "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- !private "Vs10Dictionary"
+- !private "Vs15DictionaryIndex"
+- !private "Ps28DictionaryLiteralConvertible"
 - !private "Sd"
-- "PSs9Equatable"
-- !private "PSs41ExtendedGraphemeClusterLiteralConvertible"
+- "Ps9Equatable"
+- !private "Ps41ExtendedGraphemeClusterLiteralConvertible"
 - !private "CSo9FAuthData"
 - !private "CSo13FDataSnapshot"
 - !private "OSC10FEventType"
@@ -541,24 +553,24 @@ depends-nominal:
 - "C6CoChat15FirebaseManager"
 - !private "P6CoChat12FirebaseType"
 - !private "Sf"
-- !private "PSs16ForwardIndexType"
-- !private "PSs13GeneratorType"
-- "PSs8Hashable"
+- !private "Ps16ForwardIndexType"
+- !private "Ps13GeneratorType"
+- "Ps8Hashable"
 - !private "SQ"
-- !private "PSs9Indexable"
-- !private "VSs17IndexingGenerator"
+- !private "Ps9Indexable"
+- !private "Vs17IndexingGenerator"
 - !private "Si"
-- !private "VSs5Int16"
-- !private "VSs5Int32"
-- !private "VSs5Int64"
-- !private "VSs4Int8"
-- !private "PSs21IntegerArithmeticType"
-- !private "PSs25IntegerLiteralConvertible"
-- !private "PSs11IntegerType"
-- !private "PSs14MirrorPathType"
-- !private "PSs21MutableCollectionType"
-- !private "PSs16MutableIndexable"
-- !private "PSs16MutableSliceable"
+- !private "Vs5Int16"
+- !private "Vs5Int32"
+- !private "Vs5Int64"
+- !private "Vs4Int8"
+- !private "Ps21IntegerArithmeticType"
+- !private "Ps25IntegerLiteralConvertible"
+- !private "Ps11IntegerType"
+- !private "Ps14MirrorPathType"
+- !private "Ps21MutableCollectionType"
+- !private "Ps16MutableIndexable"
+- !private "Ps16MutableSliceable"
 - !private "PSo8NSCoding"
 - !private "PSo9NSCopying"
 - !private "PSo16NSMutableCopying"
@@ -569,50 +581,49 @@ depends-nominal:
 - !private "CSo16NSOperationQueue"
 - !private "PSo14NSSecureCoding"
 - !private "CSo8NSString"
-- !private "PSs21NilLiteralConvertible"
+- !private "Ps21NilLiteralConvertible"
 - !private "Sq"
-- !private "PSs16OutputStreamType"
-- !private "PSs21RandomAccessIndexType"
-- !private "VSs5Range"
-- !private "PSs30RangeReplaceableCollectionType"
-- "PSs16RawRepresentable"
+- !private "Ps16OutputStreamType"
+- !private "Ps21RandomAccessIndexType"
+- !private "Vs5Range"
+- !private "Ps30RangeReplaceableCollectionType"
+- "Ps16RawRepresentable"
 - !private "C6CoChat4Room"
-- !private "PSs12SequenceType"
-- !private "PSs17SignedIntegerType"
-- !private "PSs16SignedNumberType"
-- !private "VSs5Slice"
-- !private "VSs12StaticString"
-- !private "PSs10Streamable"
-- !private "PSs10Strideable"
+- !private "Ps12SequenceType"
+- !private "Ps17SignedIntegerType"
+- !private "Ps16SignedNumberType"
+- !private "Vs5Slice"
+- !private "Vs12StaticString"
+- !private "Ps10Streamable"
+- !private "Ps10Strideable"
 - !private "SS"
-- !private "PSs30StringInterpolationConvertible"
-- !private "PSs24StringLiteralConvertible"
+- !private "Ps30StringInterpolationConvertible"
+- !private "Ps24StringLiteralConvertible"
 - "O6CoChat4Type"
 - !private "Su"
-- !private "VSs6UInt16"
-- !private "VSs6UInt32"
-- !private "VSs6UInt64"
-- !private "VSs5UInt8"
+- !private "Vs6UInt16"
+- !private "Vs6UInt32"
+- !private "Vs6UInt64"
+- !private "Vs5UInt8"
 - !private "Sc"
-- !private "PSs31UnicodeScalarLiteralConvertible"
+- !private "Ps31UnicodeScalarLiteralConvertible"
 - !private "C6CoChat4User"
-- !private "PSs10_ArrayType"
-- !private "PSs33_BuiltinBooleanLiteralConvertible"
-- !private "PSs49_BuiltinExtendedGraphemeClusterLiteralConvertible"
-- !private "PSs33_BuiltinIntegerLiteralConvertible"
-- !private "PSs32_BuiltinStringLiteralConvertible"
-- !private "PSs37_BuiltinUTF16StringLiteralConvertible"
-- !private "PSs39_BuiltinUnicodeScalarLiteralConvertible"
-- !private "PSs16_CocoaStringType"
-- !private "PSs24_DestructorSafeContainer"
-- !private "PSs14_Incrementable"
-- !private "PSs22_IntegerArithmeticType"
-- !private "PSs12_IntegerType"
-- !private "PSs21_ObjectiveCBridgeable"
-- !private "PSs22_RandomAccessAmbiguity"
-- !private "PSs12_Reflectable"
-- !private "PSs18_SignedIntegerType"
-- !private "PSs11_Strideable"
+- !private "Ps10_ArrayType"
+- !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible"
+- !private "Ps33_BuiltinIntegerLiteralConvertible"
+- !private "Ps32_BuiltinStringLiteralConvertible"
+- !private "Ps37_BuiltinUTF16StringLiteralConvertible"
+- !private "Ps39_BuiltinUnicodeScalarLiteralConvertible"
+- !private "Ps24_DestructorSafeContainer"
+- !private "Ps14_Incrementable"
+- !private "Ps22_IntegerArithmeticType"
+- !private "Ps12_IntegerType"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Vs26_OptionalNilComparisonType"
+- !private "Ps22_RandomAccessAmbiguity"
+- !private "Ps12_Reflectable"
+- !private "Ps18_SignedIntegerType"
 depends-dynamic-lookup:
 - !private "subscript"
 depends-external:
@@ -747,4 +758,4 @@ depends-external:
 - "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFNetworking.h"
 - "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFNetworking-umbrella.h"
 - "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Modules/module.modulemap"
-interface-hash: "4ebfb6d5243b324171141c2fb1060641"
+interface-hash: "cafe8694d755f24498b3367831a20588"

@@ -79,7 +79,7 @@ class HostViewController: UIViewController, ChannelsVCDelegate {
             guard let mvc = nvc.viewControllers[0] as? MessagingViewController else { return }
             mvc.room = room
             if channels.isEmpty {
-                Channel.createNewChannelWith("Main", room: room, privateChannel: 0, password: room.password, withCompletionHandler: { new in
+                Channel.createNewChannelWith("Main", room: room, privateChannel: privateRoom, password: room.password, withCompletionHandler: { new in
                     room.channels.append(new)
                     mvc.currentChannel = room.channels[0]
                 })
@@ -130,10 +130,15 @@ extension HostViewController: HostReusableCellDelegate {
             if let aSwitch = valueDidChange as? UISwitch {
                 let privacy = aSwitch.on
                 cell.enteredPrivacy = privacy
-                privateRoom = convertBooltoInt(privacy)
+                switch convertBooltoInt(privacy) {
+                case 0: privateRoom = 1
+                case 1: privateRoom = 0
+                default:
+                    break
+                }
                 guard let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 2, inSection: 3)) as? HostReusableCell else {return}
                 switch privateRoom {
-                case 0:
+                case 1:
                     cell.title.text = "Private"
                 default:
                     cell.title.text = "Public"

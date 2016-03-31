@@ -77,7 +77,11 @@ class EmailSignUpVC: UIViewController, UITextFieldDelegate {
     @IBAction func signUpButtonWasTapped(sender: UIButton) {
         if allTextFieldsAreFilled(textFields) && passwordsMatch(passwordTextField, tF2: rePasswordTextField)
             && isValidEmail(emailTextField) {
-//MARK: -Authentice User Info here
+            let url = NSURL(fileURLWithPath: "blendColorLogo-60")
+            let str = String(url)
+            User.createNewUserWith(emailTextField.text!, name:fullNameTextField.text!, password: passwordTextField.text!, uid: generateRandomPassCode(), profileImageURl:str, withCompletionHandler: { (new) in
+                print("created new user")
+            })
         }
     }
     

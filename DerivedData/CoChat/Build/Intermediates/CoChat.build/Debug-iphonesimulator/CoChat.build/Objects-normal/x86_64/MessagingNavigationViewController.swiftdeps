@@ -7,19 +7,21 @@ provides-member:
 - ["C6CoChat33MessagingNavigationViewController", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "MessagingNavigationViewController"
 - "UINavigationController"
+- "MessagingNavigationViewController"
 depends-member:
-- ["PSs9AnyObject", "init"]
-- ["PSs9AnyObject", ""]
-- ["PSs11CVarArgType", "init"]
-- ["PSs11CVarArgType", ""]
-- ["PSs23CustomStringConvertible", "init"]
-- ["PSs23CustomStringConvertible", ""]
-- ["PSs9Equatable", "init"]
-- ["PSs9Equatable", ""]
-- ["PSs8Hashable", "init"]
-- ["PSs8Hashable", ""]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", ""]
+- ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", ""]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", ""]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", ""]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", ""]
 - ["C6CoChat33MessagingNavigationViewController", "deinit"]
 - ["C6CoChat33MessagingNavigationViewController", "init"]
 - ["PSo8NSCoding", "init"]
@@ -44,11 +46,12 @@ depends-member:
 - ["PSo18UITraitEnvironment", ""]
 - ["CSo16UIViewController", "init"]
 depends-nominal:
-- "PSs9AnyObject"
-- "PSs11CVarArgType"
-- "PSs23CustomStringConvertible"
-- "PSs9Equatable"
-- "PSs8Hashable"
+- "Ps9AnyObject"
+- "Ps11CVarArgType"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- "Ps8Hashable"
 - "C6CoChat33MessagingNavigationViewController"
 - "PSo8NSCoding"
 - "PSo26NSExtensionRequestHandling"

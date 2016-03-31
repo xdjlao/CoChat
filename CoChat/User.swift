@@ -5,6 +5,8 @@ class User: FirebaseType {
     var uid = "none"
     let name: String
     let profileImageURL: String
+    let email:String?
+    let password:String?
     
     var favoriteChannels = [Channel]()
     var conversationPartners = [User]()
@@ -29,12 +31,32 @@ class User: FirebaseType {
         self.name = name
         self.profileImageURL = profileImageURL
         self.uid = uid
+        self.email = "FB auth"
+        self.password = "FB auth"
     }
     
+    init(withEmail email:String, name:String, profileImageURL:String, uid:String, password:String){
+        self.email = email
+        self.name = name
+        self.profileImageURL = profileImageURL
+        self.uid = uid
+        self.password = password
+    }
+    
+    static func createNewUserWith(email: String, name: String, password: String, uid:String, profileImageURl:String, withCompletionHandler handler: ((new: User) -> ())?) {
+        let user = User(withEmail: email, name: name, profileImageURL: "", uid: uid, password: password)
+        user.createNew { (new) in
+            guard let new = new as? User else {return}
+            handler?(new: new)
+        }
+    }
+
     required init(fromDictionary dictionary: [NSObject : AnyObject], andUID uid: String) {
         self.uid = uid
         self.name = "blech"
         self.profileImageURL = "blech"
+        self.email = "FB auth"
+        self.password = "FB auth"
         let favoriteChannelUIDs = dictionary["recentRoomsUIDs"] as? [String] ?? [String]()
         self.favoriteChannels = favoriteChannelUIDs.map { uid -> Channel in
             return Channel(withDummyTitle: "none", dummyUID: uid)
@@ -49,12 +71,16 @@ class User: FirebaseType {
         uid = dummyUID
         name = dummyName
         profileImageURL = dummyProfileImageURL
+        email = "FB auth"
+        password = "FB auth"
     }
     
     init() {
         let none = "none"
-        self.uid = none
-        self.name = none
-        self.profileImageURL = none
+        uid = none
+        name = none
+        profileImageURL = none
+        email = "FB auth"
+        password = "FB auth"
     }
 }

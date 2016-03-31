@@ -6,16 +6,17 @@ provides-member:
 - ["CSo7UIColor", "init"]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "/"
 - "UIColor"
 - "CGFloat"
+- !private "/"
 depends-member:
-- ["PSs9AnyObject", "init"]
+- ["Ps9AnyObject", "init"]
 - !private ["V12CoreGraphics7CGFloat", "deinit"]
-- ["PSs11CVarArgType", "init"]
-- ["PSs23CustomStringConvertible", "init"]
-- ["PSs9Equatable", "init"]
-- ["PSs8Hashable", "init"]
+- ["Ps11CVarArgType", "init"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps9Equatable", "init"]
+- ["Ps8Hashable", "init"]
 - !private ["PSo8NSCoding", "init"]
 - !private ["PSo9NSCopying", "init"]
 - ["CSo8NSObject", "CGFloat"]
@@ -24,21 +25,22 @@ depends-member:
 - !private ["PSo14NSSecureCoding", "init"]
 - ["CSo7UIColor", "CGFloat"]
 - ["CSo7UIColor", "init"]
-- !private ["PSs24_ColorLiteralConvertible", "init"]
+- !private ["Ps24_ColorLiteralConvertible", "init"]
 depends-nominal:
-- "PSs9AnyObject"
+- "Ps9AnyObject"
 - !private "V12CoreGraphics7CGFloat"
-- "PSs11CVarArgType"
-- "PSs23CustomStringConvertible"
-- "PSs9Equatable"
-- "PSs8Hashable"
+- "Ps11CVarArgType"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- "Ps8Hashable"
 - !private "PSo8NSCoding"
 - !private "PSo9NSCopying"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
 - !private "PSo14NSSecureCoding"
 - "CSo7UIColor"
-- !private "PSs24_ColorLiteralConvertible"
+- !private "Ps24_ColorLiteralConvertible"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"

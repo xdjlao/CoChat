@@ -6,32 +6,36 @@ provides-nominal:
 provides-member:
 - ["C6CoChat17LoginNavigationVC", ""]
 provides-dynamic-lookup:
-- "viewDidLoad"
 - "didReceiveMemoryWarning"
+- "viewDidLoad"
 depends-top-level:
-- "LoginNavigationVC"
 - "UINavigationController"
+- "LoginNavigationVC"
 depends-member:
-- ["PSs9AnyObject", "didReceiveMemoryWarning"]
-- ["PSs9AnyObject", "init"]
-- ["PSs9AnyObject", "viewDidLoad"]
-- ["PSs9AnyObject", ""]
-- ["PSs11CVarArgType", "didReceiveMemoryWarning"]
-- ["PSs11CVarArgType", "init"]
-- ["PSs11CVarArgType", "viewDidLoad"]
-- ["PSs11CVarArgType", ""]
-- ["PSs23CustomStringConvertible", "didReceiveMemoryWarning"]
-- ["PSs23CustomStringConvertible", "init"]
-- ["PSs23CustomStringConvertible", "viewDidLoad"]
-- ["PSs23CustomStringConvertible", ""]
-- ["PSs9Equatable", "didReceiveMemoryWarning"]
-- ["PSs9Equatable", "init"]
-- ["PSs9Equatable", "viewDidLoad"]
-- ["PSs9Equatable", ""]
-- ["PSs8Hashable", "didReceiveMemoryWarning"]
-- ["PSs8Hashable", "init"]
-- ["PSs8Hashable", "viewDidLoad"]
-- ["PSs8Hashable", ""]
+- ["Ps9AnyObject", "didReceiveMemoryWarning"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "viewDidLoad"]
+- ["Ps9AnyObject", ""]
+- ["Ps11CVarArgType", "didReceiveMemoryWarning"]
+- ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "viewDidLoad"]
+- ["Ps11CVarArgType", ""]
+- ["Ps28CustomDebugStringConvertible", "didReceiveMemoryWarning"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- ["Ps23CustomStringConvertible", "didReceiveMemoryWarning"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "viewDidLoad"]
+- ["Ps23CustomStringConvertible", ""]
+- ["Ps9Equatable", "didReceiveMemoryWarning"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "viewDidLoad"]
+- ["Ps9Equatable", ""]
+- ["Ps8Hashable", "didReceiveMemoryWarning"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "viewDidLoad"]
+- ["Ps8Hashable", ""]
 - ["C6CoChat17LoginNavigationVC", "deinit"]
 - ["C6CoChat17LoginNavigationVC", "didReceiveMemoryWarning"]
 - ["C6CoChat17LoginNavigationVC", "init"]
@@ -82,11 +86,12 @@ depends-member:
 - ["CSo16UIViewController", "init"]
 - ["CSo16UIViewController", "viewDidLoad"]
 depends-nominal:
-- "PSs9AnyObject"
-- "PSs11CVarArgType"
-- "PSs23CustomStringConvertible"
-- "PSs9Equatable"
-- "PSs8Hashable"
+- "Ps9AnyObject"
+- "Ps11CVarArgType"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- "Ps8Hashable"
 - "C6CoChat17LoginNavigationVC"
 - "PSo8NSCoding"
 - "PSo26NSExtensionRequestHandling"

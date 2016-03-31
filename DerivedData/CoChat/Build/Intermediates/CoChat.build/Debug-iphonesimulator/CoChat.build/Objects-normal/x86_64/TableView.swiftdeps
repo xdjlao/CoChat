@@ -7,37 +7,41 @@ provides-member:
 provides-dynamic-lookup:
 - "lastIndexPath"
 depends-top-level:
-- "UITableView"
 - !private "-"
+- "UITableView"
 - !private ">"
 - "NSIndexPath"
 depends-member:
-- !private ["PSs9AnyObject", "NSIndexPath"]
-- !private ["PSs9AnyObject", "init"]
-- ["PSs9AnyObject", "lastIndexPath"]
-- !private ["PSs9AnyObject", "numberOfRowsInSection"]
+- !private ["Ps9AnyObject", "NSIndexPath"]
+- !private ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "lastIndexPath"]
+- !private ["Ps9AnyObject", "numberOfRowsInSection"]
 - !private ["Sb", "_getBuiltinLogicValue"]
-- !private ["PSs25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
-- !private ["PSs11BooleanType", "_getBuiltinLogicValue"]
-- !private ["PSs11CVarArgType", "NSIndexPath"]
-- !private ["PSs11CVarArgType", "init"]
-- ["PSs11CVarArgType", "lastIndexPath"]
-- !private ["PSs11CVarArgType", "numberOfRowsInSection"]
-- !private ["PSs23CustomStringConvertible", "NSIndexPath"]
-- !private ["PSs23CustomStringConvertible", "_getBuiltinLogicValue"]
-- !private ["PSs23CustomStringConvertible", "init"]
-- ["PSs23CustomStringConvertible", "lastIndexPath"]
-- !private ["PSs23CustomStringConvertible", "numberOfRowsInSection"]
-- !private ["PSs9Equatable", "NSIndexPath"]
-- !private ["PSs9Equatable", "_getBuiltinLogicValue"]
-- !private ["PSs9Equatable", "init"]
-- ["PSs9Equatable", "lastIndexPath"]
-- !private ["PSs9Equatable", "numberOfRowsInSection"]
-- !private ["PSs8Hashable", "NSIndexPath"]
-- !private ["PSs8Hashable", "_getBuiltinLogicValue"]
-- !private ["PSs8Hashable", "init"]
-- ["PSs8Hashable", "lastIndexPath"]
-- !private ["PSs8Hashable", "numberOfRowsInSection"]
+- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- !private ["Ps11CVarArgType", "NSIndexPath"]
+- !private ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "lastIndexPath"]
+- !private ["Ps11CVarArgType", "numberOfRowsInSection"]
+- !private ["Ps28CustomDebugStringConvertible", "NSIndexPath"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "lastIndexPath"]
+- !private ["Ps28CustomDebugStringConvertible", "numberOfRowsInSection"]
+- !private ["Ps23CustomStringConvertible", "NSIndexPath"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "lastIndexPath"]
+- !private ["Ps23CustomStringConvertible", "numberOfRowsInSection"]
+- !private ["Ps9Equatable", "NSIndexPath"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "lastIndexPath"]
+- !private ["Ps9Equatable", "numberOfRowsInSection"]
+- !private ["Ps8Hashable", "NSIndexPath"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "lastIndexPath"]
+- !private ["Ps8Hashable", "numberOfRowsInSection"]
 - !private ["PSo8NSCoding", "NSIndexPath"]
 - !private ["PSo8NSCoding", "init"]
 - ["PSo8NSCoding", "lastIndexPath"]
@@ -86,21 +90,22 @@ depends-member:
 - ["CSo6UIView", "NSIndexPath"]
 - ["CSo6UIView", "lastIndexPath"]
 - !private ["CSo6UIView", "numberOfRowsInSection"]
-- !private ["PSs33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
-- !private ["PSs21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
-- !private ["PSs12_Reflectable", "NSIndexPath"]
-- !private ["PSs12_Reflectable", "_getBuiltinLogicValue"]
-- ["PSs12_Reflectable", "lastIndexPath"]
-- !private ["PSs12_Reflectable", "numberOfRowsInSection"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps12_Reflectable", "NSIndexPath"]
+- !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
+- ["Ps12_Reflectable", "lastIndexPath"]
+- !private ["Ps12_Reflectable", "numberOfRowsInSection"]
 depends-nominal:
-- "PSs9AnyObject"
+- "Ps9AnyObject"
 - !private "Sb"
-- !private "PSs25BooleanLiteralConvertible"
-- !private "PSs11BooleanType"
-- "PSs11CVarArgType"
-- "PSs23CustomStringConvertible"
-- "PSs9Equatable"
-- "PSs8Hashable"
+- !private "Ps25BooleanLiteralConvertible"
+- !private "Ps11BooleanType"
+- "Ps11CVarArgType"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- "Ps8Hashable"
 - "PSo8NSCoding"
 - !private "PSo9NSCopying"
 - !private "CSo11NSIndexPath"
@@ -118,9 +123,9 @@ depends-nominal:
 - "CSo11UITableView"
 - "PSo18UITraitEnvironment"
 - "CSo6UIView"
-- !private "PSs33_BuiltinBooleanLiteralConvertible"
-- !private "PSs21_ObjectiveCBridgeable"
-- "PSs12_Reflectable"
+- !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps21_ObjectiveCBridgeable"
+- "Ps12_Reflectable"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"

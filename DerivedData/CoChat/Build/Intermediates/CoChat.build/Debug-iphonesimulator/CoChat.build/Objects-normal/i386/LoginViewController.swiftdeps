@@ -1,0 +1,904 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "LoginViewController"
+provides-nominal:
+- "C6CoChat19LoginViewController"
+provides-member:
+- ["C6CoChat19LoginViewController", ""]
+provides-dynamic-lookup:
+- "keyboardWillHide"
+- "keyboardWillShow"
+- "checkForDismiss"
+- "signUpButtonContainer"
+- "logoContainer"
+- "viewDidLoad"
+- "signUpButton"
+- "backButtonPressed"
+- "loginButton"
+- "setUpUI"
+- "facebookAuthContainer"
+- "loginInEmailContainer"
+depends-top-level:
+- !private "!="
+- "FBSDKLoginButtonDelegate"
+- "UIButton"
+- !private "FirebaseManager"
+- "UIViewController"
+- !private "Theme"
+- "UIView"
+- !private "NSNotificationCenter"
+- !private "StringLiteralType"
+- !private "BooleanLiteralType"
+- "LoginViewController"
+- "UIBarButtonItem"
+depends-member:
+- !private ["Ps9AnyObject", "FirebaseManager"]
+- !private ["Ps9AnyObject", "NSNotificationCenter"]
+- !private ["Ps9AnyObject", "Theme"]
+- !private ["Ps9AnyObject", "addObserver"]
+- !private ["Ps9AnyObject", "adjustsFontSizeToFitWidth"]
+- !private ["Ps9AnyObject", "authData"]
+- ["Ps9AnyObject", "backButtonPressed"]
+- !private ["Ps9AnyObject", "backgroundColor"]
+- !private ["Ps9AnyObject", "center"]
+- ["Ps9AnyObject", "checkForDismiss"]
+- !private ["Ps9AnyObject", "cornerRadius"]
+- !private ["Ps9AnyObject", "createFBLoginButtonWithPosition"]
+- !private ["Ps9AnyObject", "defaultCenter"]
+- !private ["Ps9AnyObject", "delegate"]
+- !private ["Ps9AnyObject", "dismissViewControllerAnimated"]
+- ["Ps9AnyObject", "facebookAuthContainer"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "keyboardWillHide"]
+- ["Ps9AnyObject", "keyboardWillShow"]
+- !private ["Ps9AnyObject", "layer"]
+- ["Ps9AnyObject", "loginButton"]
+- ["Ps9AnyObject", "loginButtonDidLogOut"]
+- ["Ps9AnyObject", "loginButtonWillLogin"]
+- ["Ps9AnyObject", "loginInEmailContainer"]
+- ["Ps9AnyObject", "logoContainer"]
+- !private ["Ps9AnyObject", "manager"]
+- !private ["Ps9AnyObject", "minimumScaleFactor"]
+- !private ["Ps9AnyObject", "navigationBar"]
+- !private ["Ps9AnyObject", "navigationController"]
+- ["Ps9AnyObject", "setUpUI"]
+- ["Ps9AnyObject", "signUpButton"]
+- ["Ps9AnyObject", "signUpButtonContainer"]
+- !private ["Ps9AnyObject", "tintColor"]
+- !private ["Ps9AnyObject", "titleLabel"]
+- !private ["Ps9AnyObject", "view"]
+- ["Ps9AnyObject", "viewDidLoad"]
+- ["Ps9AnyObject", ""]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- !private ["CSo7CALayer", "cornerRadius"]
+- !private ["PSo13CAMediaTiming", "cornerRadius"]
+- !private ["V12CoreGraphics7CGFloat", "deinit"]
+- !private ["VSC7CGPoint", "x"]
+- !private ["VSC7CGPoint", "y"]
+- !private ["Ps11CVarArgType", "FirebaseManager"]
+- !private ["Ps11CVarArgType", "NSNotificationCenter"]
+- !private ["Ps11CVarArgType", "Theme"]
+- !private ["Ps11CVarArgType", "addObserver"]
+- !private ["Ps11CVarArgType", "adjustsFontSizeToFitWidth"]
+- ["Ps11CVarArgType", "backButtonPressed"]
+- !private ["Ps11CVarArgType", "backgroundColor"]
+- !private ["Ps11CVarArgType", "center"]
+- ["Ps11CVarArgType", "checkForDismiss"]
+- !private ["Ps11CVarArgType", "cornerRadius"]
+- !private ["Ps11CVarArgType", "createFBLoginButtonWithPosition"]
+- !private ["Ps11CVarArgType", "defaultCenter"]
+- !private ["Ps11CVarArgType", "delegate"]
+- !private ["Ps11CVarArgType", "dismissViewControllerAnimated"]
+- ["Ps11CVarArgType", "facebookAuthContainer"]
+- ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "keyboardWillHide"]
+- ["Ps11CVarArgType", "keyboardWillShow"]
+- !private ["Ps11CVarArgType", "layer"]
+- ["Ps11CVarArgType", "loginButton"]
+- ["Ps11CVarArgType", "loginButtonDidLogOut"]
+- ["Ps11CVarArgType", "loginButtonWillLogin"]
+- ["Ps11CVarArgType", "loginInEmailContainer"]
+- ["Ps11CVarArgType", "logoContainer"]
+- !private ["Ps11CVarArgType", "minimumScaleFactor"]
+- !private ["Ps11CVarArgType", "navigationBar"]
+- !private ["Ps11CVarArgType", "navigationController"]
+- ["Ps11CVarArgType", "setUpUI"]
+- ["Ps11CVarArgType", "signUpButton"]
+- ["Ps11CVarArgType", "signUpButtonContainer"]
+- !private ["Ps11CVarArgType", "tintColor"]
+- !private ["Ps11CVarArgType", "titleLabel"]
+- !private ["Ps11CVarArgType", "view"]
+- ["Ps11CVarArgType", "viewDidLoad"]
+- ["Ps11CVarArgType", ""]
+- !private ["OV6CoChat5Theme6Colors", "BackgroundColor"]
+- !private ["OV6CoChat5Theme6Colors", "ButtonColor"]
+- !private ["OV6CoChat5Theme6Colors", "DarkButtonColor"]
+- !private ["OV6CoChat5Theme6Colors", "color"]
+- !private ["Ps28CustomDebugStringConvertible", "FirebaseManager"]
+- !private ["Ps28CustomDebugStringConvertible", "NSNotificationCenter"]
+- !private ["Ps28CustomDebugStringConvertible", "Theme"]
+- !private ["Ps28CustomDebugStringConvertible", "addObserver"]
+- !private ["Ps28CustomDebugStringConvertible", "adjustsFontSizeToFitWidth"]
+- ["Ps28CustomDebugStringConvertible", "backButtonPressed"]
+- !private ["Ps28CustomDebugStringConvertible", "backgroundColor"]
+- !private ["Ps28CustomDebugStringConvertible", "center"]
+- ["Ps28CustomDebugStringConvertible", "checkForDismiss"]
+- !private ["Ps28CustomDebugStringConvertible", "cornerRadius"]
+- !private ["Ps28CustomDebugStringConvertible", "createFBLoginButtonWithPosition"]
+- !private ["Ps28CustomDebugStringConvertible", "defaultCenter"]
+- !private ["Ps28CustomDebugStringConvertible", "delegate"]
+- !private ["Ps28CustomDebugStringConvertible", "dismissViewControllerAnimated"]
+- ["Ps28CustomDebugStringConvertible", "facebookAuthContainer"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "keyboardWillHide"]
+- ["Ps28CustomDebugStringConvertible", "keyboardWillShow"]
+- !private ["Ps28CustomDebugStringConvertible", "layer"]
+- ["Ps28CustomDebugStringConvertible", "loginButton"]
+- ["Ps28CustomDebugStringConvertible", "loginButtonDidLogOut"]
+- ["Ps28CustomDebugStringConvertible", "loginButtonWillLogin"]
+- ["Ps28CustomDebugStringConvertible", "loginInEmailContainer"]
+- ["Ps28CustomDebugStringConvertible", "logoContainer"]
+- !private ["Ps28CustomDebugStringConvertible", "minimumScaleFactor"]
+- !private ["Ps28CustomDebugStringConvertible", "navigationBar"]
+- !private ["Ps28CustomDebugStringConvertible", "navigationController"]
+- ["Ps28CustomDebugStringConvertible", "setUpUI"]
+- ["Ps28CustomDebugStringConvertible", "signUpButton"]
+- ["Ps28CustomDebugStringConvertible", "signUpButtonContainer"]
+- !private ["Ps28CustomDebugStringConvertible", "tintColor"]
+- !private ["Ps28CustomDebugStringConvertible", "titleLabel"]
+- !private ["Ps28CustomDebugStringConvertible", "view"]
+- ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps23CustomStringConvertible", "FirebaseManager"]
+- !private ["Ps23CustomStringConvertible", "NSNotificationCenter"]
+- !private ["Ps23CustomStringConvertible", "Theme"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "addObserver"]
+- !private ["Ps23CustomStringConvertible", "adjustsFontSizeToFitWidth"]
+- ["Ps23CustomStringConvertible", "backButtonPressed"]
+- !private ["Ps23CustomStringConvertible", "backgroundColor"]
+- !private ["Ps23CustomStringConvertible", "center"]
+- ["Ps23CustomStringConvertible", "checkForDismiss"]
+- !private ["Ps23CustomStringConvertible", "cornerRadius"]
+- !private ["Ps23CustomStringConvertible", "createFBLoginButtonWithPosition"]
+- !private ["Ps23CustomStringConvertible", "defaultCenter"]
+- !private ["Ps23CustomStringConvertible", "delegate"]
+- !private ["Ps23CustomStringConvertible", "dismissViewControllerAnimated"]
+- ["Ps23CustomStringConvertible", "facebookAuthContainer"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "keyboardWillHide"]
+- ["Ps23CustomStringConvertible", "keyboardWillShow"]
+- !private ["Ps23CustomStringConvertible", "layer"]
+- ["Ps23CustomStringConvertible", "loginButton"]
+- ["Ps23CustomStringConvertible", "loginButtonDidLogOut"]
+- ["Ps23CustomStringConvertible", "loginButtonWillLogin"]
+- ["Ps23CustomStringConvertible", "loginInEmailContainer"]
+- ["Ps23CustomStringConvertible", "logoContainer"]
+- !private ["Ps23CustomStringConvertible", "minimumScaleFactor"]
+- !private ["Ps23CustomStringConvertible", "navigationBar"]
+- !private ["Ps23CustomStringConvertible", "navigationController"]
+- ["Ps23CustomStringConvertible", "setUpUI"]
+- ["Ps23CustomStringConvertible", "signUpButton"]
+- ["Ps23CustomStringConvertible", "signUpButtonContainer"]
+- !private ["Ps23CustomStringConvertible", "tintColor"]
+- !private ["Ps23CustomStringConvertible", "titleLabel"]
+- !private ["Ps23CustomStringConvertible", "view"]
+- ["Ps23CustomStringConvertible", "viewDidLoad"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Ps9Equatable", "BackgroundColor"]
+- !private ["Ps9Equatable", "ButtonColor"]
+- !private ["Ps9Equatable", "DarkButtonColor"]
+- !private ["Ps9Equatable", "FirebaseManager"]
+- !private ["Ps9Equatable", "NSNotificationCenter"]
+- !private ["Ps9Equatable", "Theme"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "addObserver"]
+- !private ["Ps9Equatable", "adjustsFontSizeToFitWidth"]
+- ["Ps9Equatable", "backButtonPressed"]
+- !private ["Ps9Equatable", "backgroundColor"]
+- !private ["Ps9Equatable", "center"]
+- ["Ps9Equatable", "checkForDismiss"]
+- !private ["Ps9Equatable", "color"]
+- !private ["Ps9Equatable", "cornerRadius"]
+- !private ["Ps9Equatable", "createFBLoginButtonWithPosition"]
+- !private ["Ps9Equatable", "defaultCenter"]
+- !private ["Ps9Equatable", "delegate"]
+- !private ["Ps9Equatable", "dismissViewControllerAnimated"]
+- ["Ps9Equatable", "facebookAuthContainer"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "keyboardWillHide"]
+- ["Ps9Equatable", "keyboardWillShow"]
+- !private ["Ps9Equatable", "layer"]
+- ["Ps9Equatable", "loginButton"]
+- ["Ps9Equatable", "loginButtonDidLogOut"]
+- ["Ps9Equatable", "loginButtonWillLogin"]
+- ["Ps9Equatable", "loginInEmailContainer"]
+- ["Ps9Equatable", "logoContainer"]
+- !private ["Ps9Equatable", "minimumScaleFactor"]
+- !private ["Ps9Equatable", "navigationBar"]
+- !private ["Ps9Equatable", "navigationController"]
+- ["Ps9Equatable", "setUpUI"]
+- ["Ps9Equatable", "signUpButton"]
+- ["Ps9Equatable", "signUpButtonContainer"]
+- !private ["Ps9Equatable", "tintColor"]
+- !private ["Ps9Equatable", "titleLabel"]
+- !private ["Ps9Equatable", "view"]
+- ["Ps9Equatable", "viewDidLoad"]
+- !private ["Ps9Equatable", "x"]
+- !private ["Ps9Equatable", "y"]
+- ["Ps9Equatable", ""]
+- !private ["CSo11FBSDKButton", "delegate"]
+- !private ["CSo16FBSDKLoginButton", "delegate"]
+- !private ["PSo24FBSDKLoginButtonDelegate", "FirebaseManager"]
+- !private ["PSo24FBSDKLoginButtonDelegate", "NSNotificationCenter"]
+- !private ["PSo24FBSDKLoginButtonDelegate", "Theme"]
+- !private ["PSo24FBSDKLoginButtonDelegate", "checkForDismiss"]
+- !private ["PSo24FBSDKLoginButtonDelegate", "createFBLoginButtonWithPosition"]
+- !private ["PSo24FBSDKLoginButtonDelegate", "dismissViewControllerAnimated"]
+- !private ["PSo24FBSDKLoginButtonDelegate", "facebookAuthContainer"]
+- ["PSo24FBSDKLoginButtonDelegate", "loginButton"]
+- ["PSo24FBSDKLoginButtonDelegate", "loginButtonDidLogOut"]
+- ["PSo24FBSDKLoginButtonDelegate", "loginButtonWillLogin"]
+- !private ["PSo24FBSDKLoginButtonDelegate", "loginInEmailContainer"]
+- !private ["PSo24FBSDKLoginButtonDelegate", "navigationController"]
+- !private ["PSo24FBSDKLoginButtonDelegate", "setUpUI"]
+- !private ["PSo24FBSDKLoginButtonDelegate", "signUpButton"]
+- !private ["PSo24FBSDKLoginButtonDelegate", "signUpButtonContainer"]
+- !private ["PSo24FBSDKLoginButtonDelegate", "view"]
+- ["PSo24FBSDKLoginButtonDelegate", ""]
+- !private ["C6CoChat15FirebaseManager", "authData"]
+- !private ["C6CoChat15FirebaseManager", "manager"]
+- !private ["Ps8Hashable", "BackgroundColor"]
+- !private ["Ps8Hashable", "ButtonColor"]
+- !private ["Ps8Hashable", "DarkButtonColor"]
+- !private ["Ps8Hashable", "FirebaseManager"]
+- !private ["Ps8Hashable", "NSNotificationCenter"]
+- !private ["Ps8Hashable", "Theme"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "addObserver"]
+- !private ["Ps8Hashable", "adjustsFontSizeToFitWidth"]
+- ["Ps8Hashable", "backButtonPressed"]
+- !private ["Ps8Hashable", "backgroundColor"]
+- !private ["Ps8Hashable", "center"]
+- ["Ps8Hashable", "checkForDismiss"]
+- !private ["Ps8Hashable", "color"]
+- !private ["Ps8Hashable", "cornerRadius"]
+- !private ["Ps8Hashable", "createFBLoginButtonWithPosition"]
+- !private ["Ps8Hashable", "defaultCenter"]
+- !private ["Ps8Hashable", "delegate"]
+- !private ["Ps8Hashable", "dismissViewControllerAnimated"]
+- ["Ps8Hashable", "facebookAuthContainer"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "keyboardWillHide"]
+- ["Ps8Hashable", "keyboardWillShow"]
+- !private ["Ps8Hashable", "layer"]
+- ["Ps8Hashable", "loginButton"]
+- ["Ps8Hashable", "loginButtonDidLogOut"]
+- ["Ps8Hashable", "loginButtonWillLogin"]
+- ["Ps8Hashable", "loginInEmailContainer"]
+- ["Ps8Hashable", "logoContainer"]
+- !private ["Ps8Hashable", "minimumScaleFactor"]
+- !private ["Ps8Hashable", "navigationBar"]
+- !private ["Ps8Hashable", "navigationController"]
+- ["Ps8Hashable", "setUpUI"]
+- ["Ps8Hashable", "signUpButton"]
+- ["Ps8Hashable", "signUpButtonContainer"]
+- !private ["Ps8Hashable", "tintColor"]
+- !private ["Ps8Hashable", "titleLabel"]
+- !private ["Ps8Hashable", "view"]
+- ["Ps8Hashable", "viewDidLoad"]
+- ["Ps8Hashable", ""]
+- !private ["C6CoChat19LoginViewController", "FirebaseManager"]
+- !private ["C6CoChat19LoginViewController", "NSNotificationCenter"]
+- !private ["C6CoChat19LoginViewController", "Theme"]
+- ["C6CoChat19LoginViewController", "UIBarButtonItem"]
+- ["C6CoChat19LoginViewController", "UIButton"]
+- ["C6CoChat19LoginViewController", "UIView"]
+- ["C6CoChat19LoginViewController", "backButtonPressed"]
+- ["C6CoChat19LoginViewController", "checkForDismiss"]
+- !private ["C6CoChat19LoginViewController", "createFBLoginButtonWithPosition"]
+- ["C6CoChat19LoginViewController", "deinit"]
+- !private ["C6CoChat19LoginViewController", "dismissViewControllerAnimated"]
+- ["C6CoChat19LoginViewController", "facebookAuthContainer"]
+- ["C6CoChat19LoginViewController", "init"]
+- ["C6CoChat19LoginViewController", "keyboardWillHide"]
+- ["C6CoChat19LoginViewController", "keyboardWillShow"]
+- ["C6CoChat19LoginViewController", "loginButton"]
+- ["C6CoChat19LoginViewController", "loginButtonDidLogOut"]
+- ["C6CoChat19LoginViewController", "loginButtonWillLogin"]
+- ["C6CoChat19LoginViewController", "loginInEmailContainer"]
+- ["C6CoChat19LoginViewController", "logoContainer"]
+- !private ["C6CoChat19LoginViewController", "navigationController"]
+- ["C6CoChat19LoginViewController", "setUpUI"]
+- ["C6CoChat19LoginViewController", "signUpButton"]
+- ["C6CoChat19LoginViewController", "signUpButtonContainer"]
+- !private ["C6CoChat19LoginViewController", "view"]
+- ["C6CoChat19LoginViewController", "viewDidLoad"]
+- !private ["PSo8NSCoding", "FirebaseManager"]
+- !private ["PSo8NSCoding", "NSNotificationCenter"]
+- !private ["PSo8NSCoding", "Theme"]
+- !private ["PSo8NSCoding", "adjustsFontSizeToFitWidth"]
+- ["PSo8NSCoding", "backButtonPressed"]
+- !private ["PSo8NSCoding", "backgroundColor"]
+- !private ["PSo8NSCoding", "center"]
+- ["PSo8NSCoding", "checkForDismiss"]
+- !private ["PSo8NSCoding", "cornerRadius"]
+- !private ["PSo8NSCoding", "createFBLoginButtonWithPosition"]
+- !private ["PSo8NSCoding", "delegate"]
+- !private ["PSo8NSCoding", "dismissViewControllerAnimated"]
+- ["PSo8NSCoding", "facebookAuthContainer"]
+- ["PSo8NSCoding", "init"]
+- ["PSo8NSCoding", "keyboardWillHide"]
+- ["PSo8NSCoding", "keyboardWillShow"]
+- !private ["PSo8NSCoding", "layer"]
+- ["PSo8NSCoding", "loginButton"]
+- ["PSo8NSCoding", "loginButtonDidLogOut"]
+- ["PSo8NSCoding", "loginButtonWillLogin"]
+- ["PSo8NSCoding", "loginInEmailContainer"]
+- ["PSo8NSCoding", "logoContainer"]
+- !private ["PSo8NSCoding", "minimumScaleFactor"]
+- !private ["PSo8NSCoding", "navigationBar"]
+- !private ["PSo8NSCoding", "navigationController"]
+- ["PSo8NSCoding", "setUpUI"]
+- ["PSo8NSCoding", "signUpButton"]
+- ["PSo8NSCoding", "signUpButtonContainer"]
+- !private ["PSo8NSCoding", "tintColor"]
+- !private ["PSo8NSCoding", "titleLabel"]
+- !private ["PSo8NSCoding", "view"]
+- ["PSo8NSCoding", "viewDidLoad"]
+- ["PSo8NSCoding", ""]
+- !private ["PSo26NSExtensionRequestHandling", "FirebaseManager"]
+- !private ["PSo26NSExtensionRequestHandling", "NSNotificationCenter"]
+- !private ["PSo26NSExtensionRequestHandling", "Theme"]
+- ["PSo26NSExtensionRequestHandling", "backButtonPressed"]
+- ["PSo26NSExtensionRequestHandling", "checkForDismiss"]
+- !private ["PSo26NSExtensionRequestHandling", "createFBLoginButtonWithPosition"]
+- !private ["PSo26NSExtensionRequestHandling", "dismissViewControllerAnimated"]
+- ["PSo26NSExtensionRequestHandling", "facebookAuthContainer"]
+- ["PSo26NSExtensionRequestHandling", "init"]
+- ["PSo26NSExtensionRequestHandling", "keyboardWillHide"]
+- ["PSo26NSExtensionRequestHandling", "keyboardWillShow"]
+- ["PSo26NSExtensionRequestHandling", "loginButton"]
+- ["PSo26NSExtensionRequestHandling", "loginButtonDidLogOut"]
+- ["PSo26NSExtensionRequestHandling", "loginButtonWillLogin"]
+- ["PSo26NSExtensionRequestHandling", "loginInEmailContainer"]
+- ["PSo26NSExtensionRequestHandling", "logoContainer"]
+- !private ["PSo26NSExtensionRequestHandling", "navigationBar"]
+- !private ["PSo26NSExtensionRequestHandling", "navigationController"]
+- ["PSo26NSExtensionRequestHandling", "setUpUI"]
+- ["PSo26NSExtensionRequestHandling", "signUpButton"]
+- ["PSo26NSExtensionRequestHandling", "signUpButtonContainer"]
+- !private ["PSo26NSExtensionRequestHandling", "view"]
+- ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
+- ["PSo26NSExtensionRequestHandling", ""]
+- !private ["CSo20NSNotificationCenter", "addObserver"]
+- !private ["CSo20NSNotificationCenter", "defaultCenter"]
+- !private ["CSo8NSObject", "FirebaseManager"]
+- !private ["CSo8NSObject", "NSNotificationCenter"]
+- !private ["CSo8NSObject", "Theme"]
+- ["CSo8NSObject", "UIBarButtonItem"]
+- ["CSo8NSObject", "UIButton"]
+- ["CSo8NSObject", "UIView"]
+- !private ["CSo8NSObject", "addObserver"]
+- !private ["CSo8NSObject", "adjustsFontSizeToFitWidth"]
+- ["CSo8NSObject", "backButtonPressed"]
+- !private ["CSo8NSObject", "backgroundColor"]
+- !private ["CSo8NSObject", "center"]
+- ["CSo8NSObject", "checkForDismiss"]
+- !private ["CSo8NSObject", "cornerRadius"]
+- !private ["CSo8NSObject", "createFBLoginButtonWithPosition"]
+- !private ["CSo8NSObject", "defaultCenter"]
+- !private ["CSo8NSObject", "delegate"]
+- !private ["CSo8NSObject", "dismissViewControllerAnimated"]
+- ["CSo8NSObject", "facebookAuthContainer"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "keyboardWillHide"]
+- ["CSo8NSObject", "keyboardWillShow"]
+- !private ["CSo8NSObject", "layer"]
+- ["CSo8NSObject", "loginButton"]
+- ["CSo8NSObject", "loginButtonDidLogOut"]
+- ["CSo8NSObject", "loginButtonWillLogin"]
+- ["CSo8NSObject", "loginInEmailContainer"]
+- ["CSo8NSObject", "logoContainer"]
+- !private ["CSo8NSObject", "minimumScaleFactor"]
+- !private ["CSo8NSObject", "navigationBar"]
+- !private ["CSo8NSObject", "navigationController"]
+- ["CSo8NSObject", "setUpUI"]
+- ["CSo8NSObject", "signUpButton"]
+- ["CSo8NSObject", "signUpButtonContainer"]
+- !private ["CSo8NSObject", "tintColor"]
+- !private ["CSo8NSObject", "titleLabel"]
+- !private ["CSo8NSObject", "view"]
+- ["CSo8NSObject", "viewDidLoad"]
+- !private ["PSo16NSObjectProtocol", "FirebaseManager"]
+- !private ["PSo16NSObjectProtocol", "NSNotificationCenter"]
+- !private ["PSo16NSObjectProtocol", "Theme"]
+- !private ["PSo16NSObjectProtocol", "addObserver"]
+- !private ["PSo16NSObjectProtocol", "adjustsFontSizeToFitWidth"]
+- ["PSo16NSObjectProtocol", "backButtonPressed"]
+- !private ["PSo16NSObjectProtocol", "backgroundColor"]
+- !private ["PSo16NSObjectProtocol", "center"]
+- ["PSo16NSObjectProtocol", "checkForDismiss"]
+- !private ["PSo16NSObjectProtocol", "cornerRadius"]
+- !private ["PSo16NSObjectProtocol", "createFBLoginButtonWithPosition"]
+- !private ["PSo16NSObjectProtocol", "defaultCenter"]
+- !private ["PSo16NSObjectProtocol", "delegate"]
+- !private ["PSo16NSObjectProtocol", "dismissViewControllerAnimated"]
+- ["PSo16NSObjectProtocol", "facebookAuthContainer"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "keyboardWillHide"]
+- ["PSo16NSObjectProtocol", "keyboardWillShow"]
+- !private ["PSo16NSObjectProtocol", "layer"]
+- ["PSo16NSObjectProtocol", "loginButton"]
+- ["PSo16NSObjectProtocol", "loginButtonDidLogOut"]
+- ["PSo16NSObjectProtocol", "loginButtonWillLogin"]
+- ["PSo16NSObjectProtocol", "loginInEmailContainer"]
+- ["PSo16NSObjectProtocol", "logoContainer"]
+- !private ["PSo16NSObjectProtocol", "minimumScaleFactor"]
+- !private ["PSo16NSObjectProtocol", "navigationBar"]
+- !private ["PSo16NSObjectProtocol", "navigationController"]
+- ["PSo16NSObjectProtocol", "setUpUI"]
+- ["PSo16NSObjectProtocol", "signUpButton"]
+- ["PSo16NSObjectProtocol", "signUpButtonContainer"]
+- !private ["PSo16NSObjectProtocol", "tintColor"]
+- !private ["PSo16NSObjectProtocol", "titleLabel"]
+- !private ["PSo16NSObjectProtocol", "view"]
+- ["PSo16NSObjectProtocol", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["Sq", "deinit"]
+- !private ["V10ObjectiveC8Selector", "deinit"]
+- !private ["V6CoChat5Theme", "Colors"]
+- !private ["PSo29UIAccessibilityIdentification", "adjustsFontSizeToFitWidth"]
+- !private ["PSo29UIAccessibilityIdentification", "backgroundColor"]
+- !private ["PSo29UIAccessibilityIdentification", "center"]
+- !private ["PSo29UIAccessibilityIdentification", "delegate"]
+- !private ["PSo29UIAccessibilityIdentification", "layer"]
+- !private ["PSo29UIAccessibilityIdentification", "minimumScaleFactor"]
+- !private ["PSo29UIAccessibilityIdentification", "tintColor"]
+- !private ["PSo29UIAccessibilityIdentification", "titleLabel"]
+- !private ["PSo12UIAppearance", "adjustsFontSizeToFitWidth"]
+- !private ["PSo12UIAppearance", "backgroundColor"]
+- !private ["PSo12UIAppearance", "center"]
+- !private ["PSo12UIAppearance", "delegate"]
+- !private ["PSo12UIAppearance", "layer"]
+- !private ["PSo12UIAppearance", "minimumScaleFactor"]
+- !private ["PSo12UIAppearance", "tintColor"]
+- !private ["PSo12UIAppearance", "titleLabel"]
+- !private ["PSo21UIAppearanceContainer", "FirebaseManager"]
+- !private ["PSo21UIAppearanceContainer", "NSNotificationCenter"]
+- !private ["PSo21UIAppearanceContainer", "Theme"]
+- !private ["PSo21UIAppearanceContainer", "adjustsFontSizeToFitWidth"]
+- ["PSo21UIAppearanceContainer", "backButtonPressed"]
+- !private ["PSo21UIAppearanceContainer", "backgroundColor"]
+- !private ["PSo21UIAppearanceContainer", "center"]
+- ["PSo21UIAppearanceContainer", "checkForDismiss"]
+- !private ["PSo21UIAppearanceContainer", "createFBLoginButtonWithPosition"]
+- !private ["PSo21UIAppearanceContainer", "delegate"]
+- !private ["PSo21UIAppearanceContainer", "dismissViewControllerAnimated"]
+- ["PSo21UIAppearanceContainer", "facebookAuthContainer"]
+- ["PSo21UIAppearanceContainer", "init"]
+- ["PSo21UIAppearanceContainer", "keyboardWillHide"]
+- ["PSo21UIAppearanceContainer", "keyboardWillShow"]
+- !private ["PSo21UIAppearanceContainer", "layer"]
+- ["PSo21UIAppearanceContainer", "loginButton"]
+- ["PSo21UIAppearanceContainer", "loginButtonDidLogOut"]
+- ["PSo21UIAppearanceContainer", "loginButtonWillLogin"]
+- ["PSo21UIAppearanceContainer", "loginInEmailContainer"]
+- ["PSo21UIAppearanceContainer", "logoContainer"]
+- !private ["PSo21UIAppearanceContainer", "minimumScaleFactor"]
+- !private ["PSo21UIAppearanceContainer", "navigationBar"]
+- !private ["PSo21UIAppearanceContainer", "navigationController"]
+- ["PSo21UIAppearanceContainer", "setUpUI"]
+- ["PSo21UIAppearanceContainer", "signUpButton"]
+- ["PSo21UIAppearanceContainer", "signUpButtonContainer"]
+- !private ["PSo21UIAppearanceContainer", "tintColor"]
+- !private ["PSo21UIAppearanceContainer", "titleLabel"]
+- !private ["PSo21UIAppearanceContainer", "view"]
+- ["PSo21UIAppearanceContainer", "viewDidLoad"]
+- ["PSo21UIAppearanceContainer", ""]
+- !private ["PSo16UIBarPositioning", "tintColor"]
+- !private ["CSo8UIButton", "delegate"]
+- !private ["CSo8UIButton", "titleLabel"]
+- !private ["PSo18UIContentContainer", "FirebaseManager"]
+- !private ["PSo18UIContentContainer", "NSNotificationCenter"]
+- !private ["PSo18UIContentContainer", "Theme"]
+- ["PSo18UIContentContainer", "backButtonPressed"]
+- ["PSo18UIContentContainer", "checkForDismiss"]
+- !private ["PSo18UIContentContainer", "createFBLoginButtonWithPosition"]
+- !private ["PSo18UIContentContainer", "dismissViewControllerAnimated"]
+- ["PSo18UIContentContainer", "facebookAuthContainer"]
+- ["PSo18UIContentContainer", "init"]
+- ["PSo18UIContentContainer", "keyboardWillHide"]
+- ["PSo18UIContentContainer", "keyboardWillShow"]
+- ["PSo18UIContentContainer", "loginButton"]
+- ["PSo18UIContentContainer", "loginButtonDidLogOut"]
+- ["PSo18UIContentContainer", "loginButtonWillLogin"]
+- ["PSo18UIContentContainer", "loginInEmailContainer"]
+- ["PSo18UIContentContainer", "logoContainer"]
+- !private ["PSo18UIContentContainer", "navigationBar"]
+- !private ["PSo18UIContentContainer", "navigationController"]
+- ["PSo18UIContentContainer", "setUpUI"]
+- ["PSo18UIContentContainer", "signUpButton"]
+- ["PSo18UIContentContainer", "signUpButtonContainer"]
+- !private ["PSo18UIContentContainer", "view"]
+- ["PSo18UIContentContainer", "viewDidLoad"]
+- ["PSo18UIContentContainer", ""]
+- !private ["CSo9UIControl", "delegate"]
+- !private ["CSo9UIControl", "titleLabel"]
+- !private ["PSo17UICoordinateSpace", "adjustsFontSizeToFitWidth"]
+- !private ["PSo17UICoordinateSpace", "backgroundColor"]
+- !private ["PSo17UICoordinateSpace", "center"]
+- !private ["PSo17UICoordinateSpace", "delegate"]
+- !private ["PSo17UICoordinateSpace", "layer"]
+- !private ["PSo17UICoordinateSpace", "minimumScaleFactor"]
+- !private ["PSo17UICoordinateSpace", "tintColor"]
+- !private ["PSo17UICoordinateSpace", "titleLabel"]
+- !private ["PSo13UIDynamicItem", "adjustsFontSizeToFitWidth"]
+- !private ["PSo13UIDynamicItem", "backgroundColor"]
+- !private ["PSo13UIDynamicItem", "center"]
+- !private ["PSo13UIDynamicItem", "delegate"]
+- !private ["PSo13UIDynamicItem", "layer"]
+- !private ["PSo13UIDynamicItem", "minimumScaleFactor"]
+- !private ["PSo13UIDynamicItem", "tintColor"]
+- !private ["PSo13UIDynamicItem", "titleLabel"]
+- !private ["PSo18UIFocusEnvironment", "FirebaseManager"]
+- !private ["PSo18UIFocusEnvironment", "NSNotificationCenter"]
+- !private ["PSo18UIFocusEnvironment", "Theme"]
+- !private ["PSo18UIFocusEnvironment", "adjustsFontSizeToFitWidth"]
+- ["PSo18UIFocusEnvironment", "backButtonPressed"]
+- !private ["PSo18UIFocusEnvironment", "backgroundColor"]
+- !private ["PSo18UIFocusEnvironment", "center"]
+- ["PSo18UIFocusEnvironment", "checkForDismiss"]
+- !private ["PSo18UIFocusEnvironment", "createFBLoginButtonWithPosition"]
+- !private ["PSo18UIFocusEnvironment", "delegate"]
+- !private ["PSo18UIFocusEnvironment", "dismissViewControllerAnimated"]
+- ["PSo18UIFocusEnvironment", "facebookAuthContainer"]
+- ["PSo18UIFocusEnvironment", "init"]
+- ["PSo18UIFocusEnvironment", "keyboardWillHide"]
+- ["PSo18UIFocusEnvironment", "keyboardWillShow"]
+- !private ["PSo18UIFocusEnvironment", "layer"]
+- ["PSo18UIFocusEnvironment", "loginButton"]
+- ["PSo18UIFocusEnvironment", "loginButtonDidLogOut"]
+- ["PSo18UIFocusEnvironment", "loginButtonWillLogin"]
+- ["PSo18UIFocusEnvironment", "loginInEmailContainer"]
+- ["PSo18UIFocusEnvironment", "logoContainer"]
+- !private ["PSo18UIFocusEnvironment", "minimumScaleFactor"]
+- !private ["PSo18UIFocusEnvironment", "navigationBar"]
+- !private ["PSo18UIFocusEnvironment", "navigationController"]
+- ["PSo18UIFocusEnvironment", "setUpUI"]
+- ["PSo18UIFocusEnvironment", "signUpButton"]
+- ["PSo18UIFocusEnvironment", "signUpButtonContainer"]
+- !private ["PSo18UIFocusEnvironment", "tintColor"]
+- !private ["PSo18UIFocusEnvironment", "titleLabel"]
+- !private ["PSo18UIFocusEnvironment", "view"]
+- ["PSo18UIFocusEnvironment", "viewDidLoad"]
+- ["PSo18UIFocusEnvironment", ""]
+- !private ["CSo7UILabel", "adjustsFontSizeToFitWidth"]
+- !private ["CSo7UILabel", "minimumScaleFactor"]
+- !private ["CSo15UINavigationBar", "tintColor"]
+- !private ["CSo22UINavigationController", "navigationBar"]
+- !private ["CSo11UIResponder", "FirebaseManager"]
+- !private ["CSo11UIResponder", "NSNotificationCenter"]
+- !private ["CSo11UIResponder", "Theme"]
+- ["CSo11UIResponder", "UIBarButtonItem"]
+- ["CSo11UIResponder", "UIButton"]
+- ["CSo11UIResponder", "UIView"]
+- !private ["CSo11UIResponder", "adjustsFontSizeToFitWidth"]
+- ["CSo11UIResponder", "backButtonPressed"]
+- !private ["CSo11UIResponder", "backgroundColor"]
+- !private ["CSo11UIResponder", "center"]
+- ["CSo11UIResponder", "checkForDismiss"]
+- !private ["CSo11UIResponder", "createFBLoginButtonWithPosition"]
+- !private ["CSo11UIResponder", "delegate"]
+- !private ["CSo11UIResponder", "dismissViewControllerAnimated"]
+- ["CSo11UIResponder", "facebookAuthContainer"]
+- ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "keyboardWillHide"]
+- ["CSo11UIResponder", "keyboardWillShow"]
+- !private ["CSo11UIResponder", "layer"]
+- ["CSo11UIResponder", "loginButton"]
+- ["CSo11UIResponder", "loginButtonDidLogOut"]
+- ["CSo11UIResponder", "loginButtonWillLogin"]
+- ["CSo11UIResponder", "loginInEmailContainer"]
+- ["CSo11UIResponder", "logoContainer"]
+- !private ["CSo11UIResponder", "minimumScaleFactor"]
+- !private ["CSo11UIResponder", "navigationBar"]
+- !private ["CSo11UIResponder", "navigationController"]
+- ["CSo11UIResponder", "setUpUI"]
+- ["CSo11UIResponder", "signUpButton"]
+- ["CSo11UIResponder", "signUpButtonContainer"]
+- !private ["CSo11UIResponder", "tintColor"]
+- !private ["CSo11UIResponder", "titleLabel"]
+- !private ["CSo11UIResponder", "view"]
+- ["CSo11UIResponder", "viewDidLoad"]
+- !private ["PSo16UIStateRestoring", "FirebaseManager"]
+- !private ["PSo16UIStateRestoring", "NSNotificationCenter"]
+- !private ["PSo16UIStateRestoring", "Theme"]
+- ["PSo16UIStateRestoring", "backButtonPressed"]
+- ["PSo16UIStateRestoring", "checkForDismiss"]
+- !private ["PSo16UIStateRestoring", "createFBLoginButtonWithPosition"]
+- !private ["PSo16UIStateRestoring", "dismissViewControllerAnimated"]
+- ["PSo16UIStateRestoring", "facebookAuthContainer"]
+- ["PSo16UIStateRestoring", "init"]
+- ["PSo16UIStateRestoring", "keyboardWillHide"]
+- ["PSo16UIStateRestoring", "keyboardWillShow"]
+- ["PSo16UIStateRestoring", "loginButton"]
+- ["PSo16UIStateRestoring", "loginButtonDidLogOut"]
+- ["PSo16UIStateRestoring", "loginButtonWillLogin"]
+- ["PSo16UIStateRestoring", "loginInEmailContainer"]
+- ["PSo16UIStateRestoring", "logoContainer"]
+- !private ["PSo16UIStateRestoring", "navigationBar"]
+- !private ["PSo16UIStateRestoring", "navigationController"]
+- ["PSo16UIStateRestoring", "setUpUI"]
+- ["PSo16UIStateRestoring", "signUpButton"]
+- ["PSo16UIStateRestoring", "signUpButtonContainer"]
+- !private ["PSo16UIStateRestoring", "view"]
+- ["PSo16UIStateRestoring", "viewDidLoad"]
+- ["PSo16UIStateRestoring", ""]
+- !private ["PSo18UITraitEnvironment", "FirebaseManager"]
+- !private ["PSo18UITraitEnvironment", "NSNotificationCenter"]
+- !private ["PSo18UITraitEnvironment", "Theme"]
+- !private ["PSo18UITraitEnvironment", "adjustsFontSizeToFitWidth"]
+- ["PSo18UITraitEnvironment", "backButtonPressed"]
+- !private ["PSo18UITraitEnvironment", "backgroundColor"]
+- !private ["PSo18UITraitEnvironment", "center"]
+- ["PSo18UITraitEnvironment", "checkForDismiss"]
+- !private ["PSo18UITraitEnvironment", "createFBLoginButtonWithPosition"]
+- !private ["PSo18UITraitEnvironment", "delegate"]
+- !private ["PSo18UITraitEnvironment", "dismissViewControllerAnimated"]
+- ["PSo18UITraitEnvironment", "facebookAuthContainer"]
+- ["PSo18UITraitEnvironment", "init"]
+- ["PSo18UITraitEnvironment", "keyboardWillHide"]
+- ["PSo18UITraitEnvironment", "keyboardWillShow"]
+- !private ["PSo18UITraitEnvironment", "layer"]
+- ["PSo18UITraitEnvironment", "loginButton"]
+- ["PSo18UITraitEnvironment", "loginButtonDidLogOut"]
+- ["PSo18UITraitEnvironment", "loginButtonWillLogin"]
+- ["PSo18UITraitEnvironment", "loginInEmailContainer"]
+- ["PSo18UITraitEnvironment", "logoContainer"]
+- !private ["PSo18UITraitEnvironment", "minimumScaleFactor"]
+- !private ["PSo18UITraitEnvironment", "navigationBar"]
+- !private ["PSo18UITraitEnvironment", "navigationController"]
+- ["PSo18UITraitEnvironment", "setUpUI"]
+- ["PSo18UITraitEnvironment", "signUpButton"]
+- ["PSo18UITraitEnvironment", "signUpButtonContainer"]
+- !private ["PSo18UITraitEnvironment", "tintColor"]
+- !private ["PSo18UITraitEnvironment", "titleLabel"]
+- !private ["PSo18UITraitEnvironment", "view"]
+- ["PSo18UITraitEnvironment", "viewDidLoad"]
+- ["PSo18UITraitEnvironment", ""]
+- !private ["CSo6UIView", "adjustsFontSizeToFitWidth"]
+- !private ["CSo6UIView", "backgroundColor"]
+- !private ["CSo6UIView", "center"]
+- !private ["CSo6UIView", "delegate"]
+- !private ["CSo6UIView", "layer"]
+- !private ["CSo6UIView", "minimumScaleFactor"]
+- !private ["CSo6UIView", "tintColor"]
+- !private ["CSo6UIView", "titleLabel"]
+- !private ["CSo16UIViewController", "FirebaseManager"]
+- !private ["CSo16UIViewController", "NSNotificationCenter"]
+- !private ["CSo16UIViewController", "Theme"]
+- ["CSo16UIViewController", "UIBarButtonItem"]
+- ["CSo16UIViewController", "UIButton"]
+- ["CSo16UIViewController", "UIView"]
+- ["CSo16UIViewController", "backButtonPressed"]
+- ["CSo16UIViewController", "checkForDismiss"]
+- !private ["CSo16UIViewController", "createFBLoginButtonWithPosition"]
+- !private ["CSo16UIViewController", "dismissViewControllerAnimated"]
+- ["CSo16UIViewController", "facebookAuthContainer"]
+- ["CSo16UIViewController", "init"]
+- ["CSo16UIViewController", "keyboardWillHide"]
+- ["CSo16UIViewController", "keyboardWillShow"]
+- ["CSo16UIViewController", "loginButton"]
+- ["CSo16UIViewController", "loginButtonDidLogOut"]
+- ["CSo16UIViewController", "loginButtonWillLogin"]
+- ["CSo16UIViewController", "loginInEmailContainer"]
+- ["CSo16UIViewController", "logoContainer"]
+- !private ["CSo16UIViewController", "navigationBar"]
+- !private ["CSo16UIViewController", "navigationController"]
+- ["CSo16UIViewController", "setUpUI"]
+- ["CSo16UIViewController", "signUpButton"]
+- ["CSo16UIViewController", "signUpButtonContainer"]
+- !private ["CSo16UIViewController", "view"]
+- ["CSo16UIViewController", "viewDidLoad"]
+- ["CSo16UIViewController", ""]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Vs26_OptionalNilComparisonType", "deinit"]
+- !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
+- !private ["Ps12_Reflectable", "adjustsFontSizeToFitWidth"]
+- !private ["Ps12_Reflectable", "backgroundColor"]
+- !private ["Ps12_Reflectable", "center"]
+- !private ["Ps12_Reflectable", "delegate"]
+- !private ["Ps12_Reflectable", "layer"]
+- !private ["Ps12_Reflectable", "minimumScaleFactor"]
+- !private ["Ps12_Reflectable", "tintColor"]
+- !private ["Ps12_Reflectable", "titleLabel"]
+- !private ["Ps12_Reflectable", "x"]
+- !private ["Ps12_Reflectable", "y"]
+depends-nominal:
+- "Ps9AnyObject"
+- !private "Sb"
+- !private "Ps25BooleanLiteralConvertible"
+- !private "Ps11BooleanType"
+- !private "CSo7CALayer"
+- !private "PSo13CAMediaTiming"
+- !private "V12CoreGraphics7CGFloat"
+- !private "VSC7CGPoint"
+- "Ps11CVarArgType"
+- !private "OV6CoChat5Theme6Colors"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- !private "CSo11FBSDKButton"
+- !private "CSo16FBSDKLoginButton"
+- "PSo24FBSDKLoginButtonDelegate"
+- !private "C6CoChat15FirebaseManager"
+- "Ps8Hashable"
+- "C6CoChat19LoginViewController"
+- "PSo8NSCoding"
+- "PSo26NSExtensionRequestHandling"
+- !private "CSo20NSNotificationCenter"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "Sq"
+- !private "V10ObjectiveC8Selector"
+- !private "V6CoChat5Theme"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- !private "PSo16UIBarPositioning"
+- !private "CSo8UIButton"
+- "PSo18UIContentContainer"
+- !private "CSo9UIControl"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- !private "CSo7UILabel"
+- !private "CSo15UINavigationBar"
+- !private "CSo22UINavigationController"
+- "CSo11UIResponder"
+- "PSo16UIStateRestoring"
+- "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
+- "CSo16UIViewController"
+- !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Vs26_OptionalNilComparisonType"
+- !private "Ps12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreImage.swiftmodule"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FirebaseServerValue.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FTransactionResult.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FMutableData.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FirebaseApp.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FQuery.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/Firebase.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FEventType.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FDataSnapshot.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FConfig.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FAuthType.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FAuthData.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/Firebase-umbrella.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Firebase.framework/Modules/module.modulemap"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BoltsVersion.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/Bolts.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFTaskCompletionSource.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFTask.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFExecutor.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFCancellationTokenSource.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFCancellationTokenRegistration.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFCancellationToken.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFWebViewAppLinkResolver.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFURL_Internal.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFURL.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFMeasurementEvent_Internal.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFMeasurementEvent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFAppLinkTarget.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFAppLinkReturnToRefererView_Internal.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFAppLinkReturnToRefererView.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFAppLinkReturnToRefererController.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFAppLinkResolving.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFAppLinkNavigation.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFAppLink_Internal.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/BFAppLink.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Headers/Bolts-umbrella.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/Bolts.framework/Modules/module.modulemap"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKProfilePictureView.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKProfile.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKMutableCopying.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKGraphErrorRecoveryProcessor.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKUtility.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKTestUsersManager.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKSettings.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKGraphRequestDataAttachment.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKGraphRequest.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKCoreKit.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKConstants.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKButton.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKAppLinkUtility.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKAppLinkResolver.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKApplicationDelegate.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKAppEvents.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKMacros.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKGraphRequestConnection.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKCopying.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKAccessToken.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Headers/FBSDKCoreKit-umbrella.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKCoreKit.framework/Modules/module.modulemap"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKLoginKit.framework/Headers/FBSDKLoginTooltipView.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKLoginKit.framework/Headers/FBSDKLoginManagerLoginResult.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKLoginKit.framework/Headers/FBSDKLoginKit.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKLoginKit.framework/Headers/FBSDKLoginConstants.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKLoginKit.framework/Headers/FBSDKTooltipView.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKLoginKit.framework/Headers/FBSDKLoginManager.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKLoginKit.framework/Headers/FBSDKLoginButton.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKLoginKit.framework/Headers/FBSDKLoginKit-umbrella.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKLoginKit.framework/Modules/module.modulemap"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareVideoContent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareVideo.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKSharePhotoContent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKSharePhoto.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareOpenGraphContent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareOpenGraphAction.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareLinkContent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareKit.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareDialogMode.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareDialog.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareConstants.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareButton.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareOpenGraphValueContainer.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareOpenGraphObject.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareAPI.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKSharingButton.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKSendButton.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKSharingContent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKSharing.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKMessageDialog.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKLikeControl.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKLiking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKLikeObjectType.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKLikeButton.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKGameRequestDialog.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKGameRequestContent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKAppInviteDialog.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKAppInviteContent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKAppGroupJoinDialog.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKAppGroupContent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKAppGroupAddDialog.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Headers/FBSDKShareKit-umbrella.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/FBSDKShareKit.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreAudio.swiftmodule"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/UIProgressView+AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/UIWebView+AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/UIRefreshControl+AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/UIKit+AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/UIImageView+AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/UIImage+AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/UIButton+AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/UIActivityIndicatorView+AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFNetworkActivityIndicatorManager.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFImageDownloader.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFAutoPurgingImageCache.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFHTTPSessionManager.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFURLSessionManager.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFNetworkReachabilityManager.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFSecurityPolicy.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFURLResponseSerialization.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFURLRequestSerialization.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFNetworking-umbrella.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Modules/module.modulemap"
+interface-hash: "c782395b8e813394415068e115fba233"

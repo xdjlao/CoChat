@@ -11,19 +11,19 @@ provides-member:
 - ["OV6CoChat5Theme5Fonts", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "/"
-- "=="
 - !private "StringLiteralType"
-- "UIColor"
-- "Theme"
+- "=="
 - "UIFont"
+- !private "/"
+- "Theme"
+- "UIColor"
 depends-member:
-- !private ["PSs9AnyObject", "init"]
-- !private ["PSs22BidirectionalIndexType", "hashValue"]
-- !private ["PSs21BitwiseOperationsType", "hashValue"]
+- !private ["Ps9AnyObject", "init"]
+- !private ["Ps22BidirectionalIndexType", "hashValue"]
+- !private ["Ps21BitwiseOperationsType", "hashValue"]
 - !private ["V12CoreGraphics7CGFloat", "deinit"]
-- !private ["PSs11CVarArgType", "hashValue"]
-- !private ["PSs11CVarArgType", "init"]
+- !private ["Ps11CVarArgType", "hashValue"]
+- !private ["Ps11CVarArgType", "init"]
 - ["OV6CoChat5Theme6Colors", "BackgroundColor"]
 - ["OV6CoChat5Theme6Colors", "ButtonColor"]
 - ["OV6CoChat5Theme6Colors", "DarkBackgroundColor"]
@@ -40,33 +40,34 @@ depends-member:
 - ["OV6CoChat5Theme6Colors", "color"]
 - ["OV6CoChat5Theme6Colors", "deinit"]
 - ["OV6CoChat5Theme6Colors", "hashValue"]
-- !private ["PSs10Comparable", "hashValue"]
-- !private ["PSs23CustomStringConvertible", "hashValue"]
-- !private ["PSs23CustomStringConvertible", "init"]
-- ["PSs9Equatable", "BackgroundColor"]
-- ["PSs9Equatable", "BoldNormalTypeFace"]
-- ["PSs9Equatable", "BoldTitleTypeFace"]
-- ["PSs9Equatable", "ButtonColor"]
-- ["PSs9Equatable", "DarkBackgroundColor"]
-- ["PSs9Equatable", "DarkButtonColor"]
-- ["PSs9Equatable", "Facebook"]
-- ["PSs9Equatable", "ForegroundColor"]
-- ["PSs9Equatable", "ForegroundInsetColor"]
-- ["PSs9Equatable", "LightNormalTypeFace"]
-- ["PSs9Equatable", "MessageButtonColor"]
-- ["PSs9Equatable", "NavigationBarColor"]
-- ["PSs9Equatable", "NormalTypeFace"]
-- ["PSs9Equatable", "RedButtonColor"]
-- ["PSs9Equatable", "Simplifica"]
-- ["PSs9Equatable", "SubTitleTypeFace"]
-- ["PSs9Equatable", "TitleTypeFace"]
-- ["PSs9Equatable", "TransparentLabelColor"]
-- ["PSs9Equatable", "Twitter"]
-- !private ["PSs9Equatable", "UIColor"]
-- !private ["PSs9Equatable", "UIFont"]
-- ["PSs9Equatable", "hashValue"]
-- !private ["PSs9Equatable", "init"]
-- ["PSs9Equatable", ""]
+- !private ["Ps10Comparable", "hashValue"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "hashValue"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- ["Ps9Equatable", "BackgroundColor"]
+- ["Ps9Equatable", "BoldNormalTypeFace"]
+- ["Ps9Equatable", "BoldTitleTypeFace"]
+- ["Ps9Equatable", "ButtonColor"]
+- ["Ps9Equatable", "DarkBackgroundColor"]
+- ["Ps9Equatable", "DarkButtonColor"]
+- ["Ps9Equatable", "Facebook"]
+- ["Ps9Equatable", "ForegroundColor"]
+- ["Ps9Equatable", "ForegroundInsetColor"]
+- ["Ps9Equatable", "LightNormalTypeFace"]
+- ["Ps9Equatable", "MessageButtonColor"]
+- ["Ps9Equatable", "NavigationBarColor"]
+- ["Ps9Equatable", "NormalTypeFace"]
+- ["Ps9Equatable", "RedButtonColor"]
+- ["Ps9Equatable", "Simplifica"]
+- ["Ps9Equatable", "SubTitleTypeFace"]
+- ["Ps9Equatable", "TitleTypeFace"]
+- ["Ps9Equatable", "TransparentLabelColor"]
+- ["Ps9Equatable", "Twitter"]
+- !private ["Ps9Equatable", "UIColor"]
+- !private ["Ps9Equatable", "UIFont"]
+- ["Ps9Equatable", "hashValue"]
+- !private ["Ps9Equatable", "init"]
+- ["Ps9Equatable", ""]
 - ["OV6CoChat5Theme5Fonts", "BoldNormalTypeFace"]
 - ["OV6CoChat5Theme5Fonts", "BoldTitleTypeFace"]
 - ["OV6CoChat5Theme5Fonts", "LightNormalTypeFace"]
@@ -78,45 +79,45 @@ depends-member:
 - ["OV6CoChat5Theme5Fonts", "deinit"]
 - ["OV6CoChat5Theme5Fonts", "font"]
 - ["OV6CoChat5Theme5Fonts", "hashValue"]
-- !private ["PSs16ForwardIndexType", "hashValue"]
-- ["PSs8Hashable", "BackgroundColor"]
-- ["PSs8Hashable", "BoldNormalTypeFace"]
-- ["PSs8Hashable", "BoldTitleTypeFace"]
-- ["PSs8Hashable", "ButtonColor"]
-- ["PSs8Hashable", "DarkBackgroundColor"]
-- ["PSs8Hashable", "DarkButtonColor"]
-- ["PSs8Hashable", "Facebook"]
-- ["PSs8Hashable", "ForegroundColor"]
-- ["PSs8Hashable", "ForegroundInsetColor"]
-- ["PSs8Hashable", "LightNormalTypeFace"]
-- ["PSs8Hashable", "MessageButtonColor"]
-- ["PSs8Hashable", "NavigationBarColor"]
-- ["PSs8Hashable", "NormalTypeFace"]
-- ["PSs8Hashable", "RedButtonColor"]
-- ["PSs8Hashable", "Simplifica"]
-- ["PSs8Hashable", "SubTitleTypeFace"]
-- ["PSs8Hashable", "TitleTypeFace"]
-- ["PSs8Hashable", "TransparentLabelColor"]
-- ["PSs8Hashable", "Twitter"]
-- !private ["PSs8Hashable", "UIColor"]
-- !private ["PSs8Hashable", "UIFont"]
-- ["PSs8Hashable", "hashValue"]
-- !private ["PSs8Hashable", "init"]
-- ["PSs8Hashable", ""]
+- !private ["Ps16ForwardIndexType", "hashValue"]
+- ["Ps8Hashable", "BackgroundColor"]
+- ["Ps8Hashable", "BoldNormalTypeFace"]
+- ["Ps8Hashable", "BoldTitleTypeFace"]
+- ["Ps8Hashable", "ButtonColor"]
+- ["Ps8Hashable", "DarkBackgroundColor"]
+- ["Ps8Hashable", "DarkButtonColor"]
+- ["Ps8Hashable", "Facebook"]
+- ["Ps8Hashable", "ForegroundColor"]
+- ["Ps8Hashable", "ForegroundInsetColor"]
+- ["Ps8Hashable", "LightNormalTypeFace"]
+- ["Ps8Hashable", "MessageButtonColor"]
+- ["Ps8Hashable", "NavigationBarColor"]
+- ["Ps8Hashable", "NormalTypeFace"]
+- ["Ps8Hashable", "RedButtonColor"]
+- ["Ps8Hashable", "Simplifica"]
+- ["Ps8Hashable", "SubTitleTypeFace"]
+- ["Ps8Hashable", "TitleTypeFace"]
+- ["Ps8Hashable", "TransparentLabelColor"]
+- ["Ps8Hashable", "Twitter"]
+- !private ["Ps8Hashable", "UIColor"]
+- !private ["Ps8Hashable", "UIFont"]
+- ["Ps8Hashable", "hashValue"]
+- !private ["Ps8Hashable", "init"]
+- ["Ps8Hashable", ""]
 - !private ["Si", "hashValue"]
-- !private ["PSs21IntegerArithmeticType", "hashValue"]
-- !private ["PSs25IntegerLiteralConvertible", "hashValue"]
-- !private ["PSs11IntegerType", "hashValue"]
-- !private ["PSs14MirrorPathType", "hashValue"]
+- !private ["Ps21IntegerArithmeticType", "hashValue"]
+- !private ["Ps25IntegerLiteralConvertible", "hashValue"]
+- !private ["Ps11IntegerType", "hashValue"]
+- !private ["Ps14MirrorPathType", "hashValue"]
 - !private ["PSo8NSCoding", "init"]
 - !private ["PSo9NSCopying", "init"]
 - !private ["CSo8NSObject", "init"]
 - !private ["PSo16NSObjectProtocol", "init"]
 - !private ["PSo14NSSecureCoding", "init"]
-- !private ["PSs21RandomAccessIndexType", "hashValue"]
-- !private ["PSs17SignedIntegerType", "hashValue"]
-- !private ["PSs16SignedNumberType", "hashValue"]
-- !private ["PSs10Strideable", "hashValue"]
+- !private ["Ps21RandomAccessIndexType", "hashValue"]
+- !private ["Ps17SignedIntegerType", "hashValue"]
+- !private ["Ps16SignedNumberType", "hashValue"]
+- !private ["Ps10Strideable", "hashValue"]
 - ["V6CoChat5Theme", "Colors"]
 - ["V6CoChat5Theme", "Fonts"]
 - ["V6CoChat5Theme", "UIColor"]
@@ -124,56 +125,55 @@ depends-member:
 - ["V6CoChat5Theme", "init"]
 - !private ["CSo7UIColor", "init"]
 - !private ["CSo6UIFont", "init"]
-- !private ["PSs33_BuiltinIntegerLiteralConvertible", "hashValue"]
-- !private ["PSs24_ColorLiteralConvertible", "init"]
-- !private ["PSs14_Incrementable", "hashValue"]
-- !private ["PSs22_IntegerArithmeticType", "hashValue"]
-- !private ["PSs12_IntegerType", "hashValue"]
-- !private ["PSs21_ObjectiveCBridgeable", "hashValue"]
-- !private ["PSs22_RandomAccessAmbiguity", "hashValue"]
-- !private ["PSs12_Reflectable", "hashValue"]
-- !private ["PSs18_SignedIntegerType", "hashValue"]
-- !private ["PSs11_Strideable", "hashValue"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "hashValue"]
+- !private ["Ps24_ColorLiteralConvertible", "init"]
+- !private ["Ps14_Incrementable", "hashValue"]
+- !private ["Ps22_IntegerArithmeticType", "hashValue"]
+- !private ["Ps12_IntegerType", "hashValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "hashValue"]
+- !private ["Ps22_RandomAccessAmbiguity", "hashValue"]
+- !private ["Ps12_Reflectable", "hashValue"]
+- !private ["Ps18_SignedIntegerType", "hashValue"]
 depends-nominal:
-- !private "PSs9AnyObject"
-- !private "PSs22BidirectionalIndexType"
-- !private "PSs21BitwiseOperationsType"
+- !private "Ps9AnyObject"
+- !private "Ps22BidirectionalIndexType"
+- !private "Ps21BitwiseOperationsType"
 - !private "V12CoreGraphics7CGFloat"
-- !private "PSs11CVarArgType"
+- !private "Ps11CVarArgType"
 - "OV6CoChat5Theme6Colors"
-- !private "PSs10Comparable"
-- !private "PSs23CustomStringConvertible"
-- "PSs9Equatable"
+- !private "Ps10Comparable"
+- !private "Ps28CustomDebugStringConvertible"
+- !private "Ps23CustomStringConvertible"
+- "Ps9Equatable"
 - "OV6CoChat5Theme5Fonts"
-- !private "PSs16ForwardIndexType"
-- "PSs8Hashable"
+- !private "Ps16ForwardIndexType"
+- "Ps8Hashable"
 - !private "Si"
-- !private "PSs21IntegerArithmeticType"
-- !private "PSs25IntegerLiteralConvertible"
-- !private "PSs11IntegerType"
-- !private "PSs14MirrorPathType"
+- !private "Ps21IntegerArithmeticType"
+- !private "Ps25IntegerLiteralConvertible"
+- !private "Ps11IntegerType"
+- !private "Ps14MirrorPathType"
 - !private "PSo8NSCoding"
 - !private "PSo9NSCopying"
 - !private "CSo8NSObject"
 - !private "PSo16NSObjectProtocol"
 - !private "PSo14NSSecureCoding"
-- !private "PSs21RandomAccessIndexType"
-- !private "PSs17SignedIntegerType"
-- !private "PSs16SignedNumberType"
-- !private "PSs10Strideable"
+- !private "Ps21RandomAccessIndexType"
+- !private "Ps17SignedIntegerType"
+- !private "Ps16SignedNumberType"
+- !private "Ps10Strideable"
 - "V6CoChat5Theme"
 - !private "CSo7UIColor"
 - !private "CSo6UIFont"
-- !private "PSs33_BuiltinIntegerLiteralConvertible"
-- !private "PSs24_ColorLiteralConvertible"
-- !private "PSs14_Incrementable"
-- !private "PSs22_IntegerArithmeticType"
-- !private "PSs12_IntegerType"
-- !private "PSs21_ObjectiveCBridgeable"
-- !private "PSs22_RandomAccessAmbiguity"
-- !private "PSs12_Reflectable"
-- !private "PSs18_SignedIntegerType"
-- !private "PSs11_Strideable"
+- !private "Ps33_BuiltinIntegerLiteralConvertible"
+- !private "Ps24_ColorLiteralConvertible"
+- !private "Ps14_Incrementable"
+- !private "Ps22_IntegerArithmeticType"
+- !private "Ps12_IntegerType"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Ps22_RandomAccessAmbiguity"
+- !private "Ps12_Reflectable"
+- !private "Ps18_SignedIntegerType"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"

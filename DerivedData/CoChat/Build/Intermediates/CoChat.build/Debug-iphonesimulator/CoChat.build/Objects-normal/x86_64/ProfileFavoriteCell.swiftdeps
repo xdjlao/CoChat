@@ -6,123 +6,140 @@ provides-nominal:
 provides-member:
 - ["C6CoChat19ProfileFavoriteCell", ""]
 provides-dynamic-lookup:
-- "favoriteImageView"
-- "favoriteChannelLabelName"
-- "imageSeparatorView"
-- "awakeFromNib"
-- "setSelected"
 - "imageWrapperView"
-- "favoriteChannelLabel"
-- "favoriteContentWrapperView"
 - "contentSeparatorView"
+- "favoriteContentWrapperView"
+- "setSelected"
+- "favoriteChannelLabel"
+- "awakeFromNib"
+- "imageSeparatorView"
+- "favoriteChannelLabelName"
+- "favoriteImageView"
 depends-top-level:
-- "UILabel"
-- "ProfileFavoriteCell"
-- !private "UIColor"
-- "UITableViewCell"
 - "UIView"
+- !private "UIColor"
+- "ProfileFavoriteCell"
+- "UILabel"
 - "UIImageView"
-- "Bool"
 - !private "Theme"
+- "UITableViewCell"
+- "Bool"
 depends-member:
-- !private ["PSs9AnyObject", "Theme"]
-- !private ["PSs9AnyObject", "UIColor"]
-- ["PSs9AnyObject", "awakeFromNib"]
-- !private ["PSs9AnyObject", "backgroundColor"]
-- ["PSs9AnyObject", "contentSeparatorView"]
-- ["PSs9AnyObject", "favoriteChannelLabel"]
-- ["PSs9AnyObject", "favoriteChannelLabelName"]
-- ["PSs9AnyObject", "favoriteContentWrapperView"]
-- ["PSs9AnyObject", "favoriteImageView"]
-- !private ["PSs9AnyObject", "font"]
-- ["PSs9AnyObject", "imageSeparatorView"]
-- ["PSs9AnyObject", "imageWrapperView"]
-- ["PSs9AnyObject", "init"]
-- ["PSs9AnyObject", "setSelected"]
-- !private ["PSs9AnyObject", "textColor"]
-- !private ["PSs9AnyObject", "whiteColor"]
-- ["PSs9AnyObject", ""]
-- !private ["PSs11CVarArgType", "Theme"]
-- !private ["PSs11CVarArgType", "UIColor"]
-- ["PSs11CVarArgType", "awakeFromNib"]
-- !private ["PSs11CVarArgType", "backgroundColor"]
-- ["PSs11CVarArgType", "contentSeparatorView"]
-- ["PSs11CVarArgType", "favoriteChannelLabel"]
-- ["PSs11CVarArgType", "favoriteChannelLabelName"]
-- ["PSs11CVarArgType", "favoriteContentWrapperView"]
-- ["PSs11CVarArgType", "favoriteImageView"]
-- !private ["PSs11CVarArgType", "font"]
-- ["PSs11CVarArgType", "imageSeparatorView"]
-- ["PSs11CVarArgType", "imageWrapperView"]
-- ["PSs11CVarArgType", "init"]
-- ["PSs11CVarArgType", "setSelected"]
-- !private ["PSs11CVarArgType", "textColor"]
-- !private ["PSs11CVarArgType", "whiteColor"]
-- ["PSs11CVarArgType", ""]
+- !private ["Ps9AnyObject", "Theme"]
+- !private ["Ps9AnyObject", "UIColor"]
+- ["Ps9AnyObject", "awakeFromNib"]
+- !private ["Ps9AnyObject", "backgroundColor"]
+- ["Ps9AnyObject", "contentSeparatorView"]
+- ["Ps9AnyObject", "favoriteChannelLabel"]
+- ["Ps9AnyObject", "favoriteChannelLabelName"]
+- ["Ps9AnyObject", "favoriteContentWrapperView"]
+- ["Ps9AnyObject", "favoriteImageView"]
+- !private ["Ps9AnyObject", "font"]
+- ["Ps9AnyObject", "imageSeparatorView"]
+- ["Ps9AnyObject", "imageWrapperView"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "setSelected"]
+- !private ["Ps9AnyObject", "textColor"]
+- !private ["Ps9AnyObject", "whiteColor"]
+- ["Ps9AnyObject", ""]
+- !private ["Ps11CVarArgType", "Theme"]
+- !private ["Ps11CVarArgType", "UIColor"]
+- ["Ps11CVarArgType", "awakeFromNib"]
+- !private ["Ps11CVarArgType", "backgroundColor"]
+- ["Ps11CVarArgType", "contentSeparatorView"]
+- ["Ps11CVarArgType", "favoriteChannelLabel"]
+- ["Ps11CVarArgType", "favoriteChannelLabelName"]
+- ["Ps11CVarArgType", "favoriteContentWrapperView"]
+- ["Ps11CVarArgType", "favoriteImageView"]
+- !private ["Ps11CVarArgType", "font"]
+- ["Ps11CVarArgType", "imageSeparatorView"]
+- ["Ps11CVarArgType", "imageWrapperView"]
+- ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "setSelected"]
+- !private ["Ps11CVarArgType", "textColor"]
+- !private ["Ps11CVarArgType", "whiteColor"]
+- ["Ps11CVarArgType", ""]
 - !private ["OV6CoChat5Theme6Colors", "DarkBackgroundColor"]
 - !private ["OV6CoChat5Theme6Colors", "ForegroundColor"]
 - !private ["OV6CoChat5Theme6Colors", "color"]
-- !private ["PSs23CustomStringConvertible", "Theme"]
-- !private ["PSs23CustomStringConvertible", "UIColor"]
-- ["PSs23CustomStringConvertible", "awakeFromNib"]
-- !private ["PSs23CustomStringConvertible", "backgroundColor"]
-- ["PSs23CustomStringConvertible", "contentSeparatorView"]
-- ["PSs23CustomStringConvertible", "favoriteChannelLabel"]
-- ["PSs23CustomStringConvertible", "favoriteChannelLabelName"]
-- ["PSs23CustomStringConvertible", "favoriteContentWrapperView"]
-- ["PSs23CustomStringConvertible", "favoriteImageView"]
-- !private ["PSs23CustomStringConvertible", "font"]
-- ["PSs23CustomStringConvertible", "imageSeparatorView"]
-- ["PSs23CustomStringConvertible", "imageWrapperView"]
-- ["PSs23CustomStringConvertible", "init"]
-- ["PSs23CustomStringConvertible", "setSelected"]
-- !private ["PSs23CustomStringConvertible", "textColor"]
-- !private ["PSs23CustomStringConvertible", "whiteColor"]
-- ["PSs23CustomStringConvertible", ""]
-- !private ["PSs9Equatable", "DarkBackgroundColor"]
-- !private ["PSs9Equatable", "ForegroundColor"]
-- !private ["PSs9Equatable", "NormalTypeFace"]
-- !private ["PSs9Equatable", "Theme"]
-- !private ["PSs9Equatable", "UIColor"]
-- ["PSs9Equatable", "awakeFromNib"]
-- !private ["PSs9Equatable", "backgroundColor"]
-- !private ["PSs9Equatable", "color"]
-- ["PSs9Equatable", "contentSeparatorView"]
-- ["PSs9Equatable", "favoriteChannelLabel"]
-- ["PSs9Equatable", "favoriteChannelLabelName"]
-- ["PSs9Equatable", "favoriteContentWrapperView"]
-- ["PSs9Equatable", "favoriteImageView"]
-- !private ["PSs9Equatable", "font"]
-- ["PSs9Equatable", "imageSeparatorView"]
-- ["PSs9Equatable", "imageWrapperView"]
-- ["PSs9Equatable", "init"]
-- ["PSs9Equatable", "setSelected"]
-- !private ["PSs9Equatable", "textColor"]
-- !private ["PSs9Equatable", "whiteColor"]
-- ["PSs9Equatable", ""]
+- !private ["Ps28CustomDebugStringConvertible", "Theme"]
+- !private ["Ps28CustomDebugStringConvertible", "UIColor"]
+- ["Ps28CustomDebugStringConvertible", "awakeFromNib"]
+- !private ["Ps28CustomDebugStringConvertible", "backgroundColor"]
+- ["Ps28CustomDebugStringConvertible", "contentSeparatorView"]
+- ["Ps28CustomDebugStringConvertible", "favoriteChannelLabel"]
+- ["Ps28CustomDebugStringConvertible", "favoriteChannelLabelName"]
+- ["Ps28CustomDebugStringConvertible", "favoriteContentWrapperView"]
+- ["Ps28CustomDebugStringConvertible", "favoriteImageView"]
+- !private ["Ps28CustomDebugStringConvertible", "font"]
+- ["Ps28CustomDebugStringConvertible", "imageSeparatorView"]
+- ["Ps28CustomDebugStringConvertible", "imageWrapperView"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "setSelected"]
+- !private ["Ps28CustomDebugStringConvertible", "textColor"]
+- !private ["Ps28CustomDebugStringConvertible", "whiteColor"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps23CustomStringConvertible", "Theme"]
+- !private ["Ps23CustomStringConvertible", "UIColor"]
+- ["Ps23CustomStringConvertible", "awakeFromNib"]
+- !private ["Ps23CustomStringConvertible", "backgroundColor"]
+- ["Ps23CustomStringConvertible", "contentSeparatorView"]
+- ["Ps23CustomStringConvertible", "favoriteChannelLabel"]
+- ["Ps23CustomStringConvertible", "favoriteChannelLabelName"]
+- ["Ps23CustomStringConvertible", "favoriteContentWrapperView"]
+- ["Ps23CustomStringConvertible", "favoriteImageView"]
+- !private ["Ps23CustomStringConvertible", "font"]
+- ["Ps23CustomStringConvertible", "imageSeparatorView"]
+- ["Ps23CustomStringConvertible", "imageWrapperView"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "setSelected"]
+- !private ["Ps23CustomStringConvertible", "textColor"]
+- !private ["Ps23CustomStringConvertible", "whiteColor"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Ps9Equatable", "DarkBackgroundColor"]
+- !private ["Ps9Equatable", "ForegroundColor"]
+- !private ["Ps9Equatable", "NormalTypeFace"]
+- !private ["Ps9Equatable", "Theme"]
+- !private ["Ps9Equatable", "UIColor"]
+- ["Ps9Equatable", "awakeFromNib"]
+- !private ["Ps9Equatable", "backgroundColor"]
+- !private ["Ps9Equatable", "color"]
+- ["Ps9Equatable", "contentSeparatorView"]
+- ["Ps9Equatable", "favoriteChannelLabel"]
+- ["Ps9Equatable", "favoriteChannelLabelName"]
+- ["Ps9Equatable", "favoriteContentWrapperView"]
+- ["Ps9Equatable", "favoriteImageView"]
+- !private ["Ps9Equatable", "font"]
+- ["Ps9Equatable", "imageSeparatorView"]
+- ["Ps9Equatable", "imageWrapperView"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "setSelected"]
+- !private ["Ps9Equatable", "textColor"]
+- !private ["Ps9Equatable", "whiteColor"]
+- ["Ps9Equatable", ""]
 - !private ["OV6CoChat5Theme5Fonts", "NormalTypeFace"]
 - !private ["OV6CoChat5Theme5Fonts", "font"]
-- !private ["PSs8Hashable", "DarkBackgroundColor"]
-- !private ["PSs8Hashable", "ForegroundColor"]
-- !private ["PSs8Hashable", "NormalTypeFace"]
-- !private ["PSs8Hashable", "Theme"]
-- !private ["PSs8Hashable", "UIColor"]
-- ["PSs8Hashable", "awakeFromNib"]
-- !private ["PSs8Hashable", "backgroundColor"]
-- !private ["PSs8Hashable", "color"]
-- ["PSs8Hashable", "contentSeparatorView"]
-- ["PSs8Hashable", "favoriteChannelLabel"]
-- ["PSs8Hashable", "favoriteChannelLabelName"]
-- ["PSs8Hashable", "favoriteContentWrapperView"]
-- ["PSs8Hashable", "favoriteImageView"]
-- !private ["PSs8Hashable", "font"]
-- ["PSs8Hashable", "imageSeparatorView"]
-- ["PSs8Hashable", "imageWrapperView"]
-- ["PSs8Hashable", "init"]
-- ["PSs8Hashable", "setSelected"]
-- !private ["PSs8Hashable", "textColor"]
-- !private ["PSs8Hashable", "whiteColor"]
-- ["PSs8Hashable", ""]
+- !private ["Ps8Hashable", "DarkBackgroundColor"]
+- !private ["Ps8Hashable", "ForegroundColor"]
+- !private ["Ps8Hashable", "NormalTypeFace"]
+- !private ["Ps8Hashable", "Theme"]
+- !private ["Ps8Hashable", "UIColor"]
+- ["Ps8Hashable", "awakeFromNib"]
+- !private ["Ps8Hashable", "backgroundColor"]
+- !private ["Ps8Hashable", "color"]
+- ["Ps8Hashable", "contentSeparatorView"]
+- ["Ps8Hashable", "favoriteChannelLabel"]
+- ["Ps8Hashable", "favoriteChannelLabelName"]
+- ["Ps8Hashable", "favoriteContentWrapperView"]
+- ["Ps8Hashable", "favoriteImageView"]
+- !private ["Ps8Hashable", "font"]
+- ["Ps8Hashable", "imageSeparatorView"]
+- ["Ps8Hashable", "imageWrapperView"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "setSelected"]
+- !private ["Ps8Hashable", "textColor"]
+- !private ["Ps8Hashable", "whiteColor"]
+- ["Ps8Hashable", ""]
 - !private ["PSo8NSCoding", "Theme"]
 - !private ["PSo8NSCoding", "UIColor"]
 - ["PSo8NSCoding", "awakeFromNib"]
@@ -381,31 +398,32 @@ depends-member:
 - ["CSo6UIView", "init"]
 - ["CSo6UIView", "setSelected"]
 - !private ["CSo6UIView", "textColor"]
-- !private ["PSs24_ColorLiteralConvertible", "whiteColor"]
-- !private ["PSs12_Reflectable", "Theme"]
-- !private ["PSs12_Reflectable", "UIColor"]
-- ["PSs12_Reflectable", "awakeFromNib"]
-- !private ["PSs12_Reflectable", "backgroundColor"]
-- ["PSs12_Reflectable", "contentSeparatorView"]
-- ["PSs12_Reflectable", "favoriteChannelLabel"]
-- ["PSs12_Reflectable", "favoriteChannelLabelName"]
-- ["PSs12_Reflectable", "favoriteContentWrapperView"]
-- ["PSs12_Reflectable", "favoriteImageView"]
-- !private ["PSs12_Reflectable", "font"]
-- ["PSs12_Reflectable", "imageSeparatorView"]
-- ["PSs12_Reflectable", "imageWrapperView"]
-- ["PSs12_Reflectable", "init"]
-- ["PSs12_Reflectable", "setSelected"]
-- !private ["PSs12_Reflectable", "textColor"]
-- ["PSs12_Reflectable", ""]
+- !private ["Ps24_ColorLiteralConvertible", "whiteColor"]
+- !private ["Ps12_Reflectable", "Theme"]
+- !private ["Ps12_Reflectable", "UIColor"]
+- ["Ps12_Reflectable", "awakeFromNib"]
+- !private ["Ps12_Reflectable", "backgroundColor"]
+- ["Ps12_Reflectable", "contentSeparatorView"]
+- ["Ps12_Reflectable", "favoriteChannelLabel"]
+- ["Ps12_Reflectable", "favoriteChannelLabelName"]
+- ["Ps12_Reflectable", "favoriteContentWrapperView"]
+- ["Ps12_Reflectable", "favoriteImageView"]
+- !private ["Ps12_Reflectable", "font"]
+- ["Ps12_Reflectable", "imageSeparatorView"]
+- ["Ps12_Reflectable", "imageWrapperView"]
+- ["Ps12_Reflectable", "init"]
+- ["Ps12_Reflectable", "setSelected"]
+- !private ["Ps12_Reflectable", "textColor"]
+- ["Ps12_Reflectable", ""]
 depends-nominal:
-- "PSs9AnyObject"
-- "PSs11CVarArgType"
+- "Ps9AnyObject"
+- "Ps11CVarArgType"
 - !private "OV6CoChat5Theme6Colors"
-- "PSs23CustomStringConvertible"
-- "PSs9Equatable"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
 - !private "OV6CoChat5Theme5Fonts"
-- "PSs8Hashable"
+- "Ps8Hashable"
 - "PSo8NSCoding"
 - !private "PSo9NSCopying"
 - "CSo8NSObject"
@@ -426,8 +444,8 @@ depends-nominal:
 - "CSo15UITableViewCell"
 - "PSo18UITraitEnvironment"
 - "CSo6UIView"
-- !private "PSs24_ColorLiteralConvertible"
-- "PSs12_Reflectable"
+- !private "Ps24_ColorLiteralConvertible"
+- "Ps12_Reflectable"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"

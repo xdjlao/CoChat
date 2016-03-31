@@ -1,0 +1,8 @@
+dependencies: \
+  /Users/aaronb/Development/CoChat/Pods/AFNetworking/AFNetworking/AFURLSessionManager.m \
+  /Users/aaronb/Development/CoChat/Pods/Target\ Support\ Files/AFNetworking/AFNetworking-prefix.pch \
+  /Users/aaronb/Development/CoChat/Pods/AFNetworking/AFNetworking/AFURLSessionManager.h \
+  /Users/aaronb/Development/CoChat/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h \
+  /Users/aaronb/Development/CoChat/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h \
+  /Users/aaronb/Development/CoChat/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h \
+  /Users/aaronb/Development/CoChat/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.h

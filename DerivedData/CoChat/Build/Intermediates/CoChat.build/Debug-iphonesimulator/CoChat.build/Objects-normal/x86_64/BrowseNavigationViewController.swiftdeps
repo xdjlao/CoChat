@@ -9,33 +9,37 @@ provides-dynamic-lookup:
 - "didReceiveMemoryWarning"
 - "viewDidLoad"
 depends-top-level:
-- "UINavigationController"
 - "BrowseNavigationViewController"
+- "UINavigationController"
 depends-member:
-- ["PSs9AnyObject", "didReceiveMemoryWarning"]
-- ["PSs9AnyObject", "init"]
-- ["PSs9AnyObject", "viewDidLoad"]
-- ["PSs9AnyObject", ""]
+- ["Ps9AnyObject", "didReceiveMemoryWarning"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "viewDidLoad"]
+- ["Ps9AnyObject", ""]
 - ["C6CoChat30BrowseNavigationViewController", "deinit"]
 - ["C6CoChat30BrowseNavigationViewController", "didReceiveMemoryWarning"]
 - ["C6CoChat30BrowseNavigationViewController", "init"]
 - ["C6CoChat30BrowseNavigationViewController", "viewDidLoad"]
-- ["PSs11CVarArgType", "didReceiveMemoryWarning"]
-- ["PSs11CVarArgType", "init"]
-- ["PSs11CVarArgType", "viewDidLoad"]
-- ["PSs11CVarArgType", ""]
-- ["PSs23CustomStringConvertible", "didReceiveMemoryWarning"]
-- ["PSs23CustomStringConvertible", "init"]
-- ["PSs23CustomStringConvertible", "viewDidLoad"]
-- ["PSs23CustomStringConvertible", ""]
-- ["PSs9Equatable", "didReceiveMemoryWarning"]
-- ["PSs9Equatable", "init"]
-- ["PSs9Equatable", "viewDidLoad"]
-- ["PSs9Equatable", ""]
-- ["PSs8Hashable", "didReceiveMemoryWarning"]
-- ["PSs8Hashable", "init"]
-- ["PSs8Hashable", "viewDidLoad"]
-- ["PSs8Hashable", ""]
+- ["Ps11CVarArgType", "didReceiveMemoryWarning"]
+- ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "viewDidLoad"]
+- ["Ps11CVarArgType", ""]
+- ["Ps28CustomDebugStringConvertible", "didReceiveMemoryWarning"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- ["Ps23CustomStringConvertible", "didReceiveMemoryWarning"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "viewDidLoad"]
+- ["Ps23CustomStringConvertible", ""]
+- ["Ps9Equatable", "didReceiveMemoryWarning"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "viewDidLoad"]
+- ["Ps9Equatable", ""]
+- ["Ps8Hashable", "didReceiveMemoryWarning"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "viewDidLoad"]
+- ["Ps8Hashable", ""]
 - ["PSo8NSCoding", "didReceiveMemoryWarning"]
 - ["PSo8NSCoding", "init"]
 - ["PSo8NSCoding", "viewDidLoad"]
@@ -82,12 +86,13 @@ depends-member:
 - ["CSo16UIViewController", "init"]
 - ["CSo16UIViewController", "viewDidLoad"]
 depends-nominal:
-- "PSs9AnyObject"
+- "Ps9AnyObject"
 - "C6CoChat30BrowseNavigationViewController"
-- "PSs11CVarArgType"
-- "PSs23CustomStringConvertible"
-- "PSs9Equatable"
-- "PSs8Hashable"
+- "Ps11CVarArgType"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- "Ps8Hashable"
 - "PSo8NSCoding"
 - "PSo26NSExtensionRequestHandling"
 - "CSo8NSObject"

@@ -1,0 +1,1286 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "LoginEmailVC"
+provides-nominal:
+- "C6CoChat12LoginEmailVC"
+provides-member:
+- ["C6CoChat12LoginEmailVC", ""]
+provides-dynamic-lookup:
+- "logInButtonContainer"
+- "textFields"
+- "textFieldDidBeginEditing"
+- "textFieldShouldReturn"
+- "emailTextField"
+- "setUpUI"
+- "textFieldDidEndEditing"
+- "viewDidLoad"
+- "handleSingleTap"
+- "logInButtonWasTapped"
+- "passwordTextField"
+- "logInButton"
+depends-top-level:
+- !private "=="
+- !private "NSForegroundColorAttributeName"
+- !private "NSAttributedString"
+- "UIButton"
+- "UITapGestureRecognizer"
+- !private "Array"
+- !private "&&"
+- "UITextFieldDelegate"
+- "Bool"
+- "UITextField"
+- !private "StringLiteralType"
+- !private "Theme"
+- "LoginEmailVC"
+- !private "BooleanLiteralType"
+- !private "Dictionary"
+- "UIView"
+- "UIViewController"
+- !private "UIColor"
+depends-member:
+- !private ["Ps9AnyObject", "NSAttributedString"]
+- !private ["Ps9AnyObject", "NSForegroundColorAttributeName"]
+- !private ["Ps9AnyObject", "Theme"]
+- !private ["Ps9AnyObject", "UIColor"]
+- !private ["Ps9AnyObject", "UITapGestureRecognizer"]
+- !private ["Ps9AnyObject", "addGestureRecognizer"]
+- !private ["Ps9AnyObject", "allTextFieldsAreFilled"]
+- !private ["Ps9AnyObject", "alpha"]
+- !private ["Ps9AnyObject", "attributedPlaceholder"]
+- !private ["Ps9AnyObject", "backgroundColor"]
+- !private ["Ps9AnyObject", "cancelsTouchesInView"]
+- !private ["Ps9AnyObject", "clearColor"]
+- !private ["Ps9AnyObject", "cornerRadius"]
+- !private ["Ps9AnyObject", "delegate"]
+- ["Ps9AnyObject", "emailTextField"]
+- !private ["Ps9AnyObject", "endEditing"]
+- ["Ps9AnyObject", "handleSingleTap"]
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "isValidEmail"]
+- !private ["Ps9AnyObject", "layer"]
+- ["Ps9AnyObject", "logInButton"]
+- ["Ps9AnyObject", "logInButtonContainer"]
+- ["Ps9AnyObject", "logInButtonWasTapped"]
+- ["Ps9AnyObject", "passwordTextField"]
+- !private ["Ps9AnyObject", "placeholder"]
+- !private ["Ps9AnyObject", "resignFirstResponder"]
+- ["Ps9AnyObject", "setUpUI"]
+- !private ["Ps9AnyObject", "state"]
+- !private ["Ps9AnyObject", "text"]
+- !private ["Ps9AnyObject", "textColor"]
+- ["Ps9AnyObject", "textField"]
+- ["Ps9AnyObject", "textFieldDidBeginEditing"]
+- ["Ps9AnyObject", "textFieldDidEndEditing"]
+- ["Ps9AnyObject", "textFieldShouldBeginEditing"]
+- ["Ps9AnyObject", "textFieldShouldClear"]
+- ["Ps9AnyObject", "textFieldShouldEndEditing"]
+- ["Ps9AnyObject", "textFieldShouldReturn"]
+- ["Ps9AnyObject", "textFields"]
+- !private ["Ps9AnyObject", "view"]
+- ["Ps9AnyObject", "viewDidLoad"]
+- !private ["Ps9AnyObject", "whiteColor"]
+- ["Ps9AnyObject", ""]
+- !private ["Sa", "Element"]
+- !private ["Sa", "Generator"]
+- !private ["Sa", "Index"]
+- !private ["Sa", "SubSequence"]
+- !private ["Sa", "_Element"]
+- !private ["Sa", "appendContentsOf"]
+- !private ["Ps23ArrayLiteralConvertible", "Element"]
+- !private ["Ps23ArrayLiteralConvertible", "Generator"]
+- !private ["Ps23ArrayLiteralConvertible", "Index"]
+- !private ["Ps23ArrayLiteralConvertible", "SubSequence"]
+- !private ["Ps23ArrayLiteralConvertible", "_Element"]
+- !private ["Ps23ArrayLiteralConvertible", "appendContentsOf"]
+- !private ["Vs10ArraySlice", "Generator"]
+- !private ["Vs10ArraySlice", "Index"]
+- !private ["Ps22BidirectionalIndexType", "Distance"]
+- !private ["Ps22BidirectionalIndexType", "IntegerLiteralType"]
+- !private ["Ps21BitwiseOperationsType", "Distance"]
+- !private ["Ps21BitwiseOperationsType", "IntegerLiteralType"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- !private ["CSo7CALayer", "cornerRadius"]
+- !private ["PSo13CAMediaTiming", "cornerRadius"]
+- !private ["V12CoreGraphics7CGFloat", "deinit"]
+- !private ["Ps11CVarArgType", "Distance"]
+- !private ["Ps11CVarArgType", "IntegerLiteralType"]
+- !private ["Ps11CVarArgType", "NSAttributedString"]
+- !private ["Ps11CVarArgType", "NSForegroundColorAttributeName"]
+- !private ["Ps11CVarArgType", "Theme"]
+- !private ["Ps11CVarArgType", "UIColor"]
+- !private ["Ps11CVarArgType", "UITapGestureRecognizer"]
+- !private ["Ps11CVarArgType", "addGestureRecognizer"]
+- !private ["Ps11CVarArgType", "allTextFieldsAreFilled"]
+- !private ["Ps11CVarArgType", "alpha"]
+- !private ["Ps11CVarArgType", "attributedPlaceholder"]
+- !private ["Ps11CVarArgType", "backgroundColor"]
+- !private ["Ps11CVarArgType", "cancelsTouchesInView"]
+- !private ["Ps11CVarArgType", "clearColor"]
+- !private ["Ps11CVarArgType", "cornerRadius"]
+- !private ["Ps11CVarArgType", "delegate"]
+- ["Ps11CVarArgType", "emailTextField"]
+- !private ["Ps11CVarArgType", "endEditing"]
+- ["Ps11CVarArgType", "handleSingleTap"]
+- ["Ps11CVarArgType", "init"]
+- !private ["Ps11CVarArgType", "isValidEmail"]
+- !private ["Ps11CVarArgType", "layer"]
+- ["Ps11CVarArgType", "logInButton"]
+- ["Ps11CVarArgType", "logInButtonContainer"]
+- ["Ps11CVarArgType", "logInButtonWasTapped"]
+- ["Ps11CVarArgType", "passwordTextField"]
+- !private ["Ps11CVarArgType", "placeholder"]
+- !private ["Ps11CVarArgType", "resignFirstResponder"]
+- ["Ps11CVarArgType", "setUpUI"]
+- !private ["Ps11CVarArgType", "state"]
+- !private ["Ps11CVarArgType", "text"]
+- !private ["Ps11CVarArgType", "textColor"]
+- ["Ps11CVarArgType", "textField"]
+- ["Ps11CVarArgType", "textFieldDidBeginEditing"]
+- ["Ps11CVarArgType", "textFieldDidEndEditing"]
+- ["Ps11CVarArgType", "textFieldShouldBeginEditing"]
+- ["Ps11CVarArgType", "textFieldShouldClear"]
+- ["Ps11CVarArgType", "textFieldShouldEndEditing"]
+- ["Ps11CVarArgType", "textFieldShouldReturn"]
+- ["Ps11CVarArgType", "textFields"]
+- !private ["Ps11CVarArgType", "view"]
+- ["Ps11CVarArgType", "viewDidLoad"]
+- !private ["Ps11CVarArgType", "whiteColor"]
+- ["Ps11CVarArgType", ""]
+- !private ["Ps14CollectionType", "Element"]
+- !private ["Ps14CollectionType", "Generator"]
+- !private ["Ps14CollectionType", "Index"]
+- !private ["Ps14CollectionType", "Key"]
+- !private ["Ps14CollectionType", "SubSequence"]
+- !private ["Ps14CollectionType", "Value"]
+- !private ["Ps14CollectionType", "_Element"]
+- !private ["Ps14CollectionType", "appendContentsOf"]
+- !private ["OV6CoChat5Theme6Colors", "BackgroundColor"]
+- !private ["OV6CoChat5Theme6Colors", "ButtonColor"]
+- !private ["OV6CoChat5Theme6Colors", "ForegroundColor"]
+- !private ["OV6CoChat5Theme6Colors", "color"]
+- !private ["Ps10Comparable", "Distance"]
+- !private ["Ps10Comparable", "IntegerLiteralType"]
+- !private ["Ps28CustomDebugStringConvertible", "Element"]
+- !private ["Ps28CustomDebugStringConvertible", "Generator"]
+- !private ["Ps28CustomDebugStringConvertible", "Index"]
+- !private ["Ps28CustomDebugStringConvertible", "Key"]
+- !private ["Ps28CustomDebugStringConvertible", "NSAttributedString"]
+- !private ["Ps28CustomDebugStringConvertible", "NSForegroundColorAttributeName"]
+- !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
+- !private ["Ps28CustomDebugStringConvertible", "Theme"]
+- !private ["Ps28CustomDebugStringConvertible", "UIColor"]
+- !private ["Ps28CustomDebugStringConvertible", "UITapGestureRecognizer"]
+- !private ["Ps28CustomDebugStringConvertible", "Value"]
+- !private ["Ps28CustomDebugStringConvertible", "_Element"]
+- !private ["Ps28CustomDebugStringConvertible", "addGestureRecognizer"]
+- !private ["Ps28CustomDebugStringConvertible", "allTextFieldsAreFilled"]
+- !private ["Ps28CustomDebugStringConvertible", "alpha"]
+- !private ["Ps28CustomDebugStringConvertible", "appendContentsOf"]
+- !private ["Ps28CustomDebugStringConvertible", "attributedPlaceholder"]
+- !private ["Ps28CustomDebugStringConvertible", "backgroundColor"]
+- !private ["Ps28CustomDebugStringConvertible", "cancelsTouchesInView"]
+- !private ["Ps28CustomDebugStringConvertible", "clearColor"]
+- !private ["Ps28CustomDebugStringConvertible", "cornerRadius"]
+- !private ["Ps28CustomDebugStringConvertible", "delegate"]
+- ["Ps28CustomDebugStringConvertible", "emailTextField"]
+- !private ["Ps28CustomDebugStringConvertible", "endEditing"]
+- ["Ps28CustomDebugStringConvertible", "handleSingleTap"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "isValidEmail"]
+- !private ["Ps28CustomDebugStringConvertible", "layer"]
+- ["Ps28CustomDebugStringConvertible", "logInButton"]
+- ["Ps28CustomDebugStringConvertible", "logInButtonContainer"]
+- ["Ps28CustomDebugStringConvertible", "logInButtonWasTapped"]
+- ["Ps28CustomDebugStringConvertible", "passwordTextField"]
+- !private ["Ps28CustomDebugStringConvertible", "placeholder"]
+- !private ["Ps28CustomDebugStringConvertible", "resignFirstResponder"]
+- ["Ps28CustomDebugStringConvertible", "setUpUI"]
+- !private ["Ps28CustomDebugStringConvertible", "state"]
+- !private ["Ps28CustomDebugStringConvertible", "text"]
+- !private ["Ps28CustomDebugStringConvertible", "textColor"]
+- ["Ps28CustomDebugStringConvertible", "textField"]
+- ["Ps28CustomDebugStringConvertible", "textFieldDidBeginEditing"]
+- ["Ps28CustomDebugStringConvertible", "textFieldDidEndEditing"]
+- ["Ps28CustomDebugStringConvertible", "textFieldShouldBeginEditing"]
+- ["Ps28CustomDebugStringConvertible", "textFieldShouldClear"]
+- ["Ps28CustomDebugStringConvertible", "textFieldShouldEndEditing"]
+- ["Ps28CustomDebugStringConvertible", "textFieldShouldReturn"]
+- ["Ps28CustomDebugStringConvertible", "textFields"]
+- !private ["Ps28CustomDebugStringConvertible", "view"]
+- ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
+- !private ["Ps28CustomDebugStringConvertible", "whiteColor"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps23CustomStringConvertible", "Distance"]
+- !private ["Ps23CustomStringConvertible", "Element"]
+- !private ["Ps23CustomStringConvertible", "Generator"]
+- !private ["Ps23CustomStringConvertible", "Index"]
+- !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
+- !private ["Ps23CustomStringConvertible", "Key"]
+- !private ["Ps23CustomStringConvertible", "NSAttributedString"]
+- !private ["Ps23CustomStringConvertible", "NSForegroundColorAttributeName"]
+- !private ["Ps23CustomStringConvertible", "SubSequence"]
+- !private ["Ps23CustomStringConvertible", "Theme"]
+- !private ["Ps23CustomStringConvertible", "UIColor"]
+- !private ["Ps23CustomStringConvertible", "UITapGestureRecognizer"]
+- !private ["Ps23CustomStringConvertible", "Value"]
+- !private ["Ps23CustomStringConvertible", "_Element"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "addGestureRecognizer"]
+- !private ["Ps23CustomStringConvertible", "allTextFieldsAreFilled"]
+- !private ["Ps23CustomStringConvertible", "alpha"]
+- !private ["Ps23CustomStringConvertible", "appendContentsOf"]
+- !private ["Ps23CustomStringConvertible", "attributedPlaceholder"]
+- !private ["Ps23CustomStringConvertible", "backgroundColor"]
+- !private ["Ps23CustomStringConvertible", "cancelsTouchesInView"]
+- !private ["Ps23CustomStringConvertible", "clearColor"]
+- !private ["Ps23CustomStringConvertible", "cornerRadius"]
+- !private ["Ps23CustomStringConvertible", "delegate"]
+- ["Ps23CustomStringConvertible", "emailTextField"]
+- !private ["Ps23CustomStringConvertible", "endEditing"]
+- ["Ps23CustomStringConvertible", "handleSingleTap"]
+- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "isValidEmail"]
+- !private ["Ps23CustomStringConvertible", "layer"]
+- ["Ps23CustomStringConvertible", "logInButton"]
+- ["Ps23CustomStringConvertible", "logInButtonContainer"]
+- ["Ps23CustomStringConvertible", "logInButtonWasTapped"]
+- ["Ps23CustomStringConvertible", "passwordTextField"]
+- !private ["Ps23CustomStringConvertible", "placeholder"]
+- !private ["Ps23CustomStringConvertible", "resignFirstResponder"]
+- ["Ps23CustomStringConvertible", "setUpUI"]
+- !private ["Ps23CustomStringConvertible", "state"]
+- !private ["Ps23CustomStringConvertible", "text"]
+- !private ["Ps23CustomStringConvertible", "textColor"]
+- ["Ps23CustomStringConvertible", "textField"]
+- ["Ps23CustomStringConvertible", "textFieldDidBeginEditing"]
+- ["Ps23CustomStringConvertible", "textFieldDidEndEditing"]
+- ["Ps23CustomStringConvertible", "textFieldShouldBeginEditing"]
+- ["Ps23CustomStringConvertible", "textFieldShouldClear"]
+- ["Ps23CustomStringConvertible", "textFieldShouldEndEditing"]
+- ["Ps23CustomStringConvertible", "textFieldShouldReturn"]
+- ["Ps23CustomStringConvertible", "textFields"]
+- !private ["Ps23CustomStringConvertible", "view"]
+- ["Ps23CustomStringConvertible", "viewDidLoad"]
+- !private ["Ps23CustomStringConvertible", "whiteColor"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Vs10Dictionary", "Key"]
+- !private ["Vs10Dictionary", "Value"]
+- !private ["Ps28DictionaryLiteralConvertible", "Key"]
+- !private ["Ps28DictionaryLiteralConvertible", "Value"]
+- !private ["Ps9Equatable", "BackgroundColor"]
+- !private ["Ps9Equatable", "ButtonColor"]
+- !private ["Ps9Equatable", "Distance"]
+- !private ["Ps9Equatable", "Ended"]
+- !private ["Ps9Equatable", "ForegroundColor"]
+- !private ["Ps9Equatable", "IntegerLiteralType"]
+- !private ["Ps9Equatable", "NSAttributedString"]
+- !private ["Ps9Equatable", "NSForegroundColorAttributeName"]
+- !private ["Ps9Equatable", "RawValue"]
+- !private ["Ps9Equatable", "Theme"]
+- !private ["Ps9Equatable", "UIColor"]
+- !private ["Ps9Equatable", "UITapGestureRecognizer"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "addGestureRecognizer"]
+- !private ["Ps9Equatable", "allTextFieldsAreFilled"]
+- !private ["Ps9Equatable", "alpha"]
+- !private ["Ps9Equatable", "attributedPlaceholder"]
+- !private ["Ps9Equatable", "backgroundColor"]
+- !private ["Ps9Equatable", "cancelsTouchesInView"]
+- !private ["Ps9Equatable", "clearColor"]
+- !private ["Ps9Equatable", "color"]
+- !private ["Ps9Equatable", "cornerRadius"]
+- !private ["Ps9Equatable", "delegate"]
+- ["Ps9Equatable", "emailTextField"]
+- !private ["Ps9Equatable", "endEditing"]
+- ["Ps9Equatable", "handleSingleTap"]
+- ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "isValidEmail"]
+- !private ["Ps9Equatable", "layer"]
+- ["Ps9Equatable", "logInButton"]
+- ["Ps9Equatable", "logInButtonContainer"]
+- ["Ps9Equatable", "logInButtonWasTapped"]
+- ["Ps9Equatable", "passwordTextField"]
+- !private ["Ps9Equatable", "placeholder"]
+- !private ["Ps9Equatable", "resignFirstResponder"]
+- ["Ps9Equatable", "setUpUI"]
+- !private ["Ps9Equatable", "state"]
+- !private ["Ps9Equatable", "text"]
+- !private ["Ps9Equatable", "textColor"]
+- ["Ps9Equatable", "textField"]
+- ["Ps9Equatable", "textFieldDidBeginEditing"]
+- ["Ps9Equatable", "textFieldDidEndEditing"]
+- ["Ps9Equatable", "textFieldShouldBeginEditing"]
+- ["Ps9Equatable", "textFieldShouldClear"]
+- ["Ps9Equatable", "textFieldShouldEndEditing"]
+- ["Ps9Equatable", "textFieldShouldReturn"]
+- ["Ps9Equatable", "textFields"]
+- !private ["Ps9Equatable", "view"]
+- ["Ps9Equatable", "viewDidLoad"]
+- !private ["Ps9Equatable", "whiteColor"]
+- ["Ps9Equatable", ""]
+- !private ["Ps16ForwardIndexType", "Distance"]
+- !private ["Ps16ForwardIndexType", "IntegerLiteralType"]
+- !private ["Ps13GeneratorType", "Element"]
+- !private ["Ps8Hashable", "BackgroundColor"]
+- !private ["Ps8Hashable", "ButtonColor"]
+- !private ["Ps8Hashable", "Distance"]
+- !private ["Ps8Hashable", "Ended"]
+- !private ["Ps8Hashable", "ForegroundColor"]
+- !private ["Ps8Hashable", "IntegerLiteralType"]
+- !private ["Ps8Hashable", "NSAttributedString"]
+- !private ["Ps8Hashable", "NSForegroundColorAttributeName"]
+- !private ["Ps8Hashable", "RawValue"]
+- !private ["Ps8Hashable", "Theme"]
+- !private ["Ps8Hashable", "UIColor"]
+- !private ["Ps8Hashable", "UITapGestureRecognizer"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "addGestureRecognizer"]
+- !private ["Ps8Hashable", "allTextFieldsAreFilled"]
+- !private ["Ps8Hashable", "alpha"]
+- !private ["Ps8Hashable", "attributedPlaceholder"]
+- !private ["Ps8Hashable", "backgroundColor"]
+- !private ["Ps8Hashable", "cancelsTouchesInView"]
+- !private ["Ps8Hashable", "clearColor"]
+- !private ["Ps8Hashable", "color"]
+- !private ["Ps8Hashable", "cornerRadius"]
+- !private ["Ps8Hashable", "delegate"]
+- ["Ps8Hashable", "emailTextField"]
+- !private ["Ps8Hashable", "endEditing"]
+- ["Ps8Hashable", "handleSingleTap"]
+- ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "isValidEmail"]
+- !private ["Ps8Hashable", "layer"]
+- ["Ps8Hashable", "logInButton"]
+- ["Ps8Hashable", "logInButtonContainer"]
+- ["Ps8Hashable", "logInButtonWasTapped"]
+- ["Ps8Hashable", "passwordTextField"]
+- !private ["Ps8Hashable", "placeholder"]
+- !private ["Ps8Hashable", "resignFirstResponder"]
+- ["Ps8Hashable", "setUpUI"]
+- !private ["Ps8Hashable", "state"]
+- !private ["Ps8Hashable", "text"]
+- !private ["Ps8Hashable", "textColor"]
+- ["Ps8Hashable", "textField"]
+- ["Ps8Hashable", "textFieldDidBeginEditing"]
+- ["Ps8Hashable", "textFieldDidEndEditing"]
+- ["Ps8Hashable", "textFieldShouldBeginEditing"]
+- ["Ps8Hashable", "textFieldShouldClear"]
+- ["Ps8Hashable", "textFieldShouldEndEditing"]
+- ["Ps8Hashable", "textFieldShouldReturn"]
+- ["Ps8Hashable", "textFields"]
+- !private ["Ps8Hashable", "view"]
+- ["Ps8Hashable", "viewDidLoad"]
+- !private ["Ps8Hashable", "whiteColor"]
+- ["Ps8Hashable", ""]
+- !private ["Ps9Indexable", "Element"]
+- !private ["Ps9Indexable", "Generator"]
+- !private ["Ps9Indexable", "Index"]
+- !private ["Ps9Indexable", "Key"]
+- !private ["Ps9Indexable", "SubSequence"]
+- !private ["Ps9Indexable", "Value"]
+- !private ["Ps9Indexable", "_Element"]
+- !private ["Ps9Indexable", "appendContentsOf"]
+- !private ["Vs17IndexingGenerator", "Element"]
+- !private ["Si", "Distance"]
+- !private ["Si", "IntegerLiteralType"]
+- !private ["Ps21IntegerArithmeticType", "Distance"]
+- !private ["Ps21IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["Ps25IntegerLiteralConvertible", "Distance"]
+- !private ["Ps25IntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["Ps11IntegerType", "Distance"]
+- !private ["Ps11IntegerType", "IntegerLiteralType"]
+- ["C6CoChat12LoginEmailVC", "Bool"]
+- !private ["C6CoChat12LoginEmailVC", "NSAttributedString"]
+- !private ["C6CoChat12LoginEmailVC", "NSForegroundColorAttributeName"]
+- !private ["C6CoChat12LoginEmailVC", "Theme"]
+- ["C6CoChat12LoginEmailVC", "UIButton"]
+- !private ["C6CoChat12LoginEmailVC", "UIColor"]
+- ["C6CoChat12LoginEmailVC", "UITapGestureRecognizer"]
+- ["C6CoChat12LoginEmailVC", "UITextField"]
+- ["C6CoChat12LoginEmailVC", "UIView"]
+- !private ["C6CoChat12LoginEmailVC", "allTextFieldsAreFilled"]
+- ["C6CoChat12LoginEmailVC", "deinit"]
+- ["C6CoChat12LoginEmailVC", "emailTextField"]
+- ["C6CoChat12LoginEmailVC", "handleSingleTap"]
+- ["C6CoChat12LoginEmailVC", "init"]
+- !private ["C6CoChat12LoginEmailVC", "isValidEmail"]
+- ["C6CoChat12LoginEmailVC", "logInButton"]
+- ["C6CoChat12LoginEmailVC", "logInButtonContainer"]
+- ["C6CoChat12LoginEmailVC", "logInButtonWasTapped"]
+- ["C6CoChat12LoginEmailVC", "passwordTextField"]
+- ["C6CoChat12LoginEmailVC", "setUpUI"]
+- ["C6CoChat12LoginEmailVC", "textField"]
+- ["C6CoChat12LoginEmailVC", "textFieldDidBeginEditing"]
+- ["C6CoChat12LoginEmailVC", "textFieldDidEndEditing"]
+- ["C6CoChat12LoginEmailVC", "textFieldShouldBeginEditing"]
+- ["C6CoChat12LoginEmailVC", "textFieldShouldClear"]
+- ["C6CoChat12LoginEmailVC", "textFieldShouldEndEditing"]
+- ["C6CoChat12LoginEmailVC", "textFieldShouldReturn"]
+- ["C6CoChat12LoginEmailVC", "textFields"]
+- !private ["C6CoChat12LoginEmailVC", "view"]
+- ["C6CoChat12LoginEmailVC", "viewDidLoad"]
+- !private ["Ps14MirrorPathType", "Distance"]
+- !private ["Ps14MirrorPathType", "IntegerLiteralType"]
+- !private ["Ps21MutableCollectionType", "Element"]
+- !private ["Ps21MutableCollectionType", "Generator"]
+- !private ["Ps21MutableCollectionType", "Index"]
+- !private ["Ps21MutableCollectionType", "SubSequence"]
+- !private ["Ps21MutableCollectionType", "_Element"]
+- !private ["Ps21MutableCollectionType", "appendContentsOf"]
+- !private ["Ps16MutableIndexable", "Element"]
+- !private ["Ps16MutableIndexable", "Generator"]
+- !private ["Ps16MutableIndexable", "Index"]
+- !private ["Ps16MutableIndexable", "SubSequence"]
+- !private ["Ps16MutableIndexable", "_Element"]
+- !private ["Ps16MutableIndexable", "appendContentsOf"]
+- !private ["Ps16MutableSliceable", "Element"]
+- !private ["Ps16MutableSliceable", "Generator"]
+- !private ["Ps16MutableSliceable", "Index"]
+- !private ["Ps16MutableSliceable", "SubSequence"]
+- !private ["Ps16MutableSliceable", "_Element"]
+- !private ["Ps16MutableSliceable", "appendContentsOf"]
+- !private ["CSo18NSAttributedString", "init"]
+- !private ["PSo8NSCoding", "NSAttributedString"]
+- !private ["PSo8NSCoding", "NSForegroundColorAttributeName"]
+- !private ["PSo8NSCoding", "Theme"]
+- !private ["PSo8NSCoding", "UIColor"]
+- !private ["PSo8NSCoding", "UITapGestureRecognizer"]
+- !private ["PSo8NSCoding", "addGestureRecognizer"]
+- !private ["PSo8NSCoding", "allTextFieldsAreFilled"]
+- !private ["PSo8NSCoding", "alpha"]
+- !private ["PSo8NSCoding", "attributedPlaceholder"]
+- !private ["PSo8NSCoding", "backgroundColor"]
+- !private ["PSo8NSCoding", "clearColor"]
+- !private ["PSo8NSCoding", "cornerRadius"]
+- !private ["PSo8NSCoding", "delegate"]
+- ["PSo8NSCoding", "emailTextField"]
+- !private ["PSo8NSCoding", "endEditing"]
+- ["PSo8NSCoding", "handleSingleTap"]
+- ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "isValidEmail"]
+- !private ["PSo8NSCoding", "layer"]
+- ["PSo8NSCoding", "logInButton"]
+- ["PSo8NSCoding", "logInButtonContainer"]
+- ["PSo8NSCoding", "logInButtonWasTapped"]
+- ["PSo8NSCoding", "passwordTextField"]
+- !private ["PSo8NSCoding", "placeholder"]
+- !private ["PSo8NSCoding", "resignFirstResponder"]
+- ["PSo8NSCoding", "setUpUI"]
+- !private ["PSo8NSCoding", "text"]
+- !private ["PSo8NSCoding", "textColor"]
+- ["PSo8NSCoding", "textField"]
+- ["PSo8NSCoding", "textFieldDidBeginEditing"]
+- ["PSo8NSCoding", "textFieldDidEndEditing"]
+- ["PSo8NSCoding", "textFieldShouldBeginEditing"]
+- ["PSo8NSCoding", "textFieldShouldClear"]
+- ["PSo8NSCoding", "textFieldShouldEndEditing"]
+- ["PSo8NSCoding", "textFieldShouldReturn"]
+- ["PSo8NSCoding", "textFields"]
+- !private ["PSo8NSCoding", "view"]
+- ["PSo8NSCoding", "viewDidLoad"]
+- !private ["PSo8NSCoding", "whiteColor"]
+- ["PSo8NSCoding", ""]
+- !private ["PSo9NSCopying", "clearColor"]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo9NSCopying", "whiteColor"]
+- !private ["PSo26NSExtensionRequestHandling", "NSAttributedString"]
+- !private ["PSo26NSExtensionRequestHandling", "NSForegroundColorAttributeName"]
+- !private ["PSo26NSExtensionRequestHandling", "Theme"]
+- !private ["PSo26NSExtensionRequestHandling", "UIColor"]
+- !private ["PSo26NSExtensionRequestHandling", "UITapGestureRecognizer"]
+- !private ["PSo26NSExtensionRequestHandling", "allTextFieldsAreFilled"]
+- ["PSo26NSExtensionRequestHandling", "emailTextField"]
+- ["PSo26NSExtensionRequestHandling", "handleSingleTap"]
+- ["PSo26NSExtensionRequestHandling", "init"]
+- !private ["PSo26NSExtensionRequestHandling", "isValidEmail"]
+- ["PSo26NSExtensionRequestHandling", "logInButton"]
+- ["PSo26NSExtensionRequestHandling", "logInButtonContainer"]
+- ["PSo26NSExtensionRequestHandling", "logInButtonWasTapped"]
+- ["PSo26NSExtensionRequestHandling", "passwordTextField"]
+- ["PSo26NSExtensionRequestHandling", "setUpUI"]
+- ["PSo26NSExtensionRequestHandling", "textField"]
+- ["PSo26NSExtensionRequestHandling", "textFieldDidBeginEditing"]
+- ["PSo26NSExtensionRequestHandling", "textFieldDidEndEditing"]
+- ["PSo26NSExtensionRequestHandling", "textFieldShouldBeginEditing"]
+- ["PSo26NSExtensionRequestHandling", "textFieldShouldClear"]
+- ["PSo26NSExtensionRequestHandling", "textFieldShouldEndEditing"]
+- ["PSo26NSExtensionRequestHandling", "textFieldShouldReturn"]
+- ["PSo26NSExtensionRequestHandling", "textFields"]
+- !private ["PSo26NSExtensionRequestHandling", "view"]
+- ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
+- ["PSo26NSExtensionRequestHandling", ""]
+- !private ["PSo16NSMutableCopying", "init"]
+- ["CSo8NSObject", "Bool"]
+- !private ["CSo8NSObject", "NSAttributedString"]
+- !private ["CSo8NSObject", "NSForegroundColorAttributeName"]
+- !private ["CSo8NSObject", "Theme"]
+- ["CSo8NSObject", "UIButton"]
+- !private ["CSo8NSObject", "UIColor"]
+- ["CSo8NSObject", "UITapGestureRecognizer"]
+- ["CSo8NSObject", "UITextField"]
+- ["CSo8NSObject", "UIView"]
+- !private ["CSo8NSObject", "addGestureRecognizer"]
+- !private ["CSo8NSObject", "allTextFieldsAreFilled"]
+- !private ["CSo8NSObject", "alpha"]
+- !private ["CSo8NSObject", "attributedPlaceholder"]
+- !private ["CSo8NSObject", "backgroundColor"]
+- !private ["CSo8NSObject", "cancelsTouchesInView"]
+- !private ["CSo8NSObject", "clearColor"]
+- !private ["CSo8NSObject", "cornerRadius"]
+- !private ["CSo8NSObject", "delegate"]
+- ["CSo8NSObject", "emailTextField"]
+- !private ["CSo8NSObject", "endEditing"]
+- ["CSo8NSObject", "handleSingleTap"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "isValidEmail"]
+- !private ["CSo8NSObject", "layer"]
+- ["CSo8NSObject", "logInButton"]
+- ["CSo8NSObject", "logInButtonContainer"]
+- ["CSo8NSObject", "logInButtonWasTapped"]
+- ["CSo8NSObject", "passwordTextField"]
+- !private ["CSo8NSObject", "placeholder"]
+- !private ["CSo8NSObject", "resignFirstResponder"]
+- ["CSo8NSObject", "setUpUI"]
+- !private ["CSo8NSObject", "state"]
+- !private ["CSo8NSObject", "text"]
+- !private ["CSo8NSObject", "textColor"]
+- ["CSo8NSObject", "textField"]
+- ["CSo8NSObject", "textFieldDidBeginEditing"]
+- ["CSo8NSObject", "textFieldDidEndEditing"]
+- ["CSo8NSObject", "textFieldShouldBeginEditing"]
+- ["CSo8NSObject", "textFieldShouldClear"]
+- ["CSo8NSObject", "textFieldShouldEndEditing"]
+- ["CSo8NSObject", "textFieldShouldReturn"]
+- ["CSo8NSObject", "textFields"]
+- !private ["CSo8NSObject", "view"]
+- ["CSo8NSObject", "viewDidLoad"]
+- !private ["CSo8NSObject", "whiteColor"]
+- !private ["PSo16NSObjectProtocol", "NSAttributedString"]
+- !private ["PSo16NSObjectProtocol", "NSForegroundColorAttributeName"]
+- !private ["PSo16NSObjectProtocol", "Theme"]
+- !private ["PSo16NSObjectProtocol", "UIColor"]
+- !private ["PSo16NSObjectProtocol", "UITapGestureRecognizer"]
+- !private ["PSo16NSObjectProtocol", "addGestureRecognizer"]
+- !private ["PSo16NSObjectProtocol", "allTextFieldsAreFilled"]
+- !private ["PSo16NSObjectProtocol", "alpha"]
+- !private ["PSo16NSObjectProtocol", "attributedPlaceholder"]
+- !private ["PSo16NSObjectProtocol", "backgroundColor"]
+- !private ["PSo16NSObjectProtocol", "cancelsTouchesInView"]
+- !private ["PSo16NSObjectProtocol", "clearColor"]
+- !private ["PSo16NSObjectProtocol", "cornerRadius"]
+- !private ["PSo16NSObjectProtocol", "delegate"]
+- ["PSo16NSObjectProtocol", "emailTextField"]
+- !private ["PSo16NSObjectProtocol", "endEditing"]
+- ["PSo16NSObjectProtocol", "handleSingleTap"]
+- ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "isValidEmail"]
+- !private ["PSo16NSObjectProtocol", "layer"]
+- ["PSo16NSObjectProtocol", "logInButton"]
+- ["PSo16NSObjectProtocol", "logInButtonContainer"]
+- ["PSo16NSObjectProtocol", "logInButtonWasTapped"]
+- ["PSo16NSObjectProtocol", "passwordTextField"]
+- !private ["PSo16NSObjectProtocol", "placeholder"]
+- !private ["PSo16NSObjectProtocol", "resignFirstResponder"]
+- ["PSo16NSObjectProtocol", "setUpUI"]
+- !private ["PSo16NSObjectProtocol", "state"]
+- !private ["PSo16NSObjectProtocol", "text"]
+- !private ["PSo16NSObjectProtocol", "textColor"]
+- ["PSo16NSObjectProtocol", "textField"]
+- ["PSo16NSObjectProtocol", "textFieldDidBeginEditing"]
+- ["PSo16NSObjectProtocol", "textFieldDidEndEditing"]
+- ["PSo16NSObjectProtocol", "textFieldShouldBeginEditing"]
+- ["PSo16NSObjectProtocol", "textFieldShouldClear"]
+- ["PSo16NSObjectProtocol", "textFieldShouldEndEditing"]
+- ["PSo16NSObjectProtocol", "textFieldShouldReturn"]
+- ["PSo16NSObjectProtocol", "textFields"]
+- !private ["PSo16NSObjectProtocol", "view"]
+- ["PSo16NSObjectProtocol", "viewDidLoad"]
+- !private ["PSo16NSObjectProtocol", "whiteColor"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "clearColor"]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["PSo14NSSecureCoding", "whiteColor"]
+- !private ["Sq", "deinit"]
+- !private ["Ps21RandomAccessIndexType", "Distance"]
+- !private ["Ps21RandomAccessIndexType", "IntegerLiteralType"]
+- !private ["Ps30RangeReplaceableCollectionType", "Element"]
+- !private ["Ps30RangeReplaceableCollectionType", "Generator"]
+- !private ["Ps30RangeReplaceableCollectionType", "Index"]
+- !private ["Ps30RangeReplaceableCollectionType", "SubSequence"]
+- !private ["Ps30RangeReplaceableCollectionType", "_Element"]
+- !private ["Ps30RangeReplaceableCollectionType", "appendContentsOf"]
+- !private ["Ps16RawRepresentable", "Ended"]
+- !private ["Ps16RawRepresentable", "RawValue"]
+- !private ["V10ObjectiveC8Selector", "deinit"]
+- !private ["Ps12SequenceType", "Element"]
+- !private ["Ps12SequenceType", "Generator"]
+- !private ["Ps12SequenceType", "Index"]
+- !private ["Ps12SequenceType", "Key"]
+- !private ["Ps12SequenceType", "SubSequence"]
+- !private ["Ps12SequenceType", "Value"]
+- !private ["Ps12SequenceType", "_Element"]
+- !private ["Ps12SequenceType", "appendContentsOf"]
+- !private ["Ps17SignedIntegerType", "Distance"]
+- !private ["Ps17SignedIntegerType", "IntegerLiteralType"]
+- !private ["Ps16SignedNumberType", "Distance"]
+- !private ["Ps16SignedNumberType", "IntegerLiteralType"]
+- !private ["Ps10Strideable", "Distance"]
+- !private ["Ps10Strideable", "IntegerLiteralType"]
+- !private ["V6CoChat5Theme", "Colors"]
+- !private ["PSo29UIAccessibilityIdentification", "addGestureRecognizer"]
+- !private ["PSo29UIAccessibilityIdentification", "alpha"]
+- !private ["PSo29UIAccessibilityIdentification", "attributedPlaceholder"]
+- !private ["PSo29UIAccessibilityIdentification", "backgroundColor"]
+- !private ["PSo29UIAccessibilityIdentification", "delegate"]
+- !private ["PSo29UIAccessibilityIdentification", "endEditing"]
+- !private ["PSo29UIAccessibilityIdentification", "layer"]
+- !private ["PSo29UIAccessibilityIdentification", "placeholder"]
+- !private ["PSo29UIAccessibilityIdentification", "resignFirstResponder"]
+- !private ["PSo29UIAccessibilityIdentification", "text"]
+- !private ["PSo29UIAccessibilityIdentification", "textColor"]
+- !private ["PSo12UIAppearance", "addGestureRecognizer"]
+- !private ["PSo12UIAppearance", "alpha"]
+- !private ["PSo12UIAppearance", "attributedPlaceholder"]
+- !private ["PSo12UIAppearance", "backgroundColor"]
+- !private ["PSo12UIAppearance", "delegate"]
+- !private ["PSo12UIAppearance", "endEditing"]
+- !private ["PSo12UIAppearance", "layer"]
+- !private ["PSo12UIAppearance", "placeholder"]
+- !private ["PSo12UIAppearance", "resignFirstResponder"]
+- !private ["PSo12UIAppearance", "text"]
+- !private ["PSo12UIAppearance", "textColor"]
+- !private ["PSo21UIAppearanceContainer", "NSAttributedString"]
+- !private ["PSo21UIAppearanceContainer", "NSForegroundColorAttributeName"]
+- !private ["PSo21UIAppearanceContainer", "Theme"]
+- !private ["PSo21UIAppearanceContainer", "UIColor"]
+- !private ["PSo21UIAppearanceContainer", "UITapGestureRecognizer"]
+- !private ["PSo21UIAppearanceContainer", "addGestureRecognizer"]
+- !private ["PSo21UIAppearanceContainer", "allTextFieldsAreFilled"]
+- !private ["PSo21UIAppearanceContainer", "alpha"]
+- !private ["PSo21UIAppearanceContainer", "attributedPlaceholder"]
+- !private ["PSo21UIAppearanceContainer", "backgroundColor"]
+- !private ["PSo21UIAppearanceContainer", "delegate"]
+- ["PSo21UIAppearanceContainer", "emailTextField"]
+- !private ["PSo21UIAppearanceContainer", "endEditing"]
+- ["PSo21UIAppearanceContainer", "handleSingleTap"]
+- ["PSo21UIAppearanceContainer", "init"]
+- !private ["PSo21UIAppearanceContainer", "isValidEmail"]
+- !private ["PSo21UIAppearanceContainer", "layer"]
+- ["PSo21UIAppearanceContainer", "logInButton"]
+- ["PSo21UIAppearanceContainer", "logInButtonContainer"]
+- ["PSo21UIAppearanceContainer", "logInButtonWasTapped"]
+- ["PSo21UIAppearanceContainer", "passwordTextField"]
+- !private ["PSo21UIAppearanceContainer", "placeholder"]
+- !private ["PSo21UIAppearanceContainer", "resignFirstResponder"]
+- ["PSo21UIAppearanceContainer", "setUpUI"]
+- !private ["PSo21UIAppearanceContainer", "text"]
+- !private ["PSo21UIAppearanceContainer", "textColor"]
+- ["PSo21UIAppearanceContainer", "textField"]
+- ["PSo21UIAppearanceContainer", "textFieldDidBeginEditing"]
+- ["PSo21UIAppearanceContainer", "textFieldDidEndEditing"]
+- ["PSo21UIAppearanceContainer", "textFieldShouldBeginEditing"]
+- ["PSo21UIAppearanceContainer", "textFieldShouldClear"]
+- ["PSo21UIAppearanceContainer", "textFieldShouldEndEditing"]
+- ["PSo21UIAppearanceContainer", "textFieldShouldReturn"]
+- ["PSo21UIAppearanceContainer", "textFields"]
+- !private ["PSo21UIAppearanceContainer", "view"]
+- ["PSo21UIAppearanceContainer", "viewDidLoad"]
+- ["PSo21UIAppearanceContainer", ""]
+- !private ["CSo8UIButton", "backgroundColor"]
+- !private ["CSo7UIColor", "clearColor"]
+- !private ["CSo7UIColor", "init"]
+- !private ["CSo7UIColor", "whiteColor"]
+- !private ["PSo18UIContentContainer", "NSAttributedString"]
+- !private ["PSo18UIContentContainer", "NSForegroundColorAttributeName"]
+- !private ["PSo18UIContentContainer", "Theme"]
+- !private ["PSo18UIContentContainer", "UIColor"]
+- !private ["PSo18UIContentContainer", "UITapGestureRecognizer"]
+- !private ["PSo18UIContentContainer", "allTextFieldsAreFilled"]
+- ["PSo18UIContentContainer", "emailTextField"]
+- ["PSo18UIContentContainer", "handleSingleTap"]
+- ["PSo18UIContentContainer", "init"]
+- !private ["PSo18UIContentContainer", "isValidEmail"]
+- ["PSo18UIContentContainer", "logInButton"]
+- ["PSo18UIContentContainer", "logInButtonContainer"]
+- ["PSo18UIContentContainer", "logInButtonWasTapped"]
+- ["PSo18UIContentContainer", "passwordTextField"]
+- ["PSo18UIContentContainer", "setUpUI"]
+- ["PSo18UIContentContainer", "textField"]
+- ["PSo18UIContentContainer", "textFieldDidBeginEditing"]
+- ["PSo18UIContentContainer", "textFieldDidEndEditing"]
+- ["PSo18UIContentContainer", "textFieldShouldBeginEditing"]
+- ["PSo18UIContentContainer", "textFieldShouldClear"]
+- ["PSo18UIContentContainer", "textFieldShouldEndEditing"]
+- ["PSo18UIContentContainer", "textFieldShouldReturn"]
+- ["PSo18UIContentContainer", "textFields"]
+- !private ["PSo18UIContentContainer", "view"]
+- ["PSo18UIContentContainer", "viewDidLoad"]
+- ["PSo18UIContentContainer", ""]
+- !private ["CSo9UIControl", "alpha"]
+- !private ["CSo9UIControl", "attributedPlaceholder"]
+- !private ["CSo9UIControl", "backgroundColor"]
+- !private ["CSo9UIControl", "delegate"]
+- !private ["CSo9UIControl", "layer"]
+- !private ["CSo9UIControl", "placeholder"]
+- !private ["CSo9UIControl", "resignFirstResponder"]
+- !private ["CSo9UIControl", "text"]
+- !private ["CSo9UIControl", "textColor"]
+- !private ["PSo17UICoordinateSpace", "addGestureRecognizer"]
+- !private ["PSo17UICoordinateSpace", "alpha"]
+- !private ["PSo17UICoordinateSpace", "attributedPlaceholder"]
+- !private ["PSo17UICoordinateSpace", "backgroundColor"]
+- !private ["PSo17UICoordinateSpace", "delegate"]
+- !private ["PSo17UICoordinateSpace", "endEditing"]
+- !private ["PSo17UICoordinateSpace", "layer"]
+- !private ["PSo17UICoordinateSpace", "placeholder"]
+- !private ["PSo17UICoordinateSpace", "resignFirstResponder"]
+- !private ["PSo17UICoordinateSpace", "text"]
+- !private ["PSo17UICoordinateSpace", "textColor"]
+- !private ["PSo13UIDynamicItem", "addGestureRecognizer"]
+- !private ["PSo13UIDynamicItem", "alpha"]
+- !private ["PSo13UIDynamicItem", "attributedPlaceholder"]
+- !private ["PSo13UIDynamicItem", "backgroundColor"]
+- !private ["PSo13UIDynamicItem", "delegate"]
+- !private ["PSo13UIDynamicItem", "endEditing"]
+- !private ["PSo13UIDynamicItem", "layer"]
+- !private ["PSo13UIDynamicItem", "placeholder"]
+- !private ["PSo13UIDynamicItem", "resignFirstResponder"]
+- !private ["PSo13UIDynamicItem", "text"]
+- !private ["PSo13UIDynamicItem", "textColor"]
+- !private ["PSo18UIFocusEnvironment", "NSAttributedString"]
+- !private ["PSo18UIFocusEnvironment", "NSForegroundColorAttributeName"]
+- !private ["PSo18UIFocusEnvironment", "Theme"]
+- !private ["PSo18UIFocusEnvironment", "UIColor"]
+- !private ["PSo18UIFocusEnvironment", "UITapGestureRecognizer"]
+- !private ["PSo18UIFocusEnvironment", "addGestureRecognizer"]
+- !private ["PSo18UIFocusEnvironment", "allTextFieldsAreFilled"]
+- !private ["PSo18UIFocusEnvironment", "alpha"]
+- !private ["PSo18UIFocusEnvironment", "attributedPlaceholder"]
+- !private ["PSo18UIFocusEnvironment", "backgroundColor"]
+- !private ["PSo18UIFocusEnvironment", "delegate"]
+- ["PSo18UIFocusEnvironment", "emailTextField"]
+- !private ["PSo18UIFocusEnvironment", "endEditing"]
+- ["PSo18UIFocusEnvironment", "handleSingleTap"]
+- ["PSo18UIFocusEnvironment", "init"]
+- !private ["PSo18UIFocusEnvironment", "isValidEmail"]
+- !private ["PSo18UIFocusEnvironment", "layer"]
+- ["PSo18UIFocusEnvironment", "logInButton"]
+- ["PSo18UIFocusEnvironment", "logInButtonContainer"]
+- ["PSo18UIFocusEnvironment", "logInButtonWasTapped"]
+- ["PSo18UIFocusEnvironment", "passwordTextField"]
+- !private ["PSo18UIFocusEnvironment", "placeholder"]
+- !private ["PSo18UIFocusEnvironment", "resignFirstResponder"]
+- ["PSo18UIFocusEnvironment", "setUpUI"]
+- !private ["PSo18UIFocusEnvironment", "text"]
+- !private ["PSo18UIFocusEnvironment", "textColor"]
+- ["PSo18UIFocusEnvironment", "textField"]
+- ["PSo18UIFocusEnvironment", "textFieldDidBeginEditing"]
+- ["PSo18UIFocusEnvironment", "textFieldDidEndEditing"]
+- ["PSo18UIFocusEnvironment", "textFieldShouldBeginEditing"]
+- ["PSo18UIFocusEnvironment", "textFieldShouldClear"]
+- ["PSo18UIFocusEnvironment", "textFieldShouldEndEditing"]
+- ["PSo18UIFocusEnvironment", "textFieldShouldReturn"]
+- ["PSo18UIFocusEnvironment", "textFields"]
+- !private ["PSo18UIFocusEnvironment", "view"]
+- ["PSo18UIFocusEnvironment", "viewDidLoad"]
+- ["PSo18UIFocusEnvironment", ""]
+- !private ["CSo19UIGestureRecognizer", "cancelsTouchesInView"]
+- !private ["CSo19UIGestureRecognizer", "init"]
+- !private ["CSo19UIGestureRecognizer", "state"]
+- !private ["OSC24UIGestureRecognizerState", "Ended"]
+- !private ["OSC24UIGestureRecognizerState", "RawValue"]
+- !private ["OSC24UIGestureRecognizerState", "deinit"]
+- !private ["PSo10UIKeyInput", "alpha"]
+- !private ["PSo10UIKeyInput", "attributedPlaceholder"]
+- !private ["PSo10UIKeyInput", "backgroundColor"]
+- !private ["PSo10UIKeyInput", "delegate"]
+- !private ["PSo10UIKeyInput", "layer"]
+- !private ["PSo10UIKeyInput", "placeholder"]
+- !private ["PSo10UIKeyInput", "resignFirstResponder"]
+- !private ["PSo10UIKeyInput", "text"]
+- !private ["PSo10UIKeyInput", "textColor"]
+- ["CSo11UIResponder", "Bool"]
+- !private ["CSo11UIResponder", "NSAttributedString"]
+- !private ["CSo11UIResponder", "NSForegroundColorAttributeName"]
+- !private ["CSo11UIResponder", "Theme"]
+- ["CSo11UIResponder", "UIButton"]
+- !private ["CSo11UIResponder", "UIColor"]
+- ["CSo11UIResponder", "UITapGestureRecognizer"]
+- ["CSo11UIResponder", "UITextField"]
+- ["CSo11UIResponder", "UIView"]
+- !private ["CSo11UIResponder", "addGestureRecognizer"]
+- !private ["CSo11UIResponder", "allTextFieldsAreFilled"]
+- !private ["CSo11UIResponder", "alpha"]
+- !private ["CSo11UIResponder", "attributedPlaceholder"]
+- !private ["CSo11UIResponder", "backgroundColor"]
+- !private ["CSo11UIResponder", "delegate"]
+- ["CSo11UIResponder", "emailTextField"]
+- !private ["CSo11UIResponder", "endEditing"]
+- ["CSo11UIResponder", "handleSingleTap"]
+- ["CSo11UIResponder", "init"]
+- !private ["CSo11UIResponder", "isValidEmail"]
+- !private ["CSo11UIResponder", "layer"]
+- ["CSo11UIResponder", "logInButton"]
+- ["CSo11UIResponder", "logInButtonContainer"]
+- ["CSo11UIResponder", "logInButtonWasTapped"]
+- ["CSo11UIResponder", "passwordTextField"]
+- !private ["CSo11UIResponder", "placeholder"]
+- !private ["CSo11UIResponder", "resignFirstResponder"]
+- ["CSo11UIResponder", "setUpUI"]
+- !private ["CSo11UIResponder", "text"]
+- !private ["CSo11UIResponder", "textColor"]
+- ["CSo11UIResponder", "textField"]
+- ["CSo11UIResponder", "textFieldDidBeginEditing"]
+- ["CSo11UIResponder", "textFieldDidEndEditing"]
+- ["CSo11UIResponder", "textFieldShouldBeginEditing"]
+- ["CSo11UIResponder", "textFieldShouldClear"]
+- ["CSo11UIResponder", "textFieldShouldEndEditing"]
+- ["CSo11UIResponder", "textFieldShouldReturn"]
+- ["CSo11UIResponder", "textFields"]
+- !private ["CSo11UIResponder", "view"]
+- ["CSo11UIResponder", "viewDidLoad"]
+- !private ["PSo16UIStateRestoring", "NSAttributedString"]
+- !private ["PSo16UIStateRestoring", "NSForegroundColorAttributeName"]
+- !private ["PSo16UIStateRestoring", "Theme"]
+- !private ["PSo16UIStateRestoring", "UIColor"]
+- !private ["PSo16UIStateRestoring", "UITapGestureRecognizer"]
+- !private ["PSo16UIStateRestoring", "allTextFieldsAreFilled"]
+- ["PSo16UIStateRestoring", "emailTextField"]
+- ["PSo16UIStateRestoring", "handleSingleTap"]
+- ["PSo16UIStateRestoring", "init"]
+- !private ["PSo16UIStateRestoring", "isValidEmail"]
+- ["PSo16UIStateRestoring", "logInButton"]
+- ["PSo16UIStateRestoring", "logInButtonContainer"]
+- ["PSo16UIStateRestoring", "logInButtonWasTapped"]
+- ["PSo16UIStateRestoring", "passwordTextField"]
+- ["PSo16UIStateRestoring", "setUpUI"]
+- ["PSo16UIStateRestoring", "textField"]
+- ["PSo16UIStateRestoring", "textFieldDidBeginEditing"]
+- ["PSo16UIStateRestoring", "textFieldDidEndEditing"]
+- ["PSo16UIStateRestoring", "textFieldShouldBeginEditing"]
+- ["PSo16UIStateRestoring", "textFieldShouldClear"]
+- ["PSo16UIStateRestoring", "textFieldShouldEndEditing"]
+- ["PSo16UIStateRestoring", "textFieldShouldReturn"]
+- ["PSo16UIStateRestoring", "textFields"]
+- !private ["PSo16UIStateRestoring", "view"]
+- ["PSo16UIStateRestoring", "viewDidLoad"]
+- ["PSo16UIStateRestoring", ""]
+- !private ["CSo22UITapGestureRecognizer", "cancelsTouchesInView"]
+- !private ["CSo22UITapGestureRecognizer", "init"]
+- !private ["CSo22UITapGestureRecognizer", "state"]
+- !private ["CSo11UITextField", "alpha"]
+- !private ["CSo11UITextField", "attributedPlaceholder"]
+- !private ["CSo11UITextField", "backgroundColor"]
+- !private ["CSo11UITextField", "delegate"]
+- !private ["CSo11UITextField", "layer"]
+- !private ["CSo11UITextField", "placeholder"]
+- !private ["CSo11UITextField", "resignFirstResponder"]
+- !private ["CSo11UITextField", "text"]
+- !private ["CSo11UITextField", "textColor"]
+- !private ["PSo19UITextFieldDelegate", "NSAttributedString"]
+- !private ["PSo19UITextFieldDelegate", "NSForegroundColorAttributeName"]
+- !private ["PSo19UITextFieldDelegate", "Theme"]
+- !private ["PSo19UITextFieldDelegate", "UIColor"]
+- !private ["PSo19UITextFieldDelegate", "UITapGestureRecognizer"]
+- !private ["PSo19UITextFieldDelegate", "allTextFieldsAreFilled"]
+- !private ["PSo19UITextFieldDelegate", "emailTextField"]
+- !private ["PSo19UITextFieldDelegate", "handleSingleTap"]
+- !private ["PSo19UITextFieldDelegate", "isValidEmail"]
+- !private ["PSo19UITextFieldDelegate", "logInButton"]
+- !private ["PSo19UITextFieldDelegate", "logInButtonContainer"]
+- !private ["PSo19UITextFieldDelegate", "passwordTextField"]
+- !private ["PSo19UITextFieldDelegate", "setUpUI"]
+- ["PSo19UITextFieldDelegate", "textField"]
+- ["PSo19UITextFieldDelegate", "textFieldDidBeginEditing"]
+- ["PSo19UITextFieldDelegate", "textFieldDidEndEditing"]
+- ["PSo19UITextFieldDelegate", "textFieldShouldBeginEditing"]
+- ["PSo19UITextFieldDelegate", "textFieldShouldClear"]
+- ["PSo19UITextFieldDelegate", "textFieldShouldEndEditing"]
+- ["PSo19UITextFieldDelegate", "textFieldShouldReturn"]
+- !private ["PSo19UITextFieldDelegate", "textFields"]
+- !private ["PSo19UITextFieldDelegate", "view"]
+- ["PSo19UITextFieldDelegate", ""]
+- !private ["PSo11UITextInput", "alpha"]
+- !private ["PSo11UITextInput", "attributedPlaceholder"]
+- !private ["PSo11UITextInput", "backgroundColor"]
+- !private ["PSo11UITextInput", "delegate"]
+- !private ["PSo11UITextInput", "layer"]
+- !private ["PSo11UITextInput", "placeholder"]
+- !private ["PSo11UITextInput", "resignFirstResponder"]
+- !private ["PSo11UITextInput", "text"]
+- !private ["PSo11UITextInput", "textColor"]
+- !private ["PSo17UITextInputTraits", "alpha"]
+- !private ["PSo17UITextInputTraits", "attributedPlaceholder"]
+- !private ["PSo17UITextInputTraits", "backgroundColor"]
+- !private ["PSo17UITextInputTraits", "delegate"]
+- !private ["PSo17UITextInputTraits", "layer"]
+- !private ["PSo17UITextInputTraits", "placeholder"]
+- !private ["PSo17UITextInputTraits", "resignFirstResponder"]
+- !private ["PSo17UITextInputTraits", "text"]
+- !private ["PSo17UITextInputTraits", "textColor"]
+- !private ["PSo18UITraitEnvironment", "NSAttributedString"]
+- !private ["PSo18UITraitEnvironment", "NSForegroundColorAttributeName"]
+- !private ["PSo18UITraitEnvironment", "Theme"]
+- !private ["PSo18UITraitEnvironment", "UIColor"]
+- !private ["PSo18UITraitEnvironment", "UITapGestureRecognizer"]
+- !private ["PSo18UITraitEnvironment", "addGestureRecognizer"]
+- !private ["PSo18UITraitEnvironment", "allTextFieldsAreFilled"]
+- !private ["PSo18UITraitEnvironment", "alpha"]
+- !private ["PSo18UITraitEnvironment", "attributedPlaceholder"]
+- !private ["PSo18UITraitEnvironment", "backgroundColor"]
+- !private ["PSo18UITraitEnvironment", "delegate"]
+- ["PSo18UITraitEnvironment", "emailTextField"]
+- !private ["PSo18UITraitEnvironment", "endEditing"]
+- ["PSo18UITraitEnvironment", "handleSingleTap"]
+- ["PSo18UITraitEnvironment", "init"]
+- !private ["PSo18UITraitEnvironment", "isValidEmail"]
+- !private ["PSo18UITraitEnvironment", "layer"]
+- ["PSo18UITraitEnvironment", "logInButton"]
+- ["PSo18UITraitEnvironment", "logInButtonContainer"]
+- ["PSo18UITraitEnvironment", "logInButtonWasTapped"]
+- ["PSo18UITraitEnvironment", "passwordTextField"]
+- !private ["PSo18UITraitEnvironment", "placeholder"]
+- !private ["PSo18UITraitEnvironment", "resignFirstResponder"]
+- ["PSo18UITraitEnvironment", "setUpUI"]
+- !private ["PSo18UITraitEnvironment", "text"]
+- !private ["PSo18UITraitEnvironment", "textColor"]
+- ["PSo18UITraitEnvironment", "textField"]
+- ["PSo18UITraitEnvironment", "textFieldDidBeginEditing"]
+- ["PSo18UITraitEnvironment", "textFieldDidEndEditing"]
+- ["PSo18UITraitEnvironment", "textFieldShouldBeginEditing"]
+- ["PSo18UITraitEnvironment", "textFieldShouldClear"]
+- ["PSo18UITraitEnvironment", "textFieldShouldEndEditing"]
+- ["PSo18UITraitEnvironment", "textFieldShouldReturn"]
+- ["PSo18UITraitEnvironment", "textFields"]
+- !private ["PSo18UITraitEnvironment", "view"]
+- ["PSo18UITraitEnvironment", "viewDidLoad"]
+- ["PSo18UITraitEnvironment", ""]
+- !private ["CSo6UIView", "addGestureRecognizer"]
+- !private ["CSo6UIView", "alpha"]
+- !private ["CSo6UIView", "attributedPlaceholder"]
+- !private ["CSo6UIView", "backgroundColor"]
+- !private ["CSo6UIView", "delegate"]
+- !private ["CSo6UIView", "endEditing"]
+- !private ["CSo6UIView", "layer"]
+- !private ["CSo6UIView", "placeholder"]
+- !private ["CSo6UIView", "resignFirstResponder"]
+- !private ["CSo6UIView", "text"]
+- !private ["CSo6UIView", "textColor"]
+- ["CSo16UIViewController", "Bool"]
+- !private ["CSo16UIViewController", "NSAttributedString"]
+- !private ["CSo16UIViewController", "NSForegroundColorAttributeName"]
+- !private ["CSo16UIViewController", "Theme"]
+- ["CSo16UIViewController", "UIButton"]
+- !private ["CSo16UIViewController", "UIColor"]
+- ["CSo16UIViewController", "UITapGestureRecognizer"]
+- ["CSo16UIViewController", "UITextField"]
+- ["CSo16UIViewController", "UIView"]
+- !private ["CSo16UIViewController", "allTextFieldsAreFilled"]
+- ["CSo16UIViewController", "emailTextField"]
+- ["CSo16UIViewController", "handleSingleTap"]
+- ["CSo16UIViewController", "init"]
+- !private ["CSo16UIViewController", "isValidEmail"]
+- ["CSo16UIViewController", "logInButton"]
+- ["CSo16UIViewController", "logInButtonContainer"]
+- ["CSo16UIViewController", "logInButtonWasTapped"]
+- ["CSo16UIViewController", "passwordTextField"]
+- ["CSo16UIViewController", "setUpUI"]
+- ["CSo16UIViewController", "textField"]
+- ["CSo16UIViewController", "textFieldDidBeginEditing"]
+- ["CSo16UIViewController", "textFieldDidEndEditing"]
+- ["CSo16UIViewController", "textFieldShouldBeginEditing"]
+- ["CSo16UIViewController", "textFieldShouldClear"]
+- ["CSo16UIViewController", "textFieldShouldEndEditing"]
+- ["CSo16UIViewController", "textFieldShouldReturn"]
+- ["CSo16UIViewController", "textFields"]
+- !private ["CSo16UIViewController", "view"]
+- ["CSo16UIViewController", "viewDidLoad"]
+- ["CSo16UIViewController", ""]
+- !private ["Ps10_ArrayType", "Element"]
+- !private ["Ps10_ArrayType", "Generator"]
+- !private ["Ps10_ArrayType", "Index"]
+- !private ["Ps10_ArrayType", "SubSequence"]
+- !private ["Ps10_ArrayType", "_Element"]
+- !private ["Ps10_ArrayType", "appendContentsOf"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "Distance"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["Ps24_ColorLiteralConvertible", "clearColor"]
+- !private ["Ps24_ColorLiteralConvertible", "init"]
+- !private ["Ps24_ColorLiteralConvertible", "whiteColor"]
+- !private ["Ps24_DestructorSafeContainer", "Element"]
+- !private ["Ps24_DestructorSafeContainer", "Generator"]
+- !private ["Ps24_DestructorSafeContainer", "Index"]
+- !private ["Ps24_DestructorSafeContainer", "SubSequence"]
+- !private ["Ps24_DestructorSafeContainer", "_Element"]
+- !private ["Ps24_DestructorSafeContainer", "appendContentsOf"]
+- !private ["Ps14_Incrementable", "Distance"]
+- !private ["Ps14_Incrementable", "IntegerLiteralType"]
+- !private ["Ps22_IntegerArithmeticType", "Distance"]
+- !private ["Ps22_IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["Ps12_IntegerType", "Distance"]
+- !private ["Ps12_IntegerType", "IntegerLiteralType"]
+- !private ["Ps21_ObjectiveCBridgeable", "Distance"]
+- !private ["Ps21_ObjectiveCBridgeable", "Element"]
+- !private ["Ps21_ObjectiveCBridgeable", "Generator"]
+- !private ["Ps21_ObjectiveCBridgeable", "Index"]
+- !private ["Ps21_ObjectiveCBridgeable", "IntegerLiteralType"]
+- !private ["Ps21_ObjectiveCBridgeable", "Key"]
+- !private ["Ps21_ObjectiveCBridgeable", "SubSequence"]
+- !private ["Ps21_ObjectiveCBridgeable", "Value"]
+- !private ["Ps21_ObjectiveCBridgeable", "_Element"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "appendContentsOf"]
+- !private ["Vs26_OptionalNilComparisonType", "deinit"]
+- !private ["Ps22_RandomAccessAmbiguity", "Distance"]
+- !private ["Ps22_RandomAccessAmbiguity", "IntegerLiteralType"]
+- !private ["Ps12_Reflectable", "Distance"]
+- !private ["Ps12_Reflectable", "Element"]
+- !private ["Ps12_Reflectable", "Generator"]
+- !private ["Ps12_Reflectable", "Index"]
+- !private ["Ps12_Reflectable", "IntegerLiteralType"]
+- !private ["Ps12_Reflectable", "Key"]
+- !private ["Ps12_Reflectable", "SubSequence"]
+- !private ["Ps12_Reflectable", "Value"]
+- !private ["Ps12_Reflectable", "_Element"]
+- !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
+- !private ["Ps12_Reflectable", "addGestureRecognizer"]
+- !private ["Ps12_Reflectable", "alpha"]
+- !private ["Ps12_Reflectable", "appendContentsOf"]
+- !private ["Ps12_Reflectable", "attributedPlaceholder"]
+- !private ["Ps12_Reflectable", "backgroundColor"]
+- !private ["Ps12_Reflectable", "delegate"]
+- !private ["Ps12_Reflectable", "endEditing"]
+- !private ["Ps12_Reflectable", "layer"]
+- !private ["Ps12_Reflectable", "placeholder"]
+- !private ["Ps12_Reflectable", "resignFirstResponder"]
+- !private ["Ps12_Reflectable", "text"]
+- !private ["Ps12_Reflectable", "textColor"]
+- !private ["Ps18_SignedIntegerType", "Distance"]
+- !private ["Ps18_SignedIntegerType", "IntegerLiteralType"]
+depends-nominal:
+- "Ps9AnyObject"
+- !private "Sa"
+- !private "Ps23ArrayLiteralConvertible"
+- !private "Vs10ArraySlice"
+- !private "Ps22BidirectionalIndexType"
+- !private "Ps21BitwiseOperationsType"
+- !private "Sb"
+- !private "Ps25BooleanLiteralConvertible"
+- !private "Ps11BooleanType"
+- !private "CSo7CALayer"
+- !private "PSo13CAMediaTiming"
+- !private "V12CoreGraphics7CGFloat"
+- "Ps11CVarArgType"
+- !private "Ps14CollectionType"
+- !private "OV6CoChat5Theme6Colors"
+- !private "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- !private "Vs10Dictionary"
+- !private "Ps28DictionaryLiteralConvertible"
+- "Ps9Equatable"
+- !private "Ps16ForwardIndexType"
+- !private "Ps13GeneratorType"
+- "Ps8Hashable"
+- !private "Ps9Indexable"
+- !private "Vs17IndexingGenerator"
+- !private "Si"
+- !private "Ps21IntegerArithmeticType"
+- !private "Ps25IntegerLiteralConvertible"
+- !private "Ps11IntegerType"
+- "C6CoChat12LoginEmailVC"
+- !private "Ps14MirrorPathType"
+- !private "Ps21MutableCollectionType"
+- !private "Ps16MutableIndexable"
+- !private "Ps16MutableSliceable"
+- !private "CSo18NSAttributedString"
+- "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- "PSo26NSExtensionRequestHandling"
+- !private "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "Sq"
+- !private "Ps21RandomAccessIndexType"
+- !private "Ps30RangeReplaceableCollectionType"
+- !private "Ps16RawRepresentable"
+- !private "V10ObjectiveC8Selector"
+- !private "Ps12SequenceType"
+- !private "Ps17SignedIntegerType"
+- !private "Ps16SignedNumberType"
+- !private "Ps10Strideable"
+- !private "V6CoChat5Theme"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- !private "CSo8UIButton"
+- !private "CSo7UIColor"
+- "PSo18UIContentContainer"
+- !private "CSo9UIControl"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- !private "CSo19UIGestureRecognizer"
+- !private "OSC24UIGestureRecognizerState"
+- !private "PSo10UIKeyInput"
+- "CSo11UIResponder"
+- "PSo16UIStateRestoring"
+- !private "CSo22UITapGestureRecognizer"
+- !private "CSo11UITextField"
+- "PSo19UITextFieldDelegate"
+- !private "PSo11UITextInput"
+- !private "PSo17UITextInputTraits"
+- "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
+- "CSo16UIViewController"
+- !private "Ps10_ArrayType"
+- !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps33_BuiltinIntegerLiteralConvertible"
+- !private "Ps24_ColorLiteralConvertible"
+- !private "Ps24_DestructorSafeContainer"
+- !private "Ps14_Incrementable"
+- !private "Ps22_IntegerArithmeticType"
+- !private "Ps12_IntegerType"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Vs26_OptionalNilComparisonType"
+- !private "Ps22_RandomAccessAmbiguity"
+- !private "Ps12_Reflectable"
+- !private "Ps18_SignedIntegerType"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FirebaseServerValue.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FTransactionResult.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FMutableData.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FirebaseApp.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FQuery.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FEventType.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FDataSnapshot.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FConfig.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthType.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/Firebase.framework/Headers/FAuthData.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/Firebase.framework/Headers/Firebase-umbrella.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/Firebase.framework/Modules/module.modulemap"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/Bolts.framework/Headers/BoltsVersion.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/Bolts.framework/Headers/Bolts.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/Bolts.framework/Headers/BFTaskCompletionSource.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/Bolts.framework/Headers/BFTask.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/Bolts.framework/Headers/BFExecutor.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/Bolts.framework/Headers/BFCancellationTokenSource.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/Bolts.framework/Headers/BFCancellationTokenRegistration.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/Bolts.framework/Headers/BFCancellationToken.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/Bolts.framework/Headers/BFWebViewAppLinkResolver.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/Bolts.framework/Headers/BFURL_Internal.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/Bolts.framework/Headers/BFURL.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/Bolts.framework/Headers/BFMeasurementEvent_Internal.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/Bolts.framework/Headers/BFMeasurementEvent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/Bolts.framework/Headers/BFAppLinkTarget.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/Bolts.framework/Headers/BFAppLinkReturnToRefererView_Internal.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/Bolts.framework/Headers/BFAppLinkReturnToRefererView.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/Bolts.framework/Headers/BFAppLinkReturnToRefererController.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/Bolts.framework/Headers/BFAppLinkResolving.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/Bolts.framework/Headers/BFAppLinkNavigation.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/Bolts.framework/Headers/BFAppLink_Internal.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/Bolts.framework/Headers/BFAppLink.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/Bolts.framework/Headers/Bolts-umbrella.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/Bolts.framework/Modules/module.modulemap"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKCoreKit.framework/Headers/FBSDKProfilePictureView.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKCoreKit.framework/Headers/FBSDKProfile.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKCoreKit.framework/Headers/FBSDKMutableCopying.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKCoreKit.framework/Headers/FBSDKGraphErrorRecoveryProcessor.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKCoreKit.framework/Headers/FBSDKUtility.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKCoreKit.framework/Headers/FBSDKTestUsersManager.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKCoreKit.framework/Headers/FBSDKSettings.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKCoreKit.framework/Headers/FBSDKGraphRequestDataAttachment.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKCoreKit.framework/Headers/FBSDKGraphRequest.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKCoreKit.framework/Headers/FBSDKCoreKit.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKCoreKit.framework/Headers/FBSDKConstants.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKCoreKit.framework/Headers/FBSDKButton.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKCoreKit.framework/Headers/FBSDKAppLinkUtility.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKCoreKit.framework/Headers/FBSDKAppLinkResolver.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKCoreKit.framework/Headers/FBSDKApplicationDelegate.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKCoreKit.framework/Headers/FBSDKAppEvents.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKCoreKit.framework/Headers/FBSDKMacros.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKCoreKit.framework/Headers/FBSDKGraphRequestConnection.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKCoreKit.framework/Headers/FBSDKCopying.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKCoreKit.framework/Headers/FBSDKAccessToken.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKCoreKit.framework/Headers/FBSDKCoreKit-umbrella.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKCoreKit.framework/Modules/module.modulemap"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKLoginKit.framework/Headers/FBSDKLoginTooltipView.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKLoginKit.framework/Headers/FBSDKLoginManagerLoginResult.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKLoginKit.framework/Headers/FBSDKLoginKit.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKLoginKit.framework/Headers/FBSDKLoginConstants.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKLoginKit.framework/Headers/FBSDKTooltipView.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKLoginKit.framework/Headers/FBSDKLoginManager.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKLoginKit.framework/Headers/FBSDKLoginButton.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKLoginKit.framework/Headers/FBSDKLoginKit-umbrella.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKLoginKit.framework/Modules/module.modulemap"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKShareKit.framework/Headers/FBSDKShareVideoContent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKShareKit.framework/Headers/FBSDKShareVideo.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKShareKit.framework/Headers/FBSDKSharePhotoContent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKShareKit.framework/Headers/FBSDKSharePhoto.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKShareKit.framework/Headers/FBSDKShareOpenGraphContent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKShareKit.framework/Headers/FBSDKShareOpenGraphAction.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKShareKit.framework/Headers/FBSDKShareLinkContent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKShareKit.framework/Headers/FBSDKShareKit.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKShareKit.framework/Headers/FBSDKShareDialogMode.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKShareKit.framework/Headers/FBSDKShareDialog.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKShareKit.framework/Headers/FBSDKShareConstants.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKShareKit.framework/Headers/FBSDKShareButton.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKShareKit.framework/Headers/FBSDKShareOpenGraphValueContainer.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKShareKit.framework/Headers/FBSDKShareOpenGraphObject.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKShareKit.framework/Headers/FBSDKShareAPI.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKShareKit.framework/Headers/FBSDKSharingButton.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKShareKit.framework/Headers/FBSDKSendButton.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKShareKit.framework/Headers/FBSDKSharingContent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKShareKit.framework/Headers/FBSDKSharing.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKShareKit.framework/Headers/FBSDKMessageDialog.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKShareKit.framework/Headers/FBSDKLikeControl.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKShareKit.framework/Headers/FBSDKLiking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKShareKit.framework/Headers/FBSDKLikeObjectType.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKShareKit.framework/Headers/FBSDKLikeButton.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKShareKit.framework/Headers/FBSDKGameRequestDialog.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKShareKit.framework/Headers/FBSDKGameRequestContent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKShareKit.framework/Headers/FBSDKAppInviteDialog.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKShareKit.framework/Headers/FBSDKAppInviteContent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKShareKit.framework/Headers/FBSDKAppGroupJoinDialog.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKShareKit.framework/Headers/FBSDKAppGroupContent.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKShareKit.framework/Headers/FBSDKAppGroupAddDialog.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKShareKit.framework/Headers/FBSDKShareKit-umbrella.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/FBSDKShareKit.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreAudio.swiftmodule"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/UIProgressView+AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/UIWebView+AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/UIRefreshControl+AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/UIKit+AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/UIImageView+AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/UIImage+AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/UIButton+AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/UIActivityIndicatorView+AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/AFNetworkActivityIndicatorManager.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/AFImageDownloader.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/AFAutoPurgingImageCache.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/AFHTTPSessionManager.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/AFURLSessionManager.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/AFNetworkReachabilityManager.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/AFSecurityPolicy.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/AFURLResponseSerialization.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/AFURLRequestSerialization.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/AFNetworking.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/AFNetworking.framework/Headers/AFNetworking-umbrella.h"
+- "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphoneos/AFNetworking.framework/Modules/module.modulemap"
+interface-hash: "5504a39c0018df63d16c7c376739a0b9"

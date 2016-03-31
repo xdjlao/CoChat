@@ -9,211 +9,232 @@ provides-member:
 - ["P6CoChat24MenuChannelsCellDelegate", ""]
 - ["C6CoChat16MenuChannelsCell", ""]
 provides-dynamic-lookup:
-- "awakeFromNib"
-- "favoriteButton"
 - "setFavoriteButton"
-- "favoriteButtonWasTapped"
+- "buttonContainer"
 - "channelsContainer"
 - "setUpUI"
-- "buttonContainer"
 - "isFavorite"
+- "favoriteButtonWasTapped"
 - "channelsLabel"
+- "awakeFromNib"
+- "favoriteButton"
 depends-top-level:
-- !private "UIImage"
-- !private "!"
-- "UILabel"
-- !private "UIColor"
 - "BooleanLiteralType"
-- "UIButton"
-- "Channel"
-- "UIView"
-- "UITableViewCell"
-- "MenuChannelsCellDelegate"
-- !private "=="
-- !private "FirebaseManager"
+- !private "UIColor"
 - !private "Theme"
-- "MenuChannelsCell"
+- !private "FirebaseManager"
+- "UILabel"
 - "Bool"
+- !private "UIImage"
+- "UIView"
+- "Channel"
+- "UIButton"
+- "MenuChannelsCell"
+- !private "!"
+- !private "=="
+- "MenuChannelsCellDelegate"
+- "UITableViewCell"
 depends-member:
-- !private ["PSs9AnyObject", "FirebaseManager"]
-- !private ["PSs9AnyObject", "Theme"]
-- !private ["PSs9AnyObject", "UIColor"]
-- !private ["PSs9AnyObject", "UIImage"]
-- ["PSs9AnyObject", "awakeFromNib"]
-- !private ["PSs9AnyObject", "backgroundColor"]
-- ["PSs9AnyObject", "buttonContainer"]
-- ["PSs9AnyObject", "channel"]
-- ["PSs9AnyObject", "channelsContainer"]
-- ["PSs9AnyObject", "channelsLabel"]
-- ["PSs9AnyObject", "delegate"]
-- ["PSs9AnyObject", "favoriteButton"]
-- ["PSs9AnyObject", "favoriteButtonWasTapped"]
-- !private ["PSs9AnyObject", "favoriteChannels"]
-- ["PSs9AnyObject", "init"]
-- ["PSs9AnyObject", "isFavorite"]
-- !private ["PSs9AnyObject", "manager"]
-- ["PSs9AnyObject", "setFavoriteButton"]
-- !private ["PSs9AnyObject", "setImage"]
-- ["PSs9AnyObject", "setUpUI"]
-- !private ["PSs9AnyObject", "textColor"]
-- !private ["PSs9AnyObject", "uid"]
-- !private ["PSs9AnyObject", "user"]
-- !private ["PSs9AnyObject", "whiteColor"]
-- ["PSs9AnyObject", ""]
+- !private ["Ps9AnyObject", "FirebaseManager"]
+- !private ["Ps9AnyObject", "Theme"]
+- !private ["Ps9AnyObject", "UIColor"]
+- !private ["Ps9AnyObject", "UIImage"]
+- ["Ps9AnyObject", "awakeFromNib"]
+- !private ["Ps9AnyObject", "backgroundColor"]
+- ["Ps9AnyObject", "buttonContainer"]
+- ["Ps9AnyObject", "channel"]
+- ["Ps9AnyObject", "channelsContainer"]
+- ["Ps9AnyObject", "channelsLabel"]
+- ["Ps9AnyObject", "delegate"]
+- ["Ps9AnyObject", "favoriteButton"]
+- ["Ps9AnyObject", "favoriteButtonWasTapped"]
+- !private ["Ps9AnyObject", "favoriteChannels"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "isFavorite"]
+- !private ["Ps9AnyObject", "manager"]
+- ["Ps9AnyObject", "setFavoriteButton"]
+- !private ["Ps9AnyObject", "setImage"]
+- ["Ps9AnyObject", "setUpUI"]
+- !private ["Ps9AnyObject", "textColor"]
+- !private ["Ps9AnyObject", "uid"]
+- !private ["Ps9AnyObject", "user"]
+- !private ["Ps9AnyObject", "whiteColor"]
+- ["Ps9AnyObject", ""]
 - !private ["Sa", "Generator"]
 - !private ["Sa", "Index"]
 - !private ["Sa", "_Element"]
 - !private ["Sa", "contains"]
-- !private ["PSs23ArrayLiteralConvertible", "Generator"]
-- !private ["PSs23ArrayLiteralConvertible", "Index"]
-- !private ["PSs23ArrayLiteralConvertible", "Normal"]
-- !private ["PSs23ArrayLiteralConvertible", "_Element"]
-- !private ["PSs23ArrayLiteralConvertible", "contains"]
-- !private ["PSs22BidirectionalIndexType", "Distance"]
-- !private ["PSs22BidirectionalIndexType", "IntegerLiteralType"]
-- !private ["PSs21BitwiseOperationsType", "Distance"]
-- !private ["PSs21BitwiseOperationsType", "IntegerLiteralType"]
+- !private ["Ps23ArrayLiteralConvertible", "Generator"]
+- !private ["Ps23ArrayLiteralConvertible", "Index"]
+- !private ["Ps23ArrayLiteralConvertible", "Normal"]
+- !private ["Ps23ArrayLiteralConvertible", "_Element"]
+- !private ["Ps23ArrayLiteralConvertible", "contains"]
+- !private ["Ps22BidirectionalIndexType", "Distance"]
+- !private ["Ps22BidirectionalIndexType", "IntegerLiteralType"]
+- !private ["Ps21BitwiseOperationsType", "Distance"]
+- !private ["Ps21BitwiseOperationsType", "IntegerLiteralType"]
 - !private ["Sb", "_getBuiltinLogicValue"]
-- !private ["PSs25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
-- !private ["PSs11BooleanType", "_getBuiltinLogicValue"]
-- !private ["PSs11CVarArgType", "Distance"]
-- !private ["PSs11CVarArgType", "FirebaseManager"]
-- !private ["PSs11CVarArgType", "IntegerLiteralType"]
-- !private ["PSs11CVarArgType", "Theme"]
-- !private ["PSs11CVarArgType", "UIColor"]
-- !private ["PSs11CVarArgType", "UIImage"]
-- ["PSs11CVarArgType", "awakeFromNib"]
-- !private ["PSs11CVarArgType", "backgroundColor"]
-- ["PSs11CVarArgType", "buttonContainer"]
-- ["PSs11CVarArgType", "channel"]
-- ["PSs11CVarArgType", "channelsContainer"]
-- ["PSs11CVarArgType", "channelsLabel"]
-- ["PSs11CVarArgType", "delegate"]
-- ["PSs11CVarArgType", "favoriteButton"]
-- ["PSs11CVarArgType", "favoriteButtonWasTapped"]
-- ["PSs11CVarArgType", "init"]
-- ["PSs11CVarArgType", "isFavorite"]
-- ["PSs11CVarArgType", "setFavoriteButton"]
-- !private ["PSs11CVarArgType", "setImage"]
-- ["PSs11CVarArgType", "setUpUI"]
-- !private ["PSs11CVarArgType", "textColor"]
-- !private ["PSs11CVarArgType", "whiteColor"]
-- ["PSs11CVarArgType", ""]
+- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- !private ["Ps11CVarArgType", "Distance"]
+- !private ["Ps11CVarArgType", "FirebaseManager"]
+- !private ["Ps11CVarArgType", "IntegerLiteralType"]
+- !private ["Ps11CVarArgType", "Theme"]
+- !private ["Ps11CVarArgType", "UIColor"]
+- !private ["Ps11CVarArgType", "UIImage"]
+- ["Ps11CVarArgType", "awakeFromNib"]
+- !private ["Ps11CVarArgType", "backgroundColor"]
+- ["Ps11CVarArgType", "buttonContainer"]
+- ["Ps11CVarArgType", "channel"]
+- ["Ps11CVarArgType", "channelsContainer"]
+- ["Ps11CVarArgType", "channelsLabel"]
+- ["Ps11CVarArgType", "delegate"]
+- ["Ps11CVarArgType", "favoriteButton"]
+- ["Ps11CVarArgType", "favoriteButtonWasTapped"]
+- ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "isFavorite"]
+- ["Ps11CVarArgType", "setFavoriteButton"]
+- !private ["Ps11CVarArgType", "setImage"]
+- ["Ps11CVarArgType", "setUpUI"]
+- !private ["Ps11CVarArgType", "textColor"]
+- !private ["Ps11CVarArgType", "whiteColor"]
+- ["Ps11CVarArgType", ""]
 - !private ["C6CoChat7Channel", "deinit"]
 - !private ["C6CoChat7Channel", "uid"]
-- !private ["PSs14CollectionType", "Generator"]
-- !private ["PSs14CollectionType", "Index"]
-- !private ["PSs14CollectionType", "_Element"]
-- !private ["PSs14CollectionType", "contains"]
+- !private ["Ps14CollectionType", "Generator"]
+- !private ["Ps14CollectionType", "Index"]
+- !private ["Ps14CollectionType", "_Element"]
+- !private ["Ps14CollectionType", "contains"]
 - !private ["OV6CoChat5Theme6Colors", "ForegroundColor"]
 - !private ["OV6CoChat5Theme6Colors", "color"]
-- !private ["PSs10Comparable", "Distance"]
-- !private ["PSs10Comparable", "IntegerLiteralType"]
-- !private ["PSs28CustomDebugStringConvertible", "Generator"]
-- !private ["PSs28CustomDebugStringConvertible", "Index"]
-- !private ["PSs28CustomDebugStringConvertible", "_Element"]
-- !private ["PSs28CustomDebugStringConvertible", "contains"]
-- !private ["PSs23CustomStringConvertible", "Distance"]
-- !private ["PSs23CustomStringConvertible", "FirebaseManager"]
-- !private ["PSs23CustomStringConvertible", "Generator"]
-- !private ["PSs23CustomStringConvertible", "Index"]
-- !private ["PSs23CustomStringConvertible", "IntegerLiteralType"]
-- !private ["PSs23CustomStringConvertible", "Theme"]
-- !private ["PSs23CustomStringConvertible", "UIColor"]
-- !private ["PSs23CustomStringConvertible", "UIImage"]
-- !private ["PSs23CustomStringConvertible", "_Element"]
-- !private ["PSs23CustomStringConvertible", "_getBuiltinLogicValue"]
-- ["PSs23CustomStringConvertible", "awakeFromNib"]
-- !private ["PSs23CustomStringConvertible", "backgroundColor"]
-- ["PSs23CustomStringConvertible", "buttonContainer"]
-- ["PSs23CustomStringConvertible", "channel"]
-- ["PSs23CustomStringConvertible", "channelsContainer"]
-- ["PSs23CustomStringConvertible", "channelsLabel"]
-- !private ["PSs23CustomStringConvertible", "contains"]
-- ["PSs23CustomStringConvertible", "delegate"]
-- ["PSs23CustomStringConvertible", "favoriteButton"]
-- ["PSs23CustomStringConvertible", "favoriteButtonWasTapped"]
-- ["PSs23CustomStringConvertible", "init"]
-- ["PSs23CustomStringConvertible", "isFavorite"]
-- ["PSs23CustomStringConvertible", "setFavoriteButton"]
-- !private ["PSs23CustomStringConvertible", "setImage"]
-- ["PSs23CustomStringConvertible", "setUpUI"]
-- !private ["PSs23CustomStringConvertible", "textColor"]
-- !private ["PSs23CustomStringConvertible", "whiteColor"]
-- ["PSs23CustomStringConvertible", ""]
-- !private ["PSs9Equatable", "Distance"]
-- !private ["PSs9Equatable", "FirebaseManager"]
-- !private ["PSs9Equatable", "ForegroundColor"]
-- !private ["PSs9Equatable", "IntegerLiteralType"]
-- !private ["PSs9Equatable", "Normal"]
-- !private ["PSs9Equatable", "Theme"]
-- !private ["PSs9Equatable", "UIColor"]
-- !private ["PSs9Equatable", "UIImage"]
-- !private ["PSs9Equatable", "_getBuiltinLogicValue"]
-- ["PSs9Equatable", "awakeFromNib"]
-- !private ["PSs9Equatable", "backgroundColor"]
-- ["PSs9Equatable", "buttonContainer"]
-- ["PSs9Equatable", "channel"]
-- ["PSs9Equatable", "channelsContainer"]
-- ["PSs9Equatable", "channelsLabel"]
-- !private ["PSs9Equatable", "color"]
-- ["PSs9Equatable", "delegate"]
-- ["PSs9Equatable", "favoriteButton"]
-- ["PSs9Equatable", "favoriteButtonWasTapped"]
-- ["PSs9Equatable", "init"]
-- ["PSs9Equatable", "isFavorite"]
-- ["PSs9Equatable", "setFavoriteButton"]
-- !private ["PSs9Equatable", "setImage"]
-- ["PSs9Equatable", "setUpUI"]
-- !private ["PSs9Equatable", "textColor"]
-- !private ["PSs9Equatable", "whiteColor"]
-- ["PSs9Equatable", ""]
+- !private ["Ps10Comparable", "Distance"]
+- !private ["Ps10Comparable", "IntegerLiteralType"]
+- !private ["Ps28CustomDebugStringConvertible", "FirebaseManager"]
+- !private ["Ps28CustomDebugStringConvertible", "Generator"]
+- !private ["Ps28CustomDebugStringConvertible", "Index"]
+- !private ["Ps28CustomDebugStringConvertible", "Theme"]
+- !private ["Ps28CustomDebugStringConvertible", "UIColor"]
+- !private ["Ps28CustomDebugStringConvertible", "UIImage"]
+- !private ["Ps28CustomDebugStringConvertible", "_Element"]
+- ["Ps28CustomDebugStringConvertible", "awakeFromNib"]
+- !private ["Ps28CustomDebugStringConvertible", "backgroundColor"]
+- ["Ps28CustomDebugStringConvertible", "buttonContainer"]
+- ["Ps28CustomDebugStringConvertible", "channel"]
+- ["Ps28CustomDebugStringConvertible", "channelsContainer"]
+- ["Ps28CustomDebugStringConvertible", "channelsLabel"]
+- !private ["Ps28CustomDebugStringConvertible", "contains"]
+- ["Ps28CustomDebugStringConvertible", "delegate"]
+- ["Ps28CustomDebugStringConvertible", "favoriteButton"]
+- ["Ps28CustomDebugStringConvertible", "favoriteButtonWasTapped"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "isFavorite"]
+- ["Ps28CustomDebugStringConvertible", "setFavoriteButton"]
+- !private ["Ps28CustomDebugStringConvertible", "setImage"]
+- ["Ps28CustomDebugStringConvertible", "setUpUI"]
+- !private ["Ps28CustomDebugStringConvertible", "textColor"]
+- !private ["Ps28CustomDebugStringConvertible", "whiteColor"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps23CustomStringConvertible", "Distance"]
+- !private ["Ps23CustomStringConvertible", "FirebaseManager"]
+- !private ["Ps23CustomStringConvertible", "Generator"]
+- !private ["Ps23CustomStringConvertible", "Index"]
+- !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
+- !private ["Ps23CustomStringConvertible", "Theme"]
+- !private ["Ps23CustomStringConvertible", "UIColor"]
+- !private ["Ps23CustomStringConvertible", "UIImage"]
+- !private ["Ps23CustomStringConvertible", "_Element"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- ["Ps23CustomStringConvertible", "awakeFromNib"]
+- !private ["Ps23CustomStringConvertible", "backgroundColor"]
+- ["Ps23CustomStringConvertible", "buttonContainer"]
+- ["Ps23CustomStringConvertible", "channel"]
+- ["Ps23CustomStringConvertible", "channelsContainer"]
+- ["Ps23CustomStringConvertible", "channelsLabel"]
+- !private ["Ps23CustomStringConvertible", "contains"]
+- ["Ps23CustomStringConvertible", "delegate"]
+- ["Ps23CustomStringConvertible", "favoriteButton"]
+- ["Ps23CustomStringConvertible", "favoriteButtonWasTapped"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "isFavorite"]
+- ["Ps23CustomStringConvertible", "setFavoriteButton"]
+- !private ["Ps23CustomStringConvertible", "setImage"]
+- ["Ps23CustomStringConvertible", "setUpUI"]
+- !private ["Ps23CustomStringConvertible", "textColor"]
+- !private ["Ps23CustomStringConvertible", "whiteColor"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Ps9Equatable", "Distance"]
+- !private ["Ps9Equatable", "FirebaseManager"]
+- !private ["Ps9Equatable", "ForegroundColor"]
+- !private ["Ps9Equatable", "IntegerLiteralType"]
+- !private ["Ps9Equatable", "Normal"]
+- !private ["Ps9Equatable", "Theme"]
+- !private ["Ps9Equatable", "UIColor"]
+- !private ["Ps9Equatable", "UIImage"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- ["Ps9Equatable", "awakeFromNib"]
+- !private ["Ps9Equatable", "backgroundColor"]
+- ["Ps9Equatable", "buttonContainer"]
+- ["Ps9Equatable", "channel"]
+- ["Ps9Equatable", "channelsContainer"]
+- ["Ps9Equatable", "channelsLabel"]
+- !private ["Ps9Equatable", "color"]
+- ["Ps9Equatable", "delegate"]
+- ["Ps9Equatable", "favoriteButton"]
+- ["Ps9Equatable", "favoriteButtonWasTapped"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "isFavorite"]
+- ["Ps9Equatable", "setFavoriteButton"]
+- !private ["Ps9Equatable", "setImage"]
+- ["Ps9Equatable", "setUpUI"]
+- !private ["Ps9Equatable", "textColor"]
+- !private ["Ps9Equatable", "whiteColor"]
+- ["Ps9Equatable", ""]
 - !private ["C6CoChat15FirebaseManager", "manager"]
 - !private ["C6CoChat15FirebaseManager", "user"]
 - !private ["P6CoChat12FirebaseType", "favoriteChannels"]
 - !private ["P6CoChat12FirebaseType", "uid"]
-- !private ["PSs16ForwardIndexType", "Distance"]
-- !private ["PSs16ForwardIndexType", "IntegerLiteralType"]
-- !private ["PSs13GeneratorType", "Element"]
-- !private ["PSs8Hashable", "Distance"]
-- !private ["PSs8Hashable", "FirebaseManager"]
-- !private ["PSs8Hashable", "ForegroundColor"]
-- !private ["PSs8Hashable", "IntegerLiteralType"]
-- !private ["PSs8Hashable", "Theme"]
-- !private ["PSs8Hashable", "UIColor"]
-- !private ["PSs8Hashable", "UIImage"]
-- !private ["PSs8Hashable", "_getBuiltinLogicValue"]
-- ["PSs8Hashable", "awakeFromNib"]
-- !private ["PSs8Hashable", "backgroundColor"]
-- ["PSs8Hashable", "buttonContainer"]
-- ["PSs8Hashable", "channel"]
-- ["PSs8Hashable", "channelsContainer"]
-- ["PSs8Hashable", "channelsLabel"]
-- !private ["PSs8Hashable", "color"]
-- ["PSs8Hashable", "delegate"]
-- ["PSs8Hashable", "favoriteButton"]
-- ["PSs8Hashable", "favoriteButtonWasTapped"]
-- ["PSs8Hashable", "init"]
-- ["PSs8Hashable", "isFavorite"]
-- ["PSs8Hashable", "setFavoriteButton"]
-- !private ["PSs8Hashable", "setImage"]
-- ["PSs8Hashable", "setUpUI"]
-- !private ["PSs8Hashable", "textColor"]
-- !private ["PSs8Hashable", "whiteColor"]
-- ["PSs8Hashable", ""]
-- !private ["PSs9Indexable", "Generator"]
-- !private ["PSs9Indexable", "Index"]
-- !private ["PSs9Indexable", "_Element"]
-- !private ["PSs9Indexable", "contains"]
-- !private ["VSs17IndexingGenerator", "Element"]
+- !private ["Ps16ForwardIndexType", "Distance"]
+- !private ["Ps16ForwardIndexType", "IntegerLiteralType"]
+- !private ["Ps13GeneratorType", "Element"]
+- !private ["Ps8Hashable", "Distance"]
+- !private ["Ps8Hashable", "FirebaseManager"]
+- !private ["Ps8Hashable", "ForegroundColor"]
+- !private ["Ps8Hashable", "IntegerLiteralType"]
+- !private ["Ps8Hashable", "Theme"]
+- !private ["Ps8Hashable", "UIColor"]
+- !private ["Ps8Hashable", "UIImage"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- ["Ps8Hashable", "awakeFromNib"]
+- !private ["Ps8Hashable", "backgroundColor"]
+- ["Ps8Hashable", "buttonContainer"]
+- ["Ps8Hashable", "channel"]
+- ["Ps8Hashable", "channelsContainer"]
+- ["Ps8Hashable", "channelsLabel"]
+- !private ["Ps8Hashable", "color"]
+- ["Ps8Hashable", "delegate"]
+- ["Ps8Hashable", "favoriteButton"]
+- ["Ps8Hashable", "favoriteButtonWasTapped"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "isFavorite"]
+- ["Ps8Hashable", "setFavoriteButton"]
+- !private ["Ps8Hashable", "setImage"]
+- ["Ps8Hashable", "setUpUI"]
+- !private ["Ps8Hashable", "textColor"]
+- !private ["Ps8Hashable", "whiteColor"]
+- ["Ps8Hashable", ""]
+- !private ["Ps9Indexable", "Generator"]
+- !private ["Ps9Indexable", "Index"]
+- !private ["Ps9Indexable", "_Element"]
+- !private ["Ps9Indexable", "contains"]
+- !private ["Vs17IndexingGenerator", "Element"]
 - !private ["Si", "Distance"]
 - !private ["Si", "IntegerLiteralType"]
-- !private ["PSs21IntegerArithmeticType", "Distance"]
-- !private ["PSs21IntegerArithmeticType", "IntegerLiteralType"]
-- !private ["PSs25IntegerLiteralConvertible", "Distance"]
-- !private ["PSs25IntegerLiteralConvertible", "IntegerLiteralType"]
-- !private ["PSs11IntegerType", "Distance"]
-- !private ["PSs11IntegerType", "IntegerLiteralType"]
+- !private ["Ps21IntegerArithmeticType", "Distance"]
+- !private ["Ps21IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["Ps25IntegerLiteralConvertible", "Distance"]
+- !private ["Ps25IntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["Ps11IntegerType", "Distance"]
+- !private ["Ps11IntegerType", "IntegerLiteralType"]
 - !private ["C6CoChat16MenuChannelsCell", "Bool"]
 - ["C6CoChat16MenuChannelsCell", "Channel"]
 - !private ["C6CoChat16MenuChannelsCell", "FirebaseManager"]
@@ -241,20 +262,20 @@ depends-member:
 - ["P6CoChat24MenuChannelsCellDelegate", "Bool"]
 - ["P6CoChat24MenuChannelsCellDelegate", "Channel"]
 - ["P6CoChat24MenuChannelsCellDelegate", "channelFavoritingChanged"]
-- !private ["PSs14MirrorPathType", "Distance"]
-- !private ["PSs14MirrorPathType", "IntegerLiteralType"]
-- !private ["PSs21MutableCollectionType", "Generator"]
-- !private ["PSs21MutableCollectionType", "Index"]
-- !private ["PSs21MutableCollectionType", "_Element"]
-- !private ["PSs21MutableCollectionType", "contains"]
-- !private ["PSs16MutableIndexable", "Generator"]
-- !private ["PSs16MutableIndexable", "Index"]
-- !private ["PSs16MutableIndexable", "_Element"]
-- !private ["PSs16MutableIndexable", "contains"]
-- !private ["PSs16MutableSliceable", "Generator"]
-- !private ["PSs16MutableSliceable", "Index"]
-- !private ["PSs16MutableSliceable", "_Element"]
-- !private ["PSs16MutableSliceable", "contains"]
+- !private ["Ps14MirrorPathType", "Distance"]
+- !private ["Ps14MirrorPathType", "IntegerLiteralType"]
+- !private ["Ps21MutableCollectionType", "Generator"]
+- !private ["Ps21MutableCollectionType", "Index"]
+- !private ["Ps21MutableCollectionType", "_Element"]
+- !private ["Ps21MutableCollectionType", "contains"]
+- !private ["Ps16MutableIndexable", "Generator"]
+- !private ["Ps16MutableIndexable", "Index"]
+- !private ["Ps16MutableIndexable", "_Element"]
+- !private ["Ps16MutableIndexable", "contains"]
+- !private ["Ps16MutableSliceable", "Generator"]
+- !private ["Ps16MutableSliceable", "Index"]
+- !private ["Ps16MutableSliceable", "_Element"]
+- !private ["Ps16MutableSliceable", "contains"]
 - !private ["PSo8NSCoding", "FirebaseManager"]
 - !private ["PSo8NSCoding", "Theme"]
 - !private ["PSo8NSCoding", "UIColor"]
@@ -326,27 +347,27 @@ depends-member:
 - ["PSo16NSObjectProtocol", ""]
 - !private ["PSo14NSSecureCoding", "init"]
 - !private ["PSo14NSSecureCoding", "whiteColor"]
-- !private ["PSs13OptionSetType", "Normal"]
+- !private ["Ps13OptionSetType", "Normal"]
 - !private ["Sq", "deinit"]
-- !private ["PSs21RandomAccessIndexType", "Distance"]
-- !private ["PSs21RandomAccessIndexType", "IntegerLiteralType"]
-- !private ["PSs30RangeReplaceableCollectionType", "Generator"]
-- !private ["PSs30RangeReplaceableCollectionType", "Index"]
-- !private ["PSs30RangeReplaceableCollectionType", "_Element"]
-- !private ["PSs30RangeReplaceableCollectionType", "contains"]
-- !private ["PSs16RawRepresentable", "Normal"]
-- !private ["PSs12SequenceType", "Element"]
-- !private ["PSs12SequenceType", "Generator"]
-- !private ["PSs12SequenceType", "Index"]
-- !private ["PSs12SequenceType", "_Element"]
-- !private ["PSs12SequenceType", "contains"]
-- !private ["PSs14SetAlgebraType", "Normal"]
-- !private ["PSs17SignedIntegerType", "Distance"]
-- !private ["PSs17SignedIntegerType", "IntegerLiteralType"]
-- !private ["PSs16SignedNumberType", "Distance"]
-- !private ["PSs16SignedNumberType", "IntegerLiteralType"]
-- !private ["PSs10Strideable", "Distance"]
-- !private ["PSs10Strideable", "IntegerLiteralType"]
+- !private ["Ps21RandomAccessIndexType", "Distance"]
+- !private ["Ps21RandomAccessIndexType", "IntegerLiteralType"]
+- !private ["Ps30RangeReplaceableCollectionType", "Generator"]
+- !private ["Ps30RangeReplaceableCollectionType", "Index"]
+- !private ["Ps30RangeReplaceableCollectionType", "_Element"]
+- !private ["Ps30RangeReplaceableCollectionType", "contains"]
+- !private ["Ps16RawRepresentable", "Normal"]
+- !private ["Ps12SequenceType", "Element"]
+- !private ["Ps12SequenceType", "Generator"]
+- !private ["Ps12SequenceType", "Index"]
+- !private ["Ps12SequenceType", "_Element"]
+- !private ["Ps12SequenceType", "contains"]
+- !private ["Ps14SetAlgebraType", "Normal"]
+- !private ["Ps17SignedIntegerType", "Distance"]
+- !private ["Ps17SignedIntegerType", "IntegerLiteralType"]
+- !private ["Ps16SignedNumberType", "Distance"]
+- !private ["Ps16SignedNumberType", "IntegerLiteralType"]
+- !private ["Ps10Strideable", "Distance"]
+- !private ["Ps10Strideable", "IntegerLiteralType"]
 - !private ["V6CoChat5Theme", "Colors"]
 - !private ["PSo29UIAccessibilityIdentification", "FirebaseManager"]
 - !private ["PSo29UIAccessibilityIdentification", "Theme"]
@@ -587,114 +608,112 @@ depends-member:
 - ["CSo6UIView", "setUpUI"]
 - !private ["CSo6UIView", "textColor"]
 - !private ["C6CoChat4User", "favoriteChannels"]
-- !private ["PSs10_ArrayType", "Generator"]
-- !private ["PSs10_ArrayType", "Index"]
-- !private ["PSs10_ArrayType", "_Element"]
-- !private ["PSs10_ArrayType", "contains"]
-- !private ["PSs33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
-- !private ["PSs33_BuiltinIntegerLiteralConvertible", "Distance"]
-- !private ["PSs33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
-- !private ["PSs24_ColorLiteralConvertible", "whiteColor"]
-- !private ["PSs24_DestructorSafeContainer", "Generator"]
-- !private ["PSs24_DestructorSafeContainer", "Index"]
-- !private ["PSs24_DestructorSafeContainer", "_Element"]
-- !private ["PSs24_DestructorSafeContainer", "contains"]
-- !private ["PSs24_ImageLiteralConvertible", "init"]
-- !private ["PSs14_Incrementable", "Distance"]
-- !private ["PSs14_Incrementable", "IntegerLiteralType"]
-- !private ["PSs22_IntegerArithmeticType", "Distance"]
-- !private ["PSs22_IntegerArithmeticType", "IntegerLiteralType"]
-- !private ["PSs12_IntegerType", "Distance"]
-- !private ["PSs12_IntegerType", "IntegerLiteralType"]
-- !private ["PSs21_ObjectiveCBridgeable", "Distance"]
-- !private ["PSs21_ObjectiveCBridgeable", "Generator"]
-- !private ["PSs21_ObjectiveCBridgeable", "Index"]
-- !private ["PSs21_ObjectiveCBridgeable", "IntegerLiteralType"]
-- !private ["PSs21_ObjectiveCBridgeable", "_Element"]
-- !private ["PSs21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
-- !private ["PSs21_ObjectiveCBridgeable", "contains"]
-- !private ["PSs22_RandomAccessAmbiguity", "Distance"]
-- !private ["PSs22_RandomAccessAmbiguity", "IntegerLiteralType"]
-- !private ["PSs12_Reflectable", "Distance"]
-- !private ["PSs12_Reflectable", "FirebaseManager"]
-- !private ["PSs12_Reflectable", "Generator"]
-- !private ["PSs12_Reflectable", "Index"]
-- !private ["PSs12_Reflectable", "IntegerLiteralType"]
-- !private ["PSs12_Reflectable", "Theme"]
-- !private ["PSs12_Reflectable", "UIColor"]
-- !private ["PSs12_Reflectable", "UIImage"]
-- !private ["PSs12_Reflectable", "_Element"]
-- !private ["PSs12_Reflectable", "_getBuiltinLogicValue"]
-- ["PSs12_Reflectable", "awakeFromNib"]
-- !private ["PSs12_Reflectable", "backgroundColor"]
-- ["PSs12_Reflectable", "buttonContainer"]
-- ["PSs12_Reflectable", "channel"]
-- ["PSs12_Reflectable", "channelsContainer"]
-- ["PSs12_Reflectable", "channelsLabel"]
-- !private ["PSs12_Reflectable", "contains"]
-- ["PSs12_Reflectable", "delegate"]
-- ["PSs12_Reflectable", "favoriteButton"]
-- ["PSs12_Reflectable", "favoriteButtonWasTapped"]
-- ["PSs12_Reflectable", "init"]
-- ["PSs12_Reflectable", "isFavorite"]
-- ["PSs12_Reflectable", "setFavoriteButton"]
-- !private ["PSs12_Reflectable", "setImage"]
-- ["PSs12_Reflectable", "setUpUI"]
-- !private ["PSs12_Reflectable", "textColor"]
-- ["PSs12_Reflectable", ""]
-- !private ["PSs18_SignedIntegerType", "Distance"]
-- !private ["PSs18_SignedIntegerType", "IntegerLiteralType"]
-- !private ["PSs11_Strideable", "Distance"]
-- !private ["PSs11_Strideable", "IntegerLiteralType"]
+- !private ["Ps10_ArrayType", "Generator"]
+- !private ["Ps10_ArrayType", "Index"]
+- !private ["Ps10_ArrayType", "_Element"]
+- !private ["Ps10_ArrayType", "contains"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "Distance"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["Ps24_ColorLiteralConvertible", "whiteColor"]
+- !private ["Ps24_DestructorSafeContainer", "Generator"]
+- !private ["Ps24_DestructorSafeContainer", "Index"]
+- !private ["Ps24_DestructorSafeContainer", "_Element"]
+- !private ["Ps24_DestructorSafeContainer", "contains"]
+- !private ["Ps24_ImageLiteralConvertible", "init"]
+- !private ["Ps14_Incrementable", "Distance"]
+- !private ["Ps14_Incrementable", "IntegerLiteralType"]
+- !private ["Ps22_IntegerArithmeticType", "Distance"]
+- !private ["Ps22_IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["Ps12_IntegerType", "Distance"]
+- !private ["Ps12_IntegerType", "IntegerLiteralType"]
+- !private ["Ps21_ObjectiveCBridgeable", "Distance"]
+- !private ["Ps21_ObjectiveCBridgeable", "Generator"]
+- !private ["Ps21_ObjectiveCBridgeable", "Index"]
+- !private ["Ps21_ObjectiveCBridgeable", "IntegerLiteralType"]
+- !private ["Ps21_ObjectiveCBridgeable", "_Element"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "contains"]
+- !private ["Ps22_RandomAccessAmbiguity", "Distance"]
+- !private ["Ps22_RandomAccessAmbiguity", "IntegerLiteralType"]
+- !private ["Ps12_Reflectable", "Distance"]
+- !private ["Ps12_Reflectable", "FirebaseManager"]
+- !private ["Ps12_Reflectable", "Generator"]
+- !private ["Ps12_Reflectable", "Index"]
+- !private ["Ps12_Reflectable", "IntegerLiteralType"]
+- !private ["Ps12_Reflectable", "Theme"]
+- !private ["Ps12_Reflectable", "UIColor"]
+- !private ["Ps12_Reflectable", "UIImage"]
+- !private ["Ps12_Reflectable", "_Element"]
+- !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
+- ["Ps12_Reflectable", "awakeFromNib"]
+- !private ["Ps12_Reflectable", "backgroundColor"]
+- ["Ps12_Reflectable", "buttonContainer"]
+- ["Ps12_Reflectable", "channel"]
+- ["Ps12_Reflectable", "channelsContainer"]
+- ["Ps12_Reflectable", "channelsLabel"]
+- !private ["Ps12_Reflectable", "contains"]
+- ["Ps12_Reflectable", "delegate"]
+- ["Ps12_Reflectable", "favoriteButton"]
+- ["Ps12_Reflectable", "favoriteButtonWasTapped"]
+- ["Ps12_Reflectable", "init"]
+- ["Ps12_Reflectable", "isFavorite"]
+- ["Ps12_Reflectable", "setFavoriteButton"]
+- !private ["Ps12_Reflectable", "setImage"]
+- ["Ps12_Reflectable", "setUpUI"]
+- !private ["Ps12_Reflectable", "textColor"]
+- ["Ps12_Reflectable", ""]
+- !private ["Ps18_SignedIntegerType", "Distance"]
+- !private ["Ps18_SignedIntegerType", "IntegerLiteralType"]
 depends-nominal:
-- "PSs9AnyObject"
+- "Ps9AnyObject"
 - !private "Sa"
-- !private "PSs23ArrayLiteralConvertible"
-- !private "PSs22BidirectionalIndexType"
-- !private "PSs21BitwiseOperationsType"
+- !private "Ps23ArrayLiteralConvertible"
+- !private "Ps22BidirectionalIndexType"
+- !private "Ps21BitwiseOperationsType"
 - !private "Sb"
-- !private "PSs25BooleanLiteralConvertible"
-- !private "PSs11BooleanType"
-- "PSs11CVarArgType"
+- !private "Ps25BooleanLiteralConvertible"
+- !private "Ps11BooleanType"
+- "Ps11CVarArgType"
 - !private "C6CoChat7Channel"
-- !private "PSs14CollectionType"
+- !private "Ps14CollectionType"
 - !private "OV6CoChat5Theme6Colors"
-- !private "PSs10Comparable"
-- !private "PSs28CustomDebugStringConvertible"
-- "PSs23CustomStringConvertible"
-- "PSs9Equatable"
+- !private "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
 - !private "C6CoChat15FirebaseManager"
 - !private "P6CoChat12FirebaseType"
-- !private "PSs16ForwardIndexType"
-- !private "PSs13GeneratorType"
-- "PSs8Hashable"
-- !private "PSs9Indexable"
-- !private "VSs17IndexingGenerator"
+- !private "Ps16ForwardIndexType"
+- !private "Ps13GeneratorType"
+- "Ps8Hashable"
+- !private "Ps9Indexable"
+- !private "Vs17IndexingGenerator"
 - !private "Si"
-- !private "PSs21IntegerArithmeticType"
-- !private "PSs25IntegerLiteralConvertible"
-- !private "PSs11IntegerType"
+- !private "Ps21IntegerArithmeticType"
+- !private "Ps25IntegerLiteralConvertible"
+- !private "Ps11IntegerType"
 - "C6CoChat16MenuChannelsCell"
 - "P6CoChat24MenuChannelsCellDelegate"
-- !private "PSs14MirrorPathType"
-- !private "PSs21MutableCollectionType"
-- !private "PSs16MutableIndexable"
-- !private "PSs16MutableSliceable"
+- !private "Ps14MirrorPathType"
+- !private "Ps21MutableCollectionType"
+- !private "Ps16MutableIndexable"
+- !private "Ps16MutableSliceable"
 - "PSo8NSCoding"
 - !private "PSo9NSCopying"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
 - !private "PSo14NSSecureCoding"
-- !private "PSs13OptionSetType"
+- !private "Ps13OptionSetType"
 - !private "Sq"
-- !private "PSs21RandomAccessIndexType"
-- !private "PSs30RangeReplaceableCollectionType"
-- !private "PSs16RawRepresentable"
-- !private "PSs12SequenceType"
-- !private "PSs14SetAlgebraType"
-- !private "PSs17SignedIntegerType"
-- !private "PSs16SignedNumberType"
-- !private "PSs10Strideable"
+- !private "Ps21RandomAccessIndexType"
+- !private "Ps30RangeReplaceableCollectionType"
+- !private "Ps16RawRepresentable"
+- !private "Ps12SequenceType"
+- !private "Ps14SetAlgebraType"
+- !private "Ps17SignedIntegerType"
+- !private "Ps16SignedNumberType"
+- !private "Ps10Strideable"
 - !private "V6CoChat5Theme"
 - "PSo29UIAccessibilityIdentification"
 - "PSo12UIAppearance"
@@ -714,20 +733,19 @@ depends-nominal:
 - "PSo18UITraitEnvironment"
 - "CSo6UIView"
 - !private "C6CoChat4User"
-- !private "PSs10_ArrayType"
-- !private "PSs33_BuiltinBooleanLiteralConvertible"
-- !private "PSs33_BuiltinIntegerLiteralConvertible"
-- !private "PSs24_ColorLiteralConvertible"
-- !private "PSs24_DestructorSafeContainer"
-- !private "PSs24_ImageLiteralConvertible"
-- !private "PSs14_Incrementable"
-- !private "PSs22_IntegerArithmeticType"
-- !private "PSs12_IntegerType"
-- !private "PSs21_ObjectiveCBridgeable"
-- !private "PSs22_RandomAccessAmbiguity"
-- "PSs12_Reflectable"
-- !private "PSs18_SignedIntegerType"
-- !private "PSs11_Strideable"
+- !private "Ps10_ArrayType"
+- !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps33_BuiltinIntegerLiteralConvertible"
+- !private "Ps24_ColorLiteralConvertible"
+- !private "Ps24_DestructorSafeContainer"
+- !private "Ps24_ImageLiteralConvertible"
+- !private "Ps14_Incrementable"
+- !private "Ps22_IntegerArithmeticType"
+- !private "Ps12_IntegerType"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Ps22_RandomAccessAmbiguity"
+- "Ps12_Reflectable"
+- !private "Ps18_SignedIntegerType"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"

@@ -6,53 +6,60 @@ provides-nominal:
 provides-member:
 - ["C6CoChat6RootVC", ""]
 provides-dynamic-lookup:
-- "viewDidAppear"
-- "videoDidStopPlaying"
 - "container"
+- "viewDidAppear"
 - "viewDidLoad"
+- "videoDidStopPlaying"
 depends-top-level:
-- "Bool"
 - "RootVC"
+- "Bool"
 - "UIView"
 - "UIViewController"
 depends-member:
-- ["PSs9AnyObject", "container"]
-- ["PSs9AnyObject", "init"]
-- !private ["PSs9AnyObject", "performSegueWithSegueIdentifier"]
-- ["PSs9AnyObject", "videoDidStopPlaying"]
-- ["PSs9AnyObject", "viewDidAppear"]
-- ["PSs9AnyObject", "viewDidLoad"]
-- ["PSs9AnyObject", ""]
-- ["PSs11CVarArgType", "container"]
-- ["PSs11CVarArgType", "init"]
-- !private ["PSs11CVarArgType", "performSegueWithSegueIdentifier"]
-- ["PSs11CVarArgType", "videoDidStopPlaying"]
-- ["PSs11CVarArgType", "viewDidAppear"]
-- ["PSs11CVarArgType", "viewDidLoad"]
-- ["PSs11CVarArgType", ""]
-- ["PSs23CustomStringConvertible", "container"]
-- ["PSs23CustomStringConvertible", "init"]
-- !private ["PSs23CustomStringConvertible", "performSegueWithSegueIdentifier"]
-- ["PSs23CustomStringConvertible", "videoDidStopPlaying"]
-- ["PSs23CustomStringConvertible", "viewDidAppear"]
-- ["PSs23CustomStringConvertible", "viewDidLoad"]
-- ["PSs23CustomStringConvertible", ""]
-- !private ["PSs9Equatable", "SegueToTabBar"]
-- ["PSs9Equatable", "container"]
-- ["PSs9Equatable", "init"]
-- !private ["PSs9Equatable", "performSegueWithSegueIdentifier"]
-- ["PSs9Equatable", "videoDidStopPlaying"]
-- ["PSs9Equatable", "viewDidAppear"]
-- ["PSs9Equatable", "viewDidLoad"]
-- ["PSs9Equatable", ""]
-- !private ["PSs8Hashable", "SegueToTabBar"]
-- ["PSs8Hashable", "container"]
-- ["PSs8Hashable", "init"]
-- !private ["PSs8Hashable", "performSegueWithSegueIdentifier"]
-- ["PSs8Hashable", "videoDidStopPlaying"]
-- ["PSs8Hashable", "viewDidAppear"]
-- ["PSs8Hashable", "viewDidLoad"]
-- ["PSs8Hashable", ""]
+- ["Ps9AnyObject", "container"]
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "performSegueWithSegueIdentifier"]
+- ["Ps9AnyObject", "videoDidStopPlaying"]
+- ["Ps9AnyObject", "viewDidAppear"]
+- ["Ps9AnyObject", "viewDidLoad"]
+- ["Ps9AnyObject", ""]
+- ["Ps11CVarArgType", "container"]
+- ["Ps11CVarArgType", "init"]
+- !private ["Ps11CVarArgType", "performSegueWithSegueIdentifier"]
+- ["Ps11CVarArgType", "videoDidStopPlaying"]
+- ["Ps11CVarArgType", "viewDidAppear"]
+- ["Ps11CVarArgType", "viewDidLoad"]
+- ["Ps11CVarArgType", ""]
+- ["Ps28CustomDebugStringConvertible", "container"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "performSegueWithSegueIdentifier"]
+- ["Ps28CustomDebugStringConvertible", "videoDidStopPlaying"]
+- ["Ps28CustomDebugStringConvertible", "viewDidAppear"]
+- ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- ["Ps23CustomStringConvertible", "container"]
+- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "performSegueWithSegueIdentifier"]
+- ["Ps23CustomStringConvertible", "videoDidStopPlaying"]
+- ["Ps23CustomStringConvertible", "viewDidAppear"]
+- ["Ps23CustomStringConvertible", "viewDidLoad"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Ps9Equatable", "SegueToTabBar"]
+- ["Ps9Equatable", "container"]
+- ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "performSegueWithSegueIdentifier"]
+- ["Ps9Equatable", "videoDidStopPlaying"]
+- ["Ps9Equatable", "viewDidAppear"]
+- ["Ps9Equatable", "viewDidLoad"]
+- ["Ps9Equatable", ""]
+- !private ["Ps8Hashable", "SegueToTabBar"]
+- ["Ps8Hashable", "container"]
+- ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "performSegueWithSegueIdentifier"]
+- ["Ps8Hashable", "videoDidStopPlaying"]
+- ["Ps8Hashable", "viewDidAppear"]
+- ["Ps8Hashable", "viewDidLoad"]
+- ["Ps8Hashable", ""]
 - ["PSo8NSCoding", "container"]
 - ["PSo8NSCoding", "init"]
 - !private ["PSo8NSCoding", "performSegueWithSegueIdentifier"]
@@ -82,7 +89,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "viewDidAppear"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", ""]
-- !private ["PSs16RawRepresentable", "SegueToTabBar"]
+- !private ["Ps16RawRepresentable", "SegueToTabBar"]
 - ["C6CoChat6RootVC", "Bool"]
 - ["C6CoChat6RootVC", "UIView"]
 - ["C6CoChat6RootVC", "container"]
@@ -146,16 +153,17 @@ depends-member:
 - ["CSo16UIViewController", "viewDidLoad"]
 - ["CSo16UIViewController", ""]
 depends-nominal:
-- "PSs9AnyObject"
-- "PSs11CVarArgType"
-- "PSs23CustomStringConvertible"
-- "PSs9Equatable"
-- "PSs8Hashable"
+- "Ps9AnyObject"
+- "Ps11CVarArgType"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- "Ps8Hashable"
 - "PSo8NSCoding"
 - "PSo26NSExtensionRequestHandling"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
-- !private "PSs16RawRepresentable"
+- !private "Ps16RawRepresentable"
 - "C6CoChat6RootVC"
 - !private "OE6CoChatCSo16UIViewController15SegueIdentifier"
 - "PSo21UIAppearanceContainer"

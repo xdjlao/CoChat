@@ -6,70 +6,79 @@ provides-nominal:
 provides-member:
 - ["C6CoChat17ProfileLogoutCell", ""]
 provides-dynamic-lookup:
+- "awakeFromNib"
 - "setSelected"
 - "logoutCellView"
-- "awakeFromNib"
 - "signUpButton"
 depends-top-level:
-- "UITableViewCell"
+- "CGFloat"
 - !private "Theme"
+- "UITableViewCell"
 - "UIButton"
 - "Bool"
-- "CGFloat"
 - "ProfileLogoutCell"
 - "UIView"
 depends-member:
-- !private ["PSs9AnyObject", "Theme"]
-- ["PSs9AnyObject", "awakeFromNib"]
-- !private ["PSs9AnyObject", "backgroundColor"]
-- ["PSs9AnyObject", "init"]
-- ["PSs9AnyObject", "logoutCellView"]
-- ["PSs9AnyObject", "setSelected"]
-- ["PSs9AnyObject", "signUpButton"]
-- ["PSs9AnyObject", "superviewWidth"]
-- ["PSs9AnyObject", ""]
-- !private ["PSs11CVarArgType", "Theme"]
-- ["PSs11CVarArgType", "awakeFromNib"]
-- !private ["PSs11CVarArgType", "backgroundColor"]
-- ["PSs11CVarArgType", "init"]
-- ["PSs11CVarArgType", "logoutCellView"]
-- ["PSs11CVarArgType", "setSelected"]
-- ["PSs11CVarArgType", "signUpButton"]
-- ["PSs11CVarArgType", "superviewWidth"]
-- ["PSs11CVarArgType", ""]
+- !private ["Ps9AnyObject", "Theme"]
+- ["Ps9AnyObject", "awakeFromNib"]
+- !private ["Ps9AnyObject", "backgroundColor"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "logoutCellView"]
+- ["Ps9AnyObject", "setSelected"]
+- ["Ps9AnyObject", "signUpButton"]
+- ["Ps9AnyObject", "superviewWidth"]
+- ["Ps9AnyObject", ""]
+- !private ["Ps11CVarArgType", "Theme"]
+- ["Ps11CVarArgType", "awakeFromNib"]
+- !private ["Ps11CVarArgType", "backgroundColor"]
+- ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "logoutCellView"]
+- ["Ps11CVarArgType", "setSelected"]
+- ["Ps11CVarArgType", "signUpButton"]
+- ["Ps11CVarArgType", "superviewWidth"]
+- ["Ps11CVarArgType", ""]
 - !private ["OV6CoChat5Theme6Colors", "BackgroundColor"]
 - !private ["OV6CoChat5Theme6Colors", "color"]
-- !private ["PSs23CustomStringConvertible", "Theme"]
-- ["PSs23CustomStringConvertible", "awakeFromNib"]
-- !private ["PSs23CustomStringConvertible", "backgroundColor"]
-- ["PSs23CustomStringConvertible", "init"]
-- ["PSs23CustomStringConvertible", "logoutCellView"]
-- ["PSs23CustomStringConvertible", "setSelected"]
-- ["PSs23CustomStringConvertible", "signUpButton"]
-- ["PSs23CustomStringConvertible", "superviewWidth"]
-- ["PSs23CustomStringConvertible", ""]
-- !private ["PSs9Equatable", "BackgroundColor"]
-- !private ["PSs9Equatable", "Theme"]
-- ["PSs9Equatable", "awakeFromNib"]
-- !private ["PSs9Equatable", "backgroundColor"]
-- !private ["PSs9Equatable", "color"]
-- ["PSs9Equatable", "init"]
-- ["PSs9Equatable", "logoutCellView"]
-- ["PSs9Equatable", "setSelected"]
-- ["PSs9Equatable", "signUpButton"]
-- ["PSs9Equatable", "superviewWidth"]
-- ["PSs9Equatable", ""]
-- !private ["PSs8Hashable", "BackgroundColor"]
-- !private ["PSs8Hashable", "Theme"]
-- ["PSs8Hashable", "awakeFromNib"]
-- !private ["PSs8Hashable", "backgroundColor"]
-- !private ["PSs8Hashable", "color"]
-- ["PSs8Hashable", "init"]
-- ["PSs8Hashable", "logoutCellView"]
-- ["PSs8Hashable", "setSelected"]
-- ["PSs8Hashable", "signUpButton"]
-- ["PSs8Hashable", "superviewWidth"]
-- ["PSs8Hashable", ""]
+- !private ["Ps28CustomDebugStringConvertible", "Theme"]
+- ["Ps28CustomDebugStringConvertible", "awakeFromNib"]
+- !private ["Ps28CustomDebugStringConvertible", "backgroundColor"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "logoutCellView"]
+- ["Ps28CustomDebugStringConvertible", "setSelected"]
+- ["Ps28CustomDebugStringConvertible", "signUpButton"]
+- ["Ps28CustomDebugStringConvertible", "superviewWidth"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps23CustomStringConvertible", "Theme"]
+- ["Ps23CustomStringConvertible", "awakeFromNib"]
+- !private ["Ps23CustomStringConvertible", "backgroundColor"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "logoutCellView"]
+- ["Ps23CustomStringConvertible", "setSelected"]
+- ["Ps23CustomStringConvertible", "signUpButton"]
+- ["Ps23CustomStringConvertible", "superviewWidth"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Ps9Equatable", "BackgroundColor"]
+- !private ["Ps9Equatable", "Theme"]
+- ["Ps9Equatable", "awakeFromNib"]
+- !private ["Ps9Equatable", "backgroundColor"]
+- !private ["Ps9Equatable", "color"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "logoutCellView"]
+- ["Ps9Equatable", "setSelected"]
+- ["Ps9Equatable", "signUpButton"]
+- ["Ps9Equatable", "superviewWidth"]
+- ["Ps9Equatable", ""]
+- !private ["Ps8Hashable", "BackgroundColor"]
+- !private ["Ps8Hashable", "Theme"]
+- ["Ps8Hashable", "awakeFromNib"]
+- !private ["Ps8Hashable", "backgroundColor"]
+- !private ["Ps8Hashable", "color"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "logoutCellView"]
+- ["Ps8Hashable", "setSelected"]
+- ["Ps8Hashable", "signUpButton"]
+- ["Ps8Hashable", "superviewWidth"]
+- ["Ps8Hashable", ""]
 - !private ["PSo8NSCoding", "Theme"]
 - ["PSo8NSCoding", "awakeFromNib"]
 - !private ["PSo8NSCoding", "backgroundColor"]
@@ -223,22 +232,23 @@ depends-member:
 - ["CSo6UIView", "setSelected"]
 - ["CSo6UIView", "signUpButton"]
 - ["CSo6UIView", "superviewWidth"]
-- !private ["PSs12_Reflectable", "Theme"]
-- ["PSs12_Reflectable", "awakeFromNib"]
-- !private ["PSs12_Reflectable", "backgroundColor"]
-- ["PSs12_Reflectable", "init"]
-- ["PSs12_Reflectable", "logoutCellView"]
-- ["PSs12_Reflectable", "setSelected"]
-- ["PSs12_Reflectable", "signUpButton"]
-- ["PSs12_Reflectable", "superviewWidth"]
-- ["PSs12_Reflectable", ""]
+- !private ["Ps12_Reflectable", "Theme"]
+- ["Ps12_Reflectable", "awakeFromNib"]
+- !private ["Ps12_Reflectable", "backgroundColor"]
+- ["Ps12_Reflectable", "init"]
+- ["Ps12_Reflectable", "logoutCellView"]
+- ["Ps12_Reflectable", "setSelected"]
+- ["Ps12_Reflectable", "signUpButton"]
+- ["Ps12_Reflectable", "superviewWidth"]
+- ["Ps12_Reflectable", ""]
 depends-nominal:
-- "PSs9AnyObject"
-- "PSs11CVarArgType"
+- "Ps9AnyObject"
+- "Ps11CVarArgType"
 - !private "OV6CoChat5Theme6Colors"
-- "PSs23CustomStringConvertible"
-- "PSs9Equatable"
-- "PSs8Hashable"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- "Ps8Hashable"
 - "PSo8NSCoding"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
@@ -255,7 +265,7 @@ depends-nominal:
 - "CSo15UITableViewCell"
 - "PSo18UITraitEnvironment"
 - "CSo6UIView"
-- "PSs12_Reflectable"
+- "Ps12_Reflectable"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"

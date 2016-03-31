@@ -8,35 +8,42 @@ provides-member:
 provides-dynamic-lookup:
 - "perform"
 depends-top-level:
-- !private "UITabBarController"
 - !private "Void"
-- "UIStoryboardSegue"
-- !private "BooleanLiteralType"
 - !private "MessagingViewController"
 - "DismissSegue"
+- !private "BooleanLiteralType"
+- "UIStoryboardSegue"
+- !private "UITabBarController"
 depends-member:
-- !private ["PSs9AnyObject", "destinationViewController"]
-- !private ["PSs9AnyObject", "dismissViewControllerAnimated"]
-- ["PSs9AnyObject", "init"]
-- ["PSs9AnyObject", "perform"]
-- !private ["PSs9AnyObject", "presentingViewController"]
-- !private ["PSs9AnyObject", "sourceViewController"]
-- ["PSs9AnyObject", ""]
-- !private ["PSs11CVarArgType", "destinationViewController"]
-- !private ["PSs11CVarArgType", "dismissViewControllerAnimated"]
-- ["PSs11CVarArgType", "init"]
-- ["PSs11CVarArgType", "perform"]
-- !private ["PSs11CVarArgType", "presentingViewController"]
-- !private ["PSs11CVarArgType", "sourceViewController"]
-- ["PSs11CVarArgType", ""]
-- ["PSs28CustomDebugStringConvertible", "Some"]
-- !private ["PSs23CustomStringConvertible", "destinationViewController"]
-- !private ["PSs23CustomStringConvertible", "dismissViewControllerAnimated"]
-- ["PSs23CustomStringConvertible", "init"]
-- ["PSs23CustomStringConvertible", "perform"]
-- !private ["PSs23CustomStringConvertible", "presentingViewController"]
-- !private ["PSs23CustomStringConvertible", "sourceViewController"]
-- ["PSs23CustomStringConvertible", ""]
+- !private ["Ps9AnyObject", "destinationViewController"]
+- !private ["Ps9AnyObject", "dismissViewControllerAnimated"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "perform"]
+- !private ["Ps9AnyObject", "presentingViewController"]
+- !private ["Ps9AnyObject", "sourceViewController"]
+- ["Ps9AnyObject", ""]
+- !private ["Ps11CVarArgType", "destinationViewController"]
+- !private ["Ps11CVarArgType", "dismissViewControllerAnimated"]
+- ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "perform"]
+- !private ["Ps11CVarArgType", "presentingViewController"]
+- !private ["Ps11CVarArgType", "sourceViewController"]
+- ["Ps11CVarArgType", ""]
+- ["Ps28CustomDebugStringConvertible", "Some"]
+- !private ["Ps28CustomDebugStringConvertible", "destinationViewController"]
+- !private ["Ps28CustomDebugStringConvertible", "dismissViewControllerAnimated"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "perform"]
+- !private ["Ps28CustomDebugStringConvertible", "presentingViewController"]
+- !private ["Ps28CustomDebugStringConvertible", "sourceViewController"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps23CustomStringConvertible", "destinationViewController"]
+- !private ["Ps23CustomStringConvertible", "dismissViewControllerAnimated"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "perform"]
+- !private ["Ps23CustomStringConvertible", "presentingViewController"]
+- !private ["Ps23CustomStringConvertible", "sourceViewController"]
+- ["Ps23CustomStringConvertible", ""]
 - !private ["C6CoChat12DismissSegue", "MessagingViewController"]
 - !private ["C6CoChat12DismissSegue", "UITabBarController"]
 - !private ["C6CoChat12DismissSegue", "Void"]
@@ -45,21 +52,21 @@ depends-member:
 - ["C6CoChat12DismissSegue", "init"]
 - ["C6CoChat12DismissSegue", "perform"]
 - !private ["C6CoChat12DismissSegue", "sourceViewController"]
-- !private ["PSs9Equatable", "destinationViewController"]
-- !private ["PSs9Equatable", "dismissViewControllerAnimated"]
-- ["PSs9Equatable", "init"]
-- ["PSs9Equatable", "perform"]
-- !private ["PSs9Equatable", "presentingViewController"]
-- !private ["PSs9Equatable", "sourceViewController"]
-- ["PSs9Equatable", ""]
+- !private ["Ps9Equatable", "destinationViewController"]
+- !private ["Ps9Equatable", "dismissViewControllerAnimated"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "perform"]
+- !private ["Ps9Equatable", "presentingViewController"]
+- !private ["Ps9Equatable", "sourceViewController"]
+- ["Ps9Equatable", ""]
 - !private ["P6CoChat26GeneralMessageCellDelegate", "dismissViewControllerAnimated"]
-- !private ["PSs8Hashable", "destinationViewController"]
-- !private ["PSs8Hashable", "dismissViewControllerAnimated"]
-- ["PSs8Hashable", "init"]
-- ["PSs8Hashable", "perform"]
-- !private ["PSs8Hashable", "presentingViewController"]
-- !private ["PSs8Hashable", "sourceViewController"]
-- ["PSs8Hashable", ""]
+- !private ["Ps8Hashable", "destinationViewController"]
+- !private ["Ps8Hashable", "dismissViewControllerAnimated"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "perform"]
+- !private ["Ps8Hashable", "presentingViewController"]
+- !private ["Ps8Hashable", "sourceViewController"]
+- ["Ps8Hashable", ""]
 - !private ["PSo35MFMailComposeViewControllerDelegate", "dismissViewControllerAnimated"]
 - !private ["P6CoChat33MenuChannelViewControllerDelegate", "dismissViewControllerAnimated"]
 - !private ["C6CoChat23MessagingViewController", "dismissViewControllerAnimated"]
@@ -83,7 +90,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "presentingViewController"]
 - !private ["PSo16NSObjectProtocol", "sourceViewController"]
 - ["PSo16NSObjectProtocol", ""]
-- ["PSs21NilLiteralConvertible", "Some"]
+- ["Ps21NilLiteralConvertible", "Some"]
 - ["Sq", "Some"]
 - !private ["PSo21UIAppearanceContainer", "dismissViewControllerAnimated"]
 - !private ["PSo21UIAppearanceContainer", "presentingViewController"]
@@ -114,16 +121,16 @@ depends-member:
 - !private ["CSo16UIViewController", "deinit"]
 - !private ["CSo16UIViewController", "dismissViewControllerAnimated"]
 - !private ["CSo16UIViewController", "presentingViewController"]
-- ["PSs12_Reflectable", "Some"]
+- ["Ps12_Reflectable", "Some"]
 depends-nominal:
-- "PSs9AnyObject"
-- "PSs11CVarArgType"
-- "PSs28CustomDebugStringConvertible"
-- "PSs23CustomStringConvertible"
+- "Ps9AnyObject"
+- "Ps11CVarArgType"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
 - "C6CoChat12DismissSegue"
-- "PSs9Equatable"
+- "Ps9Equatable"
 - !private "P6CoChat26GeneralMessageCellDelegate"
-- "PSs8Hashable"
+- "Ps8Hashable"
 - !private "PSo35MFMailComposeViewControllerDelegate"
 - !private "P6CoChat33MenuChannelViewControllerDelegate"
 - !private "C6CoChat23MessagingViewController"
@@ -131,7 +138,7 @@ depends-nominal:
 - !private "PSo26NSExtensionRequestHandling"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
-- "PSs21NilLiteralConvertible"
+- "Ps21NilLiteralConvertible"
 - "Sq"
 - !private "PSo21UIAppearanceContainer"
 - !private "PSo18UIContentContainer"
@@ -147,7 +154,7 @@ depends-nominal:
 - !private "PSo18UITextViewDelegate"
 - !private "PSo18UITraitEnvironment"
 - !private "CSo16UIViewController"
-- "PSs12_Reflectable"
+- "Ps12_Reflectable"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"

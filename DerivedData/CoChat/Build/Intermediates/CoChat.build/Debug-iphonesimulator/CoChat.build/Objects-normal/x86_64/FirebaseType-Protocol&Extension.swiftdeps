@@ -14,128 +14,134 @@ provides-member:
 - ["P6CoChat12FirebaseType", "singleFromSnapshot"]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "assertionFailure"
-- !private "Void"
-- "AnyObject"
-- !private "baseURL"
-- !private "??"
-- !private "~="
-- "=="
-- "Firebase"
 - !private "print"
-- "FDataSnapshot"
-- !private "+"
-- "String"
-- "Type"
+- "Firebase"
+- !private "assertionFailure"
 - "NSObject"
-- "FirebaseType"
+- "FDataSnapshot"
+- "=="
+- "String"
+- !private "~="
+- !private "+"
+- !private "??"
 - !private "UnicodeScalarType"
+- !private "baseURL"
+- "Type"
+- "FirebaseType"
+- "AnyObject"
 - "StringLiteralType"
+- !private "Void"
 depends-member:
-- !private ["PSs9AnyObject", "childByAppendingPath"]
-- !private ["PSs9AnyObject", "childByAutoId"]
-- !private ["PSs9AnyObject", "init"]
-- !private ["PSs9AnyObject", "key"]
-- !private ["PSs9AnyObject", "setValue"]
-- !private ["PSs9AnyObject", "updateChildValues"]
-- !private ["PSs9AnyObject", "value"]
+- !private ["Ps9AnyObject", "childByAppendingPath"]
+- !private ["Ps9AnyObject", "childByAutoId"]
+- !private ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "key"]
+- !private ["Ps9AnyObject", "setValue"]
+- !private ["Ps9AnyObject", "updateChildValues"]
+- !private ["Ps9AnyObject", "value"]
 - !private ["Sa", "Generator"]
 - !private ["Sa", "Index"]
 - !private ["Sa", "SubSequence"]
 - !private ["Sa", "_Element"]
 - !private ["Sa", "append"]
 - !private ["Sa", "init"]
-- !private ["PSs23ArrayLiteralConvertible", "Generator"]
-- !private ["PSs23ArrayLiteralConvertible", "Index"]
-- !private ["PSs23ArrayLiteralConvertible", "SubSequence"]
-- !private ["PSs23ArrayLiteralConvertible", "_Element"]
-- !private ["PSs23ArrayLiteralConvertible", "append"]
-- !private ["PSs23ArrayLiteralConvertible", "init"]
-- !private ["VSs10ArraySlice", "Generator"]
-- !private ["VSs10ArraySlice", "Index"]
-- !private ["PSs22BidirectionalIndexType", "Distance"]
-- !private ["PSs22BidirectionalIndexType", "IntegerLiteralType"]
-- !private ["PSs22BidirectionalIndexType", "hashValue"]
-- !private ["PSs21BitwiseOperationsType", "Distance"]
-- !private ["PSs21BitwiseOperationsType", "IntegerLiteralType"]
-- !private ["PSs21BitwiseOperationsType", "hashValue"]
+- !private ["Ps23ArrayLiteralConvertible", "Generator"]
+- !private ["Ps23ArrayLiteralConvertible", "Index"]
+- !private ["Ps23ArrayLiteralConvertible", "SubSequence"]
+- !private ["Ps23ArrayLiteralConvertible", "_Element"]
+- !private ["Ps23ArrayLiteralConvertible", "append"]
+- !private ["Ps23ArrayLiteralConvertible", "init"]
+- !private ["Vs10ArraySlice", "Generator"]
+- !private ["Vs10ArraySlice", "Index"]
+- !private ["Ps22BidirectionalIndexType", "Distance"]
+- !private ["Ps22BidirectionalIndexType", "IntegerLiteralType"]
+- !private ["Ps22BidirectionalIndexType", "hashValue"]
+- !private ["Ps21BitwiseOperationsType", "Distance"]
+- !private ["Ps21BitwiseOperationsType", "IntegerLiteralType"]
+- !private ["Ps21BitwiseOperationsType", "hashValue"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["Sb", "deinit"]
-- !private ["PSs25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
-- !private ["PSs11BooleanType", "_getBuiltinLogicValue"]
-- !private ["PSs11CVarArgType", "Distance"]
-- !private ["PSs11CVarArgType", "IntegerLiteralType"]
-- !private ["PSs11CVarArgType", "childByAppendingPath"]
-- !private ["PSs11CVarArgType", "childByAutoId"]
-- !private ["PSs11CVarArgType", "hashValue"]
-- !private ["PSs11CVarArgType", "init"]
-- !private ["PSs11CVarArgType", "key"]
-- !private ["PSs11CVarArgType", "setValue"]
-- !private ["PSs11CVarArgType", "updateChildValues"]
-- !private ["PSs11CVarArgType", "value"]
-- !private ["VSs9Character", "deinit"]
-- !private ["PSs14CollectionType", "Generator"]
-- !private ["PSs14CollectionType", "Index"]
-- !private ["PSs14CollectionType", "SubSequence"]
-- !private ["PSs14CollectionType", "_Element"]
-- !private ["PSs14CollectionType", "append"]
-- !private ["PSs14CollectionType", "init"]
-- !private ["PSs10Comparable", "Distance"]
-- !private ["PSs10Comparable", "IntegerLiteralType"]
-- !private ["PSs10Comparable", "hashValue"]
-- !private ["PSs10Comparable", "init"]
-- !private ["PSs28CustomDebugStringConvertible", "Generator"]
-- !private ["PSs28CustomDebugStringConvertible", "Index"]
-- ["PSs28CustomDebugStringConvertible", "Some"]
-- !private ["PSs28CustomDebugStringConvertible", "SubSequence"]
-- !private ["PSs28CustomDebugStringConvertible", "_Element"]
-- !private ["PSs28CustomDebugStringConvertible", "append"]
-- !private ["PSs28CustomDebugStringConvertible", "init"]
-- !private ["PSs23CustomStringConvertible", "Distance"]
-- !private ["PSs23CustomStringConvertible", "Generator"]
-- !private ["PSs23CustomStringConvertible", "Index"]
-- !private ["PSs23CustomStringConvertible", "IntegerLiteralType"]
-- !private ["PSs23CustomStringConvertible", "Some"]
-- !private ["PSs23CustomStringConvertible", "SubSequence"]
-- !private ["PSs23CustomStringConvertible", "_Element"]
-- !private ["PSs23CustomStringConvertible", "_getBuiltinLogicValue"]
-- !private ["PSs23CustomStringConvertible", "append"]
-- !private ["PSs23CustomStringConvertible", "childByAppendingPath"]
-- !private ["PSs23CustomStringConvertible", "childByAutoId"]
-- !private ["PSs23CustomStringConvertible", "hashValue"]
-- !private ["PSs23CustomStringConvertible", "init"]
-- !private ["PSs23CustomStringConvertible", "key"]
-- !private ["PSs23CustomStringConvertible", "setValue"]
-- !private ["PSs23CustomStringConvertible", "updateChildValues"]
-- !private ["PSs23CustomStringConvertible", "value"]
-- !private ["VSs10Dictionary", "Generator"]
-- !private ["VSs19DictionaryGenerator", "Element"]
-- !private ["PSs28DictionaryLiteralConvertible", "Generator"]
+- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- !private ["Ps11CVarArgType", "Distance"]
+- !private ["Ps11CVarArgType", "IntegerLiteralType"]
+- !private ["Ps11CVarArgType", "childByAppendingPath"]
+- !private ["Ps11CVarArgType", "childByAutoId"]
+- !private ["Ps11CVarArgType", "hashValue"]
+- !private ["Ps11CVarArgType", "init"]
+- !private ["Ps11CVarArgType", "key"]
+- !private ["Ps11CVarArgType", "setValue"]
+- !private ["Ps11CVarArgType", "updateChildValues"]
+- !private ["Ps11CVarArgType", "value"]
+- !private ["Vs9Character", "deinit"]
+- !private ["Ps14CollectionType", "Generator"]
+- !private ["Ps14CollectionType", "Index"]
+- !private ["Ps14CollectionType", "SubSequence"]
+- !private ["Ps14CollectionType", "_Element"]
+- !private ["Ps14CollectionType", "append"]
+- !private ["Ps14CollectionType", "init"]
+- !private ["Ps10Comparable", "Distance"]
+- !private ["Ps10Comparable", "IntegerLiteralType"]
+- !private ["Ps10Comparable", "hashValue"]
+- !private ["Ps10Comparable", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "Generator"]
+- !private ["Ps28CustomDebugStringConvertible", "Index"]
+- ["Ps28CustomDebugStringConvertible", "Some"]
+- !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
+- !private ["Ps28CustomDebugStringConvertible", "_Element"]
+- !private ["Ps28CustomDebugStringConvertible", "append"]
+- !private ["Ps28CustomDebugStringConvertible", "childByAppendingPath"]
+- !private ["Ps28CustomDebugStringConvertible", "childByAutoId"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "key"]
+- !private ["Ps28CustomDebugStringConvertible", "setValue"]
+- !private ["Ps28CustomDebugStringConvertible", "updateChildValues"]
+- !private ["Ps28CustomDebugStringConvertible", "value"]
+- !private ["Ps23CustomStringConvertible", "Distance"]
+- !private ["Ps23CustomStringConvertible", "Generator"]
+- !private ["Ps23CustomStringConvertible", "Index"]
+- !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
+- !private ["Ps23CustomStringConvertible", "Some"]
+- !private ["Ps23CustomStringConvertible", "SubSequence"]
+- !private ["Ps23CustomStringConvertible", "_Element"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "append"]
+- !private ["Ps23CustomStringConvertible", "childByAppendingPath"]
+- !private ["Ps23CustomStringConvertible", "childByAutoId"]
+- !private ["Ps23CustomStringConvertible", "hashValue"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "key"]
+- !private ["Ps23CustomStringConvertible", "setValue"]
+- !private ["Ps23CustomStringConvertible", "updateChildValues"]
+- !private ["Ps23CustomStringConvertible", "value"]
+- !private ["Vs10Dictionary", "Generator"]
+- !private ["Vs19DictionaryGenerator", "Element"]
+- !private ["Ps28DictionaryLiteralConvertible", "Generator"]
 - !private ["Sd", "deinit"]
-- ["PSs9Equatable", "Channel"]
-- ["PSs9Equatable", "Conversation"]
-- !private ["PSs9Equatable", "Distance"]
-- !private ["PSs9Equatable", "Firebase"]
-- !private ["PSs9Equatable", "IntegerLiteralType"]
-- ["PSs9Equatable", "Message"]
-- ["PSs9Equatable", "RawValue"]
-- ["PSs9Equatable", "Room"]
-- ["PSs9Equatable", "User"]
-- ["PSs9Equatable", "Whisper"]
-- !private ["PSs9Equatable", "_getBuiltinLogicValue"]
-- !private ["PSs9Equatable", "baseURL"]
-- !private ["PSs9Equatable", "childByAppendingPath"]
-- !private ["PSs9Equatable", "childByAutoId"]
-- !private ["PSs9Equatable", "firebase"]
-- ["PSs9Equatable", "hashValue"]
-- ["PSs9Equatable", "init"]
-- !private ["PSs9Equatable", "key"]
-- ["PSs9Equatable", "rawValue"]
-- !private ["PSs9Equatable", "setValue"]
-- !private ["PSs9Equatable", "updateChildValues"]
-- !private ["PSs9Equatable", "value"]
-- ["PSs9Equatable", ""]
-- !private ["PSs41ExtendedGraphemeClusterLiteralConvertible", "init"]
+- ["Ps9Equatable", "Channel"]
+- ["Ps9Equatable", "Conversation"]
+- !private ["Ps9Equatable", "Distance"]
+- !private ["Ps9Equatable", "Firebase"]
+- !private ["Ps9Equatable", "IntegerLiteralType"]
+- ["Ps9Equatable", "Message"]
+- ["Ps9Equatable", "RawValue"]
+- ["Ps9Equatable", "Room"]
+- ["Ps9Equatable", "User"]
+- ["Ps9Equatable", "Whisper"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "baseURL"]
+- !private ["Ps9Equatable", "childByAppendingPath"]
+- !private ["Ps9Equatable", "childByAutoId"]
+- !private ["Ps9Equatable", "firebase"]
+- ["Ps9Equatable", "hashValue"]
+- ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "key"]
+- ["Ps9Equatable", "rawValue"]
+- !private ["Ps9Equatable", "setValue"]
+- !private ["Ps9Equatable", "updateChildValues"]
+- !private ["Ps9Equatable", "value"]
+- ["Ps9Equatable", ""]
+- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
 - !private ["CSo13FDataSnapshot", "key"]
 - !private ["CSo13FDataSnapshot", "value"]
 - !private ["CSo6FQuery", "childByAppendingPath"]
@@ -171,81 +177,81 @@ depends-member:
 - ["P6CoChat12FirebaseType", "uid"]
 - ["P6CoChat12FirebaseType", "value"]
 - !private ["Sf", "deinit"]
-- !private ["PSs16ForwardIndexType", "Distance"]
-- !private ["PSs16ForwardIndexType", "IntegerLiteralType"]
-- !private ["PSs16ForwardIndexType", "hashValue"]
-- !private ["PSs13GeneratorType", "Element"]
-- ["PSs8Hashable", "Channel"]
-- ["PSs8Hashable", "Conversation"]
-- !private ["PSs8Hashable", "Distance"]
-- !private ["PSs8Hashable", "Firebase"]
-- !private ["PSs8Hashable", "IntegerLiteralType"]
-- ["PSs8Hashable", "Message"]
-- ["PSs8Hashable", "RawValue"]
-- ["PSs8Hashable", "Room"]
-- ["PSs8Hashable", "User"]
-- ["PSs8Hashable", "Whisper"]
-- !private ["PSs8Hashable", "_getBuiltinLogicValue"]
-- !private ["PSs8Hashable", "baseURL"]
-- !private ["PSs8Hashable", "childByAppendingPath"]
-- !private ["PSs8Hashable", "childByAutoId"]
-- !private ["PSs8Hashable", "firebase"]
-- ["PSs8Hashable", "hashValue"]
-- ["PSs8Hashable", "init"]
-- !private ["PSs8Hashable", "key"]
-- ["PSs8Hashable", "rawValue"]
-- !private ["PSs8Hashable", "setValue"]
-- !private ["PSs8Hashable", "updateChildValues"]
-- !private ["PSs8Hashable", "value"]
-- ["PSs8Hashable", ""]
+- !private ["Ps16ForwardIndexType", "Distance"]
+- !private ["Ps16ForwardIndexType", "IntegerLiteralType"]
+- !private ["Ps16ForwardIndexType", "hashValue"]
+- !private ["Ps13GeneratorType", "Element"]
+- ["Ps8Hashable", "Channel"]
+- ["Ps8Hashable", "Conversation"]
+- !private ["Ps8Hashable", "Distance"]
+- !private ["Ps8Hashable", "Firebase"]
+- !private ["Ps8Hashable", "IntegerLiteralType"]
+- ["Ps8Hashable", "Message"]
+- ["Ps8Hashable", "RawValue"]
+- ["Ps8Hashable", "Room"]
+- ["Ps8Hashable", "User"]
+- ["Ps8Hashable", "Whisper"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "baseURL"]
+- !private ["Ps8Hashable", "childByAppendingPath"]
+- !private ["Ps8Hashable", "childByAutoId"]
+- !private ["Ps8Hashable", "firebase"]
+- ["Ps8Hashable", "hashValue"]
+- ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "key"]
+- ["Ps8Hashable", "rawValue"]
+- !private ["Ps8Hashable", "setValue"]
+- !private ["Ps8Hashable", "updateChildValues"]
+- !private ["Ps8Hashable", "value"]
+- ["Ps8Hashable", ""]
 - !private ["SQ", "Some"]
 - !private ["SQ", "deinit"]
-- !private ["PSs9Indexable", "Generator"]
-- !private ["PSs9Indexable", "Index"]
-- !private ["PSs9Indexable", "SubSequence"]
-- !private ["PSs9Indexable", "_Element"]
-- !private ["PSs9Indexable", "append"]
-- !private ["PSs9Indexable", "init"]
-- !private ["VSs17IndexingGenerator", "Element"]
+- !private ["Ps9Indexable", "Generator"]
+- !private ["Ps9Indexable", "Index"]
+- !private ["Ps9Indexable", "SubSequence"]
+- !private ["Ps9Indexable", "_Element"]
+- !private ["Ps9Indexable", "append"]
+- !private ["Ps9Indexable", "init"]
+- !private ["Vs17IndexingGenerator", "Element"]
 - !private ["Si", "Distance"]
 - !private ["Si", "IntegerLiteralType"]
 - !private ["Si", "deinit"]
 - !private ["Si", "hashValue"]
-- !private ["VSs5Int16", "deinit"]
-- !private ["VSs5Int32", "deinit"]
-- !private ["VSs5Int64", "deinit"]
-- !private ["VSs4Int8", "deinit"]
-- !private ["PSs21IntegerArithmeticType", "Distance"]
-- !private ["PSs21IntegerArithmeticType", "IntegerLiteralType"]
-- !private ["PSs21IntegerArithmeticType", "hashValue"]
-- !private ["PSs25IntegerLiteralConvertible", "Distance"]
-- !private ["PSs25IntegerLiteralConvertible", "IntegerLiteralType"]
-- !private ["PSs25IntegerLiteralConvertible", "hashValue"]
-- !private ["PSs11IntegerType", "Distance"]
-- !private ["PSs11IntegerType", "IntegerLiteralType"]
-- !private ["PSs11IntegerType", "hashValue"]
-- !private ["PSs14MirrorPathType", "Distance"]
-- !private ["PSs14MirrorPathType", "IntegerLiteralType"]
-- !private ["PSs14MirrorPathType", "hashValue"]
-- !private ["PSs14MirrorPathType", "init"]
-- !private ["PSs21MutableCollectionType", "Generator"]
-- !private ["PSs21MutableCollectionType", "Index"]
-- !private ["PSs21MutableCollectionType", "SubSequence"]
-- !private ["PSs21MutableCollectionType", "_Element"]
-- !private ["PSs21MutableCollectionType", "append"]
-- !private ["PSs21MutableCollectionType", "init"]
-- !private ["PSs16MutableIndexable", "Generator"]
-- !private ["PSs16MutableIndexable", "Index"]
-- !private ["PSs16MutableIndexable", "SubSequence"]
-- !private ["PSs16MutableIndexable", "_Element"]
-- !private ["PSs16MutableIndexable", "append"]
-- !private ["PSs16MutableIndexable", "init"]
-- !private ["PSs16MutableSliceable", "Generator"]
-- !private ["PSs16MutableSliceable", "Index"]
-- !private ["PSs16MutableSliceable", "SubSequence"]
-- !private ["PSs16MutableSliceable", "_Element"]
-- !private ["PSs16MutableSliceable", "append"]
-- !private ["PSs16MutableSliceable", "init"]
+- !private ["Vs5Int16", "deinit"]
+- !private ["Vs5Int32", "deinit"]
+- !private ["Vs5Int64", "deinit"]
+- !private ["Vs4Int8", "deinit"]
+- !private ["Ps21IntegerArithmeticType", "Distance"]
+- !private ["Ps21IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["Ps21IntegerArithmeticType", "hashValue"]
+- !private ["Ps25IntegerLiteralConvertible", "Distance"]
+- !private ["Ps25IntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["Ps25IntegerLiteralConvertible", "hashValue"]
+- !private ["Ps11IntegerType", "Distance"]
+- !private ["Ps11IntegerType", "IntegerLiteralType"]
+- !private ["Ps11IntegerType", "hashValue"]
+- !private ["Ps14MirrorPathType", "Distance"]
+- !private ["Ps14MirrorPathType", "IntegerLiteralType"]
+- !private ["Ps14MirrorPathType", "hashValue"]
+- !private ["Ps14MirrorPathType", "init"]
+- !private ["Ps21MutableCollectionType", "Generator"]
+- !private ["Ps21MutableCollectionType", "Index"]
+- !private ["Ps21MutableCollectionType", "SubSequence"]
+- !private ["Ps21MutableCollectionType", "_Element"]
+- !private ["Ps21MutableCollectionType", "append"]
+- !private ["Ps21MutableCollectionType", "init"]
+- !private ["Ps16MutableIndexable", "Generator"]
+- !private ["Ps16MutableIndexable", "Index"]
+- !private ["Ps16MutableIndexable", "SubSequence"]
+- !private ["Ps16MutableIndexable", "_Element"]
+- !private ["Ps16MutableIndexable", "append"]
+- !private ["Ps16MutableIndexable", "init"]
+- !private ["Ps16MutableSliceable", "Generator"]
+- !private ["Ps16MutableSliceable", "Index"]
+- !private ["Ps16MutableSliceable", "SubSequence"]
+- !private ["Ps16MutableSliceable", "_Element"]
+- !private ["Ps16MutableSliceable", "append"]
+- !private ["Ps16MutableSliceable", "init"]
 - !private ["PSo8NSCoding", "init"]
 - !private ["PSo9NSCopying", "init"]
 - !private ["PSo16NSMutableCopying", "init"]
@@ -267,56 +273,56 @@ depends-member:
 - !private ["PSo14NSSecureCoding", "init"]
 - !private ["CSo8NSString", "deinit"]
 - !private ["CSo8NSString", "init"]
-- ["PSs21NilLiteralConvertible", "Some"]
+- ["Ps21NilLiteralConvertible", "Some"]
 - ["Sq", "Some"]
 - !private ["Sq", "deinit"]
-- !private ["PSs16OutputStreamType", "init"]
-- !private ["PSs21RandomAccessIndexType", "Distance"]
-- !private ["PSs21RandomAccessIndexType", "IntegerLiteralType"]
-- !private ["PSs21RandomAccessIndexType", "hashValue"]
-- !private ["VSs5Range", "deinit"]
-- !private ["PSs30RangeReplaceableCollectionType", "Generator"]
-- !private ["PSs30RangeReplaceableCollectionType", "Index"]
-- !private ["PSs30RangeReplaceableCollectionType", "SubSequence"]
-- !private ["PSs30RangeReplaceableCollectionType", "_Element"]
-- !private ["PSs30RangeReplaceableCollectionType", "append"]
-- !private ["PSs30RangeReplaceableCollectionType", "init"]
-- ["PSs16RawRepresentable", "Channel"]
-- ["PSs16RawRepresentable", "Conversation"]
-- !private ["PSs16RawRepresentable", "Firebase"]
-- ["PSs16RawRepresentable", "Message"]
-- ["PSs16RawRepresentable", "RawValue"]
-- ["PSs16RawRepresentable", "Room"]
-- ["PSs16RawRepresentable", "User"]
-- ["PSs16RawRepresentable", "Whisper"]
-- !private ["PSs16RawRepresentable", "baseURL"]
-- !private ["PSs16RawRepresentable", "firebase"]
-- ["PSs16RawRepresentable", "hashValue"]
-- ["PSs16RawRepresentable", "init"]
-- ["PSs16RawRepresentable", "rawValue"]
-- ["PSs16RawRepresentable", ""]
-- !private ["PSs12SequenceType", "Element"]
-- !private ["PSs12SequenceType", "Generator"]
-- !private ["PSs12SequenceType", "Index"]
-- !private ["PSs12SequenceType", "SubSequence"]
-- !private ["PSs12SequenceType", "_Element"]
-- !private ["PSs12SequenceType", "append"]
-- !private ["PSs12SequenceType", "init"]
-- !private ["PSs17SignedIntegerType", "Distance"]
-- !private ["PSs17SignedIntegerType", "IntegerLiteralType"]
-- !private ["PSs17SignedIntegerType", "hashValue"]
-- !private ["PSs16SignedNumberType", "Distance"]
-- !private ["PSs16SignedNumberType", "IntegerLiteralType"]
-- !private ["PSs16SignedNumberType", "hashValue"]
-- !private ["VSs12StaticString", "deinit"]
-- !private ["PSs10Streamable", "init"]
-- !private ["PSs10Strideable", "Distance"]
-- !private ["PSs10Strideable", "IntegerLiteralType"]
-- !private ["PSs10Strideable", "hashValue"]
+- !private ["Ps16OutputStreamType", "init"]
+- !private ["Ps21RandomAccessIndexType", "Distance"]
+- !private ["Ps21RandomAccessIndexType", "IntegerLiteralType"]
+- !private ["Ps21RandomAccessIndexType", "hashValue"]
+- !private ["Vs5Range", "deinit"]
+- !private ["Ps30RangeReplaceableCollectionType", "Generator"]
+- !private ["Ps30RangeReplaceableCollectionType", "Index"]
+- !private ["Ps30RangeReplaceableCollectionType", "SubSequence"]
+- !private ["Ps30RangeReplaceableCollectionType", "_Element"]
+- !private ["Ps30RangeReplaceableCollectionType", "append"]
+- !private ["Ps30RangeReplaceableCollectionType", "init"]
+- ["Ps16RawRepresentable", "Channel"]
+- ["Ps16RawRepresentable", "Conversation"]
+- !private ["Ps16RawRepresentable", "Firebase"]
+- ["Ps16RawRepresentable", "Message"]
+- ["Ps16RawRepresentable", "RawValue"]
+- ["Ps16RawRepresentable", "Room"]
+- ["Ps16RawRepresentable", "User"]
+- ["Ps16RawRepresentable", "Whisper"]
+- !private ["Ps16RawRepresentable", "baseURL"]
+- !private ["Ps16RawRepresentable", "firebase"]
+- ["Ps16RawRepresentable", "hashValue"]
+- ["Ps16RawRepresentable", "init"]
+- ["Ps16RawRepresentable", "rawValue"]
+- ["Ps16RawRepresentable", ""]
+- !private ["Ps12SequenceType", "Element"]
+- !private ["Ps12SequenceType", "Generator"]
+- !private ["Ps12SequenceType", "Index"]
+- !private ["Ps12SequenceType", "SubSequence"]
+- !private ["Ps12SequenceType", "_Element"]
+- !private ["Ps12SequenceType", "append"]
+- !private ["Ps12SequenceType", "init"]
+- !private ["Ps17SignedIntegerType", "Distance"]
+- !private ["Ps17SignedIntegerType", "IntegerLiteralType"]
+- !private ["Ps17SignedIntegerType", "hashValue"]
+- !private ["Ps16SignedNumberType", "Distance"]
+- !private ["Ps16SignedNumberType", "IntegerLiteralType"]
+- !private ["Ps16SignedNumberType", "hashValue"]
+- !private ["Vs12StaticString", "deinit"]
+- !private ["Ps10Streamable", "init"]
+- !private ["Ps10Strideable", "Distance"]
+- !private ["Ps10Strideable", "IntegerLiteralType"]
+- !private ["Ps10Strideable", "hashValue"]
 - ["SS", "deinit"]
 - !private ["SS", "init"]
-- !private ["PSs30StringInterpolationConvertible", "init"]
-- !private ["PSs24StringLiteralConvertible", "init"]
+- !private ["Ps30StringInterpolationConvertible", "init"]
+- !private ["Ps24StringLiteralConvertible", "init"]
 - ["O6CoChat4Type", "Channel"]
 - ["O6CoChat4Type", "Conversation"]
 - ["O6CoChat4Type", "Firebase"]
@@ -332,119 +338,115 @@ depends-member:
 - ["O6CoChat4Type", "init"]
 - ["O6CoChat4Type", "rawValue"]
 - !private ["Su", "deinit"]
-- !private ["VSs6UInt16", "deinit"]
-- !private ["VSs6UInt32", "deinit"]
-- !private ["VSs6UInt64", "deinit"]
-- !private ["VSs5UInt8", "deinit"]
+- !private ["Vs6UInt16", "deinit"]
+- !private ["Vs6UInt32", "deinit"]
+- !private ["Vs6UInt64", "deinit"]
+- !private ["Vs5UInt8", "deinit"]
 - !private ["Sc", "deinit"]
-- !private ["PSs31UnicodeScalarLiteralConvertible", "init"]
-- !private ["PSs10_ArrayType", "Generator"]
-- !private ["PSs10_ArrayType", "Index"]
-- !private ["PSs10_ArrayType", "SubSequence"]
-- !private ["PSs10_ArrayType", "_Element"]
-- !private ["PSs10_ArrayType", "append"]
-- !private ["PSs10_ArrayType", "init"]
-- !private ["PSs33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
-- !private ["PSs49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
-- !private ["PSs33_BuiltinIntegerLiteralConvertible", "Distance"]
-- !private ["PSs33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
-- !private ["PSs33_BuiltinIntegerLiteralConvertible", "hashValue"]
-- !private ["PSs32_BuiltinStringLiteralConvertible", "init"]
-- !private ["PSs37_BuiltinUTF16StringLiteralConvertible", "init"]
-- !private ["PSs39_BuiltinUnicodeScalarLiteralConvertible", "init"]
-- !private ["PSs16_CocoaStringType", "init"]
-- !private ["PSs24_DestructorSafeContainer", "Generator"]
-- !private ["PSs24_DestructorSafeContainer", "Index"]
-- !private ["PSs24_DestructorSafeContainer", "SubSequence"]
-- !private ["PSs24_DestructorSafeContainer", "_Element"]
-- !private ["PSs24_DestructorSafeContainer", "append"]
-- !private ["PSs24_DestructorSafeContainer", "init"]
-- !private ["PSs14_Incrementable", "Distance"]
-- !private ["PSs14_Incrementable", "IntegerLiteralType"]
-- !private ["PSs14_Incrementable", "hashValue"]
-- !private ["PSs22_IntegerArithmeticType", "Distance"]
-- !private ["PSs22_IntegerArithmeticType", "IntegerLiteralType"]
-- !private ["PSs22_IntegerArithmeticType", "hashValue"]
-- !private ["PSs12_IntegerType", "Distance"]
-- !private ["PSs12_IntegerType", "IntegerLiteralType"]
-- !private ["PSs12_IntegerType", "hashValue"]
-- !private ["PSs21_ObjectiveCBridgeable", "Distance"]
-- !private ["PSs21_ObjectiveCBridgeable", "Generator"]
-- !private ["PSs21_ObjectiveCBridgeable", "Index"]
-- !private ["PSs21_ObjectiveCBridgeable", "IntegerLiteralType"]
-- !private ["PSs21_ObjectiveCBridgeable", "Some"]
-- !private ["PSs21_ObjectiveCBridgeable", "SubSequence"]
-- !private ["PSs21_ObjectiveCBridgeable", "_Element"]
-- !private ["PSs21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
-- !private ["PSs21_ObjectiveCBridgeable", "append"]
-- !private ["PSs21_ObjectiveCBridgeable", "hashValue"]
-- !private ["PSs21_ObjectiveCBridgeable", "init"]
-- !private ["VSs26_OptionalNilComparisonType", "deinit"]
-- !private ["PSs22_RandomAccessAmbiguity", "Distance"]
-- !private ["PSs22_RandomAccessAmbiguity", "IntegerLiteralType"]
-- !private ["PSs22_RandomAccessAmbiguity", "hashValue"]
-- !private ["PSs12_Reflectable", "Distance"]
-- !private ["PSs12_Reflectable", "Generator"]
-- !private ["PSs12_Reflectable", "Index"]
-- !private ["PSs12_Reflectable", "IntegerLiteralType"]
-- ["PSs12_Reflectable", "Some"]
-- !private ["PSs12_Reflectable", "SubSequence"]
-- !private ["PSs12_Reflectable", "_Element"]
-- !private ["PSs12_Reflectable", "_getBuiltinLogicValue"]
-- !private ["PSs12_Reflectable", "append"]
-- !private ["PSs12_Reflectable", "hashValue"]
-- !private ["PSs12_Reflectable", "init"]
-- !private ["PSs18_SignedIntegerType", "Distance"]
-- !private ["PSs18_SignedIntegerType", "IntegerLiteralType"]
-- !private ["PSs18_SignedIntegerType", "hashValue"]
-- !private ["PSs11_Strideable", "Distance"]
-- !private ["PSs11_Strideable", "IntegerLiteralType"]
-- !private ["PSs11_Strideable", "hashValue"]
+- !private ["Ps31UnicodeScalarLiteralConvertible", "init"]
+- !private ["Ps10_ArrayType", "Generator"]
+- !private ["Ps10_ArrayType", "Index"]
+- !private ["Ps10_ArrayType", "SubSequence"]
+- !private ["Ps10_ArrayType", "_Element"]
+- !private ["Ps10_ArrayType", "append"]
+- !private ["Ps10_ArrayType", "init"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "Distance"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "hashValue"]
+- !private ["Ps32_BuiltinStringLiteralConvertible", "init"]
+- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "init"]
+- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "init"]
+- !private ["Ps24_DestructorSafeContainer", "Generator"]
+- !private ["Ps24_DestructorSafeContainer", "Index"]
+- !private ["Ps24_DestructorSafeContainer", "SubSequence"]
+- !private ["Ps24_DestructorSafeContainer", "_Element"]
+- !private ["Ps24_DestructorSafeContainer", "append"]
+- !private ["Ps24_DestructorSafeContainer", "init"]
+- !private ["Ps14_Incrementable", "Distance"]
+- !private ["Ps14_Incrementable", "IntegerLiteralType"]
+- !private ["Ps14_Incrementable", "hashValue"]
+- !private ["Ps22_IntegerArithmeticType", "Distance"]
+- !private ["Ps22_IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["Ps22_IntegerArithmeticType", "hashValue"]
+- !private ["Ps12_IntegerType", "Distance"]
+- !private ["Ps12_IntegerType", "IntegerLiteralType"]
+- !private ["Ps12_IntegerType", "hashValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "Distance"]
+- !private ["Ps21_ObjectiveCBridgeable", "Generator"]
+- !private ["Ps21_ObjectiveCBridgeable", "Index"]
+- !private ["Ps21_ObjectiveCBridgeable", "IntegerLiteralType"]
+- !private ["Ps21_ObjectiveCBridgeable", "Some"]
+- !private ["Ps21_ObjectiveCBridgeable", "SubSequence"]
+- !private ["Ps21_ObjectiveCBridgeable", "_Element"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "append"]
+- !private ["Ps21_ObjectiveCBridgeable", "hashValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Vs26_OptionalNilComparisonType", "deinit"]
+- !private ["Ps22_RandomAccessAmbiguity", "Distance"]
+- !private ["Ps22_RandomAccessAmbiguity", "IntegerLiteralType"]
+- !private ["Ps22_RandomAccessAmbiguity", "hashValue"]
+- !private ["Ps12_Reflectable", "Distance"]
+- !private ["Ps12_Reflectable", "Generator"]
+- !private ["Ps12_Reflectable", "Index"]
+- !private ["Ps12_Reflectable", "IntegerLiteralType"]
+- ["Ps12_Reflectable", "Some"]
+- !private ["Ps12_Reflectable", "SubSequence"]
+- !private ["Ps12_Reflectable", "_Element"]
+- !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
+- !private ["Ps12_Reflectable", "append"]
+- !private ["Ps12_Reflectable", "hashValue"]
+- !private ["Ps12_Reflectable", "init"]
+- !private ["Ps18_SignedIntegerType", "Distance"]
+- !private ["Ps18_SignedIntegerType", "IntegerLiteralType"]
+- !private ["Ps18_SignedIntegerType", "hashValue"]
 depends-nominal:
-- !private "PSs9AnyObject"
+- !private "Ps9AnyObject"
 - !private "Sa"
-- !private "PSs23ArrayLiteralConvertible"
-- !private "VSs10ArraySlice"
-- !private "PSs22BidirectionalIndexType"
-- !private "PSs21BitwiseOperationsType"
+- !private "Ps23ArrayLiteralConvertible"
+- !private "Vs10ArraySlice"
+- !private "Ps22BidirectionalIndexType"
+- !private "Ps21BitwiseOperationsType"
 - !private "Sb"
-- !private "PSs25BooleanLiteralConvertible"
-- !private "PSs11BooleanType"
-- !private "PSs11CVarArgType"
-- !private "VSs9Character"
-- !private "PSs14CollectionType"
-- !private "PSs10Comparable"
-- "PSs28CustomDebugStringConvertible"
-- !private "PSs23CustomStringConvertible"
-- !private "VSs10Dictionary"
-- !private "VSs19DictionaryGenerator"
-- !private "PSs28DictionaryLiteralConvertible"
+- !private "Ps25BooleanLiteralConvertible"
+- !private "Ps11BooleanType"
+- !private "Ps11CVarArgType"
+- !private "Vs9Character"
+- !private "Ps14CollectionType"
+- !private "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- !private "Ps23CustomStringConvertible"
+- !private "Vs10Dictionary"
+- !private "Vs19DictionaryGenerator"
+- !private "Ps28DictionaryLiteralConvertible"
 - !private "Sd"
-- "PSs9Equatable"
-- !private "PSs41ExtendedGraphemeClusterLiteralConvertible"
+- "Ps9Equatable"
+- !private "Ps41ExtendedGraphemeClusterLiteralConvertible"
 - !private "CSo13FDataSnapshot"
 - !private "CSo6FQuery"
 - !private "CSo8Firebase"
 - "P6CoChat12FirebaseType"
 - !private "Sf"
-- !private "PSs16ForwardIndexType"
-- !private "PSs13GeneratorType"
-- "PSs8Hashable"
+- !private "Ps16ForwardIndexType"
+- !private "Ps13GeneratorType"
+- "Ps8Hashable"
 - !private "SQ"
-- !private "PSs9Indexable"
-- !private "VSs17IndexingGenerator"
+- !private "Ps9Indexable"
+- !private "Vs17IndexingGenerator"
 - !private "Si"
-- !private "VSs5Int16"
-- !private "VSs5Int32"
-- !private "VSs5Int64"
-- !private "VSs4Int8"
-- !private "PSs21IntegerArithmeticType"
-- !private "PSs25IntegerLiteralConvertible"
-- !private "PSs11IntegerType"
-- !private "PSs14MirrorPathType"
-- !private "PSs21MutableCollectionType"
-- !private "PSs16MutableIndexable"
-- !private "PSs16MutableSliceable"
+- !private "Vs5Int16"
+- !private "Vs5Int32"
+- !private "Vs5Int64"
+- !private "Vs4Int8"
+- !private "Ps21IntegerArithmeticType"
+- !private "Ps25IntegerLiteralConvertible"
+- !private "Ps11IntegerType"
+- !private "Ps14MirrorPathType"
+- !private "Ps21MutableCollectionType"
+- !private "Ps16MutableIndexable"
+- !private "Ps16MutableSliceable"
 - !private "PSo8NSCoding"
 - !private "PSo9NSCopying"
 - !private "PSo16NSMutableCopying"
@@ -452,48 +454,46 @@ depends-nominal:
 - !private "PSo16NSObjectProtocol"
 - !private "PSo14NSSecureCoding"
 - !private "CSo8NSString"
-- "PSs21NilLiteralConvertible"
+- "Ps21NilLiteralConvertible"
 - "Sq"
-- !private "PSs16OutputStreamType"
-- !private "PSs21RandomAccessIndexType"
-- !private "VSs5Range"
-- !private "PSs30RangeReplaceableCollectionType"
-- "PSs16RawRepresentable"
-- !private "PSs12SequenceType"
-- !private "PSs17SignedIntegerType"
-- !private "PSs16SignedNumberType"
-- !private "VSs12StaticString"
-- !private "PSs10Streamable"
-- !private "PSs10Strideable"
+- !private "Ps16OutputStreamType"
+- !private "Ps21RandomAccessIndexType"
+- !private "Vs5Range"
+- !private "Ps30RangeReplaceableCollectionType"
+- "Ps16RawRepresentable"
+- !private "Ps12SequenceType"
+- !private "Ps17SignedIntegerType"
+- !private "Ps16SignedNumberType"
+- !private "Vs12StaticString"
+- !private "Ps10Streamable"
+- !private "Ps10Strideable"
 - "SS"
-- !private "PSs30StringInterpolationConvertible"
-- !private "PSs24StringLiteralConvertible"
+- !private "Ps30StringInterpolationConvertible"
+- !private "Ps24StringLiteralConvertible"
 - "O6CoChat4Type"
 - !private "Su"
-- !private "VSs6UInt16"
-- !private "VSs6UInt32"
-- !private "VSs6UInt64"
-- !private "VSs5UInt8"
+- !private "Vs6UInt16"
+- !private "Vs6UInt32"
+- !private "Vs6UInt64"
+- !private "Vs5UInt8"
 - !private "Sc"
-- !private "PSs31UnicodeScalarLiteralConvertible"
-- !private "PSs10_ArrayType"
-- !private "PSs33_BuiltinBooleanLiteralConvertible"
-- !private "PSs49_BuiltinExtendedGraphemeClusterLiteralConvertible"
-- !private "PSs33_BuiltinIntegerLiteralConvertible"
-- !private "PSs32_BuiltinStringLiteralConvertible"
-- !private "PSs37_BuiltinUTF16StringLiteralConvertible"
-- !private "PSs39_BuiltinUnicodeScalarLiteralConvertible"
-- !private "PSs16_CocoaStringType"
-- !private "PSs24_DestructorSafeContainer"
-- !private "PSs14_Incrementable"
-- !private "PSs22_IntegerArithmeticType"
-- !private "PSs12_IntegerType"
-- !private "PSs21_ObjectiveCBridgeable"
-- !private "VSs26_OptionalNilComparisonType"
-- !private "PSs22_RandomAccessAmbiguity"
-- "PSs12_Reflectable"
-- !private "PSs18_SignedIntegerType"
-- !private "PSs11_Strideable"
+- !private "Ps31UnicodeScalarLiteralConvertible"
+- !private "Ps10_ArrayType"
+- !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible"
+- !private "Ps33_BuiltinIntegerLiteralConvertible"
+- !private "Ps32_BuiltinStringLiteralConvertible"
+- !private "Ps37_BuiltinUTF16StringLiteralConvertible"
+- !private "Ps39_BuiltinUnicodeScalarLiteralConvertible"
+- !private "Ps24_DestructorSafeContainer"
+- !private "Ps14_Incrementable"
+- !private "Ps22_IntegerArithmeticType"
+- !private "Ps12_IntegerType"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Vs26_OptionalNilComparisonType"
+- !private "Ps22_RandomAccessAmbiguity"
+- "Ps12_Reflectable"
+- !private "Ps18_SignedIntegerType"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
