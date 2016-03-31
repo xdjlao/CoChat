@@ -12,30 +12,30 @@ provides-member:
 - ["C6CoChat15FirebaseManager", "checkForUniqueEntryKey"]
 provides-dynamic-lookup:
 depends-top-level:
-- "Bool"
-- "baseURL"
-- !private "NSNotification"
-- "Firebase"
-- "Room"
-- !private "Channel"
-- "FirebaseManager"
-- !private "NSNotificationCenter"
-- !private "NSObject"
-- !private "AnyObject"
-- "BooleanLiteralType"
-- !private "UnicodeScalarType"
-- "FAuthData"
-- !private "!="
-- "Message"
 - !private "assertionFailure"
-- !private "print"
+- "Bool"
 - !private "=="
-- "User"
-- !private "NSOperationQueue"
-- "StringLiteralType"
+- !private "UnicodeScalarType"
+- "Room"
+- !private "NSNotification"
 - "String"
 - "UInt"
+- "Message"
+- "Firebase"
+- !private "!="
+- "FirebaseManager"
+- "StringLiteralType"
+- "baseURL"
+- !private "NSObject"
+- !private "AnyObject"
+- !private "NSOperationQueue"
+- "User"
+- !private "Channel"
+- "FAuthData"
+- !private "NSNotificationCenter"
+- "BooleanLiteralType"
 - !private "??"
+- !private "print"
 - "FirebaseType"
 depends-member:
 - !private ["Ps9AnyObject", "Channel"]
@@ -66,6 +66,7 @@ depends-member:
 - ["Ps9AnyObject", "init"]
 - !private ["Ps9AnyObject", "mainQueue"]
 - !private ["Ps9AnyObject", "manager"]
+- !private ["Ps9AnyObject", "name"]
 - !private ["Ps9AnyObject", "observeEventType"]
 - !private ["Ps9AnyObject", "observeSingleEventOfType"]
 - !private ["Ps9AnyObject", "password"]
@@ -77,6 +78,7 @@ depends-member:
 - !private ["Ps9AnyObject", "queryOrderedByChild"]
 - !private ["Ps9AnyObject", "queryOrderedByKey"]
 - !private ["Ps9AnyObject", "ref"]
+- !private ["Ps9AnyObject", "saveSelf"]
 - !private ["Ps9AnyObject", "subscript"]
 - !private ["Ps9AnyObject", "uid"]
 - !private ["Ps9AnyObject", "user"]
@@ -280,8 +282,10 @@ depends-member:
 - !private ["P6CoChat12FirebaseType", "conversationPartners"]
 - !private ["P6CoChat12FirebaseType", "favoriteChannels"]
 - !private ["P6CoChat12FirebaseType", "init"]
+- !private ["P6CoChat12FirebaseType", "name"]
 - !private ["P6CoChat12FirebaseType", "password"]
 - !private ["P6CoChat12FirebaseType", "profileImageURL"]
+- !private ["P6CoChat12FirebaseType", "saveSelf"]
 - !private ["P6CoChat12FirebaseType", "singleFromSnapshot"]
 - !private ["P6CoChat12FirebaseType", "type"]
 - !private ["P6CoChat12FirebaseType", "uid"]
@@ -466,7 +470,9 @@ depends-member:
 - !private ["C6CoChat4User", "deinit"]
 - !private ["C6CoChat4User", "favoriteChannels"]
 - !private ["C6CoChat4User", "init"]
+- !private ["C6CoChat4User", "name"]
 - !private ["C6CoChat4User", "profileImageURL"]
+- !private ["C6CoChat4User", "saveSelf"]
 - !private ["C6CoChat4User", "uid"]
 - !private ["Ps10_ArrayType", "Generator"]
 - !private ["Ps10_ArrayType", "Index"]
@@ -758,4 +764,4 @@ depends-external:
 - "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFNetworking.h"
 - "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFNetworking-umbrella.h"
 - "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Modules/module.modulemap"
-interface-hash: "cafe8694d755f24498b3367831a20588"
+interface-hash: "1ffb622154a3fc04a8e441857f3ba319"

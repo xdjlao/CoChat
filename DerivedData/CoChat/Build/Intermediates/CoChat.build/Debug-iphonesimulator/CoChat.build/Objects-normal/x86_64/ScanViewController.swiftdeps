@@ -6,76 +6,76 @@ provides-nominal:
 provides-member:
 - ["C6CoChat18ScanViewController", ""]
 provides-dynamic-lookup:
-- "checkForRoomWithEntryKey"
-- "startScan"
-- "captureOutput"
-- "passcodeLabel"
-- "checkForRoomWithUID"
-- "passcodeView"
-- "scanViewWrapper"
-- "viewDidLoad"
-- "prepareForSegue"
-- "onSwitchPressed"
-- "onJoinButtonPressed"
 - "captureSession"
-- "RightBarButton"
-- "joinButtonOutlet"
-- "videoPreviewLayer"
-- "textFieldShouldReturn"
-- "passcodeLabelWrapper"
-- "setUpUI"
-- "joinViewWrapper"
+- "checkForRoomWithUID"
 - "stopScan"
+- "joinButtonOutlet"
+- "passcodeView"
+- "onSwitchPressed"
+- "captureOutput"
+- "startScan"
+- "scanViewWrapper"
+- "RightBarButton"
+- "joinViewWrapper"
+- "setUpUI"
+- "videoPreviewLayer"
 - "onTapResignKeyboard"
 - "joinTextFieldWrapperView"
+- "passcodeLabelWrapper"
 - "qrCodeFrameView"
+- "checkForRoomWithEntryKey"
+- "onJoinButtonPressed"
+- "viewDidLoad"
+- "textFieldShouldReturn"
+- "passcodeLabel"
+- "prepareForSegue"
 depends-top-level:
-- "UIView"
-- !private "NSForegroundColorAttributeName"
-- "AVCaptureOutput"
-- "ScanViewController"
-- !private "Dictionary"
-- "UIBarButtonItem"
-- !private "AVMetadataMachineReadableCodeObject"
-- !private "AVCaptureInput"
-- !private "AVMetadataObjectTypeQRCode"
-- !private "||"
-- !private "AVLayerVideoGravityResizeAspectFill"
-- "UIViewController"
-- "UIStoryboardSegue"
-- !private "=="
-- !private "!="
-- !private "Room"
-- !private "print"
-- !private "AVCaptureDeviceInput"
-- !private "MessagingViewController"
-- !private "Channel"
-- !private "CGRectZero"
 - !private "MessagingNavigationViewController"
-- "AnyObject"
-- !private "UIColor"
-- !private "StringLiteralType"
-- !private "Theme"
-- "AVCaptureConnection"
-- !private "FirebaseManager"
-- "String"
-- !private "UIImage"
-- !private "AVCaptureDevice"
-- "AVCaptureSession"
-- "UITapGestureRecognizer"
-- !private "AVMediaTypeVideo"
+- !private "AVCaptureDeviceInput"
 - !private "dispatch_get_main_queue"
-- "AVCaptureMetadataOutputObjectsDelegate"
-- "AVCaptureVideoPreviewLayer"
-- "BooleanLiteralType"
-- "Bool"
-- "UIButton"
 - "UITextFieldDelegate"
-- !private "NSError"
-- "UITextField"
-- !private "AVCaptureMetadataOutput"
-- !private "Array"
+- !private "=="
+- !private "UIImage"
+- !private "UIColor"
+- "AVCaptureVideoPreviewLayer"
+- !private "!="
 - !private "NSAttributedString"
+- "UIView"
+- "AVCaptureOutput"
+- "String"
+- !private "AVMediaTypeVideo"
+- !private "Array"
+- !private "AVCaptureInput"
+- !private "AVLayerVideoGravityResizeAspectFill"
+- "UIBarButtonItem"
+- "UITapGestureRecognizer"
+- !private "print"
+- !private "AVMetadataObjectTypeQRCode"
+- !private "Dictionary"
+- "ScanViewController"
+- !private "AVCaptureDevice"
+- "AnyObject"
+- !private "StringLiteralType"
+- !private "NSError"
+- !private "||"
+- "Bool"
+- "AVCaptureConnection"
+- "UIStoryboardSegue"
+- !private "FirebaseManager"
+- "UITextField"
+- !private "Channel"
+- !private "AVCaptureMetadataOutput"
+- !private "AVMetadataMachineReadableCodeObject"
+- !private "Room"
+- "BooleanLiteralType"
+- !private "MessagingViewController"
+- "AVCaptureMetadataOutputObjectsDelegate"
+- "UIViewController"
+- "AVCaptureSession"
+- "UIButton"
+- !private "Theme"
+- !private "NSForegroundColorAttributeName"
+- !private "CGRectZero"
 depends-member:
 - !private ["CSo15AVCaptureDevice", "defaultDeviceWithMediaType"]
 - !private ["CSo20AVCaptureDeviceInput", "deinit"]
@@ -112,6 +112,7 @@ depends-member:
 - !private ["PSo38AVCaptureMetadataOutputObjectsDelegate", "joinTextFieldWrapperView"]
 - !private ["PSo38AVCaptureMetadataOutputObjectsDelegate", "joinViewWrapper"]
 - !private ["PSo38AVCaptureMetadataOutputObjectsDelegate", "navigationController"]
+- !private ["PSo38AVCaptureMetadataOutputObjectsDelegate", "navigationItem"]
 - !private ["PSo38AVCaptureMetadataOutputObjectsDelegate", "passcodeLabel"]
 - !private ["PSo38AVCaptureMetadataOutputObjectsDelegate", "passcodeLabelWrapper"]
 - !private ["PSo38AVCaptureMetadataOutputObjectsDelegate", "passcodeView"]
@@ -211,6 +212,7 @@ depends-member:
 - !private ["Ps9AnyObject", "metadataObjectTypes"]
 - !private ["Ps9AnyObject", "navigationBar"]
 - !private ["Ps9AnyObject", "navigationController"]
+- !private ["Ps9AnyObject", "navigationItem"]
 - ["Ps9AnyObject", "onJoinButtonPressed"]
 - ["Ps9AnyObject", "onSwitchPressed"]
 - ["Ps9AnyObject", "onTapResignKeyboard"]
@@ -222,6 +224,7 @@ depends-member:
 - !private ["Ps9AnyObject", "print"]
 - ["Ps9AnyObject", "qrCodeFrameView"]
 - !private ["Ps9AnyObject", "resignFirstResponder"]
+- !private ["Ps9AnyObject", "rightBarButtonItem"]
 - !private ["Ps9AnyObject", "room"]
 - ["Ps9AnyObject", "scanViewWrapper"]
 - !private ["Ps9AnyObject", "setBackgroundImage"]
@@ -349,6 +352,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "metadataObjectTypes"]
 - !private ["Ps11CVarArgType", "navigationBar"]
 - !private ["Ps11CVarArgType", "navigationController"]
+- !private ["Ps11CVarArgType", "navigationItem"]
 - ["Ps11CVarArgType", "onJoinButtonPressed"]
 - ["Ps11CVarArgType", "onSwitchPressed"]
 - ["Ps11CVarArgType", "onTapResignKeyboard"]
@@ -360,6 +364,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "print"]
 - ["Ps11CVarArgType", "qrCodeFrameView"]
 - !private ["Ps11CVarArgType", "resignFirstResponder"]
+- !private ["Ps11CVarArgType", "rightBarButtonItem"]
 - !private ["Ps11CVarArgType", "room"]
 - ["Ps11CVarArgType", "scanViewWrapper"]
 - !private ["Ps11CVarArgType", "setBackgroundImage"]
@@ -467,6 +472,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "metadataObjectTypes"]
 - !private ["Ps28CustomDebugStringConvertible", "navigationBar"]
 - !private ["Ps28CustomDebugStringConvertible", "navigationController"]
+- !private ["Ps28CustomDebugStringConvertible", "navigationItem"]
 - ["Ps28CustomDebugStringConvertible", "onJoinButtonPressed"]
 - ["Ps28CustomDebugStringConvertible", "onSwitchPressed"]
 - ["Ps28CustomDebugStringConvertible", "onTapResignKeyboard"]
@@ -478,6 +484,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "print"]
 - ["Ps28CustomDebugStringConvertible", "qrCodeFrameView"]
 - !private ["Ps28CustomDebugStringConvertible", "resignFirstResponder"]
+- !private ["Ps28CustomDebugStringConvertible", "rightBarButtonItem"]
 - !private ["Ps28CustomDebugStringConvertible", "room"]
 - ["Ps28CustomDebugStringConvertible", "scanViewWrapper"]
 - !private ["Ps28CustomDebugStringConvertible", "setBackgroundImage"]
@@ -572,6 +579,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "metadataObjectTypes"]
 - !private ["Ps23CustomStringConvertible", "navigationBar"]
 - !private ["Ps23CustomStringConvertible", "navigationController"]
+- !private ["Ps23CustomStringConvertible", "navigationItem"]
 - ["Ps23CustomStringConvertible", "onJoinButtonPressed"]
 - ["Ps23CustomStringConvertible", "onSwitchPressed"]
 - ["Ps23CustomStringConvertible", "onTapResignKeyboard"]
@@ -583,6 +591,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "print"]
 - ["Ps23CustomStringConvertible", "qrCodeFrameView"]
 - !private ["Ps23CustomStringConvertible", "resignFirstResponder"]
+- !private ["Ps23CustomStringConvertible", "rightBarButtonItem"]
 - !private ["Ps23CustomStringConvertible", "room"]
 - ["Ps23CustomStringConvertible", "scanViewWrapper"]
 - !private ["Ps23CustomStringConvertible", "setBackgroundImage"]
@@ -679,6 +688,7 @@ depends-member:
 - !private ["Ps9Equatable", "metadataObjectTypes"]
 - !private ["Ps9Equatable", "navigationBar"]
 - !private ["Ps9Equatable", "navigationController"]
+- !private ["Ps9Equatable", "navigationItem"]
 - ["Ps9Equatable", "onJoinButtonPressed"]
 - ["Ps9Equatable", "onSwitchPressed"]
 - ["Ps9Equatable", "onTapResignKeyboard"]
@@ -691,6 +701,7 @@ depends-member:
 - ["Ps9Equatable", "qrCodeFrameView"]
 - !private ["Ps9Equatable", "rawValue"]
 - !private ["Ps9Equatable", "resignFirstResponder"]
+- !private ["Ps9Equatable", "rightBarButtonItem"]
 - !private ["Ps9Equatable", "room"]
 - ["Ps9Equatable", "scanViewWrapper"]
 - !private ["Ps9Equatable", "setBackgroundImage"]
@@ -794,6 +805,7 @@ depends-member:
 - !private ["Ps8Hashable", "metadataObjectTypes"]
 - !private ["Ps8Hashable", "navigationBar"]
 - !private ["Ps8Hashable", "navigationController"]
+- !private ["Ps8Hashable", "navigationItem"]
 - ["Ps8Hashable", "onJoinButtonPressed"]
 - ["Ps8Hashable", "onSwitchPressed"]
 - ["Ps8Hashable", "onTapResignKeyboard"]
@@ -806,6 +818,7 @@ depends-member:
 - ["Ps8Hashable", "qrCodeFrameView"]
 - !private ["Ps8Hashable", "rawValue"]
 - !private ["Ps8Hashable", "resignFirstResponder"]
+- !private ["Ps8Hashable", "rightBarButtonItem"]
 - !private ["Ps8Hashable", "room"]
 - ["Ps8Hashable", "scanViewWrapper"]
 - !private ["Ps8Hashable", "setBackgroundImage"]
@@ -930,6 +943,7 @@ depends-member:
 - !private ["PSo8NSCoding", "localizedDescription"]
 - !private ["PSo8NSCoding", "navigationBar"]
 - !private ["PSo8NSCoding", "navigationController"]
+- !private ["PSo8NSCoding", "navigationItem"]
 - ["PSo8NSCoding", "onJoinButtonPressed"]
 - ["PSo8NSCoding", "onSwitchPressed"]
 - ["PSo8NSCoding", "onTapResignKeyboard"]
@@ -941,6 +955,7 @@ depends-member:
 - !private ["PSo8NSCoding", "print"]
 - ["PSo8NSCoding", "qrCodeFrameView"]
 - !private ["PSo8NSCoding", "resignFirstResponder"]
+- !private ["PSo8NSCoding", "rightBarButtonItem"]
 - !private ["PSo8NSCoding", "room"]
 - ["PSo8NSCoding", "scanViewWrapper"]
 - !private ["PSo8NSCoding", "setBackgroundImage"]
@@ -1002,6 +1017,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "joinViewWrapper"]
 - !private ["PSo26NSExtensionRequestHandling", "navigationBar"]
 - !private ["PSo26NSExtensionRequestHandling", "navigationController"]
+- !private ["PSo26NSExtensionRequestHandling", "navigationItem"]
 - ["PSo26NSExtensionRequestHandling", "onJoinButtonPressed"]
 - ["PSo26NSExtensionRequestHandling", "onSwitchPressed"]
 - ["PSo26NSExtensionRequestHandling", "onTapResignKeyboard"]
@@ -1100,6 +1116,7 @@ depends-member:
 - !private ["CSo8NSObject", "metadataObjectTypes"]
 - !private ["CSo8NSObject", "navigationBar"]
 - !private ["CSo8NSObject", "navigationController"]
+- !private ["CSo8NSObject", "navigationItem"]
 - ["CSo8NSObject", "onJoinButtonPressed"]
 - ["CSo8NSObject", "onSwitchPressed"]
 - ["CSo8NSObject", "onTapResignKeyboard"]
@@ -1111,6 +1128,7 @@ depends-member:
 - !private ["CSo8NSObject", "print"]
 - ["CSo8NSObject", "qrCodeFrameView"]
 - !private ["CSo8NSObject", "resignFirstResponder"]
+- !private ["CSo8NSObject", "rightBarButtonItem"]
 - !private ["CSo8NSObject", "room"]
 - ["CSo8NSObject", "scanViewWrapper"]
 - !private ["CSo8NSObject", "setBackgroundImage"]
@@ -1193,6 +1211,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "metadataObjectTypes"]
 - !private ["PSo16NSObjectProtocol", "navigationBar"]
 - !private ["PSo16NSObjectProtocol", "navigationController"]
+- !private ["PSo16NSObjectProtocol", "navigationItem"]
 - ["PSo16NSObjectProtocol", "onJoinButtonPressed"]
 - ["PSo16NSObjectProtocol", "onSwitchPressed"]
 - ["PSo16NSObjectProtocol", "onTapResignKeyboard"]
@@ -1204,6 +1223,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "print"]
 - ["PSo16NSObjectProtocol", "qrCodeFrameView"]
 - !private ["PSo16NSObjectProtocol", "resignFirstResponder"]
+- !private ["PSo16NSObjectProtocol", "rightBarButtonItem"]
 - !private ["PSo16NSObjectProtocol", "room"]
 - ["PSo16NSObjectProtocol", "scanViewWrapper"]
 - !private ["PSo16NSObjectProtocol", "setBackgroundImage"]
@@ -1301,6 +1321,7 @@ depends-member:
 - ["C6CoChat18ScanViewController", "joinTextFieldWrapperView"]
 - ["C6CoChat18ScanViewController", "joinViewWrapper"]
 - !private ["C6CoChat18ScanViewController", "navigationController"]
+- !private ["C6CoChat18ScanViewController", "navigationItem"]
 - ["C6CoChat18ScanViewController", "onJoinButtonPressed"]
 - ["C6CoChat18ScanViewController", "onSwitchPressed"]
 - ["C6CoChat18ScanViewController", "onTapResignKeyboard"]
@@ -1417,6 +1438,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "layer"]
 - !private ["PSo21UIAppearanceContainer", "navigationBar"]
 - !private ["PSo21UIAppearanceContainer", "navigationController"]
+- !private ["PSo21UIAppearanceContainer", "navigationItem"]
 - ["PSo21UIAppearanceContainer", "onJoinButtonPressed"]
 - ["PSo21UIAppearanceContainer", "onSwitchPressed"]
 - ["PSo21UIAppearanceContainer", "onTapResignKeyboard"]
@@ -1490,6 +1512,7 @@ depends-member:
 - ["PSo18UIContentContainer", "joinViewWrapper"]
 - !private ["PSo18UIContentContainer", "navigationBar"]
 - !private ["PSo18UIContentContainer", "navigationController"]
+- !private ["PSo18UIContentContainer", "navigationItem"]
 - ["PSo18UIContentContainer", "onJoinButtonPressed"]
 - ["PSo18UIContentContainer", "onSwitchPressed"]
 - ["PSo18UIContentContainer", "onTapResignKeyboard"]
@@ -1588,6 +1611,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "layer"]
 - !private ["PSo18UIFocusEnvironment", "navigationBar"]
 - !private ["PSo18UIFocusEnvironment", "navigationController"]
+- !private ["PSo18UIFocusEnvironment", "navigationItem"]
 - ["PSo18UIFocusEnvironment", "onJoinButtonPressed"]
 - ["PSo18UIFocusEnvironment", "onSwitchPressed"]
 - ["PSo18UIFocusEnvironment", "onTapResignKeyboard"]
@@ -1628,6 +1652,7 @@ depends-member:
 - !private ["CSo15UINavigationBar", "shadowImage"]
 - !private ["CSo22UINavigationController", "navigationBar"]
 - !private ["CSo22UINavigationController", "topViewController"]
+- !private ["CSo16UINavigationItem", "rightBarButtonItem"]
 - ["CSo11UIResponder", "AVCaptureConnection"]
 - !private ["CSo11UIResponder", "AVCaptureDevice"]
 - !private ["CSo11UIResponder", "AVCaptureDeviceInput"]
@@ -1683,6 +1708,7 @@ depends-member:
 - !private ["CSo11UIResponder", "layer"]
 - !private ["CSo11UIResponder", "navigationBar"]
 - !private ["CSo11UIResponder", "navigationController"]
+- !private ["CSo11UIResponder", "navigationItem"]
 - ["CSo11UIResponder", "onJoinButtonPressed"]
 - ["CSo11UIResponder", "onSwitchPressed"]
 - ["CSo11UIResponder", "onTapResignKeyboard"]
@@ -1747,6 +1773,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "joinViewWrapper"]
 - !private ["PSo16UIStateRestoring", "navigationBar"]
 - !private ["PSo16UIStateRestoring", "navigationController"]
+- !private ["PSo16UIStateRestoring", "navigationItem"]
 - ["PSo16UIStateRestoring", "onJoinButtonPressed"]
 - ["PSo16UIStateRestoring", "onSwitchPressed"]
 - ["PSo16UIStateRestoring", "onTapResignKeyboard"]
@@ -1812,6 +1839,7 @@ depends-member:
 - !private ["PSo19UITextFieldDelegate", "joinTextFieldWrapperView"]
 - !private ["PSo19UITextFieldDelegate", "joinViewWrapper"]
 - !private ["PSo19UITextFieldDelegate", "navigationController"]
+- !private ["PSo19UITextFieldDelegate", "navigationItem"]
 - !private ["PSo19UITextFieldDelegate", "passcodeLabel"]
 - !private ["PSo19UITextFieldDelegate", "passcodeLabelWrapper"]
 - !private ["PSo19UITextFieldDelegate", "passcodeView"]
@@ -1882,6 +1910,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "layer"]
 - !private ["PSo18UITraitEnvironment", "navigationBar"]
 - !private ["PSo18UITraitEnvironment", "navigationController"]
+- !private ["PSo18UITraitEnvironment", "navigationItem"]
 - ["PSo18UITraitEnvironment", "onJoinButtonPressed"]
 - ["PSo18UITraitEnvironment", "onSwitchPressed"]
 - ["PSo18UITraitEnvironment", "onTapResignKeyboard"]
@@ -1974,6 +2003,7 @@ depends-member:
 - ["CSo16UIViewController", "joinViewWrapper"]
 - !private ["CSo16UIViewController", "navigationBar"]
 - !private ["CSo16UIViewController", "navigationController"]
+- !private ["CSo16UIViewController", "navigationItem"]
 - ["CSo16UIViewController", "onJoinButtonPressed"]
 - ["CSo16UIViewController", "onSwitchPressed"]
 - ["CSo16UIViewController", "onTapResignKeyboard"]
@@ -2166,6 +2196,7 @@ depends-nominal:
 - !private "PSo10UIKeyInput"
 - !private "CSo15UINavigationBar"
 - !private "CSo22UINavigationController"
+- !private "CSo16UINavigationItem"
 - "CSo11UIResponder"
 - !private "PSo20UIScrollViewDelegate"
 - "PSo16UIStateRestoring"

@@ -6,38 +6,41 @@ provides-nominal:
 provides-member:
 - ["C6CoChat12LoginEmailVC", ""]
 provides-dynamic-lookup:
+- "logInButtonContainer"
+- "emailTextField"
 - "viewDidLoad"
+- "textFieldDidEndEditing"
 - "logInButton"
-- "logInButtonWasTapped"
+- "passwordTextField"
 - "textFieldDidBeginEditing"
+- "logInButtonWasTapped"
+- "textFieldShouldReturn"
+- "textFields"
 - "setUpUI"
 - "handleSingleTap"
-- "passwordTextField"
-- "textFieldDidEndEditing"
-- "emailTextField"
-- "textFields"
-- "logInButtonContainer"
-- "textFieldShouldReturn"
 depends-top-level:
-- !private "NSForegroundColorAttributeName"
-- !private "StringLiteralType"
-- !private "&&"
-- !private "=="
-- "LoginEmailVC"
 - "UITextField"
-- "Bool"
-- !private "BooleanLiteralType"
-- "UIView"
-- "UIViewController"
-- "UIButton"
-- !private "Dictionary"
-- "UITextFieldDelegate"
 - "UITapGestureRecognizer"
+- !private "NSAttributedString"
+- "UIButton"
+- "UITextFieldDelegate"
+- "Bool"
+- !private "&&"
+- "LoginEmailVC"
+- "UIViewController"
+- !private "print"
 - !private "Theme"
 - !private "Array"
-- !private "NSAttributedString"
+- !private "NSForegroundColorAttributeName"
+- !private "BooleanLiteralType"
+- "UIView"
 - !private "UIColor"
+- !private "=="
+- !private "FirebaseManager"
+- !private "Dictionary"
 depends-member:
+- !private ["Ps9AnyObject", "FirebaseManager"]
+- !private ["Ps9AnyObject", "LoginEmailVC"]
 - !private ["Ps9AnyObject", "NSAttributedString"]
 - !private ["Ps9AnyObject", "NSForegroundColorAttributeName"]
 - !private ["Ps9AnyObject", "Theme"]
@@ -47,6 +50,7 @@ depends-member:
 - !private ["Ps9AnyObject", "allTextFieldsAreFilled"]
 - !private ["Ps9AnyObject", "alpha"]
 - !private ["Ps9AnyObject", "attributedPlaceholder"]
+- !private ["Ps9AnyObject", "authUser"]
 - !private ["Ps9AnyObject", "backgroundColor"]
 - !private ["Ps9AnyObject", "cancelsTouchesInView"]
 - !private ["Ps9AnyObject", "clearColor"]
@@ -55,14 +59,18 @@ depends-member:
 - ["Ps9AnyObject", "emailTextField"]
 - !private ["Ps9AnyObject", "endEditing"]
 - ["Ps9AnyObject", "handleSingleTap"]
+- !private ["Ps9AnyObject", "handleUserAuthData"]
 - ["Ps9AnyObject", "init"]
 - !private ["Ps9AnyObject", "isValidEmail"]
 - !private ["Ps9AnyObject", "layer"]
 - ["Ps9AnyObject", "logInButton"]
 - ["Ps9AnyObject", "logInButtonContainer"]
 - ["Ps9AnyObject", "logInButtonWasTapped"]
+- !private ["Ps9AnyObject", "manager"]
 - ["Ps9AnyObject", "passwordTextField"]
 - !private ["Ps9AnyObject", "placeholder"]
+- !private ["Ps9AnyObject", "print"]
+- !private ["Ps9AnyObject", "ref"]
 - !private ["Ps9AnyObject", "resignFirstResponder"]
 - ["Ps9AnyObject", "setUpUI"]
 - !private ["Ps9AnyObject", "state"]
@@ -105,7 +113,9 @@ depends-member:
 - !private ["PSo13CAMediaTiming", "cornerRadius"]
 - !private ["V12CoreGraphics7CGFloat", "deinit"]
 - !private ["Ps11CVarArgType", "Distance"]
+- !private ["Ps11CVarArgType", "FirebaseManager"]
 - !private ["Ps11CVarArgType", "IntegerLiteralType"]
+- !private ["Ps11CVarArgType", "LoginEmailVC"]
 - !private ["Ps11CVarArgType", "NSAttributedString"]
 - !private ["Ps11CVarArgType", "NSForegroundColorAttributeName"]
 - !private ["Ps11CVarArgType", "Theme"]
@@ -115,6 +125,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "allTextFieldsAreFilled"]
 - !private ["Ps11CVarArgType", "alpha"]
 - !private ["Ps11CVarArgType", "attributedPlaceholder"]
+- !private ["Ps11CVarArgType", "authUser"]
 - !private ["Ps11CVarArgType", "backgroundColor"]
 - !private ["Ps11CVarArgType", "cancelsTouchesInView"]
 - !private ["Ps11CVarArgType", "clearColor"]
@@ -131,6 +142,7 @@ depends-member:
 - ["Ps11CVarArgType", "logInButtonWasTapped"]
 - ["Ps11CVarArgType", "passwordTextField"]
 - !private ["Ps11CVarArgType", "placeholder"]
+- !private ["Ps11CVarArgType", "print"]
 - !private ["Ps11CVarArgType", "resignFirstResponder"]
 - ["Ps11CVarArgType", "setUpUI"]
 - !private ["Ps11CVarArgType", "state"]
@@ -163,11 +175,14 @@ depends-member:
 - !private ["Ps10Comparable", "Distance"]
 - !private ["Ps10Comparable", "IntegerLiteralType"]
 - !private ["Ps28CustomDebugStringConvertible", "Element"]
+- !private ["Ps28CustomDebugStringConvertible", "FirebaseManager"]
 - !private ["Ps28CustomDebugStringConvertible", "Generator"]
 - !private ["Ps28CustomDebugStringConvertible", "Index"]
 - !private ["Ps28CustomDebugStringConvertible", "Key"]
+- !private ["Ps28CustomDebugStringConvertible", "LoginEmailVC"]
 - !private ["Ps28CustomDebugStringConvertible", "NSAttributedString"]
 - !private ["Ps28CustomDebugStringConvertible", "NSForegroundColorAttributeName"]
+- !private ["Ps28CustomDebugStringConvertible", "Some"]
 - !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
 - !private ["Ps28CustomDebugStringConvertible", "Theme"]
 - !private ["Ps28CustomDebugStringConvertible", "UIColor"]
@@ -179,6 +194,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "alpha"]
 - !private ["Ps28CustomDebugStringConvertible", "appendContentsOf"]
 - !private ["Ps28CustomDebugStringConvertible", "attributedPlaceholder"]
+- !private ["Ps28CustomDebugStringConvertible", "authUser"]
 - !private ["Ps28CustomDebugStringConvertible", "backgroundColor"]
 - !private ["Ps28CustomDebugStringConvertible", "cancelsTouchesInView"]
 - !private ["Ps28CustomDebugStringConvertible", "clearColor"]
@@ -195,6 +211,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "logInButtonWasTapped"]
 - ["Ps28CustomDebugStringConvertible", "passwordTextField"]
 - !private ["Ps28CustomDebugStringConvertible", "placeholder"]
+- !private ["Ps28CustomDebugStringConvertible", "print"]
 - !private ["Ps28CustomDebugStringConvertible", "resignFirstResponder"]
 - ["Ps28CustomDebugStringConvertible", "setUpUI"]
 - !private ["Ps28CustomDebugStringConvertible", "state"]
@@ -214,12 +231,15 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", ""]
 - !private ["Ps23CustomStringConvertible", "Distance"]
 - !private ["Ps23CustomStringConvertible", "Element"]
+- !private ["Ps23CustomStringConvertible", "FirebaseManager"]
 - !private ["Ps23CustomStringConvertible", "Generator"]
 - !private ["Ps23CustomStringConvertible", "Index"]
 - !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
 - !private ["Ps23CustomStringConvertible", "Key"]
+- !private ["Ps23CustomStringConvertible", "LoginEmailVC"]
 - !private ["Ps23CustomStringConvertible", "NSAttributedString"]
 - !private ["Ps23CustomStringConvertible", "NSForegroundColorAttributeName"]
+- !private ["Ps23CustomStringConvertible", "Some"]
 - !private ["Ps23CustomStringConvertible", "SubSequence"]
 - !private ["Ps23CustomStringConvertible", "Theme"]
 - !private ["Ps23CustomStringConvertible", "UIColor"]
@@ -232,6 +252,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "alpha"]
 - !private ["Ps23CustomStringConvertible", "appendContentsOf"]
 - !private ["Ps23CustomStringConvertible", "attributedPlaceholder"]
+- !private ["Ps23CustomStringConvertible", "authUser"]
 - !private ["Ps23CustomStringConvertible", "backgroundColor"]
 - !private ["Ps23CustomStringConvertible", "cancelsTouchesInView"]
 - !private ["Ps23CustomStringConvertible", "clearColor"]
@@ -248,6 +269,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "logInButtonWasTapped"]
 - ["Ps23CustomStringConvertible", "passwordTextField"]
 - !private ["Ps23CustomStringConvertible", "placeholder"]
+- !private ["Ps23CustomStringConvertible", "print"]
 - !private ["Ps23CustomStringConvertible", "resignFirstResponder"]
 - ["Ps23CustomStringConvertible", "setUpUI"]
 - !private ["Ps23CustomStringConvertible", "state"]
@@ -273,8 +295,10 @@ depends-member:
 - !private ["Ps9Equatable", "ButtonColor"]
 - !private ["Ps9Equatable", "Distance"]
 - !private ["Ps9Equatable", "Ended"]
+- !private ["Ps9Equatable", "FirebaseManager"]
 - !private ["Ps9Equatable", "ForegroundColor"]
 - !private ["Ps9Equatable", "IntegerLiteralType"]
+- !private ["Ps9Equatable", "LoginEmailVC"]
 - !private ["Ps9Equatable", "NSAttributedString"]
 - !private ["Ps9Equatable", "NSForegroundColorAttributeName"]
 - !private ["Ps9Equatable", "RawValue"]
@@ -286,6 +310,7 @@ depends-member:
 - !private ["Ps9Equatable", "allTextFieldsAreFilled"]
 - !private ["Ps9Equatable", "alpha"]
 - !private ["Ps9Equatable", "attributedPlaceholder"]
+- !private ["Ps9Equatable", "authUser"]
 - !private ["Ps9Equatable", "backgroundColor"]
 - !private ["Ps9Equatable", "cancelsTouchesInView"]
 - !private ["Ps9Equatable", "clearColor"]
@@ -303,6 +328,7 @@ depends-member:
 - ["Ps9Equatable", "logInButtonWasTapped"]
 - ["Ps9Equatable", "passwordTextField"]
 - !private ["Ps9Equatable", "placeholder"]
+- !private ["Ps9Equatable", "print"]
 - !private ["Ps9Equatable", "resignFirstResponder"]
 - ["Ps9Equatable", "setUpUI"]
 - !private ["Ps9Equatable", "state"]
@@ -320,6 +346,11 @@ depends-member:
 - ["Ps9Equatable", "viewDidLoad"]
 - !private ["Ps9Equatable", "whiteColor"]
 - ["Ps9Equatable", ""]
+- !private ["CSo6FQuery", "authUser"]
+- !private ["CSo8Firebase", "authUser"]
+- !private ["C6CoChat15FirebaseManager", "handleUserAuthData"]
+- !private ["C6CoChat15FirebaseManager", "manager"]
+- !private ["C6CoChat15FirebaseManager", "ref"]
 - !private ["Ps16ForwardIndexType", "Distance"]
 - !private ["Ps16ForwardIndexType", "IntegerLiteralType"]
 - !private ["Ps13GeneratorType", "Element"]
@@ -327,8 +358,10 @@ depends-member:
 - !private ["Ps8Hashable", "ButtonColor"]
 - !private ["Ps8Hashable", "Distance"]
 - !private ["Ps8Hashable", "Ended"]
+- !private ["Ps8Hashable", "FirebaseManager"]
 - !private ["Ps8Hashable", "ForegroundColor"]
 - !private ["Ps8Hashable", "IntegerLiteralType"]
+- !private ["Ps8Hashable", "LoginEmailVC"]
 - !private ["Ps8Hashable", "NSAttributedString"]
 - !private ["Ps8Hashable", "NSForegroundColorAttributeName"]
 - !private ["Ps8Hashable", "RawValue"]
@@ -340,6 +373,7 @@ depends-member:
 - !private ["Ps8Hashable", "allTextFieldsAreFilled"]
 - !private ["Ps8Hashable", "alpha"]
 - !private ["Ps8Hashable", "attributedPlaceholder"]
+- !private ["Ps8Hashable", "authUser"]
 - !private ["Ps8Hashable", "backgroundColor"]
 - !private ["Ps8Hashable", "cancelsTouchesInView"]
 - !private ["Ps8Hashable", "clearColor"]
@@ -357,6 +391,7 @@ depends-member:
 - ["Ps8Hashable", "logInButtonWasTapped"]
 - ["Ps8Hashable", "passwordTextField"]
 - !private ["Ps8Hashable", "placeholder"]
+- !private ["Ps8Hashable", "print"]
 - !private ["Ps8Hashable", "resignFirstResponder"]
 - ["Ps8Hashable", "setUpUI"]
 - !private ["Ps8Hashable", "state"]
@@ -374,6 +409,7 @@ depends-member:
 - ["Ps8Hashable", "viewDidLoad"]
 - !private ["Ps8Hashable", "whiteColor"]
 - ["Ps8Hashable", ""]
+- !private ["SQ", "Some"]
 - !private ["Ps9Indexable", "Element"]
 - !private ["Ps9Indexable", "Generator"]
 - !private ["Ps9Indexable", "Index"]
@@ -392,6 +428,8 @@ depends-member:
 - !private ["Ps11IntegerType", "Distance"]
 - !private ["Ps11IntegerType", "IntegerLiteralType"]
 - ["C6CoChat12LoginEmailVC", "Bool"]
+- !private ["C6CoChat12LoginEmailVC", "FirebaseManager"]
+- !private ["C6CoChat12LoginEmailVC", "LoginEmailVC"]
 - !private ["C6CoChat12LoginEmailVC", "NSAttributedString"]
 - !private ["C6CoChat12LoginEmailVC", "NSForegroundColorAttributeName"]
 - !private ["C6CoChat12LoginEmailVC", "Theme"]
@@ -410,6 +448,7 @@ depends-member:
 - ["C6CoChat12LoginEmailVC", "logInButtonContainer"]
 - ["C6CoChat12LoginEmailVC", "logInButtonWasTapped"]
 - ["C6CoChat12LoginEmailVC", "passwordTextField"]
+- !private ["C6CoChat12LoginEmailVC", "print"]
 - ["C6CoChat12LoginEmailVC", "setUpUI"]
 - ["C6CoChat12LoginEmailVC", "textField"]
 - ["C6CoChat12LoginEmailVC", "textFieldDidBeginEditing"]
@@ -442,6 +481,8 @@ depends-member:
 - !private ["Ps16MutableSliceable", "_Element"]
 - !private ["Ps16MutableSliceable", "appendContentsOf"]
 - !private ["CSo18NSAttributedString", "init"]
+- !private ["PSo8NSCoding", "FirebaseManager"]
+- !private ["PSo8NSCoding", "LoginEmailVC"]
 - !private ["PSo8NSCoding", "NSAttributedString"]
 - !private ["PSo8NSCoding", "NSForegroundColorAttributeName"]
 - !private ["PSo8NSCoding", "Theme"]
@@ -466,6 +507,7 @@ depends-member:
 - ["PSo8NSCoding", "logInButtonWasTapped"]
 - ["PSo8NSCoding", "passwordTextField"]
 - !private ["PSo8NSCoding", "placeholder"]
+- !private ["PSo8NSCoding", "print"]
 - !private ["PSo8NSCoding", "resignFirstResponder"]
 - ["PSo8NSCoding", "setUpUI"]
 - !private ["PSo8NSCoding", "text"]
@@ -485,6 +527,8 @@ depends-member:
 - !private ["PSo9NSCopying", "clearColor"]
 - !private ["PSo9NSCopying", "init"]
 - !private ["PSo9NSCopying", "whiteColor"]
+- !private ["PSo26NSExtensionRequestHandling", "FirebaseManager"]
+- !private ["PSo26NSExtensionRequestHandling", "LoginEmailVC"]
 - !private ["PSo26NSExtensionRequestHandling", "NSAttributedString"]
 - !private ["PSo26NSExtensionRequestHandling", "NSForegroundColorAttributeName"]
 - !private ["PSo26NSExtensionRequestHandling", "Theme"]
@@ -499,6 +543,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "logInButtonContainer"]
 - ["PSo26NSExtensionRequestHandling", "logInButtonWasTapped"]
 - ["PSo26NSExtensionRequestHandling", "passwordTextField"]
+- !private ["PSo26NSExtensionRequestHandling", "print"]
 - ["PSo26NSExtensionRequestHandling", "setUpUI"]
 - ["PSo26NSExtensionRequestHandling", "textField"]
 - ["PSo26NSExtensionRequestHandling", "textFieldDidBeginEditing"]
@@ -513,6 +558,8 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", ""]
 - !private ["PSo16NSMutableCopying", "init"]
 - ["CSo8NSObject", "Bool"]
+- !private ["CSo8NSObject", "FirebaseManager"]
+- !private ["CSo8NSObject", "LoginEmailVC"]
 - !private ["CSo8NSObject", "NSAttributedString"]
 - !private ["CSo8NSObject", "NSForegroundColorAttributeName"]
 - !private ["CSo8NSObject", "Theme"]
@@ -525,6 +572,7 @@ depends-member:
 - !private ["CSo8NSObject", "allTextFieldsAreFilled"]
 - !private ["CSo8NSObject", "alpha"]
 - !private ["CSo8NSObject", "attributedPlaceholder"]
+- !private ["CSo8NSObject", "authUser"]
 - !private ["CSo8NSObject", "backgroundColor"]
 - !private ["CSo8NSObject", "cancelsTouchesInView"]
 - !private ["CSo8NSObject", "clearColor"]
@@ -541,6 +589,7 @@ depends-member:
 - ["CSo8NSObject", "logInButtonWasTapped"]
 - ["CSo8NSObject", "passwordTextField"]
 - !private ["CSo8NSObject", "placeholder"]
+- !private ["CSo8NSObject", "print"]
 - !private ["CSo8NSObject", "resignFirstResponder"]
 - ["CSo8NSObject", "setUpUI"]
 - !private ["CSo8NSObject", "state"]
@@ -557,6 +606,8 @@ depends-member:
 - !private ["CSo8NSObject", "view"]
 - ["CSo8NSObject", "viewDidLoad"]
 - !private ["CSo8NSObject", "whiteColor"]
+- !private ["PSo16NSObjectProtocol", "FirebaseManager"]
+- !private ["PSo16NSObjectProtocol", "LoginEmailVC"]
 - !private ["PSo16NSObjectProtocol", "NSAttributedString"]
 - !private ["PSo16NSObjectProtocol", "NSForegroundColorAttributeName"]
 - !private ["PSo16NSObjectProtocol", "Theme"]
@@ -566,6 +617,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "allTextFieldsAreFilled"]
 - !private ["PSo16NSObjectProtocol", "alpha"]
 - !private ["PSo16NSObjectProtocol", "attributedPlaceholder"]
+- !private ["PSo16NSObjectProtocol", "authUser"]
 - !private ["PSo16NSObjectProtocol", "backgroundColor"]
 - !private ["PSo16NSObjectProtocol", "cancelsTouchesInView"]
 - !private ["PSo16NSObjectProtocol", "clearColor"]
@@ -582,6 +634,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "logInButtonWasTapped"]
 - ["PSo16NSObjectProtocol", "passwordTextField"]
 - !private ["PSo16NSObjectProtocol", "placeholder"]
+- !private ["PSo16NSObjectProtocol", "print"]
 - !private ["PSo16NSObjectProtocol", "resignFirstResponder"]
 - ["PSo16NSObjectProtocol", "setUpUI"]
 - !private ["PSo16NSObjectProtocol", "state"]
@@ -602,6 +655,7 @@ depends-member:
 - !private ["PSo14NSSecureCoding", "clearColor"]
 - !private ["PSo14NSSecureCoding", "init"]
 - !private ["PSo14NSSecureCoding", "whiteColor"]
+- !private ["Ps21NilLiteralConvertible", "Some"]
 - !private ["Sq", "deinit"]
 - !private ["Ps21RandomAccessIndexType", "Distance"]
 - !private ["Ps21RandomAccessIndexType", "IntegerLiteralType"]
@@ -613,7 +667,6 @@ depends-member:
 - !private ["Ps30RangeReplaceableCollectionType", "appendContentsOf"]
 - !private ["Ps16RawRepresentable", "Ended"]
 - !private ["Ps16RawRepresentable", "RawValue"]
-- !private ["V10ObjectiveC8Selector", "deinit"]
 - !private ["Ps12SequenceType", "Element"]
 - !private ["Ps12SequenceType", "Generator"]
 - !private ["Ps12SequenceType", "Index"]
@@ -651,6 +704,8 @@ depends-member:
 - !private ["PSo12UIAppearance", "resignFirstResponder"]
 - !private ["PSo12UIAppearance", "text"]
 - !private ["PSo12UIAppearance", "textColor"]
+- !private ["PSo21UIAppearanceContainer", "FirebaseManager"]
+- !private ["PSo21UIAppearanceContainer", "LoginEmailVC"]
 - !private ["PSo21UIAppearanceContainer", "NSAttributedString"]
 - !private ["PSo21UIAppearanceContainer", "NSForegroundColorAttributeName"]
 - !private ["PSo21UIAppearanceContainer", "Theme"]
@@ -673,6 +728,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "logInButtonWasTapped"]
 - ["PSo21UIAppearanceContainer", "passwordTextField"]
 - !private ["PSo21UIAppearanceContainer", "placeholder"]
+- !private ["PSo21UIAppearanceContainer", "print"]
 - !private ["PSo21UIAppearanceContainer", "resignFirstResponder"]
 - ["PSo21UIAppearanceContainer", "setUpUI"]
 - !private ["PSo21UIAppearanceContainer", "text"]
@@ -692,6 +748,8 @@ depends-member:
 - !private ["CSo7UIColor", "clearColor"]
 - !private ["CSo7UIColor", "init"]
 - !private ["CSo7UIColor", "whiteColor"]
+- !private ["PSo18UIContentContainer", "FirebaseManager"]
+- !private ["PSo18UIContentContainer", "LoginEmailVC"]
 - !private ["PSo18UIContentContainer", "NSAttributedString"]
 - !private ["PSo18UIContentContainer", "NSForegroundColorAttributeName"]
 - !private ["PSo18UIContentContainer", "Theme"]
@@ -706,6 +764,7 @@ depends-member:
 - ["PSo18UIContentContainer", "logInButtonContainer"]
 - ["PSo18UIContentContainer", "logInButtonWasTapped"]
 - ["PSo18UIContentContainer", "passwordTextField"]
+- !private ["PSo18UIContentContainer", "print"]
 - ["PSo18UIContentContainer", "setUpUI"]
 - ["PSo18UIContentContainer", "textField"]
 - ["PSo18UIContentContainer", "textFieldDidBeginEditing"]
@@ -749,6 +808,8 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "resignFirstResponder"]
 - !private ["PSo13UIDynamicItem", "text"]
 - !private ["PSo13UIDynamicItem", "textColor"]
+- !private ["PSo18UIFocusEnvironment", "FirebaseManager"]
+- !private ["PSo18UIFocusEnvironment", "LoginEmailVC"]
 - !private ["PSo18UIFocusEnvironment", "NSAttributedString"]
 - !private ["PSo18UIFocusEnvironment", "NSForegroundColorAttributeName"]
 - !private ["PSo18UIFocusEnvironment", "Theme"]
@@ -771,6 +832,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "logInButtonWasTapped"]
 - ["PSo18UIFocusEnvironment", "passwordTextField"]
 - !private ["PSo18UIFocusEnvironment", "placeholder"]
+- !private ["PSo18UIFocusEnvironment", "print"]
 - !private ["PSo18UIFocusEnvironment", "resignFirstResponder"]
 - ["PSo18UIFocusEnvironment", "setUpUI"]
 - !private ["PSo18UIFocusEnvironment", "text"]
@@ -802,6 +864,8 @@ depends-member:
 - !private ["PSo10UIKeyInput", "text"]
 - !private ["PSo10UIKeyInput", "textColor"]
 - ["CSo11UIResponder", "Bool"]
+- !private ["CSo11UIResponder", "FirebaseManager"]
+- !private ["CSo11UIResponder", "LoginEmailVC"]
 - !private ["CSo11UIResponder", "NSAttributedString"]
 - !private ["CSo11UIResponder", "NSForegroundColorAttributeName"]
 - !private ["CSo11UIResponder", "Theme"]
@@ -827,6 +891,7 @@ depends-member:
 - ["CSo11UIResponder", "logInButtonWasTapped"]
 - ["CSo11UIResponder", "passwordTextField"]
 - !private ["CSo11UIResponder", "placeholder"]
+- !private ["CSo11UIResponder", "print"]
 - !private ["CSo11UIResponder", "resignFirstResponder"]
 - ["CSo11UIResponder", "setUpUI"]
 - !private ["CSo11UIResponder", "text"]
@@ -841,6 +906,8 @@ depends-member:
 - ["CSo11UIResponder", "textFields"]
 - !private ["CSo11UIResponder", "view"]
 - ["CSo11UIResponder", "viewDidLoad"]
+- !private ["PSo16UIStateRestoring", "FirebaseManager"]
+- !private ["PSo16UIStateRestoring", "LoginEmailVC"]
 - !private ["PSo16UIStateRestoring", "NSAttributedString"]
 - !private ["PSo16UIStateRestoring", "NSForegroundColorAttributeName"]
 - !private ["PSo16UIStateRestoring", "Theme"]
@@ -855,6 +922,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "logInButtonContainer"]
 - ["PSo16UIStateRestoring", "logInButtonWasTapped"]
 - ["PSo16UIStateRestoring", "passwordTextField"]
+- !private ["PSo16UIStateRestoring", "print"]
 - ["PSo16UIStateRestoring", "setUpUI"]
 - ["PSo16UIStateRestoring", "textField"]
 - ["PSo16UIStateRestoring", "textFieldDidBeginEditing"]
@@ -879,6 +947,8 @@ depends-member:
 - !private ["CSo11UITextField", "resignFirstResponder"]
 - !private ["CSo11UITextField", "text"]
 - !private ["CSo11UITextField", "textColor"]
+- !private ["PSo19UITextFieldDelegate", "FirebaseManager"]
+- !private ["PSo19UITextFieldDelegate", "LoginEmailVC"]
 - !private ["PSo19UITextFieldDelegate", "NSAttributedString"]
 - !private ["PSo19UITextFieldDelegate", "NSForegroundColorAttributeName"]
 - !private ["PSo19UITextFieldDelegate", "Theme"]
@@ -891,6 +961,7 @@ depends-member:
 - !private ["PSo19UITextFieldDelegate", "logInButton"]
 - !private ["PSo19UITextFieldDelegate", "logInButtonContainer"]
 - !private ["PSo19UITextFieldDelegate", "passwordTextField"]
+- !private ["PSo19UITextFieldDelegate", "print"]
 - !private ["PSo19UITextFieldDelegate", "setUpUI"]
 - ["PSo19UITextFieldDelegate", "textField"]
 - ["PSo19UITextFieldDelegate", "textFieldDidBeginEditing"]
@@ -920,6 +991,8 @@ depends-member:
 - !private ["PSo17UITextInputTraits", "resignFirstResponder"]
 - !private ["PSo17UITextInputTraits", "text"]
 - !private ["PSo17UITextInputTraits", "textColor"]
+- !private ["PSo18UITraitEnvironment", "FirebaseManager"]
+- !private ["PSo18UITraitEnvironment", "LoginEmailVC"]
 - !private ["PSo18UITraitEnvironment", "NSAttributedString"]
 - !private ["PSo18UITraitEnvironment", "NSForegroundColorAttributeName"]
 - !private ["PSo18UITraitEnvironment", "Theme"]
@@ -942,6 +1015,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "logInButtonWasTapped"]
 - ["PSo18UITraitEnvironment", "passwordTextField"]
 - !private ["PSo18UITraitEnvironment", "placeholder"]
+- !private ["PSo18UITraitEnvironment", "print"]
 - !private ["PSo18UITraitEnvironment", "resignFirstResponder"]
 - ["PSo18UITraitEnvironment", "setUpUI"]
 - !private ["PSo18UITraitEnvironment", "text"]
@@ -969,6 +1043,8 @@ depends-member:
 - !private ["CSo6UIView", "text"]
 - !private ["CSo6UIView", "textColor"]
 - ["CSo16UIViewController", "Bool"]
+- !private ["CSo16UIViewController", "FirebaseManager"]
+- !private ["CSo16UIViewController", "LoginEmailVC"]
 - !private ["CSo16UIViewController", "NSAttributedString"]
 - !private ["CSo16UIViewController", "NSForegroundColorAttributeName"]
 - !private ["CSo16UIViewController", "Theme"]
@@ -986,6 +1062,7 @@ depends-member:
 - ["CSo16UIViewController", "logInButtonContainer"]
 - ["CSo16UIViewController", "logInButtonWasTapped"]
 - ["CSo16UIViewController", "passwordTextField"]
+- !private ["CSo16UIViewController", "print"]
 - ["CSo16UIViewController", "setUpUI"]
 - ["CSo16UIViewController", "textField"]
 - ["CSo16UIViewController", "textFieldDidBeginEditing"]
@@ -1028,6 +1105,7 @@ depends-member:
 - !private ["Ps21_ObjectiveCBridgeable", "Index"]
 - !private ["Ps21_ObjectiveCBridgeable", "IntegerLiteralType"]
 - !private ["Ps21_ObjectiveCBridgeable", "Key"]
+- !private ["Ps21_ObjectiveCBridgeable", "Some"]
 - !private ["Ps21_ObjectiveCBridgeable", "SubSequence"]
 - !private ["Ps21_ObjectiveCBridgeable", "Value"]
 - !private ["Ps21_ObjectiveCBridgeable", "_Element"]
@@ -1042,6 +1120,7 @@ depends-member:
 - !private ["Ps12_Reflectable", "Index"]
 - !private ["Ps12_Reflectable", "IntegerLiteralType"]
 - !private ["Ps12_Reflectable", "Key"]
+- !private ["Ps12_Reflectable", "Some"]
 - !private ["Ps12_Reflectable", "SubSequence"]
 - !private ["Ps12_Reflectable", "Value"]
 - !private ["Ps12_Reflectable", "_Element"]
@@ -1082,9 +1161,13 @@ depends-nominal:
 - !private "Vs10Dictionary"
 - !private "Ps28DictionaryLiteralConvertible"
 - "Ps9Equatable"
+- !private "CSo6FQuery"
+- !private "CSo8Firebase"
+- !private "C6CoChat15FirebaseManager"
 - !private "Ps16ForwardIndexType"
 - !private "Ps13GeneratorType"
 - "Ps8Hashable"
+- !private "SQ"
 - !private "Ps9Indexable"
 - !private "Vs17IndexingGenerator"
 - !private "Si"
@@ -1104,11 +1187,11 @@ depends-nominal:
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
 - !private "PSo14NSSecureCoding"
+- !private "Ps21NilLiteralConvertible"
 - !private "Sq"
 - !private "Ps21RandomAccessIndexType"
 - !private "Ps30RangeReplaceableCollectionType"
 - !private "Ps16RawRepresentable"
-- !private "V10ObjectiveC8Selector"
 - !private "Ps12SequenceType"
 - !private "Ps17SignedIntegerType"
 - !private "Ps16SignedNumberType"
@@ -1283,4 +1366,4 @@ depends-external:
 - "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFNetworking.h"
 - "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFNetworking-umbrella.h"
 - "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Modules/module.modulemap"
-interface-hash: "5504a39c0018df63d16c7c376739a0b9"
+interface-hash: "0aa969587936396f8063340b75f49b30"

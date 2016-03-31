@@ -6,8 +6,8 @@ provides-nominal:
 provides-member:
 - ["C6CoChat30BrowseNavigationViewController", ""]
 provides-dynamic-lookup:
-- "didReceiveMemoryWarning"
 - "viewDidLoad"
+- "didReceiveMemoryWarning"
 depends-top-level:
 - "BrowseNavigationViewController"
 - "UINavigationController"

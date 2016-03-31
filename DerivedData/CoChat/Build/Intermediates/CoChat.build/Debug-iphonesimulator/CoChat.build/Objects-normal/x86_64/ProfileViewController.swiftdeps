@@ -8,64 +8,64 @@ provides-member:
 provides-dynamic-lookup:
 - "logOutUser"
 - "userLogedIn"
-- "setupArray"
-- "topContainer"
-- "setUpUI"
 - "signUpUser"
-- "prepareForSegue"
 - "recentTableView"
-- "viewDidAppear"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
-- "scrollViewDidScroll"
+- "prepareForSegue"
 - "viewDidLoad"
+- "setupArray"
+- "viewWillAppear"
+- "scrollViewDidScroll"
+- "setUpUI"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "topContainer"
 depends-top-level:
 - "UIViewController"
-- "ProfileViewController"
-- !private "Room"
-- !private "CGPointMake"
-- "UIView"
-- !private "UITableViewCellSelectionStyle"
-- !private "!="
 - "UIStoryboardSegue"
-- !private "Array"
-- !private "ProfileHeaderCell"
-- !private "=="
+- !private "CGPointMake"
+- !private "Channel"
+- !private "!="
+- !private "UITableViewCellSelectionStyle"
+- !private "Void"
+- "UITableViewDelegate"
+- "UITableViewDataSource"
+- !private "CGRect"
 - !private "~="
-- !private "ProfileFavoriteCell"
-- !private "UIImage"
+- "UIView"
+- "UITableViewCell"
+- !private "=="
 - !private "MessagingViewController"
-- !private "/"
+- "AnyObject"
+- !private "ProfileHeaderCell"
+- !private ">="
+- "ProfileViewController"
 - "FBSDKLoginButton"
-- "UIScrollView"
-- !private "MessagingNavigationViewController"
+- !private "Room"
+- !private "Array"
 - !private "ProfileLogoutCell"
-- !private "NSOperationQueue"
-- !private "<="
+- !private "&&"
+- !private "/"
+- !private "<"
+- !private "Theme"
 - !private "+"
+- "Bool"
+- "FBSDKLoginButtonDelegate"
 - "CGFloat"
 - "UIButton"
-- "FBSDKLoginButtonDelegate"
-- !private "Theme"
-- !private "CGRect"
-- !private "FirebaseManager"
-- !private "Channel"
 - !private "NSArray"
-- !private ">="
-- !private "-"
-- !private "<"
-- !private "&&"
-- "BooleanLiteralType"
+- !private "MessagingNavigationViewController"
+- !private "<="
 - "NSIndexPath"
-- "UITableViewCell"
-- !private "Void"
-- "Bool"
-- "UITableViewDataSource"
-- "UITableViewDelegate"
-- "AnyObject"
+- !private "FirebaseManager"
+- !private "NSOperationQueue"
+- !private "UIImage"
+- !private "-"
+- !private "ProfileFavoriteCell"
 - "Int"
+- "UIScrollView"
+- "BooleanLiteralType"
 - "UITableView"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "IntegerLiteralType"]
@@ -177,9 +177,9 @@ depends-member:
 - !private ["Ps9AnyObject", "user"]
 - !private ["Ps9AnyObject", "userImageView"]
 - ["Ps9AnyObject", "userLogedIn"]
-- ["Ps9AnyObject", "viewDidAppear"]
 - ["Ps9AnyObject", "viewDidLoad"]
 - ["Ps9AnyObject", "viewForZoomingInScrollView"]
+- ["Ps9AnyObject", "viewWillAppear"]
 - ["Ps9AnyObject", ""]
 - !private ["Sa", "Element"]
 - ["Sa", "Generator"]
@@ -326,9 +326,9 @@ depends-member:
 - !private ["Ps11CVarArgType", "topViewController"]
 - !private ["Ps11CVarArgType", "userImageView"]
 - ["Ps11CVarArgType", "userLogedIn"]
-- ["Ps11CVarArgType", "viewDidAppear"]
 - ["Ps11CVarArgType", "viewDidLoad"]
 - ["Ps11CVarArgType", "viewForZoomingInScrollView"]
+- ["Ps11CVarArgType", "viewWillAppear"]
 - ["Ps11CVarArgType", ""]
 - !private ["OE6CoChatCSo11UITableView14CellIdentifier", "ProfileCell"]
 - !private ["OE6CoChatCSo11UITableView14CellIdentifier", "ProfileFavoriteCell"]
@@ -469,9 +469,9 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "topViewController"]
 - !private ["Ps28CustomDebugStringConvertible", "userImageView"]
 - ["Ps28CustomDebugStringConvertible", "userLogedIn"]
-- ["Ps28CustomDebugStringConvertible", "viewDidAppear"]
 - ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
 - ["Ps28CustomDebugStringConvertible", "viewForZoomingInScrollView"]
+- ["Ps28CustomDebugStringConvertible", "viewWillAppear"]
 - ["Ps28CustomDebugStringConvertible", ""]
 - ["Ps23CustomStringConvertible", "AnyObject"]
 - ["Ps23CustomStringConvertible", "CGFloat"]
@@ -582,9 +582,9 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "topViewController"]
 - !private ["Ps23CustomStringConvertible", "userImageView"]
 - ["Ps23CustomStringConvertible", "userLogedIn"]
-- ["Ps23CustomStringConvertible", "viewDidAppear"]
 - ["Ps23CustomStringConvertible", "viewDidLoad"]
 - ["Ps23CustomStringConvertible", "viewForZoomingInScrollView"]
+- ["Ps23CustomStringConvertible", "viewWillAppear"]
 - ["Ps23CustomStringConvertible", ""]
 - !private ["Sd", "IntegerLiteralType"]
 - !private ["Sd", "Stride"]
@@ -706,9 +706,9 @@ depends-member:
 - !private ["Ps9Equatable", "topViewController"]
 - !private ["Ps9Equatable", "userImageView"]
 - ["Ps9Equatable", "userLogedIn"]
-- ["Ps9Equatable", "viewDidAppear"]
 - ["Ps9Equatable", "viewDidLoad"]
 - ["Ps9Equatable", "viewForZoomingInScrollView"]
+- ["Ps9Equatable", "viewWillAppear"]
 - !private ["Ps9Equatable", "width"]
 - !private ["Ps9Equatable", "x"]
 - !private ["Ps9Equatable", "y"]
@@ -907,9 +907,9 @@ depends-member:
 - !private ["Ps8Hashable", "topViewController"]
 - !private ["Ps8Hashable", "userImageView"]
 - ["Ps8Hashable", "userLogedIn"]
-- ["Ps8Hashable", "viewDidAppear"]
 - ["Ps8Hashable", "viewDidLoad"]
 - ["Ps8Hashable", "viewForZoomingInScrollView"]
+- ["Ps8Hashable", "viewWillAppear"]
 - ["Ps8Hashable", ""]
 - !private ["SQ", "deinit"]
 - !private ["Ps9Indexable", "Element"]
@@ -1075,9 +1075,9 @@ depends-member:
 - !private ["PSo8NSCoding", "topViewController"]
 - !private ["PSo8NSCoding", "userImageView"]
 - ["PSo8NSCoding", "userLogedIn"]
-- ["PSo8NSCoding", "viewDidAppear"]
 - ["PSo8NSCoding", "viewDidLoad"]
 - ["PSo8NSCoding", "viewForZoomingInScrollView"]
+- ["PSo8NSCoding", "viewWillAppear"]
 - ["PSo8NSCoding", ""]
 - !private ["PSo9NSCopying", "Generator"]
 - !private ["PSo9NSCopying", "init"]
@@ -1135,9 +1135,9 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "topContainer"]
 - !private ["PSo26NSExtensionRequestHandling", "topViewController"]
 - ["PSo26NSExtensionRequestHandling", "userLogedIn"]
-- ["PSo26NSExtensionRequestHandling", "viewDidAppear"]
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
 - ["PSo26NSExtensionRequestHandling", "viewForZoomingInScrollView"]
+- ["PSo26NSExtensionRequestHandling", "viewWillAppear"]
 - ["PSo26NSExtensionRequestHandling", ""]
 - !private ["PSo17NSFastEnumeration", "Generator"]
 - !private ["PSo17NSFastEnumeration", "init"]
@@ -1258,9 +1258,9 @@ depends-member:
 - !private ["CSo8NSObject", "topViewController"]
 - !private ["CSo8NSObject", "userImageView"]
 - ["CSo8NSObject", "userLogedIn"]
-- ["CSo8NSObject", "viewDidAppear"]
 - ["CSo8NSObject", "viewDidLoad"]
 - ["CSo8NSObject", "viewForZoomingInScrollView"]
+- ["CSo8NSObject", "viewWillAppear"]
 - ["PSo16NSObjectProtocol", "AnyObject"]
 - ["PSo16NSObjectProtocol", "CGFloat"]
 - !private ["PSo16NSObjectProtocol", "CGPointMake"]
@@ -1356,9 +1356,9 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "topViewController"]
 - !private ["PSo16NSObjectProtocol", "userImageView"]
 - ["PSo16NSObjectProtocol", "userLogedIn"]
-- ["PSo16NSObjectProtocol", "viewDidAppear"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", "viewForZoomingInScrollView"]
+- ["PSo16NSObjectProtocol", "viewWillAppear"]
 - ["PSo16NSObjectProtocol", ""]
 - !private ["CSo16NSOperationQueue", "addOperationWithBlock"]
 - !private ["CSo16NSOperationQueue", "mainQueue"]
@@ -1447,9 +1447,9 @@ depends-member:
 - ["C6CoChat21ProfileViewController", "tableView"]
 - ["C6CoChat21ProfileViewController", "topContainer"]
 - ["C6CoChat21ProfileViewController", "userLogedIn"]
-- ["C6CoChat21ProfileViewController", "viewDidAppear"]
 - ["C6CoChat21ProfileViewController", "viewDidLoad"]
 - ["C6CoChat21ProfileViewController", "viewForZoomingInScrollView"]
+- ["C6CoChat21ProfileViewController", "viewWillAppear"]
 - ["Ps21RandomAccessIndexType", "Distance"]
 - ["Ps21RandomAccessIndexType", "IntegerLiteralType"]
 - !private ["Ps21RandomAccessIndexType", "Stride"]
@@ -1662,9 +1662,9 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "topViewController"]
 - !private ["PSo21UIAppearanceContainer", "userImageView"]
 - ["PSo21UIAppearanceContainer", "userLogedIn"]
-- ["PSo21UIAppearanceContainer", "viewDidAppear"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
 - ["PSo21UIAppearanceContainer", "viewForZoomingInScrollView"]
+- ["PSo21UIAppearanceContainer", "viewWillAppear"]
 - ["PSo21UIAppearanceContainer", ""]
 - !private ["OSC12UIBarMetrics", "Default"]
 - !private ["PSo16UIBarPositioning", "setBackgroundImage"]
@@ -1726,9 +1726,9 @@ depends-member:
 - ["PSo18UIContentContainer", "topContainer"]
 - !private ["PSo18UIContentContainer", "topViewController"]
 - ["PSo18UIContentContainer", "userLogedIn"]
-- ["PSo18UIContentContainer", "viewDidAppear"]
 - ["PSo18UIContentContainer", "viewDidLoad"]
 - ["PSo18UIContentContainer", "viewForZoomingInScrollView"]
+- ["PSo18UIContentContainer", "viewWillAppear"]
 - ["PSo18UIContentContainer", ""]
 - !private ["CSo9UIControl", "addTarget"]
 - !private ["CSo9UIControl", "backgroundColor"]
@@ -1883,9 +1883,9 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "topViewController"]
 - !private ["PSo18UIFocusEnvironment", "userImageView"]
 - ["PSo18UIFocusEnvironment", "userLogedIn"]
-- ["PSo18UIFocusEnvironment", "viewDidAppear"]
 - ["PSo18UIFocusEnvironment", "viewDidLoad"]
 - ["PSo18UIFocusEnvironment", "viewForZoomingInScrollView"]
+- ["PSo18UIFocusEnvironment", "viewWillAppear"]
 - ["PSo18UIFocusEnvironment", ""]
 - !private ["PSo27UIGestureRecognizerDelegate", "contentSeparatorView"]
 - !private ["PSo27UIGestureRecognizerDelegate", "favoriteChannelLabel"]
@@ -2004,9 +2004,9 @@ depends-member:
 - !private ["CSo11UIResponder", "topViewController"]
 - !private ["CSo11UIResponder", "userImageView"]
 - ["CSo11UIResponder", "userLogedIn"]
-- ["CSo11UIResponder", "viewDidAppear"]
 - ["CSo11UIResponder", "viewDidLoad"]
 - ["CSo11UIResponder", "viewForZoomingInScrollView"]
+- ["CSo11UIResponder", "viewWillAppear"]
 - !private ["CSo12UIScrollView", "backgroundColor"]
 - !private ["CSo12UIScrollView", "cellForRowAtIndexPath"]
 - !private ["CSo12UIScrollView", "contentOffset"]
@@ -2119,9 +2119,9 @@ depends-member:
 - ["PSo16UIStateRestoring", "topContainer"]
 - !private ["PSo16UIStateRestoring", "topViewController"]
 - ["PSo16UIStateRestoring", "userLogedIn"]
-- ["PSo16UIStateRestoring", "viewDidAppear"]
 - ["PSo16UIStateRestoring", "viewDidLoad"]
 - ["PSo16UIStateRestoring", "viewForZoomingInScrollView"]
+- ["PSo16UIStateRestoring", "viewWillAppear"]
 - ["PSo16UIStateRestoring", ""]
 - !private ["CSo17UIStoryboardSegue", "destinationViewController"]
 - !private ["CSo11UITableView", "backgroundColor"]
@@ -2329,9 +2329,9 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "topViewController"]
 - !private ["PSo18UITraitEnvironment", "userImageView"]
 - ["PSo18UITraitEnvironment", "userLogedIn"]
-- ["PSo18UITraitEnvironment", "viewDidAppear"]
 - ["PSo18UITraitEnvironment", "viewDidLoad"]
 - ["PSo18UITraitEnvironment", "viewForZoomingInScrollView"]
+- ["PSo18UITraitEnvironment", "viewWillAppear"]
 - ["PSo18UITraitEnvironment", ""]
 - !private ["CSo6UIView", "addTarget"]
 - !private ["CSo6UIView", "animateWithDuration"]
@@ -2433,9 +2433,9 @@ depends-member:
 - ["CSo16UIViewController", "topContainer"]
 - !private ["CSo16UIViewController", "topViewController"]
 - ["CSo16UIViewController", "userLogedIn"]
-- ["CSo16UIViewController", "viewDidAppear"]
 - ["CSo16UIViewController", "viewDidLoad"]
 - ["CSo16UIViewController", "viewForZoomingInScrollView"]
+- ["CSo16UIViewController", "viewWillAppear"]
 - ["CSo16UIViewController", ""]
 - !private ["C6CoChat4User", "favoriteChannels"]
 - !private ["Ps10_ArrayType", "Element"]
@@ -2833,4 +2833,4 @@ depends-external:
 - "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFNetworking.h"
 - "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFNetworking-umbrella.h"
 - "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Modules/module.modulemap"
-interface-hash: "c10b8e8501ec8e426ea7f3e111d7e1d1"
+interface-hash: "426eb37ca6e58fe63902d4603a177b4d"

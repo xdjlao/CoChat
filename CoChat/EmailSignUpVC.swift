@@ -1,4 +1,5 @@
 import UIKit
+import Firebase
 
 class EmailSignUpVC: UIViewController, UITextFieldDelegate {
     @IBOutlet var formContainer: UIView!
@@ -20,8 +21,8 @@ class EmailSignUpVC: UIViewController, UITextFieldDelegate {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide", name: UIKeyboardWillHideNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(EmailSignUpVC.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(EmailSignUpVC.keyboardWillHide), name: UIKeyboardWillHideNotification, object: nil)
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -45,7 +46,7 @@ class EmailSignUpVC: UIViewController, UITextFieldDelegate {
         signUpButton.backgroundColor = UIColor.clearColor()
         view.backgroundColor = Theme.Colors.BackgroundColor.color
         
-        let tapGesture = UITapGestureRecognizer(target: self, action:"handleSingleTap:")
+        let tapGesture = UITapGestureRecognizer(target: self, action:#selector(EmailSignUpVC.handleSingleTap(_:)))
         tapGesture.cancelsTouchesInView = false
         view.addGestureRecognizer(tapGesture)
     }
@@ -77,10 +78,17 @@ class EmailSignUpVC: UIViewController, UITextFieldDelegate {
     @IBAction func signUpButtonWasTapped(sender: UIButton) {
         if allTextFieldsAreFilled(textFields) && passwordsMatch(passwordTextField, tF2: rePasswordTextField)
             && isValidEmail(emailTextField) {
-            let url = NSURL(fileURLWithPath: "blendColorLogo-60")
-            let str = String(url)
-            User.createNewUserWith(emailTextField.text!, name:fullNameTextField.text!, password: passwordTextField.text!, uid: generateRandomPassCode(), profileImageURl:str, withCompletionHandler: { (new) in
-                print("created new user")
+            let ref = Firebase(url: "https://najchat.firebaseio.com/")
+            ref.createUser(emailTextField.text!, password: passwordTextField.text!, withValueCompletionBlock: { error, result in
+                if let error = error {
+                    print(error)
+                } else {
+                    ref.authUser(self.emailTextField.text!, password: self.passwordTextField.text!, withCompletionBlock: { error, authData in
+                        FirebaseManager.manager.handleUserAuthData(authData, name: self.fullNameTextField.text!, withMainQueueCompletionHandler: { user in
+                            print("new user \(user) authed")
+                        })
+                    })
+                }
             })
         }
     }

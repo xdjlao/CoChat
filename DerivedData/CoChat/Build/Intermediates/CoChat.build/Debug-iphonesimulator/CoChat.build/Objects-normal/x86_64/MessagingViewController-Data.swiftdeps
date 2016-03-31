@@ -8,69 +8,68 @@ provides-member:
 - ["C6CoChat23MessagingViewController", ""]
 - ["OC6CoChat23MessagingViewController4Mode", ""]
 provides-dynamic-lookup:
-- "tableViewTopConstraint"
-- "viewWillAppear"
-- "setUpListener"
-- "currentUID"
-- "sortMessages"
-- "scrollToBottomMessage"
-- "viewWillDisappear"
-- "sendButtonOutlet"
-- "firstType"
-- "textView"
-- "viewDidLoad"
 - "prepareForSegue"
-- "menuChannelViewController"
 - "fromWhisper"
-- "viewDidAppear"
-- "buttonContainer"
-- "sendButton"
-- "getMoreMessages"
 - "channelButtonOutlet"
+- "viewDidLoad"
+- "currentUID"
+- "textView"
+- "tableViewTopConstraint"
+- "sendButton"
+- "sendButtonOutlet"
 - "tableView"
+- "firstType"
+- "getMoreMessages"
+- "setUpListener"
+- "sortMessages"
+- "menuChannelViewController"
+- "buttonContainer"
+- "viewWillDisappear"
+- "scrollToBottomMessage"
+- "viewWillAppear"
+- "viewDidAppear"
 depends-top-level:
-- "Room"
-- !private "UITextAutocorrectionType"
-- "UIViewController"
-- "Channel"
-- !private "||"
-- "Message"
+- !private "NSIndexPath"
+- "=="
+- "NSLayoutConstraint"
+- !private "-"
+- !private "FirebaseManager"
+- !private "!"
 - "UITextViewDelegate"
-- "MessagingViewController"
+- !private "Theme"
+- "UITextView"
+- "AnyObject"
+- !private "&&"
+- !private "UITextAutocorrectionType"
+- "CGRect"
 - "UIStoryboardSegue"
 - !private "!="
-- "BooleanLiteralType"
+- "UIViewController"
 - "MenuChannelViewController"
-- "Firebase"
-- "UIRefreshControl"
-- "NSLayoutConstraint"
-- "CGRect"
-- !private "NSComparisonResult"
-- !private "ShareViewController"
+- "Channel"
 - "UIView"
-- "Bool"
-- "=="
-- !private "FirebaseManager"
-- "String"
-- "CGFloat"
-- !private "Theme"
-- !private "-"
-- !private "!"
-- !private "assertionFailure"
-- "Array"
-- "UITableView"
-- "UITextView"
-- !private "NSOperationQueue"
-- !private "FirebaseServerValue"
-- !private "&&"
-- "Conversation"
-- !private ">"
-- !private "NSIndexPath"
-- "MenuChannelViewControllerDelegate"
 - "UIButton"
-- "AnyObject"
+- "Message"
+- "CGFloat"
+- !private "ShareViewController"
+- !private "FirebaseServerValue"
+- !private "||"
+- "Firebase"
+- "Room"
+- "UITableView"
+- "UIRefreshControl"
+- !private "NSOperationQueue"
 - !private "CGPointMake"
-- !private "StringLiteralType"
+- "Array"
+- "BooleanLiteralType"
+- !private "NSComparisonResult"
+- "Conversation"
+- "MenuChannelViewControllerDelegate"
+- "Bool"
+- !private "assertionFailure"
+- "MessagingViewController"
+- "String"
+- !private ">"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "IntegerLiteralType"]
 - !private ["Ps16AbsoluteValuable", "Stride"]
@@ -78,6 +77,7 @@ depends-member:
 - !private ["Ps9AnyObject", "FirebaseManager"]
 - !private ["Ps9AnyObject", "FirebaseServerValue"]
 - ["Ps9AnyObject", "Message"]
+- !private ["Ps9AnyObject", "MessagingViewController"]
 - !private ["Ps9AnyObject", "NSComparisonResult"]
 - !private ["Ps9AnyObject", "NSIndexPath"]
 - !private ["Ps9AnyObject", "NSOperationQueue"]
@@ -110,6 +110,7 @@ depends-member:
 - !private ["Ps9AnyObject", "destinationViewController"]
 - !private ["Ps9AnyObject", "endRefreshing"]
 - ["Ps9AnyObject", "firstType"]
+- !private ["Ps9AnyObject", "firstUser"]
 - !private ["Ps9AnyObject", "frame"]
 - ["Ps9AnyObject", "fromWhisper"]
 - ["Ps9AnyObject", "getMoreMessages"]
@@ -142,6 +143,7 @@ depends-member:
 - ["Ps9AnyObject", "room"]
 - !private ["Ps9AnyObject", "saveSelf"]
 - ["Ps9AnyObject", "scrollToBottomMessage"]
+- !private ["Ps9AnyObject", "scrollToRowAtIndexPath"]
 - ["Ps9AnyObject", "scrollViewDidEndDecelerating"]
 - ["Ps9AnyObject", "scrollViewDidEndDragging"]
 - ["Ps9AnyObject", "scrollViewDidEndScrollingAnimation"]
@@ -234,6 +236,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "FirebaseServerValue"]
 - ["Ps11CVarArgType", "IntegerLiteralType"]
 - ["Ps11CVarArgType", "Message"]
+- !private ["Ps11CVarArgType", "MessagingViewController"]
 - !private ["Ps11CVarArgType", "NSComparisonResult"]
 - !private ["Ps11CVarArgType", "NSIndexPath"]
 - !private ["Ps11CVarArgType", "NSOperationQueue"]
@@ -291,6 +294,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "removeAllObservers"]
 - ["Ps11CVarArgType", "room"]
 - ["Ps11CVarArgType", "scrollToBottomMessage"]
+- !private ["Ps11CVarArgType", "scrollToRowAtIndexPath"]
 - ["Ps11CVarArgType", "scrollViewDidEndDecelerating"]
 - ["Ps11CVarArgType", "scrollViewDidEndDragging"]
 - ["Ps11CVarArgType", "scrollViewDidEndScrollingAnimation"]
@@ -353,6 +357,7 @@ depends-member:
 - !private ["Ps10Comparable", "hashValue"]
 - !private ["Ps10Comparable", "init"]
 - !private ["C6CoChat12Conversation", "deinit"]
+- !private ["C6CoChat12Conversation", "firstUser"]
 - !private ["C6CoChat12Conversation", "lastMessage"]
 - !private ["C6CoChat12Conversation", "saveSelf"]
 - !private ["C6CoChat12Conversation", "secondUser"]
@@ -364,6 +369,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "Generator"]
 - ["Ps28CustomDebugStringConvertible", "Index"]
 - ["Ps28CustomDebugStringConvertible", "Message"]
+- !private ["Ps28CustomDebugStringConvertible", "MessagingViewController"]
 - !private ["Ps28CustomDebugStringConvertible", "NSComparisonResult"]
 - !private ["Ps28CustomDebugStringConvertible", "NSIndexPath"]
 - !private ["Ps28CustomDebugStringConvertible", "NSOperationQueue"]
@@ -426,6 +432,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "removeAllObservers"]
 - ["Ps28CustomDebugStringConvertible", "room"]
 - ["Ps28CustomDebugStringConvertible", "scrollToBottomMessage"]
+- !private ["Ps28CustomDebugStringConvertible", "scrollToRowAtIndexPath"]
 - ["Ps28CustomDebugStringConvertible", "scrollViewDidEndDecelerating"]
 - ["Ps28CustomDebugStringConvertible", "scrollViewDidEndDragging"]
 - ["Ps28CustomDebugStringConvertible", "scrollViewDidEndScrollingAnimation"]
@@ -476,6 +483,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "Index"]
 - ["Ps23CustomStringConvertible", "IntegerLiteralType"]
 - ["Ps23CustomStringConvertible", "Message"]
+- !private ["Ps23CustomStringConvertible", "MessagingViewController"]
 - !private ["Ps23CustomStringConvertible", "NSComparisonResult"]
 - !private ["Ps23CustomStringConvertible", "NSIndexPath"]
 - !private ["Ps23CustomStringConvertible", "NSOperationQueue"]
@@ -540,6 +548,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "removeAllObservers"]
 - ["Ps23CustomStringConvertible", "room"]
 - ["Ps23CustomStringConvertible", "scrollToBottomMessage"]
+- !private ["Ps23CustomStringConvertible", "scrollToRowAtIndexPath"]
 - ["Ps23CustomStringConvertible", "scrollViewDidEndDecelerating"]
 - ["Ps23CustomStringConvertible", "scrollViewDidEndDragging"]
 - ["Ps23CustomStringConvertible", "scrollViewDidEndScrollingAnimation"]
@@ -591,6 +600,7 @@ depends-member:
 - !private ["P6CoChat15DualQueriedType", "uid"]
 - !private ["Ps9Equatable", "Automatic"]
 - !private ["Ps9Equatable", "BackgroundColor"]
+- !private ["Ps9Equatable", "Bottom"]
 - !private ["Ps9Equatable", "CGPointMake"]
 - ["Ps9Equatable", "Chat"]
 - !private ["Ps9Equatable", "ChildAdded"]
@@ -599,6 +609,7 @@ depends-member:
 - !private ["Ps9Equatable", "FirebaseServerValue"]
 - ["Ps9Equatable", "IntegerLiteralType"]
 - ["Ps9Equatable", "Message"]
+- !private ["Ps9Equatable", "MessagingViewController"]
 - !private ["Ps9Equatable", "NSComparisonResult"]
 - !private ["Ps9Equatable", "NSIndexPath"]
 - !private ["Ps9Equatable", "NSOperationQueue"]
@@ -670,6 +681,7 @@ depends-member:
 - !private ["Ps9Equatable", "removeAllObservers"]
 - ["Ps9Equatable", "room"]
 - ["Ps9Equatable", "scrollToBottomMessage"]
+- !private ["Ps9Equatable", "scrollToRowAtIndexPath"]
 - ["Ps9Equatable", "scrollViewDidEndDecelerating"]
 - ["Ps9Equatable", "scrollViewDidEndDragging"]
 - ["Ps9Equatable", "scrollViewDidEndScrollingAnimation"]
@@ -734,6 +746,7 @@ depends-member:
 - !private ["P6CoChat12FirebaseType", "channels"]
 - !private ["P6CoChat12FirebaseType", "createNewMessageWith"]
 - !private ["P6CoChat12FirebaseType", "createNewWhisperWith"]
+- !private ["P6CoChat12FirebaseType", "firstUser"]
 - !private ["P6CoChat12FirebaseType", "lastMessage"]
 - !private ["P6CoChat12FirebaseType", "name"]
 - !private ["P6CoChat12FirebaseType", "saveSelf"]
@@ -756,6 +769,7 @@ depends-member:
 - !private ["P6CoChat26GeneralMessageCellDelegate", "FirebaseManager"]
 - !private ["P6CoChat26GeneralMessageCellDelegate", "FirebaseServerValue"]
 - ["P6CoChat26GeneralMessageCellDelegate", "Message"]
+- !private ["P6CoChat26GeneralMessageCellDelegate", "MessagingViewController"]
 - !private ["P6CoChat26GeneralMessageCellDelegate", "NSComparisonResult"]
 - !private ["P6CoChat26GeneralMessageCellDelegate", "NSIndexPath"]
 - !private ["P6CoChat26GeneralMessageCellDelegate", "NSOperationQueue"]
@@ -808,6 +822,7 @@ depends-member:
 - ["Ps13GeneratorType", "Element"]
 - !private ["Ps8Hashable", "Automatic"]
 - !private ["Ps8Hashable", "BackgroundColor"]
+- !private ["Ps8Hashable", "Bottom"]
 - !private ["Ps8Hashable", "CGPointMake"]
 - ["Ps8Hashable", "Chat"]
 - !private ["Ps8Hashable", "ChildAdded"]
@@ -816,6 +831,7 @@ depends-member:
 - !private ["Ps8Hashable", "FirebaseServerValue"]
 - ["Ps8Hashable", "IntegerLiteralType"]
 - ["Ps8Hashable", "Message"]
+- !private ["Ps8Hashable", "MessagingViewController"]
 - !private ["Ps8Hashable", "NSComparisonResult"]
 - !private ["Ps8Hashable", "NSIndexPath"]
 - !private ["Ps8Hashable", "NSOperationQueue"]
@@ -885,6 +901,7 @@ depends-member:
 - !private ["Ps8Hashable", "removeAllObservers"]
 - ["Ps8Hashable", "room"]
 - ["Ps8Hashable", "scrollToBottomMessage"]
+- !private ["Ps8Hashable", "scrollToRowAtIndexPath"]
 - ["Ps8Hashable", "scrollViewDidEndDecelerating"]
 - ["Ps8Hashable", "scrollViewDidEndDragging"]
 - ["Ps8Hashable", "scrollViewDidEndScrollingAnimation"]
@@ -963,6 +980,7 @@ depends-member:
 - !private ["PSo35MFMailComposeViewControllerDelegate", "FirebaseManager"]
 - !private ["PSo35MFMailComposeViewControllerDelegate", "FirebaseServerValue"]
 - ["PSo35MFMailComposeViewControllerDelegate", "Message"]
+- !private ["PSo35MFMailComposeViewControllerDelegate", "MessagingViewController"]
 - !private ["PSo35MFMailComposeViewControllerDelegate", "NSComparisonResult"]
 - !private ["PSo35MFMailComposeViewControllerDelegate", "NSIndexPath"]
 - !private ["PSo35MFMailComposeViewControllerDelegate", "NSOperationQueue"]
@@ -1019,6 +1037,7 @@ depends-member:
 - !private ["P6CoChat33MenuChannelViewControllerDelegate", "FirebaseManager"]
 - !private ["P6CoChat33MenuChannelViewControllerDelegate", "FirebaseServerValue"]
 - ["P6CoChat33MenuChannelViewControllerDelegate", "Message"]
+- !private ["P6CoChat33MenuChannelViewControllerDelegate", "MessagingViewController"]
 - !private ["P6CoChat33MenuChannelViewControllerDelegate", "NSComparisonResult"]
 - !private ["P6CoChat33MenuChannelViewControllerDelegate", "NSIndexPath"]
 - !private ["P6CoChat33MenuChannelViewControllerDelegate", "NSOperationQueue"]
@@ -1092,6 +1111,7 @@ depends-member:
 - !private ["C6CoChat23MessagingViewController", "FirebaseServerValue"]
 - ["C6CoChat23MessagingViewController", "MenuChannelViewController"]
 - ["C6CoChat23MessagingViewController", "Message"]
+- !private ["C6CoChat23MessagingViewController", "MessagingViewController"]
 - ["C6CoChat23MessagingViewController", "Mode"]
 - !private ["C6CoChat23MessagingViewController", "NSComparisonResult"]
 - !private ["C6CoChat23MessagingViewController", "NSIndexPath"]
@@ -1212,6 +1232,7 @@ depends-member:
 - !private ["PSo8NSCoding", "FirebaseManager"]
 - !private ["PSo8NSCoding", "FirebaseServerValue"]
 - ["PSo8NSCoding", "Message"]
+- !private ["PSo8NSCoding", "MessagingViewController"]
 - !private ["PSo8NSCoding", "NSComparisonResult"]
 - !private ["PSo8NSCoding", "NSIndexPath"]
 - !private ["PSo8NSCoding", "NSOperationQueue"]
@@ -1255,6 +1276,7 @@ depends-member:
 - !private ["PSo8NSCoding", "reloadData"]
 - ["PSo8NSCoding", "room"]
 - ["PSo8NSCoding", "scrollToBottomMessage"]
+- !private ["PSo8NSCoding", "scrollToRowAtIndexPath"]
 - ["PSo8NSCoding", "scrollViewDidEndDecelerating"]
 - ["PSo8NSCoding", "scrollViewDidEndDragging"]
 - ["PSo8NSCoding", "scrollViewDidEndScrollingAnimation"]
@@ -1305,6 +1327,7 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "FirebaseManager"]
 - !private ["PSo26NSExtensionRequestHandling", "FirebaseServerValue"]
 - ["PSo26NSExtensionRequestHandling", "Message"]
+- !private ["PSo26NSExtensionRequestHandling", "MessagingViewController"]
 - !private ["PSo26NSExtensionRequestHandling", "NSComparisonResult"]
 - !private ["PSo26NSExtensionRequestHandling", "NSIndexPath"]
 - !private ["PSo26NSExtensionRequestHandling", "NSOperationQueue"]
@@ -1385,6 +1408,7 @@ depends-member:
 - !private ["CSo8NSObject", "FirebaseServerValue"]
 - ["CSo8NSObject", "MenuChannelViewController"]
 - ["CSo8NSObject", "Message"]
+- !private ["CSo8NSObject", "MessagingViewController"]
 - ["CSo8NSObject", "Mode"]
 - !private ["CSo8NSObject", "NSComparisonResult"]
 - !private ["CSo8NSObject", "NSIndexPath"]
@@ -1450,6 +1474,7 @@ depends-member:
 - !private ["CSo8NSObject", "removeAllObservers"]
 - ["CSo8NSObject", "room"]
 - ["CSo8NSObject", "scrollToBottomMessage"]
+- !private ["CSo8NSObject", "scrollToRowAtIndexPath"]
 - ["CSo8NSObject", "scrollViewDidEndDecelerating"]
 - ["CSo8NSObject", "scrollViewDidEndDragging"]
 - ["CSo8NSObject", "scrollViewDidEndScrollingAnimation"]
@@ -1493,6 +1518,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "FirebaseManager"]
 - !private ["PSo16NSObjectProtocol", "FirebaseServerValue"]
 - ["PSo16NSObjectProtocol", "Message"]
+- !private ["PSo16NSObjectProtocol", "MessagingViewController"]
 - !private ["PSo16NSObjectProtocol", "NSComparisonResult"]
 - !private ["PSo16NSObjectProtocol", "NSIndexPath"]
 - !private ["PSo16NSObjectProtocol", "NSOperationQueue"]
@@ -1548,6 +1574,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "removeAllObservers"]
 - ["PSo16NSObjectProtocol", "room"]
 - ["PSo16NSObjectProtocol", "scrollToBottomMessage"]
+- !private ["PSo16NSObjectProtocol", "scrollToRowAtIndexPath"]
 - ["PSo16NSObjectProtocol", "scrollViewDidEndDecelerating"]
 - ["PSo16NSObjectProtocol", "scrollViewDidEndDragging"]
 - ["PSo16NSObjectProtocol", "scrollViewDidEndScrollingAnimation"]
@@ -1615,6 +1642,7 @@ depends-member:
 - ["Ps30RangeReplaceableCollectionType", "init"]
 - !private ["Ps30RangeReplaceableCollectionType", "sortInPlace"]
 - !private ["Ps16RawRepresentable", "Automatic"]
+- !private ["Ps16RawRepresentable", "Bottom"]
 - !private ["Ps16RawRepresentable", "ChildAdded"]
 - !private ["Ps16RawRepresentable", "OrderedAscending"]
 - !private ["Ps16RawRepresentable", "OrderedDescending"]
@@ -1631,7 +1659,6 @@ depends-member:
 - !private ["OE6CoChatCSo16UIViewController15SegueIdentifier", "SegueToShare"]
 - !private ["OE6CoChatCSo16UIViewController15SegueIdentifier", "deinit"]
 - !private ["OE6CoChatCSo16UIViewController15SegueIdentifier", "rawValue"]
-- !private ["V10ObjectiveC8Selector", "deinit"]
 - ["Ps12SequenceType", "Element"]
 - ["Ps12SequenceType", "Generator"]
 - ["Ps12SequenceType", "Index"]
@@ -1677,6 +1704,7 @@ depends-member:
 - !private ["PSo29UIAccessibilityIdentification", "init"]
 - !private ["PSo29UIAccessibilityIdentification", "insertRowsAtIndexPaths"]
 - !private ["PSo29UIAccessibilityIdentification", "reloadData"]
+- !private ["PSo29UIAccessibilityIdentification", "scrollToRowAtIndexPath"]
 - !private ["PSo29UIAccessibilityIdentification", "sendSubviewToBack"]
 - !private ["PSo29UIAccessibilityIdentification", "setContentOffset"]
 - !private ["PSo29UIAccessibilityIdentification", "text"]
@@ -1693,6 +1721,7 @@ depends-member:
 - !private ["PSo12UIAppearance", "init"]
 - !private ["PSo12UIAppearance", "insertRowsAtIndexPaths"]
 - !private ["PSo12UIAppearance", "reloadData"]
+- !private ["PSo12UIAppearance", "scrollToRowAtIndexPath"]
 - !private ["PSo12UIAppearance", "sendSubviewToBack"]
 - !private ["PSo12UIAppearance", "setContentOffset"]
 - !private ["PSo12UIAppearance", "text"]
@@ -1700,6 +1729,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "FirebaseManager"]
 - !private ["PSo21UIAppearanceContainer", "FirebaseServerValue"]
 - ["PSo21UIAppearanceContainer", "Message"]
+- !private ["PSo21UIAppearanceContainer", "MessagingViewController"]
 - !private ["PSo21UIAppearanceContainer", "NSComparisonResult"]
 - !private ["PSo21UIAppearanceContainer", "NSIndexPath"]
 - !private ["PSo21UIAppearanceContainer", "NSOperationQueue"]
@@ -1742,6 +1772,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "reloadData"]
 - ["PSo21UIAppearanceContainer", "room"]
 - ["PSo21UIAppearanceContainer", "scrollToBottomMessage"]
+- !private ["PSo21UIAppearanceContainer", "scrollToRowAtIndexPath"]
 - ["PSo21UIAppearanceContainer", "scrollViewDidEndDecelerating"]
 - ["PSo21UIAppearanceContainer", "scrollViewDidEndDragging"]
 - ["PSo21UIAppearanceContainer", "scrollViewDidEndScrollingAnimation"]
@@ -1785,6 +1816,7 @@ depends-member:
 - !private ["PSo18UIContentContainer", "FirebaseManager"]
 - !private ["PSo18UIContentContainer", "FirebaseServerValue"]
 - ["PSo18UIContentContainer", "Message"]
+- !private ["PSo18UIContentContainer", "MessagingViewController"]
 - !private ["PSo18UIContentContainer", "NSComparisonResult"]
 - !private ["PSo18UIContentContainer", "NSIndexPath"]
 - !private ["PSo18UIContentContainer", "NSOperationQueue"]
@@ -1869,6 +1901,7 @@ depends-member:
 - !private ["PSo17UICoordinateSpace", "init"]
 - !private ["PSo17UICoordinateSpace", "insertRowsAtIndexPaths"]
 - !private ["PSo17UICoordinateSpace", "reloadData"]
+- !private ["PSo17UICoordinateSpace", "scrollToRowAtIndexPath"]
 - !private ["PSo17UICoordinateSpace", "sendSubviewToBack"]
 - !private ["PSo17UICoordinateSpace", "setContentOffset"]
 - !private ["PSo17UICoordinateSpace", "text"]
@@ -1885,6 +1918,7 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "init"]
 - !private ["PSo13UIDynamicItem", "insertRowsAtIndexPaths"]
 - !private ["PSo13UIDynamicItem", "reloadData"]
+- !private ["PSo13UIDynamicItem", "scrollToRowAtIndexPath"]
 - !private ["PSo13UIDynamicItem", "sendSubviewToBack"]
 - !private ["PSo13UIDynamicItem", "setContentOffset"]
 - !private ["PSo13UIDynamicItem", "text"]
@@ -1892,6 +1926,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "FirebaseManager"]
 - !private ["PSo18UIFocusEnvironment", "FirebaseServerValue"]
 - ["PSo18UIFocusEnvironment", "Message"]
+- !private ["PSo18UIFocusEnvironment", "MessagingViewController"]
 - !private ["PSo18UIFocusEnvironment", "NSComparisonResult"]
 - !private ["PSo18UIFocusEnvironment", "NSIndexPath"]
 - !private ["PSo18UIFocusEnvironment", "NSOperationQueue"]
@@ -1934,6 +1969,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "reloadData"]
 - ["PSo18UIFocusEnvironment", "room"]
 - ["PSo18UIFocusEnvironment", "scrollToBottomMessage"]
+- !private ["PSo18UIFocusEnvironment", "scrollToRowAtIndexPath"]
 - ["PSo18UIFocusEnvironment", "scrollViewDidEndDecelerating"]
 - ["PSo18UIFocusEnvironment", "scrollViewDidEndDragging"]
 - ["PSo18UIFocusEnvironment", "scrollViewDidEndScrollingAnimation"]
@@ -1990,6 +2026,7 @@ depends-member:
 - !private ["CSo11UIResponder", "FirebaseServerValue"]
 - ["CSo11UIResponder", "MenuChannelViewController"]
 - ["CSo11UIResponder", "Message"]
+- !private ["CSo11UIResponder", "MessagingViewController"]
 - ["CSo11UIResponder", "Mode"]
 - !private ["CSo11UIResponder", "NSComparisonResult"]
 - !private ["CSo11UIResponder", "NSIndexPath"]
@@ -2042,6 +2079,7 @@ depends-member:
 - !private ["CSo11UIResponder", "reloadData"]
 - ["CSo11UIResponder", "room"]
 - ["CSo11UIResponder", "scrollToBottomMessage"]
+- !private ["CSo11UIResponder", "scrollToRowAtIndexPath"]
 - ["CSo11UIResponder", "scrollViewDidEndDecelerating"]
 - ["CSo11UIResponder", "scrollViewDidEndDragging"]
 - ["CSo11UIResponder", "scrollViewDidEndScrollingAnimation"]
@@ -2088,6 +2126,7 @@ depends-member:
 - !private ["CSo12UIScrollView", "frame"]
 - !private ["CSo12UIScrollView", "insertRowsAtIndexPaths"]
 - !private ["CSo12UIScrollView", "reloadData"]
+- !private ["CSo12UIScrollView", "scrollToRowAtIndexPath"]
 - !private ["CSo12UIScrollView", "sendSubviewToBack"]
 - !private ["CSo12UIScrollView", "setContentOffset"]
 - !private ["CSo12UIScrollView", "text"]
@@ -2095,6 +2134,7 @@ depends-member:
 - !private ["PSo20UIScrollViewDelegate", "FirebaseManager"]
 - !private ["PSo20UIScrollViewDelegate", "FirebaseServerValue"]
 - ["PSo20UIScrollViewDelegate", "Message"]
+- !private ["PSo20UIScrollViewDelegate", "MessagingViewController"]
 - !private ["PSo20UIScrollViewDelegate", "NSComparisonResult"]
 - !private ["PSo20UIScrollViewDelegate", "NSIndexPath"]
 - !private ["PSo20UIScrollViewDelegate", "NSOperationQueue"]
@@ -2151,6 +2191,7 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "FirebaseManager"]
 - !private ["PSo16UIStateRestoring", "FirebaseServerValue"]
 - ["PSo16UIStateRestoring", "Message"]
+- !private ["PSo16UIStateRestoring", "MessagingViewController"]
 - !private ["PSo16UIStateRestoring", "NSComparisonResult"]
 - !private ["PSo16UIStateRestoring", "NSIndexPath"]
 - !private ["PSo16UIStateRestoring", "NSOperationQueue"]
@@ -2227,12 +2268,14 @@ depends-member:
 - !private ["CSo11UITableView", "frame"]
 - !private ["CSo11UITableView", "insertRowsAtIndexPaths"]
 - !private ["CSo11UITableView", "reloadData"]
+- !private ["CSo11UITableView", "scrollToRowAtIndexPath"]
 - !private ["CSo11UITableView", "sendSubviewToBack"]
 - !private ["CSo11UITableView", "setContentOffset"]
 - !private ["PSo21UITableViewDataSource", "CGPointMake"]
 - !private ["PSo21UITableViewDataSource", "FirebaseManager"]
 - !private ["PSo21UITableViewDataSource", "FirebaseServerValue"]
 - ["PSo21UITableViewDataSource", "Message"]
+- !private ["PSo21UITableViewDataSource", "MessagingViewController"]
 - !private ["PSo21UITableViewDataSource", "NSComparisonResult"]
 - !private ["PSo21UITableViewDataSource", "NSIndexPath"]
 - !private ["PSo21UITableViewDataSource", "NSOperationQueue"]
@@ -2288,6 +2331,7 @@ depends-member:
 - !private ["PSo19UITableViewDelegate", "FirebaseManager"]
 - !private ["PSo19UITableViewDelegate", "FirebaseServerValue"]
 - ["PSo19UITableViewDelegate", "Message"]
+- !private ["PSo19UITableViewDelegate", "MessagingViewController"]
 - !private ["PSo19UITableViewDelegate", "NSComparisonResult"]
 - !private ["PSo19UITableViewDelegate", "NSIndexPath"]
 - !private ["PSo19UITableViewDelegate", "NSOperationQueue"]
@@ -2340,6 +2384,7 @@ depends-member:
 - !private ["PSo19UITableViewDelegate", "view"]
 - ["PSo19UITableViewDelegate", "viewForZoomingInScrollView"]
 - !private ["OSC23UITableViewRowAnimation", "Automatic"]
+- !private ["OSC25UITableViewScrollPosition", "Bottom"]
 - !private ["OSC24UITextAutocorrectionType", "Yes"]
 - !private ["PSo11UITextInput", "autocorrectionType"]
 - !private ["PSo11UITextInput", "text"]
@@ -2351,6 +2396,7 @@ depends-member:
 - !private ["PSo18UITextViewDelegate", "FirebaseManager"]
 - !private ["PSo18UITextViewDelegate", "FirebaseServerValue"]
 - ["PSo18UITextViewDelegate", "Message"]
+- !private ["PSo18UITextViewDelegate", "MessagingViewController"]
 - !private ["PSo18UITextViewDelegate", "NSComparisonResult"]
 - !private ["PSo18UITextViewDelegate", "NSIndexPath"]
 - !private ["PSo18UITextViewDelegate", "NSOperationQueue"]
@@ -2405,6 +2451,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "FirebaseManager"]
 - !private ["PSo18UITraitEnvironment", "FirebaseServerValue"]
 - ["PSo18UITraitEnvironment", "Message"]
+- !private ["PSo18UITraitEnvironment", "MessagingViewController"]
 - !private ["PSo18UITraitEnvironment", "NSComparisonResult"]
 - !private ["PSo18UITraitEnvironment", "NSIndexPath"]
 - !private ["PSo18UITraitEnvironment", "NSOperationQueue"]
@@ -2447,6 +2494,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "reloadData"]
 - ["PSo18UITraitEnvironment", "room"]
 - ["PSo18UITraitEnvironment", "scrollToBottomMessage"]
+- !private ["PSo18UITraitEnvironment", "scrollToRowAtIndexPath"]
 - ["PSo18UITraitEnvironment", "scrollViewDidEndDecelerating"]
 - ["PSo18UITraitEnvironment", "scrollViewDidEndDragging"]
 - ["PSo18UITraitEnvironment", "scrollViewDidEndScrollingAnimation"]
@@ -2498,6 +2546,7 @@ depends-member:
 - !private ["CSo6UIView", "init"]
 - !private ["CSo6UIView", "insertRowsAtIndexPaths"]
 - !private ["CSo6UIView", "reloadData"]
+- !private ["CSo6UIView", "scrollToRowAtIndexPath"]
 - !private ["CSo6UIView", "sendSubviewToBack"]
 - !private ["CSo6UIView", "setContentOffset"]
 - !private ["CSo6UIView", "text"]
@@ -2513,6 +2562,7 @@ depends-member:
 - !private ["CSo16UIViewController", "FirebaseServerValue"]
 - ["CSo16UIViewController", "MenuChannelViewController"]
 - ["CSo16UIViewController", "Message"]
+- !private ["CSo16UIViewController", "MessagingViewController"]
 - ["CSo16UIViewController", "Mode"]
 - !private ["CSo16UIViewController", "NSComparisonResult"]
 - !private ["CSo16UIViewController", "NSIndexPath"]
@@ -2597,7 +2647,9 @@ depends-member:
 - !private ["Vs5UInt8", "deinit"]
 - !private ["Sc", "deinit"]
 - !private ["Ps31UnicodeScalarLiteralConvertible", "init"]
+- !private ["C6CoChat4User", "deinit"]
 - !private ["C6CoChat4User", "name"]
+- !private ["C6CoChat4User", "uid"]
 - !private ["Ps10_ArrayType", "Element"]
 - ["Ps10_ArrayType", "Generator"]
 - ["Ps10_ArrayType", "Index"]
@@ -2695,6 +2747,7 @@ depends-member:
 - ["Ps12_Reflectable", "init"]
 - !private ["Ps12_Reflectable", "insertRowsAtIndexPaths"]
 - !private ["Ps12_Reflectable", "reloadData"]
+- !private ["Ps12_Reflectable", "scrollToRowAtIndexPath"]
 - !private ["Ps12_Reflectable", "sendSubviewToBack"]
 - !private ["Ps12_Reflectable", "setContentOffset"]
 - !private ["Ps12_Reflectable", "sortInPlace"]
@@ -2786,7 +2839,6 @@ depends-nominal:
 - !private "Ps16RawRepresentable"
 - !private "C6CoChat4Room"
 - !private "OE6CoChatCSo16UIViewController15SegueIdentifier"
-- !private "V10ObjectiveC8Selector"
 - "Ps12SequenceType"
 - !private "Ps14SetAlgebraType"
 - !private "C6CoChat19ShareViewController"
@@ -2821,6 +2873,7 @@ depends-nominal:
 - "PSo21UITableViewDataSource"
 - "PSo19UITableViewDelegate"
 - !private "OSC23UITableViewRowAnimation"
+- !private "OSC25UITableViewScrollPosition"
 - !private "OSC24UITextAutocorrectionType"
 - !private "PSo11UITextInput"
 - !private "PSo17UITextInputTraits"

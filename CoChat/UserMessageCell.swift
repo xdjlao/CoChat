@@ -27,7 +27,7 @@ class UserMessageCell: UITableViewCell {
     }
     
     func addTapGesture() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: "onTapHandle")
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(UserMessageCell.onTapHandle))
         tapGesture.numberOfTapsRequired = 1
         profileImageView.userInteractionEnabled = true
         profileImageView.addGestureRecognizer(tapGesture)

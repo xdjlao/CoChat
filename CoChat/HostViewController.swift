@@ -23,7 +23,7 @@ class HostViewController: UIViewController, ChannelsVCDelegate {
         tableView.registerNib(headerNib, forCellReuseIdentifier: "Host Reusable Cell")
         tableView.scrollEnabled = false
         tableView.backgroundColor = Theme.Colors.BackgroundColor.color
-        let addRoomButton = UIBarButtonItem(title: "Create Room", style: UIBarButtonItemStyle.Plain, target: self, action: "addRoomButtonWasTapped")
+        let addRoomButton = UIBarButtonItem(title: "Create Room", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(HostViewController.addRoomButtonWasTapped))
         navigationItem.rightBarButtonItem = addRoomButton
         navigationItem.rightBarButtonItem?.enabled = false
         navigationController?.navigationBar.tintColor = Theme.Colors.ButtonColor.color
@@ -37,33 +37,33 @@ class HostViewController: UIViewController, ChannelsVCDelegate {
         guard let name = nameOfRoom else { return }
         let user = FirebaseManager.manager.user
         if let enteredPassCode = roomPassCode {
-        FirebaseManager.manager.checkForUniqueEntryKey(enteredPassCode) { result in
-                    if result {
-                        Room.createNewRoomWith(name, host: user, privateRoom: self.privateRoom, password: enteredPassCode) { newRoom in
-                            self.performSegueWithSegueIdentifier(SegueIdentifier.SegueToMessaging, sender: newRoom)
-                            return
-                        }
-                    }
-                    else{
-                        self.alertNonUniquePassCode()
+            FirebaseManager.manager.checkForUniqueEntryKey(enteredPassCode) { result in
+                if result {
+                    Room.createNewRoomWith(name, host: user, privateRoom: self.privateRoom, password: enteredPassCode) { newRoom in
+                        self.performSegueWithSegueIdentifier(SegueIdentifier.SegueToMessaging, sender: newRoom)
+                        return
                     }
                 }
-            }
-            else {
-                createRandomPassCode()
+                else{
+                    self.alertNonUniquePassCode()
                 }
             }
-
+        }
+        else {
+            createRandomPassCode()
+        }
+    }
+    
     
     func createRandomPassCode() {
         let passCode = generateRandomPassCode()
         let user = FirebaseManager.manager.user
         FirebaseManager.manager.checkForUniqueEntryKey(passCode) { result in
             if result {
-                    Room.createNewRoomWith(self.nameOfRoom!, host:user, privateRoom: self.privateRoom, password: passCode) {newRoom in
+                Room.createNewRoomWith(self.nameOfRoom!, host:user, privateRoom: self.privateRoom, password: passCode) {newRoom in
                     self.performSegueWithSegueIdentifier(SegueIdentifier.SegueToMessaging, sender: newRoom)
-                return
-            }
+                    return
+                }
             }
             else {
                 self.createRandomPassCode()
@@ -182,7 +182,7 @@ extension HostViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCellWithIdentifier("Host Reusable Cell") as! HostReusableCell
         cell.resetCellUI()
         if roomPassCode != nil {
-        cell.enteredPasscode = roomPassCode!}
+            cell.enteredPasscode = roomPassCode!}
         switch (indexPath.section, indexPath.row){
         case (0, indexPath.row):
             cell.hidden = true

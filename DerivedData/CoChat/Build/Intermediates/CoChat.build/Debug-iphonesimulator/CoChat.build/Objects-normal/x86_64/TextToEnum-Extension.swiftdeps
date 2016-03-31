@@ -16,13 +16,13 @@ provides-member:
 provides-dynamic-lookup:
 depends-top-level:
 - "String"
+- "UITableViewCell"
+- "UITableView"
+- "UIViewController"
 - !private "~="
 - "=="
 - "AnyObject"
-- "UITableViewCell"
-- "UITableView"
 - "StringLiteralType"
-- "UIViewController"
 depends-member:
 - ["Ps9AnyObject", "dequeueReusableCellWithCellIdentifier"]
 - !private ["Ps9AnyObject", "dequeueReusableCellWithIdentifier"]

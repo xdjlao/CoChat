@@ -7,17 +7,17 @@ provides-member:
 - ["C6CoChat4User", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "User"
 - !private "??"
-- "StringLiteralType"
+- "User"
 - "Channel"
-- "Type"
 - !private "Dictionary"
 - "AnyObject"
+- "UIImage"
+- "Type"
+- "String"
 - "NSObject"
 - "FirebaseType"
-- "UIImage"
-- "String"
+- "StringLiteralType"
 depends-member:
 - ["Ps9AnyObject", "Channel"]
 - !private ["Ps9AnyObject", "Key"]
@@ -520,4 +520,4 @@ depends-external:
 - "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFNetworking.h"
 - "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFNetworking-umbrella.h"
 - "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Modules/module.modulemap"
-interface-hash: "a2883c08356327e9d710253f81cd366e"
+interface-hash: "4aa90d482b2c378f83948d381d62acb9"

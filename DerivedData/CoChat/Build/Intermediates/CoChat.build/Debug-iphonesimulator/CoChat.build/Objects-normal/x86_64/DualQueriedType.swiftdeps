@@ -11,21 +11,21 @@ provides-member:
 - ["P6CoChat15DualQueriedType", "singleFromSnapshot"]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "UnicodeScalarType"
-- !private "baseURL"
-- !private "Firebase"
-- !private "print"
 - "NSObject"
-- "FDataSnapshot"
-- !private "assertionFailure"
-- !private "StringLiteralType"
-- !private "FirebaseManager"
-- "String"
-- "FirebaseType"
 - "AnyObject"
 - !private "??"
-- "DualQueriedType"
+- !private "baseURL"
+- !private "Firebase"
+- !private "StringLiteralType"
+- "FirebaseType"
+- !private "UnicodeScalarType"
+- !private "assertionFailure"
+- !private "print"
+- "String"
+- "FDataSnapshot"
+- !private "FirebaseManager"
 - !private "Void"
+- "DualQueriedType"
 depends-member:
 - !private ["Ps9AnyObject", "childByAppendingPath"]
 - !private ["Ps9AnyObject", "childByAutoId"]

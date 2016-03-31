@@ -6,70 +6,70 @@ provides-nominal:
 provides-member:
 - ["C6CoChat19ShareViewController", ""]
 provides-dynamic-lookup:
+- "copied"
+- "shareItemLabel"
+- "launchUniversalLink"
 - "baseURL"
-- "onCopy"
-- "screenShotMethod"
-- "shareItemSegmentedControl"
-- "displayQRCodeImage"
-- "onShareItemSegmentedControlChanged"
-- "viewDidLoad"
+- "image"
 - "onTwitterButtonPressed"
+- "onCopy"
+- "qrViewWrapper"
+- "onImageTapped"
+- "viewDidLoad"
+- "onShareItemSegmentedControlChanged"
+- "copyButtonOutlet"
 - "QRImageView"
 - "onSaveImage"
-- "showShareItem"
-- "shareItemLabel"
+- "shareItemSegmentedControl"
 - "twitterButtonOutlet"
-- "copyButtonOutlet"
-- "image"
-- "setSocialIcons"
-- "launchUniversalLink"
-- "onImageTapped"
 - "generateQRCode"
-- "qrViewWrapper"
+- "setSocialIcons"
+- "screenShotMethod"
+- "displayQRCodeImage"
+- "showShareItem"
 - "copyText"
-- "copied"
 depends-top-level:
-- !private "UIColor"
-- !private "CGAffineTransformMakeScale"
-- "UITapGestureRecognizer"
 - !private "UIImageWriteToSavedPhotosAlbum"
-- !private "UIAlertActionStyle"
-- !private "/"
-- !private "BooleanLiteralType"
 - !private "SLServiceTypeTwitter"
-- !private "dispatch_get_main_queue"
-- "UnsafePointer"
-- "Room"
-- "NSErrorPointer"
-- "UISegmentedControl"
-- !private "NSISOLatin1StringEncoding"
+- !private "UIAlertAction"
 - !private "UIAlertController"
-- "Channel"
-- !private "Theme"
-- !private "UIGraphicsEndImageContext"
-- !private "CIFilter"
-- !private "UIGraphicsBeginImageContext"
-- "ShareViewController"
-- !private "+"
-- !private "SLComposeViewController"
-- !private "UnicodeScalarType"
-- "UIView"
-- "UIViewController"
-- "UIImage"
-- !private "dispatch_async"
-- !private "UIAlertControllerStyle"
 - "CIImage"
+- "UnsafePointer"
+- "NSErrorPointer"
+- !private "UIAlertActionStyle"
+- !private "UIGraphicsEndImageContext"
+- !private "BooleanLiteralType"
+- !private "UIPasteboard"
+- "Channel"
+- "UIView"
+- "UILabel"
+- "Room"
+- !private "Theme"
+- !private "SLComposeViewController"
+- "UISegmentedControl"
+- "UIImageView"
+- !private "UIGraphicsBeginImageContext"
 - !private "UIGraphicsGetImageFromCurrentImageContext"
+- !private "UIColor"
+- "UIViewController"
+- !private "+"
+- !private "UIAlertControllerStyle"
+- !private "=="
+- "UITapGestureRecognizer"
+- !private "UnicodeScalarType"
+- !private "CGAffineTransformMakeScale"
 - "UIButton"
+- !private "NSISOLatin1StringEncoding"
+- !private "/"
+- "String"
+- "UIImage"
+- !private "CIFilter"
+- "ShareViewController"
 - !private "Selector"
 - "StringLiteralType"
-- "String"
-- "UILabel"
-- !private "=="
 - !private "UIGraphicsGetCurrentContext"
-- !private "UIPasteboard"
-- "UIImageView"
-- !private "UIAlertAction"
+- !private "dispatch_get_main_queue"
+- !private "dispatch_async"
 depends-member:
 - !private ["Ps9AnyObject", "CGAffineTransformMakeScale"]
 - !private ["Ps9AnyObject", "CIFilter"]
@@ -78,6 +78,7 @@ depends-member:
 - !private ["Ps9AnyObject", "SLComposeViewController"]
 - !private ["Ps9AnyObject", "SLServiceTypeTwitter"]
 - !private ["Ps9AnyObject", "Selector"]
+- !private ["Ps9AnyObject", "ShareViewController"]
 - !private ["Ps9AnyObject", "Theme"]
 - !private ["Ps9AnyObject", "UIAlertAction"]
 - !private ["Ps9AnyObject", "UIAlertActionStyle"]
@@ -178,6 +179,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "SLComposeViewController"]
 - !private ["Ps11CVarArgType", "SLServiceTypeTwitter"]
 - !private ["Ps11CVarArgType", "Selector"]
+- !private ["Ps11CVarArgType", "ShareViewController"]
 - !private ["Ps11CVarArgType", "Theme"]
 - !private ["Ps11CVarArgType", "UIAlertAction"]
 - !private ["Ps11CVarArgType", "UIAlertActionStyle"]
@@ -265,6 +267,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "SLComposeViewController"]
 - !private ["Ps28CustomDebugStringConvertible", "SLServiceTypeTwitter"]
 - !private ["Ps28CustomDebugStringConvertible", "Selector"]
+- !private ["Ps28CustomDebugStringConvertible", "ShareViewController"]
 - ["Ps28CustomDebugStringConvertible", "Some"]
 - !private ["Ps28CustomDebugStringConvertible", "Theme"]
 - !private ["Ps28CustomDebugStringConvertible", "UIAlertAction"]
@@ -344,6 +347,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "SLComposeViewController"]
 - !private ["Ps23CustomStringConvertible", "SLServiceTypeTwitter"]
 - !private ["Ps23CustomStringConvertible", "Selector"]
+- !private ["Ps23CustomStringConvertible", "ShareViewController"]
 - !private ["Ps23CustomStringConvertible", "Theme"]
 - !private ["Ps23CustomStringConvertible", "UIAlertAction"]
 - !private ["Ps23CustomStringConvertible", "UIAlertActionStyle"]
@@ -426,6 +430,7 @@ depends-member:
 - !private ["Ps9Equatable", "SLComposeViewController"]
 - !private ["Ps9Equatable", "SLServiceTypeTwitter"]
 - !private ["Ps9Equatable", "Selector"]
+- !private ["Ps9Equatable", "ShareViewController"]
 - !private ["Ps9Equatable", "Theme"]
 - !private ["Ps9Equatable", "UIAlertAction"]
 - !private ["Ps9Equatable", "UIAlertActionStyle"]
@@ -516,6 +521,7 @@ depends-member:
 - !private ["Ps8Hashable", "SLComposeViewController"]
 - !private ["Ps8Hashable", "SLServiceTypeTwitter"]
 - !private ["Ps8Hashable", "Selector"]
+- !private ["Ps8Hashable", "ShareViewController"]
 - !private ["Ps8Hashable", "Theme"]
 - !private ["Ps8Hashable", "UIAlertAction"]
 - !private ["Ps8Hashable", "UIAlertActionStyle"]
@@ -614,6 +620,7 @@ depends-member:
 - !private ["PSo8NSCoding", "SLComposeViewController"]
 - !private ["PSo8NSCoding", "SLServiceTypeTwitter"]
 - !private ["PSo8NSCoding", "Selector"]
+- !private ["PSo8NSCoding", "ShareViewController"]
 - !private ["PSo8NSCoding", "Theme"]
 - !private ["PSo8NSCoding", "UIAlertAction"]
 - !private ["PSo8NSCoding", "UIAlertActionStyle"]
@@ -695,6 +702,7 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "SLComposeViewController"]
 - !private ["PSo26NSExtensionRequestHandling", "SLServiceTypeTwitter"]
 - !private ["PSo26NSExtensionRequestHandling", "Selector"]
+- !private ["PSo26NSExtensionRequestHandling", "ShareViewController"]
 - !private ["PSo26NSExtensionRequestHandling", "Theme"]
 - !private ["PSo26NSExtensionRequestHandling", "UIAlertAction"]
 - !private ["PSo26NSExtensionRequestHandling", "UIAlertActionStyle"]
@@ -756,6 +764,7 @@ depends-member:
 - !private ["CSo8NSObject", "SLComposeViewController"]
 - !private ["CSo8NSObject", "SLServiceTypeTwitter"]
 - !private ["CSo8NSObject", "Selector"]
+- !private ["CSo8NSObject", "ShareViewController"]
 - ["CSo8NSObject", "String"]
 - !private ["CSo8NSObject", "Theme"]
 - !private ["CSo8NSObject", "UIAlertAction"]
@@ -838,6 +847,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "SLComposeViewController"]
 - !private ["PSo16NSObjectProtocol", "SLServiceTypeTwitter"]
 - !private ["PSo16NSObjectProtocol", "Selector"]
+- !private ["PSo16NSObjectProtocol", "ShareViewController"]
 - !private ["PSo16NSObjectProtocol", "Theme"]
 - !private ["PSo16NSObjectProtocol", "UIAlertAction"]
 - !private ["PSo16NSObjectProtocol", "UIAlertActionStyle"]
@@ -931,7 +941,6 @@ depends-member:
 - !private ["CSo23SLComposeViewController", "init"]
 - !private ["CSo23SLComposeViewController", "isAvailableForServiceType"]
 - !private ["CSo23SLComposeViewController", "setInitialText"]
-- !private ["V10ObjectiveC8Selector", "deinit"]
 - !private ["V10ObjectiveC8Selector", "init"]
 - !private ["Ps12SequenceType", "Element"]
 - !private ["Ps12SequenceType", "Generator"]
@@ -950,6 +959,7 @@ depends-member:
 - !private ["C6CoChat19ShareViewController", "SLComposeViewController"]
 - !private ["C6CoChat19ShareViewController", "SLServiceTypeTwitter"]
 - !private ["C6CoChat19ShareViewController", "Selector"]
+- !private ["C6CoChat19ShareViewController", "ShareViewController"]
 - ["C6CoChat19ShareViewController", "String"]
 - !private ["C6CoChat19ShareViewController", "Theme"]
 - !private ["C6CoChat19ShareViewController", "UIAlertAction"]
@@ -1050,6 +1060,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "SLComposeViewController"]
 - !private ["PSo21UIAppearanceContainer", "SLServiceTypeTwitter"]
 - !private ["PSo21UIAppearanceContainer", "Selector"]
+- !private ["PSo21UIAppearanceContainer", "ShareViewController"]
 - !private ["PSo21UIAppearanceContainer", "Theme"]
 - !private ["PSo21UIAppearanceContainer", "UIAlertAction"]
 - !private ["PSo21UIAppearanceContainer", "UIAlertActionStyle"]
@@ -1121,6 +1132,7 @@ depends-member:
 - !private ["PSo18UIContentContainer", "SLComposeViewController"]
 - !private ["PSo18UIContentContainer", "SLServiceTypeTwitter"]
 - !private ["PSo18UIContentContainer", "Selector"]
+- !private ["PSo18UIContentContainer", "ShareViewController"]
 - !private ["PSo18UIContentContainer", "Theme"]
 - !private ["PSo18UIContentContainer", "UIAlertAction"]
 - !private ["PSo18UIContentContainer", "UIAlertActionStyle"]
@@ -1202,6 +1214,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "SLComposeViewController"]
 - !private ["PSo18UIFocusEnvironment", "SLServiceTypeTwitter"]
 - !private ["PSo18UIFocusEnvironment", "Selector"]
+- !private ["PSo18UIFocusEnvironment", "ShareViewController"]
 - !private ["PSo18UIFocusEnvironment", "Theme"]
 - !private ["PSo18UIFocusEnvironment", "UIAlertAction"]
 - !private ["PSo18UIFocusEnvironment", "UIAlertActionStyle"]
@@ -1284,6 +1297,7 @@ depends-member:
 - !private ["CSo11UIResponder", "SLComposeViewController"]
 - !private ["CSo11UIResponder", "SLServiceTypeTwitter"]
 - !private ["CSo11UIResponder", "Selector"]
+- !private ["CSo11UIResponder", "ShareViewController"]
 - ["CSo11UIResponder", "String"]
 - !private ["CSo11UIResponder", "Theme"]
 - !private ["CSo11UIResponder", "UIAlertAction"]
@@ -1357,6 +1371,7 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "SLComposeViewController"]
 - !private ["PSo16UIStateRestoring", "SLServiceTypeTwitter"]
 - !private ["PSo16UIStateRestoring", "Selector"]
+- !private ["PSo16UIStateRestoring", "ShareViewController"]
 - !private ["PSo16UIStateRestoring", "Theme"]
 - !private ["PSo16UIStateRestoring", "UIAlertAction"]
 - !private ["PSo16UIStateRestoring", "UIAlertActionStyle"]
@@ -1413,6 +1428,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "SLComposeViewController"]
 - !private ["PSo18UITraitEnvironment", "SLServiceTypeTwitter"]
 - !private ["PSo18UITraitEnvironment", "Selector"]
+- !private ["PSo18UITraitEnvironment", "ShareViewController"]
 - !private ["PSo18UITraitEnvironment", "Theme"]
 - !private ["PSo18UITraitEnvironment", "UIAlertAction"]
 - !private ["PSo18UITraitEnvironment", "UIAlertActionStyle"]
@@ -1493,6 +1509,7 @@ depends-member:
 - !private ["CSo16UIViewController", "SLComposeViewController"]
 - !private ["CSo16UIViewController", "SLServiceTypeTwitter"]
 - !private ["CSo16UIViewController", "Selector"]
+- !private ["CSo16UIViewController", "ShareViewController"]
 - ["CSo16UIViewController", "String"]
 - !private ["CSo16UIViewController", "Theme"]
 - !private ["CSo16UIViewController", "UIAlertAction"]

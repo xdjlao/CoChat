@@ -6,31 +6,32 @@ provides-nominal:
 provides-member:
 - ["C6CoChat17ProfileHeaderCell", ""]
 provides-dynamic-lookup:
-- "usernameLabel"
 - "awakeFromNib"
+- "usernameLabel"
 - "setUIforUser"
 - "userImageView"
 depends-top-level:
-- !private "!="
 - !private "print"
-- !private "UIApplicationDidBecomeActiveNotification"
-- !private "Theme"
-- !private "StringLiteralType"
-- !private "UIColor"
-- "ProfileHeaderCell"
-- !private "NSURL"
-- !private "/"
 - "UILabel"
-- !private "FirebaseManager"
-- !private "BooleanLiteralType"
+- !private "UIApplicationDidBecomeActiveNotification"
 - "UIImageView"
-- !private "NSNotificationCenter"
+- "ProfileHeaderCell"
 - "UITableViewCell"
+- !private "NSURL"
 - !private "UIImage"
+- !private "StringLiteralType"
+- !private "/"
+- !private "!="
+- !private "NSNotificationCenter"
+- !private "FirebaseManager"
+- !private "Theme"
+- !private "BooleanLiteralType"
+- !private "UIColor"
 depends-member:
 - !private ["Ps9AnyObject", "FirebaseManager"]
 - !private ["Ps9AnyObject", "NSNotificationCenter"]
 - !private ["Ps9AnyObject", "NSURL"]
+- !private ["Ps9AnyObject", "ProfileHeaderCell"]
 - !private ["Ps9AnyObject", "Theme"]
 - !private ["Ps9AnyObject", "UIApplicationDidBecomeActiveNotification"]
 - !private ["Ps9AnyObject", "UIColor"]
@@ -71,6 +72,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "FirebaseManager"]
 - !private ["Ps11CVarArgType", "NSNotificationCenter"]
 - !private ["Ps11CVarArgType", "NSURL"]
+- !private ["Ps11CVarArgType", "ProfileHeaderCell"]
 - !private ["Ps11CVarArgType", "Theme"]
 - !private ["Ps11CVarArgType", "UIApplicationDidBecomeActiveNotification"]
 - !private ["Ps11CVarArgType", "UIColor"]
@@ -101,6 +103,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "FirebaseManager"]
 - !private ["Ps28CustomDebugStringConvertible", "NSNotificationCenter"]
 - !private ["Ps28CustomDebugStringConvertible", "NSURL"]
+- !private ["Ps28CustomDebugStringConvertible", "ProfileHeaderCell"]
 - !private ["Ps28CustomDebugStringConvertible", "Theme"]
 - !private ["Ps28CustomDebugStringConvertible", "UIApplicationDidBecomeActiveNotification"]
 - !private ["Ps28CustomDebugStringConvertible", "UIColor"]
@@ -129,6 +132,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "FirebaseManager"]
 - !private ["Ps23CustomStringConvertible", "NSNotificationCenter"]
 - !private ["Ps23CustomStringConvertible", "NSURL"]
+- !private ["Ps23CustomStringConvertible", "ProfileHeaderCell"]
 - !private ["Ps23CustomStringConvertible", "Theme"]
 - !private ["Ps23CustomStringConvertible", "UIApplicationDidBecomeActiveNotification"]
 - !private ["Ps23CustomStringConvertible", "UIColor"]
@@ -160,6 +164,7 @@ depends-member:
 - !private ["Ps9Equatable", "NSNotificationCenter"]
 - !private ["Ps9Equatable", "NSURL"]
 - !private ["Ps9Equatable", "NavigationBarColor"]
+- !private ["Ps9Equatable", "ProfileHeaderCell"]
 - !private ["Ps9Equatable", "Theme"]
 - !private ["Ps9Equatable", "UIApplicationDidBecomeActiveNotification"]
 - !private ["Ps9Equatable", "UIColor"]
@@ -200,6 +205,7 @@ depends-member:
 - !private ["Ps8Hashable", "NSNotificationCenter"]
 - !private ["Ps8Hashable", "NSURL"]
 - !private ["Ps8Hashable", "NavigationBarColor"]
+- !private ["Ps8Hashable", "ProfileHeaderCell"]
 - !private ["Ps8Hashable", "Theme"]
 - !private ["Ps8Hashable", "UIApplicationDidBecomeActiveNotification"]
 - !private ["Ps8Hashable", "UIColor"]
@@ -230,6 +236,7 @@ depends-member:
 - !private ["PSo8NSCoding", "FirebaseManager"]
 - !private ["PSo8NSCoding", "NSNotificationCenter"]
 - !private ["PSo8NSCoding", "NSURL"]
+- !private ["PSo8NSCoding", "ProfileHeaderCell"]
 - !private ["PSo8NSCoding", "Theme"]
 - !private ["PSo8NSCoding", "UIApplicationDidBecomeActiveNotification"]
 - !private ["PSo8NSCoding", "UIColor"]
@@ -260,6 +267,7 @@ depends-member:
 - !private ["CSo8NSObject", "FirebaseManager"]
 - !private ["CSo8NSObject", "NSNotificationCenter"]
 - !private ["CSo8NSObject", "NSURL"]
+- !private ["CSo8NSObject", "ProfileHeaderCell"]
 - !private ["CSo8NSObject", "Theme"]
 - !private ["CSo8NSObject", "UIApplicationDidBecomeActiveNotification"]
 - !private ["CSo8NSObject", "UIColor"]
@@ -290,6 +298,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "FirebaseManager"]
 - !private ["PSo16NSObjectProtocol", "NSNotificationCenter"]
 - !private ["PSo16NSObjectProtocol", "NSURL"]
+- !private ["PSo16NSObjectProtocol", "ProfileHeaderCell"]
 - !private ["PSo16NSObjectProtocol", "Theme"]
 - !private ["PSo16NSObjectProtocol", "UIApplicationDidBecomeActiveNotification"]
 - !private ["PSo16NSObjectProtocol", "UIColor"]
@@ -324,6 +333,7 @@ depends-member:
 - !private ["C6CoChat17ProfileHeaderCell", "FirebaseManager"]
 - !private ["C6CoChat17ProfileHeaderCell", "NSNotificationCenter"]
 - !private ["C6CoChat17ProfileHeaderCell", "NSURL"]
+- !private ["C6CoChat17ProfileHeaderCell", "ProfileHeaderCell"]
 - !private ["C6CoChat17ProfileHeaderCell", "Theme"]
 - !private ["C6CoChat17ProfileHeaderCell", "UIApplicationDidBecomeActiveNotification"]
 - !private ["C6CoChat17ProfileHeaderCell", "UIColor"]
@@ -338,12 +348,12 @@ depends-member:
 - ["C6CoChat17ProfileHeaderCell", "setUIforUser"]
 - ["C6CoChat17ProfileHeaderCell", "userImageView"]
 - ["C6CoChat17ProfileHeaderCell", "usernameLabel"]
-- !private ["V10ObjectiveC8Selector", "deinit"]
 - !private ["V6CoChat5Theme", "Colors"]
 - !private ["V6CoChat5Theme", "Fonts"]
 - !private ["PSo29UIAccessibilityIdentification", "FirebaseManager"]
 - !private ["PSo29UIAccessibilityIdentification", "NSNotificationCenter"]
 - !private ["PSo29UIAccessibilityIdentification", "NSURL"]
+- !private ["PSo29UIAccessibilityIdentification", "ProfileHeaderCell"]
 - !private ["PSo29UIAccessibilityIdentification", "Theme"]
 - !private ["PSo29UIAccessibilityIdentification", "UIApplicationDidBecomeActiveNotification"]
 - !private ["PSo29UIAccessibilityIdentification", "UIColor"]
@@ -367,6 +377,7 @@ depends-member:
 - !private ["PSo12UIAppearance", "FirebaseManager"]
 - !private ["PSo12UIAppearance", "NSNotificationCenter"]
 - !private ["PSo12UIAppearance", "NSURL"]
+- !private ["PSo12UIAppearance", "ProfileHeaderCell"]
 - !private ["PSo12UIAppearance", "Theme"]
 - !private ["PSo12UIAppearance", "UIApplicationDidBecomeActiveNotification"]
 - !private ["PSo12UIAppearance", "UIColor"]
@@ -390,6 +401,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "FirebaseManager"]
 - !private ["PSo21UIAppearanceContainer", "NSNotificationCenter"]
 - !private ["PSo21UIAppearanceContainer", "NSURL"]
+- !private ["PSo21UIAppearanceContainer", "ProfileHeaderCell"]
 - !private ["PSo21UIAppearanceContainer", "Theme"]
 - !private ["PSo21UIAppearanceContainer", "UIApplicationDidBecomeActiveNotification"]
 - !private ["PSo21UIAppearanceContainer", "UIColor"]
@@ -414,6 +426,7 @@ depends-member:
 - !private ["PSo17UICoordinateSpace", "FirebaseManager"]
 - !private ["PSo17UICoordinateSpace", "NSNotificationCenter"]
 - !private ["PSo17UICoordinateSpace", "NSURL"]
+- !private ["PSo17UICoordinateSpace", "ProfileHeaderCell"]
 - !private ["PSo17UICoordinateSpace", "Theme"]
 - !private ["PSo17UICoordinateSpace", "UIApplicationDidBecomeActiveNotification"]
 - !private ["PSo17UICoordinateSpace", "UIColor"]
@@ -437,6 +450,7 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "FirebaseManager"]
 - !private ["PSo13UIDynamicItem", "NSNotificationCenter"]
 - !private ["PSo13UIDynamicItem", "NSURL"]
+- !private ["PSo13UIDynamicItem", "ProfileHeaderCell"]
 - !private ["PSo13UIDynamicItem", "Theme"]
 - !private ["PSo13UIDynamicItem", "UIApplicationDidBecomeActiveNotification"]
 - !private ["PSo13UIDynamicItem", "UIColor"]
@@ -460,6 +474,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "FirebaseManager"]
 - !private ["PSo18UIFocusEnvironment", "NSNotificationCenter"]
 - !private ["PSo18UIFocusEnvironment", "NSURL"]
+- !private ["PSo18UIFocusEnvironment", "ProfileHeaderCell"]
 - !private ["PSo18UIFocusEnvironment", "Theme"]
 - !private ["PSo18UIFocusEnvironment", "UIApplicationDidBecomeActiveNotification"]
 - !private ["PSo18UIFocusEnvironment", "UIColor"]
@@ -483,6 +498,7 @@ depends-member:
 - !private ["PSo27UIGestureRecognizerDelegate", "FirebaseManager"]
 - !private ["PSo27UIGestureRecognizerDelegate", "NSNotificationCenter"]
 - !private ["PSo27UIGestureRecognizerDelegate", "NSURL"]
+- !private ["PSo27UIGestureRecognizerDelegate", "ProfileHeaderCell"]
 - !private ["PSo27UIGestureRecognizerDelegate", "Theme"]
 - !private ["PSo27UIGestureRecognizerDelegate", "UIApplicationDidBecomeActiveNotification"]
 - !private ["PSo27UIGestureRecognizerDelegate", "UIColor"]
@@ -507,6 +523,7 @@ depends-member:
 - !private ["CSo11UIResponder", "FirebaseManager"]
 - !private ["CSo11UIResponder", "NSNotificationCenter"]
 - !private ["CSo11UIResponder", "NSURL"]
+- !private ["CSo11UIResponder", "ProfileHeaderCell"]
 - !private ["CSo11UIResponder", "Theme"]
 - !private ["CSo11UIResponder", "UIApplicationDidBecomeActiveNotification"]
 - !private ["CSo11UIResponder", "UIColor"]
@@ -531,6 +548,7 @@ depends-member:
 - !private ["CSo15UITableViewCell", "FirebaseManager"]
 - !private ["CSo15UITableViewCell", "NSNotificationCenter"]
 - !private ["CSo15UITableViewCell", "NSURL"]
+- !private ["CSo15UITableViewCell", "ProfileHeaderCell"]
 - !private ["CSo15UITableViewCell", "Theme"]
 - !private ["CSo15UITableViewCell", "UIApplicationDidBecomeActiveNotification"]
 - !private ["CSo15UITableViewCell", "UIColor"]
@@ -548,6 +566,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "FirebaseManager"]
 - !private ["PSo18UITraitEnvironment", "NSNotificationCenter"]
 - !private ["PSo18UITraitEnvironment", "NSURL"]
+- !private ["PSo18UITraitEnvironment", "ProfileHeaderCell"]
 - !private ["PSo18UITraitEnvironment", "Theme"]
 - !private ["PSo18UITraitEnvironment", "UIApplicationDidBecomeActiveNotification"]
 - !private ["PSo18UITraitEnvironment", "UIColor"]
@@ -571,6 +590,7 @@ depends-member:
 - !private ["CSo6UIView", "FirebaseManager"]
 - !private ["CSo6UIView", "NSNotificationCenter"]
 - !private ["CSo6UIView", "NSURL"]
+- !private ["CSo6UIView", "ProfileHeaderCell"]
 - !private ["CSo6UIView", "Theme"]
 - !private ["CSo6UIView", "UIApplicationDidBecomeActiveNotification"]
 - !private ["CSo6UIView", "UIColor"]
@@ -603,6 +623,7 @@ depends-member:
 - !private ["Ps12_Reflectable", "FirebaseManager"]
 - !private ["Ps12_Reflectable", "NSNotificationCenter"]
 - !private ["Ps12_Reflectable", "NSURL"]
+- !private ["Ps12_Reflectable", "ProfileHeaderCell"]
 - !private ["Ps12_Reflectable", "Theme"]
 - !private ["Ps12_Reflectable", "UIApplicationDidBecomeActiveNotification"]
 - !private ["Ps12_Reflectable", "UIColor"]
@@ -655,7 +676,6 @@ depends-nominal:
 - !private "CSo5NSURL"
 - !private "Sq"
 - "C6CoChat17ProfileHeaderCell"
-- !private "V10ObjectiveC8Selector"
 - !private "V6CoChat5Theme"
 - "PSo29UIAccessibilityIdentification"
 - "PSo12UIAppearance"

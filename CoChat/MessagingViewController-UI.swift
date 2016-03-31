@@ -157,22 +157,22 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
     }
     
     func userMessageCellWillDisplay(userCell: UserMessageCell, indexPath: NSIndexPath) {
-        userCell.profileImageView.alpha = 0.0
-        userCell.messageLabel.alpha = 0.0
-        UIView.animateWithDuration(1.0, delay: 0.0, options:[.CurveEaseInOut], animations: { () -> Void in
+        //userCell.profileImageView.alpha = 0.0
+        //userCell.messageLabel.alpha = 0.0
+        //UIView.animateWithDuration(1.0, delay: 0.0, options:[.CurveEaseInOut], animations: { () -> Void in
             userCell.profileImageView.alpha = 1.0
             userCell.messageLabel.alpha = 1.0
-            }, completion: { bool in
-        })
+            //}, completion: { bool in }
+        //)
     }
     func generalMessageCellWillDisplay(generalCell: GeneralMessageCell, indexPath: NSIndexPath) {
-        generalCell.profileImageView.alpha = 0.0
-        generalCell.messageLabel.alpha = 0.0
-        UIView.animateWithDuration(1.2, delay: 0.0, options: [.CurveEaseInOut], animations: { () -> Void in
+        //generalCell.profileImageView.alpha = 0.0
+        //generalCell.messageLabel.alpha = 0.0
+        //UIView.animateWithDuration(1.2, delay: 0.0, options: [.CurveEaseInOut], animations: { () -> Void in
             generalCell.profileImageView.alpha = 1.0
             generalCell.messageLabel.alpha = 1.0
-            }, completion: { bool in
-        })
+            //}, completion: { bool in }
+        //)
     }
     
     func generalMessageCell(generalMessageCell: GeneralMessageCell, didTapUser user: AnyObject) {
@@ -279,8 +279,8 @@ extension MessagingViewController: UITableViewDelegate, UITableViewDataSource, G
     
     
     func uiSetup() {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MessagingViewController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MessagingViewController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
         
         if let navigationController = navigationController {
             topNav = navigationController.navigationBar.frame.height

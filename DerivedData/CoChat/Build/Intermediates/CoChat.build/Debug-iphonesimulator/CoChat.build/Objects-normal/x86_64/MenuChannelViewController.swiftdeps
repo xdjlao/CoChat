@@ -9,49 +9,50 @@ provides-member:
 - ["P6CoChat33MenuChannelViewControllerDelegate", ""]
 - ["C6CoChat25MenuChannelViewController", ""]
 provides-dynamic-lookup:
-- "setUpUI"
+- "delegate"
 - "menuChannelViewController"
 - "viewDidLoad"
-- "prepareForSegue"
-- "delegate"
 - "addChannel"
+- "prepareForSegue"
 - "tableView"
 - "tableView"
 - "tableView"
 - "tableView"
 - "tableView"
+- "setUpUI"
 depends-top-level:
-- "Int"
+- "UITableViewDataSource"
+- "UITableViewDelegate"
 - !private "UIBarButtonSystemItem"
-- !private "UIBarButtonItem"
-- "UIViewController"
-- !private "=="
-- !private "UIView"
-- !private "UIColor"
-- !private "UIEdgeInsetsZero"
-- "MenuChannelViewControllerDelegate"
-- !private "ChannelsVC"
-- "Room"
-- !private "StringLiteralType"
-- !private "MenuChannelsCell"
-- "CGFloat"
-- "NSIndexPath"
 - "UITableViewCell"
 - "AnyObject"
+- "UIStoryboardSegue"
+- "Channel"
+- "CGFloat"
+- !private "ChannelsVC"
+- !private "BooleanLiteralType"
+- "Room"
+- !private "UIView"
+- "MenuChannelViewControllerDelegate"
+- !private "UIEdgeInsetsZero"
+- "UIViewController"
+- !private "UIColor"
 - !private "Theme"
 - "Bool"
-- "UITableViewDataSource"
-- !private "BooleanLiteralType"
-- "UITableViewDelegate"
+- !private "=="
 - "UITableView"
-- "MenuChannelsCellDelegate"
-- "UIStoryboardSegue"
+- "Int"
+- !private "MenuChannelsCell"
 - !private "FirebaseManager"
+- "NSIndexPath"
 - "MenuChannelViewController"
-- "Channel"
+- "MenuChannelsCellDelegate"
+- !private "UIBarButtonItem"
+- !private "StringLiteralType"
 depends-member:
 - !private ["Ps9AnyObject", "CellIdentifier"]
 - !private ["Ps9AnyObject", "FirebaseManager"]
+- !private ["Ps9AnyObject", "MenuChannelViewController"]
 - !private ["Ps9AnyObject", "SegueIdentifier"]
 - !private ["Ps9AnyObject", "Theme"]
 - !private ["Ps9AnyObject", "UIBarButtonItem"]
@@ -146,6 +147,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "Distance"]
 - !private ["Ps11CVarArgType", "FirebaseManager"]
 - !private ["Ps11CVarArgType", "IntegerLiteralType"]
+- !private ["Ps11CVarArgType", "MenuChannelViewController"]
 - !private ["Ps11CVarArgType", "SegueIdentifier"]
 - !private ["Ps11CVarArgType", "Theme"]
 - !private ["Ps11CVarArgType", "UIBarButtonItem"]
@@ -225,6 +227,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "FirebaseManager"]
 - !private ["Ps28CustomDebugStringConvertible", "Generator"]
 - !private ["Ps28CustomDebugStringConvertible", "Index"]
+- !private ["Ps28CustomDebugStringConvertible", "MenuChannelViewController"]
 - !private ["Ps28CustomDebugStringConvertible", "SegueIdentifier"]
 - ["Ps28CustomDebugStringConvertible", "Some"]
 - !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
@@ -295,6 +298,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "Generator"]
 - !private ["Ps23CustomStringConvertible", "Index"]
 - !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
+- !private ["Ps23CustomStringConvertible", "MenuChannelViewController"]
 - !private ["Ps23CustomStringConvertible", "SegueIdentifier"]
 - !private ["Ps23CustomStringConvertible", "SubSequence"]
 - !private ["Ps23CustomStringConvertible", "Theme"]
@@ -366,6 +370,7 @@ depends-member:
 - !private ["Ps9Equatable", "Distance"]
 - !private ["Ps9Equatable", "FirebaseManager"]
 - !private ["Ps9Equatable", "IntegerLiteralType"]
+- !private ["Ps9Equatable", "MenuChannelViewController"]
 - !private ["Ps9Equatable", "MenuChannelsCell"]
 - !private ["Ps9Equatable", "SegueIdentifier"]
 - !private ["Ps9Equatable", "SegueToChannelsVC"]
@@ -443,6 +448,7 @@ depends-member:
 - !private ["Ps8Hashable", "Distance"]
 - !private ["Ps8Hashable", "FirebaseManager"]
 - !private ["Ps8Hashable", "IntegerLiteralType"]
+- !private ["Ps8Hashable", "MenuChannelViewController"]
 - !private ["Ps8Hashable", "MenuChannelsCell"]
 - !private ["Ps8Hashable", "SegueIdentifier"]
 - !private ["Ps8Hashable", "SegueToChannelsVC"]
@@ -530,6 +536,7 @@ depends-member:
 - !private ["C6CoChat25MenuChannelViewController", "ChannelsVC"]
 - !private ["C6CoChat25MenuChannelViewController", "FirebaseManager"]
 - ["C6CoChat25MenuChannelViewController", "Int"]
+- !private ["C6CoChat25MenuChannelViewController", "MenuChannelViewController"]
 - ["C6CoChat25MenuChannelViewController", "MenuChannelViewControllerDelegate"]
 - !private ["C6CoChat25MenuChannelViewController", "MenuChannelsCell"]
 - ["C6CoChat25MenuChannelViewController", "NSIndexPath"]
@@ -582,6 +589,7 @@ depends-member:
 - !private ["C6CoChat16MenuChannelsCell", "channelsLabel"]
 - !private ["C6CoChat16MenuChannelsCell", "delegate"]
 - !private ["P6CoChat24MenuChannelsCellDelegate", "FirebaseManager"]
+- !private ["P6CoChat24MenuChannelsCellDelegate", "MenuChannelViewController"]
 - !private ["P6CoChat24MenuChannelsCellDelegate", "SegueIdentifier"]
 - !private ["P6CoChat24MenuChannelsCellDelegate", "Theme"]
 - !private ["P6CoChat24MenuChannelsCellDelegate", "UIBarButtonItem"]
@@ -649,6 +657,7 @@ depends-member:
 - !private ["Ps16MutableSliceable", "subscript"]
 - !private ["PSo8NSCoding", "CellIdentifier"]
 - !private ["PSo8NSCoding", "FirebaseManager"]
+- !private ["PSo8NSCoding", "MenuChannelViewController"]
 - !private ["PSo8NSCoding", "SegueIdentifier"]
 - !private ["PSo8NSCoding", "Theme"]
 - !private ["PSo8NSCoding", "UIBarButtonItem"]
@@ -706,6 +715,7 @@ depends-member:
 - !private ["PSo9NSCopying", "clearColor"]
 - !private ["PSo9NSCopying", "row"]
 - !private ["PSo26NSExtensionRequestHandling", "FirebaseManager"]
+- !private ["PSo26NSExtensionRequestHandling", "MenuChannelViewController"]
 - !private ["PSo26NSExtensionRequestHandling", "SegueIdentifier"]
 - !private ["PSo26NSExtensionRequestHandling", "Theme"]
 - !private ["PSo26NSExtensionRequestHandling", "UIBarButtonItem"]
@@ -756,6 +766,7 @@ depends-member:
 - !private ["CSo8NSObject", "ChannelsVC"]
 - !private ["CSo8NSObject", "FirebaseManager"]
 - ["CSo8NSObject", "Int"]
+- !private ["CSo8NSObject", "MenuChannelViewController"]
 - ["CSo8NSObject", "MenuChannelViewControllerDelegate"]
 - !private ["CSo8NSObject", "MenuChannelsCell"]
 - ["CSo8NSObject", "NSIndexPath"]
@@ -819,6 +830,7 @@ depends-member:
 - ["CSo8NSObject", "viewForZoomingInScrollView"]
 - !private ["PSo16NSObjectProtocol", "CellIdentifier"]
 - !private ["PSo16NSObjectProtocol", "FirebaseManager"]
+- !private ["PSo16NSObjectProtocol", "MenuChannelViewController"]
 - !private ["PSo16NSObjectProtocol", "SegueIdentifier"]
 - !private ["PSo16NSObjectProtocol", "Theme"]
 - !private ["PSo16NSObjectProtocol", "UIBarButtonItem"]
@@ -898,7 +910,6 @@ depends-member:
 - !private ["OE6CoChatCSo16UIViewController15SegueIdentifier", "SegueToChannelsVC"]
 - !private ["OE6CoChatCSo16UIViewController15SegueIdentifier", "deinit"]
 - !private ["OE6CoChatCSo16UIViewController15SegueIdentifier", "rawValue"]
-- !private ["V10ObjectiveC8Selector", "deinit"]
 - !private ["Ps12SequenceType", "Element"]
 - !private ["Ps12SequenceType", "Generator"]
 - !private ["Ps12SequenceType", "Index"]
@@ -947,6 +958,7 @@ depends-member:
 - !private ["PSo12UIAppearance", "tintColor"]
 - !private ["PSo21UIAppearanceContainer", "CellIdentifier"]
 - !private ["PSo21UIAppearanceContainer", "FirebaseManager"]
+- !private ["PSo21UIAppearanceContainer", "MenuChannelViewController"]
 - !private ["PSo21UIAppearanceContainer", "SegueIdentifier"]
 - !private ["PSo21UIAppearanceContainer", "Theme"]
 - !private ["PSo21UIAppearanceContainer", "UIBarButtonItem"]
@@ -1006,6 +1018,7 @@ depends-member:
 - !private ["PSo16UIBarPositioning", "tintColor"]
 - !private ["CSo7UIColor", "clearColor"]
 - !private ["PSo18UIContentContainer", "FirebaseManager"]
+- !private ["PSo18UIContentContainer", "MenuChannelViewController"]
 - !private ["PSo18UIContentContainer", "SegueIdentifier"]
 - !private ["PSo18UIContentContainer", "Theme"]
 - !private ["PSo18UIContentContainer", "UIBarButtonItem"]
@@ -1071,6 +1084,7 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "tintColor"]
 - !private ["PSo18UIFocusEnvironment", "CellIdentifier"]
 - !private ["PSo18UIFocusEnvironment", "FirebaseManager"]
+- !private ["PSo18UIFocusEnvironment", "MenuChannelViewController"]
 - !private ["PSo18UIFocusEnvironment", "SegueIdentifier"]
 - !private ["PSo18UIFocusEnvironment", "Theme"]
 - !private ["PSo18UIFocusEnvironment", "UIBarButtonItem"]
@@ -1137,6 +1151,7 @@ depends-member:
 - !private ["CSo11UIResponder", "ChannelsVC"]
 - !private ["CSo11UIResponder", "FirebaseManager"]
 - ["CSo11UIResponder", "Int"]
+- !private ["CSo11UIResponder", "MenuChannelViewController"]
 - ["CSo11UIResponder", "MenuChannelViewControllerDelegate"]
 - !private ["CSo11UIResponder", "MenuChannelsCell"]
 - ["CSo11UIResponder", "NSIndexPath"]
@@ -1197,6 +1212,7 @@ depends-member:
 - !private ["CSo12UIScrollView", "separatorInset"]
 - !private ["CSo12UIScrollView", "tableFooterView"]
 - !private ["PSo20UIScrollViewDelegate", "FirebaseManager"]
+- !private ["PSo20UIScrollViewDelegate", "MenuChannelViewController"]
 - !private ["PSo20UIScrollViewDelegate", "SegueIdentifier"]
 - !private ["PSo20UIScrollViewDelegate", "Theme"]
 - !private ["PSo20UIScrollViewDelegate", "UIBarButtonItem"]
@@ -1234,6 +1250,7 @@ depends-member:
 - ["PSo20UIScrollViewDelegate", "viewForZoomingInScrollView"]
 - ["PSo20UIScrollViewDelegate", ""]
 - !private ["PSo16UIStateRestoring", "FirebaseManager"]
+- !private ["PSo16UIStateRestoring", "MenuChannelViewController"]
 - !private ["PSo16UIStateRestoring", "SegueIdentifier"]
 - !private ["PSo16UIStateRestoring", "Theme"]
 - !private ["PSo16UIStateRestoring", "UIBarButtonItem"]
@@ -1287,6 +1304,7 @@ depends-member:
 - !private ["CSo15UITableViewCell", "deinit"]
 - !private ["CSo15UITableViewCell", "delegate"]
 - !private ["PSo21UITableViewDataSource", "FirebaseManager"]
+- !private ["PSo21UITableViewDataSource", "MenuChannelViewController"]
 - !private ["PSo21UITableViewDataSource", "SegueIdentifier"]
 - !private ["PSo21UITableViewDataSource", "Theme"]
 - !private ["PSo21UITableViewDataSource", "UIBarButtonItem"]
@@ -1324,6 +1342,7 @@ depends-member:
 - ["PSo21UITableViewDataSource", "viewForZoomingInScrollView"]
 - ["PSo21UITableViewDataSource", ""]
 - !private ["PSo19UITableViewDelegate", "FirebaseManager"]
+- !private ["PSo19UITableViewDelegate", "MenuChannelViewController"]
 - !private ["PSo19UITableViewDelegate", "SegueIdentifier"]
 - !private ["PSo19UITableViewDelegate", "Theme"]
 - !private ["PSo19UITableViewDelegate", "UIBarButtonItem"]
@@ -1362,6 +1381,7 @@ depends-member:
 - ["PSo19UITableViewDelegate", ""]
 - !private ["PSo18UITraitEnvironment", "CellIdentifier"]
 - !private ["PSo18UITraitEnvironment", "FirebaseManager"]
+- !private ["PSo18UITraitEnvironment", "MenuChannelViewController"]
 - !private ["PSo18UITraitEnvironment", "SegueIdentifier"]
 - !private ["PSo18UITraitEnvironment", "Theme"]
 - !private ["PSo18UITraitEnvironment", "UIBarButtonItem"]
@@ -1429,6 +1449,7 @@ depends-member:
 - !private ["CSo16UIViewController", "ChannelsVC"]
 - !private ["CSo16UIViewController", "FirebaseManager"]
 - ["CSo16UIViewController", "Int"]
+- !private ["CSo16UIViewController", "MenuChannelViewController"]
 - ["CSo16UIViewController", "MenuChannelViewControllerDelegate"]
 - !private ["CSo16UIViewController", "MenuChannelsCell"]
 - ["CSo16UIViewController", "NSIndexPath"]
@@ -1602,7 +1623,6 @@ depends-nominal:
 - !private "Ps30RangeReplaceableCollectionType"
 - !private "Ps16RawRepresentable"
 - !private "OE6CoChatCSo16UIViewController15SegueIdentifier"
-- !private "V10ObjectiveC8Selector"
 - !private "Ps12SequenceType"
 - !private "Ps17SignedIntegerType"
 - !private "Ps16SignedNumberType"

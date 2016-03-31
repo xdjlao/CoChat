@@ -12,12 +12,12 @@ provides-dynamic-lookup:
 depends-top-level:
 - !private "UIImage"
 - !private "Theme"
-- "UIStoryboardSegue"
-- !private "BooleanLiteralType"
-- "MainTabBarViewController"
 - !private "print"
-- !private "StringLiteralType"
 - "UITabBarController"
+- !private "BooleanLiteralType"
+- "UIStoryboardSegue"
+- !private "StringLiteralType"
+- "MainTabBarViewController"
 depends-member:
 - !private ["Ps9AnyObject", "Theme"]
 - !private ["Ps9AnyObject", "UIImage"]

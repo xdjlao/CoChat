@@ -7,16 +7,16 @@ provides-member:
 - ["C6CoChat12Conversation", ""]
 provides-dynamic-lookup:
 depends-top-level:
+- "User"
 - "Type"
-- "StringLiteralType"
-- "AnyObject"
 - "FirebaseType"
+- "Conversation"
+- "String"
+- "StringLiteralType"
 - !private "??"
 - "NSObject"
-- "User"
-- "String"
-- "Conversation"
 - !private "Dictionary"
+- "AnyObject"
 depends-member:
 - !private ["Ps9AnyObject", "Conversation"]
 - ["Ps9AnyObject", "Type"]

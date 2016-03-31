@@ -18,7 +18,7 @@ class MenuChannelViewController: UIViewController {
     
     func setUpUI(){
         navigationItem.title = "Channels"
-        let addChannelButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "addChannel")
+        let addChannelButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: #selector(MenuChannelViewController.addChannel))
         navigationItem.rightBarButtonItem = addChannelButton
         view.backgroundColor = Theme.Colors.BackgroundColor.color
         tableView.backgroundColor = Theme.Colors.BackgroundColor.color

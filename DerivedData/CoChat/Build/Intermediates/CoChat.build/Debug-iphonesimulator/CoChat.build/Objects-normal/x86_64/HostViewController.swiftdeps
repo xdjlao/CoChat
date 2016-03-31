@@ -6,79 +6,79 @@ provides-nominal:
 provides-member:
 - ["C6CoChat18HostViewController", ""]
 provides-dynamic-lookup:
-- "channelsVC"
-- "prepareForSegue"
-- "toggleAdvancedSettings"
-- "roomPassCode"
-- "viewDidLoad"
+- "enableSegue"
 - "animateCellBackGround"
+- "addRoomButtonWasTapped"
+- "createRandomPassCode"
+- "textFieldDidBeginEditingInCell"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "configureTableView"
+- "nameOfRoom"
+- "animateCellText"
+- "privateRoom"
+- "setUpUI"
+- "channelsVC"
+- "roomPassCode"
+- "hostReusableCell"
 - "textFieldDidEndEditingInCell"
 - "createChannels"
-- "hostReusableCell"
+- "toggleAdvancedSettings"
+- "viewDidLoad"
 - "numberOfSectionsInTableView"
-- "setUpUI"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
-- "createRandomPassCode"
-- "animateCellText"
-- "textFieldDidBeginEditingInCell"
-- "nameOfRoom"
-- "privateRoom"
-- "enableSegue"
-- "configureTableView"
-- "addRoomButtonWasTapped"
+- "prepareForSegue"
 depends-top-level:
-- "UITableViewDataSource"
-- "HostViewController"
-- "UITableViewCell"
-- !private "cellContent"
-- "Int"
-- "NSIndexPath"
-- !private "CGPointMake"
-- !private "UITableViewRowAnimation"
-- !private "=="
-- "UITableViewDelegate"
-- !private "~="
-- "UIViewController"
-- "Channel"
-- !private "Theme"
-- !private "UIView"
-- "UIStoryboardSegue"
-- !private "!="
-- "ChannelsVCDelegate"
-- !private "-"
 - !private ">"
-- "AnyObject"
-- !private "UIApplication"
-- "UITextField"
-- !private "UISwitch"
-- !private "+"
-- !private "Room"
-- !private "Void"
 - !private "NSIndexSet"
-- !private "CGPointZero"
-- !private "UITableViewAutomaticDimension"
-- !private "*"
-- "HostReusableCell"
-- "CGFloat"
-- !private "FirebaseManager"
-- !private "StringLiteralType"
-- !private "!"
-- "HostReusableCellDelegate"
-- "UITableView"
-- "ChannelsVC"
-- !private "UIBarButtonItem"
-- !private "UIColor"
 - "BooleanLiteralType"
-- "String"
-- !private "UINib"
-- !private "assertionFailure"
 - !private "UINavigationController"
+- "Int"
+- !private "*"
+- "NSIndexPath"
+- !private "cellContent"
+- "HostReusableCell"
+- "AnyObject"
+- !private "-"
+- "UIStoryboardSegue"
 - !private "MessagingViewController"
+- !private "FirebaseManager"
+- !private "!="
+- "ChannelsVC"
+- !private "UIColor"
+- !private "~="
+- !private "=="
+- "HostReusableCellDelegate"
+- !private "UINib"
+- "UITableView"
+- !private "assertionFailure"
+- !private "UIApplication"
+- !private "CGPointZero"
+- !private "!"
+- "String"
 - !private "UIBarButtonItemStyle"
+- "UITextField"
+- !private "UIBarButtonItem"
+- !private "CGPointMake"
+- !private "Void"
+- !private "UITableViewAutomaticDimension"
+- "UITableViewDelegate"
+- "UITableViewDataSource"
+- "UITableViewCell"
+- !private "StringLiteralType"
+- "HostViewController"
+- "Channel"
+- !private "UIView"
+- "CGFloat"
+- "ChannelsVCDelegate"
+- !private "Room"
+- !private "UITableViewRowAnimation"
+- "UIViewController"
+- !private "UISwitch"
+- !private "Theme"
+- !private "+"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "init"]
 - !private ["Ps9AnyObject", "CGFloat"]
@@ -86,6 +86,7 @@ depends-member:
 - !private ["Ps9AnyObject", "CGPointZero"]
 - ["Ps9AnyObject", "Channel"]
 - !private ["Ps9AnyObject", "FirebaseManager"]
+- !private ["Ps9AnyObject", "HostViewController"]
 - !private ["Ps9AnyObject", "NSIndexPath"]
 - !private ["Ps9AnyObject", "NSIndexSet"]
 - !private ["Ps9AnyObject", "Room"]
@@ -240,6 +241,7 @@ depends-member:
 - ["Ps11CVarArgType", "Channel"]
 - ["Ps11CVarArgType", "Distance"]
 - !private ["Ps11CVarArgType", "FirebaseManager"]
+- !private ["Ps11CVarArgType", "HostViewController"]
 - ["Ps11CVarArgType", "IntegerLiteralType"]
 - !private ["Ps11CVarArgType", "NSIndexPath"]
 - !private ["Ps11CVarArgType", "NSIndexSet"]
@@ -361,6 +363,7 @@ depends-member:
 - !private ["P6CoChat18ChannelsVCDelegate", "CGPointZero"]
 - ["P6CoChat18ChannelsVCDelegate", "Channel"]
 - !private ["P6CoChat18ChannelsVCDelegate", "FirebaseManager"]
+- !private ["P6CoChat18ChannelsVCDelegate", "HostViewController"]
 - !private ["P6CoChat18ChannelsVCDelegate", "NSIndexPath"]
 - !private ["P6CoChat18ChannelsVCDelegate", "NSIndexSet"]
 - !private ["P6CoChat18ChannelsVCDelegate", "Room"]
@@ -446,6 +449,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "Channel"]
 - !private ["Ps28CustomDebugStringConvertible", "FirebaseManager"]
 - ["Ps28CustomDebugStringConvertible", "Generator"]
+- !private ["Ps28CustomDebugStringConvertible", "HostViewController"]
 - ["Ps28CustomDebugStringConvertible", "Index"]
 - !private ["Ps28CustomDebugStringConvertible", "NSIndexPath"]
 - !private ["Ps28CustomDebugStringConvertible", "NSIndexSet"]
@@ -568,6 +572,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "Distance"]
 - !private ["Ps23CustomStringConvertible", "FirebaseManager"]
 - ["Ps23CustomStringConvertible", "Generator"]
+- !private ["Ps23CustomStringConvertible", "HostViewController"]
 - ["Ps23CustomStringConvertible", "Index"]
 - ["Ps23CustomStringConvertible", "IntegerLiteralType"]
 - !private ["Ps23CustomStringConvertible", "NSIndexPath"]
@@ -697,6 +702,7 @@ depends-member:
 - !private ["Ps9Equatable", "Fade"]
 - !private ["Ps9Equatable", "FirebaseManager"]
 - !private ["Ps9Equatable", "ForegroundColor"]
+- !private ["Ps9Equatable", "HostViewController"]
 - ["Ps9Equatable", "IntegerLiteralType"]
 - !private ["Ps9Equatable", "NSIndexPath"]
 - !private ["Ps9Equatable", "NSIndexSet"]
@@ -845,6 +851,7 @@ depends-member:
 - !private ["Ps8Hashable", "Fade"]
 - !private ["Ps8Hashable", "FirebaseManager"]
 - !private ["Ps8Hashable", "ForegroundColor"]
+- !private ["Ps8Hashable", "HostViewController"]
 - ["Ps8Hashable", "IntegerLiteralType"]
 - !private ["Ps8Hashable", "NSIndexPath"]
 - !private ["Ps8Hashable", "NSIndexSet"]
@@ -983,6 +990,7 @@ depends-member:
 - !private ["P6CoChat24HostReusableCellDelegate", "CGPointZero"]
 - ["P6CoChat24HostReusableCellDelegate", "Channel"]
 - !private ["P6CoChat24HostReusableCellDelegate", "FirebaseManager"]
+- !private ["P6CoChat24HostReusableCellDelegate", "HostViewController"]
 - !private ["P6CoChat24HostReusableCellDelegate", "NSIndexPath"]
 - !private ["P6CoChat24HostReusableCellDelegate", "NSIndexSet"]
 - !private ["P6CoChat24HostReusableCellDelegate", "Room"]
@@ -1051,6 +1059,7 @@ depends-member:
 - ["C6CoChat18HostViewController", "ChannelsVC"]
 - !private ["C6CoChat18HostViewController", "FirebaseManager"]
 - ["C6CoChat18HostViewController", "HostReusableCell"]
+- !private ["C6CoChat18HostViewController", "HostViewController"]
 - ["C6CoChat18HostViewController", "Int"]
 - !private ["C6CoChat18HostViewController", "MessagingViewController"]
 - ["C6CoChat18HostViewController", "NSIndexPath"]
@@ -1185,6 +1194,7 @@ depends-member:
 - !private ["PSo8NSCoding", "CGPointZero"]
 - ["PSo8NSCoding", "Channel"]
 - !private ["PSo8NSCoding", "FirebaseManager"]
+- !private ["PSo8NSCoding", "HostViewController"]
 - !private ["PSo8NSCoding", "NSIndexPath"]
 - !private ["PSo8NSCoding", "NSIndexSet"]
 - !private ["PSo8NSCoding", "Room"]
@@ -1298,6 +1308,7 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "CGPointZero"]
 - ["PSo26NSExtensionRequestHandling", "Channel"]
 - !private ["PSo26NSExtensionRequestHandling", "FirebaseManager"]
+- !private ["PSo26NSExtensionRequestHandling", "HostViewController"]
 - !private ["PSo26NSExtensionRequestHandling", "NSIndexPath"]
 - !private ["PSo26NSExtensionRequestHandling", "NSIndexSet"]
 - !private ["PSo26NSExtensionRequestHandling", "Room"]
@@ -1381,6 +1392,7 @@ depends-member:
 - ["CSo8NSObject", "ChannelsVC"]
 - !private ["CSo8NSObject", "FirebaseManager"]
 - ["CSo8NSObject", "HostReusableCell"]
+- !private ["CSo8NSObject", "HostViewController"]
 - ["CSo8NSObject", "Int"]
 - !private ["CSo8NSObject", "MessagingViewController"]
 - ["CSo8NSObject", "NSIndexPath"]
@@ -1503,6 +1515,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "CGPointZero"]
 - ["PSo16NSObjectProtocol", "Channel"]
 - !private ["PSo16NSObjectProtocol", "FirebaseManager"]
+- !private ["PSo16NSObjectProtocol", "HostViewController"]
 - !private ["PSo16NSObjectProtocol", "NSIndexPath"]
 - !private ["PSo16NSObjectProtocol", "NSIndexSet"]
 - !private ["PSo16NSObjectProtocol", "Room"]
@@ -1646,7 +1659,6 @@ depends-member:
 - ["OE6CoChatCSo16UIViewController15SegueIdentifier", "SegueToMessaging"]
 - !private ["OE6CoChatCSo16UIViewController15SegueIdentifier", "deinit"]
 - !private ["OE6CoChatCSo16UIViewController15SegueIdentifier", "rawValue"]
-- !private ["V10ObjectiveC8Selector", "deinit"]
 - ["Ps12SequenceType", "Element"]
 - ["Ps12SequenceType", "Generator"]
 - ["Ps12SequenceType", "Index"]
@@ -1745,6 +1757,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "CGPointZero"]
 - ["PSo21UIAppearanceContainer", "Channel"]
 - !private ["PSo21UIAppearanceContainer", "FirebaseManager"]
+- !private ["PSo21UIAppearanceContainer", "HostViewController"]
 - !private ["PSo21UIAppearanceContainer", "NSIndexPath"]
 - !private ["PSo21UIAppearanceContainer", "NSIndexSet"]
 - !private ["PSo21UIAppearanceContainer", "Room"]
@@ -1857,6 +1870,7 @@ depends-member:
 - !private ["PSo18UIContentContainer", "CGPointZero"]
 - ["PSo18UIContentContainer", "Channel"]
 - !private ["PSo18UIContentContainer", "FirebaseManager"]
+- !private ["PSo18UIContentContainer", "HostViewController"]
 - !private ["PSo18UIContentContainer", "NSIndexPath"]
 - !private ["PSo18UIContentContainer", "NSIndexSet"]
 - !private ["PSo18UIContentContainer", "Room"]
@@ -1996,6 +2010,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "CGPointZero"]
 - ["PSo18UIFocusEnvironment", "Channel"]
 - !private ["PSo18UIFocusEnvironment", "FirebaseManager"]
+- !private ["PSo18UIFocusEnvironment", "HostViewController"]
 - !private ["PSo18UIFocusEnvironment", "NSIndexPath"]
 - !private ["PSo18UIFocusEnvironment", "NSIndexSet"]
 - !private ["PSo18UIFocusEnvironment", "Room"]
@@ -2125,6 +2140,7 @@ depends-member:
 - ["CSo11UIResponder", "ChannelsVC"]
 - !private ["CSo11UIResponder", "FirebaseManager"]
 - ["CSo11UIResponder", "HostReusableCell"]
+- !private ["CSo11UIResponder", "HostViewController"]
 - ["CSo11UIResponder", "Int"]
 - !private ["CSo11UIResponder", "MessagingViewController"]
 - ["CSo11UIResponder", "NSIndexPath"]
@@ -2249,6 +2265,7 @@ depends-member:
 - !private ["PSo20UIScrollViewDelegate", "CGPointZero"]
 - ["PSo20UIScrollViewDelegate", "Channel"]
 - !private ["PSo20UIScrollViewDelegate", "FirebaseManager"]
+- !private ["PSo20UIScrollViewDelegate", "HostViewController"]
 - !private ["PSo20UIScrollViewDelegate", "NSIndexPath"]
 - !private ["PSo20UIScrollViewDelegate", "NSIndexSet"]
 - !private ["PSo20UIScrollViewDelegate", "Room"]
@@ -2316,6 +2333,7 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "CGPointZero"]
 - ["PSo16UIStateRestoring", "Channel"]
 - !private ["PSo16UIStateRestoring", "FirebaseManager"]
+- !private ["PSo16UIStateRestoring", "HostViewController"]
 - !private ["PSo16UIStateRestoring", "NSIndexPath"]
 - !private ["PSo16UIStateRestoring", "NSIndexSet"]
 - !private ["PSo16UIStateRestoring", "Room"]
@@ -2416,6 +2434,7 @@ depends-member:
 - !private ["PSo21UITableViewDataSource", "CGPointZero"]
 - ["PSo21UITableViewDataSource", "Channel"]
 - !private ["PSo21UITableViewDataSource", "FirebaseManager"]
+- !private ["PSo21UITableViewDataSource", "HostViewController"]
 - !private ["PSo21UITableViewDataSource", "NSIndexPath"]
 - !private ["PSo21UITableViewDataSource", "NSIndexSet"]
 - !private ["PSo21UITableViewDataSource", "Room"]
@@ -2483,6 +2502,7 @@ depends-member:
 - !private ["PSo19UITableViewDelegate", "CGPointZero"]
 - ["PSo19UITableViewDelegate", "Channel"]
 - !private ["PSo19UITableViewDelegate", "FirebaseManager"]
+- !private ["PSo19UITableViewDelegate", "HostViewController"]
 - !private ["PSo19UITableViewDelegate", "NSIndexPath"]
 - !private ["PSo19UITableViewDelegate", "NSIndexSet"]
 - !private ["PSo19UITableViewDelegate", "Room"]
@@ -2581,6 +2601,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "CGPointZero"]
 - ["PSo18UITraitEnvironment", "Channel"]
 - !private ["PSo18UITraitEnvironment", "FirebaseManager"]
+- !private ["PSo18UITraitEnvironment", "HostViewController"]
 - !private ["PSo18UITraitEnvironment", "NSIndexPath"]
 - !private ["PSo18UITraitEnvironment", "NSIndexSet"]
 - !private ["PSo18UITraitEnvironment", "Room"]
@@ -2716,6 +2737,7 @@ depends-member:
 - ["CSo16UIViewController", "ChannelsVC"]
 - !private ["CSo16UIViewController", "FirebaseManager"]
 - ["CSo16UIViewController", "HostReusableCell"]
+- !private ["CSo16UIViewController", "HostViewController"]
 - ["CSo16UIViewController", "Int"]
 - !private ["CSo16UIViewController", "MessagingViewController"]
 - ["CSo16UIViewController", "NSIndexPath"]
@@ -2971,7 +2993,6 @@ depends-nominal:
 - "Ps16RawRepresentable"
 - !private "C6CoChat4Room"
 - "OE6CoChatCSo16UIViewController15SegueIdentifier"
-- !private "V10ObjectiveC8Selector"
 - "Ps12SequenceType"
 - "Ps17SignedIntegerType"
 - "Ps16SignedNumberType"

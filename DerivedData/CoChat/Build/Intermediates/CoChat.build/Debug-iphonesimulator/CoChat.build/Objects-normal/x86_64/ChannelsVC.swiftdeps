@@ -9,90 +9,91 @@ provides-member:
 - ["P6CoChat18ChannelsVCDelegate", ""]
 - ["C6CoChat10ChannelsVC", ""]
 provides-dynamic-lookup:
-- "animateTableView"
-- "registerNibsForTableView"
-- "channelPassCode"
-- "createChannels"
-- "keyboardWillHide"
-- "nameOfChannel"
-- "keyboardWillShow"
-- "toggleAdvancedSettings"
-- "numberOfSectionsInTableView"
-- "toggleCompressedView"
-- "channelsVC"
-- "hostReusableCell"
-- "viewDidLoad"
 - "privateRoom"
-- "addChannelButtonWasTapped"
-- "textFieldDidEndEditingInCell"
-- "createRandomPassCode"
-- "textFieldDidBeginEditingInCell"
+- "keyboardWillShow"
 - "addNewChannel"
 - "addNewChannel"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
+- "numberOfSectionsInTableView"
 - "setUpUI"
 - "tempRoom"
 - "delegate"
+- "channelPassCode"
+- "addChannelButtonWasTapped"
+- "createChannels"
+- "channelsVC"
+- "keyboardWillHide"
+- "animateTableView"
+- "registerNibsForTableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "hostReusableCell"
+- "textFieldDidBeginEditingInCell"
+- "nameOfChannel"
+- "toggleCompressedView"
+- "createRandomPassCode"
+- "toggleAdvancedSettings"
+- "textFieldDidEndEditingInCell"
+- "viewDidLoad"
 depends-top-level:
-- "Room"
-- !private "NSValue"
-- !private "=="
-- !private "~="
-- "ChannelsVC"
-- !private "UITableViewRowAnimation"
-- !private "+"
-- "CGFloat"
-- !private "assertionFailure"
-- !private "UIKeyboardWillHideNotification"
-- !private "UIView"
-- !private "UIKeyboardFrameEndUserInfoKey"
-- !private "Bool"
-- "UITextField"
-- "HostReusableCellDelegate"
 - !private "FirebaseManager"
-- !private "UIEdgeInsetsMake"
-- !private "UIKeyboardAnimationDurationUserInfoKey"
+- "CGFloat"
+- "ChannelsVC"
+- "HostReusableCellDelegate"
 - !private "!"
-- "Int"
-- "UITableViewCell"
-- !private ">"
-- !private "!="
-- "UITableViewDataSource"
-- !private "UIColor"
-- "UITableViewDelegate"
-- "UIViewController"
-- "HostReusableCell"
-- !private "<<"
-- "ChannelsVCDelegate"
-- "Channel"
-- !private "CGPointMake"
-- !private "UIViewAnimationOptions"
-- !private "Double"
-- !private "NSNotificationCenter"
-- "AnyObject"
-- !private "Theme"
-- !private "StringLiteralType"
-- !private "UInt"
-- !private "NSIndexSet"
-- !private "CGRect"
-- "String"
+- !private "+"
 - !private "UINib"
-- !private "UIKeyboardWillShowNotification"
+- !private "UIEdgeInsetsMake"
 - "BooleanLiteralType"
-- !private "UIKeyboardAnimationCurveUserInfoKey"
-- "NSNotification"
+- "UIViewController"
+- "ChannelsVCDelegate"
+- !private "NSValue"
+- "Room"
+- "Int"
+- "Channel"
+- "AnyObject"
+- !private "UIKeyboardAnimationDurationUserInfoKey"
+- "HostReusableCell"
 - "UITableView"
-- !private "UIBarButtonItem"
+- !private "NSNotificationCenter"
+- !private "UIViewAnimationOptions"
+- !private "UITableViewRowAnimation"
+- !private "CGPointMake"
+- !private "UIView"
+- !private ">"
+- !private "Bool"
+- "UITableViewDelegate"
+- "UITableViewDataSource"
+- "UITextField"
+- !private "Double"
+- "UITableViewCell"
+- !private "~="
+- "String"
+- !private "=="
+- !private "UIKeyboardAnimationCurveUserInfoKey"
+- !private "UIKeyboardWillHideNotification"
 - "NSIndexPath"
+- !private "Theme"
+- !private "CGRect"
+- "NSNotification"
+- !private "NSIndexSet"
+- !private "UInt"
+- !private "UIColor"
+- !private "<<"
+- !private "UIKeyboardFrameEndUserInfoKey"
+- !private "!="
+- !private "StringLiteralType"
+- !private "UIBarButtonItem"
+- !private "UIKeyboardWillShowNotification"
+- !private "assertionFailure"
 depends-member:
 - !private ["Ps9AnyObject", "CGPointMake"]
 - !private ["Ps9AnyObject", "CGRect"]
 - !private ["Ps9AnyObject", "CGRectValue"]
 - !private ["Ps9AnyObject", "Channel"]
+- !private ["Ps9AnyObject", "ChannelsVC"]
 - !private ["Ps9AnyObject", "FirebaseManager"]
 - !private ["Ps9AnyObject", "NSIndexSet"]
 - !private ["Ps9AnyObject", "NSNotificationCenter"]
@@ -227,6 +228,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "CGRect"]
 - !private ["Ps11CVarArgType", "CGRectValue"]
 - !private ["Ps11CVarArgType", "Channel"]
+- !private ["Ps11CVarArgType", "ChannelsVC"]
 - !private ["Ps11CVarArgType", "Distance"]
 - !private ["Ps11CVarArgType", "FirebaseManager"]
 - !private ["Ps11CVarArgType", "IntegerLiteralType"]
@@ -335,6 +337,7 @@ depends-member:
 - !private ["C6CoChat10ChannelsVC", "CGPointMake"]
 - !private ["C6CoChat10ChannelsVC", "CGRect"]
 - ["C6CoChat10ChannelsVC", "Channel"]
+- !private ["C6CoChat10ChannelsVC", "ChannelsVC"]
 - ["C6CoChat10ChannelsVC", "ChannelsVCDelegate"]
 - !private ["C6CoChat10ChannelsVC", "Double"]
 - !private ["C6CoChat10ChannelsVC", "FirebaseManager"]
@@ -436,6 +439,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "CGRect"]
 - !private ["Ps28CustomDebugStringConvertible", "CGRectValue"]
 - !private ["Ps28CustomDebugStringConvertible", "Channel"]
+- !private ["Ps28CustomDebugStringConvertible", "ChannelsVC"]
 - !private ["Ps28CustomDebugStringConvertible", "FirebaseManager"]
 - !private ["Ps28CustomDebugStringConvertible", "Generator"]
 - !private ["Ps28CustomDebugStringConvertible", "Index"]
@@ -545,6 +549,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "CGRect"]
 - !private ["Ps23CustomStringConvertible", "CGRectValue"]
 - !private ["Ps23CustomStringConvertible", "Channel"]
+- !private ["Ps23CustomStringConvertible", "ChannelsVC"]
 - !private ["Ps23CustomStringConvertible", "Distance"]
 - !private ["Ps23CustomStringConvertible", "FirebaseManager"]
 - !private ["Ps23CustomStringConvertible", "Generator"]
@@ -672,6 +677,7 @@ depends-member:
 - !private ["Ps9Equatable", "CGRect"]
 - !private ["Ps9Equatable", "CGRectValue"]
 - !private ["Ps9Equatable", "Channel"]
+- !private ["Ps9Equatable", "ChannelsVC"]
 - !private ["Ps9Equatable", "Distance"]
 - !private ["Ps9Equatable", "Fade"]
 - !private ["Ps9Equatable", "FirebaseManager"]
@@ -797,6 +803,7 @@ depends-member:
 - !private ["Ps8Hashable", "CGRect"]
 - !private ["Ps8Hashable", "CGRectValue"]
 - !private ["Ps8Hashable", "Channel"]
+- !private ["Ps8Hashable", "ChannelsVC"]
 - !private ["Ps8Hashable", "Distance"]
 - !private ["Ps8Hashable", "Fade"]
 - !private ["Ps8Hashable", "FirebaseManager"]
@@ -919,6 +926,7 @@ depends-member:
 - !private ["P6CoChat24HostReusableCellDelegate", "CGPointMake"]
 - !private ["P6CoChat24HostReusableCellDelegate", "CGRect"]
 - !private ["P6CoChat24HostReusableCellDelegate", "Channel"]
+- !private ["P6CoChat24HostReusableCellDelegate", "ChannelsVC"]
 - !private ["P6CoChat24HostReusableCellDelegate", "FirebaseManager"]
 - !private ["P6CoChat24HostReusableCellDelegate", "NSIndexSet"]
 - !private ["P6CoChat24HostReusableCellDelegate", "NSNotificationCenter"]
@@ -1027,6 +1035,7 @@ depends-member:
 - !private ["PSo8NSCoding", "CGRect"]
 - !private ["PSo8NSCoding", "CGRectValue"]
 - !private ["PSo8NSCoding", "Channel"]
+- !private ["PSo8NSCoding", "ChannelsVC"]
 - !private ["PSo8NSCoding", "FirebaseManager"]
 - !private ["PSo8NSCoding", "NSIndexSet"]
 - !private ["PSo8NSCoding", "NSNotificationCenter"]
@@ -1133,6 +1142,7 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "CGPointMake"]
 - !private ["PSo26NSExtensionRequestHandling", "CGRect"]
 - !private ["PSo26NSExtensionRequestHandling", "Channel"]
+- !private ["PSo26NSExtensionRequestHandling", "ChannelsVC"]
 - !private ["PSo26NSExtensionRequestHandling", "FirebaseManager"]
 - !private ["PSo26NSExtensionRequestHandling", "NSIndexSet"]
 - !private ["PSo26NSExtensionRequestHandling", "NSNotificationCenter"]
@@ -1213,6 +1223,7 @@ depends-member:
 - !private ["CSo8NSObject", "CGRect"]
 - !private ["CSo8NSObject", "CGRectValue"]
 - ["CSo8NSObject", "Channel"]
+- !private ["CSo8NSObject", "ChannelsVC"]
 - ["CSo8NSObject", "ChannelsVCDelegate"]
 - !private ["CSo8NSObject", "Double"]
 - !private ["CSo8NSObject", "FirebaseManager"]
@@ -1327,6 +1338,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "CGRect"]
 - !private ["PSo16NSObjectProtocol", "CGRectValue"]
 - !private ["PSo16NSObjectProtocol", "Channel"]
+- !private ["PSo16NSObjectProtocol", "ChannelsVC"]
 - !private ["PSo16NSObjectProtocol", "FirebaseManager"]
 - !private ["PSo16NSObjectProtocol", "NSIndexSet"]
 - !private ["PSo16NSObjectProtocol", "NSNotificationCenter"]
@@ -1453,7 +1465,6 @@ depends-member:
 - !private ["Ps16RawRepresentable", "Fade"]
 - !private ["Ps16RawRepresentable", "None"]
 - !private ["Ps16RawRepresentable", "init"]
-- !private ["V10ObjectiveC8Selector", "deinit"]
 - !private ["Ps12SequenceType", "Element"]
 - !private ["Ps12SequenceType", "Generator"]
 - !private ["Ps12SequenceType", "Index"]
@@ -1537,6 +1548,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "CGPointMake"]
 - !private ["PSo21UIAppearanceContainer", "CGRect"]
 - !private ["PSo21UIAppearanceContainer", "Channel"]
+- !private ["PSo21UIAppearanceContainer", "ChannelsVC"]
 - !private ["PSo21UIAppearanceContainer", "FirebaseManager"]
 - !private ["PSo21UIAppearanceContainer", "NSIndexSet"]
 - !private ["PSo21UIAppearanceContainer", "NSNotificationCenter"]
@@ -1634,6 +1646,7 @@ depends-member:
 - !private ["PSo18UIContentContainer", "CGPointMake"]
 - !private ["PSo18UIContentContainer", "CGRect"]
 - !private ["PSo18UIContentContainer", "Channel"]
+- !private ["PSo18UIContentContainer", "ChannelsVC"]
 - !private ["PSo18UIContentContainer", "FirebaseManager"]
 - !private ["PSo18UIContentContainer", "NSIndexSet"]
 - !private ["PSo18UIContentContainer", "NSNotificationCenter"]
@@ -1754,6 +1767,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "CGPointMake"]
 - !private ["PSo18UIFocusEnvironment", "CGRect"]
 - !private ["PSo18UIFocusEnvironment", "Channel"]
+- !private ["PSo18UIFocusEnvironment", "ChannelsVC"]
 - !private ["PSo18UIFocusEnvironment", "FirebaseManager"]
 - !private ["PSo18UIFocusEnvironment", "NSIndexSet"]
 - !private ["PSo18UIFocusEnvironment", "NSNotificationCenter"]
@@ -1862,6 +1876,7 @@ depends-member:
 - !private ["CSo11UIResponder", "CGPointMake"]
 - !private ["CSo11UIResponder", "CGRect"]
 - ["CSo11UIResponder", "Channel"]
+- !private ["CSo11UIResponder", "ChannelsVC"]
 - ["CSo11UIResponder", "ChannelsVCDelegate"]
 - !private ["CSo11UIResponder", "Double"]
 - !private ["CSo11UIResponder", "FirebaseManager"]
@@ -1976,6 +1991,7 @@ depends-member:
 - !private ["PSo20UIScrollViewDelegate", "CGPointMake"]
 - !private ["PSo20UIScrollViewDelegate", "CGRect"]
 - !private ["PSo20UIScrollViewDelegate", "Channel"]
+- !private ["PSo20UIScrollViewDelegate", "ChannelsVC"]
 - !private ["PSo20UIScrollViewDelegate", "FirebaseManager"]
 - !private ["PSo20UIScrollViewDelegate", "NSIndexSet"]
 - !private ["PSo20UIScrollViewDelegate", "NSNotificationCenter"]
@@ -2037,6 +2053,7 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "CGPointMake"]
 - !private ["PSo16UIStateRestoring", "CGRect"]
 - !private ["PSo16UIStateRestoring", "Channel"]
+- !private ["PSo16UIStateRestoring", "ChannelsVC"]
 - !private ["PSo16UIStateRestoring", "FirebaseManager"]
 - !private ["PSo16UIStateRestoring", "NSIndexSet"]
 - !private ["PSo16UIStateRestoring", "NSNotificationCenter"]
@@ -2127,6 +2144,7 @@ depends-member:
 - !private ["PSo21UITableViewDataSource", "CGPointMake"]
 - !private ["PSo21UITableViewDataSource", "CGRect"]
 - !private ["PSo21UITableViewDataSource", "Channel"]
+- !private ["PSo21UITableViewDataSource", "ChannelsVC"]
 - !private ["PSo21UITableViewDataSource", "FirebaseManager"]
 - !private ["PSo21UITableViewDataSource", "NSIndexSet"]
 - !private ["PSo21UITableViewDataSource", "NSNotificationCenter"]
@@ -2188,6 +2206,7 @@ depends-member:
 - !private ["PSo19UITableViewDelegate", "CGPointMake"]
 - !private ["PSo19UITableViewDelegate", "CGRect"]
 - !private ["PSo19UITableViewDelegate", "Channel"]
+- !private ["PSo19UITableViewDelegate", "ChannelsVC"]
 - !private ["PSo19UITableViewDelegate", "FirebaseManager"]
 - !private ["PSo19UITableViewDelegate", "NSIndexSet"]
 - !private ["PSo19UITableViewDelegate", "NSNotificationCenter"]
@@ -2269,6 +2288,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "CGPointMake"]
 - !private ["PSo18UITraitEnvironment", "CGRect"]
 - !private ["PSo18UITraitEnvironment", "Channel"]
+- !private ["PSo18UITraitEnvironment", "ChannelsVC"]
 - !private ["PSo18UITraitEnvironment", "FirebaseManager"]
 - !private ["PSo18UITraitEnvironment", "NSIndexSet"]
 - !private ["PSo18UITraitEnvironment", "NSNotificationCenter"]
@@ -2388,6 +2408,7 @@ depends-member:
 - !private ["CSo16UIViewController", "CGPointMake"]
 - !private ["CSo16UIViewController", "CGRect"]
 - ["CSo16UIViewController", "Channel"]
+- !private ["CSo16UIViewController", "ChannelsVC"]
 - ["CSo16UIViewController", "ChannelsVCDelegate"]
 - !private ["CSo16UIViewController", "Double"]
 - !private ["CSo16UIViewController", "FirebaseManager"]
@@ -2624,7 +2645,6 @@ depends-nominal:
 - !private "Vs5Range"
 - !private "Ps30RangeReplaceableCollectionType"
 - !private "Ps16RawRepresentable"
-- !private "V10ObjectiveC8Selector"
 - !private "Ps12SequenceType"
 - !private "Ps14SetAlgebraType"
 - !private "Ps17SignedIntegerType"

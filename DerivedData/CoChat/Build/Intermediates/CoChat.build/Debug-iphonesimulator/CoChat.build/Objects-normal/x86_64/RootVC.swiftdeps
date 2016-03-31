@@ -6,10 +6,10 @@ provides-nominal:
 provides-member:
 - ["C6CoChat6RootVC", ""]
 provides-dynamic-lookup:
-- "container"
 - "viewDidAppear"
-- "viewDidLoad"
+- "container"
 - "videoDidStopPlaying"
+- "viewDidLoad"
 depends-top-level:
 - "RootVC"
 - "Bool"

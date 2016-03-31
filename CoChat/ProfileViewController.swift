@@ -51,8 +51,8 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
         
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         setupArray()
         recentTableView.reloadData()
     }

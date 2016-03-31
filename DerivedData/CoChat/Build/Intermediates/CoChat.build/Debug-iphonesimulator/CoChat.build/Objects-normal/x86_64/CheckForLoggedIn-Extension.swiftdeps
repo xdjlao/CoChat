@@ -9,27 +9,27 @@ provides-member:
 - ["CSo16UIViewController", "loginButton"]
 - ["CSo16UIViewController", "loginButtonDidLogOut"]
 provides-dynamic-lookup:
+- "loginButtonDidLogOut"
+- "presentLoginScreen"
 - "createFBLoginButton"
 - "createFBLoginButtonWithPosition"
-- "presentLoginScreen"
 - "loginButton"
-- "loginButtonDidLogOut"
 depends-top-level:
-- !private "CGPoint"
-- !private "User"
-- "FBSDKLoginManagerLoginResult"
+- "UIViewController"
 - !private "FBSDKAccessToken"
+- !private "Array"
+- !private "User"
+- "NSError"
+- "FBSDKLoginManagerLoginResult"
 - !private "print"
 - !private "BooleanLiteralType"
-- "NSError"
-- "CGFloat"
-- "FBSDKLoginButton"
+- !private "CGPoint"
 - !private "UIStoryboard"
-- !private "FirebaseManager"
+- "FBSDKLoginButton"
+- "CGFloat"
 - !private "StringLiteralType"
 - !private "LoginNavigationVC"
-- "UIViewController"
-- !private "Array"
+- !private "FirebaseManager"
 depends-member:
 - !private ["Ps9AnyObject", "CGPoint"]
 - !private ["Ps9AnyObject", "FBSDKAccessToken"]
@@ -45,7 +45,6 @@ depends-member:
 - ["Ps9AnyObject", "createFBLoginButtonWithPosition"]
 - !private ["Ps9AnyObject", "currentAccessToken"]
 - !private ["Ps9AnyObject", "deinit"]
-- !private ["Ps9AnyObject", "dismissViewControllerAnimated"]
 - !private ["Ps9AnyObject", "handleUserAuthData"]
 - !private ["Ps9AnyObject", "init"]
 - !private ["Ps9AnyObject", "instantiateInitialViewController"]
@@ -82,7 +81,6 @@ depends-member:
 - ["Ps11CVarArgType", "createFBLoginButton"]
 - ["Ps11CVarArgType", "createFBLoginButtonWithPosition"]
 - !private ["Ps11CVarArgType", "currentAccessToken"]
-- !private ["Ps11CVarArgType", "dismissViewControllerAnimated"]
 - !private ["Ps11CVarArgType", "init"]
 - !private ["Ps11CVarArgType", "instantiateInitialViewController"]
 - !private ["Ps11CVarArgType", "isCancelled"]
@@ -112,7 +110,6 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "createFBLoginButton"]
 - ["Ps28CustomDebugStringConvertible", "createFBLoginButtonWithPosition"]
 - !private ["Ps28CustomDebugStringConvertible", "currentAccessToken"]
-- !private ["Ps28CustomDebugStringConvertible", "dismissViewControllerAnimated"]
 - !private ["Ps28CustomDebugStringConvertible", "init"]
 - !private ["Ps28CustomDebugStringConvertible", "instantiateInitialViewController"]
 - !private ["Ps28CustomDebugStringConvertible", "isCancelled"]
@@ -140,7 +137,6 @@ depends-member:
 - ["Ps23CustomStringConvertible", "createFBLoginButton"]
 - ["Ps23CustomStringConvertible", "createFBLoginButtonWithPosition"]
 - !private ["Ps23CustomStringConvertible", "currentAccessToken"]
-- !private ["Ps23CustomStringConvertible", "dismissViewControllerAnimated"]
 - !private ["Ps23CustomStringConvertible", "init"]
 - !private ["Ps23CustomStringConvertible", "instantiateInitialViewController"]
 - !private ["Ps23CustomStringConvertible", "isCancelled"]
@@ -167,7 +163,6 @@ depends-member:
 - ["Ps9Equatable", "createFBLoginButton"]
 - ["Ps9Equatable", "createFBLoginButtonWithPosition"]
 - !private ["Ps9Equatable", "currentAccessToken"]
-- !private ["Ps9Equatable", "dismissViewControllerAnimated"]
 - !private ["Ps9Equatable", "init"]
 - !private ["Ps9Equatable", "instantiateInitialViewController"]
 - !private ["Ps9Equatable", "isCancelled"]
@@ -217,7 +212,6 @@ depends-member:
 - ["Ps8Hashable", "createFBLoginButton"]
 - ["Ps8Hashable", "createFBLoginButtonWithPosition"]
 - !private ["Ps8Hashable", "currentAccessToken"]
-- !private ["Ps8Hashable", "dismissViewControllerAnimated"]
 - !private ["Ps8Hashable", "init"]
 - !private ["Ps8Hashable", "instantiateInitialViewController"]
 - !private ["Ps8Hashable", "isCancelled"]
@@ -252,7 +246,6 @@ depends-member:
 - !private ["PSo8NSCoding", "center"]
 - !private ["PSo8NSCoding", "createFBLoginButton"]
 - !private ["PSo8NSCoding", "currentAccessToken"]
-- !private ["PSo8NSCoding", "dismissViewControllerAnimated"]
 - !private ["PSo8NSCoding", "init"]
 - !private ["PSo8NSCoding", "presentViewController"]
 - !private ["PSo8NSCoding", "print"]
@@ -269,7 +262,6 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "UIStoryboard"]
 - !private ["PSo26NSExtensionRequestHandling", "User"]
 - !private ["PSo26NSExtensionRequestHandling", "createFBLoginButton"]
-- !private ["PSo26NSExtensionRequestHandling", "dismissViewControllerAnimated"]
 - !private ["PSo26NSExtensionRequestHandling", "presentViewController"]
 - !private ["PSo26NSExtensionRequestHandling", "print"]
 - !private ["PSo26NSExtensionRequestHandling", "view"]
@@ -290,7 +282,6 @@ depends-member:
 - ["CSo8NSObject", "createFBLoginButton"]
 - ["CSo8NSObject", "createFBLoginButtonWithPosition"]
 - !private ["CSo8NSObject", "currentAccessToken"]
-- !private ["CSo8NSObject", "dismissViewControllerAnimated"]
 - !private ["CSo8NSObject", "init"]
 - !private ["CSo8NSObject", "instantiateInitialViewController"]
 - !private ["CSo8NSObject", "isCancelled"]
@@ -315,7 +306,6 @@ depends-member:
 - ["PSo16NSObjectProtocol", "createFBLoginButton"]
 - ["PSo16NSObjectProtocol", "createFBLoginButtonWithPosition"]
 - !private ["PSo16NSObjectProtocol", "currentAccessToken"]
-- !private ["PSo16NSObjectProtocol", "dismissViewControllerAnimated"]
 - !private ["PSo16NSObjectProtocol", "init"]
 - !private ["PSo16NSObjectProtocol", "instantiateInitialViewController"]
 - !private ["PSo16NSObjectProtocol", "isCancelled"]
@@ -361,7 +351,6 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "addSubview"]
 - !private ["PSo21UIAppearanceContainer", "center"]
 - !private ["PSo21UIAppearanceContainer", "createFBLoginButton"]
-- !private ["PSo21UIAppearanceContainer", "dismissViewControllerAnimated"]
 - !private ["PSo21UIAppearanceContainer", "init"]
 - !private ["PSo21UIAppearanceContainer", "presentViewController"]
 - !private ["PSo21UIAppearanceContainer", "print"]
@@ -377,7 +366,6 @@ depends-member:
 - !private ["PSo18UIContentContainer", "UIStoryboard"]
 - !private ["PSo18UIContentContainer", "User"]
 - !private ["PSo18UIContentContainer", "createFBLoginButton"]
-- !private ["PSo18UIContentContainer", "dismissViewControllerAnimated"]
 - !private ["PSo18UIContentContainer", "presentViewController"]
 - !private ["PSo18UIContentContainer", "print"]
 - !private ["PSo18UIContentContainer", "view"]
@@ -401,7 +389,6 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "addSubview"]
 - !private ["PSo18UIFocusEnvironment", "center"]
 - !private ["PSo18UIFocusEnvironment", "createFBLoginButton"]
-- !private ["PSo18UIFocusEnvironment", "dismissViewControllerAnimated"]
 - !private ["PSo18UIFocusEnvironment", "init"]
 - !private ["PSo18UIFocusEnvironment", "presentViewController"]
 - !private ["PSo18UIFocusEnvironment", "print"]
@@ -421,7 +408,6 @@ depends-member:
 - !private ["CSo11UIResponder", "center"]
 - ["CSo11UIResponder", "createFBLoginButton"]
 - ["CSo11UIResponder", "createFBLoginButtonWithPosition"]
-- !private ["CSo11UIResponder", "dismissViewControllerAnimated"]
 - !private ["CSo11UIResponder", "init"]
 - ["CSo11UIResponder", "loginButton"]
 - ["CSo11UIResponder", "loginButtonDidLogOut"]
@@ -437,7 +423,6 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "UIStoryboard"]
 - !private ["PSo16UIStateRestoring", "User"]
 - !private ["PSo16UIStateRestoring", "createFBLoginButton"]
-- !private ["PSo16UIStateRestoring", "dismissViewControllerAnimated"]
 - !private ["PSo16UIStateRestoring", "presentViewController"]
 - !private ["PSo16UIStateRestoring", "print"]
 - !private ["PSo16UIStateRestoring", "view"]
@@ -452,7 +437,6 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "addSubview"]
 - !private ["PSo18UITraitEnvironment", "center"]
 - !private ["PSo18UITraitEnvironment", "createFBLoginButton"]
-- !private ["PSo18UITraitEnvironment", "dismissViewControllerAnimated"]
 - !private ["PSo18UITraitEnvironment", "init"]
 - !private ["PSo18UITraitEnvironment", "presentViewController"]
 - !private ["PSo18UITraitEnvironment", "print"]
@@ -474,7 +458,6 @@ depends-member:
 - !private ["CSo16UIViewController", "User"]
 - ["CSo16UIViewController", "createFBLoginButton"]
 - ["CSo16UIViewController", "createFBLoginButtonWithPosition"]
-- !private ["CSo16UIViewController", "dismissViewControllerAnimated"]
 - ["CSo16UIViewController", "loginButton"]
 - ["CSo16UIViewController", "loginButtonDidLogOut"]
 - ["CSo16UIViewController", "presentLoginScreen"]

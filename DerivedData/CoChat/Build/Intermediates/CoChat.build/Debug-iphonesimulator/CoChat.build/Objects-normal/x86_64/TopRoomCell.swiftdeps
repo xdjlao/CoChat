@@ -7,21 +7,21 @@ provides-member:
 - ["C6CoChat11TopRoomCell", ""]
 provides-dynamic-lookup:
 - "cellSeperator"
+- "setSelected"
 - "cellCountWrapperView"
 - "roomTitleLabel"
-- "setSelected"
-- "countLabel"
-- "awakeFromNib"
 - "cellWrapperView"
 - "countCellSeperator"
+- "awakeFromNib"
+- "countLabel"
 depends-top-level:
+- "UIView"
+- "Bool"
+- "TopRoomCell"
 - "UILabel"
 - "UITableViewCell"
 - !private "Theme"
-- "Bool"
-- "UIView"
 - !private "UIColor"
-- "TopRoomCell"
 depends-member:
 - !private ["Ps9AnyObject", "Theme"]
 - !private ["Ps9AnyObject", "UIColor"]

@@ -6,23 +6,23 @@ provides-nominal:
 provides-member:
 - ["C6CoChat11WhisperCell", ""]
 provides-dynamic-lookup:
-- "messageLabel"
 - "profileImageView"
-- "imageSeparatorView"
-- "contentWrapperView"
-- "container"
 - "awakeFromNib"
-- "timestampLabel"
-- "contentSeparatorView"
+- "contentWrapperView"
 - "nameLabel"
+- "contentSeparatorView"
+- "timestampLabel"
+- "messageLabel"
+- "container"
+- "imageSeparatorView"
 depends-top-level:
 - "WhisperCell"
-- "UITableViewCell"
-- "UILabel"
-- "UIView"
 - "UIImageView"
-- !private "Theme"
 - !private "UIColor"
+- "UIView"
+- "UILabel"
+- !private "Theme"
+- "UITableViewCell"
 depends-member:
 - !private ["Ps9AnyObject", "Theme"]
 - !private ["Ps9AnyObject", "UIColor"]

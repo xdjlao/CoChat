@@ -6,92 +6,92 @@ provides-nominal:
 provides-member:
 - ["C6CoChat13EmailSignUpVC", ""]
 provides-dynamic-lookup:
-- "keyboardWillShow"
-- "formScrollView"
-- "viewWillDisappear"
 - "textFieldShouldReturn"
-- "signUpButton"
+- "keyboardWillHide"
+- "signUpButtonWasTapped"
+- "fullNameTextField"
+- "textFields"
+- "formScrollView"
+- "setUpUI"
+- "textFieldDidBeginEditing"
+- "keyboardWillShow"
 - "passwordTextField"
 - "signUpButtonContainer"
-- "setUpUI"
-- "rePasswordTextField"
-- "signUpButtonWasTapped"
-- "textFieldDidBeginEditing"
+- "signUpButton"
+- "textFieldDidEndEditing"
+- "activeTextField"
 - "emailTextField"
-- "textFields"
+- "handleSingleTap"
+- "rePasswordTextField"
 - "viewWillAppear"
 - "formContainer"
-- "fullNameTextField"
 - "viewDidLoad"
-- "keyboardWillHide"
-- "activeTextField"
-- "handleSingleTap"
-- "textFieldDidEndEditing"
+- "viewWillDisappear"
 depends-top-level:
-- !private "Theme"
-- !private "UIKeyboardWillShowNotification"
-- !private "NSURL"
-- !private "-"
-- !private "-="
-- "UIScrollView"
-- !private "CGPoint"
-- !private "Array"
-- !private "||"
-- "NSNotification"
-- "UIButton"
-- "Bool"
-- !private "NSAttributedString"
-- "UIViewController"
-- "UITextField"
-- "EmailSignUpVC"
-- !private "print"
-- !private "CGPointMake"
-- !private "Dictionary"
-- !private "BooleanLiteralType"
-- "UIView"
-- !private "NSNotificationCenter"
-- "UITapGestureRecognizer"
-- !private "UIKeyboardWillHideNotification"
-- !private "NSValue"
-- !private "CGRectContainsPoint"
-- !private "=="
-- !private "UIKeyboardFrameEndUserInfoKey"
-- !private "&&"
-- !private "StringLiteralType"
 - "UITextFieldDelegate"
-- !private "String"
+- "UITextField"
+- !private "Theme"
+- "UITapGestureRecognizer"
+- !private "StringLiteralType"
+- "Bool"
+- "UIButton"
+- !private "NSAttributedString"
+- "NSNotification"
+- !private "CGRectContainsPoint"
+- !private "UIKeyboardFrameEndUserInfoKey"
+- !private "-"
+- !private "&&"
+- !private "Firebase"
+- "EmailSignUpVC"
+- !private "=="
+- !private "FirebaseManager"
+- "UIScrollView"
+- !private "print"
+- !private "UIKeyboardWillHideNotification"
+- !private "CGPointMake"
+- !private "||"
+- !private "BooleanLiteralType"
 - !private "UIColor"
-- !private "User"
+- "UIViewController"
+- "UIView"
+- !private "UIKeyboardWillShowNotification"
+- !private "NSNotificationCenter"
+- !private "Dictionary"
+- !private "NSValue"
+- !private "-="
+- !private "CGPoint"
 - !private "NSForegroundColorAttributeName"
+- !private "Array"
 depends-member:
 - !private ["Ps9AnyObject", "CGPoint"]
 - !private ["Ps9AnyObject", "CGPointMake"]
 - !private ["Ps9AnyObject", "CGRectContainsPoint"]
 - !private ["Ps9AnyObject", "CGRectValue"]
+- !private ["Ps9AnyObject", "EmailSignUpVC"]
+- !private ["Ps9AnyObject", "Firebase"]
+- !private ["Ps9AnyObject", "FirebaseManager"]
 - !private ["Ps9AnyObject", "NSAttributedString"]
 - !private ["Ps9AnyObject", "NSForegroundColorAttributeName"]
 - !private ["Ps9AnyObject", "NSNotificationCenter"]
-- !private ["Ps9AnyObject", "NSURL"]
-- !private ["Ps9AnyObject", "String"]
 - !private ["Ps9AnyObject", "Theme"]
 - !private ["Ps9AnyObject", "UIColor"]
 - !private ["Ps9AnyObject", "UIKeyboardFrameEndUserInfoKey"]
 - !private ["Ps9AnyObject", "UIKeyboardWillHideNotification"]
 - !private ["Ps9AnyObject", "UIKeyboardWillShowNotification"]
 - !private ["Ps9AnyObject", "UITapGestureRecognizer"]
-- !private ["Ps9AnyObject", "User"]
 - ["Ps9AnyObject", "activeTextField"]
 - !private ["Ps9AnyObject", "addGestureRecognizer"]
 - !private ["Ps9AnyObject", "addObserver"]
 - !private ["Ps9AnyObject", "allTextFieldsAreFilled"]
 - !private ["Ps9AnyObject", "alpha"]
 - !private ["Ps9AnyObject", "attributedPlaceholder"]
+- !private ["Ps9AnyObject", "authUser"]
 - !private ["Ps9AnyObject", "backgroundColor"]
 - !private ["Ps9AnyObject", "cancelsTouchesInView"]
 - !private ["Ps9AnyObject", "clearColor"]
 - !private ["Ps9AnyObject", "contentOffset"]
 - !private ["Ps9AnyObject", "cornerRadius"]
-- !private ["Ps9AnyObject", "createNewUserWith"]
+- !private ["Ps9AnyObject", "createUser"]
 - !private ["Ps9AnyObject", "defaultCenter"]
 - !private ["Ps9AnyObject", "delegate"]
 - ["Ps9AnyObject", "emailTextField"]
@@ -100,13 +100,14 @@ depends-member:
 - ["Ps9AnyObject", "formScrollView"]
 - !private ["Ps9AnyObject", "frame"]
 - ["Ps9AnyObject", "fullNameTextField"]
-- !private ["Ps9AnyObject", "generateRandomPassCode"]
 - ["Ps9AnyObject", "handleSingleTap"]
+- !private ["Ps9AnyObject", "handleUserAuthData"]
 - ["Ps9AnyObject", "init"]
 - !private ["Ps9AnyObject", "isValidEmail"]
 - ["Ps9AnyObject", "keyboardWillHide"]
 - ["Ps9AnyObject", "keyboardWillShow"]
 - !private ["Ps9AnyObject", "layer"]
+- !private ["Ps9AnyObject", "manager"]
 - ["Ps9AnyObject", "passwordTextField"]
 - !private ["Ps9AnyObject", "passwordsMatch"]
 - !private ["Ps9AnyObject", "placeholder"]
@@ -154,6 +155,7 @@ depends-member:
 - !private ["Ps21BitwiseOperationsType", "Distance"]
 - !private ["Ps21BitwiseOperationsType", "IntegerLiteralType"]
 - !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Sb", "deinit"]
 - !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
 - !private ["CSo7CALayer", "cornerRadius"]
@@ -169,30 +171,32 @@ depends-member:
 - !private ["Ps11CVarArgType", "CGRectContainsPoint"]
 - !private ["Ps11CVarArgType", "CGRectValue"]
 - !private ["Ps11CVarArgType", "Distance"]
+- !private ["Ps11CVarArgType", "EmailSignUpVC"]
+- !private ["Ps11CVarArgType", "Firebase"]
+- !private ["Ps11CVarArgType", "FirebaseManager"]
 - !private ["Ps11CVarArgType", "IntegerLiteralType"]
 - !private ["Ps11CVarArgType", "NSAttributedString"]
 - !private ["Ps11CVarArgType", "NSForegroundColorAttributeName"]
 - !private ["Ps11CVarArgType", "NSNotificationCenter"]
-- !private ["Ps11CVarArgType", "NSURL"]
-- !private ["Ps11CVarArgType", "String"]
 - !private ["Ps11CVarArgType", "Theme"]
 - !private ["Ps11CVarArgType", "UIColor"]
 - !private ["Ps11CVarArgType", "UIKeyboardFrameEndUserInfoKey"]
 - !private ["Ps11CVarArgType", "UIKeyboardWillHideNotification"]
 - !private ["Ps11CVarArgType", "UIKeyboardWillShowNotification"]
 - !private ["Ps11CVarArgType", "UITapGestureRecognizer"]
-- !private ["Ps11CVarArgType", "User"]
 - ["Ps11CVarArgType", "activeTextField"]
 - !private ["Ps11CVarArgType", "addGestureRecognizer"]
 - !private ["Ps11CVarArgType", "addObserver"]
 - !private ["Ps11CVarArgType", "allTextFieldsAreFilled"]
 - !private ["Ps11CVarArgType", "alpha"]
 - !private ["Ps11CVarArgType", "attributedPlaceholder"]
+- !private ["Ps11CVarArgType", "authUser"]
 - !private ["Ps11CVarArgType", "backgroundColor"]
 - !private ["Ps11CVarArgType", "cancelsTouchesInView"]
 - !private ["Ps11CVarArgType", "clearColor"]
 - !private ["Ps11CVarArgType", "contentOffset"]
 - !private ["Ps11CVarArgType", "cornerRadius"]
+- !private ["Ps11CVarArgType", "createUser"]
 - !private ["Ps11CVarArgType", "defaultCenter"]
 - !private ["Ps11CVarArgType", "delegate"]
 - ["Ps11CVarArgType", "emailTextField"]
@@ -201,7 +205,6 @@ depends-member:
 - ["Ps11CVarArgType", "formScrollView"]
 - !private ["Ps11CVarArgType", "frame"]
 - ["Ps11CVarArgType", "fullNameTextField"]
-- !private ["Ps11CVarArgType", "generateRandomPassCode"]
 - ["Ps11CVarArgType", "handleSingleTap"]
 - ["Ps11CVarArgType", "init"]
 - !private ["Ps11CVarArgType", "isValidEmail"]
@@ -236,6 +239,7 @@ depends-member:
 - ["Ps11CVarArgType", "viewWillAppear"]
 - ["Ps11CVarArgType", "viewWillDisappear"]
 - ["Ps11CVarArgType", ""]
+- !private ["Vs9Character", "deinit"]
 - !private ["Ps14CollectionType", "Element"]
 - !private ["Ps14CollectionType", "Generator"]
 - !private ["Ps14CollectionType", "Index"]
@@ -258,14 +262,16 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "CGRectContainsPoint"]
 - !private ["Ps28CustomDebugStringConvertible", "CGRectValue"]
 - !private ["Ps28CustomDebugStringConvertible", "Element"]
+- !private ["Ps28CustomDebugStringConvertible", "EmailSignUpVC"]
+- !private ["Ps28CustomDebugStringConvertible", "Firebase"]
+- !private ["Ps28CustomDebugStringConvertible", "FirebaseManager"]
 - !private ["Ps28CustomDebugStringConvertible", "Generator"]
 - !private ["Ps28CustomDebugStringConvertible", "Index"]
 - !private ["Ps28CustomDebugStringConvertible", "Key"]
 - !private ["Ps28CustomDebugStringConvertible", "NSAttributedString"]
 - !private ["Ps28CustomDebugStringConvertible", "NSForegroundColorAttributeName"]
 - !private ["Ps28CustomDebugStringConvertible", "NSNotificationCenter"]
-- !private ["Ps28CustomDebugStringConvertible", "NSURL"]
-- !private ["Ps28CustomDebugStringConvertible", "String"]
+- !private ["Ps28CustomDebugStringConvertible", "Some"]
 - !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
 - !private ["Ps28CustomDebugStringConvertible", "Theme"]
 - !private ["Ps28CustomDebugStringConvertible", "UIColor"]
@@ -273,7 +279,6 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "UIKeyboardWillHideNotification"]
 - !private ["Ps28CustomDebugStringConvertible", "UIKeyboardWillShowNotification"]
 - !private ["Ps28CustomDebugStringConvertible", "UITapGestureRecognizer"]
-- !private ["Ps28CustomDebugStringConvertible", "User"]
 - !private ["Ps28CustomDebugStringConvertible", "Value"]
 - !private ["Ps28CustomDebugStringConvertible", "_Element"]
 - ["Ps28CustomDebugStringConvertible", "activeTextField"]
@@ -283,11 +288,13 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "alpha"]
 - !private ["Ps28CustomDebugStringConvertible", "appendContentsOf"]
 - !private ["Ps28CustomDebugStringConvertible", "attributedPlaceholder"]
+- !private ["Ps28CustomDebugStringConvertible", "authUser"]
 - !private ["Ps28CustomDebugStringConvertible", "backgroundColor"]
 - !private ["Ps28CustomDebugStringConvertible", "cancelsTouchesInView"]
 - !private ["Ps28CustomDebugStringConvertible", "clearColor"]
 - !private ["Ps28CustomDebugStringConvertible", "contentOffset"]
 - !private ["Ps28CustomDebugStringConvertible", "cornerRadius"]
+- !private ["Ps28CustomDebugStringConvertible", "createUser"]
 - !private ["Ps28CustomDebugStringConvertible", "defaultCenter"]
 - !private ["Ps28CustomDebugStringConvertible", "delegate"]
 - ["Ps28CustomDebugStringConvertible", "emailTextField"]
@@ -296,7 +303,6 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "formScrollView"]
 - !private ["Ps28CustomDebugStringConvertible", "frame"]
 - ["Ps28CustomDebugStringConvertible", "fullNameTextField"]
-- !private ["Ps28CustomDebugStringConvertible", "generateRandomPassCode"]
 - ["Ps28CustomDebugStringConvertible", "handleSingleTap"]
 - ["Ps28CustomDebugStringConvertible", "init"]
 - !private ["Ps28CustomDebugStringConvertible", "isValidEmail"]
@@ -338,6 +344,9 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "CGRectValue"]
 - !private ["Ps23CustomStringConvertible", "Distance"]
 - !private ["Ps23CustomStringConvertible", "Element"]
+- !private ["Ps23CustomStringConvertible", "EmailSignUpVC"]
+- !private ["Ps23CustomStringConvertible", "Firebase"]
+- !private ["Ps23CustomStringConvertible", "FirebaseManager"]
 - !private ["Ps23CustomStringConvertible", "Generator"]
 - !private ["Ps23CustomStringConvertible", "Index"]
 - !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
@@ -345,8 +354,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "NSAttributedString"]
 - !private ["Ps23CustomStringConvertible", "NSForegroundColorAttributeName"]
 - !private ["Ps23CustomStringConvertible", "NSNotificationCenter"]
-- !private ["Ps23CustomStringConvertible", "NSURL"]
-- !private ["Ps23CustomStringConvertible", "String"]
+- !private ["Ps23CustomStringConvertible", "Some"]
 - !private ["Ps23CustomStringConvertible", "SubSequence"]
 - !private ["Ps23CustomStringConvertible", "Theme"]
 - !private ["Ps23CustomStringConvertible", "UIColor"]
@@ -354,7 +362,6 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "UIKeyboardWillHideNotification"]
 - !private ["Ps23CustomStringConvertible", "UIKeyboardWillShowNotification"]
 - !private ["Ps23CustomStringConvertible", "UITapGestureRecognizer"]
-- !private ["Ps23CustomStringConvertible", "User"]
 - !private ["Ps23CustomStringConvertible", "Value"]
 - !private ["Ps23CustomStringConvertible", "_Element"]
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
@@ -365,11 +372,13 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "alpha"]
 - !private ["Ps23CustomStringConvertible", "appendContentsOf"]
 - !private ["Ps23CustomStringConvertible", "attributedPlaceholder"]
+- !private ["Ps23CustomStringConvertible", "authUser"]
 - !private ["Ps23CustomStringConvertible", "backgroundColor"]
 - !private ["Ps23CustomStringConvertible", "cancelsTouchesInView"]
 - !private ["Ps23CustomStringConvertible", "clearColor"]
 - !private ["Ps23CustomStringConvertible", "contentOffset"]
 - !private ["Ps23CustomStringConvertible", "cornerRadius"]
+- !private ["Ps23CustomStringConvertible", "createUser"]
 - !private ["Ps23CustomStringConvertible", "defaultCenter"]
 - !private ["Ps23CustomStringConvertible", "delegate"]
 - ["Ps23CustomStringConvertible", "emailTextField"]
@@ -378,7 +387,6 @@ depends-member:
 - ["Ps23CustomStringConvertible", "formScrollView"]
 - !private ["Ps23CustomStringConvertible", "frame"]
 - ["Ps23CustomStringConvertible", "fullNameTextField"]
-- !private ["Ps23CustomStringConvertible", "generateRandomPassCode"]
 - ["Ps23CustomStringConvertible", "handleSingleTap"]
 - ["Ps23CustomStringConvertible", "init"]
 - !private ["Ps23CustomStringConvertible", "isValidEmail"]
@@ -431,17 +439,19 @@ depends-member:
 - !private ["Ps28DictionaryLiteralConvertible", "Value"]
 - !private ["Ps28DictionaryLiteralConvertible", "_Element"]
 - !private ["Ps28DictionaryLiteralConvertible", "subscript"]
+- !private ["Sd", "deinit"]
 - ["C6CoChat13EmailSignUpVC", "Bool"]
 - !private ["C6CoChat13EmailSignUpVC", "CGPoint"]
 - !private ["C6CoChat13EmailSignUpVC", "CGPointMake"]
 - !private ["C6CoChat13EmailSignUpVC", "CGRectContainsPoint"]
+- !private ["C6CoChat13EmailSignUpVC", "EmailSignUpVC"]
+- !private ["C6CoChat13EmailSignUpVC", "Firebase"]
+- !private ["C6CoChat13EmailSignUpVC", "FirebaseManager"]
 - !private ["C6CoChat13EmailSignUpVC", "NSAttributedString"]
 - !private ["C6CoChat13EmailSignUpVC", "NSForegroundColorAttributeName"]
 - ["C6CoChat13EmailSignUpVC", "NSNotification"]
 - !private ["C6CoChat13EmailSignUpVC", "NSNotificationCenter"]
-- !private ["C6CoChat13EmailSignUpVC", "NSURL"]
 - !private ["C6CoChat13EmailSignUpVC", "NSValue"]
-- !private ["C6CoChat13EmailSignUpVC", "String"]
 - !private ["C6CoChat13EmailSignUpVC", "Theme"]
 - ["C6CoChat13EmailSignUpVC", "UIButton"]
 - !private ["C6CoChat13EmailSignUpVC", "UIColor"]
@@ -452,7 +462,6 @@ depends-member:
 - ["C6CoChat13EmailSignUpVC", "UITapGestureRecognizer"]
 - ["C6CoChat13EmailSignUpVC", "UITextField"]
 - ["C6CoChat13EmailSignUpVC", "UIView"]
-- !private ["C6CoChat13EmailSignUpVC", "User"]
 - ["C6CoChat13EmailSignUpVC", "activeTextField"]
 - !private ["C6CoChat13EmailSignUpVC", "allTextFieldsAreFilled"]
 - ["C6CoChat13EmailSignUpVC", "deinit"]
@@ -460,7 +469,6 @@ depends-member:
 - ["C6CoChat13EmailSignUpVC", "formContainer"]
 - ["C6CoChat13EmailSignUpVC", "formScrollView"]
 - ["C6CoChat13EmailSignUpVC", "fullNameTextField"]
-- !private ["C6CoChat13EmailSignUpVC", "generateRandomPassCode"]
 - ["C6CoChat13EmailSignUpVC", "handleSingleTap"]
 - ["C6CoChat13EmailSignUpVC", "init"]
 - !private ["C6CoChat13EmailSignUpVC", "isValidEmail"]
@@ -493,22 +501,22 @@ depends-member:
 - !private ["Ps9Equatable", "CGRectContainsPoint"]
 - !private ["Ps9Equatable", "CGRectValue"]
 - !private ["Ps9Equatable", "Distance"]
+- !private ["Ps9Equatable", "EmailSignUpVC"]
 - !private ["Ps9Equatable", "Ended"]
+- !private ["Ps9Equatable", "Firebase"]
+- !private ["Ps9Equatable", "FirebaseManager"]
 - !private ["Ps9Equatable", "ForegroundColor"]
 - !private ["Ps9Equatable", "IntegerLiteralType"]
 - !private ["Ps9Equatable", "NSAttributedString"]
 - !private ["Ps9Equatable", "NSForegroundColorAttributeName"]
 - !private ["Ps9Equatable", "NSNotificationCenter"]
-- !private ["Ps9Equatable", "NSURL"]
 - !private ["Ps9Equatable", "RawValue"]
-- !private ["Ps9Equatable", "String"]
 - !private ["Ps9Equatable", "Theme"]
 - !private ["Ps9Equatable", "UIColor"]
 - !private ["Ps9Equatable", "UIKeyboardFrameEndUserInfoKey"]
 - !private ["Ps9Equatable", "UIKeyboardWillHideNotification"]
 - !private ["Ps9Equatable", "UIKeyboardWillShowNotification"]
 - !private ["Ps9Equatable", "UITapGestureRecognizer"]
-- !private ["Ps9Equatable", "User"]
 - !private ["Ps9Equatable", "_DisabledRangeIndex"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - ["Ps9Equatable", "activeTextField"]
@@ -517,12 +525,14 @@ depends-member:
 - !private ["Ps9Equatable", "allTextFieldsAreFilled"]
 - !private ["Ps9Equatable", "alpha"]
 - !private ["Ps9Equatable", "attributedPlaceholder"]
+- !private ["Ps9Equatable", "authUser"]
 - !private ["Ps9Equatable", "backgroundColor"]
 - !private ["Ps9Equatable", "cancelsTouchesInView"]
 - !private ["Ps9Equatable", "clearColor"]
 - !private ["Ps9Equatable", "color"]
 - !private ["Ps9Equatable", "contentOffset"]
 - !private ["Ps9Equatable", "cornerRadius"]
+- !private ["Ps9Equatable", "createUser"]
 - !private ["Ps9Equatable", "defaultCenter"]
 - !private ["Ps9Equatable", "delegate"]
 - ["Ps9Equatable", "emailTextField"]
@@ -531,7 +541,6 @@ depends-member:
 - ["Ps9Equatable", "formScrollView"]
 - !private ["Ps9Equatable", "frame"]
 - ["Ps9Equatable", "fullNameTextField"]
-- !private ["Ps9Equatable", "generateRandomPassCode"]
 - ["Ps9Equatable", "handleSingleTap"]
 - !private ["Ps9Equatable", "height"]
 - ["Ps9Equatable", "init"]
@@ -571,7 +580,15 @@ depends-member:
 - !private ["Ps9Equatable", "y"]
 - ["Ps9Equatable", ""]
 - !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
-- !private ["P6CoChat12FirebaseType", "createNewUserWith"]
+- !private ["CSo6FQuery", "authUser"]
+- !private ["CSo6FQuery", "createUser"]
+- !private ["CSo6FQuery", "init"]
+- !private ["CSo8Firebase", "authUser"]
+- !private ["CSo8Firebase", "createUser"]
+- !private ["CSo8Firebase", "init"]
+- !private ["C6CoChat15FirebaseManager", "handleUserAuthData"]
+- !private ["C6CoChat15FirebaseManager", "manager"]
+- !private ["Sf", "deinit"]
 - !private ["Ps16ForwardIndexType", "Distance"]
 - !private ["Ps16ForwardIndexType", "IntegerLiteralType"]
 - !private ["Ps16ForwardIndexType", "_DisabledRangeIndex"]
@@ -583,22 +600,22 @@ depends-member:
 - !private ["Ps8Hashable", "CGRectContainsPoint"]
 - !private ["Ps8Hashable", "CGRectValue"]
 - !private ["Ps8Hashable", "Distance"]
+- !private ["Ps8Hashable", "EmailSignUpVC"]
 - !private ["Ps8Hashable", "Ended"]
+- !private ["Ps8Hashable", "Firebase"]
+- !private ["Ps8Hashable", "FirebaseManager"]
 - !private ["Ps8Hashable", "ForegroundColor"]
 - !private ["Ps8Hashable", "IntegerLiteralType"]
 - !private ["Ps8Hashable", "NSAttributedString"]
 - !private ["Ps8Hashable", "NSForegroundColorAttributeName"]
 - !private ["Ps8Hashable", "NSNotificationCenter"]
-- !private ["Ps8Hashable", "NSURL"]
 - !private ["Ps8Hashable", "RawValue"]
-- !private ["Ps8Hashable", "String"]
 - !private ["Ps8Hashable", "Theme"]
 - !private ["Ps8Hashable", "UIColor"]
 - !private ["Ps8Hashable", "UIKeyboardFrameEndUserInfoKey"]
 - !private ["Ps8Hashable", "UIKeyboardWillHideNotification"]
 - !private ["Ps8Hashable", "UIKeyboardWillShowNotification"]
 - !private ["Ps8Hashable", "UITapGestureRecognizer"]
-- !private ["Ps8Hashable", "User"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - ["Ps8Hashable", "activeTextField"]
 - !private ["Ps8Hashable", "addGestureRecognizer"]
@@ -606,12 +623,14 @@ depends-member:
 - !private ["Ps8Hashable", "allTextFieldsAreFilled"]
 - !private ["Ps8Hashable", "alpha"]
 - !private ["Ps8Hashable", "attributedPlaceholder"]
+- !private ["Ps8Hashable", "authUser"]
 - !private ["Ps8Hashable", "backgroundColor"]
 - !private ["Ps8Hashable", "cancelsTouchesInView"]
 - !private ["Ps8Hashable", "clearColor"]
 - !private ["Ps8Hashable", "color"]
 - !private ["Ps8Hashable", "contentOffset"]
 - !private ["Ps8Hashable", "cornerRadius"]
+- !private ["Ps8Hashable", "createUser"]
 - !private ["Ps8Hashable", "defaultCenter"]
 - !private ["Ps8Hashable", "delegate"]
 - ["Ps8Hashable", "emailTextField"]
@@ -620,7 +639,6 @@ depends-member:
 - ["Ps8Hashable", "formScrollView"]
 - !private ["Ps8Hashable", "frame"]
 - ["Ps8Hashable", "fullNameTextField"]
-- !private ["Ps8Hashable", "generateRandomPassCode"]
 - ["Ps8Hashable", "handleSingleTap"]
 - ["Ps8Hashable", "init"]
 - !private ["Ps8Hashable", "isValidEmail"]
@@ -655,6 +673,7 @@ depends-member:
 - ["Ps8Hashable", "viewWillAppear"]
 - ["Ps8Hashable", "viewWillDisappear"]
 - ["Ps8Hashable", ""]
+- !private ["SQ", "Some"]
 - !private ["SQ", "deinit"]
 - !private ["Ps9Indexable", "Element"]
 - !private ["Ps9Indexable", "Generator"]
@@ -668,6 +687,11 @@ depends-member:
 - !private ["Vs17IndexingGenerator", "Element"]
 - !private ["Si", "Distance"]
 - !private ["Si", "IntegerLiteralType"]
+- !private ["Si", "deinit"]
+- !private ["Vs5Int16", "deinit"]
+- !private ["Vs5Int32", "deinit"]
+- !private ["Vs5Int64", "deinit"]
+- !private ["Vs4Int8", "deinit"]
 - !private ["Ps21IntegerArithmeticType", "Distance"]
 - !private ["Ps21IntegerArithmeticType", "IntegerLiteralType"]
 - !private ["Ps25IntegerLiteralConvertible", "Distance"]
@@ -700,18 +724,18 @@ depends-member:
 - !private ["PSo8NSCoding", "CGPointMake"]
 - !private ["PSo8NSCoding", "CGRectContainsPoint"]
 - !private ["PSo8NSCoding", "CGRectValue"]
+- !private ["PSo8NSCoding", "EmailSignUpVC"]
+- !private ["PSo8NSCoding", "Firebase"]
+- !private ["PSo8NSCoding", "FirebaseManager"]
 - !private ["PSo8NSCoding", "NSAttributedString"]
 - !private ["PSo8NSCoding", "NSForegroundColorAttributeName"]
 - !private ["PSo8NSCoding", "NSNotificationCenter"]
-- !private ["PSo8NSCoding", "NSURL"]
-- !private ["PSo8NSCoding", "String"]
 - !private ["PSo8NSCoding", "Theme"]
 - !private ["PSo8NSCoding", "UIColor"]
 - !private ["PSo8NSCoding", "UIKeyboardFrameEndUserInfoKey"]
 - !private ["PSo8NSCoding", "UIKeyboardWillHideNotification"]
 - !private ["PSo8NSCoding", "UIKeyboardWillShowNotification"]
 - !private ["PSo8NSCoding", "UITapGestureRecognizer"]
-- !private ["PSo8NSCoding", "User"]
 - ["PSo8NSCoding", "activeTextField"]
 - !private ["PSo8NSCoding", "addGestureRecognizer"]
 - !private ["PSo8NSCoding", "allTextFieldsAreFilled"]
@@ -728,7 +752,6 @@ depends-member:
 - ["PSo8NSCoding", "formScrollView"]
 - !private ["PSo8NSCoding", "frame"]
 - ["PSo8NSCoding", "fullNameTextField"]
-- !private ["PSo8NSCoding", "generateRandomPassCode"]
 - ["PSo8NSCoding", "handleSingleTap"]
 - ["PSo8NSCoding", "init"]
 - !private ["PSo8NSCoding", "isValidEmail"]
@@ -768,25 +791,24 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "CGPoint"]
 - !private ["PSo26NSExtensionRequestHandling", "CGPointMake"]
 - !private ["PSo26NSExtensionRequestHandling", "CGRectContainsPoint"]
+- !private ["PSo26NSExtensionRequestHandling", "EmailSignUpVC"]
+- !private ["PSo26NSExtensionRequestHandling", "Firebase"]
+- !private ["PSo26NSExtensionRequestHandling", "FirebaseManager"]
 - !private ["PSo26NSExtensionRequestHandling", "NSAttributedString"]
 - !private ["PSo26NSExtensionRequestHandling", "NSForegroundColorAttributeName"]
 - !private ["PSo26NSExtensionRequestHandling", "NSNotificationCenter"]
-- !private ["PSo26NSExtensionRequestHandling", "NSURL"]
-- !private ["PSo26NSExtensionRequestHandling", "String"]
 - !private ["PSo26NSExtensionRequestHandling", "Theme"]
 - !private ["PSo26NSExtensionRequestHandling", "UIColor"]
 - !private ["PSo26NSExtensionRequestHandling", "UIKeyboardFrameEndUserInfoKey"]
 - !private ["PSo26NSExtensionRequestHandling", "UIKeyboardWillHideNotification"]
 - !private ["PSo26NSExtensionRequestHandling", "UIKeyboardWillShowNotification"]
 - !private ["PSo26NSExtensionRequestHandling", "UITapGestureRecognizer"]
-- !private ["PSo26NSExtensionRequestHandling", "User"]
 - ["PSo26NSExtensionRequestHandling", "activeTextField"]
 - !private ["PSo26NSExtensionRequestHandling", "allTextFieldsAreFilled"]
 - ["PSo26NSExtensionRequestHandling", "emailTextField"]
 - ["PSo26NSExtensionRequestHandling", "formContainer"]
 - ["PSo26NSExtensionRequestHandling", "formScrollView"]
 - ["PSo26NSExtensionRequestHandling", "fullNameTextField"]
-- !private ["PSo26NSExtensionRequestHandling", "generateRandomPassCode"]
 - ["PSo26NSExtensionRequestHandling", "handleSingleTap"]
 - ["PSo26NSExtensionRequestHandling", "init"]
 - !private ["PSo26NSExtensionRequestHandling", "isValidEmail"]
@@ -823,13 +845,14 @@ depends-member:
 - !private ["CSo8NSObject", "CGPointMake"]
 - !private ["CSo8NSObject", "CGRectContainsPoint"]
 - !private ["CSo8NSObject", "CGRectValue"]
+- !private ["CSo8NSObject", "EmailSignUpVC"]
+- !private ["CSo8NSObject", "Firebase"]
+- !private ["CSo8NSObject", "FirebaseManager"]
 - !private ["CSo8NSObject", "NSAttributedString"]
 - !private ["CSo8NSObject", "NSForegroundColorAttributeName"]
 - ["CSo8NSObject", "NSNotification"]
 - !private ["CSo8NSObject", "NSNotificationCenter"]
-- !private ["CSo8NSObject", "NSURL"]
 - !private ["CSo8NSObject", "NSValue"]
-- !private ["CSo8NSObject", "String"]
 - !private ["CSo8NSObject", "Theme"]
 - ["CSo8NSObject", "UIButton"]
 - !private ["CSo8NSObject", "UIColor"]
@@ -840,18 +863,19 @@ depends-member:
 - ["CSo8NSObject", "UITapGestureRecognizer"]
 - ["CSo8NSObject", "UITextField"]
 - ["CSo8NSObject", "UIView"]
-- !private ["CSo8NSObject", "User"]
 - ["CSo8NSObject", "activeTextField"]
 - !private ["CSo8NSObject", "addGestureRecognizer"]
 - !private ["CSo8NSObject", "addObserver"]
 - !private ["CSo8NSObject", "allTextFieldsAreFilled"]
 - !private ["CSo8NSObject", "alpha"]
 - !private ["CSo8NSObject", "attributedPlaceholder"]
+- !private ["CSo8NSObject", "authUser"]
 - !private ["CSo8NSObject", "backgroundColor"]
 - !private ["CSo8NSObject", "cancelsTouchesInView"]
 - !private ["CSo8NSObject", "clearColor"]
 - !private ["CSo8NSObject", "contentOffset"]
 - !private ["CSo8NSObject", "cornerRadius"]
+- !private ["CSo8NSObject", "createUser"]
 - !private ["CSo8NSObject", "defaultCenter"]
 - !private ["CSo8NSObject", "deinit"]
 - !private ["CSo8NSObject", "delegate"]
@@ -861,7 +885,6 @@ depends-member:
 - ["CSo8NSObject", "formScrollView"]
 - !private ["CSo8NSObject", "frame"]
 - ["CSo8NSObject", "fullNameTextField"]
-- !private ["CSo8NSObject", "generateRandomPassCode"]
 - ["CSo8NSObject", "handleSingleTap"]
 - ["CSo8NSObject", "init"]
 - !private ["CSo8NSObject", "isValidEmail"]
@@ -899,29 +922,31 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "CGPointMake"]
 - !private ["PSo16NSObjectProtocol", "CGRectContainsPoint"]
 - !private ["PSo16NSObjectProtocol", "CGRectValue"]
+- !private ["PSo16NSObjectProtocol", "EmailSignUpVC"]
+- !private ["PSo16NSObjectProtocol", "Firebase"]
+- !private ["PSo16NSObjectProtocol", "FirebaseManager"]
 - !private ["PSo16NSObjectProtocol", "NSAttributedString"]
 - !private ["PSo16NSObjectProtocol", "NSForegroundColorAttributeName"]
 - !private ["PSo16NSObjectProtocol", "NSNotificationCenter"]
-- !private ["PSo16NSObjectProtocol", "NSURL"]
-- !private ["PSo16NSObjectProtocol", "String"]
 - !private ["PSo16NSObjectProtocol", "Theme"]
 - !private ["PSo16NSObjectProtocol", "UIColor"]
 - !private ["PSo16NSObjectProtocol", "UIKeyboardFrameEndUserInfoKey"]
 - !private ["PSo16NSObjectProtocol", "UIKeyboardWillHideNotification"]
 - !private ["PSo16NSObjectProtocol", "UIKeyboardWillShowNotification"]
 - !private ["PSo16NSObjectProtocol", "UITapGestureRecognizer"]
-- !private ["PSo16NSObjectProtocol", "User"]
 - ["PSo16NSObjectProtocol", "activeTextField"]
 - !private ["PSo16NSObjectProtocol", "addGestureRecognizer"]
 - !private ["PSo16NSObjectProtocol", "addObserver"]
 - !private ["PSo16NSObjectProtocol", "allTextFieldsAreFilled"]
 - !private ["PSo16NSObjectProtocol", "alpha"]
 - !private ["PSo16NSObjectProtocol", "attributedPlaceholder"]
+- !private ["PSo16NSObjectProtocol", "authUser"]
 - !private ["PSo16NSObjectProtocol", "backgroundColor"]
 - !private ["PSo16NSObjectProtocol", "cancelsTouchesInView"]
 - !private ["PSo16NSObjectProtocol", "clearColor"]
 - !private ["PSo16NSObjectProtocol", "contentOffset"]
 - !private ["PSo16NSObjectProtocol", "cornerRadius"]
+- !private ["PSo16NSObjectProtocol", "createUser"]
 - !private ["PSo16NSObjectProtocol", "defaultCenter"]
 - !private ["PSo16NSObjectProtocol", "delegate"]
 - ["PSo16NSObjectProtocol", "emailTextField"]
@@ -930,7 +955,6 @@ depends-member:
 - ["PSo16NSObjectProtocol", "formScrollView"]
 - !private ["PSo16NSObjectProtocol", "frame"]
 - ["PSo16NSObjectProtocol", "fullNameTextField"]
-- !private ["PSo16NSObjectProtocol", "generateRandomPassCode"]
 - ["PSo16NSObjectProtocol", "handleSingleTap"]
 - ["PSo16NSObjectProtocol", "init"]
 - !private ["PSo16NSObjectProtocol", "isValidEmail"]
@@ -968,9 +992,10 @@ depends-member:
 - !private ["PSo14NSSecureCoding", "CGRectValue"]
 - !private ["PSo14NSSecureCoding", "clearColor"]
 - !private ["PSo14NSSecureCoding", "init"]
-- !private ["CSo5NSURL", "deinit"]
-- !private ["CSo5NSURL", "init"]
+- !private ["CSo8NSString", "deinit"]
+- !private ["CSo8NSString", "init"]
 - !private ["CSo7NSValue", "CGRectValue"]
+- !private ["Ps21NilLiteralConvertible", "Some"]
 - !private ["Sq", "deinit"]
 - !private ["Ps16OutputStreamType", "init"]
 - !private ["Ps21RandomAccessIndexType", "Distance"]
@@ -983,7 +1008,6 @@ depends-member:
 - !private ["Ps30RangeReplaceableCollectionType", "appendContentsOf"]
 - !private ["Ps16RawRepresentable", "Ended"]
 - !private ["Ps16RawRepresentable", "RawValue"]
-- !private ["V10ObjectiveC8Selector", "deinit"]
 - !private ["Ps12SequenceType", "Element"]
 - !private ["Ps12SequenceType", "Generator"]
 - !private ["Ps12SequenceType", "Index"]
@@ -1037,18 +1061,18 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "CGPoint"]
 - !private ["PSo21UIAppearanceContainer", "CGPointMake"]
 - !private ["PSo21UIAppearanceContainer", "CGRectContainsPoint"]
+- !private ["PSo21UIAppearanceContainer", "EmailSignUpVC"]
+- !private ["PSo21UIAppearanceContainer", "Firebase"]
+- !private ["PSo21UIAppearanceContainer", "FirebaseManager"]
 - !private ["PSo21UIAppearanceContainer", "NSAttributedString"]
 - !private ["PSo21UIAppearanceContainer", "NSForegroundColorAttributeName"]
 - !private ["PSo21UIAppearanceContainer", "NSNotificationCenter"]
-- !private ["PSo21UIAppearanceContainer", "NSURL"]
-- !private ["PSo21UIAppearanceContainer", "String"]
 - !private ["PSo21UIAppearanceContainer", "Theme"]
 - !private ["PSo21UIAppearanceContainer", "UIColor"]
 - !private ["PSo21UIAppearanceContainer", "UIKeyboardFrameEndUserInfoKey"]
 - !private ["PSo21UIAppearanceContainer", "UIKeyboardWillHideNotification"]
 - !private ["PSo21UIAppearanceContainer", "UIKeyboardWillShowNotification"]
 - !private ["PSo21UIAppearanceContainer", "UITapGestureRecognizer"]
-- !private ["PSo21UIAppearanceContainer", "User"]
 - ["PSo21UIAppearanceContainer", "activeTextField"]
 - !private ["PSo21UIAppearanceContainer", "addGestureRecognizer"]
 - !private ["PSo21UIAppearanceContainer", "allTextFieldsAreFilled"]
@@ -1063,7 +1087,6 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "formScrollView"]
 - !private ["PSo21UIAppearanceContainer", "frame"]
 - ["PSo21UIAppearanceContainer", "fullNameTextField"]
-- !private ["PSo21UIAppearanceContainer", "generateRandomPassCode"]
 - ["PSo21UIAppearanceContainer", "handleSingleTap"]
 - ["PSo21UIAppearanceContainer", "init"]
 - !private ["PSo21UIAppearanceContainer", "isValidEmail"]
@@ -1101,25 +1124,24 @@ depends-member:
 - !private ["PSo18UIContentContainer", "CGPoint"]
 - !private ["PSo18UIContentContainer", "CGPointMake"]
 - !private ["PSo18UIContentContainer", "CGRectContainsPoint"]
+- !private ["PSo18UIContentContainer", "EmailSignUpVC"]
+- !private ["PSo18UIContentContainer", "Firebase"]
+- !private ["PSo18UIContentContainer", "FirebaseManager"]
 - !private ["PSo18UIContentContainer", "NSAttributedString"]
 - !private ["PSo18UIContentContainer", "NSForegroundColorAttributeName"]
 - !private ["PSo18UIContentContainer", "NSNotificationCenter"]
-- !private ["PSo18UIContentContainer", "NSURL"]
-- !private ["PSo18UIContentContainer", "String"]
 - !private ["PSo18UIContentContainer", "Theme"]
 - !private ["PSo18UIContentContainer", "UIColor"]
 - !private ["PSo18UIContentContainer", "UIKeyboardFrameEndUserInfoKey"]
 - !private ["PSo18UIContentContainer", "UIKeyboardWillHideNotification"]
 - !private ["PSo18UIContentContainer", "UIKeyboardWillShowNotification"]
 - !private ["PSo18UIContentContainer", "UITapGestureRecognizer"]
-- !private ["PSo18UIContentContainer", "User"]
 - ["PSo18UIContentContainer", "activeTextField"]
 - !private ["PSo18UIContentContainer", "allTextFieldsAreFilled"]
 - ["PSo18UIContentContainer", "emailTextField"]
 - ["PSo18UIContentContainer", "formContainer"]
 - ["PSo18UIContentContainer", "formScrollView"]
 - ["PSo18UIContentContainer", "fullNameTextField"]
-- !private ["PSo18UIContentContainer", "generateRandomPassCode"]
 - ["PSo18UIContentContainer", "handleSingleTap"]
 - ["PSo18UIContentContainer", "init"]
 - !private ["PSo18UIContentContainer", "isValidEmail"]
@@ -1185,18 +1207,18 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "CGPoint"]
 - !private ["PSo18UIFocusEnvironment", "CGPointMake"]
 - !private ["PSo18UIFocusEnvironment", "CGRectContainsPoint"]
+- !private ["PSo18UIFocusEnvironment", "EmailSignUpVC"]
+- !private ["PSo18UIFocusEnvironment", "Firebase"]
+- !private ["PSo18UIFocusEnvironment", "FirebaseManager"]
 - !private ["PSo18UIFocusEnvironment", "NSAttributedString"]
 - !private ["PSo18UIFocusEnvironment", "NSForegroundColorAttributeName"]
 - !private ["PSo18UIFocusEnvironment", "NSNotificationCenter"]
-- !private ["PSo18UIFocusEnvironment", "NSURL"]
-- !private ["PSo18UIFocusEnvironment", "String"]
 - !private ["PSo18UIFocusEnvironment", "Theme"]
 - !private ["PSo18UIFocusEnvironment", "UIColor"]
 - !private ["PSo18UIFocusEnvironment", "UIKeyboardFrameEndUserInfoKey"]
 - !private ["PSo18UIFocusEnvironment", "UIKeyboardWillHideNotification"]
 - !private ["PSo18UIFocusEnvironment", "UIKeyboardWillShowNotification"]
 - !private ["PSo18UIFocusEnvironment", "UITapGestureRecognizer"]
-- !private ["PSo18UIFocusEnvironment", "User"]
 - ["PSo18UIFocusEnvironment", "activeTextField"]
 - !private ["PSo18UIFocusEnvironment", "addGestureRecognizer"]
 - !private ["PSo18UIFocusEnvironment", "allTextFieldsAreFilled"]
@@ -1211,7 +1233,6 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "formScrollView"]
 - !private ["PSo18UIFocusEnvironment", "frame"]
 - ["PSo18UIFocusEnvironment", "fullNameTextField"]
-- !private ["PSo18UIFocusEnvironment", "generateRandomPassCode"]
 - ["PSo18UIFocusEnvironment", "handleSingleTap"]
 - ["PSo18UIFocusEnvironment", "init"]
 - !private ["PSo18UIFocusEnvironment", "isValidEmail"]
@@ -1262,13 +1283,14 @@ depends-member:
 - !private ["CSo11UIResponder", "CGPoint"]
 - !private ["CSo11UIResponder", "CGPointMake"]
 - !private ["CSo11UIResponder", "CGRectContainsPoint"]
+- !private ["CSo11UIResponder", "EmailSignUpVC"]
+- !private ["CSo11UIResponder", "Firebase"]
+- !private ["CSo11UIResponder", "FirebaseManager"]
 - !private ["CSo11UIResponder", "NSAttributedString"]
 - !private ["CSo11UIResponder", "NSForegroundColorAttributeName"]
 - ["CSo11UIResponder", "NSNotification"]
 - !private ["CSo11UIResponder", "NSNotificationCenter"]
-- !private ["CSo11UIResponder", "NSURL"]
 - !private ["CSo11UIResponder", "NSValue"]
-- !private ["CSo11UIResponder", "String"]
 - !private ["CSo11UIResponder", "Theme"]
 - ["CSo11UIResponder", "UIButton"]
 - !private ["CSo11UIResponder", "UIColor"]
@@ -1279,7 +1301,6 @@ depends-member:
 - ["CSo11UIResponder", "UITapGestureRecognizer"]
 - ["CSo11UIResponder", "UITextField"]
 - ["CSo11UIResponder", "UIView"]
-- !private ["CSo11UIResponder", "User"]
 - ["CSo11UIResponder", "activeTextField"]
 - !private ["CSo11UIResponder", "addGestureRecognizer"]
 - !private ["CSo11UIResponder", "allTextFieldsAreFilled"]
@@ -1295,7 +1316,6 @@ depends-member:
 - ["CSo11UIResponder", "formScrollView"]
 - !private ["CSo11UIResponder", "frame"]
 - ["CSo11UIResponder", "fullNameTextField"]
-- !private ["CSo11UIResponder", "generateRandomPassCode"]
 - ["CSo11UIResponder", "handleSingleTap"]
 - ["CSo11UIResponder", "init"]
 - !private ["CSo11UIResponder", "isValidEmail"]
@@ -1331,25 +1351,24 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "CGPoint"]
 - !private ["PSo16UIStateRestoring", "CGPointMake"]
 - !private ["PSo16UIStateRestoring", "CGRectContainsPoint"]
+- !private ["PSo16UIStateRestoring", "EmailSignUpVC"]
+- !private ["PSo16UIStateRestoring", "Firebase"]
+- !private ["PSo16UIStateRestoring", "FirebaseManager"]
 - !private ["PSo16UIStateRestoring", "NSAttributedString"]
 - !private ["PSo16UIStateRestoring", "NSForegroundColorAttributeName"]
 - !private ["PSo16UIStateRestoring", "NSNotificationCenter"]
-- !private ["PSo16UIStateRestoring", "NSURL"]
-- !private ["PSo16UIStateRestoring", "String"]
 - !private ["PSo16UIStateRestoring", "Theme"]
 - !private ["PSo16UIStateRestoring", "UIColor"]
 - !private ["PSo16UIStateRestoring", "UIKeyboardFrameEndUserInfoKey"]
 - !private ["PSo16UIStateRestoring", "UIKeyboardWillHideNotification"]
 - !private ["PSo16UIStateRestoring", "UIKeyboardWillShowNotification"]
 - !private ["PSo16UIStateRestoring", "UITapGestureRecognizer"]
-- !private ["PSo16UIStateRestoring", "User"]
 - ["PSo16UIStateRestoring", "activeTextField"]
 - !private ["PSo16UIStateRestoring", "allTextFieldsAreFilled"]
 - ["PSo16UIStateRestoring", "emailTextField"]
 - ["PSo16UIStateRestoring", "formContainer"]
 - ["PSo16UIStateRestoring", "formScrollView"]
 - ["PSo16UIStateRestoring", "fullNameTextField"]
-- !private ["PSo16UIStateRestoring", "generateRandomPassCode"]
 - ["PSo16UIStateRestoring", "handleSingleTap"]
 - ["PSo16UIStateRestoring", "init"]
 - !private ["PSo16UIStateRestoring", "isValidEmail"]
@@ -1392,25 +1411,24 @@ depends-member:
 - !private ["PSo19UITextFieldDelegate", "CGPoint"]
 - !private ["PSo19UITextFieldDelegate", "CGPointMake"]
 - !private ["PSo19UITextFieldDelegate", "CGRectContainsPoint"]
+- !private ["PSo19UITextFieldDelegate", "EmailSignUpVC"]
+- !private ["PSo19UITextFieldDelegate", "Firebase"]
+- !private ["PSo19UITextFieldDelegate", "FirebaseManager"]
 - !private ["PSo19UITextFieldDelegate", "NSAttributedString"]
 - !private ["PSo19UITextFieldDelegate", "NSForegroundColorAttributeName"]
 - !private ["PSo19UITextFieldDelegate", "NSNotificationCenter"]
-- !private ["PSo19UITextFieldDelegate", "NSURL"]
-- !private ["PSo19UITextFieldDelegate", "String"]
 - !private ["PSo19UITextFieldDelegate", "Theme"]
 - !private ["PSo19UITextFieldDelegate", "UIColor"]
 - !private ["PSo19UITextFieldDelegate", "UIKeyboardFrameEndUserInfoKey"]
 - !private ["PSo19UITextFieldDelegate", "UIKeyboardWillHideNotification"]
 - !private ["PSo19UITextFieldDelegate", "UIKeyboardWillShowNotification"]
 - !private ["PSo19UITextFieldDelegate", "UITapGestureRecognizer"]
-- !private ["PSo19UITextFieldDelegate", "User"]
 - !private ["PSo19UITextFieldDelegate", "activeTextField"]
 - !private ["PSo19UITextFieldDelegate", "allTextFieldsAreFilled"]
 - !private ["PSo19UITextFieldDelegate", "emailTextField"]
 - !private ["PSo19UITextFieldDelegate", "formContainer"]
 - !private ["PSo19UITextFieldDelegate", "formScrollView"]
 - !private ["PSo19UITextFieldDelegate", "fullNameTextField"]
-- !private ["PSo19UITextFieldDelegate", "generateRandomPassCode"]
 - !private ["PSo19UITextFieldDelegate", "handleSingleTap"]
 - !private ["PSo19UITextFieldDelegate", "isValidEmail"]
 - !private ["PSo19UITextFieldDelegate", "keyboardWillHide"]
@@ -1453,18 +1471,18 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "CGPoint"]
 - !private ["PSo18UITraitEnvironment", "CGPointMake"]
 - !private ["PSo18UITraitEnvironment", "CGRectContainsPoint"]
+- !private ["PSo18UITraitEnvironment", "EmailSignUpVC"]
+- !private ["PSo18UITraitEnvironment", "Firebase"]
+- !private ["PSo18UITraitEnvironment", "FirebaseManager"]
 - !private ["PSo18UITraitEnvironment", "NSAttributedString"]
 - !private ["PSo18UITraitEnvironment", "NSForegroundColorAttributeName"]
 - !private ["PSo18UITraitEnvironment", "NSNotificationCenter"]
-- !private ["PSo18UITraitEnvironment", "NSURL"]
-- !private ["PSo18UITraitEnvironment", "String"]
 - !private ["PSo18UITraitEnvironment", "Theme"]
 - !private ["PSo18UITraitEnvironment", "UIColor"]
 - !private ["PSo18UITraitEnvironment", "UIKeyboardFrameEndUserInfoKey"]
 - !private ["PSo18UITraitEnvironment", "UIKeyboardWillHideNotification"]
 - !private ["PSo18UITraitEnvironment", "UIKeyboardWillShowNotification"]
 - !private ["PSo18UITraitEnvironment", "UITapGestureRecognizer"]
-- !private ["PSo18UITraitEnvironment", "User"]
 - ["PSo18UITraitEnvironment", "activeTextField"]
 - !private ["PSo18UITraitEnvironment", "addGestureRecognizer"]
 - !private ["PSo18UITraitEnvironment", "allTextFieldsAreFilled"]
@@ -1479,7 +1497,6 @@ depends-member:
 - ["PSo18UITraitEnvironment", "formScrollView"]
 - !private ["PSo18UITraitEnvironment", "frame"]
 - ["PSo18UITraitEnvironment", "fullNameTextField"]
-- !private ["PSo18UITraitEnvironment", "generateRandomPassCode"]
 - ["PSo18UITraitEnvironment", "handleSingleTap"]
 - ["PSo18UITraitEnvironment", "init"]
 - !private ["PSo18UITraitEnvironment", "isValidEmail"]
@@ -1529,13 +1546,14 @@ depends-member:
 - !private ["CSo16UIViewController", "CGPoint"]
 - !private ["CSo16UIViewController", "CGPointMake"]
 - !private ["CSo16UIViewController", "CGRectContainsPoint"]
+- !private ["CSo16UIViewController", "EmailSignUpVC"]
+- !private ["CSo16UIViewController", "Firebase"]
+- !private ["CSo16UIViewController", "FirebaseManager"]
 - !private ["CSo16UIViewController", "NSAttributedString"]
 - !private ["CSo16UIViewController", "NSForegroundColorAttributeName"]
 - ["CSo16UIViewController", "NSNotification"]
 - !private ["CSo16UIViewController", "NSNotificationCenter"]
-- !private ["CSo16UIViewController", "NSURL"]
 - !private ["CSo16UIViewController", "NSValue"]
-- !private ["CSo16UIViewController", "String"]
 - !private ["CSo16UIViewController", "Theme"]
 - ["CSo16UIViewController", "UIButton"]
 - !private ["CSo16UIViewController", "UIColor"]
@@ -1546,14 +1564,12 @@ depends-member:
 - ["CSo16UIViewController", "UITapGestureRecognizer"]
 - ["CSo16UIViewController", "UITextField"]
 - ["CSo16UIViewController", "UIView"]
-- !private ["CSo16UIViewController", "User"]
 - ["CSo16UIViewController", "activeTextField"]
 - !private ["CSo16UIViewController", "allTextFieldsAreFilled"]
 - ["CSo16UIViewController", "emailTextField"]
 - ["CSo16UIViewController", "formContainer"]
 - ["CSo16UIViewController", "formScrollView"]
 - ["CSo16UIViewController", "fullNameTextField"]
-- !private ["CSo16UIViewController", "generateRandomPassCode"]
 - ["CSo16UIViewController", "handleSingleTap"]
 - ["CSo16UIViewController", "init"]
 - !private ["CSo16UIViewController", "isValidEmail"]
@@ -1580,8 +1596,13 @@ depends-member:
 - ["CSo16UIViewController", "viewWillAppear"]
 - ["CSo16UIViewController", "viewWillDisappear"]
 - ["CSo16UIViewController", ""]
+- !private ["Su", "deinit"]
+- !private ["Vs6UInt16", "deinit"]
+- !private ["Vs6UInt32", "deinit"]
+- !private ["Vs6UInt64", "deinit"]
+- !private ["Vs5UInt8", "deinit"]
+- !private ["Sc", "deinit"]
 - !private ["Ps31UnicodeScalarLiteralConvertible", "init"]
-- !private ["C6CoChat4User", "createNewUserWith"]
 - !private ["Ps10_ArrayType", "Element"]
 - !private ["Ps10_ArrayType", "Generator"]
 - !private ["Ps10_ArrayType", "Index"]
@@ -1603,7 +1624,6 @@ depends-member:
 - !private ["Ps24_DestructorSafeContainer", "SubSequence"]
 - !private ["Ps24_DestructorSafeContainer", "_Element"]
 - !private ["Ps24_DestructorSafeContainer", "appendContentsOf"]
-- !private ["Ps32_FileReferenceLiteralConvertible", "init"]
 - !private ["Ps14_Incrementable", "Distance"]
 - !private ["Ps14_Incrementable", "IntegerLiteralType"]
 - !private ["Ps14_Incrementable", "_DisabledRangeIndex"]
@@ -1617,6 +1637,7 @@ depends-member:
 - !private ["Ps21_ObjectiveCBridgeable", "Index"]
 - !private ["Ps21_ObjectiveCBridgeable", "IntegerLiteralType"]
 - !private ["Ps21_ObjectiveCBridgeable", "Key"]
+- !private ["Ps21_ObjectiveCBridgeable", "Some"]
 - !private ["Ps21_ObjectiveCBridgeable", "SubSequence"]
 - !private ["Ps21_ObjectiveCBridgeable", "Value"]
 - !private ["Ps21_ObjectiveCBridgeable", "_Element"]
@@ -1633,6 +1654,7 @@ depends-member:
 - !private ["Ps12_Reflectable", "Index"]
 - !private ["Ps12_Reflectable", "IntegerLiteralType"]
 - !private ["Ps12_Reflectable", "Key"]
+- !private ["Ps12_Reflectable", "Some"]
 - !private ["Ps12_Reflectable", "SubSequence"]
 - !private ["Ps12_Reflectable", "Value"]
 - !private ["Ps12_Reflectable", "_Element"]
@@ -1676,6 +1698,7 @@ depends-nominal:
 - !private "VSC6CGRect"
 - !private "VSC6CGSize"
 - "Ps11CVarArgType"
+- !private "Vs9Character"
 - !private "Ps14CollectionType"
 - !private "OV6CoChat5Theme6Colors"
 - !private "Ps10Comparable"
@@ -1684,10 +1707,14 @@ depends-nominal:
 - !private "Vs10Dictionary"
 - !private "Vs15DictionaryIndex"
 - !private "Ps28DictionaryLiteralConvertible"
+- !private "Sd"
 - "C6CoChat13EmailSignUpVC"
 - "Ps9Equatable"
 - !private "Ps41ExtendedGraphemeClusterLiteralConvertible"
-- !private "P6CoChat12FirebaseType"
+- !private "CSo6FQuery"
+- !private "CSo8Firebase"
+- !private "C6CoChat15FirebaseManager"
+- !private "Sf"
 - !private "Ps16ForwardIndexType"
 - !private "Ps13GeneratorType"
 - "Ps8Hashable"
@@ -1695,6 +1722,10 @@ depends-nominal:
 - !private "Ps9Indexable"
 - !private "Vs17IndexingGenerator"
 - !private "Si"
+- !private "Vs5Int16"
+- !private "Vs5Int32"
+- !private "Vs5Int64"
+- !private "Vs4Int8"
 - !private "Ps21IntegerArithmeticType"
 - !private "Ps25IntegerLiteralConvertible"
 - !private "Ps11IntegerType"
@@ -1712,14 +1743,14 @@ depends-nominal:
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
 - !private "PSo14NSSecureCoding"
-- !private "CSo5NSURL"
+- !private "CSo8NSString"
 - !private "CSo7NSValue"
+- !private "Ps21NilLiteralConvertible"
 - !private "Sq"
 - !private "Ps16OutputStreamType"
 - !private "Ps21RandomAccessIndexType"
 - !private "Ps30RangeReplaceableCollectionType"
 - !private "Ps16RawRepresentable"
-- !private "V10ObjectiveC8Selector"
 - !private "Ps12SequenceType"
 - !private "Ps17SignedIntegerType"
 - !private "Ps16SignedNumberType"
@@ -1754,8 +1785,13 @@ depends-nominal:
 - "PSo18UITraitEnvironment"
 - !private "CSo6UIView"
 - "CSo16UIViewController"
+- !private "Su"
+- !private "Vs6UInt16"
+- !private "Vs6UInt32"
+- !private "Vs6UInt64"
+- !private "Vs5UInt8"
+- !private "Sc"
 - !private "Ps31UnicodeScalarLiteralConvertible"
-- !private "C6CoChat4User"
 - !private "Ps10_ArrayType"
 - !private "Ps33_BuiltinBooleanLiteralConvertible"
 - !private "Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible"
@@ -1765,7 +1801,6 @@ depends-nominal:
 - !private "Ps39_BuiltinUnicodeScalarLiteralConvertible"
 - !private "Ps24_ColorLiteralConvertible"
 - !private "Ps24_DestructorSafeContainer"
-- !private "Ps32_FileReferenceLiteralConvertible"
 - !private "Ps14_Incrementable"
 - !private "Ps22_IntegerArithmeticType"
 - !private "Ps12_IntegerType"
@@ -1907,4 +1942,4 @@ depends-external:
 - "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFNetworking.h"
 - "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Headers/AFNetworking-umbrella.h"
 - "/Users/aaronb/Development/CoChat/DerivedData/CoChat/Build/Products/Debug-iphonesimulator/AFNetworking.framework/Modules/module.modulemap"
-interface-hash: "2545d3ac7374adbba472cbf463baac69"
+interface-hash: "3cc88eaa2fbf75867b438a73c71e3d9b"

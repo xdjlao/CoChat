@@ -7,8 +7,8 @@ provides-member:
 - ["C6CoChat33MessagingNavigationViewController", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "UINavigationController"
 - "MessagingNavigationViewController"
+- "UINavigationController"
 depends-member:
 - ["Ps9AnyObject", "init"]
 - ["Ps9AnyObject", ""]

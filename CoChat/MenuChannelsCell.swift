@@ -21,8 +21,10 @@ class MenuChannelsCell: UITableViewCell {
                 return checkChannel.uid == channel.uid
             }) {
                 isFavorite = true
+                setFavoriteButton()
             } else {
                 isFavorite = false
+                setFavoriteButton()
             }
         }
     }
@@ -41,7 +43,7 @@ class MenuChannelsCell: UITableViewCell {
         channelsContainer.backgroundColor = Theme.Colors.ForegroundColor.color
         backgroundColor = Theme.Colors.ForegroundColor.color
         channelsLabel.textColor = UIColor.whiteColor()
-        setFavoriteButton()
+        //setFavoriteButton()
     }
     
     @IBAction func favoriteButtonWasTapped(sender: UIButton) {

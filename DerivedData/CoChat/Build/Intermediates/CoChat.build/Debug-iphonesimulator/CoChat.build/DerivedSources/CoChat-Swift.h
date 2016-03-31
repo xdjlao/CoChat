@@ -374,8 +374,6 @@ SWIFT_CLASS("_TtC6CoChat12LoginEmailVC")
 
 SWIFT_CLASS("_TtC6CoChat17LoginNavigationVC")
 @interface LoginNavigationVC : UINavigationController
-- (void)viewDidLoad;
-- (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNavigationBarClass:(Class _Nullable)navigationBarClass toolbarClass:(Class _Nullable)toolbarClass OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithRootViewController:(UIViewController * _Nonnull)rootViewController OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
@@ -572,7 +570,7 @@ SWIFT_CLASS("_TtC6CoChat21ProfileViewController")
 @property (nonatomic, strong) IBOutlet UIView * _Null_unspecified topContainer;
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified recentTableView;
 - (void)viewDidLoad;
-- (void)viewDidAppear:(BOOL)animated;
+- (void)viewWillAppear:(BOOL)animated;
 - (void)setupArray;
 - (void)setUpUI;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;

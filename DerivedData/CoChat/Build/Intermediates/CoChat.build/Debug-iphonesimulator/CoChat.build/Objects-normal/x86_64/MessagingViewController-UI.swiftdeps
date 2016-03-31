@@ -5,92 +5,92 @@ provides-nominal:
 provides-member:
 - ["C6CoChat23MessagingViewController", ""]
 provides-dynamic-lookup:
-- "uiSetup"
-- "showSendMailErrorAlert"
-- "configuredMailComposeViewController"
-- "userMessageCellWillDisplay"
-- "generalMessageCellWillDisplay"
-- "generalMessageCell"
-- "tableViewOrientation"
 - "textViewDidEndEditing"
-- "onBackgroundTapped"
-- "mailComposeController"
-- "textViewDidBeginEditing"
 - "animatetextViewWithKeyboard"
-- "tableView"
-- "tableView"
-- "tableView"
-- "keyboardWillHide"
-- "createNewConversation"
+- "mailComposeController"
+- "tableViewOrientation"
 - "registerNibs"
-- "flashRedTextView"
-- "keyboardWillShow"
+- "keyboardWillHide"
+- "userMessageCellWillDisplay"
+- "configuredMailComposeViewController"
+- "onBackgroundTapped"
+- "uiSetup"
+- "generalMessageCellWillDisplay"
+- "createNewConversation"
 - "textViewDidChange"
+- "showSendMailErrorAlert"
+- "tableView"
+- "tableView"
+- "tableView"
+- "keyboardWillShow"
+- "flashRedTextView"
+- "textViewDidBeginEditing"
+- "generalMessageCell"
 depends-top-level:
-- !private "UIAlertController"
-- !private "UIKeyboardFrameEndUserInfoKey"
-- !private "CGRect"
-- !private "=="
-- !private ">"
-- !private "??"
-- !private "UIColor"
-- !private "Array"
-- !private "UIKeyboardAnimationCurveUserInfoKey"
-- !private "UIAlertAction"
-- "MessagingViewController"
-- "MFMailComposeViewController"
-- !private "Theme"
-- "AnyObject"
-- !private "Conversation"
-- !private "NSValue"
-- "UITapGestureRecognizer"
-- !private "/"
-- !private "-"
-- "UITableViewCell"
-- !private "UIStoryboard"
-- !private "Bool"
-- "UITableViewDataSource"
-- "UITableViewDelegate"
-- "BooleanLiteralType"
-- "UITextView"
-- !private "UIAlertControllerStyle"
-- !private "UIApplication"
-- !private "UIKeyboardWillHideNotification"
-- !private "NSURL"
-- !private "UITableViewCellSelectionStyle"
 - "GeneralMessageCell"
-- "Int"
-- "MFMailComposeResult"
-- !private "UITextAutocorrectionType"
-- !private "UIView"
-- "User"
-- !private "FirebaseManager"
-- !private "UIKeyboardWillShowNotification"
-- "NSNotification"
-- !private "UIKeyboardAnimationDurationUserInfoKey"
-- !private "MessagingNavigationViewController"
-- "NSError"
+- !private "CGSizeMake"
+- !private "NSNotificationCenter"
+- !private "-"
+- !private "UITableViewCellSelectionStyle"
+- !private "=="
 - !private "<<"
-- "UITableView"
 - !private "NSOperationQueue"
-- !private "StringLiteralType"
-- !private "UINib"
+- !private "/"
+- !private "UIAlertControllerStyle"
+- !private "UIStoryboard"
+- !private "Array"
+- "NSError"
+- !private "UIKeyboardAnimationCurveUserInfoKey"
+- !private "CGRect"
+- !private "Theme"
+- !private "UIColor"
+- !private "Conversation"
+- "NSNotification"
+- "MFMailComposeViewControllerDelegate"
+- "MFMailComposeViewController"
 - "GeneralMessageCellDelegate"
+- "UITextView"
+- !private "UIKeyboardFrameEndUserInfoKey"
+- "Int"
+- !private "UIKeyboardAnimationDurationUserInfoKey"
+- !private "NSURL"
+- !private "UIViewAnimationOptions"
 - !private "Double"
+- !private "UIApplication"
+- "BooleanLiteralType"
+- "MFMailComposeResult"
+- "UITableViewDataSource"
+- !private ">"
+- !private "Bool"
+- "UITableViewDelegate"
+- "UITableViewCell"
+- "UITapGestureRecognizer"
+- !private "UITableViewAutomaticDimension"
+- !private "FirebaseManager"
+- "AnyObject"
+- !private "UIImage"
 - !private "UInt"
 - !private "+"
-- !private "CGSizeMake"
-- !private "UIImage"
-- "MFMailComposeViewControllerDelegate"
-- "NSIndexPath"
-- !private "CGFloat"
+- !private "UIAlertAction"
+- !private "UIKeyboardWillHideNotification"
+- !private "UITextAutocorrectionType"
 - !private "UIAlertActionStyle"
-- !private "UIAlertView"
-- !private "NSNotificationCenter"
-- !private "UITableViewAutomaticDimension"
-- !private "UIViewAnimationOptions"
+- !private "UIAlertController"
+- !private "UIView"
+- !private "CGFloat"
+- "UITableView"
+- !private "UIKeyboardWillShowNotification"
+- !private "StringLiteralType"
 - "UserMessageCell"
+- !private "UINib"
 - !private "Void"
+- !private "UIAlertView"
+- "MessagingViewController"
+- !private "??"
+- !private "MessagingNavigationViewController"
+- "User"
+- "NSIndexPath"
+- !private "NSValue"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "max"]
 - !private ["Ps9AnyObject", "CGFloat"]
@@ -100,6 +100,7 @@ depends-member:
 - !private ["Ps9AnyObject", "Conversation"]
 - !private ["Ps9AnyObject", "FirebaseManager"]
 - !private ["Ps9AnyObject", "MFMailComposeViewController"]
+- !private ["Ps9AnyObject", "MessagingViewController"]
 - !private ["Ps9AnyObject", "Mode"]
 - !private ["Ps9AnyObject", "NSIndexPath"]
 - !private ["Ps9AnyObject", "NSNotificationCenter"]
@@ -254,7 +255,6 @@ depends-member:
 - !private ["Sa", "count"]
 - !private ["Sa", "deinit"]
 - !private ["Sa", "subscript"]
-- !private ["Ps23ArrayLiteralConvertible", "CurveEaseInOut"]
 - !private ["Ps23ArrayLiteralConvertible", "Element"]
 - !private ["Ps23ArrayLiteralConvertible", "Generator"]
 - !private ["Ps23ArrayLiteralConvertible", "Index"]
@@ -294,6 +294,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "FirebaseManager"]
 - !private ["Ps11CVarArgType", "IntegerLiteralType"]
 - !private ["Ps11CVarArgType", "MFMailComposeViewController"]
+- !private ["Ps11CVarArgType", "MessagingViewController"]
 - !private ["Ps11CVarArgType", "Mode"]
 - !private ["Ps11CVarArgType", "NSIndexPath"]
 - !private ["Ps11CVarArgType", "NSNotificationCenter"]
@@ -465,6 +466,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "Generator"]
 - !private ["Ps28CustomDebugStringConvertible", "Index"]
 - !private ["Ps28CustomDebugStringConvertible", "MFMailComposeViewController"]
+- !private ["Ps28CustomDebugStringConvertible", "MessagingViewController"]
 - !private ["Ps28CustomDebugStringConvertible", "Mode"]
 - !private ["Ps28CustomDebugStringConvertible", "NSIndexPath"]
 - !private ["Ps28CustomDebugStringConvertible", "NSNotificationCenter"]
@@ -615,6 +617,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "Index"]
 - !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
 - !private ["Ps23CustomStringConvertible", "MFMailComposeViewController"]
+- !private ["Ps23CustomStringConvertible", "MessagingViewController"]
 - !private ["Ps23CustomStringConvertible", "Mode"]
 - !private ["Ps23CustomStringConvertible", "NSIndexPath"]
 - !private ["Ps23CustomStringConvertible", "NSNotificationCenter"]
@@ -780,7 +783,6 @@ depends-member:
 - !private ["Ps9Equatable", "Chat"]
 - !private ["Ps9Equatable", "ChildAdded"]
 - !private ["Ps9Equatable", "Conversation"]
-- !private ["Ps9Equatable", "CurveEaseInOut"]
 - !private ["Ps9Equatable", "Default"]
 - !private ["Ps9Equatable", "Destructive"]
 - !private ["Ps9Equatable", "Distance"]
@@ -789,6 +791,7 @@ depends-member:
 - !private ["Ps9Equatable", "IntegerLiteralType"]
 - !private ["Ps9Equatable", "MFMailComposeViewController"]
 - !private ["Ps9Equatable", "MessageButtonColor"]
+- !private ["Ps9Equatable", "MessagingViewController"]
 - !private ["Ps9Equatable", "Mode"]
 - !private ["Ps9Equatable", "NSIndexPath"]
 - !private ["Ps9Equatable", "NSNotificationCenter"]
@@ -972,6 +975,7 @@ depends-member:
 - !private ["P6CoChat26GeneralMessageCellDelegate", "Conversation"]
 - !private ["P6CoChat26GeneralMessageCellDelegate", "FirebaseManager"]
 - !private ["P6CoChat26GeneralMessageCellDelegate", "MFMailComposeViewController"]
+- !private ["P6CoChat26GeneralMessageCellDelegate", "MessagingViewController"]
 - !private ["P6CoChat26GeneralMessageCellDelegate", "Mode"]
 - !private ["P6CoChat26GeneralMessageCellDelegate", "NSIndexPath"]
 - !private ["P6CoChat26GeneralMessageCellDelegate", "NSNotificationCenter"]
@@ -1053,6 +1057,7 @@ depends-member:
 - !private ["Ps8Hashable", "IntegerLiteralType"]
 - !private ["Ps8Hashable", "MFMailComposeViewController"]
 - !private ["Ps8Hashable", "MessageButtonColor"]
+- !private ["Ps8Hashable", "MessagingViewController"]
 - !private ["Ps8Hashable", "Mode"]
 - !private ["Ps8Hashable", "NSIndexPath"]
 - !private ["Ps8Hashable", "NSNotificationCenter"]
@@ -1228,6 +1233,7 @@ depends-member:
 - !private ["PSo35MFMailComposeViewControllerDelegate", "Conversation"]
 - !private ["PSo35MFMailComposeViewControllerDelegate", "FirebaseManager"]
 - !private ["PSo35MFMailComposeViewControllerDelegate", "MFMailComposeViewController"]
+- !private ["PSo35MFMailComposeViewControllerDelegate", "MessagingViewController"]
 - !private ["PSo35MFMailComposeViewControllerDelegate", "Mode"]
 - !private ["PSo35MFMailComposeViewControllerDelegate", "NSIndexPath"]
 - !private ["PSo35MFMailComposeViewControllerDelegate", "NSNotificationCenter"]
@@ -1297,6 +1303,7 @@ depends-member:
 - !private ["P6CoChat33MenuChannelViewControllerDelegate", "Conversation"]
 - !private ["P6CoChat33MenuChannelViewControllerDelegate", "FirebaseManager"]
 - !private ["P6CoChat33MenuChannelViewControllerDelegate", "MFMailComposeViewController"]
+- !private ["P6CoChat33MenuChannelViewControllerDelegate", "MessagingViewController"]
 - !private ["P6CoChat33MenuChannelViewControllerDelegate", "Mode"]
 - !private ["P6CoChat33MenuChannelViewControllerDelegate", "NSIndexPath"]
 - !private ["P6CoChat33MenuChannelViewControllerDelegate", "NSNotificationCenter"]
@@ -1496,6 +1503,7 @@ depends-member:
 - !private ["PSo8NSCoding", "Conversation"]
 - !private ["PSo8NSCoding", "FirebaseManager"]
 - !private ["PSo8NSCoding", "MFMailComposeViewController"]
+- !private ["PSo8NSCoding", "MessagingViewController"]
 - !private ["PSo8NSCoding", "Mode"]
 - !private ["PSo8NSCoding", "NSIndexPath"]
 - !private ["PSo8NSCoding", "NSNotificationCenter"]
@@ -1630,6 +1638,7 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "Conversation"]
 - !private ["PSo26NSExtensionRequestHandling", "FirebaseManager"]
 - !private ["PSo26NSExtensionRequestHandling", "MFMailComposeViewController"]
+- !private ["PSo26NSExtensionRequestHandling", "MessagingViewController"]
 - !private ["PSo26NSExtensionRequestHandling", "Mode"]
 - !private ["PSo26NSExtensionRequestHandling", "NSIndexPath"]
 - !private ["PSo26NSExtensionRequestHandling", "NSNotificationCenter"]
@@ -1881,6 +1890,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "Conversation"]
 - !private ["PSo16NSObjectProtocol", "FirebaseManager"]
 - !private ["PSo16NSObjectProtocol", "MFMailComposeViewController"]
+- !private ["PSo16NSObjectProtocol", "MessagingViewController"]
 - !private ["PSo16NSObjectProtocol", "Mode"]
 - !private ["PSo16NSObjectProtocol", "NSIndexPath"]
 - !private ["PSo16NSObjectProtocol", "NSNotificationCenter"]
@@ -2026,7 +2036,6 @@ depends-member:
 - !private ["CSo5NSURL", "init"]
 - !private ["CSo7NSValue", "CGRectValue"]
 - ["Ps21NilLiteralConvertible", "Some"]
-- !private ["Ps13OptionSetType", "CurveEaseInOut"]
 - !private ["Ps13OptionSetType", "Element"]
 - !private ["Ps13OptionSetType", "init"]
 - ["Sq", "Some"]
@@ -2047,14 +2056,12 @@ depends-member:
 - !private ["Ps16RawRepresentable", "Alert"]
 - !private ["Ps16RawRepresentable", "Bottom"]
 - !private ["Ps16RawRepresentable", "ChildAdded"]
-- !private ["Ps16RawRepresentable", "CurveEaseInOut"]
 - !private ["Ps16RawRepresentable", "Default"]
 - !private ["Ps16RawRepresentable", "Destructive"]
 - !private ["Ps16RawRepresentable", "Element"]
 - !private ["Ps16RawRepresentable", "No"]
 - !private ["Ps16RawRepresentable", "None"]
 - !private ["Ps16RawRepresentable", "init"]
-- !private ["V10ObjectiveC8Selector", "deinit"]
 - !private ["Ps12SequenceType", "Element"]
 - !private ["Ps12SequenceType", "Generator"]
 - !private ["Ps12SequenceType", "Index"]
@@ -2064,7 +2071,6 @@ depends-member:
 - !private ["Ps12SequenceType", "contains"]
 - !private ["Ps12SequenceType", "count"]
 - !private ["Ps12SequenceType", "subscript"]
-- !private ["Ps14SetAlgebraType", "CurveEaseInOut"]
 - !private ["Ps14SetAlgebraType", "Element"]
 - !private ["Ps14SetAlgebraType", "init"]
 - !private ["Ps17SignedIntegerType", "Distance"]
@@ -2169,6 +2175,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "Conversation"]
 - !private ["PSo21UIAppearanceContainer", "FirebaseManager"]
 - !private ["PSo21UIAppearanceContainer", "MFMailComposeViewController"]
+- !private ["PSo21UIAppearanceContainer", "MessagingViewController"]
 - !private ["PSo21UIAppearanceContainer", "Mode"]
 - !private ["PSo21UIAppearanceContainer", "NSIndexPath"]
 - !private ["PSo21UIAppearanceContainer", "NSNotificationCenter"]
@@ -2298,6 +2305,7 @@ depends-member:
 - !private ["PSo18UIContentContainer", "Conversation"]
 - !private ["PSo18UIContentContainer", "FirebaseManager"]
 - !private ["PSo18UIContentContainer", "MFMailComposeViewController"]
+- !private ["PSo18UIContentContainer", "MessagingViewController"]
 - !private ["PSo18UIContentContainer", "Mode"]
 - !private ["PSo18UIContentContainer", "NSIndexPath"]
 - !private ["PSo18UIContentContainer", "NSNotificationCenter"]
@@ -2449,6 +2457,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "Conversation"]
 - !private ["PSo18UIFocusEnvironment", "FirebaseManager"]
 - !private ["PSo18UIFocusEnvironment", "MFMailComposeViewController"]
+- !private ["PSo18UIFocusEnvironment", "MessagingViewController"]
 - !private ["PSo18UIFocusEnvironment", "Mode"]
 - !private ["PSo18UIFocusEnvironment", "NSIndexPath"]
 - !private ["PSo18UIFocusEnvironment", "NSNotificationCenter"]
@@ -2751,6 +2760,7 @@ depends-member:
 - !private ["PSo20UIScrollViewDelegate", "Conversation"]
 - !private ["PSo20UIScrollViewDelegate", "FirebaseManager"]
 - !private ["PSo20UIScrollViewDelegate", "MFMailComposeViewController"]
+- !private ["PSo20UIScrollViewDelegate", "MessagingViewController"]
 - !private ["PSo20UIScrollViewDelegate", "Mode"]
 - !private ["PSo20UIScrollViewDelegate", "NSIndexPath"]
 - !private ["PSo20UIScrollViewDelegate", "NSNotificationCenter"]
@@ -2819,6 +2829,7 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "Conversation"]
 - !private ["PSo16UIStateRestoring", "FirebaseManager"]
 - !private ["PSo16UIStateRestoring", "MFMailComposeViewController"]
+- !private ["PSo16UIStateRestoring", "MessagingViewController"]
 - !private ["PSo16UIStateRestoring", "Mode"]
 - !private ["PSo16UIStateRestoring", "NSIndexPath"]
 - !private ["PSo16UIStateRestoring", "NSNotificationCenter"]
@@ -2920,6 +2931,7 @@ depends-member:
 - !private ["PSo21UITableViewDataSource", "Conversation"]
 - !private ["PSo21UITableViewDataSource", "FirebaseManager"]
 - !private ["PSo21UITableViewDataSource", "MFMailComposeViewController"]
+- !private ["PSo21UITableViewDataSource", "MessagingViewController"]
 - !private ["PSo21UITableViewDataSource", "Mode"]
 - !private ["PSo21UITableViewDataSource", "NSIndexPath"]
 - !private ["PSo21UITableViewDataSource", "NSNotificationCenter"]
@@ -2989,6 +3001,7 @@ depends-member:
 - !private ["PSo19UITableViewDelegate", "Conversation"]
 - !private ["PSo19UITableViewDelegate", "FirebaseManager"]
 - !private ["PSo19UITableViewDelegate", "MFMailComposeViewController"]
+- !private ["PSo19UITableViewDelegate", "MessagingViewController"]
 - !private ["PSo19UITableViewDelegate", "Mode"]
 - !private ["PSo19UITableViewDelegate", "NSIndexPath"]
 - !private ["PSo19UITableViewDelegate", "NSNotificationCenter"]
@@ -3093,6 +3106,7 @@ depends-member:
 - !private ["PSo18UITextViewDelegate", "Conversation"]
 - !private ["PSo18UITextViewDelegate", "FirebaseManager"]
 - !private ["PSo18UITextViewDelegate", "MFMailComposeViewController"]
+- !private ["PSo18UITextViewDelegate", "MessagingViewController"]
 - !private ["PSo18UITextViewDelegate", "Mode"]
 - !private ["PSo18UITextViewDelegate", "NSIndexPath"]
 - !private ["PSo18UITextViewDelegate", "NSNotificationCenter"]
@@ -3161,6 +3175,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "Conversation"]
 - !private ["PSo18UITraitEnvironment", "FirebaseManager"]
 - !private ["PSo18UITraitEnvironment", "MFMailComposeViewController"]
+- !private ["PSo18UITraitEnvironment", "MessagingViewController"]
 - !private ["PSo18UITraitEnvironment", "Mode"]
 - !private ["PSo18UITraitEnvironment", "NSIndexPath"]
 - !private ["PSo18UITraitEnvironment", "NSNotificationCenter"]
@@ -3302,7 +3317,6 @@ depends-member:
 - !private ["CSo6UIView", "text"]
 - !private ["CSo6UIView", "tintColor"]
 - !private ["CSo6UIView", "user"]
-- !private ["VSC22UIViewAnimationOptions", "CurveEaseInOut"]
 - !private ["VSC22UIViewAnimationOptions", "Element"]
 - !private ["VSC22UIViewAnimationOptions", "init"]
 - ["CSo16UIViewController", "AnyObject"]
@@ -3634,7 +3648,6 @@ depends-nominal:
 - !private "Ps21RandomAccessIndexType"
 - !private "Ps30RangeReplaceableCollectionType"
 - !private "Ps16RawRepresentable"
-- !private "V10ObjectiveC8Selector"
 - !private "Ps12SequenceType"
 - !private "Ps14SetAlgebraType"
 - !private "Ps17SignedIntegerType"

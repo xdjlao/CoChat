@@ -47,11 +47,11 @@ class ChannelsVC: UIViewController {
     func setUpUI(){
         tableView.separatorStyle = .None
         tableView.backgroundColor = Theme.Colors.BackgroundColor.color
-        let addChannelButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addChannelButtonWasTapped")
+        let addChannelButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(ChannelsVC.addChannelButtonWasTapped))
         addChannelButton.enabled = false
         navigationItem.rightBarButtonItem = addChannelButton
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ChannelsVC.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ChannelsVC.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
     }
     func keyboardWillShow(notification: NSNotification){
         animateTableView(notification)

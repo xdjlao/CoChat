@@ -9,32 +9,32 @@ provides-member:
 - ["P6CoChat23UserMessageCellDelegate", ""]
 - ["C6CoChat15UserMessageCell", ""]
 provides-dynamic-lookup:
+- "addTapGesture"
+- "delegate"
+- "onTapHandle"
+- "messageLabel"
 - "userMessageCell"
 - "awakeFromNib"
-- "delegate"
-- "addTapGesture"
-- "messageLabel"
-- "onTapHandle"
 - "profileImageView"
 depends-top-level:
-- "UIImageView"
-- "UILabel"
-- "User"
-- "UserMessageCellDelegate"
-- !private "StringLiteralType"
 - "UITableViewCell"
-- !private "/"
-- !private "UIColor"
 - "AnyObject"
-- !private "BooleanLiteralType"
-- "UserMessageCell"
 - !private "+"
-- !private "UITapGestureRecognizer"
+- "UILabel"
+- !private "UIColor"
+- "User"
+- "UserMessageCell"
+- "UIImageView"
+- !private "BooleanLiteralType"
 - !private "Theme"
+- !private "UITapGestureRecognizer"
+- !private "/"
+- "UserMessageCellDelegate"
 depends-member:
 - !private ["Ps9AnyObject", "Theme"]
 - !private ["Ps9AnyObject", "UIColor"]
 - !private ["Ps9AnyObject", "UITapGestureRecognizer"]
+- !private ["Ps9AnyObject", "UserMessageCell"]
 - !private ["Ps9AnyObject", "addGestureRecognizer"]
 - ["Ps9AnyObject", "addTapGesture"]
 - ["Ps9AnyObject", "awakeFromNib"]
@@ -69,6 +69,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "Theme"]
 - !private ["Ps11CVarArgType", "UIColor"]
 - !private ["Ps11CVarArgType", "UITapGestureRecognizer"]
+- !private ["Ps11CVarArgType", "UserMessageCell"]
 - !private ["Ps11CVarArgType", "addGestureRecognizer"]
 - ["Ps11CVarArgType", "addTapGesture"]
 - ["Ps11CVarArgType", "awakeFromNib"]
@@ -97,6 +98,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "Theme"]
 - !private ["Ps28CustomDebugStringConvertible", "UIColor"]
 - !private ["Ps28CustomDebugStringConvertible", "UITapGestureRecognizer"]
+- !private ["Ps28CustomDebugStringConvertible", "UserMessageCell"]
 - !private ["Ps28CustomDebugStringConvertible", "addGestureRecognizer"]
 - ["Ps28CustomDebugStringConvertible", "addTapGesture"]
 - ["Ps28CustomDebugStringConvertible", "awakeFromNib"]
@@ -125,6 +127,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "Theme"]
 - !private ["Ps23CustomStringConvertible", "UIColor"]
 - !private ["Ps23CustomStringConvertible", "UITapGestureRecognizer"]
+- !private ["Ps23CustomStringConvertible", "UserMessageCell"]
 - !private ["Ps23CustomStringConvertible", "addGestureRecognizer"]
 - ["Ps23CustomStringConvertible", "addTapGesture"]
 - ["Ps23CustomStringConvertible", "awakeFromNib"]
@@ -154,6 +157,7 @@ depends-member:
 - !private ["Ps9Equatable", "Theme"]
 - !private ["Ps9Equatable", "UIColor"]
 - !private ["Ps9Equatable", "UITapGestureRecognizer"]
+- !private ["Ps9Equatable", "UserMessageCell"]
 - !private ["Ps9Equatable", "addGestureRecognizer"]
 - ["Ps9Equatable", "addTapGesture"]
 - ["Ps9Equatable", "awakeFromNib"]
@@ -188,6 +192,7 @@ depends-member:
 - !private ["Ps8Hashable", "Theme"]
 - !private ["Ps8Hashable", "UIColor"]
 - !private ["Ps8Hashable", "UITapGestureRecognizer"]
+- !private ["Ps8Hashable", "UserMessageCell"]
 - !private ["Ps8Hashable", "addGestureRecognizer"]
 - ["Ps8Hashable", "addTapGesture"]
 - ["Ps8Hashable", "awakeFromNib"]
@@ -216,6 +221,7 @@ depends-member:
 - !private ["PSo8NSCoding", "Theme"]
 - !private ["PSo8NSCoding", "UIColor"]
 - !private ["PSo8NSCoding", "UITapGestureRecognizer"]
+- !private ["PSo8NSCoding", "UserMessageCell"]
 - !private ["PSo8NSCoding", "addGestureRecognizer"]
 - ["PSo8NSCoding", "addTapGesture"]
 - ["PSo8NSCoding", "awakeFromNib"]
@@ -248,6 +254,7 @@ depends-member:
 - ["CSo8NSObject", "UILabel"]
 - !private ["CSo8NSObject", "UITapGestureRecognizer"]
 - ["CSo8NSObject", "User"]
+- !private ["CSo8NSObject", "UserMessageCell"]
 - ["CSo8NSObject", "UserMessageCellDelegate"]
 - !private ["CSo8NSObject", "addGestureRecognizer"]
 - ["CSo8NSObject", "addTapGesture"]
@@ -276,6 +283,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "Theme"]
 - !private ["PSo16NSObjectProtocol", "UIColor"]
 - !private ["PSo16NSObjectProtocol", "UITapGestureRecognizer"]
+- !private ["PSo16NSObjectProtocol", "UserMessageCell"]
 - !private ["PSo16NSObjectProtocol", "addGestureRecognizer"]
 - ["PSo16NSObjectProtocol", "addTapGesture"]
 - ["PSo16NSObjectProtocol", "awakeFromNib"]
@@ -304,11 +312,11 @@ depends-member:
 - !private ["PSo14NSSecureCoding", "clearColor"]
 - !private ["PSo14NSSecureCoding", "whiteColor"]
 - !private ["Sq", "deinit"]
-- !private ["V10ObjectiveC8Selector", "deinit"]
 - !private ["V6CoChat5Theme", "Fonts"]
 - !private ["PSo29UIAccessibilityIdentification", "Theme"]
 - !private ["PSo29UIAccessibilityIdentification", "UIColor"]
 - !private ["PSo29UIAccessibilityIdentification", "UITapGestureRecognizer"]
+- !private ["PSo29UIAccessibilityIdentification", "UserMessageCell"]
 - !private ["PSo29UIAccessibilityIdentification", "addGestureRecognizer"]
 - ["PSo29UIAccessibilityIdentification", "addTapGesture"]
 - ["PSo29UIAccessibilityIdentification", "awakeFromNib"]
@@ -333,6 +341,7 @@ depends-member:
 - !private ["PSo12UIAppearance", "Theme"]
 - !private ["PSo12UIAppearance", "UIColor"]
 - !private ["PSo12UIAppearance", "UITapGestureRecognizer"]
+- !private ["PSo12UIAppearance", "UserMessageCell"]
 - !private ["PSo12UIAppearance", "addGestureRecognizer"]
 - ["PSo12UIAppearance", "addTapGesture"]
 - ["PSo12UIAppearance", "awakeFromNib"]
@@ -357,6 +366,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "Theme"]
 - !private ["PSo21UIAppearanceContainer", "UIColor"]
 - !private ["PSo21UIAppearanceContainer", "UITapGestureRecognizer"]
+- !private ["PSo21UIAppearanceContainer", "UserMessageCell"]
 - !private ["PSo21UIAppearanceContainer", "addGestureRecognizer"]
 - ["PSo21UIAppearanceContainer", "addTapGesture"]
 - ["PSo21UIAppearanceContainer", "awakeFromNib"]
@@ -383,6 +393,7 @@ depends-member:
 - !private ["PSo17UICoordinateSpace", "Theme"]
 - !private ["PSo17UICoordinateSpace", "UIColor"]
 - !private ["PSo17UICoordinateSpace", "UITapGestureRecognizer"]
+- !private ["PSo17UICoordinateSpace", "UserMessageCell"]
 - !private ["PSo17UICoordinateSpace", "addGestureRecognizer"]
 - ["PSo17UICoordinateSpace", "addTapGesture"]
 - ["PSo17UICoordinateSpace", "awakeFromNib"]
@@ -407,6 +418,7 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "Theme"]
 - !private ["PSo13UIDynamicItem", "UIColor"]
 - !private ["PSo13UIDynamicItem", "UITapGestureRecognizer"]
+- !private ["PSo13UIDynamicItem", "UserMessageCell"]
 - !private ["PSo13UIDynamicItem", "addGestureRecognizer"]
 - ["PSo13UIDynamicItem", "addTapGesture"]
 - ["PSo13UIDynamicItem", "awakeFromNib"]
@@ -431,6 +443,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "Theme"]
 - !private ["PSo18UIFocusEnvironment", "UIColor"]
 - !private ["PSo18UIFocusEnvironment", "UITapGestureRecognizer"]
+- !private ["PSo18UIFocusEnvironment", "UserMessageCell"]
 - !private ["PSo18UIFocusEnvironment", "addGestureRecognizer"]
 - ["PSo18UIFocusEnvironment", "addTapGesture"]
 - ["PSo18UIFocusEnvironment", "awakeFromNib"]
@@ -457,6 +470,7 @@ depends-member:
 - !private ["PSo27UIGestureRecognizerDelegate", "Theme"]
 - !private ["PSo27UIGestureRecognizerDelegate", "UIColor"]
 - !private ["PSo27UIGestureRecognizerDelegate", "UITapGestureRecognizer"]
+- !private ["PSo27UIGestureRecognizerDelegate", "UserMessageCell"]
 - ["PSo27UIGestureRecognizerDelegate", "addTapGesture"]
 - ["PSo27UIGestureRecognizerDelegate", "awakeFromNib"]
 - !private ["PSo27UIGestureRecognizerDelegate", "backgroundColor"]
@@ -485,6 +499,7 @@ depends-member:
 - ["CSo11UIResponder", "UILabel"]
 - !private ["CSo11UIResponder", "UITapGestureRecognizer"]
 - ["CSo11UIResponder", "User"]
+- !private ["CSo11UIResponder", "UserMessageCell"]
 - ["CSo11UIResponder", "UserMessageCellDelegate"]
 - !private ["CSo11UIResponder", "addGestureRecognizer"]
 - ["CSo11UIResponder", "addTapGesture"]
@@ -512,6 +527,7 @@ depends-member:
 - ["CSo15UITableViewCell", "UILabel"]
 - !private ["CSo15UITableViewCell", "UITapGestureRecognizer"]
 - ["CSo15UITableViewCell", "User"]
+- !private ["CSo15UITableViewCell", "UserMessageCell"]
 - ["CSo15UITableViewCell", "UserMessageCellDelegate"]
 - ["CSo15UITableViewCell", "addTapGesture"]
 - ["CSo15UITableViewCell", "awakeFromNib"]
@@ -529,6 +545,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "Theme"]
 - !private ["PSo18UITraitEnvironment", "UIColor"]
 - !private ["PSo18UITraitEnvironment", "UITapGestureRecognizer"]
+- !private ["PSo18UITraitEnvironment", "UserMessageCell"]
 - !private ["PSo18UITraitEnvironment", "addGestureRecognizer"]
 - ["PSo18UITraitEnvironment", "addTapGesture"]
 - ["PSo18UITraitEnvironment", "awakeFromNib"]
@@ -556,6 +573,7 @@ depends-member:
 - ["CSo6UIView", "UILabel"]
 - !private ["CSo6UIView", "UITapGestureRecognizer"]
 - ["CSo6UIView", "User"]
+- !private ["CSo6UIView", "UserMessageCell"]
 - ["CSo6UIView", "UserMessageCellDelegate"]
 - !private ["CSo6UIView", "addGestureRecognizer"]
 - ["CSo6UIView", "addTapGesture"]
@@ -584,6 +602,7 @@ depends-member:
 - ["C6CoChat15UserMessageCell", "UILabel"]
 - !private ["C6CoChat15UserMessageCell", "UITapGestureRecognizer"]
 - ["C6CoChat15UserMessageCell", "User"]
+- !private ["C6CoChat15UserMessageCell", "UserMessageCell"]
 - ["C6CoChat15UserMessageCell", "UserMessageCellDelegate"]
 - ["C6CoChat15UserMessageCell", "addTapGesture"]
 - ["C6CoChat15UserMessageCell", "awakeFromNib"]
@@ -604,6 +623,7 @@ depends-member:
 - !private ["Ps12_Reflectable", "Theme"]
 - !private ["Ps12_Reflectable", "UIColor"]
 - !private ["Ps12_Reflectable", "UITapGestureRecognizer"]
+- !private ["Ps12_Reflectable", "UserMessageCell"]
 - !private ["Ps12_Reflectable", "addGestureRecognizer"]
 - ["Ps12_Reflectable", "addTapGesture"]
 - ["Ps12_Reflectable", "awakeFromNib"]
@@ -647,7 +667,6 @@ depends-nominal:
 - "PSo16NSObjectProtocol"
 - !private "PSo14NSSecureCoding"
 - !private "Sq"
-- !private "V10ObjectiveC8Selector"
 - !private "V6CoChat5Theme"
 - "PSo29UIAccessibilityIdentification"
 - "PSo12UIAppearance"
