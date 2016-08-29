@@ -12,7 +12,6 @@
 		912607B91C8550B10015D487 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912607B81C8550B10015D487 /* Launch.storyboard */; };
 		912607BD1C855EB40015D487 /* RootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912607BC1C855EB40015D487 /* RootVC.swift */; };
 		91470D8D1C87D77C004B5442 /* ViewController-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91470D8C1C87D77C004B5442 /* ViewController-Extension.swift */; };
-		91470D911C87FF32004B5442 /* LaunchVideo.mov in Resources */ = {isa = PBXBuildFile; fileRef = 91470D901C87FF32004B5442 /* LaunchVideo.mov */; };
 		919549221C7E4F9D00C61805 /* ChannelHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 919549201C7E4F9D00C61805 /* ChannelHeaderCell.xib */; };
 		919FB7851C94CF89004D6993 /* EmailSignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919FB7841C94CF89004D6993 /* EmailSignUpVC.swift */; };
 		919FB78B1C94D134004D6993 /* LoginNavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919FB78A1C94D134004D6993 /* LoginNavigationVC.swift */; };
@@ -92,7 +91,6 @@
 		912607B81C8550B10015D487 /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		912607BC1C855EB40015D487 /* RootVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootVC.swift; sourceTree = "<group>"; };
 		91470D8C1C87D77C004B5442 /* ViewController-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController-Extension.swift"; sourceTree = "<group>"; };
-		91470D901C87FF32004B5442 /* LaunchVideo.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = LaunchVideo.mov; sourceTree = "<group>"; };
 		919549201C7E4F9D00C61805 /* ChannelHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChannelHeaderCell.xib; sourceTree = "<group>"; };
 		919FB7841C94CF89004D6993 /* EmailSignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailSignUpVC.swift; sourceTree = "<group>"; };
 		919FB78A1C94D134004D6993 /* LoginNavigationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginNavigationVC.swift; sourceTree = "<group>"; };
@@ -205,7 +203,6 @@
 		A288F7661C7840E600DF2847 = {
 			isa = PBXGroup;
 			children = (
-				91470D901C87FF32004B5442 /* LaunchVideo.mov */,
 				A288F7711C7840E600DF2847 /* CoChat */,
 				A288F7701C7840E600DF2847 /* Products */,
 				91F5258B1C826144009C9BF1 /* Resources */,
@@ -529,7 +526,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Jerry;
 				TargetAttributes = {
 					A288F76E1C7840E600DF2847 = {
@@ -576,7 +573,6 @@
 				D804B1EF1C877DF2002D348C /* Assets.xcassets in Resources */,
 				91E9B9E31C7BCD33006F4CF0 /* HostReusableCell.xib in Resources */,
 				91F5259E1C82616B009C9BF1 /* Lato-Heavy.ttf in Resources */,
-				91470D911C87FF32004B5442 /* LaunchVideo.mov in Resources */,
 				91F525AF1C82616B009C9BF1 /* Lato-Regular.ttf in Resources */,
 				A2BE2B0C1C7B9E1700ED71E4 /* Profile.storyboard in Resources */,
 				A288F7DE1C7873D100DF2847 /* Login.storyboard in Resources */,
@@ -749,8 +745,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -793,8 +791,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -813,6 +813,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -836,6 +837,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -857,6 +860,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = lao.jerry.CoChat2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

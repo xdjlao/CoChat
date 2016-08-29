@@ -39,7 +39,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>13</string>
+	<string>14</string>
 	<key>FacebookAppID</key>
 	<string>540592469454725</string>
 	<key>FacebookDisplayName</key>
@@ -94,7 +94,7 @@
 		<string>Lato-Light.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
-	<string>Launch</string>
+	<string>Main</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>

@@ -8,7 +8,7 @@ class EmailSignUpVC: UIViewController, UITextFieldDelegate {
     @IBOutlet var fullNameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var rePasswordTextField: UITextField!
-    @IBOutlet var formScrollView: UIScrollView!
+
     @IBOutlet var signUpButton: UIButton!
     var activeTextField:UITextField?
     var textFields:[UITextField] = []
@@ -18,19 +18,6 @@ class EmailSignUpVC: UIViewController, UITextFieldDelegate {
         textFields.appendContentsOf([emailTextField, fullNameTextField, passwordTextField, rePasswordTextField])
         setUpUI()
     }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(EmailSignUpVC.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(EmailSignUpVC.keyboardWillHide), name: UIKeyboardWillHideNotification, object: nil)
-    }
-    
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(animated)
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
-         NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
-    }
-    
     
     func setUpUI(){
         for tF in textFields {
@@ -55,24 +42,6 @@ class EmailSignUpVC: UIViewController, UITextFieldDelegate {
         if sender.state == .Ended {
             view.endEditing(true)
         }
-    }
-    
-    func keyboardWillShow(notification:NSNotification){
-        if activeTextField == passwordTextField || activeTextField == rePasswordTextField {
-            let userInfo = notification.userInfo!
-            let keyboardSize = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue().size
-            var viewRect = view.frame
-            if CGRectContainsPoint(viewRect, activeTextField!.frame.origin) {
-                let scrollPoint = CGPointMake(0, activeTextField!.frame.origin.y - keyboardSize.height)
-                viewRect.size.height -= keyboardSize.height
-                formScrollView.setContentOffset(scrollPoint, animated: true)
-                print(formScrollView.contentOffset)
-            }
-        }
-    }
-    
-    func keyboardWillHide(){
-        formScrollView.setContentOffset(CGPoint(x: 0, y:-65), animated: true)
     }
     
     @IBAction func signUpButtonWasTapped(sender: UIButton) {
@@ -107,9 +76,6 @@ class EmailSignUpVC: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        keyboardWillHide()
         return true
-        
     }
-
 }

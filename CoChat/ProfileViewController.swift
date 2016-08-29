@@ -1,13 +1,9 @@
 import UIKit
-import FBSDKCoreKit
-import FBSDKLoginKit
-import FBSDKShareKit
 import AFNetworking
 
-class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
+class ProfileViewController: UIViewController {
     
     private var cellArray = [AnyObject]()
-    private var loginButton:FBSDKLoginButton?
     private var imageScale = CGFloat(0)
     private var originalImageHeight:CGFloat?
     @IBOutlet var topContainer: UIView!
@@ -20,8 +16,7 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginButton = createFBLoginButton()
-        loginButton!.delegate = self
+
         setUpUI()
 
         let favoriteChannels = FirebaseManager.manager.user.favoriteChannels
@@ -98,7 +93,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCellWithCellIdentifier(.ProfileLogoutCell) as! ProfileLogoutCell
             cell.selectionStyle = UITableViewCellSelectionStyle.None
             cell.superviewWidth = view.frame.width
-            cell.profileLogoutButton = loginButton
+            cell.delegate = self
             return cell
         default:
             let cell = tableView.dequeueReusableCellWithCellIdentifier(.ProfileFavoriteCell) as! ProfileFavoriteCell
@@ -180,5 +175,11 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         let channel = sender as! Channel
         mvc.currentChannel = channel
         mvc.room = channel.room
+    }
+}
+
+extension ProfileViewController: ProfileLogoutCellDelegate {
+    func loginButtonTapped() {
+        presentLoginScreen()
     }
 }

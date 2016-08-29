@@ -1,5 +1,4 @@
 import UIKit
-import FBSDKCoreKit
 import Firebase
 
 @UIApplicationMain
@@ -38,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("\(user.name) authed in appDelegate")
             }
         }
-        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        
         return true
     }
     
@@ -64,12 +63,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 })
             })
         }
-        
-        return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
-    }
-    
-    
-    func applicationDidBecomeActive(application: UIApplication) {
-        FBSDKAppEvents.activateApp()
+        return true
     }
 }

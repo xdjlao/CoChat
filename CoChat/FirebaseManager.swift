@@ -1,7 +1,5 @@
 import Foundation
 import Firebase
-import FBSDKCoreKit
-import FBSDKLoginKit
 
 let baseURL = "https://NAJchat.firebaseio.com"
 
