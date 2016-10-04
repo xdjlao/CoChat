@@ -40,10 +40,6 @@
 	</array>
 	<key>CFBundleVersion</key>
 	<string>14</string>
-	<key>FacebookAppID</key>
-	<string>540592469454725</string>
-	<key>FacebookDisplayName</key>
-	<string>Blend</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>
@@ -58,20 +54,6 @@
 		<key>NSExceptionDomains</key>
 		<dict>
 			<key>akamaihd.net</key>
-			<dict>
-				<key>NSIncludesSubdomains</key>
-				<true/>
-				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
-				<false/>
-			</dict>
-			<key>facebook.com</key>
-			<dict>
-				<key>NSIncludesSubdomains</key>
-				<true/>
-				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
-				<false/>
-			</dict>
-			<key>fbcdn.net</key>
 			<dict>
 				<key>NSIncludesSubdomains</key>
 				<true/>

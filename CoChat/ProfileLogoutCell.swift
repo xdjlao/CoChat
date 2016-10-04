@@ -1,5 +1,5 @@
 import UIKit
-import FBSDKLoginKit
+
 
 class ProfileLogoutCell: UITableViewCell {
     
@@ -8,20 +8,11 @@ class ProfileLogoutCell: UITableViewCell {
     
     var loginButton: UIButton!
     
-    var profileLogoutButton:FBSDKLoginButton? {
-        didSet {
-            if let logout = profileLogoutButton {
-                let frame = logoutCellView.frame
-                logout.frame = CGRect(x: 0, y: 0, width: superviewWidth - 40 , height: frame.height)
-                logoutCellView.addSubview(logout)
-            }
-        }
-    }
+
 
     override func awakeFromNib() {
         super.awakeFromNib()
         backgroundColor = Theme.Colors.BackgroundColor.color
-        
         
         loginButton = UIButton(type: .System)
         loginButton.setTitle("Login", forState: UIControlState())

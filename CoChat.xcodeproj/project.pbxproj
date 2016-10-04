@@ -503,12 +503,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A288F7811C7840E600DF2847 /* Build configuration list for PBXNativeTarget "CoChat" */;
 			buildPhases = (
-				381AD7BC27201A86F574AD5A /* Check Pods Manifest.lock */,
+				381AD7BC27201A86F574AD5A /* [CP] Check Pods Manifest.lock */,
 				A288F76B1C7840E600DF2847 /* Sources */,
 				A288F76C1C7840E600DF2847 /* Frameworks */,
 				A288F76D1C7840E600DF2847 /* Resources */,
-				89D1AFB7DC0BC3B367E35555 /* Embed Pods Frameworks */,
-				8C7A0FED7202D952B359FB30 /* Copy Pods Resources */,
+				89D1AFB7DC0BC3B367E35555 /* [CP] Embed Pods Frameworks */,
+				8C7A0FED7202D952B359FB30 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -595,14 +595,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		381AD7BC27201A86F574AD5A /* Check Pods Manifest.lock */ = {
+		381AD7BC27201A86F574AD5A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -610,14 +610,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		89D1AFB7DC0BC3B367E35555 /* Embed Pods Frameworks */ = {
+		89D1AFB7DC0BC3B367E35555 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -625,14 +625,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoChat/Pods-CoChat-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8C7A0FED7202D952B359FB30 /* Copy Pods Resources */ = {
+		8C7A0FED7202D952B359FB30 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
